@@ -1,0 +1,11 @@
+size(12cm,8cm);
+import graph;
+draw(unitcircle);
+label("$\theta$",(0.07,0),NE);
+label("$r=1$",(0.3,0.3),NW);
+label("Arc Length $=\theta$",(1,0.3),E);
+filldraw((0,0)--arc((0,0),1,0,360/8)--cycle,lightgray);
+draw((0.707,0.707)--(0.707,0));
+label("$x = \cos \theta$",(0.4,0),S);
+label("$y = \sin \theta$",(0.707,0.2),W);
+label("Area $=\frac{\theta}{2}$",(0.9,0.5),E);

@@ -1,0 +1,101 @@
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Organization of the Course}{3}{section.1.1}% 
+\contentsline {chapter}{\numberline {2}Formalizing Mathematics}{4}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Why Formality?}{4}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Epsilon-Delta Limits}{5}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Infinite Limits}{6}{subsection.2.2.1}% 
+\contentsline {section}{\numberline {2.3}Construction of Numbers and the Continuum}{7}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}The Integers}{7}{subsection.2.3.1}% 
+\contentsline {subsection}{\numberline {2.3.2}The Rational Numbers}{7}{subsection.2.3.2}% 
+\contentsline {subsection}{\numberline {2.3.3}The Real Numbers}{8}{subsection.2.3.3}% 
+\contentsline {subsection}{\numberline {2.3.4}Dedekind Cuts}{9}{subsection.2.3.4}% 
+\contentsline {subsection}{\numberline {2.3.5}Limits of Rational Sequences}{9}{subsection.2.3.5}% 
+\contentsline {section}{\numberline {2.4}Theorems of Calculus}{10}{section.2.4}% 
+\contentsline {subsection}{\numberline {2.4.1}The Intermediate Value Theorem}{10}{subsection.2.4.1}% 
+\contentsline {subsection}{\numberline {2.4.2}Rolle's Theorem and Mean Value Theorem}{11}{subsection.2.4.2}% 
+\contentsline {chapter}{\numberline {3}Three Diversions}{13}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Hyperbolics}{13}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.1.1}definition}{13}{subsection.3.1.1}% 
+\contentsline {subsection}{\numberline {3.1.2}Hyperbolic Identities}{14}{subsection.3.1.2}% 
+\contentsline {subsection}{\numberline {3.1.3}Inverse Hyperbolics}{15}{subsection.3.1.3}% 
+\contentsline {subsection}{\numberline {3.1.4}Calculus of Hyperbolics}{16}{subsection.3.1.4}% 
+\contentsline {section}{\numberline {3.2}Implicit Derivatives and Plane Curves}{18}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Implicit Derivatives}{18}{subsection.3.2.1}% 
+\contentsline {section}{\numberline {3.3}Algebraic Plane Curves}{19}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}Related Rates}{22}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.4.1}Definitions and Reaction Rates}{22}{subsection.3.4.1}% 
+\contentsline {subsection}{\numberline {3.4.2}Classic Examples}{23}{subsection.3.4.2}% 
+\contentsline {chapter}{\numberline {4}Techniques of Integration}{26}{chapter.4}% 
+\contentsline {subsection}{\numberline {4.0.1}Solvable Integrals}{26}{subsection.4.0.1}% 
+\contentsline {section}{\numberline {4.1}Substitution Rule Review}{27}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Integration by Parts}{28}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Definition}{28}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}Examples}{29}{subsection.4.2.2}% 
+\contentsline {section}{\numberline {4.3}Partial Fractions}{32}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}Integrals of Rational Functions}{32}{subsection.4.3.1}% 
+\contentsline {subsection}{\numberline {4.3.2}Proper Fractions and Long Division}{33}{subsection.4.3.2}% 
+\contentsline {subsection}{\numberline {4.3.3}The Algebraic Technique of Partial Fractions}{34}{subsection.4.3.3}% 
+\contentsline {section}{\numberline {4.4}Quadratic Types in Partial Fractions}{38}{section.4.4}% 
+\contentsline {subsection}{\numberline {4.4.1}Irreducible Factors}{38}{subsection.4.4.1}% 
+\contentsline {subsection}{\numberline {4.4.2}Repeated Linear Factors}{40}{subsection.4.4.2}% 
+\contentsline {section}{\numberline {4.5}Trigonometric Integrals}{41}{section.4.5}% 
+\contentsline {subsection}{\numberline {4.5.1}Strategies}{41}{subsection.4.5.1}% 
+\contentsline {section}{\numberline {4.6}Examples}{42}{section.4.6}% 
+\contentsline {section}{\numberline {4.7}Trigonometric Substitutions}{45}{section.4.7}% 
+\contentsline {section}{\numberline {4.8}Improper Integrals}{51}{section.4.8}% 
+\contentsline {chapter}{\numberline {5}Applications of Integrations}{54}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Parametric Curves}{54}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}Definition}{54}{subsection.5.1.1}% 
+\contentsline {section}{\numberline {5.2}Examples}{55}{section.5.2}% 
+\contentsline {subsection}{\numberline {5.2.1}Reparametrization}{57}{subsection.5.2.1}% 
+\contentsline {section}{\numberline {5.3}Calculus on Parametric Curves}{58}{section.5.3}% 
+\contentsline {subsection}{\numberline {5.3.1}Slopes}{58}{subsection.5.3.1}% 
+\contentsline {subsection}{\numberline {5.3.2}Velocity and Distance on a Parametric Curve}{60}{subsection.5.3.2}% 
+\contentsline {subsection}{\numberline {5.3.3}Arclength}{61}{subsection.5.3.3}% 
+\contentsline {subsection}{\numberline {5.3.4}Independence of Parametrization}{63}{subsection.5.3.4}% 
+\contentsline {subsection}{\numberline {5.3.5}Parametrization by Arclength}{64}{subsection.5.3.5}% 
+\contentsline {section}{\numberline {5.4}Volumes}{65}{section.5.4}% 
+\contentsline {subsection}{\numberline {5.4.1}Volumes by Cross-Sectional Slices}{65}{subsection.5.4.1}% 
+\contentsline {subsection}{\numberline {5.4.2}Volumes by Spherical or Cylindrical Shells}{67}{subsection.5.4.2}% 
+\contentsline {section}{\numberline {5.5}Surface Areas}{71}{section.5.5}% 
+\contentsline {section}{\numberline {5.6}Probability}{73}{section.5.6}% 
+\contentsline {subsection}{\numberline {5.6.1}Probability Density Functions}{73}{subsection.5.6.1}% 
+\contentsline {subsection}{\numberline {5.6.2}Normalization}{74}{subsection.5.6.2}% 
+\contentsline {subsection}{\numberline {5.6.3}Means}{76}{subsection.5.6.3}% 
+\contentsline {subsection}{\numberline {5.6.4}Central Tendencies}{78}{subsection.5.6.4}% 
+\contentsline {subsection}{\numberline {5.6.5}Expectation Values}{79}{subsection.5.6.5}% 
+\contentsline {subsection}{\numberline {5.6.6}Standard Deviation}{80}{subsection.5.6.6}% 
+\contentsline {chapter}{\numberline {6}Series}{82}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Sequences}{82}{section.6.1}% 
+\contentsline {subsection}{\numberline {6.1.1}Definition}{83}{subsection.6.1.1}% 
+\contentsline {subsection}{\numberline {6.1.2}Limits of Sequences}{84}{subsection.6.1.2}% 
+\contentsline {section}{\numberline {6.2}Definition of Infinite Series}{85}{section.6.2}% 
+\contentsline {section}{\numberline {6.3}Convergence}{86}{section.6.3}% 
+\contentsline {subsection}{\numberline {6.3.1}Partial-Sums}{86}{subsection.6.3.1}% 
+\contentsline {subsection}{\numberline {6.3.2}Convergence Examples}{86}{subsection.6.3.2}% 
+\contentsline {subsection}{\numberline {6.3.3}The Test for Divergence}{90}{subsection.6.3.3}% 
+\contentsline {section}{\numberline {6.4}Geometric and $\zeta $ Series}{91}{section.6.4}% 
+\contentsline {section}{\numberline {6.5}Manipulation of Series}{92}{section.6.5}% 
+\contentsline {section}{\numberline {6.6}Decimal Expansions for Real Numbers}{92}{section.6.6}% 
+\contentsline {section}{\numberline {6.7}Absolute and Conditional Convergence}{93}{section.6.7}% 
+\contentsline {subsection}{\numberline {6.7.1}The Alternating Harmonic Series}{94}{subsection.6.7.1}% 
+\contentsline {subsection}{\numberline {6.7.2}Conditional Convergence}{95}{subsection.6.7.2}% 
+\contentsline {section}{\numberline {6.8}Convergence Tests}{96}{section.6.8}% 
+\contentsline {subsection}{\numberline {6.8.1}Comparison on Series}{96}{subsection.6.8.1}% 
+\contentsline {subsection}{\numberline {6.8.2}The Integral Test}{98}{subsection.6.8.2}% 
+\contentsline {subsection}{\numberline {6.8.3}The Ratio and Root Tests}{98}{subsection.6.8.3}% 
+\contentsline {subsection}{\numberline {6.8.4}Testing Strategies}{99}{subsection.6.8.4}% 
+\contentsline {subsection}{\numberline {6.8.5}Testing Examples}{99}{subsection.6.8.5}% 
+\contentsline {section}{\numberline {6.9}Values of Infinite Series}{104}{section.6.9}% 
+\contentsline {section}{\numberline {6.10}Power Series}{105}{section.6.10}% 
+\contentsline {subsection}{\numberline {6.10.1}Series as Functions}{105}{subsection.6.10.1}% 
+\contentsline {subsection}{\numberline {6.10.2}Definition of Power Series}{106}{subsection.6.10.2}% 
+\contentsline {subsection}{\numberline {6.10.3}Radii of Convergence}{106}{subsection.6.10.3}% 
+\contentsline {subsection}{\numberline {6.10.4}Properties of Power Series}{109}{subsection.6.10.4}% 
+\contentsline {subsection}{\numberline {6.10.5}Calculus of Power Series}{109}{subsection.6.10.5}% 
+\contentsline {section}{\numberline {6.11}Taylor Series}{110}{section.6.11}% 
+\contentsline {subsection}{\numberline {6.11.1}Analytic Functions}{110}{subsection.6.11.1}% 
+\contentsline {subsection}{\numberline {6.11.2}Calculating Coefficients}{111}{subsection.6.11.2}% 
+\contentsline {subsection}{\numberline {6.11.3}Examples}{112}{subsection.6.11.3}% 
+\contentsline {subsection}{\numberline {6.11.4}Non-Elementary Functions}{115}{subsection.6.11.4}% 
+\contentsline {section}{\numberline {6.12}Approximation and Taylor Polynomials}{116}{section.6.12}% 
