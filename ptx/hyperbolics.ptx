@@ -1,0 +1,228 @@
+<section xml:id="hyperbolics">
+  <title>Hyperbolics</title>
+  <subsection xml:id="hyperbolics-definition">
+    <title>definition</title>
+    <p>
+      In this lecture, we're going to introduce a new class of functions:
+      the hyperbolic functions.
+      One might wonder why we didn't do this earlier in Calculus I, when we talked about the universe of functions.
+      The only reason to delay it to Calculus II is time; Calculus I is very full,
+      and hyperbolics aren't necessary for any of the material.
+      Therefore, we have this isolated section on a new family of functions.
+    </p>
+    <figure xml:id="figure-trig-definition">
+      <caption>Definition of the Trigonometric Functions</caption>
+      <image width="800%" source="images/figure01.png" />
+    </figure>
+    <p>
+      The basic idea for hyperbolic functions comes from the construction of trigonometric functions.
+      Recall how we defined the sine and cosine functions,
+      as shown in <xref ref="figure-trig-definition">Figure</xref>.
+      For a circle with radius one, angle
+      (in radians)
+      can be <em>defined</em> to be the arc length of the inscribed arc or,
+      equivalently, twice the shadded area.
+      Then the <m>x</m> and <m>y</m> coordinates of a point on the edge of the unit circle,
+      dependant on the angle,
+      are given by the cosine and sine functions, respectively.
+      The important observation is that there is an <em>natural,
+      intrinsic</em> definition of angle,
+      and that the trigonometric functions give cartesian ccoordinates based on that intrinsic angle.
+    </p>
+    <figure xml:id="figure-hyperbolic-definition">
+      <caption>Definition of the Hyperbolic Functions</caption>
+      <image width="800%" source="images/figure02.png" />
+    </figure>
+    <p>
+      The unit circle is the locus of the equation <m>x^2 + y^2 = 1</m>.
+      If we change this very slightly to <m>x^2 - y^2 = 1</m>,
+      then we have the unit hyperbola instead.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          As seen in <xref ref="figure-hyperbolic-definition">Figure</xref>,
+          <term>hyperbolic angle</term> is defined to be the area inscribed by the hyperbolic.
+          Hyperbolic cosine and sine are the <m>x</m> and <m>y</m> coordinates of a point on the hyperbola as functions of hyperbolic angle.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Recall that trigonometric angle is bounded between 0 and <m>2\pi</m>.
+      Hyperbolic angle is unbounded:
+      as we keep moving the point up the hyperbola,
+      the inscribed area grows to infinity.
+      This also means that hyperbolic function are <em>not</em> periodic.
+    </p>
+  </subsection>
+  <subsection xml:id="hyperbolic-identities">
+    <title>Hyperbolic Identities</title>
+    <p>
+      The fundamental trigonometric idetity is <m>\sin^2 \theta + \cos^2 \theta =1</m>,
+      which comes from the fact that these are <m>x</m> and <m>y</m> coordinates and the circle is the locus <m>x^2 + y^2 = 1</m>.
+      For the hyperbolics, the locus is now <m>x^2 - y^2 = 1</m>,
+      so the fundamental hyperbolic identity is
+      <me>
+        \cosh^2 \theta - \sinh^2 \theta = 1
+      </me>.
+    </p>
+    <p>
+      In parallel with the trigonometric functions,
+      there are many other hyperbolic identities.
+      In almost all cases,
+      they are the same as the trigonometric identities excepts for differences in sign.
+      I'll give two examples here;
+      the rest are found in the reference materials.
+      <me>
+        \sinh (x+y) = \sinh x \cosh y + \cosh x \sinh y \hspace{2cm} \tanh^2 x = 1 - \sech^2 x
+      </me>
+    </p>
+    <p>
+      Also in parallel with trigonometry,
+      the remaining hyperbolic functions, tanh, coth, sech,
+      csch are defined in terms of hyperbolic sine and cosine.
+      For example, since <m>\tan x = \frac{\sin x}{\cos x}</m>,
+      we also have that <m>\tanh x = \frac{\sinh x}{\cosh x}</m>.
+    </p>
+    <p>
+      Now we can move on to the most surprising fact about hyperbolics,
+      a fact that doesn't
+      (at least at this point)
+      have any parallel with trigonometry.
+      The fact is this: hyperbolics are actually not new functions at all.
+      They can be quite easily built out of exponentials.
+      For the base functions <m>\sinh x</m> and <m>\cosh x</m>, we have
+      <me>
+        \cosh x = \frac{e^x + e^{-x}}{2} \hspace{1cm} \text{ and } \hspace{1cm} \sinh x = \frac{e^x - e^{-x}}{2}
+      </me>.
+    </p>
+    <p>
+      With this definition,
+      the remaining four hyperbolics are defined in terms of exponentials as are follows.
+      <md>
+        <mrow>\tanh x = \frac{e^x - e^{-x}}{e^x + e^{-x}} \amp  \hspace{2cm} \coth x = \frac{e^x + e^{-x}}{e^x - e^{-x}}</mrow>
+        <mrow>\sech x = \frac{2}{e^x + e^{-x}} \amp  \hspace{2cm} \csch x = \frac{2}{e^x - e^{-x}}</mrow>
+      </md>
+    </p>
+    <p>
+      In particular,
+      we know the asymptotic behaviour and asymptotic order of the hyperbolics.
+      <m>\cosh x</m> and <m>\sinh x</m> both have the same asymptotic order as <m>e^x</m>.
+      <m>\sech x</m> and <m>\csch x</m> both have exponential decay to 0. <m>\coth x</m> and <m>\tanh x</m> both have horizontal asymptotes at <m>y=\pm1</m>.
+    </p>
+    <p>
+      We can also reverse the exponential identities to gives this pleasant description of the exponential function,
+      <me>
+        e^x = \cosh x + \sinh x
+      </me>.
+    </p>
+    <p>
+      This leads us to an interesting question.
+      If hyperbolics relate both to trigonometry
+      (in definition, form and identities)
+      and exponentials,
+      is there also a hidden connection between trigonometry and exponentials?
+      This is a question we will return to late in the course.
+    </p>
+  </subsection>
+  <subsection xml:id="inverse-hyperbolics">
+    <title>Inverse Hyperbolics</title>
+    <p>
+      For trigonometry, we used the notation of
+      <m>\arcsin x</m> for the inverse of <m>\sin x</m>;
+      we will use a similar notation for hyperbolics.
+      Inverses will be indicated by a <sq>arc</sq> prefix,
+      so <m>\arcsinh x</m> is the inverse of the hyperbolic sine function.
+    </p>
+    <p>
+      The following table summarizes the domain restrictions required to define the inverse hyperbolics.
+      Since the hyperbolics are not periodic,
+      these domain restrictions are much less restrictive than they were for trigonometric functions.
+      Since the inverse switches domain and range,
+      the resulting range in the table will be the domain of the inverse.
+      <men>
+        \begin{array}{llll} \text{ Function }  \amp  \text{ Restricted Domain }  \amp  \text{ Resulting Range }  \amp  \text{ Inverse Function }  \\ \hline \sinh x \amp  \RR \amp  \RR \amp  \arcsinh x \\ \cosh x \amp  [0, \infty) \amp  [0, \infty) \amp  \arccosh x \\ \tanh x \amp  \RR \amp  (-1,1) \amp  \arctanh x \\ \sech x \amp  [0, \infty) \amp  (0, 1] \amp  \arcsech x \\ \csch x \amp  x \neq 0 \amp  x \neq 0 \amp  \arccsch x \\ \coth x \amp  x \neq 0 \amp  (-\infty,-1) \cup (1, \infty) \amp  \arccoth x \end{array}
+      </men>
+    </p>
+    <p>
+      Since the hyperbolics have exponential descripions,
+      we expect that their inverses will have logarithmic description.
+      This is true.
+      <md>
+        <mrow>\arcsinh x \amp  = \ln (x + \sqrt{x^2 +1} )</mrow>
+        <mrow>\arccosh x \amp  = \ln (x + \sqrt{x^2 -1} )</mrow>
+        <mrow>\arctanh x \amp  = \frac{1}{2} \ln \left( \frac{1+x}{1-x} \right)</mrow>
+      </md>
+    </p>
+  </subsection>
+  <subsection xml:id="calculus-hyperbolics">
+    <title>Calculus of Hyperbolics</title>
+    <p>
+      Now that we have these new functions,
+      we'd like to know their integral and differential behaviour.
+      The following derivatives and integrals of hyperbolic functions are all fairly easily determined using the exponential description.
+      <md>
+        <mrow>\frac{d}{dx} \cosh x \amp  = \frac{d}{dx} \frac{e^x + e^{-x}}{2} = \frac{e^x - e^{-x}}{2} = \sinh x</mrow>
+        <mrow>\frac{d}{dx} \sinh x \amp  = \frac{d}{dx} \frac{e^x - e^{-x}}{2} = \frac{e^x + e^{-x}}{2} = \cosh x</mrow>
+      </md>
+    </p>
+    <p>
+      For the remaining four functions, the derivatives are:
+      <md>
+        <mrow>\frac{d}{dx} \tanh x \amp  = \frac{d}{dx} \frac{\sinh x}{\cosh x} = \sech^2 x</mrow>
+        <mrow>\frac{d}{dx} \coth x \amp  = \frac{d}{dx} \frac{\cosh x}{\sinh x} = -\csch^2 x</mrow>
+        <mrow>\frac{d}{dx} \sech x \amp  = \frac{d}{dx} \frac{1}{\cosh x} = - \csch x \ \coth x</mrow>
+        <mrow>\frac{d}{dx} \csch x \amp  = \frac{d}{dx} \frac{1}{\sinh x} = - \sech x \tanh x</mrow>
+      </md>
+    </p>
+    <p>
+      Again, there is a similarity in form to the trigonometric derivatives but with difference in sign.
+      In particular, for sine and cosine,
+      four derivatives returned us to the original function.
+      For hyperbolic sine and cosine,
+      since the derivatives don't introduce a negative sign,
+      only two derivatives return us to the original.
+    </p>
+    <p>
+      One way of thinking about exponentials,
+      trigonometric functions and hyperbolics is in terms of solutions to differential equations.
+      This table summarizies three of the most basic and most important DEs and their solutions
+      (where <m>a</m> and <m>b</m> are real constants).
+      <men>
+        \begin{array}{ll} \text{ DE }  \amp  \text{ Solution }  \\ \hline \dfrac{df}{dx} = f \amp  f = ae^x \vspace{.2cm} \\ \dfrac{d^2f}{dx^2} = -f \amp  f = a \sin x + b \cos x \vspace{.2cm} \\ \dfrac{d^2f}{dx^2} = f \amp  f = a \sinh x + b \cosh x \end{array}
+      </men>
+    </p>
+    <p>
+      The derivatives of
+      (most of)
+      the inverse hyperbolic are as follows.
+      <md>
+        <mrow>\frac{d}{dx} \arcsinh x \amp  = \frac{1}{x + \sqrt{x^2+1}} \left( 1 + \frac{2x}{2 \sqrt{x^2+1}} \right) = \frac{\sqrt{x^2+1} + x}{(x + \sqrt{x^2+1}) \sqrt{x^2+1}} = \frac{1}{\sqrt{x^2+1}}</mrow>
+        <mrow>\frac{d}{dx} \arccosh x \amp  = \frac{1}{\sqrt{x^2-1}}</mrow>
+        <mrow>\frac{d}{dx} \arctanh x \amp  = \frac{1}{1-x^2}</mrow>
+        <mrow>\frac{d}{dx} \arccoth x \amp  = \frac{1}{1-x^2}</mrow>
+      </md>
+    </p>
+    <p>
+      Like inverse trigonometric derivatives,
+      the results of these derivatives are particularly interesting because they are special algebraic functions which don't have algebraic anti-derivatives.
+      If we reverse the direction,
+      this means we need inverse hyperbolics to do the following integrals.
+      <md>
+        <mrow>\int \frac{1}{\sqrt{1+x^2}} dx \amp  = \arcsinh x + c</mrow>
+        <mrow>\int \frac{1}{\sqrt{1-x^2}} dx \amp  = \arccosh x + c</mrow>
+        <mrow>\int \frac{1}{1 - x^2} dx \amp  = \arctanh x + c \text{ or } \arccoth x + c</mrow>
+      </md>
+    </p>
+    <p>
+      Notice the strangness with inverse hyperbolic cotangent and tangent.
+      Both have the same derivatives and both solve the same integrals.
+      This seems odd,
+      since the solutions to integrals are unique up to a constant.
+      The confusion is solved by realizing that <m>\arccoth</m> and
+      <m>\arctanh</m> have mutually exclusive domains.
+      Therefore, the <sq>or</sq> in the solution is appropriate:
+      the anti-derivative is either of the two functions depending on your location on the real number line.
+    </p>
+  </subsection>
+</section>

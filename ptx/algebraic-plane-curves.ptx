@@ -1,0 +1,155 @@
+<section xml:id="algebraic-plane-curves">
+  <title>Algebraic Plane Curves</title>
+  <definition>
+    <statement>
+      <p>
+        Another name for loci in <m>\RR^2</m> is
+        <term>plane curves</term>.
+        An <term>algebraic plane curve</term>
+        is a locus where the expressions are polynomials.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    Algebraic plane curves include all conics as well as the previous example <m>x^4 + y^4 = 1</m>.
+    They are the historical root of a large branch of mathematics called algebraic geometry,
+    which deals with the geometry of such polynomial plane curves and their higher-dimensional analogues.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        The <term>degree</term> of an algebraic plane curve is the highest polynomial degree involved in the equation of the curve.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    When we study the geometry of algebraic plane curves,
+    we often wonder what happens at problematic points.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        A point where the tangent line to an algebraic plane curve is not defined is called a <term>singularity</term>.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    We'll use this section to try to understand the singularities of simple algebraic plane curves.
+    First, let's talk about the case of vertical tangent lines.
+    The slope of a vertical line isn't defined,
+    but the tangent line can exist.
+    Our singularities are located where a
+    <em>tangent line</em> doesn't exist.
+    Therefore, vertical tangents are fine <mdash/> they aren't singularities.
+    That said, in what follows,
+    we will also get a method for identifying vertical tangents.
+  </p>
+  <p>
+    There are, broadly speaking,
+    two types of singularity for algebraic plane curves: nodes and cusps.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        A <term>node</term> occurs at the self-intersection of a plane curve.
+        We count the number of times the curve overlaps:
+        two overlaps is often called a <term>double point</term>,
+        three a <term>triple point</term>, and so on.
+        A <term>cusp</term>, on the other hand, is a sharp corner.
+        <xref ref="figure-singularities">Diagram</xref>
+        shows visual examples for algebraic plane curves.
+      </p>
+    </statement>
+  </definition>
+  <figure xml:id="figure-singularities">
+    <caption>Three Plane Curve Singularities</caption>
+    <image width="1000%" source="images/figure04.png" />
+  </figure>
+  <p>
+    To understand singularities,
+    we will look at the problematic points of the implicit derivative.
+  </p>
+  <example>
+    <statement>
+      <p>
+        Consider the plane curve given by the equation <m>y^2 = 4 - 3x^2 - x^3</m>.
+        This is a degree 3 curve,
+        which factors as <m>y^2 = (1-x)(2+x)^2</m>. (A factored form is often conveninet for these calculations,
+        when it is possible to find such a form.) Let's look at the implicit derivative.
+        <me>
+          2 y \frac{dy}{dx} = -6x - 3x^2 \implies \frac{dy}{dx} = \frac{-6x-3x^2}{2y}
+        </me>
+      </p>
+      <p>
+        This is well defined except when <m>y=0</m> which,
+        for this curve, happens at <m>(1,0)</m> and <m>(-2,0)</m>.
+      </p>
+      <p>
+        Let's look at a different form of the implicit derivative,
+        where we replace <m>y</m> with its expression in <m>x</m>.
+        <me>
+          \frac{dy}{dx} = \frac{-3x(2+x)}{\pm\sqrt{(1-x)(2+x)^2}} = \frac{-3(2+x)}{\pm\sqrt{1-x} (2+x)}
+        </me>
+      </p>
+      <p>
+        Then we can look at the limits as we approach the undefined points.
+        When <m>x=1</m>,
+        only the denominator goes to <m>0</m>, the numerator is finite.
+        Therefore, we expect the slope diverges to infinity.
+        This means the tangent line is approaching vertical and,
+        in the limit,
+        we recognize a vertical tangent.
+        There is no singularity here, just a vertical tangent.
+      </p>
+      <p>
+        This will be our first rule:
+        when the limit of the implicit derivative approaching an undefined point is <m>\pm \infty</m>,
+        we get a vertical tangent.
+      </p>
+      <p>
+        However, at <m>x=-2</m>,
+        both numerator and denominator have a <m>x+2</m> term,
+        which can cancel out. (The limit is an indeterminate form of type <m>\frac{0}{0}</m>).
+        Evaluating the limit gives a slope of <m>\frac{-3}{\pm\sqrt{3}}</m>.
+        We get two slopes, neither of which are vertical.
+        This situation indicates a self-intersection,
+        with the incoming lines at the two given slopes.
+        Moreover, since we have two possible tangents,
+        there are two intersecting pieces and the node is a double point.
+      </p>
+      <p>
+        This is our second rule:
+        when the limit of the implicit derivative approaching an undefined point is an indeterminant form of type
+        <m>\frac{0}{0}</m> which evaluates to several possible values,
+        we have a node.
+        The number of possible values gives the number of self-intersections and hence the type of the node
+        (double point, triple point, etc).
+        <xref ref="figure-elliptic-curve1">Figure</xref>
+        shows a vertical tangent and a double point node.
+      </p>
+    </statement>
+  </example>
+  <figure xml:id="figure-elliptic-curve1">
+    <caption>The Curve <m>y^2 = (1-x)(2+x)^2</m></caption>
+    <image width="1000%" source="images/figure05.png" />
+  </figure>
+  <example>
+    <statement>
+      <p>
+        Lastly, consider the curve
+        <m>y^2 = x^3</m> with implicit derivative <m>\frac{dy}{dx} = \frac{3x^2}{2y} = \frac{3x^2}{\pm \sqrt{x^3}}</m>.
+        This is undefined at the point <m>(0,0)</m> on the curve,
+        and the limit as we approach the undefined point is <m>0</m>.
+        This behaviour indicates a cusp,
+        which is our third and final rule:
+        the when the limit of the implicit derivative approaching an underinfed point is an indeterminant form of type
+        <m>\frac{0}{0}</m> which evaluates to <m>0</m>, then we have a cusp.
+        <xref ref="figure-elliptic-curve2">Figure</xref> shows a cusp.
+      </p>
+    </statement>
+  </example>
+  <figure xml:id="figure-elliptic-curve2">
+    <caption>The Curve <m>y^2 = x^3</m></caption>
+    <image width="400%" source="images/figure06.png" />
+  </figure>
+</section>

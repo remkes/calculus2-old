@@ -1,0 +1,7 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="formalizing">
+  <title>Formalizing Mathematics</title>
+  <xi:include  href="why-formality.ptx" />
+  <xi:include  href="epsilon-delta.ptx" />
+  <xi:include  href="construction-of-numbers.ptx" />
+  <xi:include  href="theorems.ptx" />
+</chapter>
