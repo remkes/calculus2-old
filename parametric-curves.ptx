@@ -1,0 +1,43 @@
+<section xml:id="parametric-curves">
+  <title>Parametric Curves</title>
+  <introduction>
+    <p>
+      We've done a fair bit of work with loci in this course and in Calculus I. Earlier in this course we talked about algebraic plane curves,
+      which were the loci of polynomial equations in <m>\RR^2</m>.
+      This section introduces a new way to think about curves:
+      by thinking of movement along the shape.
+      The movement happens with respect to a parameter,
+      which we think of as time:
+      as time passes, we move along the curve.
+      For loci like algebraic plane curves,
+      the entire curve is presented at one, as a complete object.
+      For parametric curves,
+      we start at a point and move along the curve in time.
+    </p>
+  </introduction>
+  <subsection xml:id="parametric-curves-definition">
+    <title>Definition</title>
+    <definition>
+      <statement>
+        <p>
+          Let <m>t</m> be an indepedent variable
+          (the parameter),
+          which we think of as time.
+          A parametric curve in <m>\RR^2</m> is a set of two functions <m>x(t)</m> and <m>y(t)</m>,
+          which give the <m>x</m> and <m>y</m> coordinates of the curve at any point <m>t</m> in time.
+          We assume that <m>x</m> and <m>y</m> are continuous,
+          so that the curve is a connected curve.
+          Often we want to refer the curve with one symbol,
+          which is typically the greek letter <m>\gamma</m>.
+          <me>
+            \gamma(t) = (x(t), y(t))
+          </me>
+        </p>
+        <p>
+          Since this is a function of <m>t</m>, we need a domain.
+          Typically we will have <m>t \in [a,b]</m> for an interval.
+        </p>
+      </statement>
+    </definition>
+  </subsection>
+</section>

@@ -1,0 +1,232 @@
+<section xml:id="construction-of-numbers">
+  <title>Construction of Numbers and the Continuum</title>
+  <introduction>
+    <p>
+      The historical problem of formalizing the limit is deeply connected with the problem of the continuum.
+      There are many historical forms and presentations of the problem of the continuum,
+      but here is a common version:
+      how can an infinitely divisible number line exist and how can we be sure it doesn't have any holes?
+      The continuum is the name of this infinitely divisible and gap-less number line,
+      so the problem is essentially a problem of giving a good,
+      formal construction of the continuum.
+      In modern mathematics,
+      this is done by constructing the real numbers <m>\RR</m>,
+      and proving that they are ordered in such a way as to form this infinitely divisible,
+      gap-less continuum, which we call the real number line.
+    </p>
+    <p>
+      In this section,
+      we'll review the idea of constructing number sets, starting with <m>\NN</m>.
+      This is a formalizing process:
+      intuitively, we have ideas of natural numbers, integers,
+      rational numbers and real numbers.
+      However, mathematics isn't content with these intuitive ideas.
+      It wants clear, formal definitions.
+    </p>
+    <p>
+      We'll start with the assumption that the natural numbers are given. (The construction of the natural numbers out of set theory is a fascinating piece of mathematics,
+      but it takes a lot of time so we will unfortunatley have to skip it).
+    </p>
+  </introduction>
+  <subsection xml:id="integers">
+    <title>The Integers</title>
+    <p>
+      The construction of <m>\ZZ</m> from <m>\NN</m> is relatively easy:
+      it is essentially equivalent to the childhood realization that negative numbers exists and have meaning.
+      Formally, the construction is stated in this definition.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          <m>\ZZ</m> is defined by adding,
+          for every <m>n \in \NN</m> except <m>0</m>,
+          a the new symbol <m>-n</m> with the following properties.
+          <md>
+            <mrow>n + (-n) \amp  = 0</mrow>
+            <mrow>-(n + m) \amp  = -n + -m</mrow>
+            <mrow>-(nm) \amp  = (-n)m = n(-m)</mrow>
+            <mrow>(-n)(-m) \amp  = nm</mrow>
+          </md>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      These properties are sufficient to give the entire structure of the integers,
+      fitting them into the existing addition and multiplication of the natural numbers.
+      They also define subtraction,
+      by saying that <m>n-m</m> is defined to be <m>n + (-m)</m>.
+    </p>
+  </subsection>
+  <subsection xml:id="rationals">
+    <title>The Rational Numbers</title>
+    <p>
+      The construction of <m>\QQ</m> from <m>\ZZ</m> is also relatively easy and proceeds in a very similar way.
+      As with <m>\ZZ</m>,
+      where we defined new symbols <m>-n</m> and put them into our arithmetic system,
+      here we also define new symbols and give rules to tell how the symbols fit into the existing arithmetic.
+    </p>
+    <p>
+      Consider the set of symbol <m>\frac{a}{b}</m> where <m>a,
+      b \in \ZZ</m> and <m>b \neq 0</m>,
+      with the following properties.
+      <md>
+        <mrow>\frac{a}{a} \amp  = 1</mrow>
+        <mrow>\frac{a}{b} + \frac{c}{d} \amp  = \frac{ad + bc}{bd}</mrow>
+        <mrow>\frac{a}{b} \frac{c}{d} \amp  = \frac{ac}{bd}</mrow>
+        <mrow>-\frac{a}{b} \amp  = \frac{-a}{b} = \frac{a}{-b}</mrow>
+      </md>
+    </p>
+    <p>
+      These operations give us the well-defined structure of the rational numbers,
+      with multiplication, addition and subtraction.
+      They let us define division of integers by simply writing the fraction <m>\frac{a}{b}</m>.
+      We can then define division of rationals by
+      <me>
+        \frac{\frac{a}{b}}{\frac{c}{d}} = \frac{ad}{bc}
+      </me>.
+    </p>
+    <p>
+      However, there is one subtlety involved here.
+      Unlike the unique symbols for integers (<m>-3</m> can only be written as <m>-3</m>),
+      we know that both <m>\frac{2}{5}</m> and
+      <m>\frac{4}{10}</m> represent the same number.
+      In addition to the rules of arthimetic of these new fraction-symbols,
+      we also need a rule which identifies redundant symbols.
+      The rule is this:
+      <me>
+        \frac{a}{b} = \frac{c}{d} \iff ad = bc
+      </me>.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          <m>\QQ</m> is defined to be the fraction-symbols with the above arithmetic,
+          up to identification of similar fractions.
+        </p>
+      </statement>
+    </definition>
+  </subsection>
+  <subsection xml:id="reals">
+    <title>The Real Numbers</title>
+    <p>
+      In the search for the continuum,
+      the rational numbers are already close.
+      They have the infinitly divisible property we want:
+      between any two rational numbers we can construct a new rational number,
+      simply take the sum of the two numbers divided by 2.
+      However, they lack the gap-less nature of the continuum.
+      This is a very old problem:
+      the Pythagoreans had trouble with the idea that <m>\sqrt{2}</m>,
+      which a real,
+      measurable length, wasn't represented by a fraction.
+      <m>\sqrt{2}</m> is an example of a gap in the rational numbers.
+      The real numbers are constructed to extend <m>\QQ</m> by filling in the gaps.
+    </p>
+    <p>
+      There are a number of ways to do this.
+      Intuitively,
+      we've treated real numbers as all decimal expansions.
+      This is a reasonable definition,
+      but it implicitly relies on more advanced results about the convergence of infinite series.
+      The trouble with these decimals is that they are infinite:
+      unlike the <m>-n</m> terms that defined <m>\ZZ</m> or the
+      <m>\frac{a}{b}</m> terms that defined <m>\QQ</m>,
+      we can't actually write down the symbols that define <m>\RR</m>,
+      since they are potentially non-repeating infinite strings of digits.
+      This is quite unsatisfying.
+      (Unfortunately,
+      we will eventually discover that there isn't really any way to write the elements of <m>\RR</m> in a concise way.)
+    </p>
+    <p>
+      I'm going to present two ideas which were used historically to define <m>\RR</m>.
+      The first is quite abstract, but beautiful in its approach;
+      the second is a little bit more useful.
+    </p>
+  </subsection>
+  <subsection xml:id="dedekind-cuts">
+    <title>Dedekind Cuts</title>
+    <p>
+      The first approach is due to the 19th century mathematician Dedekind and is called the method of Dedekind cuts.
+      The idea is beautifully simple:
+      the problem with <m>\QQ</m> is that it has gaps.
+      Why not define <m>\RR</m> to be exactly those gaps?
+    </p>
+    <definition>
+      <statement>
+        <p>
+          A <term>Dedekind cut</term> is a seperation of <m>\QQ</m> into two pieces,
+          determined by order:
+          one half of <m>\QQ</m> is all numbers less than
+          (or equal)
+          something, and one half of <m>\QQ</m> is all numbers greater than
+          (or equal)
+          something.
+          The <term>real numbers</term> can be defined as the set of all possible Dedekind cuts.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      First, all rational numbers provide such a cut.
+      If I take <m>\frac{3}{2}</m>, I can cut <m>\QQ</m> into all pieces
+      <m>\lt \frac{3}{2}</m> and all pieces <m>\geq \frac{3}{2}</m>.
+      Notice that by starting with a rational number, I have a strict endpoint to one of my pieces:
+      the upper piece has <m>\frac{3}{2}</m> as its lowest elements.
+    </p>
+    <p>
+      Second, any gap in <m>\QQ</m> is a Dedekind cut.
+      Take <m>\sqrt{2}</m>, for instance.
+      I can split <m>\QQ</m> into those numbers which are
+      <m>\lt \sqrt{2}</m> and those <m>> \sqrt{2}</m>.
+      As such, <m>\sqrt{2}</m> defines a Dedekind cut,
+      hence a real number in this construction.
+      Notice there that neither piece has a lowest element in <m>\QQ</m>:
+      the new <sq>numbers</sq> are the cuts for which neither piece has a lowest or highest element.
+    </p>
+    <p>
+      As I said, this is a very abstract presentation of <m>\RR</m>.
+      It is stange and difficult to work with.
+      We could go on to define arithmetic on cuts,
+      but it's a laborious and tricky probject.
+      I'm including Dedekind cuts for their extreme elegance and style:
+      gaps are the problems,
+      so lets define the solution to be exactly those gaps!
+    </p>
+  </subsection>
+  <subsection xml:id="rational-sequences">
+    <title>Limits of Rational Sequences</title>
+    <p>
+      The second approach is also due to a 19th century mathematician,
+      this time Cauchy.
+      It relates to limits,
+      and our formalization of them. (Cauchy was heavily involved and influential in the 19th century formalization of calculus and limits).
+    </p>
+    <definition>
+      <statement>
+        <p>
+          <m>\RR</m> is the set of all possible limits of convergent sequences of rational numbers,
+          with a reasonable way of identifying equal limits.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      We're not going to deal this construction in detail,
+      though later in the course, we will talk about sequences and convergence.
+      In particular,
+      we'll show that all decimals expantions are sequences of rational numbers;
+      in this sense,
+      decimal expansions are a convenient notational tool for Cauchy's definition.
+      In brief, we can easily see how a decimal expansions is,
+      implicitly, an infinite sum.
+      For example:
+      <me>
+        4.0983243\ldots = 4 + \frac{0}{10} + \frac{9}{100} + \frac{8}{1000} + \frac{3}{10^4} + \frac{2}{10^5} + \frac{4}{10^6} + \frac{3}{10^7} + \ldots
+      </me>
+    </p>
+    <p>
+      For our current purposes,
+      we'll leave aside the further formalization of the construction of <m>\RR</m> and make use of the intuitive idea of decimal expansions.
+      What is important is that we have constructed the continuum:
+      <m>\RR</m> is infinitely divisible and has no gaps.
+    </p>
+  </subsection>
+</section>

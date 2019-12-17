@@ -1,0 +1,25 @@
+<section xml:id="series-definition">
+  <title>Definition of Infinite Series</title>
+  <definition>
+    <statement>
+      <p>
+        If <m>\{a_n\}</m> is a sequence,
+        then the sum of all infinitely many terms <m>a_n</m> is called an
+        <term>infinite series</term>.
+        We write infinite series with sigma notation.
+        <me>
+          \sum_{n=1}^\infty a_n
+        </me>
+      </p>
+      <p>
+        The number <m>n</m> is called the <term>index</term>
+        and the numbers <m>a_n</m> are called the <term>terms</term>.
+        If we want to forget the sum,
+        we can talk about the <term>sequence of terms</term>
+        <m>\{a_n\}_{n=1}^\infty</m>.
+        Though we started with <m>n=1</m> in this definition,
+        we could start with any integer.
+      </p>
+    </statement>
+  </definition>
+</section>

@@ -1,0 +1,133 @@
+<section xml:id="surface-areas">
+  <title>Surface Areas</title>
+  <p>
+    We have been calculating the volumes of surfaces of revolution:
+    objects formed by taking a graph or locus and spinning its around an axis.
+    In this section,
+    we expand the process to also calculate surface areas.
+  </p>
+  <p>
+    Let's say that our surface is formed by rotating <m>f(x)</m> around the <m>x</m> axis on a domain <m>x \in [a,b]</m>.
+    Then <m>f(x)</m> is the radius of the surface as we move in the <m>x</m> direction.
+    To calculate surface area,
+    we seperate the surface of revolution into tiny cylindrical shells of radius <m>f(x)</m>.
+    When we worked with slices for volume,
+    the width of a slice was <m>dx</m>, and simple infinitesimal.
+    For surface area, this doesn't capture the complete behaviour.
+  </p>
+  <p>
+    We look at the lengths of parametric curves for inspiration.
+    If we call <m>ds</m> the infinitemisal width of a cylinder of surface area,
+    then <m>ds = \sqrt{ 1 + (f^\prime(x))^2}dx</m>.
+  </p>
+  <figure xml:id="figure-piece-surface-area">
+    <caption>The Width <m>ds</m> of a Piece of Surface Area</caption>
+    <image width="100%" source="images/figure25" />
+  </figure>
+  <p>
+    Then the area of each infinitesimal cylinder is circumference times width.
+    <me>
+      dA = 2\pi f(x) dx = 2\pi f(x) \sqrt{ 1 + (f^\prime(x))^2} dx
+    </me>
+  </p>
+  <p>
+    The surface area calcluation is the integral of these infinitesimal pieces.
+    <me>
+      A = \int_a^b 2\pi f(x) \sqrt{1 + (f^\prime(x))^2} dx
+    </me>
+  </p>
+  <example>
+    <statement>
+      <p>
+        A classic example is the surface area of a sphere.
+        The sphere is a surace of revolution for
+        <m>f(x) = \sqrt{r^2-x^2}</m> for <m>x \in [-r,r]</m>.
+        <md>
+          <mrow>A \amp  = 2 \int_0^r 2\pi \sqrt{r^2-x^2} \sqrt{ 1+ \frac{x^2}{r^2 - x^2}} dx</mrow>
+          <mrow>\amp  = 4 \pi \int_0^r \sqrt{ r^2 - x^2 + x^2} dx = 4\pi \int_0^r r dx</mrow>
+          <mrow>\amp  = \left. 4 \pi r x \right|_0^r = 4 \pi r^2</mrow>
+        </md>
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        We can also calculate the surface are of a cone of height <m>h</m> and radius <m>r</m>.
+        This is a surface of revolution of the function
+        <m>y = \frac{r}{h} x</m> for <m>x \in [0, h]</m>.
+        <md>
+          <mrow>A \amp  = \int_0^h 2\pi \frac{r}{h} x \sqrt{ 1 + \frac{r^2}{h^2}} dx</mrow>
+          <mrow>\amp  = 2\pi \frac{r}{h} \sqrt{1 + \frac{r^2}{h^2}} \int_0^h x dx</mrow>
+          <mrow>\amp  = 2\pi \frac{r}{h} \sqrt{1 + \frac{r^2}{h^2}} {h^2}{2}</mrow>
+          <mrow>\amp  = \pi r \sqrt{h^2 + r^2}</mrow>
+        </md>
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        We could also revolve a graph around the <m>y</m> axis.
+        If we do this, we have to write to have
+        <m>x = f(y)</m> instead of <m>y = f(x)</m>.
+        For example, the parabaloid
+        <m>y = \frac{h}{a^2} x^2</m> with height <m>h</m> and radius <m>a</m> has <m>x = a \sqrt{\frac{y}{h}}</m>,
+        so we can find its surface area by integrating in the variable <m>y</m>.
+        <md>
+          <mrow>A \amp  = \int_0^h 2\pi a \sqrt{\frac{y}{h}} \sqrt{ 1 + \frac{a^2}{4yh}} dy</mrow>
+          <mrow>\amp  = 2\pi a \int_0^h \sqrt{ \frac{y}{h} + \frac{a^2}{4h^2}}</mrow>
+          <mrow>\amp  = \left. 2\pi a \left(\frac{y}{h} + \frac{a^2}{4h^2} \right)^{\frac{3}{2}} \frac{2}{3} h \right|_0^h</mrow>
+          <mrow>\amp  = \frac{4\pi ah}{3} \left(1 + \frac{a^2}{4h^2} = \right)^{\frac{3}{2}}</mrow>
+          <mrow>\amp  = \frac{a\pi}{3} \left( 4h^2 + a^2 \right)^{\frac{3}{2}}</mrow>
+        </md>
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        The Horn of Gabriel had finite volume even though it was arbitrarily long.
+        What is its surface area?
+        <md>
+          <mrow>A \amp  = \int_1^\infty 2\pi \frac{1}{x} \sqrt{ 1 + \frac{1}{x^4}} dx \geq 2 \pi \int_0^\infty \frac{1}{x} dx = \infty</mrow>
+        </md>
+      </p>
+      <p>
+        By asymptotic analysis on the integrand,
+        we see this will never converges.
+        The horn of gabriel is an object with finite volume and infinite surface area.
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p>
+        Lastly, we can calculate the surface area of the exponential bell.
+        This is the surface of revolution for
+        <m>f(x) = e^{x}</m> on the domain <m>x \in [0, a]</m>.
+        <md>
+          <mrow>A \amp  = \int_0^1 2\pi e^x \sqrt{1 + e^{2x}} dx</mrow>
+          <mrow>u \amp  = e^x</mrow>
+          <mrow>du \amp  = e^x dx</mrow>
+          <mrow>u(0) \amp  = 1</mrow>
+          <mrow>u(a) \amp  = e^a</mrow>
+          <mrow>A \amp  = 2\int_1^{e^a} \sqrt{1+u^2} du</mrow>
+          <mrow>u \amp  = \tan \theta</mrow>
+          <mrow>du \amp  = \sec^2 \theta d \theta</mrow>
+          <mrow>A \amp  = \int_{u=1}^{u=e^a} \sec^3 \theta d \theta</mrow>
+          <mrow>\amp  = \int_{u=1}^{u=e^a} \frac{\cos \theta}{(1-\sin^2 \theta)^2} \theta d \theta</mrow>
+          <mrow>\amp  = \left. \arctanh \sin \theta \right|_{u=1}^{u=e^a}</mrow>
+          <mrow>\amp  = \left. \arctanh \left( \sqrt{1 - \frac{1}{\sec^2 \theta}} \right) \theta \right|_{u=1}^{u=e^a}</mrow>
+          <mrow>\amp  = \left. \arctanh \left( \sqrt{1 - \frac{1}{u^2}} \right) \theta \right|_{u=1}^{u=e^a}</mrow>
+          <mrow>\amp  = \arctanh \left( \sqrt{1 - e^{-2a}} \right) -\arctanh 0</mrow>
+          <mrow>\amp  = \arctanh \left( \sqrt{1 - e^{-2a}} \right)</mrow>
+        </md>
+      </p>
+      <p>
+        This is not a particularly nice forumla,
+        but it does give the surface area.
+      </p>
+    </statement>
+  </example>
+</section>

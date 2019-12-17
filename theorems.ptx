@@ -1,0 +1,134 @@
+<section xml:id="theorems">
+  <title>Theorems of Calculus</title>
+  <introduction>
+    <p>
+      In this section, I'd like to simply list several useful theorems that relation to limits,
+      continuity and calculus.
+      If this were a more formal course,
+      a majority of our time might be spent on these theorems and their implications.
+      For our purposes, though,
+      you should know that these theorem exists and you should have a reasonable interpretation for their meaning.
+      Theorems are also an important aspect of formalization:
+      as mathematics becomes formalized,
+      we insist on theorems and proofs to build up the formal structure.
+    </p>
+  </introduction>
+  <subsection xml:id="ivt">
+    <title>The Intermediate Value Theorem</title>
+    <p>
+      First, let's review continuity.
+      There are several ways to define continuity; I prefer this definition: A function <m>f</m> is continuous at a point <m>a</m> if <m>a</m> is in the domain of <m>f</m> and
+      <me>
+        \lim_{x \rightarrow a} f(x) = f(a)
+      </me>.
+    </p>
+    <p>
+      In a continuous function, the limit is just the function value.
+    </p>
+    <p>
+      Our first theorem is the Intermediate Value Theorem.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          If <m>f(x)</m> is continuous on <m>[a,b]</m> and if
+          <m>f(a) \lt c \lt f(b)</m> or <m>f(b)\lt c \lt f(a)</m>,
+          then there exists <m>x_0\in (a,b)</m> such that <m>f(x_0) = c</m>.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      This is stated formally, but the idea is relatively understandable.
+      This theorem simply says that a continuous function must go through all its intermediate values.
+      If <m>f(0) = 0</m> and <m>f(1) = 4</m>,
+      then all numbers between <m>0</m> and <m>4</m> are intermediate values.
+      The theorem says that somewhere in the interval <m>(0,1)</m>,
+      the function takes all these intermediate values at least once.
+      It can't skip or jump:
+      it can't go from 0 to 4 without also going throuth <m>1, 2, 3, \frac{3}{2}, \sqrt{2}, \pi</m>, etc.
+    </p>
+    <p>
+      A common application of the IVT is looking for roots of difficult functions.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Consider the quintic <m>f(x) = x^5 - x^4 + 2x^3 - 2x^2 + 2x - 1</m>.
+          Since this is a quintic,
+          there is no formula like the quadratic formula to find the roots
+          (the insolvability of the quintic by a formula is,
+          in itself, a very interesting piece of mathematics).
+          Using the IVT, if we can find a value values where the function is positive and another where the function is negative,
+          we can look for a root between those values.
+          In the following list,
+          each pair of successive function values is both positive and negative.
+          The IVT says that a root must lie between these values.
+          For convenience of notation, let <m>a</m> be the desired root.
+          <md>
+            <mrow>f(1) = 1 \hspace{2cm} f(0) = -1 \amp  \hspace{2cm} a \in (0,1)</mrow>
+            <mrow>f\left(\frac{1}{2}\right) = -0.28.. \amp  \hspace{2cm} a \in \left(\frac{1}{2},1\right)</mrow>
+            <mrow>f\left(\frac{3}{4}\right) = 0.139.. \amp  \hspace{2cm} a \in \left(\frac{2}{4},\frac{3}{4}\right)</mrow>
+            <mrow>f\left(\frac{5}{8}\right) = -0.100.. \amp  \hspace{2cm} a \in \left(\frac{5}{8},\frac{6}{8}\right)</mrow>
+            <mrow>f\left(\frac{11}{16}\right) = 0.00977.. \amp  \hspace{2cm} a \in \left(\frac{10}{16},\frac{11}{16}\right)</mrow>
+            <mrow>f\left(\frac{21}{32}\right) = -0.047.. \amp  \hspace{2cm} a \in \left(\frac{21}{32},\frac{22}{32}\right)</mrow>
+            <mrow>f\left(\frac{43}{64}\right) = -0.019.. \amp  \hspace{2cm} a \in \left(\frac{43}{64},\frac{44}{64}\right)</mrow>
+            <mrow>f\left(\frac{87}{128}\right) = -0.0049.. \amp  \hspace{2cm} a \in \left(\frac{87}{128},\frac{88}{128}\right)</mrow>
+            <mrow>f\left(\frac{175}{256}\right) = 0.0023.. \amp  \hspace{2cm} a \in \left(\frac{174}{256},\frac{175}{256}\right)</mrow>
+          </md>
+        </p>
+        <p>
+          This process gives us a reasonable approximation of the root in <m>\frac{174}{256}</m>.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="mvt">
+    <title>Rolle's Theorem and Mean Value Theorem</title>
+    <p>
+      We move on to theorems related to differentiation.
+      The first is Rolle's Theorem.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          If <m>f</m> is continuous on <m>[a,b]</m>,
+          continuously differentiable on <m>(a,b)</m>
+          (note the difference in intervals)
+          and if <m>f(a) = f(b)</m>,
+          then there exists <m>c \in (a,b)</m> such that <m>f^\prime(c) = 0</m>.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      Interpreted as movement in one dimension, Rolle's theorem says that if we get back to where we started,
+      we must turn around.
+      Getting back to where we started is <m>f(a) = f(b)</m>.
+      Turning around is having a point where there is zero rate of change,
+      where our velocity changes from going out to going back in.
+    </p>
+    <p>
+      Very similar to Rolle's theorem is the Mean Value Theorem.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          If <m>f</m> is continuous on <m>[a,b]</m>,
+          continuously differentiable on <m>(a,b)</m>,
+          then there exists a value <m>c \in (a,b)</m> such that
+          <me>
+            f^\prime(c) = \frac{f(b) - f(a)}{b-a}
+          </me>
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      Interpreted as movement in one dimension,
+      the MVT says that at some point in time,
+      we realize our average rate of change.
+      The term on the right is the average rate of change and the theorem says that there is a point <m>c</m> where the derivative,
+      the actual rate of change, is equal to this average change.
+      At other points in time, we might be moving slower or faster,
+      but somewhere we achieve the average speed at least once.
+    </p>
+  </subsection>
+</section>

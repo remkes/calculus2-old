@@ -1,0 +1,7 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="three-diversions">
+  <title>Three Diversions</title>
+  <xi:include  href="hyperbolics.ptx" />
+  <xi:include  href="plane-curves.ptx" />
+  <xi:include  href="algebraic-plane-curves.ptx" />
+  <xi:include  href="related-rates.ptx" />
+</chapter>
