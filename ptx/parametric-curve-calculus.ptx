@@ -1,0 +1,454 @@
+<section xml:id="parametric-curve-calculus">
+  <title>Calculus on Parametric Curves</title>
+  <introduction>
+    <p>
+      We prevously looked at the calculus of loci,
+      where we used implicit derivatives to find the slopes of tangent lines to loci.
+      For parametric curves, the calculus of the situation is much richer.
+      Since we have a notion of movement along a curve,
+      we can ask questions about velocity and distance travelled.
+    </p>
+  </introduction>
+  <subsection xml:id="parametric-curves-slopes">
+    <title>Slopes</title>
+    <p>
+      First, as with loci, we want to calculate
+      <m>\frac{dy}{dx}</m>, the slope of the curve.
+      Both <m>x</m> and <m>y</m> depend on <m>t</m>.
+      If derivative were fractions
+      (thinking infinitesimally),
+      the following expression would hold.
+      <me>
+        \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}}
+      </me>
+    </p>
+    <p>
+      Even though derivatives are not fractions,
+      this calculation actually works.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          The previous forumla is the definition of the slope of a tangent line to a parametric curve.
+        </p>
+      </statement>
+    </definition>
+    <example>
+      <statement>
+        <p>
+          The folium of Descartes has the following parametric description.
+          <me>
+            \gamma(t) = \left( \frac{3t}{1+t^3},\frac{3t^2}{1+t^3} \right)
+          </me>
+        </p>
+        <p>
+          If we extended the domain,
+          we would come very close to connecting the two parts of the curve.
+          However, since the equation for the folium is undefined at <m>t=-1</m>,
+          the two can never actually connect.
+        </p>
+        <figure xml:id="figure-folium">
+          <caption>The Folium of Descartes</caption>
+          <image width="700%" source="images/figure17.png" />
+        </figure>
+        <p>
+          The folium is historically interesting because it was
+          (as the name suggests)
+          studied by Descartes.
+          He was concerned, specifically,
+          with the slope of the folium;
+          this was a question he couldn't answer with the mathematics of his day.
+          This question was answered by Newton in the following decades,
+          using the techniques of calculus.
+          Let's follow in these steps and calculate the slope of the folium.
+          <md>
+            <mrow>\frac{dx}{dt} \amp  = \frac{3(1+t^3) - 3t3t^2}{(1+t^3)^2}</mrow>
+            <mrow>\frac{dy}{dt} \amp  = \frac{6t(1+t^3) - 3t^23t^2}{(1+t^3)^2}</mrow>
+            <mrow>\frac{dy}{dx} \amp  = \frac{6t + 6t^4 - 9t^4}{3 + 3t^3 - 9t^3} = \frac{6t-3t^4}{3-6t^3} = \frac{2t-t^4}{1-2t^3}</mrow>
+          </md>
+        </p>
+        <p>
+          This slope is undefined when <m>t = \sqrt[3]{\frac{1}{2}}</m>.
+          We expect a vertical tangent there
+          (this is the far edge of the loop section of the folium).
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Let's calculate the slope of the logarithmic spiral.
+          <md>
+            <mrow>\gamma(t) \amp  = (ae^{bt} \cos t, ae^{bt} \sin t)</mrow>
+            <mrow>\frac{dx}{dt} \amp  = bae^{bt} \cos t - a e^{bt} \sin t</mrow>
+            <mrow>\frac{dy}{dt} \amp  = bae^{bt} \sin t + ae^{bt} \cos t</mrow>
+            <mrow>\frac{dy}{dx} \amp  = \frac{bae^{bt} \sin t + ae^{bt} \cos t} { bae^{bt} \cos t - a e^{bt} \sin t} = \frac{b\sin t + \cos t}{b \cos t - \sin t}</mrow>
+          </md>
+        </p>
+        <p>
+          This slope undefined when <m>b \cos t = \sin t</m> or <m>b = \tan t</m>.
+          This is a regular occurence, but that makes sense,
+          since there are infinitely many locations on the curve where we get a vertical tangent.
+          This is <m>0</m> similarly when <m>b = -\cot t</m>,
+          finding the infinitely many times where we get a horizontal tangent.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="velocity-distance">
+    <title>Velocity and Distance on a Parametric Curve</title>
+    <p>
+      Unlike loci,
+      we can ask for the distance (length) of a parametric curve.
+      We're going to think in terms of infinitesimals.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          The symbol <m>ds</m> represents an infinitesimal distance along the curve.
+          We define <m>ds</m> as the pythagorean combination of <m>dx</m> and <m>dy</m>,
+          the infinitesimal distances in <m>x</m> and <m>y</m>.
+          <me>
+            ds = \sqrt{dx^2 + dy^2}
+          </me>
+        </p>
+      </statement>
+    </definition>
+    <definition>
+      <statement>
+        <p>
+          If this is distance,
+          then the velocity along the curve is its rate of change <m>\frac{ds}{dt}</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      With these two definition, we notice something important.
+      <me>
+        ds = \sqrt{dx^2 + dy^2} \implies \frac{ds}{dt} = \sqrt{ \left( \frac{dx}{dt} \right)^2 + \left( \frac{dy}{dt} \right)^2 }
+      </me>
+    </p>
+    <p>
+      This definition of <m>\frac{ds}{dt}</m>,
+      motivated by infinitesimals,
+      will be our definition of velocity along a parametric curve.
+      Let's look at some examples.
+    </p>
+    <example>
+      <statement>
+        <p>
+          The curve <m>\gamma(t) = (t,t)</m> has <m>\frac{ds}{dt} = \sqrt{1+1} = \sqrt{2}</m>.
+          This is a reasonable answer,
+          since the linear process moves along the curve at a constant rate of
+          <m>\sqrt{2}</m> units of distance per unit of time.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The curve <m>\gamma(t) = (t^2,t^2)</m> traces the same line,
+          but with speed <m>\frac{ds}{dt} = \sqrt{4t^2 + 4t^2} = 2\sqrt{2} t</m>.
+          In this quadratic behavior,
+          speed increases with the parameter and we have constant acceleration.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The curve <m>\gamma(t) = \left(\frac{1}{t}, \frac{1}{t} \right)</m> traces the same line,
+          but move towards the origin.
+          It has <m>\frac{ds}{dt} = \sqrt{\frac{1}{t^4} + \frac{1}{t^4}} = \frac{\sqrt{2}}{t^2}</m>,
+          which gets slower and slower.
+          This makes sense, since we have to have
+          <m>t \rightarrow \infty</m> before we get close to the origin.
+          The movement along the curve has to become very slow as <m>t</m> increases.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Recall the cycloid: <m>\gamma(t) = (a(t-\sin t), a(1-\cos t))</m>.
+          It has <m>\frac{dx}{dt} = a - a \cos t</m> and <m>\frac{dy}{dt} = a \sin t</m>,
+          so we calculate its velocity.
+          <md>
+            <mrow>\frac{ds}{dt} \amp  = \sqrt{(a-a\cos t)^2 + a^2 \sin^2 t }</mrow>
+            <mrow>\amp  = \sqrt{a^2 - 2a^2\cos t + a^2 \cos^2 t + a ^2 \sin^2 t}</mrow>
+            <mrow>\amp  = \sqrt{a^2 - 2a^2 \cos t + a^2} = a\sqrt{2(1-\cos t)}</mrow>
+          </md>
+        </p>
+        <p>
+          We can notice that <m>1-\cos t</m> is always positive,
+          so the square root is well defined.
+          Curiously, at <m>t=0</m>,
+          <m>t=2\pi</m> and any other multiple of <m>2\pi</m>, we get no velocity.
+        </p>
+      </statement>
+    </example>
+    <p>
+      We said in the previous section that the cycloid is the path of a point on a wheel.
+      When <m>t</m> is a multiple of <m>2\pi</m>,
+      the point on the wheel is momentarily in contact with the ground and its speed is zero.
+      That means that on a rolling wheel,
+      the point touching the ground at any instant it momentarily stationary.
+      This is something to ponder the next time you watch a train or other fast moving wheeled vehicle:
+      at every instant in time,
+      there is at least one point on the vehicle which isn't moving.
+    </p>
+  </subsection>
+  <subsection xml:id="arclength">
+    <title>Arclength</title>
+    <p>
+      We defined <m>ds = \sqrt{dy^2 + dx^2}</m>.
+      We thought of this as an infintesimal piece of distance along the curve.
+      Therefore, to get the entire distance along the curve,
+      we need to add up all the infinitesimal distance.
+      Adding up infinitesimals is the business of integration.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          The distance travelled along a parametric curve,
+          as the parameter goes from <m>t_0</m> to <m>t_1</m>,
+          is the integral of <m>ds</m>.
+          <me>
+            L = \int ds = \int_{t_0}^{t_1} \sqrt{\frac{dx}{dt}^2 +\frac{dy}{dt}^2}dt
+          </me>
+        </p>
+        <p>
+          The distance travelled along a parametric curve is typically called the <term>arclength</term>.
+        </p>
+      </statement>
+    </definition>
+    <example>
+      <statement>
+        <p>
+          A very nice example is the circle:
+          <m>\gamma(t) = (\cos t, \sin t)</m> for <m>t \in [0,2\pi]</m>.
+          Its length is calculated by integration.
+          <me>
+            L = \int_0^{2\pi} \sqrt{ \sin^2 t+ \cos^2 t}dt = \int_0^{2\pi} dt = 2\pi
+          </me>
+        </p>
+        <p>
+          It is very good that we recover the known circumference distance of a unit circle.
+          However, there are other parametrizations.
+          Take <m>\gamma(t) = (\cos 3t, \sin 3t)</m> for
+          <m>t \in [0, 2\pi/3]</m> and calculate the length.
+          <me>
+            L = \int_0^{\frac{2\pi}{3}} \sqrt{ 9\sin^2 3t+ 9\cos^2 3t}dt = \int_0^{\frac{2\pi}{3}} 3 dt = \frac{2\pi}{3} 3 = 2\pi
+          </me>
+        </p>
+        <p>
+          Happily, we still get the same result.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Let's reutrn to the cycloid <m>\gamma(t) = (t-\sin t, 1-\cos t)</m>.
+          The derivatives are <m>x^\prime = 1-\cos t</m> and <m>y^\prime = \sin t</m>.
+          <md>
+            <mrow>L \amp  = \int_0^{2\pi} \sqrt{(x^\prime)^2 + (y^\prime)^2 } dt</mrow>
+            <mrow>\amp  = \int_0^{2\pi} \sqrt{1 - 2\cos t + \cos^2 t + \sin^2 t} dt</mrow>
+            <mrow>\amp  = \int_0^{2\pi} \sqrt{2 - 2\cos t} dt = \sqrt{2} \int_0^{2\pi} \sqrt{1 - \cos t} dt</mrow>
+            <mrow>\amp  = \sqrt{2} \int_0^{2\pi} \sqrt{2} \sqrt{\sin^2 \frac{t}{2}} dt = 2 \int_0^{2\pi} \left| \sin \frac{t}{2} \right| dt</mrow>
+            <mrow>\amp  = 2 \int_0^{2\pi} \sin \frac{t}{2} dt = 2 2 \left. \left( - \cos \frac{t}{2} \right) \right|_0^{2\pi} = 4( \cos 0 - \cos \pi) = 4 \cdot 2 = 8</mrow>
+          </md>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          An interesting example is the perimeter of an ellipse.
+          It's an impotant calculation historically,
+          since it can determine the length of elliptical orbits
+          (among other applications).
+          Let <m>a</m> be the major (x) semiaxis and <m>b</m> be the minor (y) semiaxis.
+          Then <m>\gamma(t) = (a \cos t, b \sin t)</m> for
+          <m>t \in [0,2\pi]</m> describes the ellipse.
+        </p>
+        <p>
+          Before calculating, it is convenient to also define a new quantity:
+          the eccentricity of the ellipse.
+          This is defined as <m>e = \frac{\sqrt{a^2-b^2}}{a}</m>
+          (assuming that <m>a\geq b</m>)
+          and it always a number in <m>[0,1)</m>.
+          Eccentricity is a nice way of measuring how close an ellipse is to a circle.
+          If <m>e = 0</m> then <m>a=b</m> and we have a circle.
+          As <m>e \rightarrow 1</m> the ellipse becomes narrower and narrower.
+          Then we (try to) calculate the length of the ellipse.
+          <md>
+            <mrow>L \amp  = \int_0^{2\pi} \sqrt{ (x^\prime)^2 + (y^\prime)^2} dt</mrow>
+            <mrow>\amp  = \int_0^{2\pi} \sqrt{ a^2 \cos^2 t + b^2 \sin^2 t} dt</mrow>
+            <mrow>\amp  = \int_0^{2\pi} \sqrt{ a^2 \sin^2 t + (b^2 - a^2) \sin^2 t + a^2 \cos^2 t }</mrow>
+            <mrow>\amp  = \int_0^{2\pi} a\sqrt{ 1 + \frac{b^2-a^2}{a^2} \sin^2 t}</mrow>
+            <mrow>\amp  = a \int_0^{2\pi} \sqrt{ 1 - \frac{a^2 - b^2}{a^2} \sin^2 t}</mrow>
+            <mrow>\amp  = a \int_0^{2\pi} \sqrt{ 1 - e^2 \sin^2 t}dt</mrow>
+          </md>
+        </p>
+        <p>
+          If <m>e=1</m>, then we could use
+          <m>1 - \sin^2 t = \cos^2 t</m> and have an easy integral.
+          In this form, however, the integration is very difficult.
+          This is so difficult, in fact,
+          that it has a special name:
+          this is an elliptic integral of the second kind.
+          These integrals have been studied for three hundred years,
+          and with good cause, since they have no elementary anti-derivatives.
+          Even without an elementary anti-derivative,
+          the behaviour can be investigated.
+          This has led to many insights in geometry;
+          the notion of elliptic curves relates to this integral and gives elliptic curves their names.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Another important special case is a parametric description of the graph of a function.
+          If <m>f(x)</m> is defined on <m>[a,b]</m>,
+          then for <m>t \in [a,b]</m> its graph can be written <m>\gamma(t) = (t, f(t))</m>.
+          <me>
+            L = \int_a^b \sqrt{1 + (f^\prime(t))^2}dt
+          </me>
+        </p>
+        <p>
+          This is a convenient formula to have,
+          since calculating the lengths of graphs of function is a common activity.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="independence-parametrization">
+    <title>Independence of Parametrization</title>
+    <p>
+      The previous examples of the length of the circle raises an important issue.
+      Notions like distance should be intrinsic to the <em>shape</em>,
+      not the rate of movement along the shape.
+      With parametric objects,
+      we have to distinguish between that which depends on the parameter
+      (like velocity)
+      and that which is intrinsic to the shape
+      (like arclength).
+      For the latter,
+      we have to make sure that if we use a parametrization to calculate an intrinsic quantity,
+      the result is independent of the parametrization.
+    </p>
+    <p>
+      In this case,
+      the proof that distance is independent of parametrization is simply accomplished by the substitution rule for integrals.
+      Let <m>\gamma(t)</m> be a curve.
+      Any other parametrization can be achieved by a monotonoic function
+      <m>t = t(s)</m> via reparametrization.
+      If the original bounds of <m>t</m> are <m>t_0</m> and <m>t_1</m>,
+      then choose <m>s_0</m> and <m>s_1</m> so that
+      <m>t(s_0) = t_0</m> and <m>t(s_1) = t_1</m>.
+      Then we're going to use the substitution <m>t = t(s)</m> with
+      <m>dt = t^\prime(s) ds</m> to change the integral.
+      <md>
+        <mrow>L(t) \amp  = \int_{t_0}^{t_1} \sqrt{ \frac{dx(t)}{dt}^2 + \frac{dy(t)}{dy}^2} dt</mrow>
+        <mrow>\amp  = \int_{t_0}^{t_1} \sqrt{ \frac{dx(t)}{dt}^2 + \frac{dy(t)}{dy}^2} \frac{dt}{ds} \frac{dt}{\frac{dt}{ds}}</mrow>
+        <mrow>\amp  = \int_{t_0}^{t_1} \sqrt{ \left( \frac{dx(t(s))}{dt} \frac{dt}{ds} \right)^2 +\left( \frac{dy(t(s))}{dt} \frac{dt}{ds} \right)^2} \frac{dt}{\frac{dt}{ds}}</mrow>
+        <mrow>\amp  = \int_{s_0}^{s_1} \sqrt{\frac{dx(t(s))}{ds}^2 + \frac{dy(t(s))}{ds}} ds = L(s)</mrow>
+      </md>
+    </p>
+    <p>
+      The substitution shows that the length doesn't depend on which parametrization we use.
+    </p>
+  </subsection>
+  <subsection xml:id="parametrization-arclength">
+    <title>Parametrization by Arclength</title>
+    <p>
+      The issue of many parametrizations of the same shape is vexing.
+      If we want to work with intrinsic information,
+      we always have to deal with the different parametrizations.
+      It would be very convenient to have one special parametrization to choose.
+      Fortunately, such a parametriztion exists
+      (or is chosen by mathematicians).
+    </p>
+    <definition>
+      <statement>
+        <p>
+          The <term>parametrization by arclength</term>
+          is the parametrization where <m>\frac{ds}{dt} = 1</m>,
+          i.e., the unique parametrization where we always move along the curve with speed of one unit of distance per unit of time.
+          To make it completely unique,
+          we also start the parameter at 0.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      The reason for the name is that the parameter can be interpreted as the length along the curve.
+      If we always cover distance at a rate of one unit of distance per unit of time,
+      then after <m>t</m> units of time we've covered <m>t</m> units of distance,
+      for all choices of the parameter <m>t</m>.
+      Therefore, it is approprate to treat the parameter <m>t</m> as the distance covered.
+      For this reason,
+      we often write <m>s</m> for this parameter and we call <m>s</m> the arclength parameter.
+    </p>
+    <p>
+      In order to construct this parametrization, we need a new function:
+      the arclength function.
+      We need to be very careful with variables when defining this function.
+      Let <m>\gamma(t)</m> be our parametric curve.
+      We're going to introduce a new variable <m>u</m>,
+      which will also act as the parameter.
+      The reasons for this <m>u</m> is that we need an internal variable for the arclength integral.
+    </p>
+    <definition>
+      <statement>
+        <me>
+          s(t) = \int_a^t \sqrt{(x^\prime(u))^2 + (y^\prime(u))^2} du
+        </me>
+        <p>
+          This <m>s(t)</m> is the arclength function.
+          It depends on the parameter <m>t</m> and starts at <m>t=a</m>.
+          Since <m>t</m> is outside the integral,
+          we needed the temporary variable <m>u</m> to do the integration.
+          The arclength function measure how much length we've covered as the parameter goes from the start <m>a</m> to <m>t</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      The arclength function is guaranteed to be an increasing function,
+      since it is an integral of a positive function.
+      Therefore it is invertible.
+      It also starts at 0, <m>s(a) = 0</m>.
+      The maximum value of <m>s</m> is <m>s(b) = L</m>,
+      the total length of the curve.
+      Therefore, we can write the inverse as <m>t(s)</m> where <m>s \in [0, L]</m>.
+      Then we can substitute <m>t(s)</m> for <m>t</m> to get
+      <m>\gamma(t(s))</m>, a reparametrization.
+    </p>
+    <p>
+      What has this accomplished?
+      We've turned the arclength function into the parameter.
+      Therefore, this is the parametrization by arclength.
+      It is the unique parametrization with speed one,
+      where the parameter and length along the curve are always the same.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Here's the process for parametrizing a circle of radius <m>4</m> by arc-length.
+          <md>
+            <mrow>\gamma(t) \amp  = (4 \cos t, 4 \sin t) \hspace{2cm} t \in [0, 2\pi]</mrow>
+            <mrow>s(t) \amp  = \int_0^t \sqrt{(x^\prime(u))^2 + (y^\prime(u))^2} du</mrow>
+            <mrow>\amp  = \int_0^t \sqrt{16 \sin^2 u + 16 \cos^2 u} du</mrow>
+            <mrow>\amp  = \int_0^t 4 du</mrow>
+            <mrow>s(t) \amp  = 4t</mrow>
+            <mrow>t(s) \amp  = \frac{s}{4}</mrow>
+            <mrow>t \amp  = 0 \implies s = 0</mrow>
+            <mrow>t \amp  = 2\pi \implies s = 8\pi</mrow>
+            <mrow>\gamma(s) \amp  = \left(4 \cos \frac{s}{4}, 4 \sin \frac{s}{4} \right) \hspace{2cm} t \in [0,8\pi]</mrow>
+          </md>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+</section>
