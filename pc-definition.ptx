@@ -1,0 +1,232 @@
+<section xml:id="parametric-curves">
+  <title>Parametric Curves</title>
+  <introduction>
+    <p>
+      We've done a fair bit of work with loci in this course and in
+      Calculus I. Earlier in this course we talked about algebraic
+      plane curves, which were the loci of polynomial equations in
+      <m>\RR^2</m>. This section introduces a new way to think about
+      curves: by thinking of movement along the shape. The movement
+      happens with respect to a parameter, which we think of as time:
+      as time passes, we move along the curve. For loci like
+      algebraic plane curves, the entire curve is presented at one, as
+      a complete object. For parametric curves, we start at a point
+      and move along the curve in time.
+    </p>
+  </introduction>
+  <subsection xml:id="parametric-curves-definition">
+    <title>Definition</title>
+    <definition>
+      <statement>
+        <p>
+          Let <m>t</m> be an indepedent variable (the parameter),
+          which we think of as time. A parametric curve in
+          <m>\RR^2</m> is a set of two functions <m>x(t)</m> and
+          <m>y(t)</m>, which give the <m>x</m> and <m>y</m>
+          coordinates of the curve at any point <m>t</m> in time. We
+          assume that <m>x</m> and <m>y</m> are continuous, so that
+          the curve is a connected curve. Often we want to refer the
+          curve with one symbol, which is typically the greek letter
+          <m>\gamma</m>.
+          <me>
+            \gamma(t) = (x(t), y(t))
+          </me>
+        </p>
+        <p>
+          Since this is a function of <m>t</m>, we need a domain.
+          Typically we will have <m>t \in [a,b]</m> for an interval.
+        </p>
+      </statement>
+    </definition>
+  </subsection>
+  <subsection xml:id="parametric-curves-examples">
+    <title>Examples</title>
+    <example>
+      <statement>
+        <p>
+          Consider the curve <m>\gamma_1(t) = (t,t)</m> for <m>t \in
+          [0,5]</m>. This curves gives the line <m>y=x</m>, starting
+          at <m>(0,0)</m> and ending at <m>(5,5)</m>. At <m>t=0</m>,
+          the curve is at <m>(0,0)</m>, at <m>t=1</m>, it is at
+          <m>(1,1)</m>, and so on. All parametric curves are about
+          movement: this is not only the line <m>y=x</m>, but also the
+          starting point <m>(0,0)</m>, the ending point <m>(5,5)</m>
+          and the rate of movement along the line.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Consider the curve <m>\gamma_2(t) = (-t,-t)</m> for <m>t \in
+          [-5,0]</m>. This is exactly the same line, since it still
+          satisfies <m>y=x</m>. However, now we start at <m>(5,5)</m>
+          when <m>t=-5</m>, and we move towards <m>(0,0)</m> when
+          <m>t=0</m>.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Now consider the curve <m>\gamma_3(t) = (t^2,t^2)</m> for
+          <m>t \in [0,\sqrt{5}]</m>. Again, this is the same line
+          and, like <m>\gamma_1</m>, it starts at <m>(0,0)</m> and
+          ends at <m>(5,5)</m>. However, it travels the distance a
+          smaller parameter domain, meaning that it moves faster.
+        </p>
+      </statement>
+    </example>
+    <figure xml:id="figure-parametric-curve1">
+      <caption>Parametric Curve <m>\gamma_1(t) = (t,t)</m></caption>
+      <image width="100%" source="images/figure10" />
+    </figure>
+    <example>
+      <statement>
+        <p>
+          A classic example is <m>\gamma(t) = (\cos t, \sin t)</m> for
+          <m>t \in [0,2\pi]</m>. This curve is just the unit circle,
+          traced counter clockwise, starting at <m>(1,0)</m>. We
+          could change the parameter domain. If we have <m>t \in
+          [0,8\pi]</m>, then we have four periods of <m>\sin t</m> and
+          <m>\cos t</m>, so this traces the same circle four times.
+          This is a good example of a parametric curve which traces
+          over itself some number of times.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Curves can quickly get complicated. Consider this curve:
+          <m>\gamma(t) = (\cos 3t, \sin 5t)</m>. This gives a lovely
+          pattern, perhaps reminiscent of spirographs (depending on
+          your childhood experience, of course). The curve is shown
+          in <xref ref="figure-parametric-curve2">Figure</xref>.
+        </p>
+      </statement>
+    </example>
+    <figure xml:id="figure-parametric-curve2">
+      <caption><m>\gamma(t) = (\cos 3t, \sin 5t)</m></caption>
+      <image width="100%" source="images/figure11" />
+    </figure>
+    <example>
+      <statement>
+        <p>
+          The next example is called the cycloid. Many curves have
+          history going back hundreds or thousands of years in
+          geometry, as evidenced by their greek names. The cycloid is
+          the curve <m>\gamma(t) = (a(t-\sin t), a(1-\cos t))</m>. It
+          describes the movement of a point at the edge of a wheel as
+          the wheel rolls.
+        </p>
+      </statement>
+    </example>
+    <figure xml:id="figure-parametric-curve3">
+      <caption>The Cycloid</caption>
+      <image width="100%" source="images/figure12" />
+    </figure>
+    <p>
+      Many parametric curves are spirals. The general form for a
+      spiral is <m>\gamma(t) = (f(t) \cos t, f(t) \sin t)</m> for
+      <m>f(t)</m> a positive monotonic function. <m>f(t)</m>
+      represents the change in radius as we go around a circle.
+    </p>
+    <example>
+      <statement>
+        <p>
+          The archemidean spiral is this curve: <m>\gamma(t) = (t \cos
+          t, t \sin t)</m>. It has linear growth in its radius, so
+          there are equally spaced spiral arms.
+        </p>
+      </statement>
+    </example>
+    <figure xml:id="figure-parametric-curve4">
+      <caption>The Archimedian Spiral</caption>
+      <image width="100%" source="images/figure13" />
+    </figure>
+    <example>
+      <statement>
+        <p>
+          The hyperbolic spiral is an inward spiral, (it has
+          decreasing radius). Its expression is <m>\gamma(t) =
+          (\frac{\cos t}{t}, \frac{\sin t}{t})</m>.
+        </p>
+      </statement>
+    </example>
+    <figure xml:id="figure-parametric-curve5">
+      <caption>The Hyperbolic Spiral</caption>
+      <image width="100%" source="images/figure14" />
+    </figure>
+    <example>
+      <statement>
+        <p>
+          The last spiral in our examples is the logarithmic spiral
+          which has exponential growth in radius. Its form is
+          <m>\gamma(t) = (e^{t} \cos t, e^{t} \sin t)</m>.
+        </p>
+      </statement>
+    </example>
+    <figure xml:id="figure-parametric-curve6">
+      <caption>The Logarithmic Spiral</caption>
+      <image width="100%" source="images/figure15" />
+    </figure>
+    <p>
+      The logarithmic spiral shows up frequently, both in mathematics
+      and the natural world. Examples of natural logarithmic spirals
+      include nautilus shells and spiral galaxies (though the natural
+      application of the logarithmic spiral is not without some
+      contraversy).
+    </p>
+    <example>
+      <statement>
+        <p>
+          A final example, which is not a spiral, is the cardiod. It
+          has the form <m>\gamma(t) = ((1-\sin t) \cos t, (1-\sin t)
+          \sin t</m>. The name comes from its vaguely heart-shaped
+          path.
+        </p>
+      </statement>
+    </example>
+    <figure xml:id="figure-parametric-curve7">
+      <caption>The Cardiod</caption>
+      <image width="100%" source="images/figure16" />
+    </figure>
+  </subsection>
+  <subsection xml:id="reparametrization">
+    <title>Reparametrization</title>
+    <p>
+      A parametric curve is more than just a shape in <m>\RR^2</m>.
+      The curve also records the start, end and direction, as well as
+      the rate of movement along the shape. All that information
+      depends on the <em>parametrization</em>: the way in which
+      position depends on the parameter.
+    </p>
+    <p>
+      Sometimes we want to adjust the movement along the shape, while
+      preserving the shape. We can do that by changing the
+      parametrization: this is called <em>reparametrization</em>. The
+      idea is to replace the parameter <m>t</m> by a new parameter
+      <m>s</m>. Say we have a curve <m>\gamma(t) = (x(t),y(t))</m>,
+      but we can express <m>t</m> as a function of some other variable
+      <m>s</m>, <m>t = t(s)</m>. Then we can replace <m>t</m> with
+      <m>t(s)</m> in the definition of the curve (much like we replace
+      in a integration substitution). That gives a new
+      parametrization of the same curve: <m>\gamma(s) =
+      (x(t(s)),y(t(s)))</m>.
+    </p>
+    <p>
+      The circle <m>\gamma(t) = (\cos t, \sin t)</m> can be
+      reparametrized in a variety of ways. <m>t(s) = s^2</m> gives the
+      new circle <m>\gamma(s) = (\cos s^2, \sin s^2)</m>. Similarly,
+      <m>t(s) = \sqrt{s}</m> gives the new circle <m>\gamma(s) = (\cos
+      \sqrt{s}, \sin \sqrt{s})</m>. Each reparametrization doesn't
+      change the shape, but does change the rate at which we move
+      around the circle.
+    </p>
+    <p>
+      Each curve shape in <m>\RR^2</m> has many (infinitely many)
+      parametrizations.
+    </p>
+  </subsection>
+</section>

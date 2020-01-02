@@ -1,0 +1,425 @@
+<section xml:id="partial-fractions">
+  <title>Partial Fractions</title>
+  <subsection xml:id="rational-functions">
+    <title>Integrals of Rational Functions</title>
+    <p>
+      By itself, the technique of partial fractions isn't strictly a
+      technique of integration. Rather, it's an algebraic technique
+      for rational functions (fractions involving polynomials). We we
+      be using it to do integrals of rational functions.
+    </p>
+    <p>
+      There are a number of important rational functions integrals
+      which we already know (or we can simply look up on the tables):
+      <md>
+        <mrow>
+          \int \frac{1}{x^r} dx \amp = \frac{-1}{(r-1)}{x^r-1}
+          \hspace{1cm} r \neq 1
+        </mrow>
+        <mrow>
+          \int \frac{1}{x} dx \amp = \ln |x| + c
+        </mrow>
+        <mrow>
+          \int \frac{1}{x+a} dx \amp = \ln |x+a| + c
+        </mrow>
+        <mrow>
+          \int \frac{1}{1+x^2} dx \amp = \arctan x + c = -\arccot x +
+          c
+        </mrow>
+        <mrow>
+          \int \frac{1}{1-x^2} dx \amp = \arctanh x + c \text{ or }
+          \arccoth x + c
+        </mrow>
+      </md>
+    </p>
+    <p>
+      By substitution and manipulation, we can use the integrals in
+      the previous list to solve any integrals of this type:
+      <me>
+        \int \frac{1}{ax+b} dx \hspace{2cm} \int \frac{1}{ax^2 + bx +
+        c} dx \hspace{2cm} \int \frac{2ax+ b}{ax^2+bc+x} dx
+      </me>
+    </p>
+    <p>
+      We will be using partial fractions to reduce more complicated
+      rational functions to functions of these three types.
+    </p>
+  </subsection>
+  <subsection xml:id="long-division">
+    <title>Proper Fractions and Long Division</title>
+    <definition>
+      <statement>
+        <p>
+          A <term>proper</term> rational function is one where the
+          degree of the numerator is less than the degree of the
+          denmoninator.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      For general rational functions, we can reduce to a proper
+      fractions by doing polynomial long division. This long division
+      works exactly like long division worked for numbers. The only
+      difference is that where long division for numbers looked at
+      place values, we look at degrees. An example shows the technique.
+    </p>
+    <example>
+      <statement>
+        <p>
+          \polylongdiv{x^4+3x^2+2x+4}{x^2+4}
+        </p>
+        <p>
+          We see that <m>x^4+3x^2+2x+4</m> divided by <m>x^2+4</m> is
+          <m>x^2-1</m> remainder <m>2x+8</m>, so we write
+          <me>
+            \frac{x^4+3x^2+2x+4}{x^2+4} = x^2 - 1 +
+            \frac{2x+8}{x^2+4}
+          </me>
+        </p>
+        <p>
+          In particular, if we were to integrate, we would have
+          <me>
+            \int \frac{x^4+3x^2+2x+4}{x^2+4} dx = \int \left( x^2 - 1
+            + \frac{2x+8}{x^2+4} \right) dx = \frac{x^3}{3} - x + \int
+            \frac{2x+8}{x^2+4} dx
+          </me>
+        </p>
+        <p>
+          Since we have polynomial long division,we only have to solve
+          integration problems for proper rational functions.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="partial-fractions-technique">
+    <title>The Algebraic Technique of Partial Fractions</title>
+    <p>
+      If we add or subtract polynomial, we use common denominator.
+    </p>
+    <example>
+      <statement>
+        <me>
+          \frac{1}{x-3} + \frac{1}{x+4} = \frac{(x+4) +
+          (x-3)}{(x-3)(x+4)} = \frac{2x+1}{x^2+x-12}
+        </me>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The process is similar for more complicated polynomials:
+          <md>
+            <mrow>
+              \frac{x^2-2}{x^3-3x} \amp + \frac{1}{x^2-4x+3} =
+              \frac{x^2-2}{x^2(x-3)} + \frac{1}{(x-3)(x-1)}
+            </mrow>
+            <mrow>
+              \amp = \frac{(x-1)(x^2-2}{x^2(x-3)(x-1)} +
+              \frac{x^2}{x^2(x-3)(x-1)} = \frac{(x-1)(x^2-2) +
+              x^2}{x^2(x-3)(x-1)}
+            </mrow>
+            <mrow>
+              \amp = \frac{x^3-2x+2}{x^2(x-3)(x-1)} =
+              \frac{x^3-2x+2}{x^4 - 4x^3+ 3x^2}
+            </mrow>
+          </md>
+        </p>
+      </statement>
+    </example>
+    <p>
+      Partial fractions asks the opposite question: if we are given a
+      complicated rational function, how can we <em>undo</em> common
+      denominator and express the function as a sum of simplier
+      fractions. Partial fractions is nothing more (or less) than
+      common denominator done backwards.
+    </p>
+    <p>
+      The first step of undoing common denominator is factoring
+      polynomials. We see that the common demoninator in the previous
+      example is <m>x^4 - 4x^3 + 3x^2</m>, but the seperate fractions
+      have denominators which are <em>factors</em> of the common
+      denomintor. In order to undo common denominator, we need to
+      factor the denomintor.
+    </p>
+    <p>
+      Factoring polynomials is, in general, a very difficult task.
+      Over <m>\RR</m>, there are two types of factors: linear and
+      quadratic. (It is a nice theorem that all polynomials factor
+      completely into such factors; we are not going to investigate
+      that theorem in this course). Linear factors have the form
+      <m>(x-\alpha)</m>. A polynomial has a linear factor
+      <m>(x-\alpha)</m> if and only if <m>\alpha</m> is a root of the
+      polynomial, so finding linear factors is equivalently difficult
+      to finding roots. This can be done for low degree polynomials,
+      but for degree five and above, there is no exact process. Even
+      for low degrees, finding roots is hardly trivial. An quadratic
+      factor has the form <m>(x^2 + \alpha x + \beta)</m> and is
+      called irreducible if it has no real roots (so doesn't factor
+      further into two linear factors). Though the general problem is
+      quite difficult, we'll be working with polynomials which factor
+      reasonably.
+    </p>
+    <p>
+      Now say that <m>\frac{p(x)}{q(x)}</m> is a proper rational
+      function and <m>q(x) = q_1(x) q_2(x) \ldots q_r(x)</m> is a
+      factorization into linear and irreducible quadratic factors.
+      Then we want to find new numerators <m>p_i</m> to undo the
+      common denominator, as in the following expression.
+      <me>
+        \frac{p(x)}{q(x)} = \frac{p_1(x)}{q_1(x)} +
+        \frac{p_2(x)}{q_2(x)} + \frac{p_3(x)}{q_3(x)} + \ldots +
+        \frac{p_r(x)}{q_r(x)}
+      </me>
+    </p>
+    <definition>
+      <statement>
+        <p>
+          If we can find these numerators, this decomposition is
+          called a <term>partial fraction decomposision</term>, of
+          often just <sq>partial fractions.</sq>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Partial fractions is a long and difficult process. It's best to
+      try to understand it through examples.
+    </p>
+    <example>
+      <statement>
+        <me>
+          \frac{x+2}{x^2- 5x - 6}
+        </me>
+        <p>
+          The denominator factors as <m>(x-6)(x+1)</m>, so we look for
+          a partial fraction decomposition of the following form.
+          <me>
+            \frac{x+2}{x^2- 5x - 6} = \frac{a}{x-6} + \frac{b}{x+1}
+          </me>
+        </p>
+        <p>
+          We take the right side to common denominator.
+          <me>
+            \frac{x+2}{x^2- 5x - 6} = \frac{a}{x-6} + \frac{b}{x+1} =
+            \frac{a(x+1) + b(x-6)}{(x-6)(x+1)} = \frac{(a+b)x +
+            (a-6b)}{x^2 - 5x -6}
+          </me>
+        </p>
+        <p>
+          Since both polymomials are the same, the numerators must be
+          the same.
+          <me>
+            x+2 = (a+b)x + (a-6b)
+          </me>
+        </p>
+        <p>
+          Polynomials are equal only if their coefficient are equal,
+          so this gives us two equations:
+          <md>
+            <mrow>
+              1 \amp = a+b
+            </mrow>
+            <mrow>
+              2 \amp = a-6b
+            </mrow>
+          </md>
+        </p>
+        <p>
+          We have to solve these two equations for <m>a</m> and
+          <m>b</m>. We do this by isolating and replacing. The first
+          equation gives <m>a = 1-b</m>, which we substitute in the
+          second equation to get <m>2 = (1-b) -6b</m> which is <m>1 =
+          -7b</m> or <m>b = \frac{-1}{7}</m>. The we substitute back
+          to get <m>a = 1-b = 1 - \frac{-1}{7} = \frac{8}{7}</m>.
+          These are our numerators.
+          <me>
+            \frac{x+2}{x^2- 5x - 6} = \frac{\frac{8}{7}}{x-6} +
+            \frac{\frac{-1}{7}}{x-1}
+          </me>
+        </p>
+        <p>
+          Finally, this helps us integrate by splitting the original
+          integral up into easier pieces.
+          <md>
+            <mrow>
+              \int \frac{x+2}{x^2- 5x - 6} dx \amp = \int
+              \frac{\frac{8}{7}}{x-6} dx + \int
+              \frac{\frac{-1}{7}}{x-1} dx
+            </mrow>
+            <mrow>
+              \amp = \frac{8}{7} \int \frac{1}{x-6} dx - \frac{1}{7}
+              \int \frac{1}{x-1} dx
+            </mrow>
+            <mrow>
+              \amp = \frac{8}{7} \ln |x-6| - \frac{1}{7} \ln |x-1| +
+              C
+            </mrow>
+          </md>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \int \frac{x^2+1}{x^3+4x^2+x+6} dx
+        </me>
+        <p>
+          The denominator has <m>x=-1</m> as a root by inspection.
+          (Our best methods for roots of cubics, for now, is guessing
+          and testing.) The denominator factors as <m>(x+1)(x^2-5x+6)
+          = (x+1)(x-2)(x-3)</m>. There are three (non-repeated)
+          linear factors. Therefore, we look for a partial fractions
+          decomposition of the following form.
+          <me>
+            \frac{x^2+1}{x^3+4x^2+x+6} = \frac{a}{x+1} + \frac{b}{x-2}
+            + \frac{c}{x-3}
+          </me>
+        </p>
+        <p>
+          The new fractions must be proper, so they only have constant
+          numerators. Our task is to try to find these unknowns
+          <m>a</m>, <m>b</m> and <m>c</m>. This is our general
+          process: we will write the expected expanded form, write the
+          numerators as unknowns and use common denominator try to
+          find the unknown coefficients. Let's proceed with this
+          example.
+          <md>
+            <mrow>
+              \frac{x^2+1}{x^3+4x^2+x+6} \amp = \frac{a}{x+1} +
+              \frac{b}{x-2} + \frac{c}{x-3}
+            </mrow>
+            <mrow>
+              \amp = \frac{a(x-2)(x-3) + b(x+1)(x-3) + c(x+1)(x-2)}
+              {(x+1)(x-2)(x-3)}
+            </mrow>
+            <mrow>
+              \amp = \frac{ax^2 -5ax + 6a + bx^2 - 2bx - 3b + cx^2 -
+              cx - 2x} {(x+1)(x-2)(x-3)}
+            </mrow>
+            <mrow>
+              \amp = \frac{(a+b+c)x^2 + (-5a-2b-c)x + (6a-3b-2c)}
+              {(x+1)(x-2)(x-3)} \
+            </mrow>
+          </md>
+        </p>
+        <p>
+          Since we have equality and the denominators are the same,
+          the numerators must also be the same.
+          <me>
+            x^2 + 1 = x^2 + 0x + 1= (a+b+c)x^2 + (-5a-2b-c)x +
+            (6a-3b-2c)
+          </me>
+        </p>
+        <p>
+          Two polynomials are only equal if all their coefficients are
+          equal, so we can change this into a system of three
+          equations. (We will always get a linear system here, which
+          is convenient for those who know linear algebra).
+          <md>
+            <mrow>
+              a+b+c \amp = 1
+            </mrow>
+            <mrow>
+              -5a-2b-c \amp = 0
+            </mrow>
+            <mrow>
+              6a-3b-2c \amp = 1
+            </mrow>
+          </md>
+        </p>
+        <p>
+          This is a system of linear equations. There are many ways
+          to solve such system, but for now we can isolate and
+          replace.
+          <md>
+            <mrow>
+              a \amp = 1-b-c
+            </mrow>
+            <mrow>
+              \amp \text{ Substitute for \(a\) into the second
+              equation }
+            </mrow>
+            <mrow>
+              -5(1-b-c) - 2b - c \amp = 0
+            </mrow>
+            <mrow>
+              -5+5b+5c - 2b -c \amp = 0
+            </mrow>
+            <mrow>
+              3b + 4c \amp = 5
+            </mrow>
+            <mrow>
+              b \amp = \frac{5-4c}{3}
+            </mrow>
+            <mrow>
+              \amp \text{ Substitute for \(a\) and \(b\) into third
+              equation }
+            </mrow>
+            <mrow>
+              6a - 3b -2c \amp = 1
+            </mrow>
+            <mrow>
+              6(1-b-c) - 3b - 2c \amp = 1
+            </mrow>
+            <mrow>
+              6-6b-6c-3b-2c \amp = 2
+            </mrow>
+            <mrow>
+              -9b - 8c \amp = 5
+            </mrow>
+            <mrow>
+              9 \frac{5-4c}{3} + 8 c \amp = 5
+            </mrow>
+            <mrow>
+              45 - 36c + 24 c \amp = 15
+            </mrow>
+            <mrow>
+              -12 c \amp = -30 \implies c = \frac{10}{3}
+            </mrow>
+            <mrow>
+              \amp \text{ Then substitute back }
+            </mrow>
+            <mrow>
+              b \amp = \frac{5 - 4 \frac{10}{3}}{3} = \frac{15-40}{9}
+              = \frac{-25}{9}
+            </mrow>
+            <mrow>
+              a = 1 - b - c \amp = 1 + \frac{25}{9} - \frac{10}{3} =
+              \frac{9+25-30}{9} = \frac{14}{9}
+            </mrow>
+          </md>
+        </p>
+        <p>
+          The values <m>a = \frac{14}{9}</m>, <m>b = \frac{-25}{9}</m>
+          and <m>c = \frac{10}{3}</m> are the appropriate
+          denominators, we conclude that
+          <me>
+            \frac{x^2+1}{x^3-4x^2+x+6} = \frac{\frac{14}{9}}{x+1} -
+            \frac{\frac{25}{9}}{x-2} + \frac{\frac{10}{3}}{x-3}
+          </me>.
+        </p>
+        <p>
+          Finally, this helps us with integration, since the integral
+          of the original rational function is now a sum of three
+          easier integrals.
+          <md>
+            <mrow>
+              \int \frac{x^2+1}{x^3-4x^2+x+6} dx \amp = \int
+              \frac{\frac{14}{9}}{x+1} dx - \int
+              \frac{\frac{25}{9}}{x-2} dx + \int
+              \frac{\frac{10}{3}}{x-3} dx
+            </mrow>
+            <mrow>
+              \amp = \frac{14}{9} \int \frac{1}{x+1} dx -
+              \frac{25}{9} \int \frac{1}{x-2} dx + \frac{10}{3} \int
+              \frac{x-3} dx
+            </mrow>
+            <mrow>
+              \amp = \frac{14 \ln |x+1|}{9} - \frac{25\ln |x-2|}{9} +
+              \frac{10 \ln |x-3|}{3} + c
+            </mrow>
+          </md>
+        </p>
+      </statement>
+    </example>
+  </subsection>
+</section>

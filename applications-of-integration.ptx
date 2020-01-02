@@ -1,0 +1,8 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="integration-applications">
+  <title>Applications of Integrations</title>
+  <xi:include  href="pc-definition.ptx" />
+  <xi:include  href="pc-calculus.ptx" />
+  <xi:include  href="volumes.ptx" />
+  <xi:include  href="surface-areas.ptx" />
+  <xi:include  href="probability.ptx" />
+</chapter>

@@ -1,0 +1,14 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="series">
+  <title>Series</title>
+  <xi:include  href="sequences.ptx" />
+  <xi:include  href="series-definition.ptx" />
+  <xi:include  href="geometric-zeta.ptx" />
+  <xi:include  href="series-manipulation.ptx" />
+  <xi:include  href="decimal-expansions.ptx" />
+  <xi:include  href="absolute-conditional.ptx" />
+  <xi:include  href="convergence-tests.ptx" />
+  <xi:include  href="values-of-series.ptx" />
+  <xi:include  href="power-series.ptx" />
+  <xi:include  href="taylor-series.ptx" />
+  <xi:include  href="series-approximation.ptx" />
+</chapter>

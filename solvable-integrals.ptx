@@ -1,0 +1,59 @@
+<section xml:id="solvable-integrals">
+  <title>Solvable Integrals</title>
+  <p>
+    In Calculus I, we went through many techniques and rules for
+    differentiation (chain rule, product rule, quotient rule, etc),
+    but only one major technique for integration (the substitution
+    rule). In this course, we try to fill in the remaining major
+    techniques of integration.
+  </p>
+  <p>
+    Integration is much more difficult than differentiation.
+    Through we will develop several techniques, they have somewhat
+    limited application. There are many integrals that simply
+    defeat all of our methods.
+  </p>
+  <example>
+    <statement>
+      <p>
+        On of the best example is the very useful Gaussian
+        distribution function: <m>f(x) = e^{-x^2}</m>. We consider
+        its integral.
+        <me>
+          \int e^{-x^2} dx
+        </me>
+      </p>
+      <p>
+        This is a very useful integral, as we shall see in our
+        section on probability. However, for our current purposes,
+        it is entirely unsolvable. There is no function among the
+        elementary functions that serves as an anti-derivative. In
+        that sense, the integral is impossible.
+      </p>
+      <p>
+        In another sense, though, the integral is fine. The
+        integrand is continuous, so an anti-derivative does exist.
+        We simply don't have a name for it yet. It's a new,
+        interesting, unknown function. This is often the case.
+        There are many integrals we simply can't do with elementary
+        functions. From the veiwpoint of elementary functions,
+        these are defeats <mdash/> impossible integrals. From a
+        broader viewpoint, these are sources of new and interesting
+        functions.
+      </p>
+    </statement>
+  </example>
+  <p>
+    That said, this section is focused on those integrals which can
+    be solved by elementary functions. We have several techniques
+    which apply to particular integral forms and do give elementary
+    function solutions.
+  </p>
+  <p>
+    In our study of integration in this course, we will be expanding
+    upon the use of the substitution from Calculus I. In many ways,
+    substitution is the most important integration rule. It
+    behooves us to review the idea. (The remainder of this section
+    is copied verbatim from the Calculus I notes).
+  </p>
+</section>
