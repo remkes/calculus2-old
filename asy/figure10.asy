@@ -1,4 +1,4 @@
-size(12cm,8cm);
+size(12cm,6cm,IgnoreAspect);
 import contour;
 import graph;
 xaxis();

@@ -1,10 +1,10 @@
-size(12cm,8cm);
+size(12cm,8cm,IgnoreAspect);
 import contour;
 import graph;
 xaxis();
 
-real f(real x, real y) {return (y^2-x^3)/10;}
-draw(contour(f,(-2,-2),(2,2),new real[] {0}));
+real f(real x, real y) {return (y^2-x^3);}
+draw(contour(f,(-2,-1),(2,1),new real[] {0}));
 
 dot((0,0));
 

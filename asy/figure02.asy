@@ -1,4 +1,4 @@
-size(12cm,8cm);
+size(12cm,6cm,IgnoreAspect);
 import graph;
 real f1(real x) {return sqrt(x^2-1);}
 real f2(real x) {return -1*sqrt(x^2-1);}

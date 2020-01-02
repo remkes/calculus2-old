@@ -1,6 +1,6 @@
+unitsize(5cm);
 import graph3;
 
-size(200,0);
 currentprojection=orthographic(4,0,2);
 
 real R=2;
@@ -16,5 +16,3 @@ surface s=surface(f,(0,0),(2pi,2pi),8,8,Spline);
 
 
 draw(s,lightblue);
-
-

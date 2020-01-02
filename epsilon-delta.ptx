@@ -2,79 +2,79 @@
   <title>Epsilon-Delta Limits</title>
   <introduction>
     <p>
-      Our definition of limits in Calculus I was intuitive.
-      The limit
+      Our definition of limits in Calculus I was intuitive. The limit
       <me>
         \lim_{x \rightarrow a} f(x) = L
       </me>
-      meant as <m>x</m> gets closer and closer to a, <m>f(x)</m> gets closer and closer to <m>L</m>.
-      This is intuitive,
-      since we haven't really said what this <sq>closer and closer</sq> actually means. 'Closer and closer' is only sense of movement <mdash/> not a formal definition.
+      meant as <m>x</m> gets closer and closer to a, <m>f(x)</m> gets
+      closer and closer to <m>L</m>. This is intuitive, since we
+      haven't really said what this <sq>closer and closer</sq>
+      actually means. 'Closer and closer' is only sense of movement
+      <mdash/> not a formal definition.
     </p>
     <p>
-      Some version of this limit definition have existed for two thousand years of mathematical history,
-      from Zeno and Archimedes in ancient Greece through the early calculus into the 19th century.
-      At some level, there were always concerns and problems:
-      what did we actually mean by this <sq>closer and closer</sq>?
-      A definitive answer was finally given by Weierstrass,
-      who invented a technique now known as an epsilon-delta (<m>\epsilon-\delta</m>) arguments.
-      The basic idea is to measure this <sq>closer and closer</sq>.
+      Some version of this limit definition have existed for two
+      thousand years of mathematical history, from Zeno and Archimedes
+      in ancient Greece through the early calculus into the 19th
+      century. At some level, there were always concerns and
+      problems: what did we actually mean by this <sq>closer and
+      closer</sq>? A definitive answer was finally given by
+      Weierstrass, who invented a technique now known as an
+      epsilon-delta (<m>\epsilon-\delta</m>) arguments. The basic
+      idea is to measure this <sq>closer and closer</sq>.
     </p>
     <p>
       What does <sq><m>x</m> is close to <m>a</m></sq> mean?
-      According to Weierstass,
-      it means there is some small positive number
-      <m>\delta > 0</m> such that <m>|x-a| \lt \delta</m>.
-      With this idea,
-      we will present the definition of the limit now, formally,
-      as an <m>\epsilon-\delta</m> argument.
+      According to Weierstass, it means there is some small positive
+      number <m>\delta > 0</m> such that <m>|x-a| \lt \delta</m>.
+      With this idea, we will present the definition of the limit now,
+      formally, as an <m>\epsilon-\delta</m> argument.
     </p>
     <definition>
       <statement>
         <me>
-          \lim_{x \rightarrow a} f(x) = L \text{ means }
-          \forall \epsilon > 0 \ \ \exists \delta > 0 \text{ such that }
-          |x-a| \lt  \delta \implies |f(x) - L| \lt  \epsilon
+          \lim_{x \rightarrow a} f(x) = L \text{ means } \forall
+          \epsilon > 0 \ \ \exists \delta > 0 \text{ such that } |x-a|
+          \lt  \delta \implies |f(x) - L| \lt  \epsilon
         </me>.
       </statement>
     </definition>
     <p>
-      This is the formal limit definition.
-      Let's unpack what's going on in the notation.
-      First: what do the numbers
-      <m>\epsilon</m> and <m>\delta</m> do?
-      They measure the <sq>closer and closer</sq> indicated in the intuitive limit.
-      <m>\epsilon</m> is how close the function is to the limit value <m>L</m>,
-      and <m>\delta</m> is how close the input is to the value <m>a</m>.
-      They are always thought of a <em>very small</em> positive numbers.
+      This is the formal limit definition. Let's clarify what's going
+      on in the notation. First: what do the numbers <m>\epsilon</m>
+      and <m>\delta</m> do? They measure the <sq>closer and
+      closer</sq> indicated in the intuitive limit. <m>\epsilon</m>
+      is how close the function is to the limit value <m>L</m>, and
+      <m>\delta</m> is how close the input is to the value <m>a</m>.
+      They are always thought of as <em>very small</em> positive
+      numbers.
     </p>
     <p>
-      Second, we have quantifiers:
-      <m>\forall</m> means <sq>for all</sq> and <m>\exists</m> means <sq>there exists</sq>.
-      Moreover, the order of the quantifiers is very important.
-      The start of the definition reads:
-      for any (small) <m>\epsilon</m>,
-      there exists a (small) <m>\delta</m>.
-      That means that <m>\delta</m> is chosen in response to <m>\epsilon</m>.
-      This creates a kind of game:
-      the limit definition says that no matter what <m>\epsilon</m> you choose,
-      in response, I can choose a <m>\delta</m> to make it work.
-      <m>\delta</m> is dependant on
+      Second, we have quantifiers: <m>\forall</m> means <sq>for
+      all</sq> and <m>\exists</m> means <sq>there exists</sq>.
+      Moreover, the order of the quantifiers is very important. The
+      start of the definition reads: for any (small) <m>\epsilon</m>,
+      there exists a (small) <m>\delta</m>. That means that
+      <m>\delta</m> is chosen in response to <m>\epsilon</m>. This
+      creates a kind of game: the limit definition says that no matter
+      what <m>\epsilon</m> you choose, in response, I can choose a
+      <m>\delta</m> to make it work. <m>\delta</m> is dependant on
       <m>\epsilon</m> because of the order of the qualifiers.
     </p>
     <p>
-      Lastly, we have the two inequalities:
-      these are the measure of how close we are.
-      The order and the implication here is important:
-      being close in <m>x</m> to <m>a</m> implies that we are close in <m>f(x)</m> to <m>L</m>.
-      This matches the intuitive notion of the limit:
-      closeness in <m>x</m> implies closeness in <m>f(x)</m>.
+      Lastly, we have the two inequalities: these are the measure of
+      how close we are. The order and the implication here is
+      important: being close in <m>x</m> to <m>a</m> implies that we
+      are close in <m>f(x)</m> to <m>L</m>. This matches the
+      intuitive notion of the limit: closeness in <m>x</m> implies
+      closeness in <m>f(x)</m>.
     </p>
     <p>
-      Putting it together, we get this idea:
-      no matter how close you want to be (<m>\epsilon</m>) to <m>L</m>,
-      we can find a distance (<m>\delta</m>) to <m>a</m> such that starting <m>x</m> within <m>\delta</m> of <m>a</m>,
-      we will have <m>f(x)</m> within <m>\epsilon</m> of <m>L</m>.
+      Putting it together, we get this idea: no matter how close you
+      want to be (<m>\epsilon</m>) to <m>L</m>, we can find a distance
+      (<m>\delta</m>) to <m>a</m> such that starting <m>x</m> within
+      <m>\delta</m> of <m>a</m>, we will have <m>f(x)</m> within
+      <m>\epsilon</m> of <m>L</m>.
     </p>
     <example>
       <statement>
@@ -85,26 +85,29 @@
           </me>
         </p>
         <p>
-          We need to know how to choose <m>\delta</m> in response to <m>\epsilon</m>.
-          If, for example,
-          <m>\epsilon = \frac{1}{10}</m> then take <m>\delta = \frac{1}{40}</m>.
-          This allows
+          We need to know how to choose <m>\delta</m> in response to
+          <m>\epsilon</m>. If, for example, <m>\epsilon =
+          \frac{1}{10}</m> then take <m>\delta = \frac{1}{40}</m>.
+          This allows a calculation of the relative closenesses.
           <me>
-            |x-2| \lt  \frac{1}{40} \implies |4x-8| = 4 |x-2| \lt  4 \frac{1}{40} = \frac{1}{10}
+            |x-2| \lt  \frac{1}{40} \implies |4x-8| = 4 |x-2| \lt  4
+            \frac{1}{40} = \frac{1}{10}
+          </me>
+        </p>
+        <p>
+          We can generalize this calculation. If we are given an
+          <m>\epsilon</m>, we can choose <m>\delta =
+          \frac{\epsilon}{4}</m> such that
+          <me>
+            |x-2| \lt  \delta \implies |4x-8| = 4 |x-2| \lt  4 \delta
+            = \epsilon
           </me>.
         </p>
         <p>
-          We can generalize this.
-          If we are given an <m>\epsilon</m>,
-          we can choose <m>\delta = \frac{\epsilon}{4}</m> such that
-          <me>
-            |x-2| \lt  \delta \implies |4x-8| = 4 |x-2| \lt  4 \delta = \epsilon
-          </me>.
-        </p>
-        <p>
-          This example shows the general technique:
-          we choose <m>\delta</m> depending on <m>\epsilon</m>,
-          and then argue that this choice of <m>\delta</m> gives the implication <m>|x-a| \lt \delta \implies |f(x) - L| \lt \epsilon</m>.
+          This example shows the general technique: we choose
+          <m>\delta</m> depending on <m>\epsilon</m>, and then argue
+          that this choice of <m>\delta</m> gives the implication
+          <m>|x-a| \lt \delta \implies |f(x) - L| \lt \epsilon</m>.
         </p>
       </statement>
     </example>
@@ -114,18 +117,19 @@
           \lim_{x \rightarrow 2} x^2 = 4
         </me>.
         <p>
-          This one looks more difficult,
-          but the solution isn't that difficult.
-          Given <m>\epsilon</m>,
-          we can simply take <m>\delta</m> to be either <m>\frac{1}{2}</m> or
-          <m>\frac{\epsilon}{5}</m>, whichever is smaller.
-          Since we insist that <m>\epsilon \leq \frac{1}{2}</m>,
-          <m>|x-2|\lt  \delta</m> implies that <m>x</m> is close to <m>2</m>,
-          so <m>x+2</m> is close to <m>4</m>.
-          In particular, we know that <m>|x+2|\lt 5</m>.
-          This gives us the two necessary pieces which we use in prove the limit implication.
+          This one is a bit more challenging, since the choice of
+          <m>delta</m> is a little more subtle. Given
+          <m>\epsilon</m>, we can choose <m>\delta</m> to be
+          either <m>\frac{1}{2}</m> or <m>\frac{\epsilon}{5}</m>,
+          whichever is smaller. Since we insist that <m>\epsilon \leq
+          \frac{1}{2}</m>, <m>|x-2|\lt \delta</m> implies that
+          <m>x</m> is close to <m>2</m>, so <m>x+2</m> is close to
+          <m>4</m>. In particular, we know that <m>|x+2|\lt 5</m>.
+          This gives us the two necessary pieces which we use in prove
+          the limit implication.
           <me>
-            |x-2| \lt  \delta \implies |x^2-4| = |(x-2)(x+2)| = |x-2||x+2| \lt  5 \frac{\epsilon}{5} = \epsilon
+            |x-2| \lt  \delta \implies |x^2-4| = |(x-2)(x+2)| =
+            |x-2||x+2| \lt  5 \frac{\epsilon}{5} = \epsilon
           </me>.
         </p>
       </statement>
@@ -134,32 +138,32 @@
   <subsection xml:id="infinite-limits">
     <title>Infinite Limits</title>
     <p>
-      For limits which diverge to <m>\infty</m>,
-      or limits as <m>x \rightarrow \infty</m>,
-      we need to replace the <m>\epsilon-\delta</m> definition by a similar definition.
-      With infinite limits,
-      the intuition is no longer <sq>getting closer and closer</sq>.
-      Instead, the intuition is that the values are <sq>getting larger and larger without bound</sq>.
-      That is encoded by saying that for any natural number <m>M</m> or <m>N</m>,
-      we will eventually exceed <m>M</m> or <m>N</m>.
-      With this idea,
-      we can encode the following limit statements formally.
+      For limits which diverge to <m>\infty</m>, or limits as <m>x
+      \rightarrow \infty</m>, we need to replace the
+      <m>\epsilon-\delta</m> definition by a similar definition. With
+      infinite limits, the intuition is no longer <sq>getting closer
+      and closer</sq>. Instead, the intuition is that the values are
+      <sq>getting larger and larger without bound</sq>. That is
+      encoded by saying that for any natural number <m>M</m> or
+      <m>N</m>, we will eventually exceed <m>M</m> or <m>N</m>. With
+      this idea, we can encode the following limit statements
+      formally.
     </p>
     <definition>
       <statement>
         <me>
-          \lim_{x \rightarrow \infty} f(x) = L \text{ means }
-          \forall \epsilon > 0 \exists M \in \NN \text{ such that }  x >
-          M \implies |f(x) - L| \lt  \epsilon
+          \lim_{x \rightarrow \infty} f(x) = L \text{ means } \forall
+          \epsilon > 0 \exists M \in \NN \text{ such that }  x > M
+          \implies |f(x) - L| \lt  \epsilon
         </me>.
       </statement>
     </definition>
     <definition>
       <statement>
         <me>
-          \lim_{x \rightarrow a} f(x) = \infty \text{ means }
-          \forall N \in \NN \exists \delta > 0 \text{ such that }  |x-a|
-          \lt  \delta \implies f(x) > N
+          \lim_{x \rightarrow a} f(x) = \infty \text{ means } \forall
+          N \in \NN \exists \delta > 0 \text{ such that }  |x-a| \lt
+          \delta \implies f(x) > N
         </me>.
       </statement>
     </definition>
@@ -167,20 +171,19 @@
       <statement>
         <me>
           \lim_{x \rightarrow \infty} f(x) = \infty \text{ means }
-          \forall N \in \NN 0 \exists M \in \NN \text{ such that }  x >
-          M \implies f(x) > N
+          \forall N \in \NN 0 \exists M \in \NN \text{ such that }  x
+          > M \implies f(x) > N
         </me>.
       </statement>
     </definition>
     <p>
-      In using the definition,
-      we always tell how to choose the second quantity based on the first
-      (<m>M</m> in terms of <m>\epsilon</m>,
-      <m>\delta</m> in terms of <m>N</m> or <m>M</m> in terms of <m>N</m>,
-      respectively).
-      Then we use the relationship between the two terms
-      (with some algebra with absolute values and inequalities)
-      to prove the desired implication.
+      In using the definition, we always tell how to choose the second
+      quantity based on the first (<m>M</m> in terms of
+      <m>\epsilon</m>, <m>\delta</m> in terms of <m>N</m> or <m>M</m>
+      in terms of <m>N</m>, respectively). Then we use the
+      relationship between the two terms (with some algebra with
+      absolute values and inequalities) to prove the desired
+      implication.
     </p>
   </subsection>
 </section>

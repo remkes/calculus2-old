@@ -1,37 +1,41 @@
 <section xml:id="why-formality">
   <title>Why Formality?</title>
   <p>
-    We open with an important theme:
-    the formalization of mathematics.
-    Historically,
-    the calculus developed in a form which would seem very strange to us know.
-    The notations and styles of argument used by Newton and Leibniz are almost unreadable to modern eyes.
-    What we teach as the calculus is the product of three hundred years of careful improvement and formalization: Newton and Leibniz's insights and breakthroughs have been translated into a formal notation and modern mathematics.
-    This historical process was far from easy:
-    there were many competing schools of thoughts and styles that influenced choices of notation and presentation and some of the arguments between the various schools continue to the present day in academic mathematics.
-    But, in general,
-    the process is best presented as increasing formalization,
-    where loose,
-    intuitive ideas slowly morphed into logical, rigorous constructions.
+    We open with an important theme: the formalization of mathematics.
+    Historically, the calculus developed in a form which would seem
+    very strange to us now. The notations and styles of argument
+    used by Newton and Leibniz are almost unreadable to modern eyes.
+    What we teach as the calculus is the product of three hundred
+    years of careful improvement and formalization: Newton and
+    Leibniz's insights and breakthroughs have been translated into
+    formal notations and modern mathematics. This historical process
+    was far from easy: there were many competing schools of thought
+    and styles that influenced notation and presentation,
+    and some of the arguments between the various schools continue to
+    the present day in academic mathematics. But, in general, the
+    process is best understood as increasing formalization, where
+    loose, intuitive ideas slowly morphed into logical, rigorous
+    constructions.
   </p>
   <p>
-    That said, what we present in first-year,
-    first-term calculus is hardly the pinnacle of formality.
-    In the pedagogical setting,
-    we make decisions about how much to rely on intuition and how much to give proper, full,
-    formal definitions.
-    A good example of choosing formality is the use of the Riemann Integral in Calculus I. Even though we didn't work with it extensively,
-    the Riemann integral was presented to show a formal, logical definition.
-    We could have just included the intuitive idea of the limits of an approximation processes;
-    instead, we choose to show, in full detail,
-    how this limit was accomplished.
-    Hopefully, the Riemann Integral gave a fuller sense of the mathematical construction,
-    though it risked alienating students who struggle with the abstract categorigies involved.
-    Everywhere in mathematical pedagogy,
-    decisions in levels of formality are required.
+    That said, what we present in first-year, first-term calculus is
+    hardly the pinnacle of formality. In a pedagogical setting, we
+    make decisions about how much to rely on intuition and how much to
+    give proper, full, formal definitions. A good example of choosing
+    formality is the use of the Riemann Integral in Calculus I. Even
+    though we didn't work with it extensively, the Riemann integral
+    was presented to show a formal, logical definition. We could have
+    just included the intuitive idea of the limits of an approximation
+    processes; instead, we choose to show, in full detail, how this
+    limit was accomplished. Hopefully, the Riemann Integral gave a
+    fuller sense of the mathematical construction, though it risked
+    alienating students who struggle with the abstract categorigies
+    involved. Everywhere in mathematical pedagogy, decisions about
+    levels of formality are required.
   </p>
   <p>
-    In the start of this course,
-    we'll be working through the idea of mathematical formalization by talking about the construction of the real numbers and limits.
+    In the start of this course, we'll be working through the idea of
+    mathematical formalization by talking about the construction of
+    the real numbers and limits.
   </p>
 </section>

@@ -1,4 +1,4 @@
-unitsize(1cm);
+unitsize(5cm);
 import solids;
 import three;
 

@@ -3,56 +3,59 @@
   <subsection xml:id="related-rates-definition">
     <title>Definitions and Reaction Rates</title>
     <p>
-      In applied mathematics,
-      we often have a number of different quantities that all depend on a common independent variable.
-      The model can be expressed as the relationship between the various quantities.
-      In addition,
-      all these quantities typically have derivatives with respect to the common variable.
+      In applied mathematics, we often have a number of different
+      quantities that all depend on a common independent variable.
+      A mathematical model often describes the relationship between the
+      various quantities. In addition, all these quantities typically
+      have derivatives with respect to the common variable.
     </p>
     <definition>
       <statement>
         <p>
-          A related rates is a relationship between the derivatives of two or more function
-          (with respect to a common independent variable).
+          A related rates is a relationship between the derivatives of
+          two or more function (with respect to a common independent
+          variable).
         </p>
       </statement>
     </definition>
     <example>
       <statement>
         <p>
-          An easy first example is reaction rates in Chemistry.
-          Let's take a very simple reaction:
-          the product of <m>NaCl</m> salt from free <m>Na^+</m> and <m>Cl^-</m> ions.
-          We write this reaction as:
+          An easy first example is reaction rates in Chemistry. Let's
+          take a very simple reaction: the product of <m>NaCl</m> salt
+          from free <m>Na^+</m> and <m>Cl^-</m> ions. We write this
+          reaction as:
           <me>
             Na^+ + Cl^- \rightarrow NaCl
           </me>
         </p>
         <p>
-          Let <m>N</m>, <m>C</m> and <m>S</m>
-          (for salt)
-          represent the molar quantity of the ions or salts and assume that all three are functions of time.
-          The total amount of material,
+          Let <m>N</m>, <m>C</m> and <m>S</m> (for salt) represent the
+          molar quantity of the ions or salts and assume that all
+          three are functions of time. The total amount of material,
           either sodium or chlorine, is preserved in time.
-          Mathematically, this is <m>N + S = c_1</m> or
-          <m>C + S = c_2</m> for some constants <m>c_1</m> and <m>c_2</m>.
-          We can differentiate both equations.
+          Mathematically, this is <m>N + S = c_1</m> or <m>C + S =
+          c_2</m> for some constants <m>c_1</m> and <m>c_2</m>. We
+          can differentiate both equations.
           <me>
-            \frac{dN}{dt} = - \frac{dS}{dt} \hspace{1cm} \text{ and } \hspace{1cm} \frac{dC}{dt} = - \frac{dS}{dt}
+            \frac{dN}{dt} = - \frac{dS}{dt} \hspace{1cm} \text{ and }
+            \hspace{1cm} \frac{dC}{dt} = - \frac{dS}{dt}
           </me>
         </p>
         <p>
-          The result is what we call a related rate.
-          We have an original equation between some quantities which all depend on a common independent variable
-          (here time).
-          We differentiate in that variable,
-          to get an equation between the various derivatives.
-          That new equation is a relation between the rates of change.
-          In this case,
-          the related rate equation states the very obvious observation that the decrease in <m>Na^+</m> or <m>Cl^-</m> ions happens as the same rate as the production of <m>NaCl</m>.
-          We really didn't need the heavy machinery of derivatives to understand this;
-          we could have seen it from the reaction setup.
-          But this serves as a simple example to explain the idea of related rates.
+          The result is what we call a related rate. We have an
+          original equation between some quantities which all depend
+          on a common independent variable (here time). We
+          differentiate in that variable, to get an equation between
+          the various derivatives. That new equation is a relation
+          between the rates of change. In this case, the related rate
+          equation states the very obvious observation that the
+          decrease in <m>Na^+</m> or <m>Cl^-</m> ions happens as the
+          same rate as the production of <m>NaCl</m>. We really
+          didn't need the heavy machinery of derivatives to understand
+          this; we could have seen it from the reaction setup. But
+          this serves as a simple example to explain the idea of
+          related rates.
         </p>
       </statement>
     </example>
@@ -62,8 +65,8 @@
         <li>
           <p>
             Write the relationship between two or more quantities.
-            (If necessary,
-            use geometry or other information to reduce to two quantities if more are initially involved.)
+            (If necessary, use geometry or other information to reduce
+            to two quantities if more are initially involved.)
           </p>
         </li>
         <li>
@@ -74,7 +77,8 @@
         </li>
         <li>
           <p>
-            Differentiate (implicitly) with respect to the common variable.
+            Differentiate (implicitly) with respect to the common
+            variable.
           </p>
         </li>
         <li>
@@ -94,109 +98,140 @@
     <example>
       <statement>
         <p>
-          A classic example seen in almost all calculus texts is the the falling ladder problem show in <xref ref="figure-falling-ladder">Figure</xref>.
-          A ladder of length <m>l</m> leans against a wall,
-          where <m>a</m> is the height along the wall and <m>b</m> is the length from the base of the wall to the base of the ladder.
-          The ladder is sliding down the wall such that it always remains in contact with both the wall and the ground.
-          What is the relationship between the change in <m>a</m> and the change in <m>b</m>?
+          A classic example seen in almost all calculus texts is the
+          the falling ladder problem shown in <xref
+          ref="figure-falling-ladder">Figure</xref>. A ladder of
+          length <m>l</m> leans against a wall, where <m>a</m> is the
+          height along the wall and <m>b</m> is the length from the
+          base of the wall to the base of the ladder. The ladder is
+          sliding down the wall such that it always remains in contact
+          with both the wall and the ground. What is the relationship
+          between the change in <m>a</m> and the change in <m>b</m>?
         </p>
         <p>
-          As with most related rates problems,
-          we often have to do some interpretation or setup to get the equations.
-          The quantities we care about are the lengths <m>a</m> and <m>b</m>.
-          (<m>l</m>, the length of the ladder, is fixed).
-          The geometry here is a right triangle,
-          so <m>l^2 = a^2 + b^2</m>.
-          Since <m>l</m> is constant,
-          this is the relationship we need between <m>a</m> and <m>b</m>.
-          We differentiate with respect to time.
+          As with most related rates problems, we often have to do
+          some interpretation or setup to get the equations. The
+          quantities we care about are the lengths <m>a</m> and
+          <m>b</m>. (<m>l</m>, the length of the ladder, is fixed.)
+          The geometry here is a right triangle, so <m>l^2 = a^2 +
+          b^2</m>. Since <m>l</m> is constant, this is the
+          relationship we need between <m>a</m> and <m>b</m>. We
+          differentiate with respect to time.
           <me>
-            0 = 2a \frac{da}{dt} + 2b \frac{db}{dt} \implies \frac{da}{dt} = -\frac{b}{a} \frac{db}{dt}
+            0 = 2a \frac{da}{dt} + 2b \frac{db}{dt} \implies
+            \frac{da}{dt} = -\frac{b}{a} \frac{db}{dt}
           </me>
         </p>
         <p>
-          Notice that this depends on <m>a</m> and <m>b</m>.
-          For different values of <m>a</m> and <m>b</m>,
-          we have different relationships,
-          which is typical for related rates.
-          The original quantities are part of the equation as well as their derivatives.
-          To get a specific answer, we have to input some of these values.
-          For example, if the length of the ladder is
-          <m>\sqrt{74}</m> meters and <m>a=7</m> with <m>b=5</m> then when <m>\frac{db}{dt} = 3 m/s</m> we calculate
+          Notice that this depends on <m>a</m> and <m>b</m>. For
+          different values of <m>a</m> and <m>b</m>, we have different
+          relationships, which is typical for related rates. The
+          original quantities are part of the equation as well as
+          their derivatives. To get a specific answer, we have to
+          input some of these values. For example, if the length of
+          the ladder is <m>\sqrt{74}</m> meters and <m>a=7</m> with
+          <m>b=5</m> then when <m>\frac{db}{dt} = 3 m/s</m> we
+          calculate
           <me>
-            \implies \frac{da}{dt} = -\frac{b}{a} \frac{db}{dt} = \frac{-5}{7} 3 = \frac{-15}{7} m/s
+            \implies \frac{da}{dt} = -\frac{b}{a} \frac{db}{dt} =
+            \frac{-5}{7} 3 = \frac{-15}{7} m/s
           </me>.
         </p>
         <p>
-          If we fed in different values for <m>a</m>,
-          <m>b</m> or <m>\frac{db}{dt}</m> we would have a different relationship.
+          If we fed in different values for <m>a</m>, <m>b</m> or
+          <m>\frac{db}{dt}</m> we would have a different
+          relationship.
         </p>
         <p>
-          Also notice that <m>a</m> and <m>b</m> have to be chosen to match the original geometry.
-          We can take <m>a=7</m> and <m>b=5</m>,
-          or <m>a = \sqrt{34}</m> and <m>b = \sqrt{40}</m>,
-          because both give the corred ladder length in <m>a^2 + b^2 = l^2</m>.
-          However, we can't take <m>a = 2</m> and <m>b=3</m>,
-          since they don't satisfy the original geometry.
+          Also notice that <m>a</m> and <m>b</m> have to be chosen to
+          match the original geometry. We can take <m>a=7</m> and
+          <m>b=5</m>, or <m>a = \sqrt{34}</m> and <m>b =
+          \sqrt{40}</m>, because both give the corred ladder length in
+          <m>a^2 + b^2 = l^2</m>. However, we can't take <m>a = 2</m>
+          and <m>b=3</m>, since they don't satisfy the original
+          geometry.
         </p>
         <p>
-          Finally, notice that one derivative is positive while one the other is negative.
-          This reflects the geometry of the situation;
-          as with all of applied mathematics,
-          we should always relate our answer back to the situation and test its reasonability.
-        </p>
-      </statement>
-    </example>
-    <example>
-      <statement>
-        <p>
-          Another classic example is the melting snowball.
-          Assume there is a perfectly spherical snowball with radius <m>r</m>,
-          volume <m>V</m> and surface area <m>A</m>.
-          Assume also that this snowball amazingly melts in such a way that it stays perfectly spherical.
-          What is the relationship between <m>\frac{dV}{dt}</m>,
-          <m>\frac{dr}{dt}</m> and <m>\frac{dA}{dt}</m> as the snowball melts?
-          Here are the relevant geometric equatios.
-          <md>
-            <mrow>V \amp  = \frac{4}{3} \pi r^3</mrow>
-            <mrow>A \amp  = 4 \pi r^2</mrow>
-          </md>
-        </p>
-        <p>
-          We now assume that all these quantities depend on time and we differentiate.
-          <md>
-            <mrow>\frac{dV}{dt} \amp  = 4\pi r^2 \frac{dr}{dt}</mrow>
-            <mrow>\frac{dA}{dt} \amp  = 8 \pi r \frac{dt}{dt}</mrow>
-          </md>
-        </p>
-        <p>
-          If we want, we can also rearrange and substitute to find the related rate equation for <m>V</m> and <m>A</m>.
-          <md>
-            <mrow>\frac{dr}{dt} \amp  = \frac{1}{8\pi r} \frac{dA}{dt}</mrow>
-            <mrow>\frac{dV}{dt} \amp  = \frac{4\pi r^2}{8\pi r} \frac{dA}{dt} = \frac{r}{2} \frac{dA}{dt}</mrow>
-          </md>
+          Finally, notice that one derivative is positive while one
+          the other is negative. This reflects the geometry of the
+          situation; as with all of applied mathematics, we should
+          always relate our answer back to the situation and test its
+          reasonability.
         </p>
       </statement>
     </example>
     <example>
       <statement>
         <p>
-          Other common examples of related rates involve fluids moving between different sizes and shapes of holding tanks.
-          Let's consider a conical tank draining into a cubical tank.
-          Assume the conical tank has an angle of <m>\pi/4</m> between it slant and the vertical and that it drains out of the vertex at the bottom of the cone.
-          Let's say the height of the conical tank is 20 meters and it drains into a cubical tank of side length 10 meters.
-          The related rates question is:
-          given depths of fluid in each tank (<m>h_1</m> and <m>h_2</m>,
-          respectively),
-          what the relationship between the lowering rate of <m>h_1</m> in the cone and the rising rate of <m>h_2</m> in the cube?
+          Another classic example is the melting snowball. Assume
+          there is a perfectly spherical snowball with radius
+          <m>r</m>, volume <m>V</m> and surface area <m>A</m>. Assume
+          also that this snowball amazingly melts in such a way that
+          it stays perfectly spherical. What is the relationship
+          between <m>\frac{dV}{dt}</m>, <m>\frac{dr}{dt}</m> and
+          <m>\frac{dA}{dt}</m> as the snowball melts? Here are the
+          relevant geometric equations.
+          <md>
+            <mrow>
+              V \amp = \frac{4}{3} \pi r^3
+            </mrow>
+            <mrow>
+              A \amp = 4 \pi r^2
+            </mrow>
+          </md>
         </p>
         <p>
-          We need the relationship between the two heights.
-          The important observation is that the sum of volume of the the water cone <m>V_1</m> and the volume in the cube <m>V_2</m> is constant.
-          That is <m>V_1 + V_2 = c</m>.
-          Then we can relate the volumes to the heights.
+          Now we assume that all these quantities depend on time and
+          we differentiate.
+          <md>
+            <mrow>
+              \frac{dV}{dt} \amp = 4\pi r^2 \frac{dr}{dt}
+            </mrow>
+            <mrow>
+              \frac{dA}{dt} \amp = 8 \pi r \frac{dt}{dt}
+            </mrow>
+          </md>
+        </p>
+        <p>
+          If we want, we can also rearrange and substitute to find the
+          related rate equation for <m>V</m> and <m>A</m>.
+          <md>
+            <mrow>
+              \frac{dr}{dt} \amp = \frac{1}{8\pi r} \frac{dA}{dt}
+            </mrow>
+            <mrow>
+              \frac{dV}{dt} \amp = \frac{4\pi r^2}{8\pi r}
+              \frac{dA}{dt} = \frac{r}{2} \frac{dA}{dt}
+            </mrow>
+          </md>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Other common examples of related rates involve liquids moving
+          between different sizes and shapes of holding tanks. Let's
+          consider a conical tank draining into a cubical tank.
+          Assume the conical tank has an angle of <m>\pi/4</m> between
+          its slant and the vertical, and that it drains out of the
+          vertex at the bottom of the cone. Let's say the height of
+          the conical tank is 20 meters and it drains into a cubical
+          tank of side length 10 meters. The related rates question
+          is: given depths of liquid in each tank (<m>h_1</m> and
+          <m>h_2</m>, respectively), what the relationship between the
+          lowering rate of <m>h_1</m> in the cone and the rising rate
+          of <m>h_2</m> in the cube?
+        </p>
+        <p>
+          We need the relationship between the two heights. The
+          important observation is that the sum of volume of the the
+          water cone <m>V_1</m> and the volume in the cube <m>V_2</m>
+          is constant. That is <m>V_1 + V_2 = c</m>. Then we can
+          relate the volumes to the heights.
           <me>
-            V_1 = \frac{1}{3} \pi h_1^3 \hspace{1cm} \text{ and } \hspace{1cm} V_2 = 100 h_2
+            V_1 = \frac{1}{3} \pi h_1^3 \hspace{1cm} \text{ and }
+            \hspace{1cm} V_2 = 100 h_2
           </me>
         </p>
         <p>
@@ -208,18 +243,29 @@
         <p>
           We differentiate this relationship.
           <md>
-            <mrow>\frac{1}{3} \pi 3h_1^2 \frac{dh_1}{dt} + 100 \frac{dh_2}{dt} \amp  = 0</mrow>
-            <mrow>\frac{dh_1}{dt} \amp  = \frac{-100}{\pi h_1^2} \frac{dh_2}{dt}</mrow>
-            <mrow>\frac{dh_2}{dt} \amp  = \frac{-\pi h_1^2}{100} \frac{dh_1}{dt}</mrow>
+            <mrow>
+              \frac{1}{3} \pi 3h_1^2 \frac{dh_1}{dt} + 100
+              \frac{dh_2}{dt} \amp = 0
+            </mrow>
+            <mrow>
+              \frac{dh_1}{dt} \amp = \frac{-100}{\pi h_1^2}
+              \frac{dh_2}{dt}
+            </mrow>
+            <mrow>
+              \frac{dh_2}{dt} \amp = \frac{-\pi h_1^2}{100}
+              \frac{dh_1}{dt}
+            </mrow>
           </md>
         </p>
         <p>
-          If, at a certain point in time,
-          we have <m>h_1 = 2m</m> and
-          <m>\frac{dh_1}{dt} = -0.05m/2</m> what is <m>\frac{dh_2}{dt}</m>?
-          We just use the derived related rates equation.
+          If, at a certain point in time, we have <m>h_1 = 2m</m> and
+          <m>\frac{dh_1}{dt} = -0.05m/2</m> what is
+          <m>\frac{dh_2}{dt}</m>? We just use the derived related
+          rates equation.
           <me>
-            \frac{dh_2}{dt} = \frac{-\pi h_1^2}{100} \frac{dh_1}{dt} = \frac{-\pi 2^2}{100} \frac{5}{100} = \frac{-20\pi}{10000} \doteq 0.0063 m/s
+            \frac{dh_2}{dt} = \frac{-\pi h_1^2}{100} \frac{dh_1}{dt} =
+            \frac{-\pi 2^2}{100} \frac{5}{100} = \frac{-20\pi}{10000}
+            \doteq 0.0063 m/s
           </me>
         </p>
       </statement>
@@ -227,21 +273,25 @@
     <example>
       <statement>
         <p>
-          For our last example, we can look at gas laws.
-          The ideal gas law is <m>PV = nRT</m> where <m>P</m> is pressure,
-          <m>V</m> is volume,
-          <m>n</m> is some (constant) molar quantity of the gas,
-          <m>R</m> is a constant and <m>T</m> is temperature,
-          which we also assume is constant.
-          First, let's solve for <m>P</m> and differentiate with respect to time <m>t</m>.
+          For our last example, we can look at gas laws. The ideal
+          gas law is <m>PV = nRT</m> where <m>P</m> is pressure,
+          <m>V</m> is volume, <m>n</m> is the (constant) molar
+          quantity of the gas, <m>R</m> is a constant and <m>T</m> is
+          temperature, which we also assume is constant. First, let's
+          solve for <m>P</m> and differentiate with respect to time
+          <m>t</m>.
           <me>
-            P = \frac{nRT}{V} \implies \frac{dP}{dt} = \frac{-nRT}{V^2} \frac{dV}{dt}
+            P = \frac{nRT}{V} \implies \frac{dP}{dt} =
+            \frac{-nRT}{V^2} \frac{dV}{dt}
           </me>
         </p>
         <p>
-          Likewise, we can solve for <m>V</m> and differentiate with respect to time.
+          Likewise, we can solve for <m>V</m> and differentiate with
+          respect to time.
           <me>
-            V = \frac{nRT}{P} \implies \frac{dV}{dt} = \frac{-nRT}{P^2} \frac{dP}{dt} \implies \frac{dP}{dt} = \frac{-P^2}{nRT} \frac{dV}{dt}
+            V = \frac{nRT}{P} \implies \frac{dV}{dt} =
+            \frac{-nRT}{P^2} \frac{dP}{dt} \implies \frac{dP}{dt} =
+            \frac{-P^2}{nRT} \frac{dV}{dt}
           </me>
         </p>
       </statement>
