@@ -1,6 +1,6 @@
-<section xml:id="related-rates">
+<section xml:id="section-related-rates">
   <title>Related Rates</title>
-  <subsection xml:id="related-rates-definition">
+  <subsection xml:id="subsection-related-rates-definition">
     <title>Definitions and Reaction Rates</title>
     <p>
       In applied mathematics, we often have a number of different
@@ -89,11 +89,22 @@
       </ol>
     </p>
   </subsection>
-  <subsection xml:id="classic-examples">
+  <subsection xml:id="subsection-classic-examples">
     <title>Classic Examples</title>
     <figure xml:id="figure-falling-ladder">
       <caption>The Falling Ladder Problem</caption>
-      <image width="100%" source="images/figure07" />
+      <image xml:id="figure07" width="80%">
+        <asymptote>
+          size(12cm,8cm);
+
+          draw((0,0)--(0,4)--(6,0)--(0,0));
+          label("Ladder of length $l$",(3,2),NE);
+          label("$a$",(0,2),W);
+          label("$b$",(3,0),S);
+          draw((-0.5,3)--(-0.5,1),Arrow);
+          draw((1,-0.5)--(5,-0.5),Arrow);
+        </asymptote>
+      </image>
     </figure>
     <example>
       <statement>

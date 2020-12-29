@@ -1,4 +1,4 @@
-<section xml:id="convergence-tests">
+<section xml:id="section-convergence-tests">
   <title>Convergence Tests</title>
   <introduction>
     <p>
@@ -11,7 +11,7 @@
       to test a series for convergence.
     </p>
   </introduction>
-  <subsection xml:id="comparison">
+  <subsection xml:id="subsection-comparison">
     <title>Comparison on Series</title>
     <proposition>
       <statement>
@@ -45,7 +45,7 @@
         </p>
       </statement>
     </proposition>
-    <example xml:id="example1">
+    <example xml:id="example-convergence">
       <statement>
         <p>
           Here are some comparison examples.
@@ -130,7 +130,7 @@
       </statement>
     </proposition>
     <p>
-      In <xref ref="example1">Example</xref>, we could have simply
+      In <xref ref="example-convergence" />, we could have simply
       said that <m>\frac{1}{n-2}</m> is asymptotically the same order
       as <m>\frac{1}{n}</m>, and likewsie for <m>\frac{n+1}{n^2}</m>.
       Asymptotic comparison is often easier since we don't need to
@@ -171,7 +171,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="integral-test">
+  <subsection xml:id="subsection-integral-test">
     <title>The Integral Test</title>
     <proposition>
       <statement>
@@ -211,7 +211,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="ratio-root">
+  <subsection xml:id="subsection-ratio-root">
     <title>The Ratio and Root Tests</title>
     <p>
       Here are two final tests.
@@ -256,7 +256,7 @@
       factorials. The root test is obviously useful for powers.
     </p>
   </subsection>
-  <subsection xml:id="testing-strategies">
+  <subsection xml:id="subsection-testing-strategies">
     <title>Testing Strategies</title>
     <p>
       There are many approaches to testing the convergence of a
@@ -339,7 +339,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="testing-examples">
+  <subsection xml:id="subsection-testing-examples">
     <title>Testing Examples</title>
     <p>
       Now that we have all the tools at our disposal, here are a bunch

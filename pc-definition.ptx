@@ -1,6 +1,7 @@
-<section xml:id="parametric-curves">
+<section xml:id="section-parametric-curves">
   <title>Parametric Curves</title>
-  <introduction>
+  <subsection xml:id="subsection-parametric-curves-definition">
+    <title>Definition</title>
     <p>
       We've done a fair bit of work with loci in this course and in
       Calculus I. Earlier in this course we talked about algebraic
@@ -13,9 +14,6 @@
       a complete object. For parametric curves, we start at a point
       and move along the curve in time.
     </p>
-  </introduction>
-  <subsection xml:id="parametric-curves-definition">
-    <title>Definition</title>
     <definition>
       <statement>
         <p>
@@ -39,7 +37,7 @@
       </statement>
     </definition>
   </subsection>
-  <subsection xml:id="parametric-curves-examples">
+  <subsection xml:id="subsection-parametric-curves-examples">
     <title>Examples</title>
     <example>
       <statement>
@@ -79,7 +77,22 @@
     </example>
     <figure xml:id="figure-parametric-curve1">
       <caption>Parametric Curve <m>\gamma_1(t) = (t,t)</m></caption>
-      <image width="100%" source="images/figure10" />
+      <image xml:id="figure10" width="80%">
+        <asymptote>
+          size(12cm,6cm,IgnoreAspect);
+          import contour;
+          import graph;
+          xaxis();
+          yaxis();
+
+          draw((0,0)--(5,5),Arrow);
+          dot("$\gamma(1) = (1,1)$",(1,1),SE);
+          dot("$\gamma(2) = (2,2)$",(2,2),SE);
+          dot("$\gamma(3) = (3,3)$",(3,3),SE);
+          dot("$\gamma(4) = (4,4)$",(4,4),SE);
+          dot("$\gamma(5) = (5,5)$",(5,5),SE);
+        </asymptote>
+      </image>
     </figure>
     <example>
       <statement>
@@ -108,7 +121,20 @@
     </example>
     <figure xml:id="figure-parametric-curve2">
       <caption><m>\gamma(t) = (\cos 3t, \sin 5t)</m></caption>
-      <image width="100%" source="images/figure11" />
+      <image xml:id="figure11" width="80%">
+        <asymptote>
+          size(12cm,8cm,IgnoreAspect);
+          import contour;
+          import graph;
+          xaxis();
+          yaxis();
+
+          real x(real t) {return cos(3*2pi*t);}
+          real y(real t) {return sin(5*2pi*t);}
+
+          draw(graph(x,y,0,1));
+        </asymptote>
+      </image>
     </figure>
     <example>
       <statement>
@@ -124,7 +150,20 @@
     </example>
     <figure xml:id="figure-parametric-curve3">
       <caption>The Cycloid</caption>
-      <image width="100%" source="images/figure12" />
+      <image xml:id="figure12" width="80%">
+        <asymptote>
+          size(10cm);
+          import contour;
+          import graph;
+          xaxis();
+          yaxis();
+
+          real x(real t) {return t-sin(t);}
+          real y(real t) {return 1-cos(t);}
+
+          draw(graph(x,y,0,4*pi));
+        </asymptote>
+      </image>
     </figure>
     <p>
       Many parametric curves are spirals. The general form for a
@@ -143,7 +182,20 @@
     </example>
     <figure xml:id="figure-parametric-curve4">
       <caption>The Archimedian Spiral</caption>
-      <image width="100%" source="images/figure13" />
+      <image xml:id="figure13" width="80%">
+        <asymptote>
+          size(12cm,12cm);
+          import contour;
+          import graph;
+          xaxis();
+          yaxis();
+
+          real x(real t) {return t*cos(t);}
+          real y(real t) {return t*sin(t);}
+
+          draw(graph(x,y,0,6*pi));
+        </asymptote>
+      </image>
     </figure>
     <example>
       <statement>
@@ -156,7 +208,20 @@
     </example>
     <figure xml:id="figure-parametric-curve5">
       <caption>The Hyperbolic Spiral</caption>
-      <image width="100%" source="images/figure14" />
+      <image xml:id="figure14" width="80%">
+        <asymptote>
+        size(12cm,8cm,IgnoreAspect);
+        import contour;
+        import graph;
+        xaxis();
+        yaxis();
+
+        real x(real t) {return cos(t)/t;}
+        real y(real t) {return sin(t)/t;}
+
+        draw(graph(x,y,3,30));
+        </asymptote>
+      </image>
     </figure>
     <example>
       <statement>
@@ -169,7 +234,20 @@
     </example>
     <figure xml:id="figure-parametric-curve6">
       <caption>The Logarithmic Spiral</caption>
-      <image width="100%" source="images/figure15" />
+      <image xml:id="figure15" width="80%">
+        <asymptote>
+          size(12cm,8cm,IgnoreAspect);
+          import contour;
+          import graph;
+          xaxis();
+          yaxis();
+
+          real x(real t) {return exp(t)*cos(3*t);}
+          real y(real t) {return exp(t)*sin(3*t);}
+
+          draw(graph(x,y,-3,2));
+        </asymptote>
+      </image>
     </figure>
     <p>
       The logarithmic spiral shows up frequently, both in mathematics
@@ -190,10 +268,23 @@
     </example>
     <figure xml:id="figure-parametric-curve7">
       <caption>The Cardiod</caption>
-      <image width="100%" source="images/figure16" />
+      <image xml:id="figure16" width="80%">
+        <asymptote>
+          size(12cm,8cm,IgnoreAspect);
+          import contour;
+          import graph;
+          xaxis();
+          yaxis();
+
+          real x(real t) {return (1-sin(t))*cos(t);}
+          real y(real t) {return (1-sin(t))*sin(t);}
+
+          draw(graph(x,y,0,2*pi));
+        </asymptote>
+      </image>
     </figure>
   </subsection>
-  <subsection xml:id="reparametrization">
+  <subsection xml:id="subsection-reparametrization">
     <title>Reparametrization</title>
     <p>
       A parametric curve is more than just a shape in <m>\RR^2</m>.

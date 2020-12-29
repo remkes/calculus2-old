@@ -1,0 +1,10 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" 
+  xml:id="chapter-week8">
+  <title>Week 8</title>
+  <xi:include href="volumes.ptx" />
+  <!--
+  <xi:include href="surface-areas.ptx" />
+  Not Included in Winter 2020
+  -->
+  <xi:include href="week8-activity.ptx" />
+</chapter>

@@ -1,6 +1,7 @@
-<section xml:id="construction-of-numbers">
+<section xml:id="section-construction-of-numbers">
   <title>Construction of Numbers and the Continuum</title>
-  <introduction>
+  <subsection xml:id="subsection-constructing-numbers">
+    <title>Constructing Numbers</title>
     <p>
       The historical problem of formalizing the limit is deeply
       connected with the problem of the continuum. There are many
@@ -29,8 +30,8 @@
       theory is a fascinating piece of mathematics, but it takes a lot
       of time so we will unfortunatley have to skip it).
     </p>
-  </introduction>
-  <subsection xml:id="integers">
+  </subsection>
+  <subsection xml:id="subsection-integers">
     <title>The Integers</title>
     <p>
       The construction of <m>\ZZ</m> from <m>\NN</m> is relatively
@@ -61,7 +62,7 @@
       (-m)</m>.
     </p>
   </subsection>
-  <subsection xml:id="rationals">
+  <subsection xml:id="subsection-rationals">
     <title>The Rational Numbers</title>
     <p>
       The construction of <m>\QQ</m> from <m>\ZZ</m> is also
@@ -112,7 +113,7 @@
       </statement>
     </definition>
   </subsection>
-  <subsection xml:id="reals">
+  <subsection xml:id="subsection-reals">
     <title>The Real Numbers</title>
     <p>
       In the search for the continuum, the rational numbers are
@@ -146,7 +147,7 @@
       in its approach; the second is a little bit more useful.
     </p>
   </subsection>
-  <subsection xml:id="dedekind-cuts">
+  <subsection xml:id="subsection-dedekind-cuts">
     <title>Dedekind Cuts</title>
     <p>
       The first approach is due to the 19th century mathematician
@@ -193,7 +194,7 @@
       solution to be exactly those gaps!
     </p>
   </subsection>
-  <subsection xml:id="rational-sequences">
+  <subsection xml:id="subsection-rational-sequences">
     <title>Limits of Rational Sequences</title>
     <p>
       The second approach is also due to a 19th century mathematician,

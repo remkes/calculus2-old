@@ -1,6 +1,6 @@
-<section xml:id="probability">
+<section xml:id="section-probability">
   <title>Probability</title>
-  <subsection xml:id="density-functions">
+  <subsection xml:id="subsection-density-functions">
     <title>Probability Density Functions</title>
     <p>
       The final major application of integration in this chapter is
@@ -64,7 +64,7 @@
       distribution</em> or simply a distribution.
     </p>
   </subsection>
-  <subsection xml:id="normalization">
+  <subsection xml:id="subsection-normalization">
     <title>Normalization</title>
     <p>
       Often we are given a positive function <m>f(x)</m> on an
@@ -123,7 +123,27 @@
     </example>
     <figure xml:id="figure-probability-density">
       <caption>The Probability Density <m>e^{-x}</m></caption>
-      <image width="100%" source="images/figure27" />
+      <image xml:id="figure27" width="80%">
+        <asymptote>
+          size(12cm,6cm,IgnoreAspect);
+          import graph;
+          xaxis(Ticks());
+          yaxis();
+
+          real f(real x) {return exp(-1*x);}
+
+          draw(graph(f,0,6));
+
+          draw((1,0)--(1,0.368));
+          draw((2,0)--(2,0.135));
+          
+          label("Area $\doteq$ 0.632 = Probablity of a Measurement in
+          $[0,1]$",(0.5,0.607),NE);
+
+          label("Area $\doteq$ 0.233 = Probablity of a Measurement in
+          $[1,2]$",(1.5,0.223),NE);
+        </asymptote>
+      </image>
     </figure>
     <example>
       <statement>
@@ -162,9 +182,22 @@
       </statement>
     </example>
     <figure xml:id="figure-gaussian-distribution">
-      <caption>The Gaussian Distribution <m>\frac{1}{\sqrt{\pi}}
-      e^{-x^2}</m></caption>
-      <image width="100%" source="images/figure26" />
+      <caption>
+        The Gaussian Distribution <m>\frac{1}{\sqrt{\pi}}
+        e^{-x^2}</m>
+      </caption>
+      <image xml:id="figure26" width="80%">
+        <asymptote>
+          size(12cm,6cm,IgnoreAspect);
+          import graph;
+          xaxis();
+          yaxis();
+          
+          real f(real x) {return exp(-1*x^2);}
+
+          draw(graph(f,-3,3));
+        </asymptote>
+      </image>
     </figure>
     <example>
       <statement>
@@ -183,7 +216,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="means">
+  <subsection xml:id="subsection-means">
     <title>Means</title>
     <p>
       For discrete probability, a mean or average of the expected
@@ -326,7 +359,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="central-tendencies">
+  <subsection xml:id="subsection-central-tendencies">
     <title>Central Tendencies</title>
     <p>
       The mean or average is only one of several possible measures of
@@ -404,7 +437,7 @@
       calculate for a bell-curve will give <m>\mu</m>, the mean.
     </p>
   </subsection>
-  <subsection xml:id="expectation-values">
+  <subsection xml:id="subsection-expectation-values">
     <title>Expectation Values</title>
     <p>
       If <m>f(x)</m> on <m>[a,b]</m> is a probability density, a
@@ -442,7 +475,7 @@
       development of the probability density.
     </p>
   </subsection>
-  <subsection xml:id="standard-deviation">
+  <subsection xml:id="subsection-standard-deviation">
     <title>Standard Deviation</title>
     <p>
       One we've chosen a central tendency, such as the mean, a

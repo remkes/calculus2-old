@@ -1,0 +1,10 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" 
+  xml:id="chapter-week10">
+  <title>Week 10</title>
+  <xi:include href="sequences.ptx" />
+  <xi:include href="series-definition.ptx" />
+  <xi:include href="geometric-zeta.ptx" />
+  <xi:include href="series-manipulation.ptx" />
+  <xi:include href="decimal-expansion.ptx" />
+  <xi:include href="week10-activity.ptx" />
+</chapter>

@@ -1,6 +1,6 @@
-<section xml:id="hyperbolics">
+<section xml:id="section-hyperbolics">
   <title>Hyperbolics</title>
-  <subsection xml:id="hyperbolics-definition">
+  <subsection xml:id="subsection-hyperbolics-definition">
     <title>definition</title>
     <p>
       In this lecture, we're going to introduce a new class of
@@ -13,7 +13,21 @@
     </p>
     <figure xml:id="figure-trig-definition">
       <caption>Definition of the Trigonometric Functions</caption>
-      <image width="100%" source="images/figure01" />
+      <image xml:id="figure01" width="80%">
+        <asymptote>
+          size(12cm,8cm);
+          import graph;
+          draw(unitcircle);
+          label("$\theta$",(0.07,0),NE);
+          label("$r=1$",(0.3,0.3),NW);
+          label("Arc Length $=\theta$",(1,0.3),E);
+          filldraw((0,0)--arc((0,0),1,0,360/8)--cycle,lightgray);
+          draw((0.707,0.707)--(0.707,0));
+          label("$x = \cos \theta$",(0.4,0),S);
+          label("$y = \sin \theta$",(0.707,0.2),W);
+          label("Area $=\frac{\theta}{2}$",(0.9,0.5),E);
+        </asymptote>
+      </image>
     </figure>
     <p>
       The basic idea for hyperbolic functions comes from the
@@ -32,7 +46,26 @@
     </p>
     <figure xml:id="figure-hyperbolic-definition">
       <caption>Definition of the Hyperbolic Functions</caption>
-      <image width="100%" source="images/figure02" />
+      <image xml:id="figure02" width="80%">
+        <asymptote>
+          size(12cm,6cm,IgnoreAspect);
+          import graph;
+          real f1(real x) {return sqrt(x^2-1);}
+          real f2(real x) {return -1*sqrt(x^2-1);}
+          path p1=graph(f1,1,2);
+          filldraw((0,0)--(1,0)--p1--(0,0)--cycle,lightgray);
+          draw(graph(f1,2,2.4));
+          draw(graph(f1,-2.4,-1));
+          draw(graph(f2,-2.4,-1));
+          draw(graph(f2,1,2.4));
+          label("$\theta$",(0.2,0),NE);
+          label("Area $=\theta$",(0.5,0.5),NW);
+          draw((0,0)--(2,0)--(2,1.73));
+          label("$x=\cosh \theta$",(1.8,0),S);
+          label("$y=\sinh \theta$",(2,0.6),E);
+          dot((2,1.73));
+        </asymptote>
+      </image>
     </figure>
     <p>
       The unit circle is the locus of the equation <m>x^2 + y^2 =
@@ -59,7 +92,7 @@
       <em>not</em> periodic.
     </p>
   </subsection>
-  <subsection xml:id="hyperbolic-identities">
+  <subsection xml:id="subsection-hyperbolic-identities">
     <title>Hyperbolic Identities</title>
     <p>
       The fundamental trigonometric idetity is <m>\sin^2 \theta +
@@ -139,7 +172,7 @@
       return to late in the course.
     </p>
   </subsection>
-  <subsection xml:id="inverse-hyperbolics">
+  <subsection xml:id="subsection-inverse-hyperbolics">
     <title>Inverse Hyperbolics</title>
     <p>
       For trigonometry, we used the notation of <m>\arcsin x</m> for
@@ -188,7 +221,7 @@
       </md>
     </p>
   </subsection>
-  <subsection xml:id="calculus-hyperbolics">
+  <subsection xml:id="subsection-calculus-hyperbolics">
     <title>Calculus of Hyperbolics</title>
     <p>
       Now that we have these new functions, we'd like to know their
@@ -245,7 +278,7 @@
         \begin{array}{ll} 
           \text{ DE } \amp \text{ Solution } \\ 
           \hline
-          \dfrac{df}{dx} = f \amp f = ae^x \vspace{.2cm} \\[1em]
+          \dfrac{df}{dx} = f \amp f = ae^x \\[1em]
           \dfrac{d^2f}{dx^2} = -f \amp f = a \sin x + b \cos x \\[1em]
           \dfrac{d^2f}{dx^2} = f \amp f = a \sinh x + b \cosh x 
         \end{array}

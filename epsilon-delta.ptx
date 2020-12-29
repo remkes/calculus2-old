@@ -1,6 +1,6 @@
-<section xml:id="epsilon-delta">
+<section xml:id="section-epsilon-delta">
   <title>Epsilon-Delta Limits</title>
-  <introduction>
+  <subsection xml-id="subsection-finite-limits">
     <p>
       Our definition of limits in Calculus I was intuitive. The limit
       <me>
@@ -134,8 +134,8 @@
         </p>
       </statement>
     </example>
-  </introduction>
-  <subsection xml:id="infinite-limits">
+  </subsection>
+  <subsection xml:id="subsection-infinite-limits">
     <title>Infinite Limits</title>
     <p>
       For limits which diverge to <m>\infty</m>, or limits as <m>x

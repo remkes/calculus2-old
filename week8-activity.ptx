@@ -1,0 +1,43 @@
+<section xml:id="section-week8-activity">
+  <title>Week 8 Activity</title>
+  <subsection xml:id="subsection-activity-">
+    <title>Title</title>
+    <activity>
+      <statement>
+        <p>
+          Question
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Solution
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="subsection-week8-concepts">
+    <title>Conceptual Review Questions</title>
+    <p>
+      <ul>
+        <li>
+          Question
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection xml:id="subsection-week8-extra-practice">
+    <title>Extra Practice Activities</title>
+    <activity>
+      <statement>
+        <p>
+          Question
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Solution
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+</section>

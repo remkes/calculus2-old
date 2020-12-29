@@ -1,6 +1,6 @@
-<section xml:id="power-series">
+<section xml:id="section-power-series">
   <title>Power Series</title>
-  <subsection xml:id="series-as-functions">
+  <subsection xml:id="subsection-series-as-functions">
     <title>Series as Functions</title>
     <p>
       Our two main examples for comparison in the previous chapter
@@ -74,7 +74,7 @@
       real numbers does the series converge?
     </p>
   </subsection>
-  <subsection xml:id="power-series-definitions">
+  <subsection xml:id="subsection-power-series-definitions">
     <title>Definition of Power Series</title>
     <p>
       A polynomial <m>p(x)</m> of degree <m>d</m> can be written as a
@@ -124,7 +124,7 @@
       </statement>
     </definition>
   </subsection>
-  <subsection xml:id="radii-of-convergence">
+  <subsection xml:id="subsection-radii-of-convergence">
     <title>Radii of Convergence</title>
     <p>
       Polynomials were defined for all real numbers; they had no
@@ -388,7 +388,7 @@
       </statement>
     </proposition>
   </subsection>
-  <subsection xml:id="power-series-properties">
+  <subsection xml:id="subsection-power-series-properties">
     <title>Properties of Power Series</title>
     <p>
       Inside the radius of convergence, a power series has all the
@@ -410,7 +410,7 @@
       can be applied to power series.
     </p>
   </subsection>
-  <subsection xml:id="power-series-calculus">
+  <subsection xml:id="subsection-power-series-calculus">
     <title>Calculus of Power Series</title>
     <p>
       Since power series are functions, we can try to do calculus with

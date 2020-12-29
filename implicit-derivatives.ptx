@@ -1,0 +1,96 @@
+<section xml:id="section-implicit-derivatives">
+  <title>Implicit Derivatives</title>
+  <subsection xml:id="subsection-derivatives-loci">
+    <title>Derivatives of Loci</title>
+    <p>
+      In Calculus I, we mostly calculated slopes of tangent lines to
+      graphs of functions. These are loci of the form <m>y =
+      f(x)</m>, and <m>f^\prime(x)</m> gave us the slope of the
+      tangent line. For arbitrary loci in <m>\RR^2</m>, such as the
+      conics, tangent lines can also be defined. We need a refinement
+      of our derivative techniques to find their slopes, since most
+      loci are not graphs of functions. The new technique is implicit
+      differentiation.
+    </p>
+    <p>
+      Since we know how to differentiate functions, we will
+      <em>pretend</em> that our loci are (at least locally) graphs of
+      functions. In a locus of <m>x</m> and <m>y</m>, we will pretend
+      that <m>y</m> is a function of <m>x</m>. We will the use this
+      pretense to differentiate the expression of the locus.
+    </p>
+    <figure xml:id="figure-implicit-example">
+      <caption>Tangent Lines to <m>x^4 + y^4 =1</m></caption>
+      <image xml:id="figure03" width="80%">
+        <asymptote>
+          size(12cm,6cm,IgnoreAspect);
+          import graph;
+          xaxis("$x$");
+          yaxis("$y$");
+          real f1(real x) {return (4-x^4)^(1/4);}
+          real f2(real x) {return -1*(4-x^4)^(1/4);}
+          draw(graph(f1,-1.41,1.41));
+          draw(graph(f2,-1.41,1.41));
+          draw((-1.41,-2)--(-1.41,2));
+          draw((1.41,-2)--(1.41,2));
+          draw((-2,-1.41)--(2,-1.41));
+          draw((-2,1.41)--(2,1.41));
+          draw((0,2.38)--(3,-0.62));
+          draw((0,-2.38)--(3,0.62));
+          label("$x^4 + y^4 =4$",(-1.12,1.12),SE);
+        </asymptote>
+      </image>
+    </figure>
+    <example>
+      <statement>
+        <p>
+          Take the locus of <m>x^4 + y^4 = 1</m>, as in <xref
+          ref="figure-implicit-example">Figure</xref> We will pretend
+          that <m>y</m> is locally a function of <m>x</m>. Any
+          expressions in <m>x</m> we differentiate normally. For
+          expressions in <m>y</m>, we use the <em>chain rule</em>, due
+          to the pretense that <m>y</m> is a function of <m>x</m>.
+          Therefore, <m>y^4</m> has a derivative of the outside
+          (<m>4y^3</m>) and a derivative of the inside
+          (<m>\frac{dy}{dx}</m>). Then we solve for
+          <m>\frac{dy}{dx}</m>.
+          <md>
+            <mrow>
+              x^4 + y^4 \amp = 4
+            </mrow>
+            <mrow>
+              \frac{d}{dx} x^4 + y^4 \amp = \frac{d}{dx}4
+            </mrow>
+            <mrow>
+              4x^3 + 4y^3 \frac{dy}{dx} \amp = 0
+            </mrow>
+            <mrow>
+              \frac{dy}{dx} \amp = \frac{-x^3}{y^3}
+            </mrow>
+          </md>
+        </p>
+        <p>
+          For any point <m>(x,y)</m> on this locus, the slope of the
+          tangent at that point is given by the expression
+          <m>\frac{-x^3}{y^3}</m>. The slope is <m>0</m> at the point
+          <m>(0, \pm \sqrt{2})</m>. The slope is undefined at <m>(\pm
+          \sqrt{2}, 0)</m>. Other points on the curve include <m>(\pm
+          \sqrt[4]{2}, \pm \sqrt[4]{2})</m>. Here, depending on the
+          signs, the slope is <m>1</m> or <m>-1</m>. Some of these
+          tangent lines are drawn in <xref
+          ref="figure-implicit-example">Figure</xref>.
+        </p>
+      </statement>
+    </example>
+    <p>
+      Notice that the slope isn't defined everywhere. The slope
+      approaches vertical near the undefined point <m>(\pm
+      \sqrt[4]{2}, 0)</m>; this makes sense, since a vertical line has
+      no slope. This is also the point where our assumption, that
+      <m>y</m> can be expressed as a function of <m>x</m>, breaks
+      down. Implicit derivatives can also fail to find slopes at
+      places where a loci self-intersects or has a sharp corner. We
+      will see examples of these in the next section.
+    </p>
+  </subsection>
+</section>

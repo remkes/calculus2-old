@@ -1,6 +1,6 @@
-<section xml:id="series-definition">
+<section xml:id="section-series-definition">
   <title>Definition and Convergence of Infinite Series</title>
-  <subsection xml:id="series-definition-statment">
+  <subsection xml:id="subsection-series-definition-statment">
   <definition>
     <statement>
       <p>
@@ -22,7 +22,7 @@
     </statement>
   </definition>
   </subsection>
-  <subsection xml:id="partial-sums">
+  <subsection xml:id="subsection-partial-sums">
     <title>Partial-Sums and Convergence</title>
     <p>
       Unlike finite sums, we have no guarantee that this expression
@@ -72,7 +72,7 @@
       </statement>
     </definition>
   </subsection>
-  <subsection xml:id="series-examples">
+  <subsection xml:id="subsection-series-examples">
     <title>First Convergence Examples</title>
     <example>
       <statement>
@@ -375,7 +375,7 @@
           This is another definition for the number <m>e</m>. We'll
           prove that this definition is equivalent our existing
           definitions in <xref
-          ref="taylor-series-examples">Section</xref>.
+          ref="subsection-taylor-series-examples"/>.
         </p>
       </statement>
     </example>
@@ -422,7 +422,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="test-for-divergence">
+  <subsection xml:id="subsection-test-for-divergence">
     <title>The Test for Divergence</title>
     <p>
       As we have seen in the examples, it is possible to build a

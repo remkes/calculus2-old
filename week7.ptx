@@ -1,0 +1,7 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" 
+  xml:id="chapter-week7">
+  <title>Week 7</title>
+  <xi:include href="pc-definition.ptx" />
+  <xi:include href="pc-calculus.ptx" />
+  <xi:include href="week7-activity.ptx" />
+</chapter>

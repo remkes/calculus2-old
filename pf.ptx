@@ -1,6 +1,6 @@
-<section xml:id="partial-fractions">
+<section xml:id="section-partial-fractions">
   <title>Partial Fractions</title>
-  <subsection xml:id="rational-functions">
+  <subsection xml:id="subsection-rational-functions">
     <title>Integrals of Rational Functions</title>
     <p>
       By itself, the technique of partial fractions isn't strictly a
@@ -45,7 +45,7 @@
       rational functions to functions of these three types.
     </p>
   </subsection>
-  <subsection xml:id="long-division">
+  <subsection xml:id="subsection-long-division">
     <title>Proper Fractions and Long Division</title>
     <definition>
       <statement>
@@ -91,7 +91,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="partial-fractions-technique">
+  <subsection xml:id="subsection-partial-fractions-technique">
     <title>The Algebraic Technique of Partial Fractions</title>
     <p>
       If we add or subtract polynomial, we use common denominator.

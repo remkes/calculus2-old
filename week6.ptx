@@ -1,0 +1,8 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" 
+  xml:id="chapter-week6">
+  <title>Week 6</title>
+  <xi:include href="trig-integrals.ptx" />
+  <xi:include href="trig-substitutions.ptx" />
+  <xi:include href="improper-integrals.ptx" />
+  <xi:include href="week6-activity.ptx" />
+</chapter>

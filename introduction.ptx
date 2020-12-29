@@ -1,4 +1,0 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="introduction">
-  <title>Introduction</title>
-  <xi:include  href="organization.ptx" />
-</chapter>

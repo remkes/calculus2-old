@@ -1,0 +1,6 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" 
+  xml:id="chapter-week3">
+  <title>Week 3</title>
+  <xi:include href="plane-curves.ptx" />
+  <xi:include href="week3-activity.ptx" />
+</chapter>

@@ -1,6 +1,7 @@
-<section xml:id="theorems">
+<section xml:id="section-theorems">
   <title>Theorems of Calculus</title>
-  <introduction>
+  <subsection xml:id="subsection-formalizing-calculus">
+    <title>Formalizing Calculus</title>
     <p>
       In this section, I'd like to simply list several useful theorems
       that relate to limits, continuity and derivatives. If this were
@@ -12,8 +13,8 @@
       becomes formalized, we insist on theorems and proofs to build up
       the formal structure.
     </p>
-  </introduction>
-  <subsection xml:id="ivt">
+  </subsection>
+  <subsection xml:id="subsection-ivt">
     <title>The Intermediate Value Theorem</title>
     <p>
       First, let's review continuity. There are several ways to
@@ -112,7 +113,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="mvt">
+  <subsection xml:id="subsection-mvt">
     <title>Rolle's Theorem and Mean Value Theorem</title>
     <p>
       We move on to theorems related to differentiation. The first is

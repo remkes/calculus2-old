@@ -1,4 +1,4 @@
-<section xml:id="geometric-zeta">
+<section xml:id="section-geometric-zeta">
   <title>Geometric and <m>\zeta</m> Series</title>
   <p>
     There are two important classes of convergent series which we will
@@ -72,7 +72,7 @@
   <p>
     We give this without proof for now. The convergence of the
     <m>\zeta</m> series can be proved with the Integral Test in <xref
-    ref="integral-test">Section</xref>. Unlike the geometric series,
+    ref="subsection-integral-test" />. Unlike the geometric series,
     where we can easily write the value, the actual value of
     <m>\zeta(p)</m> is not easy to express in conventional algebraic
     terms.

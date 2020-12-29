@@ -1,6 +1,6 @@
-<section xml:id="parts">
+<section xml:id="section-parts">
   <title>Integration by Parts</title>
-  <subsection xml:id="parts-definition">
+  <subsection xml:id="subsection-parts-definition">
     <title>Definition</title>
     <p>
       The substitution rule is, in some sense, an inverted chain rule.

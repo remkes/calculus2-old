@@ -1,4 +1,4 @@
-<section xml:id="improper-integrals">
+<section xml:id="section-improper-integrals">
   <title>Improper Integrals</title>
   <example>
     <statement>
@@ -19,7 +19,21 @@
   </example>
   <figure xml:id="figure-improper-integral1">
     <caption>An Improper Integral</caption>
-    <image width="100%" source="images/figure08" />
+    <image xml:id="figure08" width="80%">
+      <asymptote>
+        size(12cm,8cm,IgnoreAspect);
+        import contour;
+        import graph;
+        xaxis();
+        yaxis();
+
+        real f(real x) {return 1/(sqrt(x));}
+        filldraw((0,0)--(0,3.16)--(graph(f,0.1,2))--(2,0)--cycle,grey);
+
+        dot("$(2,0)$",(2,0),S);
+        dot("$(0,0)$",(0,0),SW);
+      </asymptote>
+    </image>
   </figure>
   <p>
     The function has a vertical asymptote at <m>x=0</m>, which is the
@@ -48,7 +62,20 @@
       </p>
       <figure xml:id="figure-improper-integral2">
         <caption>Another Improper Integral</caption>
-        <image width="100%" source="images/figure09" />
+        <image xml:id="figure09" width="80%">
+          <asymptote>
+            size(12cm,6cm,IgnoreAspect);
+            import contour;
+            import graph;
+            xaxis();
+            yaxis();
+
+            real f(real x) {return 1/(x^2);}
+            filldraw((1,0)--(graph(f,1,8))--(8,0)--cycle,grey);
+
+            dot("$(1,0)$",(1,0),S);
+          </asymptote>
+        </image>
       </figure>
       <p>
         It's not at all obvious how much area there is under the

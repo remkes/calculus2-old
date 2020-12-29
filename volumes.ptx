@@ -1,6 +1,6 @@
-<section xml:id="volumes">
+<section xml:id="section-volumes">
   <title>Volumes</title>
-  <subsection xml:id="cross-sectional-slices">
+  <subsection xml:id="subsection-cross-sectional-slices">
     <title>Volumes by Cross-Sectional Slices</title>
     <p>
       For parametric curves, we approached the length of a curve by
@@ -17,7 +17,39 @@
     </p>
     <figure xml:id="figure-slices-sphere">
       <caption>Slices of the Sphere</caption>
-      <image width="60%" source="images/figure18" />
+      <image xml:id="figure18" width="80%">
+        <asymptote>
+          unitsize(5cm);
+          import solids;
+
+          currentprojection=orthographic(3,-4,5);
+
+          pen bg=lightblue+opacity(0.3);
+
+          draw(unitsphere,lightblue+opacity(0.5));
+
+          draw(surface((0,-1,-1)--(0,-1,1)--(0,1,1)--(0,1,-1)
+            --cycle),bg,bg);
+          draw(surface((0.2,-1,-1)--(0.2,-1,1)--(0.2,1,1)--(0.2,1,-1)
+            --cycle),bg,bg);
+          draw(surface((0.4,-1,-1)--(0.4,-1,1)--(0.4,1,1)--(0.4,1,-1)
+            --cycle),bg,bg);
+          draw(surface((0.6,-1,-1)--(0.6,-1,1)--(0.6,1,1)--(0.6,1,-1)
+            --cycle),bg,bg);
+          draw(surface((0.8,-1,-1)--(0.8,-1,1)--(0.8,1,1)--(0.8,1,-1)
+            --cycle),bg,bg);
+
+          draw((0,0,1)..(0,1,0)..(0,0,-1)..(0,-1,0)..cycle);
+          draw((0.2,0,0.98)..(0.2,0.98,0)..(0.2,0,-0.98)..(0.2,-0.98,0)
+            ..cycle);
+          draw((0.4,0,0.91)..(0.4,0.91,0)..(0.4,0,-0.91)..(0.4,-0.91,0)
+            ..cycle);
+          draw((0.6,0,0.8)..(0.6,0.8,0)..(0.6,0,-0.8)..(0.6,-0.8,0)
+            ..cycle);
+          draw((0.8,0,0.6)..(0.8,0.6,0)..(0.8,0,-0.6)..(0.8,-0.6,0)
+            ..cycle);
+        </asymptote>
+      </image>
     </figure>
     <example>
       <statement>
@@ -33,7 +65,24 @@
         </p>
         <figure xml:id="figure-cross-secdtion-sphere">
           <caption>Cross Section of a Sphere</caption>
-          <image width="60%" source="images/figure19" />
+          <image xml:id="figure19" width="80%">
+            <asymptote>
+              size(12cm,12cm);
+              import graph;
+              xaxis();
+              yaxis();
+
+              draw(unitcircle);
+
+              draw((0.5,1.1)--(0.5,-1.1));
+
+              draw((0,0)--(0.5,0.866));
+
+              dot("$y = \sqrt{r^2-x^2}$",(0.5,0.866),NE);
+              label("$x^2 + y^2 = r^2$",(-0.71,0.71),SE);
+              label("Slice at $x$, width $dx$",(0.5,-1),E);
+            </asymptote>
+          </image>
         </figure>
         <p>
           What is the radius of each disc? If we look at a
@@ -70,7 +119,35 @@
     </example>
     <figure xml:id="figure-slices-parabaloid">
       <caption>Slices of a Parabaloid</caption>
-      <image width="60%" source="images/figure20" />
+      <image xml:id="figure20" width="80%">
+        <asymptote>
+          unitsize(5cm);
+          import solids;
+          import three;
+
+          currentprojection=orthographic(-1,1,0.3);
+
+          revolution P=revolution(graph(new triple(real z) {return
+          (sqrt(z),0,z);},0,5,25,operator..) ,axis=Z);
+          draw(surface(P),lightblue+opacity(0.5),render(compression=Low));
+
+          pen bg=lightblue+opacity(0.4);
+
+          draw(surface((3,3,1)--(-3,3,1)--(-3,-3,1)--(3,-3,1)
+            --cycle),bg,bg);
+          draw(surface((3,3,2)--(-3,3,2)--(-3,-3,2)--(3,-3,2)
+            --cycle),bg,bg);
+          draw(surface((3,3,3)--(-3,3,3)--(-3,-3,3)--(3,-3,3)
+            --cycle),bg,bg);
+          draw(surface((3,3,4)--(-3,3,4)--(-3,-3,4)--(3,-3,4)
+            --cycle),bg,bg);
+
+          draw((1,0,1)..(0,1,1)..(-1,0,1)..(0,-1,1)..cycle);
+          draw((1.4,0,2)..(0,1.4,2)..(-1.4,0,2)..(0,-1.4,2)..cycle);
+          draw((1.73,0,3)..(0,1.73,3)..(-1.73,0,3)..(0,-1.73,3)..cycle);
+          draw((2,0,4)..(0,2,4)..(-2,0,4)..(0,-2,4)..cycle);
+        </asymptote>
+      </image>
     </figure>
     <example>
       <statement>
@@ -104,7 +181,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="shells">
+  <subsection xml:id="subsection-shells">
     <title>Volumes by Spherical or Cylindrical Shells</title>
     <p>
       In the previous section, we used cross-sectional slices, slicing
@@ -140,7 +217,26 @@
         </p>
         <figure xml:id="figure-cross-section-bowl">
           <caption>Cross Section of a Bowl</caption>
-          <image width="100%" source="images/figure21" />
+          <image xml:id="figure21" width="80%">
+            <asymptote>
+              size(10cm,7cm);
+              import graph;
+              xaxis();
+              yaxis();
+
+              real f(real x) {return x^2;}
+              real g(real x) {return x^4;}
+
+              draw(graph(f,-1,1));
+              draw(graph(g,-1,1));
+
+              draw((0.6,0.36)--(0.6,0.130));
+
+              label("$h = r^2 - r^4$", (0.6,0.36),NW);
+              label("$x^2$",(-0.6,0.36),NE);
+              label("$x^4$",(-0.6,0.130),SW);
+            </asymptote>
+          </image>
         </figure>
         <p>
           Sliced into cylindrial shells, each shell has height <m>h =
@@ -198,7 +294,23 @@
     </example>
     <figure xml:id="figure-cross-section-bell">
       <caption>Cross Section of a Bell</caption>
-      <image width="100%" source="images/figure22" />
+      <image xml:id="figure22" width="80%">
+        <asymptote>
+          size(10cm,7cm);
+          import graph;
+          xaxis();
+          yaxis();
+
+          real f(real x) {return exp(-1*x^2);}
+
+          draw(graph(f,-2,2));
+
+          draw((0.3,0)--(0.3,0.914));
+
+          label("$h = e^{-r^2}$", (0.3,0.914),NE);
+          label("$e^{-x^2}$",(-0.3,0.914),NW);
+        </asymptote>
+      </image>
     </figure>
     <example>
       <statement>
@@ -233,14 +345,56 @@
         </p>
         <figure xml:id="figure-torus">
           <caption>A Torus</caption>
-          <image width="100%" source="images/figure23" />
+          <image xml:id="figure23" width="80%">
+            <asymptote>
+              unitsize(5cm);
+              import graph3;
+
+              currentprojection=orthographic(4,0,2);
+
+              real R=2;
+              real a=1;
+
+              triple f(pair t) {
+                return
+              ((R+a*cos(t.y))*cos(t.x),(R+a*cos(t.y))*sin(t.x),a*sin(t.y));
+              }
+
+              pen p=rgb(0.2,0.5,0.7);
+              surface s=surface(f,(0,0),(2pi,2pi),8,8,Spline);
+
+              draw(s,lightblue);
+            </asymptote>
+          </image>
         </figure>
         <p>
           The cross section of a torus consists of two circles.
         </p>
         <figure xml:id="figure-cross-section-torus">
           <caption>A Cross-Section of a Torus</caption>
-          <image width="100%" source="images/figure24" />
+          <image xml:id="figure24" width="80%">
+            <asymptote>
+              size(10cm,7cm);
+              import graph;
+              xaxis();
+
+              draw(circle(-2,1));
+              draw(circle(2,1));
+
+              draw((0.05,-1.1)--(0.05,-1.3)--(2,-1.3)--(2,-1.1));
+              
+              label("$a$",(1,-1.3),S);
+
+              draw((-2,0)--(-2.717,0.717));
+
+              label("$b$",(-2.3,0.3),NE);
+              
+              draw((1.283,0)--(1.283,0.717));
+
+              label("$\frac{h}{2} = 
+                \sqrt{b^2 - (a-r)^2}$",(1.283,0.717),NW);
+            </asymptote>
+          </image>
         </figure>
         <p>
           When we take a cross section, we get the circle <m>(x-a)^2 +

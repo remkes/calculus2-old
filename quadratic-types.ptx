@@ -1,6 +1,6 @@
-<section xml:id="quadratic-types">
+<section xml:id="section-quadratic-types">
   <title>Quadratic Types in Partial Fractions</title>
-  <subsection xml:id="irreducible-factors">
+  <subsection xml:id="subsection-irreducible-factors">
     <title>Irreducible Factors</title>
     <example>
       <statement>
@@ -166,7 +166,7 @@
       </me>
     </p>
   </subsection>
-  <subsection xml:id="repeated-linear-factors">
+  <subsection xml:id="subsection-repeated-linear-factors">
     <title>Repeated Linear Factors</title>
     <p>
       So far, none of our examples have had repeated factors.

@@ -1,0 +1,11 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" 
+  xml:id="chapter-week12">
+  <title>Week 12</title>
+  <xi:include href="power-series.ptx" />
+  <xi:include href="taylor-series.ptx" />
+  <!--
+  <xi:include href="exponentials-and-trig.ptx" />
+  -->
+  <xi:include href="series-approximation.ptx" />
+  <xi:include href="week12-activity.ptx" />
+</chapter>

@@ -1,4 +1,4 @@
-<section xml:id="absolute-conditional">
+<section xml:id="section-absolute-conditional">
   <title>Absolute and Conditional Convergence</title>
   <introduction>
     <p>
@@ -37,7 +37,7 @@
       </statement>
     </proposition>
   </introduction>
-  <subsection xml:id="alternating-harmonic">
+  <subsection xml:id="subsection-alternating-harmonic">
     <title>The Alternating Harmonic Series</title>
     <definition>
       <statement>
@@ -190,7 +190,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="conditional">
+  <subsection xml:id="subsection-conditional">
     <title>Conditional Convergence</title>
     <p>
       This situation for the alternating harmonic series is not

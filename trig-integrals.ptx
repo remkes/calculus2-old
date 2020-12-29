@@ -1,6 +1,6 @@
-<section xml:id="trig-integrals">
+<section xml:id="section-trig-integrals">
   <title>Trigonometric Integrals</title>
-  <subsection xml:id="trig-integrals-strategies">
+  <subsection xml:id="subsecdtion-trig-integrals-strategies">
     <title>Strategies</title>
     <p>
       The trigonometric integrals we've seen so far have been simple
@@ -20,7 +20,7 @@
       to remove fractions, so that we only have numerators.
     </p>
   </subsection>
-  <subsection xml:id="trig-integrals-examples">
+  <subsection xml:id="subsecdtion-trig-integrals-examples">
   <title>Examples</title>
     <p>
       We first look at integrands which involve sine and cosine. Here

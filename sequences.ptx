@@ -1,6 +1,7 @@
-<section xml:id="sequences">
+<section xml:id="section-sequences">
   <title>Sequences</title>
-  <introduction>
+  <subsection xml:id="subsection-sequences-history">
+    <title>History of Sequences</title>
     <p>
       There are three classical branches of calculus. The first two,
       derivatives and integrals, command the vast majority of the time
@@ -43,8 +44,8 @@
       Before we jump into series themselves, we need to start with
       infinite sequences.
     </p>
-  </introduction>
-  <subsection xml:id="sequences-definition">
+  </subsection>
+  <subsection xml:id="subsection-sequences-definition">
     <title>Definition</title>
     <definition>
       <statement>
@@ -204,7 +205,7 @@
       2018, there were 313927 sequences in the OEIS.
     </p>
   </subsection>
-  <subsection xml:id="sequences-limits">
+  <subsection xml:id="subsection-sequences-limits">
     <title>Limits of Sequences</title>
     <p>
       As functions <m>\NN \rightarrow \RR</m>, sequences are not

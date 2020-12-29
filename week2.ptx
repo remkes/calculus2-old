@@ -1,0 +1,11 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" 
+  xml:id="chapter-week2">
+  <title>Week 2</title>
+  <!--
+  <xi:include href="related-rates.ptx" />
+  Not included in Winter 2020
+  -->
+  <xi:include href="hyperbolics.ptx" />
+  <xi:include href="implicit-derivatives.ptx" />
+  <xi:include href="week2-activity.ptx" />
+</chapter>

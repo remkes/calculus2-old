@@ -1,6 +1,7 @@
-<section xml:id="parametric-curve-calculus">
+<section xml:id="section-parametric-curve-calculus">
   <title>Calculus on Parametric Curves</title>
-  <introduction>
+  <subsection xml:id="subsection-parametric-curves-slopes">
+    <title>Slopes</title>
     <p>
       We prevously looked at the calculus of loci, where we used
       implicit derivatives to find the slopes of tangent lines to
@@ -8,9 +9,6 @@
       much richer. Since we have a notion of movement along a curve,
       we can ask questions about velocity and distance travelled.
     </p>
-  </introduction>
-  <subsection xml:id="parametric-curves-slopes">
-    <title>Slopes</title>
     <p>
       First, as with loci, we want to calculate <m>\frac{dy}{dx}</m>,
       the slope of the curve. Both <m>x</m> and <m>y</m> depend on
@@ -50,7 +48,23 @@
         </p>
         <figure xml:id="figure-folium">
           <caption>The Folium of Descartes</caption>
-          <image width="100%" source="images/figure17" />
+          <image xml:id="figure17" width="80%">
+            <asymptote>
+              size(12cm,8cm,IgnoreAspect);
+              import contour;
+              import graph;
+              xaxis();
+              yaxis();
+
+              real x(real t) {return (3*t)/(1+t^3);}
+              real y(real t) {return (3*t^2)/(1+t^3);}
+
+              draw(graph(x,y,-0.5,5));
+              draw(graph(x,y,5,50));
+              draw(graph(x,y,-50,-5));
+              draw(graph(x,y,-5,-1.8));
+            </asymptote>
+          </image>
         </figure>
         <p>
           The folium is historically interesting because it was (as
@@ -116,7 +130,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="velocity-distance">
+  <subsection xml:id="subsection-velocity-distance">
     <title>Velocity and Distance on a Parametric Curve</title>
     <p>
       Unlike loci, we can ask for the distance (length) of a
@@ -231,7 +245,7 @@
       moving.
     </p>
   </subsection>
-  <subsection xml:id="arclength">
+  <subsection xml:id="subsection-arclength">
     <title>Arclength</title>
     <p>
       We defined <m>ds = \sqrt{dy^2 + dx^2}</m>. We thought of this
@@ -397,7 +411,7 @@
       </statement>
     </example>
   </subsection>
-  <subsection xml:id="independence-parametrization">
+  <subsection xml:id="subsection-independence-parametrization">
     <title>Independence of Parametrization</title>
     <p>
       The previous examples of the length of the circle raises an
@@ -447,7 +461,7 @@
       parametrization we use.
     </p>
   </subsection>
-  <subsection xml:id="parametrization-arclength">
+  <subsection xml:id="subsection-parametrization-arclength">
     <title>Parametrization by Arclength</title>
     <p>
       The issue of many parametrizations of the same shape is vexing.
