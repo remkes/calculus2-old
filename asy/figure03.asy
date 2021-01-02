@@ -1,15 +1,27 @@
-size(12cm,6cm,IgnoreAspect);
+size(12cm);
 import graph;
-xaxis("$x$");
-yaxis("$y$");
-real f1(real x) {return (4-x^4)^(1/4);}
-real f2(real x) {return -1*(4-x^4)^(1/4);}
-draw(graph(f1,-1.41,1.41));
-draw(graph(f2,-1.41,1.41));
-draw((-1.41,-2)--(-1.41,2));
-draw((1.41,-2)--(1.41,2));
-draw((-2,-1.41)--(2,-1.41));
-draw((-2,1.41)--(2,1.41));
-draw((0,2.38)--(3,-0.62));
-draw((0,-2.38)--(3,0.62));
-label("$x^4 + y^4 =4$",(-1.12,1.12),SE);
+xaxis(Ticks);
+yaxis(Ticks);
+
+real f1(real x) {return (16-x^4)^(1/4);}
+real f2(real x) {return -1*(16-x^4)^(1/4);}
+draw(graph(f1,-2,2));
+draw(graph(f2,-2,2));
+
+draw((0.68,2.68)--(2.68,0.68));
+draw((0.68,-2.68)--(2.68,-0.68));
+
+draw((-2,-2.5)--(-2,2.5));
+draw((-2.5,2)--(2.5,2));
+
+dot((0,2));
+label("$(0,2)$",(0,2),NW);
+
+dot((-2,0));
+label("$(-2,0)$",(-2,0),NW);
+
+dot((1.68,1.68));
+label("$(\sqrt[4]{8},\sqrt[4]{8})$",(1.68,1.68),SW);
+
+dot((1.68,-1.68));
+label("$(\sqrt[4]{8},-\sqrt[4]{8})$",(1.68,-1.68),NW);

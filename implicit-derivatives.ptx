@@ -39,28 +39,13 @@
       <caption>Tangent Lines to <m>x^4 + y^4 =1</m></caption>
       <image xml:id="figure03" width="80%">
         <asymptote>
-          size(12cm,6cm,IgnoreAspect);
-          import graph;
-          xaxis("$x$");
-          yaxis("$y$");
-          real f1(real x) {return (4-x^4)^(1/4);}
-          real f2(real x) {return -1*(4-x^4)^(1/4);}
-          draw(graph(f1,-1.41,1.41));
-          draw(graph(f2,-1.41,1.41));
-          draw((-1.41,-2)--(-1.41,2));
-          draw((1.41,-2)--(1.41,2));
-          draw((-2,-1.41)--(2,-1.41));
-          draw((-2,1.41)--(2,1.41));
-          draw((0,2.38)--(3,-0.62));
-          draw((0,-2.38)--(3,0.62));
-          label("$x^4 + y^4 =4$",(-1.12,1.12),SE);
         </asymptote>
       </image>
     </figure>
     <example>
       <statement>
         <p>
-          Take the locus of <m>x^4 + y^4 = 1</m>, as in <xref
+          Take the locus of <m>x^4 + y^4 = 16</m>, as in <xref
           ref="figure-implicit-example" />. I will pretend
           that <m>y</m> is locally a function of <m>x</m>. Any
           expressions in <m>x</m> we differentiate normally. For
@@ -72,10 +57,10 @@
           <m>\frac{dy}{dx}</m>.
           <md>
             <mrow>
-              x^4 + y^4 \amp = 4
+              x^4 + y^4 \amp = 16
             </mrow>
             <mrow>
-              \frac{d}{dx} x^4 + y^4 \amp = \frac{d}{dx}4
+              \frac{d}{dx} x^4 + y^4 \amp = \frac{d}{dx} 16
             </mrow>
             <mrow>
               4x^3 + 4y^3 \frac{dy}{dx} \amp = 0
@@ -88,20 +73,32 @@
         <p>
           For any point <m>(x,y)</m> on this locus, the slope of the
           tangent at that point is given by the expression
-          <m>\frac{-x^3}{y^3}</m>. The slope is <m>0</m> at the point
-          <m>(0, \pm \sqrt{2})</m>. The slope is undefined at <m>(\pm
-          \sqrt{2}, 0)</m>. Other points on the curve include <m>(\pm
-          \sqrt[4]{2}, \pm \sqrt[4]{2})</m>. Here, depending on the
-          signs, the slope is <m>1</m> or <m>-1</m>. Some of these
-          tangent lines are drawn in <xref
-          ref="figure-implicit-example">Figure</xref>.
+          <m>\frac{-x^3}{y^3}</m>. 
+        </p>
+        <ul>
+          <li><p>
+            The slope is <m>0</m> at the point <m>(0, 2)</m>. 
+          </p></li>
+          <li><p>
+            The slope is undefined at <m>(-2, 0)</m>.
+          </p></li>
+          <li><p>
+            The slope is <m>-1</m> at <m>(\sqrt[4]{8}, \sqrt[4]{8})</m>. 
+          </p></li>
+          <li><p>
+            The slope is <m>1</m> at <m>(\sqrt[4]{8}, -\sqrt[4]{8})</m>. 
+          </p></li>
+        </ul>
+        <p>
+          These four points and matching tangent lines are drawn in <xref
+          ref="figure-implicit-example" />.
         </p>
       </statement>
     </example>
     <p>
       In the example, the slope wasn't defined everywhere. The slope
       approaches vertical near the undefined point <m>(\pm
-      \sqrt[4]{2}, 0)</m>; this makes sense, since a vertical line has
+      -2, 0)</m>; this makes sense, since a vertical line has
       no slope. This is also the point where the assumption, that
       <m>y</m> can be expressed as a function of <m>x</m>, breaks
       down. Implicit derivatives can also fail to find slopes at

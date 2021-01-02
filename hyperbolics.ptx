@@ -251,9 +251,23 @@
     <title>Calculus of Hyperbolics</title>
     <p>
       Now that I have defined these new functions, I'd like to know
-      their integral and differential behaviour. The following
-      derivatives and integrals of hyperbolic functions are all fairly
-      easily determined using the exponential description.
+      their limit, derivative and integral behaviour. 
+    </p>
+    <p>
+      Limits are almost entirely the same. The hyperbolics are
+      continuous on their domains, so where there isn't ivision by
+      zero, I can just evaulate limits. Where there is division by
+      zero, I can use the techniques we already have from limits:
+      algebraic manipulation to adjust the limit or L'Höpital's Rule.
+      Much like trig, there is one special limit which is very useful.
+      <me>
+        \lim_{x \rightarrow 0} \frac{\sinh x}{x} = 1 
+      </me>
+    </p>
+    <p>
+      Now I'll move on to derivatives. The following derivatives of
+      hyperbolic functions are all fairly easily determined using the
+      exponential description.
       <md>
         <mrow>
           \frac{d}{dx} \cosh x \amp = \frac{d}{dx} \frac{e^x +
