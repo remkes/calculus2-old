@@ -1,42 +1,736 @@
 <section xml:id="section-week2-activity">
   <title>Week 2 Activity</title>
-  <subsection xml:id="subsection-activity-">
-    <title>Title</title>
+  <subsection xml:id="subsection-activity-hyperbolics">
+    <title>Hyperbolic Functions</title>
     <activity>
       <statement>
         <p>
-          Question
+          Calculate these limits.
+        </p>
+        <ol>
+          <li><me>
+            \lim_{x \rightarrow 0} \frac{\sin x \sinh x}{x^2} 
+          </me></li>
+          <li><me>
+            \lim_{x \rightarrow 0} x^3 \coth x
+          </me></li>
+          <li><me>
+            \lim_{x \rightarrow \infty} \frac{\sinh x}{\cosh x} 
+          </me></li>
+        </ol>
+      </statement>
+      <solution>
+        <ol>
+          <li>
+            <me>
+              \lim_{x \rightarrow 0} \frac{\sin x \sinh x}{x^2}
+              \lim_{x \rightarrow 0} \frac{\sin x}{x} \frac{\sinh
+              x}{x} = \lim_{x \rightarrow 0} \frac{\sin x}{x} \lim_{x
+              \rightarrow 0} \frac{\sinh x}{x} = 1 \cdot 1=  1\\
+            </me>
+            <p>
+              This limit can be split up into two limits. For both
+              <m>\sin x</m> and <m>\sinh x</m>, there are known
+              limits for the ratio with <m>x</m> near zero.
+            </p>
+          </li>
+          <li>
+            <me>
+              \lim_{x \rightarrow 0} x^3 \coth x = \lim_{x
+              \rightarrow 0} \frac{x}{\sinh x} x^2 \cosh x = 1 \cdot
+              0 \cdot 1 = 0
+            </me>
+            <p>
+              This limit can also be split and us the known limit
+              for <m>\frac{\sinh x}{x}</m>.
+            </p>
+          </li>
+          <li>
+            <me>
+              \lim_{x \rightarrow \infty} \frac{\sinh x}{\cosh x} =
+              \lim_{x \rightarrow \infty} \frac{e^x - e^{-x}}{e^x +
+              e^{-x}} = 1 
+            </me>
+            <p>
+              For this limit, I can write the hyperbolics in terms of
+              their exponential defintions and then use asymptotic
+              analysis. I see that the numerator and denominator have
+              the same order and both have leading coefficients
+              <m>1</m>.
+            </p>
+          </li>
+        </ol>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate these derivatives.
+        </p>
+        <ol>
+          <li><me>
+            \frac{d}{ex} e^{\cosh x}
+          </me></li>
+          <li><me>
+            \frac{d}{ex} \cosh (1 + x^2) 
+          </me></li>
+        </ol>
+      </statement>
+      <solution>
+        <ol>
+          <li>
+            <me>
+              \frac{d}{dx} e^{\cosh x} = e^{\cosh x} \frac{d}{dx}
+              \cosh x = e^{\cosh x} \sinh x 
+            </me>
+            <p>
+              This is the chain rule with <m>u = \cosh x</m>.
+            </p>
+          </li>
+          <li>
+            <me>
+              \frac{d}{dx} \cosh (1 + x^2) = \sinh (1+x^2)
+              \frac{d}{dx} 1 + x^2 - 2x \sinh (1+x^2) 
+            </me>
+            <p>
+              This is the chain rule with <m>u = 1+x^2</m>.
+            </p>
+          </li>
+        </ol>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate these integrals.
+        </p>
+        <ol>
+          <li><me>
+            \int \sinh (x^6) x^5 dx 
+          </me></li>
+          <li><me>
+            \int \cosh^3 x \sinh 2x dx 
+          </me></li>
+        </ol>
+      </statement>
+      <solution>
+        <ol>
+          <li>
+            <me>
+              \int \sinh (x^6) x^5 dx = \frac{1}{6} \int \sinh u du
+              = \frac{1}{6} \cosh u + c = \frac{1}{6} \cosh (x^6) +
+              c 
+            </me>
+            <p>
+              This is the substitution rule with <m>u = x^6</m> and
+              <m>du- 6x^5</m>.
+            </p>
+          </li>
+          <li>
+            <md>
+              <mrow>
+                \int \cosh^3 x \sinh 2x dx \amp = \int \cosh^3 x 2
+                \sinh x \cosh x 
+              </mrow>
+              <mrow>
+                \amp = 2 \int \cosh^4 x \sinh x = 2 \frac{\cosh^5
+                x}{5} + c
+              </mrow>
+            </md>
+            <p>
+              I expand <m>\sinh 2x</m> by it identity. Then this is
+              a substitution rule integral with <m>u = \cosh x</m>
+              and <m>du = \sinh x dx</m>.
+            </p>
+          </li>
+        </ol>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="subsection-activity-implicit-derivatives">
+    <title>Implicit Derivatives</title>
+    <activity>
+      <statement>
+        <p>
+          Calculate the implicit derivative for the following locus.
+          Sketch the locus and observe the expected slopes; compare
+          those with the slopes given by the implicit derivatives.
+          <me>
+            x^2 + y^2 = 100
+          </me>
         </p>
       </statement>
       <solution>
         <p>
-          Solution
+          First I differentiate both sides of the equation in the
+          variable <m>x</m>. I am implicitly assuming that <m>y</m> is
+          a function of <m>x</m>, so when I differentiate an
+          expression in <m>y</m>, the chain rules applies and I
+          multiply by the derivative of the inside, which is the
+          unknown <m>\frac{dy}{dx}</m>. 
+          <md>
+            <mrow>
+              \frac{d}{dx} x^2 + y^2 \amp = \frac{d}{dx} 100 
+            </mrow>
+            <mrow>
+              2x + 2y \frac{dy}{dx} \amp = 0 
+            </mrow>
+            <mrow>
+              \frac{dy}{dx} \amp = -\frac{x}{y} 
+            </mrow>
+          </md>
+          By solving for <m>\frac{dy}{dx}</m>, I get an expression in
+          both <m>x</m> and <m>y</m> that describes the derivative. I
+          can evalute this at a few points. 
+          <md>
+            <mrow>
+              \frac{dy}{dx} (0,10) = -\frac{0}{10} = 0 
+            </mrow>
+          </md>
+          <md>
+            <mrow>
+              \frac{dy}{dx} \left( \sqrt{50}, \sqrt{50} \right) = -
+              \frac{\sqrt{50}}{\sqrt{50}} = -1 
+            </mrow>
+          </md>
+          <md>
+            <mrow>
+              \frac{dy}{dx} \left( \sqrt{30}, -\sqrt{70} \right) =
+              \frac{\sqrt{30}}{-\sqrt{70}} = - \sqrt{\frac{3}{10}} 
+            </mrow>
+          </md>
+          Also, the derivative at <m>(-10,0)</m> is undefined due to
+          division by zero. Possibly there is a vertical tangent line
+          at this point, with an undefined slope. 
+        </p>
+        <figure xml:id="figure-implicit1">
+          <caption>Implicit Derivatives to <m>x^2 + y^2 = 100</m></caption>
+          <image xml:id="figure30" width="80%">
+            <asymptote>
+              size(12cm,8cm,IgnoreAspect);
+              import contour;
+              import graph;
+              xaxis(Ticks);
+              yaxis(Ticks);
+
+              real f(real x, real y) {return x^2+y^2;}
+              draw(contour(f,(-10,-10),(10,10),new real[] {100}));
+
+              draw((-10,-9)--(-10,9));
+              draw((-9,10)--(9,10));
+              draw((sqrt(50)-4,sqrt(50)+4)--(sqrt(50)+4,sqrt(50)-4));
+              draw((sqrt(20)-4,-sqrt(80)-2)--(sqrt(20)+8,-sqrt(80)+4));
+
+              dot((-10,0));
+              label("$(-10,0)$",(-10,0),NW);
+
+              dot((0,10));
+              label("$(0,10)$", (0,10),NW);
+
+              dot((7.07,7.07));
+              label("$(\sqrt{50},\sqrt{50})$",(7.07,7.07),NE);
+
+              dot((5.48,-8.37));
+              label("$(\sqrt{30},-\sqrt{70})$",(5.48,-8.37),SE);
+            </asymptote>
+          </image>
+        </figure>
+        <p>
+          <xref ref="figure-implicit1" /> shows the graph of the locus.
+          Looking at the three points where I evaluted the derivaitve,
+          I can see that the tangent lines have slopes which match my
+          calculations. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the implicit derivative for the following locus.
+          Sketch the locus and observe the expected slopes; compare
+          those with the slopes given by the implicit derivatives.
+          <me>
+            \frac{x^2}{4} + \frac{y^2}{64} = 1 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First I differentiate both sides of the equation in the
+          variable <m>x</m>. I am implicitly assuming that <m>y</m> is
+          a function of <m>x</m>, so when I differentiate an
+          expression in <m>y</m>, the chain rules applies and I
+          multiply by the derivative of the inside, which is the
+          unknown <m>\frac{dy}{dx}</m>. 
+          <md>
+            <mrow>
+              \frac{d}{dx} \frac{x^2}{4} + \frac{y^2}{64} =
+              \frac{d}{dx} 1 
+            </mrow>
+            <mrow>
+              \frac{x}{2}  + \frac{y}{32} \frac{dy}{dx} = 0
+            </mrow>
+            <mrow>
+              \frac{dy}{dx} = - \frac{16x}{y} 
+            </mrow>
+          </md>
+          By solving for <m>\frac{dy}{dx}</m>, I get an expression in
+          both <m>x</m> and <m>y</m> that describes the derivative. I
+          can evalute this at a few points. 
+          <md>
+            <mrow>
+              \frac{dy}{dx} (0,8) = \frac{-0}{8} = 0 
+            </mrow>
+          </md>
+          <md>
+            <mrow>
+              \frac{dy}{dx} (\sqrt{2},\sqrt{32}) =
+              \frac{-16\sqrt{2}}{\sqrt{32}} = \frac{-16}{\sqrt{16}} =
+              -4 
+            </mrow>
+          </md>
+          <md>
+            <mrow>
+              \frac{dy}{dx} (1,-\sqrt{48}) = \frac{-16}{-\sqrt{48}} =
+              \frac{4}{\sqrt{3}}
+            </mrow>
+          </md>
+          Also, at <m>(-2,0)</m>, the derivative is undefined due to
+          division by zero. Possibly there is vertical tangent here. 
+        </p>
+        <figure xml:id="figure-implicit2">
+          <caption>Implicit Derivatives to <m>\frac{x^2}{4} +
+            \frac{y^2}{64} = 1</m></caption>
+          <image xml:id="figure31" width="80%">
+            <asymptote>
+              size(12cm,8cm,IgnoreAspect);
+              import contour;
+              import graph;
+              xaxis(Ticks);
+              yaxis(Ticks);
+
+              real f(real x, real y) {return (x^2)/4+(y^2)/(64);}
+              draw(contour(f,(-2,-8),(2,8),new real[] {1}));
+
+              draw((-2,-7)--(-2,7));
+              draw((-2,8)--(2,8));
+              draw((sqrt(2)-1,sqrt(32)+4.4)--(sqrt(2)+1,sqrt(32)-4.4));
+              draw((0,-sqrt(48)-2.31)--(3,-sqrt(48)+4.62));
+
+              dot((-2,0));
+              label("$(-2,0)$",(-2,0),NW);
+
+              dot((0,8));
+              label("$(0,8)$",(0,8),NW);
+
+              dot((sqrt(2),sqrt(32)));
+              label("$(\sqrt{2},\sqrt{32})$",(sqrt(2),sqrt(32)),NE);
+
+              dot((1,-sqrt(48)));
+              label("$(1,-\sqrt{48})$",(1,-sqrt(48)),SE);
+            </asymptote>
+          </image>
+        </figure>
+        <p>
+          <xref ref="figure-implicit2" /> shows the graph of the locus.
+          Looking at the three points where I evaluted the derivaitve,
+          I can see that the tangent lines have slopes which match my
+          calculations. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the implicit derivative for the following locus.
+          Sketch the locus and observe the expected slopes; compare
+          those with the slopes given by the implicit derivatives.
+          <me>
+            x^2 - y^2 = 4 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First I differentiate both sides of the equation in the
+          variable <m>x</m>. I am implicitly assuming that <m>y</m> is
+          a function of <m>x</m>, so when I differentiate an
+          expression in <m>y</m>, the chain rules applies and I
+          multiply by the derivative of the inside, which is the
+          unknown <m>\frac{dy}{dx}</m>. 
+          <md>
+            <mrow>
+              \frac{d}{dx} x^2 - y^2 \amp = \frac{d}{dx} 4 
+            </mrow>
+            <mrow>
+              2x - 2y \frac{dy}{dx} \amp = 0 
+            </mrow>
+            <mrow>
+              \frac{dy}{dx} = \frac{x}{y} 
+            </mrow>
+          </md>
+          By solving for <m>\frac{dy}{dx}</m>, I get an expression in
+          both <m>x</m> and <m>y</m> that describes the derivative. I
+          can evalute this at a few points. 
+          <md>
+            <mrow>
+              \frac{dy}{dx} (6,-\sqrt{32}) = \frac{-6}{\sqrt{32}} = -
+              \frac{6}{\sqrt{32}} 
+            </mrow>
+          </md>
+          <md>
+            <mrow>
+              \frac{dy}{dx} (-6,-\sqrt{32}) = \frac{-6}{-\sqrt{32}} =
+              \frac{6}{\sqrt{32}} 
+            </mrow>
+          </md>
+          In addition, the slopes at <m>(-2,0)</m> and <m>(2,0)</m>
+          are undefined due to division by zero. Possibly there are
+          vertical tangents here. 
+        </p>
+        <figure xml:id="figure-implicit3">
+          <caption>Implicit Derivatives to <m>x^2 - y^2 =
+            4</m></caption>
+          <image xml:id="figure32" width="80%">
+            <asymptote>
+              size(12cm,8cm,IgnoreAspect);
+              import contour;
+              import graph;
+              xaxis(Ticks);
+              yaxis(Ticks);
+
+              real f(real x, real y) {return x^2-y^2;}
+              draw(contour(f,(-9,-9),(9,9),new real[] {4}));
+
+              draw((-2,-9)--(-2,9));
+              draw((2,-9)--(2,9));
+              draw((-9, -8.84)--(8, 9.18));
+              draw((9, -8.84)--(-8, 9.18));
+
+              dot((2,0));
+              label("$(2,0)$",(2,0),NE);
+
+              dot((-2,0));
+              label("$(-2,0)$",(-2,0),NW);
+
+              dot((6,-sqrt(32)));
+              label("$(6,-\sqrt{32})$",(6,-sqrt(32)),NE);
+
+              dot((-6,-sqrt(32)));
+              label("$(-6,-\sqrt{32})$",(-6,-sqrt(32)),NW);
+            </asymptote>
+          </image>
+        </figure>
+        <p>
+          <xref ref="figure-implicit3" /> shows the graph of the locus.
+          Looking at the three points where I evaluted the derivaitve,
+          I can see that the tangent lines have slopes which match my
+          calculations. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the implicit derivative for the following locus.
+          Sketch the locus and observe the expected slopes; compare
+          those with the slopes given by the implicit derivatives.
+          <me>
+            xy = 1 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First I differentiate both sides of the equation in the
+          variable <m>x</m>. I am implicitly assuming that <m>y</m> is
+          a function of <m>x</m>, so when I differentiate an
+          expression in <m>y</m>, the chain rules applies and I
+          multiply by the derivative of the inside, which is the
+          unknown <m>\frac{dy}{dx}</m>. 
+          <md>
+            <mrow>
+              \frac{d}{dx} xy \amp \frac{d}{dx} 1 
+            </mrow>
+            <mrow>
+              x \frac{dy}{dx} + y \amp = 0 
+            </mrow>
+            <mrow>
+              \frac{dy}{dx} = \frac{-y}{x} 
+            </mrow>
+          </md>
+          By solving for <m>\frac{dy}{dx}</m>, I get an expression in
+          both <m>x</m> and <m>y</m> that describes the derivative. I
+          can evalute this at a few points. 
+          <md>
+            <mrow>
+              \frac{dy}{dx} (1,1) = -1 
+            </mrow>
+          </md>
+          <md>
+            <mrow>
+              \frac{dy}{dx} (-1,-1) = -1 
+            </mrow>
+          </md>
+          <md>
+            <mrow>
+              \frac{dy}{dx} \left( 3, \frac{1}{3} \right) =
+              \frac{-1}{3} 
+            </mrow>
+          </md>
+          <md>
+            <mrow>
+              \frac{dy}{dx} \left( \frac{-1}{3}, -3 \right) = 3
+            </mrow>
+          </md>
+        </p>
+        <figure xml:id="figure-implicit4">
+          <caption>Implicit Derivatives to <m>xy = 1</m></caption>
+          <image xml:id="figure33" width="80%">
+            <asymptote>
+              size(12cm,8cm,IgnoreAspect);
+              import contour;
+              import graph;
+              xaxis(Ticks);
+              yaxis(Ticks);
+
+              real f(real x, real y) {return x*y;}
+              draw(contour(f,(-4,-4),(4,4),new real[] {1}));
+
+              draw((-2,4)--(4,-2));
+              draw((-4,2)--(2,-4));
+              draw((-4,1.11)--(4,0.22));
+              draw((-1.11,4)--(-0.22,-4));
+
+              dot((1,1));
+              label("$(1,1)$",(1,1),NE);
+
+              dot((-1,-1));
+              label("$(-1,-1)$",(-1,-1),SW);
+
+              dot((3,0.33));
+              label("$\left( 3, \frac{1}{3} \right)$",(3,0.33),NE);
+
+              dot((-0.33,-3));
+              label("$\left( \frac{-1}{3}, 3 \right)$",(-0.33,-3),SW);
+            </asymptote>
+          </image>
+        </figure>
+        <p>
+          <xref ref="figure-implicit4" /> shows the graph of the locus.
+          Looking at the three points where I evaluted the derivaitve,
+          I can see that the tangent lines have slopes which match my
+          calculations. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the implicit derivative for the following locus.
+          Sketch the locus and observe the expected slopes; compare
+          those with the slopes given by the implicit derivatives.
+          <me>
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First I differentiate both sides of the equation in the
+          variable <m>x</m>. I am implicitly assuming that <m>y</m> is
+          a function of <m>x</m>, so when I differentiate an
+          expression in <m>y</m>, the chain rules applies and I
+          multiply by the derivative of the inside, which is the
+          unknown <m>\frac{dy}{dx}</m>. 
+          <md>
+            <mrow>
+              x^2 + y^2 = -3
+            </mrow>
+          </md>
+          I could go through the process here of calculating the
+          implicit derivative. That process would produce an
+          expression for <m>\frac{dy}{dx}</m>, but the expression
+          would be useless. This locus doesn't have any points!
+          Therefore, it can't have any tangent lines.
         </p>
       </solution>
     </activity>
   </subsection>
   <subsection xml:id="subsection-week2-concepts">
     <title>Conceptual Review Questions</title>
-    <p>
-      <ul>
-        <li>
-          Question
-        </li>
-      </ul>
-    </p>
+    <ul>
+      <li>
+        <p>
+          Why are hyperbolics like trigonometric functions?
+        </p>
+      </li>
+      <li>
+        <p>
+          What is hyperbolic angle and how does it define the
+          hyperbolic functions?  
+        </p>
+      </li>
+      <li>
+        <p>
+          Why are there sign differences between hyperbolic and
+          trigonometric identities?
+        </p>
+      </li>
+    </ul>
   </subsection>
   <subsection xml:id="subsection-week2-extra-practice">
     <title>Extra Practice Activities</title>
     <activity>
       <statement>
         <p>
-          Question
+          Calculate these limits.
         </p>
+        <ol>
+          <li><me>
+            \lim_{x \rightarrow \infty} \frac{\sinh x}{x^4} 
+          </me></li>
+          <li><me>
+            \lim_{x \rightarrow 0} \frac{\sin x}{\sinh x}
+          </me></li>
+        </ol>
       </statement>
       <solution>
+        <ol>
+          <li>
+            <me>
+              \lim_{x \rightarrow \infty} \frac{\sinh x}{x^4} =
+              \lim_{x \rightarrow \infty} \frac{e^x - e^{-x}}{2x^4}
+              = \infty 
+            </me>
+            <p>
+              I can change the hyperbolics into their exponential
+              form and use asymptotic analysis. Then I see the
+              numerator has higher asymptotic order.
+            </p>
+          </li>
+          <li>
+            <me>
+              \lim_{x \rightarrow 0} \frac{\sin x}{\sinh x} =
+              \lim_{x \rightarrow 0} \frac{\sin x}{x} \lim_{x
+              \rightarrow 0} \frac{x}{\sinh x} = 1 \cdot 1 = 1
+            </me>
+            <p>
+              This is a neat trick. By multiplying by
+              <m>\frac{x}{x}</m>, which doesn't change the fraction,
+              I can split this us and use the known limits for
+              <m>\frac{\sin x}{x}</m> and <m>\frac{\sinh x}{x}</m>.
+            </p>
+          </li>
+        </ol>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
         <p>
-          Solution
+          Calculate these derivatives.
         </p>
+        <ol>
+          <li><me>
+            \frac{d}{dx} \sinh 2x \coth x
+          </me></li>
+          <li><me>
+            \frac{d}{dx} \frac{\sinh^2 x}{e^x} 
+          </me></li>
+        </ol>
+      </statement>
+      <solution>
+        <ol>
+          <li>
+            <md>
+              <mrow>
+                \frac{d}{dx} \sinh 2x \coth x \amp = \frac{d}{dx} 2
+                \sinh x \cosh x \frac{\cosh x}{\sinh x} 
+              </mrow>
+              <mrow>
+                \amp = 2 \frac{d}{dx} \cosh^2 x = 4 \cosh x
+                \frac{d}{dx} \cosh x = 4 \cosh x \sinh x 
+              </mrow>
+            </md>
+            <p>
+              This is a product rule derivative.
+            </p>
+          </li>
+          <li>
+            <md>
+              <mrow>
+                \frac{d}{dx} \frac{\sinh^2 x}{e^x} \amp = \frac{d}{dx}
+                \frac{e^{2x} - 2 - e^{-2x}}{4e^x} = \frac{1}{4}
+                \frac{d}{dx} e^x - 2e^{-x} + e^{-3x} 
+              </mrow>
+              <mrow>
+                \amp = \frac{1}{4} \left( e^x - 2e^{-x} - 3e^{-3x}
+                \right) 
+              </mrow>
+            </md>
+            <p>
+              I change the hyperbolic into an exponential, since
+              there was an exponential in the denominator. That
+              changed this into three straightforward derivatives.
+            </p>
+          </li>
+        </ol>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate these integrals.
+        </p>
+        <ol>
+          <li><me>
+            \int_{\ln 2}^{\ln 4} \cosh x dx 
+          </me></li>
+          <li><me>
+            \int_0^{\ln 5} \sinh^2 x + \cosh^2 x dx 
+          </me></li>
+        </ol>
+      </statement>
+      <solution>
+        <ol>
+          <li>
+            <md>
+              <mrow>
+                \int_{\ln 2}^{\ln 4} \cosh x dx \amp = \left. \sinh x
+                \right|_{\ln 2}^{\ln 4} = \frac{e^{\ln 4} - e^{-\ln 4}
+                - e^{\ln 2}+ e^{-\ln 2}}{2} 
+              </mrow>
+              <mrow>
+                \amp = \frac{4 - \frac{1}{4} - 2 + \frac{1}{2}}{2} =
+                \frac{9}{8} 
+              </mrow>
+            </md>
+            <p>
+              This is a direct antiderivative, using the exponential
+              form to evaluate on the bounds.
+            </p>
+          </li>
+          <li>
+            <md>
+              <mrow>
+                \int_0^{\ln 5} \sinh^2 x + \cosh^2 x dx \amp =
+                \int_0^{\ln 5} \cosh (2x) = \left. \frac{1}{2} \sinh
+                (2x) \right|_0^{\ln 5} 
+              </mrow>
+              <mrow>
+                \amp = \frac{1}{2} \frac{e^{2\ln 5} - e^{-2\ln 5}}{2}
+                - 0 = \frac{1}{4} \left( 25 - \frac{1}{25} \right) 
+              </mrow>
+              <mrow>
+                \amp = \frac{624}{100} = \frac{156}{25}
+              </mrow>
+            </md>
+            <p>
+              I use a identity to turn this into a fairly direct
+              integral. I use the exponential form to evaluate on
+              the bounds.
+            </p>
+          </li>
+        </ol>
       </solution>
     </activity>
   </subsection>
