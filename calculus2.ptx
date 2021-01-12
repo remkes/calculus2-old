@@ -7,9 +7,9 @@
     <title>Course Notes for Calculus II</title>
     <xi:include href="./frontmatter.ptx" />
     <!--
-    <xi:include href="./week1.ptx" />
-    Not included in Winter 2020 due to the reduced schedule
+    Week 1 not included in Winter 2020 due to the reduced schedule
     -->
+    <xi:include href="./week1.ptx" />
     <xi:include href="./week2.ptx" />
     <xi:include href="./week3.ptx" />
     <!--

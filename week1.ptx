@@ -4,8 +4,10 @@
   This section left incomplete in Winter 2020
   -->
   <title>Week 1</title>
+  <!--
   <xi:include href="numbers.ptx" />
   <xi:include href="theorems.ptx" />
   <xi:include href="epsilon-delta.ptx" />
   <xi:include href="week1-activity.ptx" />
+  -->
 </chapter>

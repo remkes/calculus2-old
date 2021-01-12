@@ -165,7 +165,7 @@
             </p>
             <me>
               = 2 \int u^4 du = 2 \frac{u^5}{5} + c = \frac{2 \cosh^5
-              u}{5} + c 
+              x}{5} + c 
             </me>
             <p>
               After doing the antiderivative, I reversed the
@@ -560,22 +560,12 @@
           Sketch the locus and observe the expected slopes; compare
           those with the slopes given by the implicit derivatives.
           <me>
+            x^2 + y^2 = -3 
           </me>
         </p>
       </statement>
       <solution>
         <p>
-          First I differentiate both sides of the equation in the
-          variable <m>x</m>. I am implicitly assuming that <m>y</m> is
-          a function of <m>x</m>, so when I differentiate an
-          expression in <m>y</m>, the chain rules applies and I
-          multiply by the derivative of the inside, which is the
-          unknown <m>\frac{dy}{dx}</m>. 
-          <md>
-            <mrow>
-              x^2 + y^2 = -3
-            </mrow>
-          </md>
           I could go through the process here of calculating the
           implicit derivative. That process would produce an
           expression for <m>\frac{dy}{dx}</m>, but the expression
@@ -692,7 +682,7 @@
                 \frac{d}{dx} e^x - 2e^{-x} + e^{-3x} 
               </mrow>
               <mrow>
-                \amp = \frac{1}{4} \left( e^x - 2e^{-x} - 3e^{-3x}
+                \amp = \frac{1}{4} \left( e^x + 2e^{-x} - 3e^{-3x}
                 \right) 
               </mrow>
             </md>
