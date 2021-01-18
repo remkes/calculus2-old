@@ -1,17 +1,454 @@
 <section xml:id="section-week3-activity">
   <title>Week 3 Activity</title>
   <subsection xml:id="subsection-activity-">
-    <title>Title</title>
+    <title>Singularities of Algebriac Plane Curves</title>
     <activity>
       <statement>
         <p>
-          Question
+          Find and classify the singularities of this algebraic plane
+          curve.
         </p>
+        <me>
+          y^2 = x^2 + x^4 
+        </me>
       </statement>
       <solution>
         <p>
-          Solution
+          I can factor the right side of the curve as
+          <m>x^2(1+x^2)</m>. I'll use this form, since it will help to
+          clearly understand the limits of the implicit derivative. 
         </p>
+        <p>
+          First I calculate the implicit derivative of the curve. 
+        </p>
+        <md>
+          <mrow>
+            \frac{d}{dx} y^2 \amp = \frac{d}{dx} x^2 (1+x^2) 
+          </mrow>
+          <mrow>
+            2y \frac{dy}{dx} \amp = 2x (1+x^2) + x^2 (2x) = 2x (1+x^2)
+            + 3x^3 
+          </mrow>
+          <mrow>
+            \frac{dy}{dx} \amp = \frac{2x(1 + x^2) + 3x^2}{2y} 
+          </mrow>
+        </md>
+        <p>
+          Then I use the original curve to solve for <m>y</m> and
+          replace <m>y</m> in the implicit derivative. 
+        </p>
+        <md>
+          <mrow>
+            y \amp = \pm \sqrt{x^2 (1+x^2)} = pm x \sqrt{1+x^2} 
+          </mrow>
+          <mrow>
+            \frac{dy}{dx} \amp = \pm \frac{ 2x (1+x^2) + 3x^3}{x
+            \sqrt{ 1+x^2}}
+          </mrow>
+        </md>
+        <p>
+          The singularities happen at the undefined point of the
+          implicit derivative. These are the points where the
+          denominator is zero. For this curve, the only potential
+          singularity is at <m>x=0</m>, since <m>1+x^2</m> can never
+          be zero. 
+        </p>
+        <p>
+          For each of the undefined points, I calculate the limit of
+          the implicit derivative approaching the undefined points.
+          There is only one such point here.
+        </p>
+        <md>
+          <mrow>
+            \lim_{x \rightarrow 0} \frac{dy}{dx} \amp = \lim_{x
+            \rightarrow 0} \pm \frac{2x (1+x^2) + 3x^3}{x
+            \sqrt{1+x^2}}
+          </mrow>
+          <mrow>
+            \amp = \lim_{x \rightarrow 0} \pm \frac{2(1+x^2) +
+            3x^2}{\sqrt{1+x^2}} = \pm \frac{2}{1} = \pm 2 
+          </mrow>
+        </md>
+        <p>
+          There are two possible values for the limit. I conclude that
+          the singularity is a double point node. 
+          <xref ref="figure-activity-apc1" /> shows the curve and the double
+          point node. 
+        </p>
+        <figure xml:id="figure-activity-apc1">
+          <image xml:id="figure40" widht="80%">
+            <asymptote>
+              size(10cm,5cm,IgnoreAspect);
+
+              import contour;
+              import graph;
+              xaxis(Ticks);
+              yaxis(Ticks);
+
+              real f(real x, real y) {return x^2 + x^4 - y^2;}
+              draw(contour(f,(-2,-2),(2,2),new real[] {0}));
+            </asymptote>
+          </image>
+        </figure>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Find and classify the singularities of this algebraic plane
+          curve.
+        </p>
+        <me>
+          y^2 = x^4 + x^3 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          For this curve, I can factor the right side to get
+          <m>x^3(x+1)</m>. Then I calculate the implicit derivative
+          of the curve.
+        </p>
+        <md>
+          <mrow>
+            \frac{d}{dx} y^2 \amp = \frac{d}{dx} x^3 (x+1)
+          </mrow>
+          <mrow>
+            2y \frac{dy}{dx} \amp = 3x^2 (x+1) + x^3 
+          </mrow>
+          <mrow>
+            \frac{dy}{dx} \amp = \frac{3x^2 (x+1) + x^3}{2y} 
+          </mrow>
+        </md>
+        <p>
+          Then I use the original curve to solve for <m>y</m> and
+          replace <m>y</m> in the implicit derivative. 
+        </p>
+        <md>
+          <mrow>
+            y \amp = \pm \sqrt{x^3 (x+1)} = \pm x \sqrt{x(x+1)} 
+          </mrow>
+          <mrow>
+            \frac{dy}{dx} \amp = \pm \frac{3x^2 (x+1) +
+            x^3}{2x\sqrt{x(x+1)}} 
+          </mrow>
+        </md>
+        <p>
+          The singularities happen at the undefined point of the
+          implicit derivative. These are the points where the
+          denominator is zero. For this curve, there are potential
+          singularities at <m>x=0</m> and <m>x=-1</m>. 
+        </p>
+        <p>
+          For each of the undefined points, I calculate the limit of
+          the implicit derivative approaching the undefined points.
+          I'll start with <m>x=0</m>
+        </p>
+        <md>
+          <mrow>
+            \lim_{x \rightarrow 0} \frac{dy}{dx} \amp = 
+            \lim_{x \rightarrow 0} \pm \frac{3x^2 (x+1) +
+            x^3}{2x\sqrt{x(x+1)}} 
+          </mrow>
+          <mrow>
+            \amp = \lim_{x \rightarrow 0} \pm \left[ \frac{3x^2
+            (x+1)}{2x\sqrt{x(x+1)}} + \frac{x^3}{2x\sqrt{x(x+1)}}
+            \right] 
+          </mrow>
+          <mrow>
+            \amp = \lim_{x \rightarrow 0} \pm \left[ 3\sqrt{2x(x+1)} 
+            + \frac{x\sqrt{x}}{2\sqrt{(x+1)}} \right] 
+          </mrow>
+          <mrow>
+            \amp = \pm \left[ 0 + 0 \right] = 0 
+          </mrow>
+        </md>
+        <p>
+          The limit is zero. I conclude that there is a cusp at
+          <m>x=0</m>. Then I move on to <m>x=-1</m>. (There is a
+          subtlety here: this limit only works when we approach
+          <m>x=-1</m> on the left. The curve have no points for
+          <m>x</m> between <m>-1</m> and <m>0</m>, since the right
+          side is negative and the left side must be positive. This
+          matter at one point in the limit.)
+        </p>
+        <md>
+          <mrow>
+            \lim_{x \rightarrow -1} \frac{dy}{dx} \amp = 
+            \lim_{x \rightarrow -1} \pm \frac{3x^2 (x+1) +
+            x^3}{2x\sqrt{x(x+1)}} 
+          </mrow>
+          <mrow>
+            \amp = \lim_{x \rightarrow -1} \pm \frac{3x^2 (x+1)}{2x
+            \sqrt{x(x+1)}}  + \frac{x^3}{2x\sqrt{x(x+1)}} 
+          </mrow>
+          <mrow>
+            \amp = \lim_{x \rightarrow -1} \pm \frac{3x^2 (x+1)}{2x
+            \sqrt{x(x+1)}} + \lim_{x \rightarrow -1}
+            \frac{x^3}{2x\sqrt{x(x+1)}} 
+          </mrow>
+          <mrow>
+            \amp = \lim_{x \rightarrow -1} \pm \frac{3\sqrt{x(x+1)}}{2}
+            + \lim_{x \rightarrow -1} \frac{x^3}{2x\sqrt{x(x+1)}} 
+          </mrow>
+        </md>
+        <p>
+          The first limit evaluates to <m>0</m>. The second limit is
+          more complicated. I can't cancel off all the term I want to
+          cancel off, since that would lead to square roots of
+          negative terms. However, I can understand this limit in the
+          form it currently have. The numerator approaches <m>-1</m>
+          and the denominator approaches <m>0</m>. Therefore, the
+          limit must approach <m>pm \infty</m>. I conclude that there
+          is a vertical tangent at <m>x=-1</m>.
+          <xref ref="figure-activity-apc2" /> shows the curve with
+          boths its cusp and its vertical tangent. It also shows the
+          lack of points between <m>x=-1</m> and <m>x=0</m>.
+        </p>
+        <figure xml:id="figure-activity-apc2">
+          <image xml:id="figure41" widht="80%">
+            <asymptote>
+              size(10cm,5cm,IgnoreAspect);
+
+              import contour;
+              import graph;
+              xaxis(Ticks);
+              yaxis(Ticks);
+
+              real f(real x, real y) {return x^3 + x^4 - y^2;}
+              draw(contour(f,(-2,-2),(2,2),new real[] {0}));
+            </asymptote>
+          </image>
+        </figure>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Find and classify the singularities of this algebraic plane
+          curve.
+        </p>
+        <me>
+          y^2 = (x-3)^2(x-4)^2
+        </me>
+      </statement>
+      <solution>
+        <p>
+          The curve is already presented in factored form. I calculate
+          the implicit derivative of the curve. 
+        </p>
+        <md>
+          <mrow>
+            \frac{d}{dx} y^2 \amp = \frac{d}{dx} (x-3)^2 (x-4)^2 
+          </mrow>
+          <mrow>
+            2y \frac{dy}{dx} \amp = (x-3)(x-4)^2 + (x-3)^2(x-4)
+          </mrow>
+          <mrow>
+            \frac{dy}{dx} \amp = \frac{(x-3)(x-4)^2 + (x-3)^2(x-4)}{2y} 
+          </mrow>
+        </md>
+        <p>
+          Then I use the original curve to solve for <m>y</m> and
+          replace <m>y</m> in the implicit derivative. 
+        </p>
+        <md>
+          <mrow>
+            y \amp = \pm \sqrt{(x-3)^2(x-4)^2} = \pm (x-3)(x-4)
+          </mrow>
+          <mrow>
+            \frac{dy}{dx} \amp = \pm \frac{(x-3)(x-4)^2 +
+            (x-3)^2(x-4)}{(x-3)(x-4)} 
+          </mrow>
+        </md>
+        <p>
+          The singularities happen at the undefined point of the
+          implicit derivative. These are the points where the
+          denominator is zero. For this curve, the possible
+          singularities are at <m>x=3</m> and <m>x=4</m>. 
+        </p>
+        <p>
+          For each of the undefined points, I calculate the limit of
+          the implicit derivative approaching the undefined points. I
+          start with <m>x=3</m>.
+        </p>
+        <md>
+          <mrow>
+            \lim_{x \rightarrow 3} \frac{dy}{dx} \amp = 
+            \lim_{x \rightarrow 3} \pm \frac{(x-3)(x-4)^2 +
+            (x-3)^2(x-4)}{(x-3)(x-4)} 
+          </mrow>
+          <mrow>
+            \amp = \lim_{x \rightarrow 3} \pm ((x-4) + (x-3) = \pm 1 
+          </mrow>
+        </md>
+        <p>
+          There are two limit values, so this is a double point node. 
+        </p>
+        <md>
+          <mrow>
+            \lim_{x \rightarrow 4} \frac{dy}{dx} \amp = 
+            \lim_{x \rightarrow 4} \pm \frac{(x-3)(x-4)^2 +
+            (x-3)^2(x-4)}{(x-3)(x-4)} 
+          </mrow>
+          <mrow>
+            \amp = \lim_{x \rightarrow 4} \pm ((x-4) + (x-3) = \pm 1 
+          </mrow>
+        </md>
+        <p>
+          Again, there are two limit values, so this is a double point
+          node. 
+          <xref ref="figure-activity-apc3" /> shows the curve and both
+          the double point nodes.
+        </p>
+        <figure xml:id="figure-activity-apc3">
+          <image xml:id="figure42" widht="80%">
+            <asymptote>
+              size(10cm,5cm,IgnoreAspect);
+
+              import contour;
+              import graph;
+              xaxis(Ticks);
+              yaxis(Ticks);
+
+              real f(real x, real y) {return (x-3)^2*(x-4)^2 - y^2;}
+              draw(contour(f,(1,-2),(5,2),new real[] {0}));
+            </asymptote>
+          </image>
+        </figure>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Find and classify the singularities of this algebraic plane
+          curve.
+        </p>
+        <me>
+          y^2 = x(x-1)(x-2) 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          First I calculate the implicit derivative of the curve. 
+        </p>
+        <md>
+          <mrow>
+            \frac{d}{dx} y^2 \amp = \frac{d}{dx} x(x-1)(x-2)
+          </mrow>
+          <mrow>
+            2y \frac{dy}{dx} \amp = (x-1)(x-2) + x(x-2) + x(x-1) 
+          </mrow>
+          <mrow>
+            \frac{dy}{dx} \amp = \frac{(x-1)(x-2) + x(x-2) +
+            x(x-1)}{2y} 
+          </mrow>
+        </md>
+        <p>
+          Then I use the original curve to solve for <m>y</m> and
+          replace <m>y</m> in the implicit derivative. 
+        </p>
+        <md>
+          <mrow>
+            y \amp = \pm \sqrt{x(x-1)(x-2)} 
+          </mrow>
+          <mrow>
+            \frac{dy}{dx} \amp = \pm \frac{(x-1)(x-2) + x(x-2) +
+            x(x-1)}{\sqrt{x(x-1)(x-2)}}
+          </mrow>
+        </md>
+        <p>
+          The singularities happen at the undefined point of the
+          implicit derivative. These are the points where the
+          denominator is zero. For this curve, there are potential
+          singularities at <m>x=0,1,2</m>. 
+        </p>
+        <p>
+          For each of the undefined points, I calculate the limit of
+          the implicit derivative approaching the undefined points. 
+          I'll start with <m>x=0</m>. 
+        </p>
+        <md>
+          <mrow>
+            \amp \lim_{x \rightarrow 0} \frac{dy}{dx} = 
+            \lim_{x \rightarrow 0} \pm \frac{(x-1)(x-2) + x(x-2) +
+            x(x-1)}{\sqrt{x(x-1)(x-2)}}
+          </mrow>
+          <mrow>
+            \amp = \lim_{x \rightarrow 0} \pm \left[
+            \frac{(x-1)(x-2)}{\sqrt{x(x-1)(x-2)}}  +
+            \frac{x(x-2)}{\sqrt{x(x-1)(x-2)}}  +
+            \frac{x(x-1)}{\sqrt{x(x-1)(x-2)}} \right] 
+          </mrow>
+          <mrow>
+            \amp = \lim_{x \rightarrow 0} \pm \left[
+            \frac{\sqrt{(x-1)(x-2)}}{\sqrt{x}}  +
+            \frac{\sqrt{x(x-2)}}{\sqrt{x-1}}  +
+            \frac{\sqrt{x(x-1)}}{\sqrt{x-2}} \right]
+          </mrow>
+          <mrow>
+            \amp = \pm \left[ \lim_{x \rightarrow 0} 
+            \frac{\sqrt{(x-1)(x-2)}}{\sqrt{x}}  +
+            \lim_{x \rightarrow 0} \frac{\sqrt{x(x-2)}}{\sqrt{x-1}}  +
+            \lim_{x \rightarrow 0} \frac{\sqrt{x(x-1)}}{\sqrt{x-2}}
+            \right] 
+          </mrow>
+        </md>
+        <p>
+          The second and third limits are zero. In the first limit,
+          the numerator approaches <m>2</m> and the denominator
+          approaches <m>0</m>, so I conclude the limit is <m>\pm
+          \infty</m> and that there is a vertical tangent at
+          <m>x=0</m>.  I'll next look at <m>x=1</m>. 
+        </p>
+        <md>
+          <mrow>
+            \lim_{x \rightarrow 1} \frac{dy}{dx} \amp = 
+            \lim_{x \rightarrow 1} \pm \frac{(x-1)(x-2) + x(x-2) +
+            x(x-1)}{\sqrt{x(x-1)(x-2)}}
+          </mrow>
+          <mrow>
+            \amp = \pm \left[ \lim_{x \rightarrow 1}
+            \frac{\sqrt{(x-1)(x-2)}}{\sqrt{x}} + \lim_{x \rightarrow
+            1} \frac{\sqrt{x(x-2)}}{\sqrt{x-1}} + \lim_{x \rightarrow
+            1} \frac{\sqrt{x(x-1)}}{\sqrt{x-2}} \right] 
+          </mrow>
+        </md>
+        <p>
+          The first and third limits are zero. In the second limit,
+          the numerator approaches <m>-1</m> and the denominator
+          approaches <m>0</m>, so I conclude the limit is <m>\pm
+          \infty</m> and that there is a vertical tangent at
+          <m>x=0</m>.  The last point to consider is <m>x=2</m>. 
+        </p>
+        <md>
+          <mrow>
+            \lim_{x \rightarrow 2} \frac{dy}{dx} \amp = 
+            \lim_{x \rightarrow 2} \pm \frac{(x-1)(x-2) + x(x-2) +
+            x(x-1)}{\sqrt{x(x-1)(x-2)}}
+          </mrow>
+          <mrow>
+            \amp = \pm \left[ \lim_{x \rightarrow 2}
+            \frac{\sqrt{(x-1)(x-2)}}{\sqrt{x}} + \lim_{x \rightarrow
+            2} \frac{\sqrt{x(x-2)}}{\sqrt{x-1}} + \lim_{x \rightarrow
+            2} \frac{\sqrt{x(x-1)}}{\sqrt{x-2}}
+            \right] 
+          </mrow>
+        </md>
+        <p>
+          The first and second limits are zero. In the third limit,
+          the numerator approaches <m>2</m> and the denominator
+          approaches <m>0</m>, so I conclude the limit is <m>\pm
+          \infty</m> and that there is a vertical tangent at
+          <m>x=2</m>. 
+          <xref ref="figure-activity-apc4" /> shows the curve and all
+          three the vertical tangents. The curve has no singularities. 
+        </p>
+        <figure xml:id="figure-activity-apc4">
+          <image xml:id="figure43" widht="80%">
+            <asymptote>
+            </asymptote>
+          </image>
+        </figure>
       </solution>
     </activity>
   </subsection>
@@ -20,24 +457,13 @@
     <p>
       <ul>
         <li>
-          Question
+          What are the ways that an implicit derivative can be
+          undefined?
+        </li>
+        <li>
+          What is a singularity?
         </li>
       </ul>
     </p>
-  </subsection>
-  <subsection xml:id="subsection-week3-extra-practice">
-    <title>Extra Practice Activities</title>
-    <activity>
-      <statement>
-        <p>
-          Question
-        </p>
-      </statement>
-      <solution>
-        <p>
-          Solution
-        </p>
-      </solution>
-    </activity>
   </subsection>
 </section>
