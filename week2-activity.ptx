@@ -23,7 +23,7 @@
         <ol>
           <li>
             <me>
-              \lim_{x \rightarrow 0} \frac{\sin x \sinh x}{x^2}
+              \lim_{x \rightarrow 0} \frac{\sin x \sinh x}{x^2} = 
               \lim_{x \rightarrow 0} \frac{\sin x}{x} \frac{\sinh
               x}{x} = \lim_{x \rightarrow 0} \frac{\sin x}{x} \lim_{x
               \rightarrow 0} \frac{\sinh x}{x} = 1 \cdot 1=  1\\
@@ -83,7 +83,7 @@
             <md>
               <mrow>
                 \frac{d}{dx} e^{\cosh x} \amp = \frac{d}{du} e^u
-                \Big|_{u = \cosh x} \frac{d}{dx}
+                \Big|_{u = \cosh x} \frac{d}{dx} \cosh x
               </mrow>
               <mrow>
                 \amp = e^u \Big|_{u = \cosh x} \sinh x = e^{\cosh x}
@@ -225,7 +225,7 @@
           <md>
             <mrow>
               \frac{dy}{dx} \left( \sqrt{30}, -\sqrt{70} \right) =
-              \frac{\sqrt{30}}{-\sqrt{70}} = - \sqrt{\frac{3}{10}} 
+              -\frac{\sqrt{30}}{-\sqrt{70}} = \sqrt{\frac{3}{10}} 
             </mrow>
           </md>
           Also, the derivative at <m>(-10,0)</m> is undefined due to
@@ -479,7 +479,7 @@
           unknown <m>\frac{dy}{dx}</m>. 
           <md>
             <mrow>
-              \frac{d}{dx} xy \amp \frac{d}{dx} 1 
+              \frac{d}{dx} xy \amp = \frac{d}{dx} 1 
             </mrow>
             <mrow>
               x \frac{dy}{dx} + y \amp = 0 

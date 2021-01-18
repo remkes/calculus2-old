@@ -6,8 +6,39 @@
   <p><ol>
     <li>
       <p>
-        Question. 
+        Consider the following two conics. (8) 
       </p>
+      <md>
+        <mrow>
+          (x-1)^2 + (y+2)^2 \amp = 1 
+        </mrow>
+        <mrow>
+          \frac{(x-1)^2}{4} + \frac{(y-2)^2}{9} \amp = 1 
+        </mrow>
+      </md>
+      <p>
+        Calculate the intersection of the two conics (there is one
+        intersection point). Use implicit derivatives to find the
+        slopes of the tangent lines to each curve at the intersection
+        point. Observe that the two tangents lines have the same
+        slope. (This shows that the two conics meet tangentially: they
+        touch briefly as they pass by each other but don't cross over
+        each other). 
+      </p>
+    </li>
+    <li>
+      <p>
+        Classify the singularities of these algebraic plane curves.
+        (10) 
+      </p>
+      <ol>
+        <li><me>
+          y^2 = (x-3)(x-4)^2 
+        </me></li>
+        <li><me>
+          y^2 - x^2 - 2x + 1 
+        </me></li>
+      </ol>
     </li>
   </ol></p>
 </section>

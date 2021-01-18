@@ -1,212 +1,226 @@
 <section xml:id="section-algebraic-plane-curves">
   <title>Algebraic Plane Curves</title>
+  <p>
+    In <xref ref="section-implicit-derivatives" />, I defined implicit
+    derivatives to understand tangents to loci. These implicit
+    derivatives relied on the assumption that, at least locally, the
+    variable <m>y</m> was a function of the variable <m>x</m>. When
+    this assumption failed, the tangent line wasn't defined. So far,
+    the examples had vertical tangents when the assumption failed.
+    This made some sense, since a vertical line doesn't have a
+    well-defined slope. However, there are a variety of ways, in
+    addition to vertical tangents, that implicit derivative can fail.
+    This this week, I'm going to investigate the places where these
+    loci don't have well defined derivatives. 
+  </p>
+  <p>
+    First, however, I want to define a new class of loci. Doing the
+    theory for this week in full generality for any loci in
+    <m>\RR^2</m> isn't really feasible. I'm going to restrict loci
+    with the following definitions. 
+  </p>
   <definition>
     <statement>
       <p>
         Another name for loci in <m>\RR^2</m> is <term>plane
         curves</term>. An <term>algebraic plane curve</term> is a
-        locus where the expressions are polynomials.
+        locus where the expressions are polynomials. The
+        <term>degree</term> of an algebraic plane curve is the highest
+        polynomial degree involved in the equation of the curve.
       </p>
     </statement>
   </definition>
-  <p>
-    Algebraic plane curves include all conics as well as the previous
-    example <m>x^4 + y^4 = 1</m>. They are the historical root of a
-    large branch of mathematics called algebraic geometry, which deals
-    with the geometry of such polynomial plane curves and their
-    higher-dimensional analogues.
-  </p>
-  <definition>
-    <statement>
-      <p>
-        The <term>degree</term> of an algebraic plane curve is the
-        highest polynomial degree involved in the equation of the
-        curve.
-      </p>
-    </statement>
-  </definition>
-  <p>
-    When we study the geometry of algebraic plane curves, we often
-    wonder what happens at problematic points.
-  </p>
-  <definition>
-    <statement>
-      <p>
-        A point where the tangent line to an algebraic plane curve is
-        not defined is called a <term>singularity</term>.
-      </p>
-    </statement>
-  </definition>
-  <p>
-    We'll use this section to try to understand the singularities of
-    simple algebraic plane curves. First, let's talk about the case
-    of vertical tangent lines. The slope of a vertical line isn't
-    defined, but the tangent line can exist. Our singularities are
-    located where a <em>tangent line</em> doesn't exist. Therefore,
-    vertical tangents are fine <mdash/> they aren't singularities.
-    That said, in what follows, we will also get a method for
-    identifying vertical tangents.
-  </p>
-  <p>
-    There are two types of basic singularity for algebraic plane
-    curves: nodes and cusps.
-  </p>
-  <definition>
-    <statement>
-      <p>
-        A <term>node</term> occurs at the self-intersection of a plane
-        curve. We count the number of times the curve overlaps: two
-        overlaps is often called a <term>double point</term>, three a
-        <term>triple point</term>, and so on. A <term>cusp</term>, on
-        the other hand, is a sharp corner. <xref
-        ref="figure-singularities">Diagram</xref> shows visual
-        examples for algebraic plane curves.
-      </p>
-    </statement>
-  </definition>
-  <figure xml:id="figure-singularities">
-    <caption>Three Plane Curve Singularities</caption>
-    <image xml:id="figure04" width="80%">
+  <figure xml:id="figure-ellipse1">
+    <caption> An off centre, rotated ellipse</caption>
+    <image xml:id="figure34" width="90%">
       <asymptote>
-        size(12cm,6cm);
+        size(10cm);
+
         import contour;
         import graph;
+        xaxis(Ticks);
+        yaxis(Ticks);
 
-        real f(real x, real y) {return y^2-(x-3)*(x-4)^2;}
-        draw(contour(f,(3,-1),(5,1),new real[] {0}));
-        real g(real x, real y) {return y^2-(x-7)^3;}
-        draw(contour(g,(7,-1),(9,1),new real[] {0}));
-        real h(real x, real y) {return (x^2+y^2)^2+ 3x^2*y-y^3;}
-        draw(contour(h,(-1,-1),(1,1),new real[] {0}));
+        real f(real x, real y) {return -4*x^2 + 4*x*y - 2*y^2 + 4*x -
+          3*y + 4;} 
+        draw(contour(f,(-2,-3),(2,2),new real[] {0}));
 
-        dot((0,0));
-        dot((4,0));
-        dot((7,0));
-
-        label("A Triple Point Node",(0,-1),S);
-        label("A Double Point Node",(3.6,-1),S);
-        label("A Cusp",(7,-1),S);
+        label("$-4x^2 + 4xy - 2y^2 + 4x - 3y + 4 = 0$",(0.8,-1.5),SE);
       </asymptote>
     </image>
   </figure>
   <p>
-    To understand singularities, we will look at the problematic
-    points of the implicit derivative.
+    There are two classes of algebriac loci which you should be pretty
+    familiar with by now.
+  </p>
+  <ul>
+    <li>
+      <p>
+        An algebraic plane curve of degree one is a <term>line</term>.
+        We have several versions of equations of lines, but the most
+        general form is the following, where <m>a</m>, <m>b</m> and
+        <m>c</m> are real constants. 
+      </p>
+      <me>
+        ax + by + c = 0 
+      </me>
+    </li>
+    <li>
+      <p>
+        An algebraic plane curve of degree two is a
+        <term>conic</term>. I've already show in Calculus 1 that all
+        conics have equations of degree two (they only involve squares
+        of the variable). What is new, here, is the fact that all
+        algebriac plane curves of degree two are, in fact, conics.
+        (I'm not going to prove this fact, just state it.) The
+        forms of the equation can differ from what I've shown you
+        before, but all possible forms can be manipulated into the
+        equation of one of the four conics. This is another nice
+        reason to put the conics in a family with a unified name. 
+        The most general form of a conic is the following, where
+        <m>a_1</m>, <m>a_2</m>, <m>a_3</m>, <m>a_4</m>, <m>a_5</m> and
+        <m>a_6</m> are real constants. 
+      </p>
+      <me>
+        a_1 x^2 + a_2 xy + a_3 y^2 + a_4 x + a_5 y + a_6 = 0
+      </me>
+      <p>
+        This does include some equation which are not familiar, such
+        as <m>-4x^2 + 4xy - 2y^2 + 4x - 3y + 2 = 0</m>. This
+        particular equation produces an ellipse at an angle: the major
+        and minor axes are no longer oriented along the <m>x</m> or
+        <m>y</m> axes. The ellipse is also not centred at the origin.
+        <xref ref="figure-ellipse1" /> shows a graph of this ellipse.
+        The general form, as indicate in this example, can produce
+        conics with any angle of rotation or shift of position
+        compared with the familiar forms centred at the origin.
+      </p>
+    </li>
+  </ul>
+  <p>
+    Non-vertical lines have no undefined tangents, since the slope of
+    the line is the slope of the tangent at all points. Conics can
+    have vertical tangents, as I showed in previous examples. With one
+    important exception (which I'll talk about in the next section),
+    vertical tangents are the only problems with tangent slopes to
+    conics. However, when we go to higher degree algebraic plane
+    curves, all sorts of things can happen.
+  </p>
+  <p>
+    For now, just to show the variety of shapes, let me give you a few
+    examples of interesting algebraic plane curve in degrees higher
+    than two.
   </p>
   <example>
     <statement>
+      <figure xml:id="figure-apc1">
+        <caption>
+          The curve <m>xy^4 - 4xy^3 + x^2 - y^3 + x^2 - 4 = 0</m>
+        </caption>
+        <image xml:id="figure35" width="90%">
+          <asymptote>
+            size(10cm);
+
+            import contour;
+            import graph;
+            xaxis(Ticks);
+            yaxis(Ticks);
+
+            real f(real x, real y) {return 
+              x*y^4 - 4*x*y^3 + x^3 - y^3 + x^2 - 4;}
+            draw(contour(f,(-6,-2),(7,6),new real[] {0}));
+          </asymptote>
+        </image>
+      </figure>
       <p>
-        Consider the plane curve given by the equation <m>y^2 = 4 -
-        3x^2 - x^3</m>. This is a degree 3 curve, which factors as
-        <m>y^2 = (1-x)(2+x)^2</m>. (A factored form is often
-        conveninet for these calculations, when it is possible to find
-        such a form.) Let's look at the implicit derivative.
-        <me>
-          2 y \frac{dy}{dx} = -6x - 3x^2 \implies \frac{dy}{dx} =
-          \frac{-6x-3x^2}{2y}
-        </me>
+        This is an algebriac plane curve of degree five. Note that it
+        has two unconnected pieces, one of which is bounded and one of
+        which is unbounded. Its graph is shown in <xref
+        ref="figure-apc1" />. 
       </p>
-      <p>
-        This is well defined except when <m>y=0</m> which, for this
-        curve, happens at <m>(1,0)</m> and <m>(-2,0)</m>.
-      </p>
-      <p>
-        Let's look at a different form of the implicit derivative,
-        where we replace <m>y</m> with its expression in <m>x</m>.
-        <me>
-          \frac{dy}{dx} = \frac{-3x(2+x)}{\pm\sqrt{(1-x)(2+x)^2}} =
-          \frac{-3(2+x)}{\pm\sqrt{1-x} (2+x)}
-        </me>
-      </p>
-      <p>
-        Then we can look at the limits as we approach the undefined
-        points. When <m>x=1</m>, only the denominator goes to
-        <m>0</m>, the numerator is finite. Therefore, we expect the
-        slope diverges to infinity. This means the tangent line is
-        approaching vertical and, in the limit, we recognize a
-        vertical tangent. There is no singularity here, just a
-        vertical tangent.
-      </p>
-      <p>
-        This will be our first rule: when the limit of the implicit
-        derivative approaching an undefined point is <m>\pm
-        \infty</m>, we get a vertical tangent.
-      </p>
-      <p>
-        However, at <m>x=-2</m>, both numerator and denominator have a
-        <m>x+2</m> term, which can cancel out. (The limit is an
-        indeterminate form of type <m>\frac{0}{0}</m>). Evaluating
-        the limit gives a slope of <m>\frac{-3}{\pm\sqrt{3}}</m>. We
-        get two slopes, neither of which are vertical. This situation
-        indicates a self-intersection, with the incoming lines at the
-        two given slopes. Moreover, since we have two possible
-        tangents, there are two intersecting pieces and the node is a
-        double point.
-      </p>
-      <p>
-        This is our second rule: when the limit of the implicit
-        derivative approaching an undefined point is an indeterminant
-        form of type <m>\frac{0}{0}</m> which evaluates to several
-        possible values, we have a node. The number of possible
-        values gives the number of self-intersections and hence the
-        type of the node (double point, triple point, etc). <xref
-        ref="figure-elliptic-curve1">Figure</xref> shows a vertical
-        tangent and a double point node.
-      </p>
+      <me>
+        xy^4 - 4xy^3 + x^2 - y^3 + x^2 - 4 = 0 
+      </me>
     </statement>
   </example>
-  <figure xml:id="figure-elliptic-curve1">
-    <caption>The Curve <m>y^2 = (1-x)(2+x)^2</m></caption>
-    <image xml:id="figure05" width="80%">
-      <asymptote>
-        size(12cm,8cm);
-        import contour;
-        import graph;
-        xaxis();
-
-        real f(real x, real y) {return y^2-(1-x)*(2+x)^2;}
-        draw(contour(f,(-3,-2),(2,2),new real[] {0}));
-
-        dot((1,0));
-        dot((-2,0));
-
-        label("A Vertical Tangent",(1,0),SE);
-        label("A Double Point Node",(-2.3,-0.3),SW);
-      </asymptote>
-    </image>
-  </figure>
   <example>
     <statement>
+      <figure xml:id="figure-apc2">
+        <caption>
+          The curve <m> \frac{x^3y^3}{8} - \frac{x^5}{4} + \frac{y^6}{6}
+          - 2xy - 3y - 3 = 0</m>
+        </caption>
+        <image xml:id="figure36" width="90%">
+          <asymptote>
+            size(10cm);
+  
+            import contour;
+            import graph;
+            xaxis(Ticks);
+            yaxis(Ticks);
+  
+            real f(real x, real y) {return 
+              x^3*y^3/8 - x^5/4 + y^5/6 - 2*x*y - 3*y - 3;}
+            draw(contour(f,(-6,-3),(4,6),new real[] {0}));
+          </asymptote>
+        </image>
+      </figure>
       <p>
-        Lastly, consider the curve <m>y^2 = x^3</m> with implicit
-        derivative <m>\frac{dy}{dx} = \frac{3x^2}{2y} =
-        \frac{3x^2}{\pm \sqrt{x^3}}</m>. This is undefined at the
-        point <m>(0,0)</m> on the curve, and the limit as we approach
-        the undefined point is <m>0</m>. This behaviour indicates a
-        cusp, which is our third and final rule: the when the limit of
-        the implicit derivative approaching an underinfed point is an
-        indeterminant form of type <m>\frac{0}{0}</m> which evaluates
-        to <m>0</m>, then we have a cusp. <xref
-        ref="figure-elliptic-curve2">Figure</xref> shows a cusp.
+        This is an algebriac plane curve of degree six. Now there are
+        three unconnected pieces, two of which are unbounded and one of
+        which is bounded. Its graph is shown in <xref
+        ref="figure-apc2" />. 
       </p>
+      <me>
+        \frac{x^3y^3}{8} - \frac{x^5}{4} + \frac{y^6}{6} - 2xy - 3y -
+        3 = 0 
+      </me>
     </statement>
   </example>
-  <figure xml:id="figure-elliptic-curve2">
-    <caption>The Curve <m>y^2 = x^3</m></caption>
-    <image xml:id="figure06" width="80%">
-      <asymptote>
-        size(12cm,8cm,IgnoreAspect);
-        import contour;
-        import graph;
-        xaxis();
-
-        real f(real x, real y) {return (y^2-x^3);}
-        draw(contour(f,(-2,-1),(2,1),new real[] {0}));
-
-        dot((0,0));
-
-        label("A Cusp",(0,-0.2),SW);
-      </asymptote>
-    </image>
-  </figure>
+  <example xml:id="example-apc1">
+    <statement>
+      <figure xml:id="figure-apc3">
+        <caption>
+          A complicated degree eight curve.
+        </caption>
+        <image xml:id="figure37" width="90%">
+          <asymptote>
+            size(10cm);
+  
+            import contour;
+            import graph;
+            xaxis(Ticks);
+            yaxis(Ticks);
+  
+            real f(real x, real y) {return x*y - x^2*y^2;}
+            draw(contour(f,(-6,-4),(6,4),new real[] {0}));
+  
+            real f(real x, real y) {return x^2 - y^2 + 3;} 
+            draw(contour(f,(-6,-4),(6,4),new real[] {0}));
+  
+            real f(real x, real y) {return x - y + 4;}
+            draw(contour(f,(-6,-4),(6,4),new real[] {0}));
+          </asymptote>
+        </image>
+      </figure>
+      <p>
+        This is an algebriac plane curve of degree eight, and quite a
+        complicated one. It has several components, many of which
+        intersect at various places. Its graph is shown in <xref
+        ref="figure-apc3" />. If you study this carefully, you might
+        notice that this looks somewhat like the amalgamation of one
+        line and two hyperbolae. 
+      </p>
+      <md>
+        <mrow>
+          \amp - x^2y^6 + x^3y^5 - x^5y^2 + x^4y^3 + 4x^2y^5 - 4x^4y^2
+          - x^2y^4 + xy^5 + x^4y 
+        </mrow>
+        <mrow>
+          \amp - 4x^3y^2 + 3x^2y^3 - 4xy^4 + 4x^3y - 12x^2y^2 + 3x^2y
+          - 3xy^2 + 12 xy = 0 
+        </mrow>
+      </md>
+    </statement>
+  </example>
 </section>

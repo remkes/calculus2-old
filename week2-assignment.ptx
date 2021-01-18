@@ -40,10 +40,10 @@
     <li>
       <p>
         Find the slope of the tangent line to the following locus at
-        the points <m>(2,2)</m> and <m>(1,-1</m>. (6) 
+        the points <m>(2,2)</m> and <m>(1,-1)</m>. (6) 
       </p>
       <me>
-        x^2 - 2x^2 - y^3 = 0 
+        x^4 - 2x^2 - y^3 = 0 
       </me>
     </li>
   </ol></p>

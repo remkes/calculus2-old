@@ -1,0 +1,371 @@
+<section xml:id="section-singularities">
+  <title>Singularities of Algebraic Plane Curves</title>
+  <subsection xml:id="subsection-singularities-definition">
+    <title>Defining Singularities</title>
+    <p>
+      In <xref ref="example-apc1" />, the algebraic plane curve had a
+      bunch of self intersections. What would the tangent line (and
+      slope) be at such an intersection? This is the first example of a
+      place where defining the tangent become problematic in a way that
+      is different from a vertical tangent. There is a name for these
+      places. 
+    </p>
+    <definition>
+      <statement>
+        <p>
+          A point where the tangent line to an algebraic plane curve is
+          not defined is called a <term>singularity</term>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Note one subtlety here: the a singularity is where the tangent
+      <em>line</em> is not defined, not just where its <em>slope</em> is
+      undefined. This means that points with vertical lines are not
+      singularities; even though they don't have a slope, they do have a
+      well defined tangent line. Singularities are points where the
+      whole notion of a tangent line breaks down. The classification of
+      singularities of algebraic plane curve is a old and historically
+      important mathematical problem. This is particular true for cubics
+      (algebraic plane curves of degree 3); the study of cubics lead to
+      whole branches of 19th and 20th century mathematics. 
+    </p>
+    <p>
+      Before we get to cubics, let me cover the only possible singulary
+      in degree two. In degree one, there are no problems: the tangent
+      line to a line is jus the original line, so this is always
+      defined, even for a vertical line. Likewise, almost all degree two
+      curves have no singularities: the shapes that we have called
+      circles, ellipses, parabolae and hyperbolae have no places where a
+      tangent line cannot be undefined. There is only one kind of degree
+      two curve which has a singularity. Here is one example of this
+      kind of curve, with the graph shown in <xref
+      ref="figure-two-lines" />. 
+    </p>
+    <me>
+      x^2 - y^2 = 0 
+    </me>
+    <figure xml:id="figure-two-lines">
+      <caption>The curve <m>x^2 - y^2 = 0</m></caption>
+      <image xml:id="figure38" width="90%">
+        <asymptote>
+          size(10cm);
+
+          import contour;
+          import graph;
+          xaxis(Ticks);
+          yaxis(Ticks);
+
+          real f(real x, real y) {return x^2 - y^2;} 
+          draw(contour(f,(-3,-3),(3,3),new real[] {0}));
+        </asymptote>
+      </image>
+    </figure>
+    <p>
+      This strange degree two curve is just two lines. We can see this
+      by factoring the equation: <m>x^2 - y^2 = 0</m> becomes
+      <m>(x-y)(x+y) = 0</m>. This is just the produce of two linear
+      equations: <m>x-y=0</m> and <m>x+y=</m>. Those two lines are
+      the lines through the origin with slopes <m>1</m> and <m>-1</m>,
+      respectively. These are clearly the lines in <xref
+      ref="figure-two-lines" /> as well. This degree two curve is just
+      two lines put together. (You may have noticed that I haven't
+      called this a conic. It really isn't, since it is just two lines.
+      I'll reserve the term <sq>conic</sq> for degree two curves which
+      are not the product of two lines.)
+    </p>
+    <p>
+      Now let me ask: what is the tangent line at the origin to the
+      curve <m>x^2 - y^2 = 0</m>? This is a problem, since the line with
+      slope <m>1</m> and the line with slope <m>-1</m> both seem to be
+      tangent to parts of the curve. Therefore, the tangent line can't
+      be properly defined. The origin is a singularity of this curve.
+      There is a name for this type of singularity. 
+    </p>
+    <definition>
+      <statement>
+        <p>
+          A singularity which is an intersection point of two or more
+          pieces of an algebraic curve is called a <term>node</term>.
+          The number of pieces at the intersection gives more precisde
+          names: two pieces  is called a <term>double point</term>,
+          three a <term>triple point</term>, and so on. 
+        </p>
+      </statement>
+    </definition>
+    <p>
+      The curve <m>x^2 - y^2=0</m> has a double point node at the
+      origin. In <xref ref="example-apc1" />, the picture in <xref
+      ref="figure-apc3" /> looks like it shopw five different double
+      point nodes. For an example of more than two intersecting pieces,
+      consider the curve give by the following equation (show in <xref
+      ref="figure-apc4" />. 
+    </p>
+    <me>
+      -x^4y + x^3 + 3x^3y + xy^3 - 3x^3 - 3x^2y - 3xy^2 - y^3 + 3x^2 +
+      4xy + 3y^2 - 2x - 3y + 1 = 0
+    </me>
+    <figure xml:id="figure-apc4">
+      <caption>A quadruple point note</caption>
+      <image xml:id="figure39" width="90%">
+        <asymptote>
+          size(10cm);
+  
+          import contour;
+          import graph;
+          xaxis(Ticks);
+          yaxis(Ticks);
+  
+          real f(real x, real y) {return -x^3 + 2*x^2 - x + y^2 - 2*y + 1;}
+          draw(contour(f,(-1,-1),(3,3),new real[] {0}));
+  
+          real f(real x, real y) {return x-1;} 
+          draw(contour(f,(-1,-1),(3,3),new real[] {0}));
+  
+          real f(real x, real y) {return y-1;}
+          draw(contour(f,(-1,-1),(3,3),new real[] {0}));
+        </asymptote>
+      </image>
+    </figure>
+    <p>
+      This curve has a quadruple point node at <m>(1,1)</m>, since four
+      different path in the curve intersect at that point. 
+    </p>
+    <p>
+      The theory of singularities of algebraic plane curves is a deep
+      and complicated one. Nodes are just one among many types of
+      singularities. There are several others which have names, and many
+      other singularities which don't have specific names but at
+      classified by various catalogues and systems. Among those that
+      have names, I want to define one more type of singularites. I'll
+      give a less technical, more descriptive definition here.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          A point on an algebraic plane curve which has a sharp corner
+          (and is not the intersection of two or more pieces of the
+          curve) is called a <term>cusp</term>.
+        </p> 
+      </statement>
+    </definition>
+    <p>
+      A node can be seen in <xref ref="figure-apc5" /> at the origin on
+      the curve <m>x^3 - y^2 = 0</m>. 
+    </p>
+    <figure xml:id="figure-apc5">
+      <caption>A Node</caption>
+      <image xml:id="figure04" width="90%">
+        <asymptote>
+          size(12cm);
+          import contour;
+          import graph;
+  
+          real g(real x, real y) {return x^2-y^3;}
+          draw(contour(g,(-2,-1),(2,1),new real[] {0}));
+        </asymptote>
+      </image>
+    </figure>
+    <p>
+      At a node, there were multiple possibilities for a tangent based
+      on the various pieces of the curve passing through the point. For
+      a cusp, the situation is even worse. At a sharp corner, there are
+      infinitly many lines that could be drawn that touch the curve only
+      once. There notion of a slope at a sharp corner make any sense at
+      all. 
+    </p>
+  </subsection>
+  <subsection xml:id="subsection-singularities-implicit">
+    <p>
+      I would like to use the implicit derivative defined in <xref
+      ref="section-implicit-derivatives" /> to undertand singularities
+      of algebraic plane curves. In general, as I said before, this is
+      a deep and complicated theory. Since we don't have time to delve
+      deeply into all of the various ways to use derivatives to
+      understand singularities, I am going to specialize to a very
+      particular class of curves. In this section, I'm only going to
+      consider curve that has the following form, where <m>p(x)</m> is
+      a polynomial of degree three or more.
+    </p>
+    <me>
+      y^2 = p(x) 
+    </me>
+    <p>
+      Even though this is specializing a great deal, it still allows
+      for many interest and important examples. The degree of the
+      algebraic plane curve is still unbounded, since <m>p(x)</m> can
+      have as high a degree as we want. If the degree of <m>p(x)</m>
+      is three or four, the resulting curve is an elliptic curve (or,
+      at least, one presentation of an elliptic curves). Elliptic
+      curves are, themselves, an important branch of mathematics with
+      many applications and connections. If the degree of <m>p(x)</m>
+      is five or higher, the resulting curve is a hyperelliptic curve,
+      another interesting and important object. 
+    </p>
+    <p>
+      For the purposes of this course, curve of this form are
+      accesible for several reasons. (I present the following
+      statements without proof.) 
+    </p>
+    <ul>
+      <li><p>
+        All singularities and vertical tangents to these curve will
+        always be on the <m>x</m> axis.
+      </p></li>
+      <li><p>
+        Vertical tangents and singularities are identified by places
+        where the impliict derivative is not defined. 
+      </p></li>
+      <li><p>
+        At a point <m>(a,0)</m> where the implicit derivative is not
+        defined, the limit <m>x \rightarrow a</m> of the implicit
+        derivative approaching this point will classify the behaviour
+        of the point.
+      </p></li>
+      <li><p>
+        The only possibilites for the behaviour in this case is a
+        vertical tangent, a double point node, or a cusp. 
+      </p></li>
+    </ul>
+    <p>
+      With these facts, I can build an algorithm to analyze the
+      singularities of these special algebraic plane curve. 
+    </p>
+    <ul>
+      <li><p>
+        I will take the implicit derivative.
+      </p></li>
+      <li><p>
+        I will find the points <m>(a,0)</m> where the implicit
+        derivative is undefined. 
+      </p></li>
+      <li><p>
+        Using the equation of the orignal curve, I will replace
+        <m>y</m> with <m>\pm \sqrt{p(x)}</m> in the expression for the
+        implicit derivative. That gives an implicit derivative
+        expressed entirely in <m>x</m>.
+      </p></li>
+      <li><p>
+        I will take the limit <m>x \rightarrow a</m> of the implicit
+        derivative.
+      </p></li>
+      <li><p>
+        If this limit is <m>\pm \infty</m>, the slope of the tangent
+        line is becoming steeper and steeper and I conclude there is
+        vertical tangent.
+      </p></li>
+      <li><p>
+        If this limit has two values (because the <m>\pm</m> is still
+        present in the final answer), then there are two possible
+        tangent lines and I conclude this is a double point.
+      </p></li>
+      <li><p>
+        If this limit is zero, then I conclude there is a node. 
+      </p></li>
+    </ul>
+    <p>
+      Now I'll work through a number of examples to show this
+      algorithm in practice. In this examples, note that if we can
+      factor <m>p(x)</m> (or if it comes already factor), the
+      calculations and the limits can become a lot easier due to
+      cancelation of some of the factors. 
+    </p>
+    <example>
+      <statement>
+        <p>
+          Consider the plane curve given by the equation <m>y^2 = 4 -
+          3x^2 - x^3</m>. This is a degree three curve, which factors as
+          <m>y^2 = (1-x)(2+x)^2</m>. I calculate the implicit
+          derivative.
+          <me>
+            2 y \frac{dy}{dx} = -6x - 3x^2 \implies \frac{dy}{dx} =
+            \frac{-6x-3x^2}{2y}
+          </me>
+        </p>
+        <p>
+          This is well defined except when <m>y=0</m> which, for this
+          curve, happens at <m>(1,0)</m> and <m>(-2,0)</m>.
+        </p>
+        <p>
+          Now I solve for <m>y</m> to get <m>y = \pm
+          \sqrt{(1-x)(2+x)^2} = \pm (2+x)\sqrt{1-x} </m>. I use this
+          to replace <m>y</m> in the implicit derivative.
+          <me>
+            \frac{dy}{dx} = \pm \frac{-3(2+x)}{\sqrt{1-x} (2+x)}
+          </me>
+        </p>
+        <p>
+          Then I look at the limits as we approach the undefined
+          points. When <m>x=1</m>, only the denominator goes to
+          <m>0</m>, the numerator is finite. Therefore, the 
+          slope diverges to infinity and the curve will have a
+          vertical tangent. 
+        </p>
+        <p>
+          However, at <m>x=-2</m>, both numerator and denominator have a
+          <m>x+2</m> term, which cancel out. (The limit is an
+          indeterminate form of type <m>\frac{0}{0}</m>). Evaluating
+          the limit gives a slope of <m>\pm \frac{-3}{\sqrt{3}} = \pm
+          \sqrt{3}</m>.  Since I get two values, this is a double
+          point node. <xref ref="figure-elliptic-curve1" /> shows both
+          the vertical tangent and the double point node that I have
+          found with the limits of the implicit derivatives. 
+        </p>
+        <figure xml:id="figure-elliptic-curve1">
+          <caption>The Curve <m>y^2 = (1-x)(2+x)^2</m></caption>
+          <image xml:id="figure05" width="90%">
+            <asymptote>
+              size(10cm);
+              import contour;
+              import graph;
+              xaxis(Ticks);
+              yaxis(Ticks);
+
+              real f(real x, real y) {return y^2-(1-x)*(2+x)^2;}
+              draw(contour(f,(-3,-2),(2,2),new real[] {0}));
+
+              dot((1,0));
+              dot((-2,0));
+
+              label("A Vertical Tangent",(1,0.5),E);
+              label("A Double Point Node",(-3,-1),W);
+            </asymptote>
+          </image>
+        </figure>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Consider the curve <m>y^2 = \frac{x^3}{4}</m>. The implicit
+          derivative is <m>\frac{dy}{dx} = \frac{3x^2}{8y} =
+          \pm \frac{3x^2}{\sqrt{x^3}}</m>. This is undefined at the
+          point <m>(0,0)</m> on the curve.and the limit approaching
+          the undefined point is <m>0</m>. Since I get a limit of
+          <m>0</m>, I conclude that this should be a cusp. 
+          <xref ref="figure-elliptic-curve2">Figure</xref> indeed
+          shows this cusp.
+        </p>
+        <figure xml:id="figure-elliptic-curve2">
+          <caption>The Curve <m>y^2 = \frac{x^3}{4}</m></caption>
+          <image xml:id="figure06" width="80%">
+            <asymptote>
+              size(12cm,8cm,IgnoreAspect);
+              import contour;
+              import graph;
+              xaxis(Ticks);
+              yaxis(Ticks);
+    
+              real f(real x, real y) {return (y^2-x^3);}
+              draw(contour(f,(-2,-1),(2,1),new real[] {0}));
+    
+              dot((0,0));
+    
+              label("A Cusp",(-0.2,-0.2),W);
+            </asymptote>
+          </image>
+        </figure>
+      </statement>
+    </example>
+  </subsection>
+</section>
