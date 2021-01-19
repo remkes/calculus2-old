@@ -38,16 +38,13 @@
       curves have no singularities: the shapes that we have called
       circles, ellipses, parabolae and hyperbolae have no places where a
       tangent line cannot be undefined. There is only one kind of degree
-      two curve which has a singularity. Here is one example of this
-      kind of curve, with the graph shown in <xref
-      ref="figure-two-lines" />. 
+      two curve which has a singularity: an intersection of two lines.
+      An example, with the equation <m>x^2 - y^2 = 0</m>,  is shown in 
+      <xref ref="figure-two-lines" />. 
     </p>
-    <me>
-      x^2 - y^2 = 0 
-    </me>
     <figure xml:id="figure-two-lines">
       <caption>The curve <m>x^2 - y^2 = 0</m></caption>
-      <image xml:id="figure38" width="90%">
+      <image xml:id="figure38" width="60%">
         <asymptote>
           size(10cm);
 
@@ -101,13 +98,18 @@
       consider the curve give by the following equation (show in <xref
       ref="figure-apc4" />. 
     </p>
-    <me>
-      -x^4y + x^3 + 3x^3y + xy^3 - 3x^3 - 3x^2y - 3xy^2 - y^3 + 3x^2 +
-      4xy + 3y^2 - 2x - 3y + 1 = 0
-    </me>
+    <md>
+      <mrow>
+        \amp -x^4y + x^3 + 3x^3y + xy^3 - 3x^3 - 3x^2y - 3xy^2 - y^3 +
+        3x^2 
+      </mrow>
+      <mrow>
+        \amp + 4xy + 3y^2 - 2x - 3y + 1 = 0
+      </mrow>
+    </md>
     <figure xml:id="figure-apc4">
       <caption>A quadruple point note</caption>
-      <image xml:id="figure39" width="90%">
+      <image xml:id="figure39" width="70%">
         <asymptote>
           size(10cm);
   
@@ -151,7 +153,7 @@
     </definition>
     <p>
       A node can be seen in <xref ref="figure-apc5" /> at the origin on
-      the curve <m>x^3 - y^2 = 0</m>. 
+      the curve <m>x^2 - y^3 = 0</m>. 
     </p>
     <figure xml:id="figure-apc5">
       <caption>A Node</caption>
@@ -273,13 +275,13 @@
     <example>
       <statement>
         <p>
-          Consider the plane curve given by the equation <m>y^2 = 4 -
+          Consider the plane curve given by the equation <m>y^2 = 4 - 
           3x^2 - x^3</m>. This is a degree three curve, which factors as
           <m>y^2 = (1-x)(2+x)^2</m>. I calculate the implicit
           derivative.
           <me>
             2 y \frac{dy}{dx} = -6x - 3x^2 \implies \frac{dy}{dx} =
-            \frac{-6x-3x^2}{2y}
+            \frac{-6x-3x^2}{2y} = \frac{-3(2+x)}{2y} 
           </me>
         </p>
         <p>
