@@ -39,10 +39,10 @@
         </p>
         <md>
           <mrow>
-            y \amp = \pm \sqrt{x^2 (1+x^2)} = pm x \sqrt{1+x^2} 
+            y \amp = \pm \sqrt{x^2 (1+x^2)} = \pm x \sqrt{1+x^2} 
           </mrow>
           <mrow>
-            \frac{dy}{dx} \amp = \pm \frac{ 2x (1+x^2) + 3x^3}{x
+            \frac{dy}{dx} \amp = \pm \frac{ 2x (1+x^2) + 2x^3}{x
             \sqrt{ 1+x^2}}
           </mrow>
         </md>
@@ -61,19 +61,19 @@
         <md>
           <mrow>
             \lim_{x \rightarrow 0} \frac{dy}{dx} \amp = \lim_{x
-            \rightarrow 0} \pm \frac{2x (1+x^2) + 3x^3}{x
+            \rightarrow 0} \pm \frac{2x (1+x^2) + 2x^3}{x
             \sqrt{1+x^2}}
           </mrow>
           <mrow>
             \amp = \lim_{x \rightarrow 0} \pm \frac{2(1+x^2) +
-            3x^2}{\sqrt{1+x^2}} = \pm \frac{2}{1} = \pm 2 
+            2x^2}{\sqrt{1+x^2}} = \pm \frac{2}{1} = \pm 2 
           </mrow>
         </md>
         <p>
           There are two possible values for the limit. I conclude that
-          the singularity is a double point node. 
-          <xref ref="figure-activity-apc1" /> shows the curve and the double
-          point node. 
+          the singularity is a double point node.  <xref
+          ref="figure-activity-apc1" /> shows the curve and the double
+          point node.
         </p>
         <figure xml:id="figure-activity-apc1">
           <image xml:id="figure40" widht="80%">
@@ -155,8 +155,9 @@
             \right] 
           </mrow>
           <mrow>
-            \amp = \lim_{x \rightarrow 0} \pm \left[ 3\sqrt{2x(x+1)} 
-            + \frac{x\sqrt{x}}{2\sqrt{(x+1)}} \right] 
+            \amp = \lim_{x \rightarrow 0} \pm \left[
+            \frac{3\sqrt{x(x+1)}}{2} + \frac{x\sqrt{x}}{2\sqrt{(x+1)}}
+            \right] 
           </mrow>
           <mrow>
             \amp = \pm \left[ 0 + 0 \right] = 0 
@@ -198,7 +199,7 @@
           negative terms. However, I can understand this limit in the
           form it currently have. The numerator approaches <m>-1</m>
           and the denominator approaches <m>0</m>. Therefore, the
-          limit must approach <m>pm \infty</m>. I conclude that there
+          limit must approach <m>\pm \infty</m>. I conclude that there
           is a vertical tangent at <m>x=-1</m>.
           <xref ref="figure-activity-apc2" /> shows the curve with
           boths its cusp and its vertical tangent. It also shows the
