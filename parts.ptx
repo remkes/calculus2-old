@@ -3,63 +3,96 @@
   <subsection xml:id="subsection-parts-definition">
     <title>Definition</title>
     <p>
-      The substitution rule is, in some sense, an inverted chain rule.
-      We can ask: how many other differentiation rules can be
-      reasonably inverted? The power rule is very directly inverted
-      and was one of the first examples of integration. Our of the
-      remaining rules, the most useful rule to invert is the product
-      rule.
+      In this section, I am going to try to invert the product rule
+      for derivative to build a new rule for integration. First,
+      recall the product rule, for <m>f(x)</m> and <m>g(x)</m>
+      differentiable functions. 
+    </p>
+    <me>
+      \frac{d}{dx} f(x) g(x) = \frac{df}{dx} g + f
+      \frac{dg}{dx}
+    </me>
+    <p>
+      I'm simply going to integrate both sides of this equation. On
+      the left, the integral of a derivative give the original
+      function back. (I'll simplify the notation from <m>f(x)</m> to
+      just <m>f</m>; this is a very common notation shift that makes
+      some of these more compicated integration rules a bit more
+      succinct. It's just up to you to remember that <m>f</m> and
+      <m>g</m> are functions.) 
+    </p>
+    <md>
+      <mrow>
+        \int \frac{d}{dx} fg dx \amp = \int \frac{df}{dx} g dx
+        + \int f \frac{dg}{dx} dx
+      </mrow>
+      <mrow>
+        fg \amp = \int \frac{df}{dx} g dx + \int f
+        \frac{dg}{dx} dx
+      </mrow>
+    </md>
+    <p>
+      This is a rule about integrals, but it's not clear how to us
+      it. I'm going to isolate one of the two integral pieces. 
+    </p>
+    <me>
+      \int \frac{df}{dx} g dx = fg - \int f \frac{dg}{dx} dx
+    </me>
+    <p>
+      This might be more useful, since it tells me how to transform
+      certain integral. This is useful enough that there is a name for
+      it. 
     </p>
     <definition>
       <statement>
         <p>
-          Recall the product rule for differentiation.
-          <me>
-            \frac{d}{dx} f(x) g(x) = \frac{df}{dx} g + f
-            \frac{dg}{dx}
-          </me>
+          Let <m>f</m> and <m>g</m> be functions, with <m>f</m>
+          integrable and <m>g</m> differentiable. The following
+          equation for the integral of <m>\frac{df}{dx} g</m> is
+          called <term>integration by parts</term>.
         </p>
-        <p>
-          Let's integrate both sides of this equation.
-          <md>
-            <mrow>
-              \int \frac{d}{dx} fg dx \amp = \int \frac{df}{dx} g dx
-              + \int f \frac{dg}{dx} dx
-            </mrow>
-            <mrow>
-              fg \amp = \int \frac{df}{dx} g dx + \int f
-              \frac{dg}{dx} dx
-            </mrow>
-            <mrow>
-              \int \frac{df}{dx} g dx \amp = fg - \int f
-              \frac{dg}{dx} dx
-            </mrow>
-          </md>
-        </p>
-        <p>
-          This last line is a new integration rule called
-          <term>integration by parts</term>.
-        </p>
+        <me>
+          \int \frac{df}{dx} g dx = fg - \int f \frac{dg}{dx} dx
+        </me>
       </statement>
     </definition>
     <p>
-      Like the substitution rule, integration by parts doesn't solve
-      the integral by itself; instead, it changes the form of the
-      integral into something which is (hopefully) more approachable.
-      Also like substitution rule, it often involves guessing and
-      experimentation to find the right use of integration by parts,
-      if such a use even exists for a particular integral.
+      So how do I actually use this? The left side of integration by
+      parts is a product: <m>\frac{df}{dx} g</m>. Integration by parts
+      applies to integals of product. However, I have to identify one
+      part of the product as <m>g</m> and another part as
+      <m>\frac{df}{dx}</m>. Then, I need to calculate
+      <m>\frac{dg}{dx}</m>, a derivative, and <m>f</m>, an
+      antiderivative. If I can do these two things for the choice I
+      made, then I can transfer to the right side of integration by
+      parts. The first part, <m>fg</m> is just a function, but the
+      second part is a new integral, with integrand <m>f
+      \frac{dg}{dx}</m>. Maybe this is an easier integral Like the
+      substitution rule, integration by parts doesn't solve the
+      integral by itself; instead, it changes the form of the integral
+      into something which is (hopefully) more approachable.
     </p>
     <p>
       In applying the substitution rule, I encouraged careful
       labelling. The same is true here: I recommend labelling the
-      terms and being particularly careful with <m>\pm</m> signs. A
-      simplier statemenet of integration by parts, which may be more
-      useful for your labelling, is this short form:
-      <me>
-        \int g df = fg - \int f dg
-      </me>
+      terms and being particularly careful with <m>\pm</m> signs. In
+      other literature, there are some concise version of integration
+      by parts with slightly different notations (using <m>df</m> and
+      <m>dg</m> for the integrals. I'm not going to use that notation,
+      but for reference, here is what the rule looks like. 
     </p>
+    <me>
+      \int g df = fg - \int f dg
+    </me>
+    <p>
+      If I have a definite integral, I can still use integration by
+      parts. On the middle term (the term which is not an integral)
+      have to evalute on the bounds. 
+    </p>
+    <me>
+      \int_a^b \frac{df}{dx} g(x) dx = f(x)g(x) \Bigg|_a^b  - \int_a^b
+      f(x) \frac{dg}{dx} dx 
+    </me>
   </subsection>
   <subsection xml:id="parts-examples">
     <title>Examples</title>
@@ -67,39 +100,39 @@
       <statement>
         <p>
           The first step in any integration by parts is chooing which
-          piece is <m>f</m> and which is <m>g</m> in the technique.
-          One choice makes the following integral easier and one makes
-          it more difficult. The first choice we might take is <m>df
-          = x</m> and <m>g = e^x</m>.
+          piece is <m>f</m> and which is <m>g</m>.
+          In this integral, one choice makes the following integral
+          easier and one makes it more difficult. The first choice I
+          might make is <m>\frac{df}{dx} = x</m> and <m>g(x) = e^x</m>.
           <md>
             <mrow>
               \int x e^x dx \amp
             </mrow>
             <mrow>
-              df \amp = x \implies f = \frac{x^2}{2}
+              \frac{df}{dx} \amp = x \implies f = \frac{x^2}{2}
             </mrow>
             <mrow>
-              g \amp = e^x \implies dg = e^x
+              g(x) \amp = e^x \implies \frac{dg}{dx} = e^x
             </mrow>
             <mrow>
-              \int x e^x dx \amp = fg - \int f dg = \frac{x^2}{2} e^x
-              - \int \frac{x^2}{2} e^x dx
+              \int x e^x dx \amp = \frac{x^2}{2} e^x - \int
+              \frac{x^2}{2} e^x dx
             </mrow>
           </md>
         </p>
         <p>
           This gives a new integral which isn't any easier than the
           previous. This use of integration by parts hasn't helped.
-          Instead, try <m>df = e^x</m> and <m>g = x</m>.
+          Instead, I'll try <m>\frac{df}{dx} = e^x</m> and <m>g(x) = x</m>.
           <md>
             <mrow>
               \int x e^x dx \amp
             </mrow>
             <mrow>
-              df \amp = e^x \implies f = e^x
+              \frac{df}{dx} \amp = e^x \implies f(x) = e^x
             </mrow>
             <mrow>
-              g \amp = x \implies dg = 1
+              g(x) \amp = x \implies \frac{dg}{dx} = 1
             </mrow>
             <mrow>
               \int x e^x dx \amp = xe^x - \int e^x dx = xe^x - e^x =
@@ -108,9 +141,9 @@
           </md>
         </p>
         <p>
-          This choice worked, and we were able to continue on to the
-          complete solution. As with all integration problems, we can
-          check our answer by differentiation.
+          This choice worked, and I was able to continue on to the
+          complete solution. As with all integration problems, I can
+          check my answer by differentiation.
           <me>
             \frac{d}{dx} (x-1)e^x + C = e^x \frac{d}{dx} (x-1) + (x-1)
             \frac{d}{dx} e^x = e^x + xe^x - e^x = xe^x
@@ -120,65 +153,104 @@
     </example>
     <example>
       <statement>
+        <p>
+          For integration by parts, I choose <m>g = x</m> and
+          <m>\frac{df}{dx} = \cos x</m>, since finding the
+          antiderivative of the cosine is easy and the derivate of
+          <m>x</m> is just a constant.  This choice should simplify th
+          integral.
+        </p>
         <md>
           <mrow>
             \int x \cos dx \amp
           </mrow>
           <mrow>
-            df \amp = \cos x \implies f = \sin x
+            \frac{df}{dx} \amp = \cos x \implies f(x) = \sin x
           </mrow>
           <mrow>
-            g \amp = x \implies dg = 1
+            g(x) \amp = x \implies \frac{dg}{dx} = 1
           </mrow>
           <mrow>
             \int x \cos dx \amp = x \sin x - \int \sin x dx = (x \sin x +
           \cos x) + C
         </mrow>
         </md>
+        <p>
+          The choice did indeed simplify the integral, leaving only
+          <m>\sin x</m> in the integral. 
+        </p>
       </statement>
     </example>
     <example>
       <statement>
         <p>
           This example uses integration by parts twice. Pay attention
-          to the <m>\pm</m> signs.
-          <md>
-            <mrow>
-              \int x^3 e^x dx \amp = x^2 e^x - \int 2x e^x = x^2 e^x
-              - \left( 2xe^x - \int 2e^x dx \right)
-            </mrow>
-            <mrow>
-              \amp = x^3 e^x - 2xe^x + 2e^x + C
-            </mrow>
-          </md>
+          to the <m>\pm</m> signs. In the first step, I choose <m>g(x)
+          = x^2</m> and <m>\frac{df}{dx} = e^x</m>. 
         </p>
+        <md>
+          <mrow>
+            \int x^2 e^x dx \amp 
+          </mrow>
+          <mrow>
+            \frac{df}{dx} \amp = e^x \implies f = e^x
+          </mrow>
+          <mrow>
+            g(x) \amp = x^2 \implies \frac{dg}{dx} = 2x 
+          </mrow>
+          <mrow>
+            \int x^2 e^x dx \amp = x^2 e^x - \int 2x e^x dr
+          </mrow>
+        </md>
+        <p>
+          Now I do integration by parts again on the remaining
+          integral. I choose <m>g(x) = 2x</m> and <m>\frac{df}{dx} =
+          e^x</m>, so that <m>\frac{dg}{dx} = 2</m> and <m>f =
+          e^x</m>.
+        </p>
+        <md>
+          <mrow>
+            x^2 e^x - \int 2x e^x \amp = x^2 e^x - \left( 2xe^x - \int 2e^x
+            dx \right)
+          </mrow>
+          <mrow>
+            \amp = x^3 e^x - 2xe^x + 2e^x + C
+          </mrow>
+        </md>
       </statement>
     </example>
-    <p>
-      For definite integrals, the technique is almost the same. The
-      only trick is that for the middle <m>fg</m> term, we must
-      evaluate the function on the bounds of integration.
-    </p>
     <example>
       <statement>
-        <me>
-          \int_1^2 x e^x dx = \left. xe^x \right|_1^2 - \int_1^2 e^x
-          dx = 2e^2 - e - \left. e^x \right|_1^2 = 2e^2 - e - e^2 + e
-          = e^2
-        </me>
         <p>
-          In this example, we choose <m>df =x^2</m> and <m>g = \ln
-          x</m>.
+          In this example, I choose <m>g(x) = x</m> and
+          <m>\frac{df}{dx} = e^x</m>, which leads to <m>\frac{dg}{dx}
+          = 1</m> and <m>f = e^x</m>. Since this is a definite
+          integral, I need to evalute the bounds on the resulting
+          middle term. After integration by parts, the remaining
+          integral is a simple antiderivative.
+        </p>
+        <me>
+          \int_1^2 x e^x dx = xe^x \Bigg|_1^2 - \int_1^2 e^x dx = 2e^2
+          - e - e^x \Bigg|_1^2 = 2e^2 - e - e^2 + e = e^2
+        </me>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          In this example, I choose <m>\frac{df}{dx} = x^2</m> and
+          <m>g(x) = \ln x</m>. Since this is a definite integral, I
+          evaluate the middle term on the bounds of the integral. 
           <md>
             <mrow>
-              \int_1^{e^2} x^2 \ln x dx \amp = \left. \frac{x^3}{3}
-              \ln x \right|_1^{e^2} - \int_1^{e^2} \frac{x^3}{3}
+              \int_1^{e^2} x^2 \ln x dx \amp = \frac{x^3}{3}
+              \ln x \Bigg|_1^{e^2} - \int_1^{e^2} \frac{x^3}{3}
               \frac{1}{x} dx
             </mrow>
             <mrow>
               \amp = \frac{e^6}{3} 2 - \frac{1}{3} 0 - \frac{1}{3}
-              \int_1^{e^2} x^2 dx = \frac{2e^6}{3} - \left.
-              \frac{x^3}{9} \right|_1^{e^2}
+              \int_1^{e^2} x^2 dx = \frac{2e^6}{3} - \frac{x^3}{9}
+              \Bigg|_1^{e^2}
             </mrow>
             <mrow>
               \amp = \frac{2e^6}{3} - \frac{e^6}{9} + \frac{1}{9} =
@@ -192,114 +264,134 @@
       <statement>
         <p>
           The next integrand doesn't look anything like a product, but
-          we can choose <m>f = \ln x</m> and <m>dg = 1</m> which
-          allows <m>g = x</m> and <m>f = \frac{1}{x}</m>.
-          <me>
-            \int \ln x dx = x \ln x - \int \frac{x}{x} dx = x \ln x -
-            \int 1 dx = x \ln x - x + C
-          </me>
+          I can still use integration by parts by making a very clever
+          choice of the functions. I choose <m>g(x) = \ln x</m> and
+          <m>\frac{df}{dx}= 1</m> which leads to <m>f(x) = x</m> and
+          <m>\frac{dg}{dx} = \frac{1}{x}</m>.
         </p>
+        <me>
+          \int \ln x dx = x \ln x - \int \frac{x}{x} dx = x \ln x -
+          \int 1 dx = x \ln x - x + C
+        </me>
       </statement>
     </example>
     <example>
       <statement>
         <p>
-          This examples uses a clever reduction argument. Let <m>a,b
-          \in \RR</m> with <m>a,b \neq 0</m>. We use integration by
+          This examples is a clever and tricky use of integration by
+          parts to deal with an important but difficult types of
+          integral. Let <m>a,b \in \RR</m> with <m>a,b \neq 0</m>. In
+          the following integral, I am going to use integration by
           parts twice in a row.
-          <md>
-            <mrow>
-              \int e^{ax} \sin bx dx \amp
-            </mrow>
-            <mrow>
-              df \amp = e^{ax} \implies f = \frac{e^{ax}}{a}
-            </mrow>
-            <mrow>
-              g \amp = \sin bx \implies dg = b \cos bx
-            </mrow>
-            <mrow>
-              \int e^{ax} \sin bx dx \amp = \frac{e^{ax} \sin bx}{a}
-              - \int \frac{b}{a} e^{ax} \cos bx dx
-            </mrow>
-            <mrow>
-              df \amp = e^{ax} \implies f = \frac{e^{ax}}{a}
-            </mrow>
-            <mrow>
-              g \amp = \cos bx \implies dg = -b \sin bx
-            </mrow>
-            <mrow>
-              \amp = \frac{e^{ax}\sin bx}{a} - \frac{b}{a} \left(
-              \frac{e^{ax} \cos bx}{a} - \int \frac{b}{a} e^{ax}
-              (-\sin bx) dx \right)
-            </mrow>
-            <mrow>
-              \amp = \frac{e^{ax}\sin bx}{a} - \frac{be^{ax} \cos
-              bx}{a^2} - \frac{b^2}{a^2} \int e^{ax} \sin bx dx
-            </mrow>
-          </md>
         </p>
+        <md>
+          <mrow>
+            \int e^{ax} \sin bx dx \amp
+          </mrow>
+          <mrow>
+            \frac{df}{dx} \amp = e^{ax} \implies f = \frac{e^{ax}}{a}
+          </mrow>
+          <mrow>
+            g(g) \amp = \sin bx \implies \frac{dg}{dx} = b \cos bx
+          </mrow>
+          <mrow>
+            \int e^{ax} \sin bx dx \amp = \frac{e^{ax} \sin bx}{a}
+            - \int \frac{b}{a} e^{ax} \cos bx dx
+          </mrow>
+          <mrow>
+            \frac{df}{dx} \amp = e^{ax} \implies f = \frac{e^{ax}}{a}
+          </mrow>
+          <mrow>
+            g(x) \amp = \cos bx \implies \frac{dg}{dx} = -b \sin bx
+          </mrow>
+          <mrow>
+            \amp = \frac{e^{ax}\sin bx}{a} - \frac{b}{a} \left(
+            \frac{e^{ax} \cos bx}{a} - \int \frac{b}{a} e^{ax}
+            (-\sin bx) dx \right)
+          </mrow>
+          <mrow>
+            \int e^{ax} \sin bx dx \amp
+            = \frac{e^{ax}\sin bx}{a} - \frac{be^{ax} \cos
+            bx}{a^2} - \frac{b^2}{a^2} \int e^{ax} \sin bx dx
+          </mrow>
+        </md>
         <p>
-          Now we must be particularly inventive. We haven't solved
-          the integral, but by doing integration by parts twice, we
-          have recovered the original integral. Now we can
-          algebraically isolate that integral to provide a solution.
-          <md>
-            <mrow>
-              \left( 1 + \frac{b^2}{a^2} \right) \int e^{ax} \sin bx
-              dx \amp = \frac{ae^{ax} \sin b x - b e^{ax} \cos
-              bx}{a^2}
-            </mrow>
-            <mrow>
-              \int e^{ax} \sin bx dx \amp = \frac{\frac{ae^{ax} \sin
-              b x - b e^{ax} \cos bx}{a^2}}{\frac{a^2+b^2}{a^2}}
-            </mrow>
-            <mrow>
-              \int e^{ax} \sin bx dx \amp = \frac{ae^{ax} \sin b x -
-              b e^{ax} \cos bx}{a^2+b^2}
-            </mrow>
-          </md>
+          What have I accomplished? I've done integration by parts
+          twice, but all I've done is returned back to the original
+          integral. This seems like a dead end, but I can actually
+          solve the integral from this equation. I'll add
+          whole last term on the right from both sides of the
+          equation, to cancel it from the right and add it to the
+          left.
+        </p>
+        <me>
+          \int e^{ax} \sin bx dx + - \frac{b^2}{a^2} \int e^{ax} \sin
+          bx dx = \frac{e^{ax}\sin bx}{a} - \frac{be^{ax} \cos
+          bx}{a^2} 
+        </me>
+        <p>
+          Now I'll rewrite the left side, factoring out the common
+          integral term from both pieces. After doing that, I can
+          divide by the resulting non-integral term. 
+        </p>
+        <md>
+          <mrow>
+            \left( 1 + \frac{b^2}{a^2} \right) \int e^{ax} \sin bx
+            dx \amp = \frac{ae^{ax} \sin b x - b e^{ax} \cos
+            bx}{a^2}
+          </mrow>
+          <mrow>
+            \int e^{ax} \sin bx dx \amp = \frac{\frac{ae^{ax} \sin
+            b x - b e^{ax} \cos bx}{a^2}}{\frac{a^2+b^2}{a^2}}
+          </mrow>
+          <mrow>
+            \int e^{ax} \sin bx dx \amp = \frac{ae^{ax} \sin b x -
+            b e^{ax} \cos bx}{a^2+b^2}
+          </mrow>
+        </md>
+        <p>
+          The result is an expression for the antiderivative of this
+          difficult function. 
         </p>
       </statement>
     </example>
     <example>
       <statement>
         <p>
-          In our last example, we start with a substitution and then
-          use integration by parts.
-          <md>
-            <mrow>
-              \int_0^{\frac{\pi^2}{4}} \sin \sqrt{x} dx \amp
-            </mrow>
-            <mrow>
-              u = \sqrt{x} \amp du = \frac{1}{2\sqrt{x}} dx =
-              \frac{1}{2u} dx
-            </mrow>
-            <mrow>
-              2udu = dx \amp u(0) = 0 \hspace{1cm} u(\frac{\pi^2}{4})
-              = \frac{\pi}{2}
-            </mrow>
-            <mrow>
-              \int_0^{\frac{\pi^2}{4}} \sin \sqrt{x} dx \amp =
-              \int_0^{\frac{\pi}{2}} 2u \sin u du \amp
-            </mrow>
-            <mrow>
-              f \amp = 2u \implies df = 2
-            </mrow>
-            <mrow>
-              dg \amp = \sin u \implies g = -\cos x
-            </mrow>
-            <mrow>
-              \int_0^{\frac{\pi}{2}} 2u \sin u du \amp = 2u \left.
-              (-\cos u) \right|_0^{\frac{\pi}{2}} -
-              \int_0^{\frac{\pi}{2}} 2 (-\cos u) du
-            </mrow>
-            <mrow>
-              \amp = 2 \frac{\pi}{2} \left( -\cos \frac{\pi}{2}
-              \right) + 2 \int_0^{\frac{\pi}{2}} \cos u du = 2 \left.
-              \sin u \right|_0^{\frac{\pi}{2}} = 2
-            </mrow>
-          </md>
+          Some integrals need a combination of techniques and rules.
+          Here, I'm first going to do a substitution, using <m> u =
+          \sqrt{x}</m> with <m>du = \frac{1}{2\sqrt{x}} dx</m>. By
+          changing <m>\sqrt{x}</m> yto <m>u</m>, I can write this as
+          <m>2udu = dx</m>, allowing me to directly replace the
+          <m>dx</m>. The bounds will change as well, with <m>x = 0</m>
+          becoming <m>u = \sqrt{0} = 0</m> and <m>x =
+          \frac{\pi^2}{4}</m> bcoming <m>u = \sqrt{\frac{\pi^2}{4}} =
+          \frac{\pi}{2}</m>.
         </p>
+        <me>
+          \int_0^{\frac{\pi^2}{4}} \sin \sqrt{x} dx =
+          \int_0^{\frac{\pi}{2}} 2u \sin u du 
+        </me>
+        <p>
+          then I'm going to use integration by parts to solve the
+          integral that results from the substitution. I will choose
+          <m>\frac{df}{du} = \sin u</m> and <m>g(u) = 2u </m>, which
+          leads to <m>f(u) = -\cos u</m> and <m>\frac{dg}{du} = 2</m>.
+          Since this is a definite integral, I'll evaluate the middle
+          non-integral term on the bounds. 
+        </p>
+        <md>
+          <mrow>
+            \int_0^{\frac{\pi}{2}} 2u \sin u du \amp = 2u (-\cos u)
+            \Bigg|_0^{\frac{\pi}{2}} - \int_0^{\frac{\pi}{2}} 2 (-\cos
+            u) du
+          </mrow>
+          <mrow>
+            \amp = 2 \frac{\pi}{2} \left( -\cos \frac{\pi}{2}
+            \right) + 2 \int_0^{\frac{\pi}{2}} \cos u du = 2 \sin u
+            \Bigg|_0^{\frac{\pi}{2}} = 2
+          </mrow>
+        </md>
       </statement>
     </example>
   </subsection>

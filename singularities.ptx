@@ -281,7 +281,7 @@
           derivative.
           <me>
             2 y \frac{dy}{dx} = -6x - 3x^2 \implies \frac{dy}{dx} =
-            \frac{-6x-3x^2}{2y} = \frac{-3(2+x)}{2y} 
+            \frac{-6x-3x^2}{2y} = \frac{-3x(2+x)}{2y} 
           </me>
         </p>
         <p>
@@ -293,7 +293,7 @@
           \sqrt{(1-x)(2+x)^2} = \pm (2+x)\sqrt{1-x} </m>. I use this
           to replace <m>y</m> in the implicit derivative.
           <me>
-            \frac{dy}{dx} = \pm \frac{-3(2+x)}{\sqrt{1-x} (2+x)}
+            \frac{dy}{dx} = \pm \frac{-3x(2+x)}{\sqrt{1-x} (2+x)}
           </me>
         </p>
         <p>
@@ -307,8 +307,8 @@
           However, at <m>x=-2</m>, both numerator and denominator have a
           <m>x+2</m> term, which cancel out. (The limit is an
           indeterminate form of type <m>\frac{0}{0}</m>). Evaluating
-          the limit gives a slope of <m>\pm \frac{-3}{\sqrt{3}} = \pm
-          \sqrt{3}</m>.  Since I get two values, this is a double
+          the limit gives a slope of <m>\pm \frac{6}{\sqrt{3}} = \pm
+          3\sqrt{3}</m>.  Since I get two values, this is a double
           point node. <xref ref="figure-elliptic-curve1" /> shows both
           the vertical tangent and the double point node that I have
           found with the limits of the implicit derivatives. 

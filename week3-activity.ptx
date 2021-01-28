@@ -27,10 +27,11 @@
           </mrow>
           <mrow>
             2y \frac{dy}{dx} \amp = 2x (1+x^2) + x^2 (2x) = 2x (1+x^2)
-            + 3x^3 
+            + 2x^3 
           </mrow>
           <mrow>
-            \frac{dy}{dx} \amp = \frac{2x(1 + x^2) + 3x^2}{2y} 
+            \frac{dy}{dx} \amp = \frac{2x(1 + x^2) + 2x^3}{2y} =
+            \frac{x(1+x)^2 + x^3}{y} 
           </mrow>
         </md>
         <p>
@@ -42,8 +43,8 @@
             y \amp = \pm \sqrt{x^2 (1+x^2)} = \pm x \sqrt{1+x^2} 
           </mrow>
           <mrow>
-            \frac{dy}{dx} \amp = \pm \frac{ 2x (1+x^2) + 2x^3}{x
-            \sqrt{ 1+x^2}}
+            \frac{dy}{dx} \amp = \pm \frac{x(1+x^2) + x^3}{x
+            \sqrt{1+x^2}}
           </mrow>
         </md>
         <p>
@@ -61,12 +62,12 @@
         <md>
           <mrow>
             \lim_{x \rightarrow 0} \frac{dy}{dx} \amp = \lim_{x
-            \rightarrow 0} \pm \frac{2x (1+x^2) + 2x^3}{x
+            \rightarrow 0} \pm \frac{x(1+x^2) + x^3}{x
             \sqrt{1+x^2}}
           </mrow>
           <mrow>
-            \amp = \lim_{x \rightarrow 0} \pm \frac{2(1+x^2) +
-            2x^2}{\sqrt{1+x^2}} = \pm \frac{2}{1} = \pm 2 
+            \amp = \lim_{x \rightarrow 0} \pm \frac{(1+x^2) +
+            x^2}{\sqrt{1+x^2}} = \pm \frac{1}{1} = \pm 1 
           </mrow>
         </md>
         <p>

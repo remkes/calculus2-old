@@ -1,17 +1,648 @@
 <section xml:id="section-week4-activity">
   <title>Week 4 Activity</title>
-  <subsection xml:id="subsection-activity-">
-    <title>Title</title>
+  <subsection xml:id="subsection-activity-substitution">
+    <title>Substitution Rule</title>
+    <p>
+      This portion of the activity is direclty repeated from Calculus
+      I. Do as much of it as you feel you need for review. 
+    </p>
     <activity>
       <statement>
         <p>
-          Question
+          Calculate this integral.
+          <me>
+            \int 3x^2 (x^3 - 4)^5 dx 
+          </me>
         </p>
       </statement>
       <solution>
         <p>
-          Solution
+          The second part of this integrand looks like a composition:
+          I have <m>(x^3 - 4)^5</m> is an inside function, with an
+          outside function <m>u^5</m>. Moreover, the remaining piece
+          of the integral looks like it might be the derivative of the
+          inside, which is idea for the substitution rule. Here is the
+          substitution. 
+          <md>
+            <mrow>
+              u \amp = x^3 - 4 
+            </mrow>
+            <mrow>
+              du \amp = 3x^2 dx 
+            </mrow>
+          </md>
+          I can rearrange the original integral to match these
+          pieces, then do the replacement. 
+          <md>
+            <mrow>
+              \int 3x^2 (x^3 - 4)^5 dx \amp = \int (x^3-4)^4 (3x^2 dx) 
+            </mrow>
+            <mrow>
+              \amp = \int u^5 du = \frac{u^6}{6} + C
+            </mrow>
+          </md>
+          At the end, I undo the substitution to return to the
+          original variable. 
+          <me>
+            \frac{u^6}{6} + C = \frac{(x^3-4)^6}{6} + C 
+          </me>
         </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this integral.
+          <me>
+            \int \cos (17 x) dx 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The integrand is a composition with inside <m>(17x)</m> and
+          outside <m>\cos (u)</m>. I'll try a substitution with these
+          pieces. 
+          <md>
+            <mrow>
+              u \amp = 17 x 
+            </mrow>
+            <mrow>
+              du \amp = 17 dx 
+            </mrow>
+            <mrow>
+              \frac{1}{17} du \amp = dx 
+            </mrow>
+          </md>
+          I had to move the 17 to the left, since the original
+          integral doesn't have a term which looks like <m>17 dx</m>.
+          In this form, however, I can replace all the piece of the
+          original integral with the new variable. 
+          <me>
+            \int \cos (17 x) dx = \int \cos u \frac{1}{17} du 
+          </me>
+          Then I can use linearity and known antideriatives to do the
+          integral. 
+          <me>
+            = \frac{1}{17} \sin (u) + C 
+          </me>
+          Finally, I reverse the substitution.
+          <me>
+            = \frac{1}{17} \sin (17 x) + C 
+          </me>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this integral.
+          <me>
+            \int \frac{x-4}{x-5} dx 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This doesn't look like a composition. However, substitution
+          is sometime still useful even when I don't obviously have a
+          composition. Here, I'm going to take the denominator as the
+          substitution, to try to produce an easier integral. 
+          <md>
+            <mrow>
+              u \amp = x - 5
+            </mrow>
+            <mrow>
+              du \amp = dx
+            </mrow>
+          </md>
+          I also need to know how to replace the numerator. 
+          <me>
+            u = x - 5 \implies u + 1 = x - 4 
+          </me>
+          Now I can replace all the piece of the original integral. 
+          <me>
+            \int \frac{x-4}{x-5} dx = \int \frac{u+1}{u} du 
+          </me>
+          Now that I have a simpler denominator, I can split the
+          numerator up to give two integrals, using linearity. 
+          <me>
+            = \int \frac{u}{u} + \frac{1}{u} du = \int 1 du + \int
+            \frac{1}{u} du 
+          </me>
+          Then I use known antiderivatives. 
+          <me>
+            = u + \ln |u| + C 
+          </me>
+          Finally, I reverse the substitution.
+          <me>
+            = (x-5) + \ln |x-5| + C 
+          </me>
+          As a final note, I could group the <m>(-5)</m> with the
+          constant, like this:
+          <me>
+            = x + \ln |x-5| + (C - 5)
+          </me>
+          If I did that, since the constant can be set to any real
+          number, subtracting 5 doesn't make a difference. Therefore,
+          an alternative form of the answer gets ride of this
+          <m>(-5)</m>.
+          <me>
+            = x + \ln |x-5| + C 
+          </me>
+          This certinaly isn't necessary, but I mention it here since
+          these kinds of steps with constants of integration are
+          commonly done. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this integral.
+          <me>
+            \int_0^1 2x(x^2 + 4)^3 dx
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This looks like a composition with inside function
+          <m>(x^2+4)</m> and outside function <m>u^3</m>. The rest of
+          the integrand looks like it might be close to the derivative
+          of the inside function, which is promising. I proceed with
+          the substitution rule. Now I will also change the bounds. 
+          <md>
+            <mrow>
+              u \amp = x^2 + 4
+            </mrow>
+            <mrow>
+              du \amp = 2x dx
+            </mrow>
+            <mrow>
+              x \amp = 0 \implies u = (0)^2 + 4 = 4 
+            </mrow>
+            <mrow>
+              x \amp = 1 \implies u = (1)^2 + 4 = 5 
+            </mrow>
+          </md>
+          I can rearrange the integral so that I can substitute all
+          the pieces clearly. 
+          <me>
+            \int_0^1 2x(x^2 + 4)^3 dx = \int_0^1 (x^2+4)^3 (2x dx)
+          </me>
+          Then I replace all the pieces, including changing the
+          bounds. 
+          <me>
+            = \int_4^5 u^3 du 
+          </me>
+          Then I can proceed to finish the integral. Since this is a
+          definite integral and I have changed the bounds as well, we
+          do not need to reverse the substitution. 
+          <me>
+            = \frac{u^4}{4} \Big|_4^5 = \frac{5^4}{4} - \frac{4^4}{4}
+            = \frac{625 - 256}{4} = \frac{369}{4} 
+          </me>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this integral.
+          <me>
+            \int_0^4 \frac{x}{x+3} dx 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          I'd like to simplify the denominator, so I'll try a
+          substitution with <m>u = (x+3)</m>. Since this is a definite
+          integral, I'll change the bounds as well. Finally, I'll need
+          to replace the numerator in the substitution, so I'll figure
+          out how to express the numerator in the new variable. 
+          <md>
+            <mrow>
+              u \amp = x+3
+            </mrow>
+            <mrow>
+              du \amp = dx 
+            </mrow>
+            <mrow>
+              x \amp = 0 \implies u = 0 + 3 = 3 
+            </mrow>
+            <mrow>
+              x \amp = 4 \implies u = 4 + 3 = 7 
+            </mrow>
+            <mrow>
+              u \amp = x + 3 \implies x = u - 3 
+            </mrow>
+          </md>
+          Now I have all the pieces and I can change to the new
+          variable, including changing the bounds. 
+          <me>
+            \int_0^4 \frac{x}{x+3} dx = \int_3^7 \frac{u-3}{u} du 
+          </me>
+          Then I can split up the integral using linearity into two
+          integrals that I can solve with known antiderivatives. 
+          <md>
+            <mrow>
+              \amp = \int_3^7 \frac{u}{u} du - 3 \int_3^7 \frac{1}{u} du 
+            </mrow>
+            <mrow>
+              \amp = \int_3^7 1 du - 3 \int_3^7 \frac{1}{u} du 
+            </mrow>
+            <mrow>
+              \amp = u \Big|_3^7 - 3 \ln |u| \Big|_3^7 = (7-3) - 3 (\ln 7 -
+              \ln 3) = 4 - 3 (\ln 7 - \ln 3)
+            </mrow>
+          </md>
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this integral.
+          <me>
+            \int_0^4 \frac{x}{x-3}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This look very similar to the previous question. One might
+          thing that the process should be exactly the same. You could
+          follow that process and get an answer, but that answer would
+          not be valid. The problem, here, is that this is a definite
+          integral, which calculates an area under the curve. Given
+          these bounds, I am looking for the area between 0 and 4.
+          However, this function is undefined at <m>x=3</m>, where it
+          has a vertical asymptote. Therefore, the notion of area
+          under this curve is meaningless. There is no connected curve
+          under which I can define an area. This integral has no
+          answer. 
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="subsection-activity-parts">
+    <title>Integration By Parts</title>
+    <activity>
+      <statement>
+        <p>
+          Solve this integral using integation by parts.
+        </p>
+        <me>
+          \int x \sin x dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I choose <m>\frac{df}{dx} = \sin x </m> and <m>g(x) = x
+          </m>.  The new functions are <m>f(x) = -\cos x </m> and
+          <m>\frac{dg}{dx} = 1 </m>. Then I apply integration by
+          parts.
+        </p>
+        <md>
+          <mrow>
+            \int x \sin x dx \amp = -u \cos x + \int \cos x dx 
+          </mrow>
+          <mrow>
+            \amp = - u \cos x + \sin x + c 
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this integral using integation by parts.
+        </p>
+        <me>
+          \int x^3 \ln x dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I choose <m>\frac{df}{dx} = x^3</m> and <m>g(x) = \ln x
+          </m>.  The new functions are <m>f(x) = \frac{x^4}{4}</m> and
+          <m>\frac{dg}{dx} = \frac{1}{x}</m>. Then I apply integration
+          by parts. 
+        </p>
+        <md>
+          <mrow>
+            \int x^3 \ln x dx \amp = \frac{x^4 \ln x}{4} - \int
+            \frac{1}{x} \frac{x^4}{4} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{x^4 \ln x}{4} - \frac{1}{4} \int x^3 dx =
+            \frac{x^4 \ln x}{4} + \frac{x^4}{16} + C 
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this integral using integation by parts.
+        </p>
+        <me>
+          \int x^2 \sin x dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I choose <m>\frac{df}{dx} = \sin x</m> and <m>g(x) = x^2
+          </m>. The new functions are <m>f(x) = -\cos x</m> and
+          <m>\frac{dg}{dx} = 2x</m>. Then I apply integration by parts.
+        </p>
+        <md>
+          <mrow>
+          \int x^2 \sin x dx \amp = -x^2 \cos x + \int 2x \cos x dx 
+          </mrow>
+        </md>
+        <p>
+          Now I have to do integration by parts a second time on the
+          remianing integral.  I choose <m>\frac{df}{dx} = \cos x</m>
+          and <m>g(x) = 2x </m>. The new functions are <m>f(x) = \sin
+          x</m> and <m>\frac{dg}{dx} = 2</m>. Then I apply integration
+          by parts.
+        </p>
+        <md>
+          <mrow>
+            \int x^2 \sin x dx \amp = -x^2 \cos x + 2x \sin x - \int 2
+            \sin x 
+          </mrow>
+          <mrow>
+            \amp = -x^2 \cos x + 2x \sin x + 2 \cos x + C 
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this integral using integation by parts.
+        </p>
+        <me>
+          \int_1^4 x \ln x dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I choose <m>\frac{df}{dx} = x</m> and <m>g(x) = \ln x</m>.
+          The new functions are <m>f(x) = \frac{x^2}{2}</m> and
+          <m>\frac{dg}{dx} = \frac{1}{x}</m>. Then I apply integration
+          by parts. Since this is a definite integral, I evalute the
+          middle non-integral term on the bounds. 
+        </p>
+        <md>
+          <mrow>
+            \int_1^4 x \ln x dx \amp = \frac{ x^2 \ln x}{2}
+            \Bigg|_1^4 - \int_1^4 \frac{1}{x} \frac{x^2}{2} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{4^2 \ln 4}{2} - \frac{1^2 \ln 1}{2} -
+            \frac{1}{2} \int_1^4 x dx 
+          </mrow>
+          <mrow>
+            \amp = 8 \ln 4 - \frac{1}{2} \frac{x^2}{2}
+            \Bigg|_1^4 = 8 \ln 4 - \frac{4^2}{4} + \frac{1}{4} = 8
+            \ln 4 - \frac{15}{4}
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this integral using integation by parts. (This doesn't
+          look like integrationb y parts will really solve much.
+          However, after you apply integration by parts, you will
+          recover an integration that is the same as the
+          original. Then use algebra to rearrange the equation and end
+          up with a valid solution to the integral.)
+        </p>
+        <me>
+          \int \sin x \cos x dx
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I choose <m>\frac{df}{dx} = \cos x</m> and <m>g(x) = \sin
+          x</m>.  The new functions are <m>f(x) = \sin x </m> and
+          <m>\frac{dg}{dx} = \cos x</m>. Then I apply integration by
+          parts.
+        </p>
+        <me>
+          \int \sin x \cos x dx = - \sin^2 x + \int \sin x \cos x dx
+        </me>
+        <p>
+          Now I can move the second term on the right to the left.
+          Since is it exactly the same integral, when I add it to the
+          left, I get two of them. Then I just divide by <m>2</m> for
+          the final solution.
+        </p>
+        <md>
+          <mrow>
+            2 \int \sin x \cos x dx \amp = -\sin^2 x 
+          </mrow>
+          <mrow>
+            \int \sin x \cos x dx \amp = \frac{-\sin^2 x}{2} + c 
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this integral using integation by parts.
+        </p>
+        <me>
+          \int x \sqrt{x+6} dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I choose <m>\frac{df}{dx} = \sqrt{x+6}</m>
+          and <m>g(x) = x</m>. Seeing the derivative of <m>g</m> is
+          relativel easy: <m>\frac{dg}{dx} = 1</m>. However, the
+          antiderivative of <m>\frac{df}{dx}</m> requires more work.
+          Let me actually do this integral.
+        </p>
+        <me>
+          \int \sqrt{x+6} dx 
+        </me>
+        <p>
+          I use the substitution <m>u = x+6</m> with <m>du = dx</m>
+        </p>
+        <me>
+          \int \sqrt{x+6} dx = \int \sqrt{u} du = \int u^{\frac{1}{2}
+          du = \frac{2}{3} u^{\frac{3}{2}}
+        </me>
+        <p>
+          After undoing the substitution, I see the antiderivative is 
+          <m>f(x) = \frac{2}{3} (x+6)^{\frac{3}{2}</m>. Now I can
+          apply integration by parts. 
+        </p>
+        <md>
+          <mrow>
+            \int x \sqrt{x+6} dx \amp = \frac{2x}{3}
+            (x+6)^{\frac{3}{2}} - \int \frac{2}{3}
+            (x+6)^{\frac{3}{2}} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{2x}{3} (x+6)^{\frac{3}{2}} + \frac{2}{3}
+            \frac{2}{5} (x+6)^{\frac{5}{2}} + C 
+          </mrow>
+          <mrow>
+            \amp = \frac{2x}{3} (x+6)^{\frac{3}{2}} + \frac{4}{15}
+            (x+6)^{\frac{5}{2}} + C 
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this integral using integation by parts. (This is a
+          particularly long and challenging example which needs
+          integration by parts twice and have a lot of difficult
+          arithmetic.) 
+        </p>
+        <me>
+          \int_0^1 x^2 \sqrt[3]{x+2} dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I choose <m>\frac{df}{dx} = \sqrt[3]{x+2}</m>
+          and <m>g(x) = x^2 </m>.  The antiderivative is <m>f(x) =
+          \frac{3}{4} (x+2)^{\frac{4}{3}}</m>, which is found by a
+          substitution in a similar method to the previous question. 
+          The derivative is<m>\frac{dg}{dx} = 2x</m>. Then I apply
+          integration by parts. Since this is a definite integral, I
+          apply the bounds to the non-integral term. 
+        </p>
+        <md>
+          <mrow>
+            \int_0^1 x^2 \sqrt[3]{x+2} dx \amp = \frac{3x^2}{4}
+            (x+2)^{\frac{4}{3}} \Bigg|_0^1 - \int 2x \frac{3}{4}
+            (x+2)^{\frac{4}{3}} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{3(1)^2}{4} 3^{\frac{4}{3}} - \frac{3(0)^2}{4}
+            2^{\frac{4}{3}} - \frac{3}{2}\int x (x+2)^{\frac{4}{3}} dx
+          </mrow>
+        </md>
+        <p>
+          I need to do integration by parts again. 
+          I choose <m>\frac{df}{dx} = (x+2)^{\frac{4}{3}}</m>
+          and <m>g(x) = x</m>.  The antiderivative is <m>f(x) =
+          \frac{3}{7} (x+2)^{\frac{7}{3}}</m>, again found by
+          substitution and the inverse power rule. 
+          The derivative is<m>\frac{dg}{dx} = 1</m>. Then I apply
+          integration by parts a second time. Again, since this is a
+          definite integral, I apply the bounds to the non-integral
+          term. The final integral that results is an inverse power
+          rule integral. After evaluating the pieces on the bounds as
+          I go along, I get a lot of pretty annoying arithmetic. I've
+          tried to simplify it as best I can while still keeping it in
+          exact values. 
+        </p>
+        <md>
+          <mrow>
+            \int_0^1 x^2 \sqrt[3]{x+2} \amp = \frac{3}{3} 3
+            \sqrt[3]{3} - 0 - \frac{3x}{7} (x+2)^{\frac{7}{3}}
+            \Bigg|_0^1 + \int \frac{3}{7} (x+2)^{\frac{7}{3}} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{9\sqrt[3]{3}}{4} - \frac{3(1)}{7}
+            3^{\frac{7}{3}} + \frac{3(0)}{7} 2^{\frac{7}{3}} + 
+            \frac{3}{7} \frac{3}{10} (x+2)^{\frac{10}{7}} \Bigg|_0^1
+          </mrow>
+          <mrow>
+            \amp = \frac{9\sqrt[3]{3}}{4} - \frac{3}{7} 9 \sqrt[3]{3}
+            + \frac{6}{70} 3^{\frac{10}{7}} - \frac{6}{70}
+            2^{\frac{10}{7}} 
+          </mrow>
+          <mrow>
+            \amp = \frac{9\sqrt[3]{3}}{4} - \frac{27\sqrt[3]{3}}{7} +
+            \frac{3}{35} 27\sqrt[3]{3} - \frac{3}{35} 8\sqrt[3]{2} 
+          </mrow>
+          <mrow>
+            \amp = \frac{9\sqrt[3]{3}}{4} - \frac{27\sqrt[3]{3}}{7} +
+            \frac{81\sqrt[3]{3}}{35} - \frac{24 \sqrt[3]{2}}{35} 
+          </mrow>
+          <mrow>
+            \amp = \frac{(9(35) - 27(20)+ 81(4)) \sqrt[3]{3}}{140} -
+            \frac{24 \sqrt[3]{3}}{35} = \frac{99\sqrt[3]{3} -
+            96\sqrt[3]{2}}{140} 
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this integral using integation by parts. (This is
+          tricky, but you can use <m>\frac{df}{dx} 1</m> in the
+          integration by parts setup to actually make this work.) 
+        </p>
+        <me>
+          \int (\ln x)^2 dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I choose <m>\frac{df}{dx} = 1</m> and <m>g(x) = (\ln x)^2
+          </m>.  The new functions are <m>f(x) = \frac{2 \ln x}{x}
+          </m> and <m>\frac{dg}{dx} = x</m>. Then I apply integration
+          by parts.
+        </p>
+        <md>
+          <mrow>
+            \int (\ln x)^2 dx \amp = x (\ln x)^2 - \int \frac{2 \ln
+            x}{x} x dx = x (\ln x)^2 - \int 2 \ln x dx 
+          </mrow>
+          <mrow>
+            \amp = x (\ln x)^2 - 2 ( x \ln x - x) + C= x (\ln x)^2 -
+            2x \ln x + 2x + C 
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this integral using integation by parts.
+        </p>
+        <me>
+          \int x^2 \ln (x^2) 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I choose <m>\frac{df}{dx} = x^2</m> and <m>g(x) = \ln (x^2)
+          </m>.  The new functions are <m>f(x) = \frac{x^3}{3} </m>
+          and <m>\frac{dg}{dx} = 2x </m>. Then I apply integration by
+          parts. 
+        </p>
+        <md>
+          <mrow>
+            \int x^2 \ln (x^2) \amp = \frac{x^3 \ln (x^2)}{3} - \int
+            \frac{2}{x} \frac{x^3}{3} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{x^3 \ln (x^2)}{3} - \frac{2}{3} \int x^2 dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{x^3 \ln (x^2)}{3} - \frac{2}{3} \frac{x^3}{3}
+            + C = \frac{2x^3 \ln x}{3} - 2 x^3 + C 
+          </mrow>
+        </md>
       </solution>
     </activity>
   </subsection>
@@ -20,24 +651,13 @@
     <p>
       <ul>
         <li>
-          Question
+          What does it mean to change an integral from one variable to
+          a new variable with substitution?
+        </li>
+        <li>
+          How is integration by parts a reverse of the product rule?
         </li>
       </ul>
     </p>
-  </subsection>
-  <subsection xml:id="subsection-week4-extra-practice">
-    <title>Extra Practice Activities</title>
-    <activity>
-      <statement>
-        <p>
-          Question
-        </p>
-      </statement>
-      <solution>
-        <p>
-          Solution
-        </p>
-      </solution>
-    </activity>
   </subsection>
 </section>
