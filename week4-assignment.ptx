@@ -6,7 +6,34 @@
   <p><ol>
     <li>
       <p>
-        Question. 
+        Calculate this integral. Show all your steps and reasoning,
+        including the details of any integral rules used. (4) 
+      </p>
+      <me>
+        \int x^3 \ln x dx 
+      </me>
+    </li>
+    <li>
+      <p>
+        Calculate this integral. Show all your steps and reasoning,
+        including the details of any integral rules used. (8) 
+      </p>
+      <me>
+        \int (x^3 + 3x^2 + 2x + 1) \sin x dx 
+      </me>
+    </li>
+    <li>
+      <p>
+        Consider the following general integral form, where
+        <m>p(x)</m> is an arbitrary polynomial. (4) 
+      </p>
+      <me>
+        \int p(x) e^x dx 
+      </me>
+      <p>
+        Why does integration by parts help with this type of integral?
+        How many times do you have to use integration by parts to
+        finish the integral? 
       </p>
     </li>
   </ol></p>
