@@ -293,7 +293,7 @@
           \sqrt{(1-x)(2+x)^2} = \pm (2+x)\sqrt{1-x} </m>. I use this
           to replace <m>y</m> in the implicit derivative.
           <me>
-            \frac{dy}{dx} = \pm \frac{-3x(2+x)}{\sqrt{1-x} (2+x)}
+            \frac{dy}{dx} = \pm \frac{-3x(2+x)}{2\sqrt{1-x} (2+x)}
           </me>
         </p>
         <p>
@@ -307,8 +307,8 @@
           However, at <m>x=-2</m>, both numerator and denominator have a
           <m>x+2</m> term, which cancel out. (The limit is an
           indeterminate form of type <m>\frac{0}{0}</m>). Evaluating
-          the limit gives a slope of <m>\pm \frac{6}{\sqrt{3}} = \pm
-          3\sqrt{3}</m>.  Since I get two values, this is a double
+          the limit gives a slope of <m>\pm \frac{6}{2\sqrt{3}} = \pm
+          \sqrt{3}</m>.  Since I get two values, this is a double
           point node. <xref ref="figure-elliptic-curve1" /> shows both
           the vertical tangent and the double point node that I have
           found with the limits of the implicit derivatives. 
@@ -341,7 +341,7 @@
         <p>
           Consider the curve <m>y^2 = \frac{x^3}{4}</m>. The implicit
           derivative is <m>\frac{dy}{dx} = \frac{3x^2}{8y} =
-          \pm \frac{3x^2}{\sqrt{x^3}}</m>. This is undefined at the
+          \pm \frac{3x^2}{4\sqrt{x^3}}</m>. This is undefined at the
           point <m>(0,0)</m> on the curve.and the limit approaching
           the undefined point is <m>0</m>. Since I get a limit of
           <m>0</m>, I conclude that this should be a cusp. 

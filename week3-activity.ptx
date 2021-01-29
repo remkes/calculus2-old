@@ -243,10 +243,10 @@
             \frac{d}{dx} y^2 \amp = \frac{d}{dx} (x-3)^2 (x-4)^2 
           </mrow>
           <mrow>
-            2y \frac{dy}{dx} \amp = (x-3)(x-4)^2 + (x-3)^2(x-4)
+            2y \frac{dy}{dx} \amp = 2(x-3)(x-4)^2 + 2(x-3)^2(x-4)
           </mrow>
           <mrow>
-            \frac{dy}{dx} \amp = \frac{(x-3)(x-4)^2 + (x-3)^2(x-4)}{2y} 
+            \frac{dy}{dx} \amp = \frac{2(x-3)(x-4)^2 + 2(x-3)^2(x-4)}{2y} 
           </mrow>
         </md>
         <p>
