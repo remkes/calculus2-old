@@ -479,12 +479,12 @@
           I use the substitution <m>u = x+6</m> with <m>du = dx</m>
         </p>
         <me>
-          \int \sqrt{x+6} dx = \int \sqrt{u} du = \int u^{\frac{1}{2}
+          \int \sqrt{x+6} dx = \int \sqrt{u} du = \int u^{\frac{1}{2}}
           du = \frac{2}{3} u^{\frac{3}{2}}
         </me>
         <p>
           After undoing the substitution, I see the antiderivative is 
-          <m>f(x) = \frac{2}{3} (x+6)^{\frac{3}{2}</m>. Now I can
+          <m>f(x) = \frac{2}{3} (x+6)^{\frac{3}{2}}</m>. Now I can
           apply integration by parts. 
         </p>
         <md>
@@ -554,32 +554,31 @@
         </p>
         <md>
           <mrow>
-            \int_0^1 x^2 \sqrt[3]{x+2} \amp = \frac{3}{3} 3
-            \sqrt[3]{3} - 0 - \frac{3x}{7} (x+2)^{\frac{7}{3}}
-            \Bigg|_0^1 + \int \frac{3}{7} (x+2)^{\frac{7}{3}} dx 
+            \int_0^1 x^2 \sqrt[3]{x+2} dx \amp = \frac{3}{4} 3
+            \sqrt[3]{3} - \frac{3}{2} \left[ \frac{3x}{7}
+            (x+2)^{\frac{7}{3}} \Bigg|_0^1 - \int \frac{3}{7}
+            (x+2)^{\frac{7}{3}} dx \right]
           </mrow>
           <mrow>
-            \amp = \frac{9\sqrt[3]{3}}{4} - \frac{3(1)}{7}
-            3^{\frac{7}{3}} + \frac{3(0)}{7} 2^{\frac{7}{3}} + 
-            \frac{3}{7} \frac{3}{10} (x+2)^{\frac{10}{7}} \Bigg|_0^1
+            \amp = \frac{9\sqrt[3]{3}}{4} - \frac{3}{2} \left[
+            \frac{3(1)}{7} 3^{\frac{7}{3}} - \frac{3(0)}{7}
+            2^{\frac{7}{3}} - \frac{3}{7} \frac{3}{10}
+            (x+2)^{\frac{10}{7}} \Bigg|_0^1 \right] 
           </mrow>
           <mrow>
-            \amp = \frac{9\sqrt[3]{3}}{4} - \frac{3}{7} 9 \sqrt[3]{3}
-            + \frac{6}{70} 3^{\frac{10}{7}} - \frac{6}{70}
-            2^{\frac{10}{7}} 
+            \amp = \frac{9\sqrt[3]{3}}{4} - \frac{3}{2} \left[
+            \frac{3}{7} 9 \sqrt[3]{3} - \frac{9}{70} 3^{\frac{10}{7}}
+            + \frac{9}{70} 2^{\frac{10}{7}} \right]
           </mrow>
           <mrow>
-            \amp = \frac{9\sqrt[3]{3}}{4} - \frac{27\sqrt[3]{3}}{7} +
-            \frac{3}{35} 27\sqrt[3]{3} - \frac{3}{35} 8\sqrt[3]{2} 
+            \amp = \frac{9\sqrt[3]{3}}{4} - \frac{81\sqrt[3]{3}}{14} +
+            \frac{27(27\sqrt[3]{3})}{140} -
+            \frac{27(8\sqrt[3]{2})}{140} 
           </mrow>
           <mrow>
-            \amp = \frac{9\sqrt[3]{3}}{4} - \frac{27\sqrt[3]{3}}{7} +
-            \frac{81\sqrt[3]{3}}{35} - \frac{24 \sqrt[3]{2}}{35} 
-          </mrow>
-          <mrow>
-            \amp = \frac{(9(35) - 27(20)+ 81(4)) \sqrt[3]{3}}{140} -
-            \frac{24 \sqrt[3]{3}}{35} = \frac{99\sqrt[3]{3} -
-            96\sqrt[3]{2}}{140} 
+            \amp = \frac{(9(35) - 81(10) + 729\sqrt[3]{3} -
+            216\sqrt[3]{2}}{140} = \frac{117\sqrt[3]{3} -
+            108\sqrt[3]{2}}{70} 
           </mrow>
         </md>
       </solution>
