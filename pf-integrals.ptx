@@ -1,0 +1,242 @@
+<section xml:id="section-pf-integrals">
+  <title>Integration using Partial Fractions</title>
+  <subsection>
+    <p>
+      The previous three sections are all the tools for integrating
+      rational functions. Now I can put them all together into a
+      process.
+    </p>
+    <ol>
+      <li><p>
+        If the rational function is not proper, use long division to
+        make a proper fractions. The pieces without denominator that
+        result from long division can be easily integrated as just
+        polynomials.
+      </p></li>
+      <li><p>
+        Factor the denominator of the polynomial.
+      </p></li>
+      <li><p>
+        Use partial fractions to break up the proper rational function
+        in pieces
+      </p></li>
+      <li><p>
+        Use the standard four types from <xref
+        ref="section-rational-functions-basic" /> to integrate the
+        pieces that resulted from the partial fraction decomposition.
+      </p></li>
+    </ol>
+    <p>
+      I'll run through some examples, using the partial fraction
+      examples from <xref ref="section-pf"/>  and completing the
+      integration.
+    </p>
+    <example>
+      <statement>
+        <p>
+          I'll return to the rational function from example <xref
+          ref="example-pf1" />. 
+        </p>
+        <me>
+          \frac{x+2}{(x+1)(x-6)} = \frac{\frac{8}{7}}{x-6} +
+          \frac{\frac{-1}{7}}{x+1}
+        </me>
+        <p>
+          Now I integrate the two pieces. For each piece on the right,
+          I can pull out the constants to integrate the typical linear
+          form. 
+        </p>
+        <md>
+          <mrow>
+            \int \frac{x+2}{(x+1)(x-6)} dx \amp = \int
+            \frac{\frac{8}{7}}{x-6} dx + \int \frac{\frac{-1}{7}}{x+1}
+            dx
+          </mrow>
+          <mrow>
+            \amp = \frac{8}{7} \int \frac{1}{x-6} dx - \frac{1}{7}
+            \int \frac{1}{x+1} dx
+          </mrow>
+          <mrow>
+            \amp = \frac{8}{7} \ln |x-6| - \frac{1}{7} \ln |x+1| +
+            c
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          I'll return to the rational function from example <xref
+          ref="example-pf2" />. 
+        </p>
+        <me>
+          \frac{x^2+1}{(x+1)(x-2)(x-3)} = \frac{\frac{14}{9}}{x+1} -
+          \frac{\frac{25}{9}}{x-2} + \frac{\frac{10}{3}}{x-3}
+        </me>
+        <p>
+          Now the integral breaks up into three integrals. I can pull
+          out the constants, so I get three ordinary linear integrals.
+        </p>
+        <md>
+          <mrow>
+            \int \frac{x^2+1}{(x+1)(x-2)(x-3)} dx \amp = \int
+            \frac{\frac{14}{9}}{x+1} dx - \int
+            \frac{\frac{25}{9}}{x-2} dx + \int
+            \frac{\frac{10}{3}}{x-3} dx
+          </mrow>
+          <mrow>
+            \amp = \frac{14}{9} \int \frac{1}{x+1} dx -
+            \frac{25}{9} \int \frac{1}{x-2} dx + \frac{10}{3} \int
+            \frac{1}{x-3} dx
+          </mrow>
+          <mrow>
+            \amp = \frac{14 \ln |x+1|}{9} - \frac{25\ln |x-2|}{9} +
+            \frac{10 \ln |x-3|}{3} + c
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          I'll return to the rational function from example <xref
+          ref="example-pf3" />. 
+        </p>
+        <me>
+          \frac{x^2-x-1}{(x-1)(x^2-2x+3)} = \frac{\frac{-1}{2}}{x-1}
+          + \frac{\frac{3}{2} x - \frac{1}{2}}{x^2 - 2x +3}
+        </me>
+        <p>
+          Then I integrate. The linear form is familiar and easy by
+          thie point. For the quadratic form, I have to do a bunch
+          more work. There were two basic form in <xref
+          ref="section-rational-functions-basic" /> and I'm going to
+          need them both. I'm going to try to use the substitution
+          form first, where the numerator looks like the derivative of
+          the denominator. I need to carefully work with the algebra
+          to set this up. Let me just focus on this quadratic piece
+          alone. There are some algebraic tricks here that might be
+          new: keep in mind that I'm doing whatever I need to do
+          (adding, multiplying) to construct the desired form for the
+          rational function. 
+        </p>
+        <me>
+          \int \frac{\frac{3}{2} x - \frac{1}{2}}{x^2 - 2x +3} dx
+        </me>
+        <p>
+          The derivative of the denominator is <m>2x - 2</m>. I want
+          to get this expression in the numerator. To do this, I write
+          <m>\frac{3}{2} x = \frac{3}{4} 2x</m>. Then I make a similar
+          adjustment to factor <m>\frac{3}{4}</m> out of the whole
+          expression. 
+        </p>
+        <me>
+          = \int \frac{ \frac{3}{4} 2x - \frac{1}{2}}{x^2-2x+3} dx 
+          = \int \frac{ \frac{3}{4} 2x - \frac{3}{4}
+          \frac{2}{3}}{x^2-2x+3} dx = \frac{3}{4} \int \frac{2x -
+          \frac{2}{3}}{x^2-2x+3} dx 
+        </me>
+        <p>
+          Now the <m>2x</m> is correct, but the constant term in the
+          numerator isn't. It needs to be <m>-2</m>. To make this
+          happen, I add and subtract <m>-2</m> in the numerator. 
+        </p>
+        <me>
+          = \frac{3}{4} \int \frac{2x + (- 2 + 2) - \frac{2}{3})}
+          {x^2-2x+3} dx = \frac{3}{4} \int \frac{(2x - 2) +
+          \frac{4}{3}} {x^2-2x+3} dx
+        </me>
+        <p>
+          Then I split the integral up into two pieces. (Not in the
+          last step, I can pull out the <m>\frac{4}{3}</m> from the
+          numerator, which cancels with the existing fraction outside
+          the integral). 
+        </p>
+        <md>
+          <mrow>
+            \frac{3}{4} \int \frac{(2x - 2) - \frac{4}{3}} {x^2-2x+3}
+            dx \amp = \frac{3}{4} \int \frac{(2x - 2)} {x^2-2x+3} dx
+            + \frac{3}{4} \int \frac{\frac{4}{3}} {x^2-2x+3} dx
+          </mrow>
+          <mrow>
+            \amp = \frac{3}{4} \int \frac{(2x - 2)} {x^2-2x+3} dx + \int
+            \frac{1} {x^2-2x+3} dx
+          </mrow>
+        </md>
+        <p>
+          The first integral now has the correct form, so I can finish
+          that piece. For the second integral, I need to complete the
+          square. 
+        </p>
+        <me>
+          = \frac{3}{4} \ln |x^2-2x+3| + \int \frac{1}{(x-1)^2 +2} dx 
+        </me>
+        <p>
+          Now this second integral has the correct form as well for
+          the arctangent integral, with <m>\alpha - 1</m> and <m>\beta
+          = \sqrt{2}</m>. (Recall that the constant in the denominator
+          is <m>\beta^2</m>, so since the constant is <m>2</m>,
+          <m>\beta</m> must be <m>\sqrt{2}</m>. 
+        </p>
+        <md>
+          <mrow>
+            \amp = \frac{3}{4} \ln |x^2-2x+3| + \int \frac{1}{(x-1)^2
+            +2} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{3}{4} \ln |x^2-2x+3| + \frac{1}{\sqrt{2}}
+            \arctan \left( \frac{x-1}{\sqrt{2}} \right)
+          </mrow>
+        </md>
+        <p>
+          This finishes the quadratic piece. I can now write the
+          entire integral by also doing the familiar linear piece. 
+        </p>
+        <md>
+          <mrow>
+            \amp \int \frac{x^2-x-1}{(x-1)(x^2-2x+3)} dx = \frac{-1}{2} \int
+            \frac{1}{x-1} dx + \int \frac{\frac{3}{2} x +
+            \frac{1}{2}}{x^2 - 2x +3} dx
+          </mrow>
+          <mrow>
+            \amp = \frac{-1}{2} \ln
+            |x-1| + \frac{3}{4} \ln |x^2-2x+3| + \frac{1}{\sqrt{2}}
+            \arctan \left( \frac{x-1}{\sqrt{2}} \right) + c
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          I'll return to the rational function from example <xref
+          ref="example-pf4" />. 
+        </p>
+        <me>
+          \frac{2x-3}{(x-1)(x+2)^2} = \frac{\frac{-1}{9} }{x-1} +
+          \frac{\frac{1}{9}}{x+2} +  \frac{\frac{7}{3}}{(x+2)^2}
+        </me>
+        <p>
+          The integral splits up into three integrals. After pulling
+          out the constants, these directly use the two linear forms
+          from the four basic types of rational integral. 
+        </p>
+        <md>
+          <mrow>
+            \int \frac{2x-3}{(x-1)(x+2)^2}dx \amp = \frac{-1}{9}
+            \int \frac{1}{x-1} dx + \frac{1}{9} \int \frac{1}{x+2}
+            dx + \frac{7}{3} \int \frac{1}{(x+2)^2}dx
+          </mrow>
+          <mrow>
+            \amp = \frac{-1}{9} \ln |x-1| + \frac{1}{9} \ln |x+2| +
+            \frac{7}{3} \frac{-1}{x+2} + c
+          </mrow>
+          <mrow>
+            \amp = \frac{-1}{9} \ln |x-1| + \frac{1}{9} \ln |x+2| -
+            \frac{7}{3(x+2)} + c
+          </mrow>
+        </md>
+      </statement>
+    </example>
+  </subsection>
+</section>

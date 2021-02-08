@@ -30,11 +30,14 @@
       I want to change an arbitrary rational function into a proper
       rational function. To do this with fractions, say turning
       <m>\frac{17}{5}</m> into <m> 5 + \frac{2}{5}</m>, the old
-      technique was long division with remainer. The same is true for
-      polynomials. To reduce a rational function to a proper ration
-      function, I'm going to do long division with remaind. (I'll
+      technique was long division with remainder. The same is true for
+      polynomials.  To reduce a rational function to a proper ration
+      function, I'm going to do long division with remainder. (I'll
       present the long division algorithm, but the synthetic division
-      algorithm also nicely extends to polynomial.)
+      algorithm also nicely extends to polynomial.) The goal is the
+      same, to change an improper fraction like <m>\frac{x^3}{x^2 +
+      1}</m> into something equivalent but proper <m>x - \frac{x}{x^2
+      +1}</m>. 
     </p>
     <p>
       In long division of numbers, each step focused on a place value

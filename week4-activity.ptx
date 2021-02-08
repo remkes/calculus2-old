@@ -619,19 +619,19 @@
           Solve this integral using integation by parts.
         </p>
         <me>
-          \int x^2 \ln (x^2) 
+          \int x^2 \ln (x^2) dx
         </me>
       </statement>
       <solution>
         <p>
           I choose <m>\frac{df}{dx} = x^2</m> and <m>g(x) = \ln (x^2)
           </m>.  The new functions are <m>f(x) = \frac{x^3}{3} </m>
-          and <m>\frac{dg}{dx} = 2x </m>. Then I apply integration by
-          parts. 
+          and <m>\frac{dg}{dx} = \frac{2}{x} </m>. Then I apply
+          integration by parts. 
         </p>
         <md>
           <mrow>
-            \int x^2 \ln (x^2) \amp = \frac{x^3 \ln (x^2)}{3} - \int
+            \int x^2 \ln (x^2) dx \amp = \frac{x^3 \ln (x^2)}{3} - \int
             \frac{2}{x} \frac{x^3}{3} dx 
           </mrow>
           <mrow>

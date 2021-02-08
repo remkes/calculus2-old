@@ -46,7 +46,7 @@
         \amp \frac{x^2-2}{x^2(x-3)} + \frac{1}{(x-1)(x-3)}
       </mrow>
       <mrow>
-        \amp = \frac{(x-1)(x^2-2}{x^2(x-1)(x-3)} +
+        \amp = \frac{(x-1)(x^2-2)}{x^2(x-1)(x-3)} +
         \frac{x^2}{x^2(x-1)(x-3)} = \frac{(x-1)(x^2-2) +
         x^2}{x^2(x-1)(x-3)}
       </mrow>
@@ -87,7 +87,7 @@
       explaing in abstractly, it's much more reasonable to explain it
       through examples. 
     </p>
-    <example>
+    <example xml:id="example-pf1">>
       <statement>
         <me>
           \frac{x+2}{(x+1)(x-6)}
@@ -98,7 +98,7 @@
           the denominator. 
         </p>
         <me>
-          \frac{x+2}{x^2- 5x - 6} = \frac{a}{x-6} + \frac{b}{x+1}
+          \frac{x+2}{(x+1)(x-6)} = \frac{a}{x-6} + \frac{b}{x+1}
         </me>
         <p>
           The problem of partial fractions is to calculate the
@@ -112,9 +112,9 @@
           denominator on the right side. 
         </p>
         <me>
-          \frac{x+2}{x^2- 5x - 6} = \frac{a}{x-6} + \frac{b}{x+1} =
+          \frac{x+2}{(x+1)(x-6)} = \frac{a}{x-6} + \frac{b}{x+1} =
           \frac{a(x+1) + b(x-6)}{(x-6)(x+1)} = \frac{(a+b)x +
-          (a-6b)}{x^2 - 5x -6}
+          (a-6b)}{(x+1)(x-6)}
         </me>
         <p>
           Taking the right side to common denominator makes the
@@ -156,8 +156,8 @@
           decomposition with these values in the numerators.
         </p>
         <me>
-          \frac{x+2}{x^2- 5x - 6} = \frac{\frac{8}{7}}{x-6} +
-          \frac{\frac{-1}{7}}{x-1}
+          \frac{x+2}{(x+1)(x-6)} = \frac{\frac{8}{7}}{x-6} +
+          \frac{\frac{-1}{7}}{x+1}
         </me>
         <p>
           That's the end of the process. The right side is the partial
@@ -199,146 +199,363 @@
         decomposition with known numerators. 
       </p></li>
     </ol>
-    <example>
+    <example xml:id="example-pf2">>
       <statement>
         <me>
-          \int \frac{x^2+1}{x^3+4x^2+x+6} dx
+          \frac{x^2+1}{(x+1)(x-2)(x-3)} 
         </me>
         <p>
-          The denominator has <m>x=-1</m> as a root by inspection.
-          (Our best methods for roots of cubics, for now, is guessing
-          and testing.) The denominator factors as <m>(x+1)(x^2-5x+6)
-          = (x+1)(x-2)(x-3)</m>. There are three (non-repeated)
-          linear factors. Therefore, we look for a partial fractions
-          decomposition of the following form.
-          <me>
-            \frac{x^2+1}{x^3+4x^2+x+6} = \frac{a}{x+1} + \frac{b}{x-2}
-            + \frac{c}{x-3}
-          </me>
+          There are three linear factors in the denominator. I expect
+          the partial fractions decomposition to split up into three
+          pieces, one for each of these linear factors. The numerators
+          will be constant. This is the form I expect: 
         </p>
+        <me>
+          \frac{x^2+1}{(x+1)(x-2)(x-3)} = \frac{a}{x+1} + \frac{b}{x-2}
+          + \frac{c}{x-3}
+        </me>
         <p>
-          The new fractions must be proper, so they only have constant
-          numerators. Our task is to try to find these unknowns
-          <m>a</m>, <m>b</m> and <m>c</m>. This is our general
-          process: we will write the expected expanded form, write the
-          numerators as unknowns and use common denominator try to
-          find the unknown coefficients. Let's proceed with this
-          example.
-          <md>
-            <mrow>
-              \frac{x^2+1}{x^3+4x^2+x+6} \amp = \frac{a}{x+1} +
-              \frac{b}{x-2} + \frac{c}{x-3}
-            </mrow>
-            <mrow>
-              \amp = \frac{a(x-2)(x-3) + b(x+1)(x-3) + c(x+1)(x-2)}
-              {(x+1)(x-2)(x-3)}
-            </mrow>
-            <mrow>
-              \amp = \frac{ax^2 -5ax + 6a + bx^2 - 2bx - 3b + cx^2 -
-              cx - 2x} {(x+1)(x-2)(x-3)}
-            </mrow>
-            <mrow>
-              \amp = \frac{(a+b+c)x^2 + (-5a-2b-c)x + (6a-3b-2c)}
-              {(x+1)(x-2)(x-3)} \
-            </mrow>
-          </md>
+          Now I need to determine the unknowns <m>a</m>, <m>b</m>
+          and <m>c</m>. I do this by taking the partial fractions
+          decomposition with the unknownws and creating a common
+          denominator. For each term with one linear factor in the
+          denominator, I have to multiply by the other two linear
+          factors to produce the common denominator. Then I simplify
+          and group the resulting numerator. 
         </p>
+        <md>
+          <mrow>
+            \frac{x^2+1}{(x+1)(x-2)(x-3)} \amp = \frac{a}{x+1} +
+            \frac{b}{x-2} + \frac{c}{x-3}
+          </mrow>
+          <mrow>
+            \amp = \frac{a(x-2)(x-3) + b(x+1)(x-3) + c(x+1)(x-2)}
+            {(x+1)(x-2)(x-3)}
+          </mrow>
+          <mrow>
+            \amp = \frac{ax^2 -5ax + 6a + bx^2 - 2bx - 3b + cx^2 -
+            cx - 2c} {(x+1)(x-2)(x-3)}
+          </mrow>
+          <mrow>
+            \frac{x^2+1}{(x+1)(x-2)(x-3)} \amp = \frac{(a+b+c)x^2 +
+            (-5a-2b-c)x + (6a-3b-2c)} {(x+1)(x-2)(x-3)}
+          </mrow>
+        </md>
         <p>
-          Since we have equality and the denominators are the same,
-          the numerators must also be the same.
-          <me>
-            x^2 + 1 = x^2 + 0x + 1= (a+b+c)x^2 + (-5a-2b-c)x +
-            (6a-3b-2c)
-          </me>
+          In the above equation, the denominators are the same, so the
+          numerators must be as well. I write the equation of the
+          numerators. 
         </p>
+        <me>
+          x^2 + 1 = x^2 + 0x + 1= (a+b+c)x^2 + (-5a-2b-c)x +
+          (6a-3b-2c)
+        </me>
         <p>
           Two polynomials are only equal if all their coefficients are
-          equal, so we can change this into a system of three
-          equations. (We will always get a linear system here, which
-          is convenient for those who know linear algebra).
-          <md>
-            <mrow>
-              a+b+c \amp = 1
-            </mrow>
-            <mrow>
-              -5a-2b-c \amp = 0
-            </mrow>
-            <mrow>
-              6a-3b-2c \amp = 1
-            </mrow>
-          </md>
+          equal, so I get three equations, one for each coefficient. I
+          write the system of equations. 
         </p>
+        <md>
+          <mrow>
+            a+b+c \amp = 1
+          </mrow>
+          <mrow>
+            -5a-2b-c \amp = 0
+          </mrow>
+          <mrow>
+            6a-3b-2c \amp = 1
+          </mrow>
+        </md>
         <p>
-          This is a system of linear equations. There are many ways
-          to solve such system, but for now we can isolate and
-          replace.
-          <md>
-            <mrow>
-              a \amp = 1-b-c
-            </mrow>
-            <mrow>
-              \amp \text{ Substitute for \(a\) into the second
-              equation }
-            </mrow>
-            <mrow>
-              -5(1-b-c) - 2b - c \amp = 0
-            </mrow>
-            <mrow>
-              -5+5b+5c - 2b -c \amp = 0
-            </mrow>
-            <mrow>
-              3b + 4c \amp = 5
-            </mrow>
-            <mrow>
-              b \amp = \frac{5-4c}{3}
-            </mrow>
-            <mrow>
-              \amp \text{ Substitute for \(a\) and \(b\) into third
-              equation }
-            </mrow>
-            <mrow>
-              6a - 3b -2c \amp = 1
-            </mrow>
-            <mrow>
-              6(1-b-c) - 3b - 2c \amp = 1
-            </mrow>
-            <mrow>
-              6-6b-6c-3b-2c \amp = 2
-            </mrow>
-            <mrow>
-              -9b - 8c \amp = 5
-            </mrow>
-            <mrow>
-              9 \frac{5-4c}{3} + 8 c \amp = 5
-            </mrow>
-            <mrow>
-              45 - 36c + 24 c \amp = 15
-            </mrow>
-            <mrow>
-              -12 c \amp = -30 \implies c = \frac{10}{3}
-            </mrow>
-            <mrow>
-              \amp \text{ Then substitute back }
-            </mrow>
-            <mrow>
-              b \amp = \frac{5 - 4 \frac{10}{3}}{3} = \frac{15-40}{9}
-              = \frac{-25}{9}
-            </mrow>
-            <mrow>
-              a = 1 - b - c \amp = 1 + \frac{25}{9} - \frac{10}{3} =
-              \frac{9+25-30}{9} = \frac{14}{9}
-            </mrow>
-          </md>
+          I solve the system by several steps of isolating and
+          replacing variables. 
         </p>
+        <md>
+          <mrow>
+            a \amp = 1-b-c
+          </mrow>
+        </md>
+        <p>
+          I substitute for <m>a</m> into the second equation. 
+        </p>
+        <md>
+          <mrow>
+            -5(1-b-c) - 2b - c \amp = 0
+          </mrow>
+          <mrow>
+            -5+5b+5c - 2b -c \amp = 0
+          </mrow>
+          <mrow>
+            3b + 4c \amp = 5
+          </mrow>
+          <mrow>
+            b \amp = \frac{5-4c}{3}
+          </mrow>
+        </md>
+        <p>
+          I substitute for <m>a</m> and <m>b</m> into third equation.
+        </p>
+        <md>
+          <mrow>
+            6a - 3b -2c \amp = 1
+          </mrow>
+          <mrow>
+            6(1-b-c) - 3b - 2c \amp = 1
+          </mrow>
+          <mrow>
+            6-6b-6c-3b-2c \amp = 2
+          </mrow>
+          <mrow>
+            -9b - 8c \amp = 5
+          </mrow>
+          <mrow>
+            9 \frac{5-4c}{3} + 8 c \amp = 5
+          </mrow>
+          <mrow>
+            45 - 36c + 24 c \amp = 15
+          </mrow>
+          <mrow>
+            -12 c \amp = -30 \implies c = \frac{10}{3}
+          </mrow>
+        </md>
+        <p>
+          Having solve for <m>c</m>, I substitute back in to the
+          previous equations to determine <m>b</m> and <m>c</m>. 
+        </p>
+        <md>
+          <mrow>
+            b \amp = \frac{5 - 4 \frac{10}{3}}{3} = \frac{15-40}{9}
+            = \frac{-25}{9}
+          </mrow>
+          <mrow>
+            a = 1 - b - c \amp = 1 + \frac{25}{9} - \frac{10}{3} =
+            \frac{9+25-30}{9} = \frac{14}{9}
+          </mrow>
+        </md>
         <p>
           The values <m>a = \frac{14}{9}</m>, <m>b = \frac{-25}{9}</m>
           and <m>c = \frac{10}{3}</m> are the appropriate
-          denominators, we conclude that
-          <me>
-            \frac{x^2+1}{x^3-4x^2+x+6} = \frac{\frac{14}{9}}{x+1} -
-            \frac{\frac{25}{9}}{x-2} + \frac{\frac{10}{3}}{x-3}
-          </me>.
+          denominators. This lets me finish the partial fraction
+          decomposition.
         </p>
+        <me>
+          \frac{x^2+1}{(x+1)(x-2)(x-3)} = \frac{\frac{14}{9}}{x+1} -
+          \frac{\frac{25}{9}}{x-2} + \frac{\frac{10}{3}}{x-3}
+        </me>
+      </statement>
+    </example>
+    <example xml:id="example-pf3">
+      <statement>
+        <p>
+          Here is an example with an irreducible factor.
+        </p>
+        <me>
+          \frac{x^2-x-1}{(x-1)(x^2-2x+3} 
+        </me>
+        <p>
+          The discriminant of the quadratic <m>x^2 - 2x + 3</m>
+          is <m>-8</m>, so it is irreducible and cannot be factored
+          any further. Therefore, I am looking for a partial
+          fraction decomposition of the following form.
+          <me>
+            \frac{x^2- x - 1}{(x-1)(x^2-2x+3)} = \frac{a}{x-1} +
+            \frac{bx+c}{x^2-2x+3}
+          </me>
+        </p>
+        <p>
+          I take the right side to common denominator.
+        </p>
+        <md>
+          <mrow>
+            \frac{x^2- x - 1}{(x-1)(x^2-2x+3)} \amp = \frac{a}{x-1} +
+            \frac{bx+c}{x^2-2x+3}
+          </mrow>
+          <mrow>
+            \amp = \frac{a(x^2 - 2x + 3) +
+            (bx+c)(x-1)}{(x-1)(x^2-2x+3)}
+          </mrow>
+          <mrow>
+            \amp = \frac{ax^2 - 2ax + 3a + bx^2 - bx + cx
+            -c}{(x-1)(x^2-2x+3)}
+          </mrow>
+          <mrow>
+            \amp = \frac{(a+b)x^2 + (-2a-b+c)x +
+            (3a-c)}{(x-1)(x^2-2x+3)}
+          </mrow>
+        </md>
+        <p>
+          By comparing the coefficients the polynomials in the
+          numerators, I get a system with <m>a+b=1</m>, <m>-2-b+c=-1</m> and
+          <m>3a-c=-1</m>. I can use the first and third equations to
+          write everything in terms of <m>a</m>. That gives <m>b =
+          1-a</m> and <m>c = 3a+1</m>. Then I replace both <m>b</m>
+          and <m>c</m> in the second equation.
+        </p>
+        <md>
+          <mrow>
+            -2a + (1-a) + (3a + 1) \amp = -1
+          </mrow>
+          <mrow>
+            -2a -1 + a + 3a + 1 \amp = -1
+          </mrow>
+          <mrow>
+            2a \amp = -1 \implies a = \frac{-1}{2}
+          </mrow>
+          <mrow>
+            b \amp = 1 - \frac{-1}{2} = \frac{3}{2}
+          </mrow>
+          <mrow>
+            c \amp = 3 \frac{-1}{2} + 1 = \frac{-1}{2}
+          </mrow>
+        </md>
+        <p>
+          This finishes the partial fraction decomposition.
+        </p>
+        <me>
+          \frac{x^2-x-1}{(x-1)(x^2-2x+3)} = \frac{\frac{-1}{2}}{x-1} +
+          \frac{\frac{3}{2} x - \frac{1}{2}}{x^2 - 2x +3}
+        </me>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="subsection-pf-multiplicity">
+    <title>Multiple Factors</title>
+    <p>
+      So far, I've one examples with linear factors an irreducible
+      quadratic factors. The only think I haven't done is examples
+      that have factors with multiplicity. For the needs of this
+      course, I'm only going to worry about linear factor with
+      multiplicity. (There is an equivalent process for irreducible
+      quadratic factors with multiplicity, but seeing integral with
+      multiple quadratic factors in the denominator is rare enought
+      that I feel it's reasonable to skip this piece.)
+    </p>
+    <p>
+      For, let me assume I have a denominator factor <m>(x-\alpha)^n</m>
+      for some multiplicity <m>n \geq 2</m>. To turn this into
+      partial fractions, I need a decomposition that includes a sum of
+      terms with various powers of this linear denominator.
+    </p>
+    <me>
+      \frac{a_1}{(x-\alpha)} + 
+      \frac{a_2}{(x-\alpha)^2} + 
+      \frac{a_3}{(x-\alpha)^3} + \ldots + 
+      \frac{a_n}{(x-\alpha)^n} 
+    </me>
+    <p>
+      This gives enough piece to put together the original rational
+      function. If I don't have all these terms, I won't have enough
+      information to solve the system of equations. Let me
+      illustrate this method with an example. 
+    </p>
+    <example xml:id="example-pf4">
+      <statement>
+        <me>
+          \frac{2x-3}{(x-1)(x+2)^2}
+        </me>
+        <p>
+          To account for the repeated root, I look for a partial
+          fraction decomposition of the following form.
+        </p>
+        <md>
+          <mrow>
+            \frac{2x-3}{(x-1)(x+2)^2} \amp = \frac{a}{x-1} +
+            \frac{b}{x+2} + \frac{c}{(x+2)^2}
+          </mrow>
+        </md>
+        <p>
+          As always, I take the right side to common denominator, so
+          that I can compare numerators and make a system of
+          equations.
+        </p>
+        <md>
+          <mrow>
+            \frac{2x-3}{(x-1)(x-2)^2}\amp = \frac{a(x+2)^2 +
+            b(x+2)(x-1) + c(x-1)} {(x-1)(x-2)^2}
+          </mrow>
+          <mrow>
+            \amp = \frac{ax^2 + 4ax + 4a + bx^2 + bx - 2b + cx - c}
+            {(x-1)(x-2)^2}
+          </mrow>
+          <mrow>
+            \amp = \frac{(a+b)x^2 + (4a+b+c)x + (4a-2b-c)}
+            {(x-1)(x-2)^2}
+          </mrow>
+        </md>
+        <p>
+          I compare the coefficients of the numerators to get the
+          system of equations.
+          </p>
+        <md>
+          <mrow>
+            a+b \amp = 0
+          </mrow>
+          <mrow>
+            4a + b + c \amp = 2
+          </mrow>
+          <mrow>
+            4a-2b-c \amp = -3
+          </mrow>
+        </md>
+        <p>
+          I solve the system. Start with the first equation is nice,
+          because I can replace all the <m>b</m> coefficients quickly. 
+        </p>
+        <md>
+          <mrow>
+            b \amp = -a
+          </mrow>
+        </md>
+        <p>
+          Then I substitute this into the second equation.
+        </p>
+        <md>
+          <mrow>
+            4a + (-a) + c \amp = 2
+          </mrow>
+          <mrow>
+            3a + c \amp = 2
+          </mrow>
+          <mrow>
+            a \amp = \frac{2-c}{3}
+          </mrow>
+        </md>
+        <p>
+          Then I substitute this into the third equation. After
+          solving for <m>c</m>, I can replace in previous equations to
+          find <m>b</m> and finally <m>a</m>. 
+        </p>
+        <md>
+          <mrow>
+            4a - 2b - c \amp = -3
+          </mrow>
+          <mrow>
+            4 \frac{2-c}{3} - 2 \frac{c-2}{3} - c \amp = -3
+          </mrow>
+          <mrow>
+            8 - 4x - 2c + 4 - 3c \amp = -9
+          </mrow>
+          <mrow>
+            -9c \amp = -21
+          </mrow>
+          <mrow>
+            c \amp = \frac{7}{3}
+          </mrow>
+          <mrow>
+            a \amp = \frac{2 - \frac{7}{3}}{3} = \frac{-1}{9}
+          </mrow>
+          <mrow>
+            b \amp = -a = \frac{1}{9}
+          </mrow>
+        </md>
+        <p>
+          The system is solved, so I can write the partial fraction
+          decomposition.
+        </p>
+        <me>
+          \frac{2x-3}{(x-1)(x+2)^2} = \frac{\frac{-1}{9}}{x-1} +
+          \frac{\frac{1}{9}}{x+2} + \frac{\frac{7}{3}}{(x+2)^2}
+        </me>
       </statement>
     </example>
   </subsection>
