@@ -41,3 +41,80 @@
     </activity>
   </subsection>
 </section>
+
+
+  \item Calculate this integral. Show and annotate the various steps
+  in the process. (This is a very long question, so here is some
+  guidance. After a trig substitution, you will get a
+  trig function cubed. Write this $f^3$ as $f^2 \cdot f$ and use 
+  integration by parts. After the integration by parts, change
+  everything into sine and cosine and see if a substitution will work.) (8) 
+  \begin{equation*}
+    \int \frac{x^2}{\sqrt{x^2-9}} dx \\
+  \end{equation*}
+  The precense of the square root indicates that a trig substitution
+  will be the best approach. Consulgin the table, I need a secant
+  substitution. I proceed to setup the pieces of the substitution.  
+  \begin{align*}
+    x & = 3 \sec \theta \\
+    dx & = 3 \sec \theta \tan \theta d \theta \\
+    \sqrt{x^2 - 9} & = \sqrt{9\sec^2 \theta - 9} = 3\sqrt{\sec^2
+    \theta - 1} = 3 \tan \theta 
+  \end{align*}
+  Then I do the substition. Afer doing the substitution, I simplify
+  but leave everything in terms of secant and tangent. 
+  \begin{align*}
+    \int \frac{x^2}{\sqrt{x^2-9}} dx \\
+    & = \int \frac{9 \sec^2 \theta}{3 \tan \theta} 3 \sec \theta
+    \tan \theta d \theta \\
+    & = 9 \int \sec^3 \theta d \theta 
+    & = 9 \int \sec^2 \theta \sec \theta d \theta 
+  \end{align*}
+  I'm going to try integration by parts with these choices for the two
+  pieces of the product.
+  \begin{align*}
+    g(x)  & = \sec \theta \\
+    \frac{df}{dx}  & = \sec^2 \theta \\
+    \frac{dg}{dx}  & = \sec \theta \tan \theta \\
+    f(x) = \tan \theta 
+  \end{align*}
+  I made those choices for integration by parts specifically because
+  $\sec^2 \theta$ has an easy antiderivative. Now I proceed with
+  integration by parts. In the remaining integral, I'll change
+  everything into sine and cosine, and then even further, changing
+  most of the cosines to sines using $\sin^2 \theta + \cos^2 \theta =
+  1$. (The term without an integral is finished, so I won't adjust it
+  while I adjust the remaining integral.)
+  \begin{align*}
+    9 \int \sec^2 \theta \sec \theta d \theta 
+    & = 9 \sec \theta \tan \theta - 9 \int \sec \theta \tan^2
+    \theta d \theta = 9 \sec \theta \tan \theta - 9 \int
+    \frac{\sin^2 \theta}{\cos^3 \theta} d \theta \\
+    & = 9 \sec \theta \tan \theta - 9 \int \frac{\sin^2
+    \theta}{\cos^4 \theta} \cos \theta d \theta = 9 \sec \theta
+    \tan \theta - - 9 \int \frac{\sin^2 \theta}{(1-\sin^2
+    \theta)^2} \cos \theta d \theta 
+  \end{align*}
+  Then everything is an expression in sine except for one cosine. A
+  substitution using sine here should work. I'll setup the
+  substitution. 
+  \begin{align*}
+    w & = \sin \theta \\
+    dw & = \cos \theta d \theta \\
+    & = 9 \sec \theta \tan \theta - 9 \int \frac{w}{(1-w^2)^2} dw \\
+    y & = 1-w^2 \\
+    dy & = -2w dw \implies \frac{-1}{2} dy = w dw \\
+    & = 9 \sec \theta \tan \theta - 9 \frac{-1}{2} \int
+\frac{1}{y} dy \\
+& = 9 \sec \theta \tan \theta + \frac{9}{2} \ln |y| + C \\
+& = 9 \sec \theta \tan \theta + \frac{9}{2} \ln |1-w^2| + C \\
+& = 9 \sec \theta \tan \theta + \frac{9}{2} \ln |1-\sin^2
+\theta| + C \\
+& = 9 \sec \theta \tan \theta + \frac{9}{2} \ln |1-\sin^2
+\theta| + C \\
+& = 9 \sec \theta \tan \theta + \frac{9}{2} \ln |\cos^2 \theta| + C \\
+& = 3 \sec \theta 3 \tan \theta + \frac{9}{2} \ln \left|
+\frac{1}{\sec^2 \theta} \right| + C \\
+& = x \sqrt{x^2-9} + \frac{9}{2} \ln \left|
+\frac{9}{x^2} \right| + C \\
+\end{align*}

@@ -373,7 +373,7 @@
         <md>
           <mrow>
             \int x^2 \sin x dx \amp = -x^2 \cos x + 2x \sin x - \int 2
-            \sin x 
+            \sin x dx 
           </mrow>
           <mrow>
             \amp = -x^2 \cos x + 2x \sin x + 2 \cos x + C 
