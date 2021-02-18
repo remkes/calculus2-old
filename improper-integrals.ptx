@@ -163,7 +163,7 @@
     <example>
       <statement>
         <me>
-          \int_1^\infty \frac{1}{x} 
+          \int_1^\infty \frac{1}{x} dx
         </me>
         <p>
           This is very similar to the previous example, but the
@@ -191,7 +191,7 @@
           the difference is enough to actually produce infinite area.
         </p>
         <figure xml:id="figure-improper-integral3">
-          <caption>Another Improper Integral</caption>
+          <caption>Two Decaying Functions</caption>
           <image xml:id="figure44" width="80%">
             <asymptote>
              size(12cm,6cm,IgnoreAspect);
