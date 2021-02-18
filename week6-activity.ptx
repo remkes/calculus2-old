@@ -1,17 +1,1046 @@
 <section xml:id="section-week6-activity">
   <title>Week 6 Activity</title>
-  <subsection xml:id="subsection-activity-">
-    <title>Title</title>
+  <subsection xml:id="subsection-activity-trig-integrals">
+    <title>Trigonometric Integrals</title>
     <activity>
       <statement>
         <p>
-          Question
+          Calculate this integral.
         </p>
+        <me>
+          \int \sin^3 x \cos^4 x dx 
+        </me>
       </statement>
       <solution>
         <p>
-          Solution
+          The power of sine is odd. Therefore, if I seperate just
+          <m>\sin x</m>, I should be able to setup a cosine
+          substitution.
         </p>
+        <me>
+          \int \sin^3 x \cos^4 x dx = \int \sin^2x
+          \cos^4 x \sin x dx .
+        </me>
+        <p>
+          Then I change everything into cosine, except the one
+          seperate sine function.
+        </p>
+        <md>
+          <mrow>
+            \amp = \int (1-\cos^2 x) \cos^4 x \sin x dx 
+          </mrow>
+        </md>
+        <p>
+          Then I use a cosine substitution. 
+        </p>
+        <md>
+          <mrow>
+            u \amp = \cos x 
+          </mrow>
+          <mrow>
+            du \amp = - \sin x dx 
+          </mrow>
+        </md>
+        <p>
+          Using this substitution gives a polynomial integral. I can
+          split it up using linearity and evalute each piece. When I
+          am done that, I reverse the substitution. 
+        </p>
+        <md>
+          <mrow>
+            \int \sin x (1-\cos^2 x) \cos^4 x dx \amp = - \int
+            (1-u^2)u^4 du 
+          </mrow>
+          <mrow>
+            \amp = \int u^6 du - \int u^4 du = \frac{u^7}{7} -
+            \frac{u^5}{5} + c 
+          </mrow>
+          <mrow>
+            \amp = \frac{\cos^7 x}{7} - \frac{\cos^5 x}{5} + c 
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this integral.
+        </p>
+        <me>
+          \int \sin^4 x \cos^2 x dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          Both powers are even, so a substitution will not work
+          directly. Instead, I use double angle identities to reduce
+          the exponents. Expansion of the resulting binomial terms
+          produces four different integrals.
+        </p>
+        <md>
+          <mrow>
+            \int \sin^4 x \cos^2 x dx \amp = \int \left( \frac{1 -
+            \cos 2x}{2} \right)^2 \left( \frac{1 + \cos 2x}{2} \right)
+            dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{8} \int (1 - 2 \cos (2x) + \cos^2
+            (2x))(1+\cos (2x)) dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{8} \int 1 - \cos (2x) - \cos^2 (2x) + \cos^3
+            (2x) dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{8} \left[ \int 1 dx - \int \cos (2x) dx -
+            \int \cos^2 (2x) dx + \int \cos^3 (2x) dx \right] 
+          </mrow>
+        </md>
+        <p>
+          The first two integrals are done directly with known
+          antiderivatives. The third needs another double angle
+          identity. In the fourth, since the power is odd, I can
+          seperate one cosine function, change everything else to
+          sine, and use a sine substitution. The specific substitution
+          here is <m>u = \sin (2x)</m> with <m>du = 2 \cos (2x) dx
+          </m>, or <m>\frac{1}{2} du = \cos (2x) dx</m>.
+        </p>
+        <md>
+          <mrow>
+            \amp = \frac{1}{8} \left[ x - \frac{\sin (2x)}{2} - \int
+            \left( \frac{ 1 + \cos (4x)}{2} \right) dx + \int \cos^2 (2x)
+            \cos (2x) dx \right] 
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{8} \left[ x - \frac{\sin (2x)}{2} -
+            \frac{1}{2} \int 1 dx - \frac{1}{2} \int \cos (4x) dx + \int
+            (1-\sin^2 (2x)) \cos (2x) dx \right]
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{8} \left[ x - \frac{\sin (2x)}{2} -
+            \frac{x}{2} - \frac{\sin (4x)}{8} + \frac{1}{2} \int
+            (1-u^2) du \right] 
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{8} \left[ x - \frac{\sin (2x)}{2} -
+            \frac{x}{2} - \frac{\sin (4x)}{8} + \frac{1}{2} \int du -
+            \frac{1}{2} \int u^2 du \right] 
+          </mrow>
+        </md>
+        <p>
+          From here, I sipmlify and group terms as I can. I also
+          finish the <m>u</m> integral with known antiderivatives from
+          the power rule and then reverse the substitution. 
+        </p>
+        <md>
+          <mrow>
+            \amp = \frac{1}{8} \left[ x - \frac{\sin (2x)}{2} -
+            \frac{x}{2} - \frac{\sin (4x)}{8} + \frac{u}{2} -
+            \frac{u^3}{6} \right] + c
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{8} \left[ x - \frac{\sin (2x)}{2} -
+            \frac{x}{2} - \frac{\sin (4x)}{8} + \frac{\sin (2x)}{2} -
+            \frac{\sin^3 (2x)}{6} \right] + c
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{8} \left[ \frac{x}{2} - \frac{\sin (4x)}{8} -
+            \frac{\sin^3 (2x)}{6} \right] + c
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this integral.
+        </p>
+        <me>
+          \int \tan^3 x \sec^4 x dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          There is an even power of secant, so a tangent substitution
+          should work well after isolating <m>\sec^2 x</m> and
+          turning the remaining secant terms into tangent terms. The
+          resulting <m>u</m> integral is a reasonable polynomial
+          integral. After completing it, I reverse the substitution.
+        </p>
+        <md>
+          <mrow>
+            \int \tan^3 x \sec^4 x dx \amp = \int \tan^3 x (1+\tan^2
+            x) \sec^2 x dx 
+          </mrow>
+          <mrow>
+            u \amp = \tan x \implies du = \sec^2 x dx 
+          </mrow>
+          <mrow>
+            \int \tan^3 x \sec^4 x dx \amp = \int u^3 (1+u^2) du =
+            \int u^3 du + \int u^5 du 
+          </mrow>
+          <mrow>
+            \amp = \frac{u^4}{4} + \frac{u^6}{6} + c =
+            \frac{\tan^4}{4} + \frac{\tan^6}{6} + c 
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this integral.
+        </p>
+        <me>
+          \int \sec^6 x dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          There is an even power of secant, so a tangent substitution
+          should work well after isolateing <m>\sec^2 x</m> and
+          turning the remaining secant terms into tangent terms. After
+          the tangent substitution, the resulting integral is a
+          polynomial integral. After completing the polynomial
+          integral, I reverse the substitution.
+        </p>
+        <md>
+          <mrow>
+            \int \sec^6 x dx \amp = \int (1+\tan^2 x)^2 \sec^2 x dx 
+          </mrow>
+          <mrow>
+            u \amp = \tan x \implies du = \sec^2 x dx 
+          </mrow>
+          <mrow>
+            \int \sec^6 x dx \amp = \int (1+u^2)^2 du = \int (1 + 2u^2
+            + u^4) du
+          </mrow>
+          <mrow>
+            \amp = \int du + 2 \int u^2 du + \int u^4 du 
+          </mrow>
+          <mrow>
+            \amp = u + \frac{2u^3}{3} + \frac{u^5}{5} + c = \tan x +
+            \frac{2 \tan^3 x}{3} + \frac{\tan^5 x}{5} + c 
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this integral.
+        </p>
+        <me>
+          \int_0^{\frac{\pi}{3}} \tan x \sec^6 x dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          There is an even power of secant, so I can isolate <m>\sec^2
+          x</m> and turn the rest into tangent terms. Then a tangent
+          substitution works. Since this is a definite integral, I'll
+          also change the bounds of the substitution, so that I can
+          finish the polynomial integral with the new bounds and don't
+          have to do an inverse substitution. 
+        </p>
+        <md>
+          <mrow>
+            \int_0^{\frac{\pi}{3}} \tan x \sec^6 x dx \amp =
+            \int_0^{\frac{\pi}{3}} \tan x (1+\tan^2 x)^2 \sec^2 x dx 
+          </mrow>
+          <mrow>
+            u \amp = \tan x \implies du = \sec^2 x dx 
+          </mrow>
+          <mrow>
+            x \amp = 0 \implies u = 0 
+          </mrow>
+          <mrow>
+            x \amp = \frac{\pi}{3} \implies u = \tan \frac{\pi}{3} =
+            \sqrt{3}
+          </mrow>
+          <mrow>
+            \amp = \int_0^{\sqrt{3}} u(1+u^2)^2 du = \int_0^{\sqrt{3}}
+            u(1+2u^2 + u^4) du
+          </mrow>
+          <mrow>
+            \amp = \int_0^{\sqrt{3}} u du + \int_0^{\sqrt{3}} 2u^3 du
+            + \int_0^{\sqrt{3}} u^5 du
+          </mrow>
+          <mrow>
+            \amp = \frac{u^2}{2} + \frac{u^4}{2} +
+            \frac{u^6}{6} \Bigg|_0^{\sqrt{3}} 
+          </mrow>
+          <mrow>
+            \amp = \frac{3}{2} + \frac {9}{2} + \frac{27}{6} =
+            \frac{63}{6} = \frac{31}{2}
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="subsection-activity-trig-subs">
+    <title>Trigonometric Substitutions</title>
+    <activity>
+      <statement>
+        <p>
+          Calculate this integral using a trig substitution. (Hint:
+          after the substitution, write everything in terms of sine,
+          break up the denominator, and then write <m>\frac{1}{\sin
+          \theta}</m> as <m>\csc \theta</m>. Then you can use
+          antiderivatives from the tables for both of the resulting
+          trig integrals.) 
+        </p>
+        <me>
+          \int \frac{\sqrt{9-x^2}}{x} dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          This is a sine substitution. I calculate the various pieces
+          of the substitution.
+        </p>
+        <md>
+          <mrow>
+            x \amp = 3 \sin \theta 
+          </mrow>
+          <mrow>
+            dx \amp = 3 \cos \theta d \theta 
+          </mrow>
+          <mrow>
+            \sqrt{9-x^2} \amp = \sqrt{9 - 9 \sin^2 \theta} = 3
+            \sqrt{1-\sin^2 \theta}
+          </mrow>
+          <mrow>
+            \amp = 3 \sqrt{\cos^2 \theta} = 3 \cos \theta 
+          </mrow>
+        </md>
+        <p>
+          Then I use the pieces to change all the parts of the
+          original integral into <m>\theta</m>. I simplify the result
+          first by writing everything in terms of sine and then by
+          split up the fraction and writing everything in the
+          numerator. 
+        </p>
+        <md>
+          <mrow>
+            \int \frac{\sqrt{9-x^2}}{x} dx \amp = \int \frac{3 \cos
+            \theta}{3 \sin \theta} 3 \cos \theta d \theta 
+          </mrow>
+          <mrow>
+            \amp = 3 \int \frac{\cos^2 \theta}{\sin \theta} d \theta =
+            3 \int \frac{1 - \sin^2 \theta}{\sin \theta} d \theta 
+          </mrow>
+          <mrow>
+            \amp = 3 \int \frac{1}{\sin theta}  - \frac{\sin^2
+            \theta}{\sin \theta} d \theta 
+            = 3 \int \csc \theta d \theta  - 3 \int \sin \theta d
+            \theta 
+          </mrow>
+        </md>
+        <p>
+          This is a bit unusual (as I noted in the hint). If I do the
+          correct rearrangements, I don't actually need any other
+          substitution techniques; I can just use the antiderivatives
+          for <m>\sin \theta</m> and <m>\csc \theta</m> from the
+          tables. 
+        </p>
+        <me>
+          3 \int \csc \theta d \theta - 3 \int \sin \theta d \theta =
+          3 \ln |\csc \theta - \cot \theta| + 3 \cos \theta + c
+        </me>
+        <p>
+          To reverse the substitution, I need to write everything in a
+          form that I can substitute backward. I change the cosecant
+          and cotangent back to sine and cosine. I also multiply and
+          divide by <m>3</m> in both fractions, since my substitution
+          pieces all have <m>3</m> in them.
+        </p>
+        <md>
+          <mrow>
+            \amp = 3 \ln \left| \frac{1}{\sin \theta} - \frac{\cos
+            \theta}{\sin \theta} \right| +  3 \cos \theta + c 
+          </mrow>
+          <mrow>
+            \amp = 3 \ln \left| \frac{3}{3 \sin \theta} - \frac{ 3
+            \cos \theta}{3 \sin \theta} \right| + 3 \cos \theta  + c 
+          </mrow>
+        </md>
+        <p>
+          Now everything looks like something from the substitution
+          calculations. I reverse the substitution. 
+        </p>
+        <me>
+          \int \frac{\sqrt{9-x^2}}{x} dx = 3 \ln \left| \frac{3 -
+          \sqrt{9-x^2}}{x} \right| + \sqrt{9-x^2} + c
+        </me>
+      </solution>
+     </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this integral using a trig substitution. (Hint:
+          after the substitution, you can write the sine terms as
+          cosecant terms and look for a known antiderivative from the
+          tables.) 
+        </p>
+        <me>
+          \int \frac{1}{x^2 \sqrt{3-3x^2}} dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I need to do a little algebra before this is in the correct
+          form. I can take the <m>3</m> out of the square root (and
+          also out of the integral, since it is constant). 
+        </p>
+        <md>
+          <mrow>
+            \int \frac{1}{x^2 \sqrt{3-3x^2}} dx \amp =
+            \frac{1}{\sqrt{3}} \int \frac{1}{x^2 \sqrt{1-x^2}} dx
+          </mrow>
+        </md>
+        <p>
+          Now this is a sine substitution. I calculate the various
+          pieces of the substitution.
+        </p>
+        <md>
+          <mrow>
+            x \amp = \sin \theta 
+          </mrow>
+          <mrow>
+            dx \amp = \cos \theta d\theta 
+          </mrow>
+          <mrow>
+            \sqrt{1-x^2} \amp = \cos \theta  
+          </mrow>
+        </md>
+        <p>
+          Now I replace all the pieces of the original integral with
+          the trig substitution pieces. Then I can cancel out the
+          cosine term. 
+        </p>
+        <md>
+          <mrow>
+            \frac{1}{\sqrt{3}} \int \frac{1}{x^2\sqrt{1-x^2}} dx \amp
+            = \frac{1}{\sqrt{3}} \int \frac{1}{\sin^2 \theta \cos
+            \theta} \cos \theta d\theta
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{\sqrt{3}} \int \frac{1}{\sin^2 \theta}
+            d\theta = \frac{1}{\sqrt{3}} \int \csc^2 \theta d \theta 
+          </mrow>
+        </md>
+        <p>
+          I get the integral of cosecant squared. This happens to have 
+          a basic antiderivatives in the tables. After using this
+          antiderivative, I write the result as sines and
+          cosines to reverse the substitution. I will need to multiply
+          and divide by <m>3</m> to make sure the expressions match the
+          substitution. Then I reverse the substitution.
+        </p>
+        <md>
+          <mrow>
+            \int \frac{1}{x^2 \sqrt{3-3x^2}} dx \amp =
+            \frac{1}{\sqrt{3}} (- \cot \theta)  + c = \frac{-\cos
+            \theta}{\sqrt{3} \sin \theta} + c 
+          </mrow>
+          <mrow>
+            \amp = \frac{-3\cos \theta}{\sqrt{3} 3\sin \theta} + c =
+            \frac{-\sqrt{1-x^2}}{\sqrt{3} x} + c 
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this integral using a trig substitution.
+        </p>
+        <me>
+          \int \frac{\sqrt{x^2-6}}{x} dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          This is a secant substitution. I calculate the various
+          piece of the substitution. 
+        </p>
+        <md>
+          <mrow>
+            x \amp = \sqrt{6} \sec \theta 
+          </mrow>
+          <mrow>
+            dx \amp = \sqrt{6} \sec \theta \tan \theta d \theta 
+          </mrow>
+          <mrow>
+            \sqrt{x^2-6} \amp = \sqrt{6} \tan \theta  
+          </mrow>
+          <mrow>
+            \frac{x}{\sqrt{6}} \amp = \sec \theta \implies
+            \arcsec \left( \frac{x}{\sqrt{6}} \right) = \theta
+          </mrow>
+        </md>
+        <p>
+          Then I replace all the piece of the original integral
+          with the piece from the substitution. I can cancel of a
+          secant and one <m>\sqrt{6}</m> to simplify. 
+        </p>
+        <md>
+          <mrow>
+            \int \frac{\sqrt{x^2-6}}{x} dx \amp = \int \frac{\sqrt{6}
+            \tan \theta}{\sqrt{6} \sec \theta} \sqrt{6} \sec \theta
+            \tan \theta d \theta 
+          </mrow>
+          <mrow>
+            \amp = \sqrt{6} \int \tan^2 \theta d \theta 
+          </mrow>
+        </md>
+        <p>
+          I can use the square identity for tangent and secant to
+          write this as two reaonsable integrals (Remember that
+          <m>\sec^2 \theta</m> has a nice antiderivative in the
+          table.) 
+        </p>
+        <md>
+          <mrow>
+            \amp = \sqrt{6} \int \tan^2 \theta d \theta = \sqrt{6}
+            \int (\sec^2 \theta - 1) d \theta 
+          </mrow>
+          <mrow>
+            \amp = \sqrt{6} \int \sec^2 \theta d \theta - \sqrt{6}
+            \int d\theta 
+          </mrow>
+          <mrow>
+            \amp = \sqrt{6} \tan \theta - \sqrt{6} \theta + c 
+          </mrow>
+        </md>
+        <p>
+          Then I can reverse the substitution. I have already
+          calculated a term that I can use to replace the tangent. For
+          replaing <m>\theta</m>, I invert the substitution. 
+        </p>
+        <me>
+          \int \frac{\sqrt{x^2-6}}{x} dx = \sqrt{x^2-6} - \sqrt{6}
+          \arcsec \left( \frac{x}{\sqrt{6}} \right) + c 
+        </me>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this integral using a trig substitution.
+        </p>
+        <me>
+          \int_0^5 x^2 \sqrt{25-x^2} dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          This is a sine substitution. I calculate the various pieces
+          of the substitution. Since this is a definite integral, I
+          also calculate the new bounds. Note that calculating the new
+          bounds involves inverting the sine function. To do this, I
+          just used a unit circle diagram.
+        </p>
+        <md>
+          <mrow>
+            x \amp = 5 \sin \theta 
+          </mrow>
+          <mrow>
+            dx \amp = 5 \cos \theta d \theta 
+          </mrow>
+          <mrow>
+            \sqrt{25-x^2} \amp = 5 \cos \theta 
+          </mrow>
+          <mrow>
+            x \amp = 0 \implies 5 \sin \theta = 0 \implies \theta = 0 
+          </mrow>
+          <mrow>
+            x \amp = 5 \implies 5 \sin \theta = 5 \implies \sin \theta
+            =1 \implies \theta = \frac{\pi}{2}  
+          </mrow>
+        </md>
+        <p>
+          Then I do the substitution, replacing all the piece from the
+          original as well as changing the bounds. I simplify by
+          pulling out the constants. 
+        </p>
+        <md>
+          <mrow>
+            \int_0^5 x^2 \sqrt{25-x^2} dx \amp =
+            \int_0^{\frac{\pi}{2}} 25 \sin^2 \theta 5 \cos \theta 5
+            \cos \theta d \theta
+          </mrow>
+          <mrow>
+            \amp = 625 \int_0^{\frac{\pi}{2}} \sin^2 \theta \cos^2
+            \theta d \theta 
+          </mrow>
+        </md>
+        <p>
+          After substitution, there are even powers of both sine and
+          cosine. I use the half-angle identities to reduce the
+          exponents. That produces two integrals. (notice that two
+          terms cancel when I multiply the binomials, leaving only two
+          terms). In the second integral, I have to use the half-angle
+          identities once again to deal with the <m>\cos^2
+          (2\theta)</m>. After doing so, all the remaining integrals
+          have straightforward antiderivatives.
+        </p>
+        <md>
+          <mrow>
+            \amp = 625 \int_0^{\frac{\pi}{2}} \left( \frac{1 - \cos
+            (2\theta)}{2} \right) \left( \frac{1 + \cos (2\theta)}{2}
+            \right) d \theta 
+          </mrow>
+          <mrow>
+            \amp = \frac{625}{4} \int_0^{\frac{\pi}{2}} 1 - \cos^2 (2
+            \theta) d \theta 
+          </mrow>
+          <mrow>
+            \amp = \frac{625}{4} \int_0^{\frac{\pi}{2}} d \theta -
+            \frac{625}{4} \int_0^{\frac{\pi}{2}} \left( \frac{1 + \cos
+            (4 \theta)}{2} \right) d \theta
+          </mrow>
+          <mrow>
+            \amp = \frac{625\pi}{8} - \frac{625}{8}
+            \int_0^{\frac{\pi}{2}} d \theta - \frac{625}{8}
+            \int_0^{\frac{\pi}{2}} \cos (4 \theta) d \theta 
+          </mrow>
+        </md>
+        <p>
+          Since I changed the bounds, I don't have to substitute
+          back. I can simply evaluate on the new bounds.
+        </p>
+        <md>
+          <mrow>
+            \amp = \frac{625\pi}{8} - \frac{625}{8} \frac{\pi}{2} -
+            \frac{625}{8} \frac{-\sin 4 \theta}{4}
+            \Bigg|_0^{\frac{\pi}{2}} 
+          </mrow>
+          <mrow>
+            \amp = \frac{625\pi}{8} - \frac{625\pi}{16} - 0 =
+            \frac{625\pi}{16}
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this integral using a trig substitution.
+        </p>
+        <me>
+          \int_0^{10} \frac{1}{\sqrt{100 + x^2}} dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          This is a tangent substitution. I calculate the various
+          pieces of the substitution, including the bounds.
+        </p>
+        <md>
+          <mrow>
+            x \amp = 10 \tan \theta 
+          </mrow>
+          <mrow>
+            dx \amp = 10 \sec^2 \theta d \theta 
+          </mrow>
+          <mrow>
+            \sqrt{100+x^2} \amp = \sec \theta 
+          </mrow>
+          <mrow>
+            x \amp = 0 \implies 10 \tan \theta = 0 \implies \tan
+            \theta = 0 \implies \theta = 0 
+          </mrow>
+          <mrow>
+            x \amp = 10 \implies 10 \tan \theta = 10 \implies \tan
+            \theta = 1 \implies \theta = \frac{\pi}{4} 
+          </mrow>
+        </md>
+        <p>
+          Then I perform the substitution, change the bounds, and
+          simplify. One of the secant terms cancels. After that, I can use
+          the tables to get the antiderivative of sectant.
+        </p>
+        <md>
+          <mrow>
+            \int_0^{10} \frac{1}{\sqrt{100 + x^2}} dx \amp =
+            \int_0^{\frac{\pi}{4}} \frac{1}{\sec \theta} \sec^2 \theta
+            d \theta
+          </mrow>
+          <mrow>
+            \amp = \int_0^{\frac{\pi}{4}} \sec \theta d \theta 
+          </mrow>
+          <mrow>
+            \amp = \ln | \tan \theta + \sec \theta|
+            \Big|_0^{\frac{\pi}{4}} 
+          </mrow>
+        </md>
+        <p>
+          Since I changed the bounds in the substitution, I don't
+          need a reverse substitution. I can just evaluate on these
+          bounds.
+        </p>
+        <md>
+          <mrow>
+            \amp = \ln \left| \tan \frac{\pi}{4} + \sec \frac{\pi}{4}
+            \right| - \ln \left| \tan 0 + \sec 0 \right|
+          </mrow>
+          <mrow>
+            \amp = \ln | 1 + \sqrt{2} | - \ln |0 + 1| = \ln |1 +
+            \sqrt{2}|
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="subsection-activity-improper-integrals">
+    <title>Improper Integrals</title>
+    <activity>
+      <statement>
+        <p>
+          Calculate this improper integral and determine if it
+          converges.
+        </p>
+        <me>
+          \int_1^\infty \frac{1}{x^3} dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I find the antiderivative using the inverse power rule and
+          then take the limit as the upper bound approaches
+          <m>\infty</m>.
+        </p>
+        <md>
+          <mrow>
+            \int_1^\infty \frac{1}{x^3} dx \amp = \lim_{a \rightarrow
+            \infty} \int_1^a x^{-3} dx 
+          </mrow>
+          <mrow>
+            \amp = \lim_{a \rightarrow \infty} \frac{x^{-2}}{-2}
+            \Bigg|_1^a = \lim_{a \rightarrow \infty} \frac{1}{2}
+            \left( \frac{-1}{a^2} + \frac{1}{1} \right) = \frac{1}{2} 
+          </mrow>
+        </md>
+        <p>
+          This improper integral converges.
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this improper integral and determine if it
+          converges. (You can do a substitution first and then the
+          limit for the improper integral.) 
+        </p>
+        <me>
+          \int_1^\infty \frac{\ln x}{x} dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I use a substitution to solve the integral, including
+          changing the bounds. I can deal with an infinite bound by
+          determining how the new variable changes as the original
+          variables goes to <m>\infty</m>.
+        </p>
+        <md>
+          <mrow>
+            u \amp = \ln x 
+          </mrow>
+          <mrow>
+            du \amp = \frac{1}{x} dx 
+          </mrow>
+          <mrow>
+            x \amp = 1 \implies u = \ln 1 = 0 
+          </mrow>
+          <mrow>
+            x \amp \rightarrow \infty \implies u \rightarrow \infty 
+          </mrow>
+        </md>
+        <p>
+          The last step in the substitution comes from the properties
+          of the logarithm. If <m>x \rightarrow \infty</m>, then since
+          the logarithm grows without bound, <m>u</m> will also
+          diverge to infinity. Then I perform the substitution.
+        </p>
+        <me>
+          \int_1^\infty \frac{\ln x}{x} dx = \int_0^\infty u du 
+        </me>
+        <p>
+          Now I can use a limit to evalute this improper integral.
+        </p>
+        <me>
+          = \lim_{a \rightarrow \infty} \frac{u^2}{2} \Bigg|_0^a
+          = \lim_{a \rightarrow \infty} \frac{a^2}{2} = \infty 
+        </me>
+        <p>
+          This improper integral diverges.
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this improper integral and determine if it
+          converges.
+        </p>
+        <me>
+          \int_1^\infty x e^{-x} dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I set up the improper integral limit.
+        </p>
+        <me>
+          \int_1^\infty x e^{-x} dx = \lim_{a \rightarrow
+          \infty} \int_1^a x e^{-x} dx 
+        </me>
+        <p>
+          Then I use integration by parts. 
+        </p>
+        <md>
+          <mrow>
+            g(x) \amp = x \implies \frac{dg}{dx} = 1 
+          </mrow>
+          <mrow>
+            \frac{df}{dx} \amp = e^{-x} \implies f(x) = -e^{-x} 
+          </mrow>
+        </md>
+        <p>
+          I need to bring the limit all the way through the process of
+          integration by parts. The new integral after integration by
+          parts is a reasonable exponential integral. I evaluate the
+          first term and the antiderivative of the second integral on
+          the bounds (using the termporary bound <m>a</m>). 
+        </p>
+        <md>
+          <mrow>
+            \amp = \lim_{a \rightarrow \infty} \left( -xe^{-x}
+            \Big|_1^a + \int_1^a e^{-x} dx \right) = \lim_{a
+            \rightarrow \infty} -ae^{-a} + e^{-1} + -e^{-x} \Big|_1^a
+          </mrow>
+          <mrow>
+            \amp = \lim_{a \rightarrow \infty} \frac{-a}{e^a} +
+            \frac{1}{e} - \frac{1}{e^a} + \frac{1}{e} 
+          </mrow>
+        </md>
+        <p>
+          Then I just need to evalute the limit. In the first term,
+          the denominator with <m>e^a</m> clearly dominates over the
+          numerator with just <m>a</m>, so the limit is zero. 
+        </p>
+        <me>
+            \lim_{a \rightarrow \infty} \frac{-a}{e^a} +
+            \frac{1}{e} - \frac{1}{e^a} + \frac{1}{e} = 0 +
+            \frac{1}{e} + 0 + \frac{1}{e} = \frac{2}{e} 
+        </me>
+        <p>
+          This improper integral converges.
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this improper integral and determine if it
+          converges.
+        </p>
+        <me>
+          \int_0^1 \ln x dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          The function is undefined at <m>x=0</m>, so I take a limit
+          approaching this bound.
+        </p>
+        <me>
+          \int_0^1 \ln x dx = \lim_{a \rightarrow 0^+} \int_a^1
+          \ln x dx 
+        </me>
+        <p>
+          Then I just calculate the integral, using the antiderivative
+          for the logarithm from the tables. After the antiderivative,
+          I apply the limit.
+        </p>
+        <me>
+          \lim_{a \rightarrow 0^+} x \ln x - x \Bigg|_a^1 =
+          \lim_{a \rightarrow 0^+} 1\ln 1 - 1 - a \ln a + a = -\infty
+        </me>
+        <p>
+          This improper integral diverges, since as <m>a</m> gets
+          close to zero, the logarithm <m>\ln a</m> diverges down to
+          negative infinity. I makes sense that the area represented
+          by the integral diverges to negative infinity, since the
+          asymptote for the logarithm is in the negative direction.
+          There is an infinite area below the <m>x</m> axis on this
+          range, not above it.
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this improper integral and determine if it
+          converges.
+        </p>
+        <me>
+          \int_0^1 \frac{1}{(x-1)^2} dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          The function is undefined at <m>1</m>, so we take a limit
+          approaching this bound. Then I take the antiderivative with
+          the inverse power rule (and, if I was being very careful and
+          explicit, a substitution <m>u = x-1</m> to make this power
+          rule work). 
+        </p>
+        <md>
+          <mrow>
+            \int_0^1 \frac{1}{(x-1)^2} dx \amp = \lim_{a
+            \rightarrow 1^-} \int_0^a \frac{1}{(x-1)^2} dx 
+          </mrow>
+          <mrow>
+            \amp = \lim_{a \rightarrow 1^-} \frac{-1}{x-1}
+            \Bigg|_0^a = \lim_{a \rightarrow 1^-} \frac{-1}{a-1} + 1
+            = \infty
+          </mrow>
+        </md>
+        <p>
+          This improper integral diverges. (Note that I know the limit
+          value will approach specificaly  positive infinity. Since
+          the limit approaches <m>1</m> from the negative, the
+          denominator <m>a-1</m> will be negative. The numerator is
+          also negative, so the quotient will be positive. Since the
+          denominator is very close to zero, since the numerator is
+          fixed, and since the quotient is always positive, the limit
+          diverges to infinity.
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this improper integral and determine if it
+          converges.
+        </p>
+        <me>
+          \int_0^{\frac{\pi}{2}} \tan x dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          The function is undefined at <m>\frac{\pi}{2}</m>, so I take a
+          limit approaching this bound. I use the antiderivative of
+          tangent from the tables. 
+        </p>
+        <md>
+          <mrow>
+            \int_0^{\frac{\pi}{2}} \tan x dx \amp = \lim_{a
+            \rightarrow \frac{\pi}{2}^-} \int_0^a \tan x dx 
+          </mrow>
+          <mrow>
+            \amp = \lim_{a \rightarrow \frac{\pi}{2}^-} -\ln \cos x
+            \Bigg|_0^a = \lim_{a \rightarrow \frac{\pi}{2}^-} -\ln \cos
+            a + \ln \cos 0 = \infty
+          </mrow>
+        </md>
+        <p>
+          This improper integral diverges. I know the limit is
+          divergent since, as <m>a \rightarrow \frac{\pi}{2}</m>,
+          cosine approaches 0 from the positive side, and the
+          logarithm of something approaching 0 from the positive side
+          is approaching <m>-\infty</m>. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate this improper integral using a trig substitution
+          first and then the improper integral limit after the trig
+          substitution.
+        </p>
+        <me>
+          \int_{2\sqrt{2}}^{4} \frac{1}{\sqrt{(16-x^2)^3}} dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          Even though this is an improper integral (it is undefined at
+          <m>x=4</m>), I can do the trig substitution first and then
+          do the limit for the improper integral. This is a sine
+          substitution. I calculate the various pieces of the
+          substitution, including the bounds.
+        </p>
+        <md>
+          <mrow>
+            x \amp = 4 \sin \theta 
+          </mrow>
+          <mrow>
+            dx \amp = 4 \cos \theta d \theta 
+          </mrow>
+          <mrow>
+            \sqrt{16-x^2} \amp = 4 \cos \theta 
+          </mrow>
+          <mrow>
+            x \amp = 4 \implies 4 \sin \theta = 4 \implies \sin \theta
+            = 1 \implies \theta = \frac{\pi}{2}
+          </mrow>
+          <mrow>
+            x \amp = 2\sqrt{2} \implies 4 \sin \theta = 2\sqrt{2}
+            \implies \sin \theta = \frac{1}{\sqrt{2}} \implies \theta
+            = \frac{\pi}{4}
+          </mrow>
+        </md>
+        <p>
+          Then I perform the substitution and simplify. This nicely
+          simplifies down to <m>\sec^2 \theta</m>, which has a known
+          antiderivative from the tables. 
+        </p>
+        <md>
+          <mrow>
+            \int_{2\sqrt{2}}^{4} \frac{1}{\sqrt{(16-x^2)^3}} dx \amp =
+            \int_{\frac{\pi}{4}}^{\frac{\pi}{2}} \frac{1}{64 \cos^3
+            \theta} 4 \cos \theta d \theta
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{16}\int_{\frac{\pi}{4}}^{\frac{\pi}{2}}
+            \frac{1}{\cos^2 \theta} d \theta
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{16}\int_{\frac{\pi}{4}}^{\frac{\pi}{2}}
+            \sec^2 \theta d \theta 
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{16} \tan \theta
+            \Big|_{\frac{\pi}{4}}^{\frac{\pi}{2}}
+          </mrow>
+        </md>
+        <p>
+          Now I'll to the improper integral. Tangent is undefined at
+          <m>\frac{\pi}{2}</m>, so I can the limit approaching that
+          endpoint. 
+        </p>
+        <me>
+          \frac{1}{16} \tan \theta
+          \Big|_{\frac{\pi}{4}}^{\frac{\pi}{2}} = 
+          \lim_{a \rightarrow \frac{\pi}{2}} \frac{1}{16} \tan \theta
+          \Big|_{\frac{\pi}{4}}^{a} = 
+          \lim_{a \rightarrow \frac{\pi}{2}} \frac{1}{16} \left( \tan
+          a - 1 \right) = \infty
+       </me>
+       <p>
+        The limit diverges since I know that tangent has a vertical
+        asymptote at <m>\frac{\pi}{2}</m>. The improper integral does
+        not converge, and I conclude the area under the original
+        function on the given range was infinite. 
+       </p>
       </solution>
     </activity>
   </subsection>
@@ -20,101 +1049,16 @@
     <p>
       <ul>
         <li>
-          Question
+          How are various trig identities useful in integration
+          strategies?
+        </li>
+        <li>
+          Why do trig substitution remove square roots?
+        </li>
+        <li>
+          Why do limit allow us to consider improper integrals?
         </li>
       </ul>
     </p>
   </subsection>
-  <subsection xml:id="subsection-week6-extra-practice">
-    <title>Extra Practice Activities</title>
-    <activity>
-      <statement>
-        <p>
-          Question
-        </p>
-      </statement>
-      <solution>
-        <p>
-          Solution
-        </p>
-      </solution>
-    </activity>
-  </subsection>
 </section>
-
-
-  \item Calculate this integral. Show and annotate the various steps
-  in the process. (This is a very long question, so here is some
-  guidance. After a trig substitution, you will get a
-  trig function cubed. Write this $f^3$ as $f^2 \cdot f$ and use 
-  integration by parts. After the integration by parts, change
-  everything into sine and cosine and see if a substitution will work.) (8) 
-  \begin{equation*}
-    \int \frac{x^2}{\sqrt{x^2-9}} dx \\
-  \end{equation*}
-  The precense of the square root indicates that a trig substitution
-  will be the best approach. Consulgin the table, I need a secant
-  substitution. I proceed to setup the pieces of the substitution.  
-  \begin{align*}
-    x & = 3 \sec \theta \\
-    dx & = 3 \sec \theta \tan \theta d \theta \\
-    \sqrt{x^2 - 9} & = \sqrt{9\sec^2 \theta - 9} = 3\sqrt{\sec^2
-    \theta - 1} = 3 \tan \theta 
-  \end{align*}
-  Then I do the substition. Afer doing the substitution, I simplify
-  but leave everything in terms of secant and tangent. 
-  \begin{align*}
-    \int \frac{x^2}{\sqrt{x^2-9}} dx \\
-    & = \int \frac{9 \sec^2 \theta}{3 \tan \theta} 3 \sec \theta
-    \tan \theta d \theta \\
-    & = 9 \int \sec^3 \theta d \theta 
-    & = 9 \int \sec^2 \theta \sec \theta d \theta 
-  \end{align*}
-  I'm going to try integration by parts with these choices for the two
-  pieces of the product.
-  \begin{align*}
-    g(x)  & = \sec \theta \\
-    \frac{df}{dx}  & = \sec^2 \theta \\
-    \frac{dg}{dx}  & = \sec \theta \tan \theta \\
-    f(x) = \tan \theta 
-  \end{align*}
-  I made those choices for integration by parts specifically because
-  $\sec^2 \theta$ has an easy antiderivative. Now I proceed with
-  integration by parts. In the remaining integral, I'll change
-  everything into sine and cosine, and then even further, changing
-  most of the cosines to sines using $\sin^2 \theta + \cos^2 \theta =
-  1$. (The term without an integral is finished, so I won't adjust it
-  while I adjust the remaining integral.)
-  \begin{align*}
-    9 \int \sec^2 \theta \sec \theta d \theta 
-    & = 9 \sec \theta \tan \theta - 9 \int \sec \theta \tan^2
-    \theta d \theta = 9 \sec \theta \tan \theta - 9 \int
-    \frac{\sin^2 \theta}{\cos^3 \theta} d \theta \\
-    & = 9 \sec \theta \tan \theta - 9 \int \frac{\sin^2
-    \theta}{\cos^4 \theta} \cos \theta d \theta = 9 \sec \theta
-    \tan \theta - - 9 \int \frac{\sin^2 \theta}{(1-\sin^2
-    \theta)^2} \cos \theta d \theta 
-  \end{align*}
-  Then everything is an expression in sine except for one cosine. A
-  substitution using sine here should work. I'll setup the
-  substitution. 
-  \begin{align*}
-    w & = \sin \theta \\
-    dw & = \cos \theta d \theta \\
-    & = 9 \sec \theta \tan \theta - 9 \int \frac{w}{(1-w^2)^2} dw \\
-    y & = 1-w^2 \\
-    dy & = -2w dw \implies \frac{-1}{2} dy = w dw \\
-    & = 9 \sec \theta \tan \theta - 9 \frac{-1}{2} \int
-\frac{1}{y} dy \\
-& = 9 \sec \theta \tan \theta + \frac{9}{2} \ln |y| + C \\
-& = 9 \sec \theta \tan \theta + \frac{9}{2} \ln |1-w^2| + C \\
-& = 9 \sec \theta \tan \theta + \frac{9}{2} \ln |1-\sin^2
-\theta| + C \\
-& = 9 \sec \theta \tan \theta + \frac{9}{2} \ln |1-\sin^2
-\theta| + C \\
-& = 9 \sec \theta \tan \theta + \frac{9}{2} \ln |\cos^2 \theta| + C \\
-& = 3 \sec \theta 3 \tan \theta + \frac{9}{2} \ln \left|
-\frac{1}{\sec^2 \theta} \right| + C \\
-& = x \sqrt{x^2-9} + \frac{9}{2} \ln \left|
-\frac{9}{x^2} \right| + C \\
-\end{align*}

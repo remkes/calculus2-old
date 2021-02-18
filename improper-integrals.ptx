@@ -1,227 +1,332 @@
 <section xml:id="section-improper-integrals">
   <title>Improper Integrals</title>
-  <example>
-    <statement>
-      <p>
-        We could try to calculate the following integral.
+  <subsection xml:id="subsection-improper-integrals">
+    <title>Asymptotes and Infinite Domains</title>
+    <p>
+      It is sometimes useful to consider definite integrals where the
+      function has an asymptote at one (or both!) of the bounds of
+      integral. A function which is undefined in the middle of the
+      interval cannot be integrated, but a function which has an
+      asymptote at the edge might still have a reasonable area under
+      its curve. Similarly, it is also useful to consider integration
+      over infinite intervals, such as the entire real number line or
+      <m>[0, \infty)</m>.  Both of these goals present problems for
+      the integral as defined so far. To solve them, I need an
+      additional technique. First, though, let me define a term to
+      refer to these integrals.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          These two types of integral (where there is a vertical
+          asymptote at one of the endpoint, or where the interval of
+          integral is infinite) are called <term>improper
+          integrals</term>.
+        </p>
+      </statement>
+    </definition>
+    <p> 
+      The approach to improper integrals is quite direct. If there is
+      an asymptote at one edge of the domain of integration, say at
+      <m>c_0</m>, I set the bounds of integation to be a variable
+      <m>a</m> and take the limit <m>a \rightarrow c_0</m>. Similarly,
+      if the domain extends to infinity, as in <m>[0,\infty)</m>, I
+      integrate over <m>[0, a]</m> and take the limit as <m>a
+      \rightarrow \infty</m>. In either case, a limit of the bounds of
+      integration solves the problem.
+    </p>
+    <p>
+      Since there is a limit involved, an improper integral may or may
+      not converge. The area under the curve might be infinite, or just
+      undefined if the limit does not exist. The usual question for an
+      improper integral is the convergence question: is the described
+      area finite or infinite? 
+    </p>
+    <definition>
+      <statement>
+        <p>
+          If there is a finite area, if the limit exists, the improper
+          integral <term>converges</term>. Otherwise, the improper
+          integral <term>diverges</term>. 
+        </p>
+      </statement>
+    </definition>
+    <p>
+      There will be some interesting discussion of the implications of
+      divergence and convergence this in <xref
+      ref="section-probability" />.  For now, let me move on to some
+      examples.
+    </p>
+    <example>
+      <statement>
+        <figure xml:id="figure-improper-integral1">
+          <caption>An Improper Integral</caption>
+          <image xml:id="figure08" width="80%">
+            <asymptote>
+              size(12cm,8cm,IgnoreAspect);
+              import contour;
+              import graph;
+              xaxis();
+              yaxis();
+      
+              real f(real x) {return 1/(sqrt(x));}
+              filldraw((0,0)--(0,3.16)--(graph(f,0.1,2))--(2,0)--cycle
+                ,grey);
+      
+              dot("$(2,0)$",(2,0),S);
+              dot("$(0,0)$",(0,0),SW);
+            </asymptote>
+          </image>
+        </figure>
+        <p>
+          Let me try to calculate the area under the curve of
+          <m>\frac{1}{\sqrt{x}}</m> on the interval <m>[0,2]</m>. There
+          is an asymptote at the left endpoint, so this is an improper
+          integral. The function is positive, so there is a well-defined
+          positive area under the curve. The question is whether this
+          area is finite or infinite as the function grows along the
+          asymptote. 
+        </p>
+        <p>
+          I calculate the integral by taking a limit approaching the
+          left endpoint. Note that I need a one-sided limit here: I can
+          only approach <m>0</m> from the positive side. 
+        </p>
         <me>
-          \int_0^2 \frac{1}{\sqrt{x}} dx = \int_0^2 x^\frac{-1}{2} dx
-          = \left. 2x^{\frac{1}{2}} \right|_0^2 = 2\sqrt{2} - 0 =
-          2\sqrt{2}
+          \int_0^2 \frac{1}{\sqrt{x}} dx = \lim_{a \rightarrow 0^+}
+          \int_a^2 \frac{1}{\sqrt{x}} dx 
+         </me>
+        <p>
+          Then I can just calculate the integral with the bound <m>a</m>
+          and take the limit. 
+        </p>
+        <me>
+          = \lim_{a \rightarrow 0^+} 2x^{\frac{1}{2}} \Bigg|_a^2
+          = \lim_{a \rightarrow 0^+} 2\sqrt{2} - 2 \sqrt{a} = 2\sqrt{2}
+          - 0 = 2\sqrt{2}
         </me>
-      </p>
-      <p>
-        We get a nice, finite answer. However, this is a bit
-        surprising. Look at the graph of the function in <xref
-        ref="figure-improper-integral1">Figure</xref>.
-      </p>
-    </statement>
-  </example>
-  <figure xml:id="figure-improper-integral1">
-    <caption>An Improper Integral</caption>
-    <image xml:id="figure08" width="80%">
-      <asymptote>
-        size(12cm,8cm,IgnoreAspect);
-        import contour;
-        import graph;
-        xaxis();
-        yaxis();
-
-        real f(real x) {return 1/(sqrt(x));}
-        filldraw((0,0)--(0,3.16)--(graph(f,0.1,2))--(2,0)--cycle,grey);
-
-        dot("$(2,0)$",(2,0),S);
-        dot("$(0,0)$",(0,0),SW);
-      </asymptote>
-    </image>
-  </figure>
-  <p>
-    The function has a vertical asymptote at <m>x=0</m>, which is the
-    edge of the domain of definition. The function approaches
-    <m>\infty</m> at the edge of the integral. What does this mean
-    for the area under the curve? Infninity makes the notion of area
-    problematic.
-  </p>
-  <definition>
-    <statement>
-      <p>
-        An integral which involves an asymptote or other infinite
-        situation is called an <term>improper integral</term>.
-      </p>
-    </statement>
-  </definition>
-  <example>
-    <statement>
-      <p>
-        Sometimes it's not the function that's infinite, but the
-        bounds, as in the following integral and the graph in <xref
-        ref="figure-improper-integral2">Figure</xref>.
+        <p>
+          I get a nice, finite answer. The area in <xref
+          ref="figure-improper-integral1" />, even though the asymptote
+          grows to infinity, is finite.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <figure xml:id="figure-improper-integral2">
+          <caption>Another Improper Integral</caption>
+          <image xml:id="figure09" width="80%">
+            <asymptote>
+              size(12cm,6cm,IgnoreAspect);
+              import contour;
+              import graph;
+              xaxis();
+              yaxis();
+  
+              real f(real x) {return 1/(x^2);}
+              filldraw((1,0)--(graph(f,1,8))--(8,0)--cycle,grey);
+  
+              dot("$(1,0)$",(1,0),S);
+            </asymptote>
+          </image>
+        </figure>
+        <p>
+          Here is an example with an integral over an infinte domain.
+          There is no veritcal asymptote, but the area extends out along
+          the <m>x</m> axis to infinity, as show in <xref
+          ref="figure-improper-integral2" />. 
+        </p>
         <me>
           \int_1^\infty \frac{1}{x^2} dx
         </me>
-      </p>
-      <figure xml:id="figure-improper-integral2">
-        <caption>Another Improper Integral</caption>
-        <image xml:id="figure09" width="80%">
-          <asymptote>
-            size(12cm,6cm,IgnoreAspect);
-            import contour;
-            import graph;
-            xaxis();
-            yaxis();
-
-            real f(real x) {return 1/(x^2);}
-            filldraw((1,0)--(graph(f,1,8))--(8,0)--cycle,grey);
-
-            dot("$(1,0)$",(1,0),S);
-          </asymptote>
-        </image>
-      </figure>
-      <p>
-        It's not at all obvious how much area there is under the
-        integral as the bounds go off to infinity. For improper
-        integrals, we need techniques to deal with these infinities.
-      </p>
-      <p>
-        The technique, unsurprisingly, involves limits. For the first
-        integral (even though we could evaluate it conventionally) the
-        problem exists with the bound <m>0</m>, where the function
-        approaches <m>\infty</m>. We define the improper integral
-        using a limit to approach the asymptote.
-        <me>
-          \int_0^2 \frac{1}{\sqrt{x}} dx = \lim_{a \rightarrow 0}
-          \int_a^2 \frac{1}{\sqrt{x}} dx
-        </me>
-      </p>
-      <p>
-        The limit integral is perfectly well defined for <m>a>0</m>,
-        since it avoids the asymptote of the function.
-        <me>
-          \lim_{a \rightarrow 0} \int_a^2 x^\frac{-1}{2} = \lim_{a
-          \rightarrow 0} \left. 2\sqrt{x} \right|_a^2 = \lim_{a
-          \rightarrow 0} 2 \sqrt{a} - 0 = 2 \sqrt{2}
-        </me>
-      </p>
-    </statement>
-  </example>
-  <example>
-    <statement>
-      <p>
-        The same techniques applies to the infinite bounds.
+        <p>
+          It's not at all obvious how much area there is under the
+          integral as the bounds go off to infinity. The limit will
+          indicate whether this in infinite or finite area. I set the
+          upper bound to <m>a</m> and take the limit as <m>a \rightarrow
+          \infty</m>. 
+        </p>
         <me>
           \int_1^\infty \frac{1}{x^2} dx = \lim_{a \rightarrow \infty}
           \int_1^a \frac{1}{x^2} dx = \lim_{a \rightarrow \infty}
-          \left. \frac{-1}{x} \right|_1^a = \lim_{a \rightarrow
+          \frac{-1}{x} \Bigg|_1^a = \lim_{a \rightarrow
           \infty} \frac{-1}{a} + 1 = 1
         </me>
-      </p>
-      <p>
-        In this way, we see that the unknown area under the curve of
-        <m>\frac{1}{x^2}</m> is indeed finite, even when the bound
-        goes to infinity. However, infinite area can also happen.
-      </p>
-    </statement>
-  </example>
-  <example>
-    <statement>
-      <p>
-        Consider a very similar integral.
+        <p>
+          In this way, I show that the unknown area under the curve of
+          <m>\frac{1}{x^2}</m> is indeed finite, even when the bound
+          goes to infinity. 
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \int_1^\infty \frac{1}{x} 
+        </me>
+        <p>
+          This is very similar to the previous example, but the
+          antiderivative of <m>\frac{1}{x}</m> differs from that of
+          <m>\frac{1}{x^2}</m> in an important way. I use a limit to
+          evaluate the integral on the infinite interval.
+        </p> 
         <me>
           \int_1^\infty \frac{1}{x} dx = \lim_{a \rightarrow \infty}
-          \int_1^a \frac{1}{x} dx = \lim_{a \rightarrow \infty} \left.
-          \ln |x| \right|_1^a = \lim_{a \rightarrow \infty} \ln a - 0
+          \int_1^a \frac{1}{x} dx = \lim_{a \rightarrow \infty} 
+          \ln |x| \Bigg|_1^a = \lim_{a \rightarrow \infty} \ln a - 0
           = \infty
         </me>
-      </p>
-    </statement>
-  </example>
-  <definition>
-    <statement>
-      <p>
-        With improper integrals, finite answers are not guaranteed.
-        If the integral is indeed finite, we say that the improper
-        integral <term>converges</term>. Otherwise, we say that the
-        improper integral <term>diverges</term>.
-      </p>
-    </statement>
-  </definition>
-  <example>
-    <statement>
-      <p>
-        Let's look more carefully at the previous two examples. Both
-        had integrands of the form <m>\frac{1}{x^p}</m> for some
-        exponent <m>p</m>. We know that <m>p=1</m> gives a divergent
-        integral and <m>p=2</m> gives a convergent integral. If <m>p
-        \lt 1</m> then <m>\frac{1}{x^p} > \frac{1}{x}</m>. If one
-        positive function is larger than another, then the area under
-        its graph must be larger. Since the area under
-        <m>\frac{1}{x}</m> between <m>1</m> and <m>\infty</m> is
-        already <m>\infty</m>, the integral of <m>\frac{1}{x^p}</m> on
-        <m>(1,\infty)</m> must also be <m>\infty</m>.
-      </p>
-      <p>
-        Now, if <m>p\lt 1</m>, let's make the general calculation.
+        <p>
+          The shape of the graphs of <m>\frac{1}{x^2}</m> and
+          <m>\frac{1}{x}</m> on the interval <m>[1,\infty)</m> are very
+          similar: they both start at <m>(1,1)</m> and decay to zero.
+          However, <m>\frac{1}{x}</m> decays slower. This difference in
+          decay rate is enough that the area under <m>\frac{1}{x^2}</m>
+          is finite and the area under <m>\frac{1}{x}</m> is infinite,
+          which is somewhat surprising if you just look at the graph.
+          These two graphs are shown in <xref
+          ref="figure-improper-integral3" />. In the graph, it is clear
+          to see that <m>\frac{1}{x}</m> has greater area, but not that
+          the difference is enough to actually produce infinite area.
+        </p>
+        <figure xml:id="figure-improper-integral3">
+          <caption>Another Improper Integral</caption>
+          <image xml:id="figure44" width="80%">
+            <asymptote>
+             size(12cm,6cm,IgnoreAspect);
+              import contour;
+              import graph;
+              xaxis();
+              yaxis();
+  
+              real f(real x) {return 1/(x);}
+              filldraw((1,0)--(graph(f,1,8))--(8,0)--cycle,grey);
+  
+              real f(real x) {return 1/(x^2);}
+              filldraw((1,0)--(graph(f,1,8))--(8,0)--cycle,lightgrey);
+  
+              dot("$(1,1)$",(1,1),W);
+  
+              label("$f(x) = \frac{1}{x}$",(3,0.33),NE);
+              label("$f(x) = \frac{1}{x^2}$",(2.5,0.15),SW);
+            </asymptote>
+          </image>
+        </figure>
+      </statement>
+    </example>
+    <example xml:id="example-improper1">
+      <statement>
+        <p>
+          I want to look more carefully at the previous two examples. Both
+          had integrands of the form <m>\frac{1}{x^p}</m> for some
+          exponent <m>p</m>. I showed that <m>p=1</m> gives a divergent
+          integral and <m>p=2</m> gives a convergent integral. If <m>p
+          \lt 1</m> then <m>\frac{1}{x^p} > \frac{1}{x}</m>. If one
+          positive function is larger than another, then the area under
+          its graph must be larger. Since the area under
+          <m>\frac{1}{x}</m> between <m>1</m> and <m>\infty</m> is
+          already <m>\infty</m>, the integral of <m>\frac{1}{x^p}</m> on
+          <m>(1,\infty)</m> must also be <m>\infty</m> when <m>p \lt
+          1</m>
+        </p>
+        <p>
+          Now, if <m>p \gt 1</m>, I want to do the improper integral in
+          general. 
+        </p>
         <md>
           <mrow>
             \int_1^\infty \frac{1}{x^p} \amp = \lim_{a \rightarrow
             \infty} \int_1^a \frac{1}{x^p} dx = \lim_{a \rightarrow
-            \infty} \left. \frac{-1}{(p-1)x^{p-1}} \right|_1^a 
+            \infty} \frac{-1}{(p-1)x^{p-1}} \Bigg|_1^a 
           </mrow>
           <mrow>
             \amp = \lim_{a \rightarrow \infty} \frac{1}{p-1}
             -\frac{1}{(p-1)a^{p-1}} = \frac{1}{p-1}
           </mrow>
         </md>
-      </p>
-      <p>
-        For, for <m>p>1</m>, these all converge. However, <m>p</m>
-        gets close to <m>1</m>, the values of the integrals get very
-        large. <m>p=1</m> is the crossover point, where the area
-        under the curve becomes infinite.
-      </p>
-    </statement>
-  </example>
-  <p>
-    We've already implicitly used a comparison argument. We said that
-    <m>\frac{1}{x^p} > \frac{1}{x}</m> for <m>p\lt 1</m> and used that
-    fact to argue convergence. This comes from a general property of
-    integrals: if <m>f(x) \geq g(x)</m> on <m>[a,b]</m>, then
+        <p>
+          For, for <m>p \gt 1</m>, these improper integrals all
+          converge. However, as <m>p</m> gets close to <m>1</m>, the
+          values of the integrals get very large. <m>p=1</m> is the
+          crossover point, where the area under the curve becomes
+          infinite.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="subsection-improper-comparison">
+    <title>Improper Integrals and Comparisons</title>
+    <p>
+      I've already implicitly used a comparison argument in <xref
+      ref="example-improper1" />. I said that
+      <m>\frac{1}{x^p} > \frac{1}{x}</m> for <m>p \lt 1</m> and used that
+      fact to argue convergence. This kind of comparsion is a general
+      property of integrals: if <m>f(x) \geq g(x)</m> on <m>[a,b]</m>,
+      then
+    </p>
     <me>
       \int_a^b f(x) dx \geq \int_a^b g(x)
     </me>
-  </p>
-  <p>
-    The same inequality holds for improper integrals, if we allow the
-    obvious statement that <m>\infty > a</m> for any finite number
-    <m>a</m>. This type of comparison is useful for evaluating
-    improper integrals. However, a more useful comparison makes use
-    of asymptotic analysis. I'll state the result this way: the
-    asymptotic order of a integrand determines the convergence of an
-    improper integral.
-  </p>
-  <p>
-    What does this mean? If means that if we only care about
-    convergence/divergence (and not the exact value of the integral),
-    then we only need to consider the asymptotic order of the
-    integrand.
-  </p>
-  <example>
-    <statement>
-      <me>
-        \int_1^\infty \frac{1}{4 + x + 18x^2}
-      </me>
-      <p>
-        The asymptotic order of the denominator is <m>x^2</m>.
-        Therefore, the convenge behaviour is the same as if the
-        integrand were <m>\frac{1}{x^2}</m>. This is <m>p=2</m>,
-        which is <m>p>1</m>, so the integral converges. This use of
-        asymptotic order allows us to dramatically simply the
-        situation: we don't have to evaluate the complicated quadratic
-        integral to determine convergence or divergence. (We would, of
-        course, have to evaluate the complicated quadratic integral if
-        we wanted to determine the exact value of the improper
-        integral).
-      </p>
-    </statement>
-  </example>
+    <p>
+      The same inequality holds for improper integrals, at least
+      adopting the convention that that <m>\infty > a</m> for any
+      finite number <m>a</m>. (While this comparison is reasonable,
+      infinity is still not a number and I will not do arithmetic with
+      it). This type of comparison is useful for evaluating improper
+      integrals. However, a more useful comparison makes use of
+      asymptotic analysis. The following theorem is presented here
+      wihtout proof.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          Consider an improper integral with integrand <m>f(x)</m>.
+          The asymptotic order of <m>f(x)</m> determines the
+          convergence of an improper integral. That is, if <m>f(x)</m>
+          is replaced with any other function with the same asymptotic
+          order, then the integral will have the same convergence
+          behaviour. 
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      What does this mean? If means that if you only care about
+      convergence/divergence (and not the exact value of the integral),
+      then you only need to consider the asymptotic order of the
+      integrand. This means you can deal with much easier integrals to
+      determine convergence. Let me do an example which illustrates
+      this.
+    </p>
+    <example>
+      <statement>
+        <me>
+          \int_1^\infty \frac{1}{4 + x + 18x^2}
+        </me>
+        <p>
+          The asymptotic order of the denominator is <m>x^2</m>.
+          Therefore, the convengence behaviour is the same as if the
+          integrand were <m>\frac{1}{x^2}</m>. This is <m>p=2</m>,
+          which is <m>p \gt 1</m>, so the integral converges. This use of
+          asymptotic order allows me to dramatically simply the
+          situation: I don't have to evaluate the complicated quadratic
+          integral to determine convergence or divergence. (I would, of
+          course, have to evaluate the complicated quadratic integral if
+          I wanted to determine the exact value of the improper
+          integral).
+        </p>
+      </statement>
+    </example>
+    <p>
+      The previous example is an example of a relatively common
+      occurance. Often, the important fact is convergence. If there is
+      an improper integral that I want to work with, that I want to
+      measure something, I need to make sure it converges. I might not
+      need to know its value (at least not right away); I might just
+      want to do some other proofs or calculations with it. Therefore,
+      often using asymptotical analysis to quickly test convergence
+      allows progress in some calculations, even though the value of
+      the integral hasn't be exactly determined. 
+    </p>
+  </subsection>
 </section>

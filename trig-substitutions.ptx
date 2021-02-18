@@ -1,101 +1,284 @@
 <section xml:id="section-trig-substitutions">
   <title>Trigonometric Substitutions</title>
-  <p>
-    The last major technique for integration is the technique of
-    trigonometric substitutions. While these are technically just a
-    new type of substitution, and we already know how to do
-    substitution, they are a very counter-intuitive class of
-    substitutions which deserve their own section.
-  </p>
-  <p>
-    If <m>x</m> is the indepedant variable and <m>a</m> is a constant,
-    trigonometric substitutions are used for integrals that involve
-    terms like <m>\sqrt{a^2 - x^2}</m>, <m>\sqrt{x^2 - a^2}</m> and
-    <m>\sqrt{x^2 + a^2}</m>. This might seem like very specific set
-    of integrands to worry about. However, the ubiquitous presence of
-    the pythagorean theorem in geometric arguments leads to many
-    integrands of this form.
-  </p>
-  <p>
-    So why trigonometry? The idea is to use the square identities
-    <m>\cos^2 x + \sin^2 x = 1</m>, <m>1 + \tan^2 x = \sec^2 x</m> and
-    <m>\cot^2 x + 1 = \csc^2 x</m> to simplify the <m>\sqrt{a^2 \pm
-    x^2}</m> terms.
-  </p>
-  <p>
-    The following chart outlines the three cases and the appropriate
-    trig substitution. In each case, the chart give the term involved
-    in the integrand, the appropriate substitution, the trig identity
-    that the substitution relies on, the calculation that removes the
-    square root term and the domain of application of the
-    substitution.
+  <introduction>
+    <p>
+      The last major technique for integration is the technique of
+      trigonometric substitutions. While these are  just a
+      new type of substitution, they are a very counter-intuitive
+      class of substitutions which deserve their own section. Other
+      subsittution were set up by looking for compositions (inside
+      function where the derivative of the inside was also present),
+      or sometimes trying to simplify denominator. Here, the
+      substitution strategy is entirely new.
+    </p>
+    <p>
+      The integral in this section will rely heavily on the techniques
+      of <xref ref="section-trig-integrals" />: the general technique
+      will be to reduce a certain class of integrals to a
+      trigonometric integral and then proceed to use the previous
+      developed techniques for trig integrals. Like many integration
+      techniques, the current technique doesn't really solve integrals
+      directly <emdash /> instead, it reduces them to a previously
+      understood type of integral.
+    </p>
+  </introduction>
+  <subsection xml:id="subsection-pythagorean-theorem">
+    <title>A Review of Pythagorus</title>
+    <p>
+      The famous pythagorean theorem says gives the relationship
+      between the side lengths of a right triangle: <m>a^2 + b^2 =
+      c^2</m>, where <m>c</m> is the length of the longest side, the
+      hypotenuse. The importance of this theorem comes from its
+      ubiquity in solving geometric problem. Many geometric problems
+      can be restated in terms of right triangles.
+    </p>
+    <p>
+      Alternatively, as I've argued in previous calculus material, the
+      pythagorean theorem can be reinterpreted as a theorm about
+      circles. A point a circle of radius <m>c</m> has <m>x</m>
+      coordinate <m>a = c \cos \theta</m> and <m>y</m> coordinate <m>b
+      = c \sin \theta</m>. The radius of length <m>c</m> forms the
+      hypotenuse of a right triangle, with the other two sides being
+      the <m>x</m> and <m>y</m> coordinates. The pythagoreaon theorem
+      is equivalent to the fundamental trig identity: <m>c^2 \cos^2
+      \theta + c^2 \sin^2 \theta = c^2</m> or, if I cancel the
+      <m>c^2</m>, <m>\cos^2 \theta + \sin^2 \theta = 1</m>. Thus, the
+      pythagorean theorem can be seen as a way of making calculations
+      for circle geometry as much as for triangle geometry. The circle
+      is a fundamental shape in many geometric problems, again
+      illustrating the importance of the pythagorean theorem.
+    </p>
+    <p>
+      I've just reviewed and argued that the pythagorean theorem is
+      ubiquitous in solving all kinds of very concrete geometric
+      problems. Let me be more explicit about the kinds of mathematics
+      that come from this ubiquity. If I know two sides of a right
+      triangle and need to find the third, I rearrange the pythagorean
+      theorem to find the missing quantity. 
+    </p>
+    <ul>
+      <li><p>
+        If I need to find <m>a</m>, I solve to get <m>a = \sqrt{c^2 -
+        b^2}</m>. 
+      </p></li>
+      <li><p>
+        If I need to find <m>b</m>, I solve to get <m>b = \sqrt{c^2 -
+        a^2}</m>. 
+      </p></li>
+      <li><p>
+        If I need to find <m>c</m>, I solve to get <m>c = \sqrt{a^2 +
+        b^2}</m>. 
+      </p></li>
+    </ul>
+    <p>
+      So, solving with pythagorus leads to expressions where I have a
+      square root with a sum or difference of squares inside it. Now let
+      me consider a situation where I have functions involving 
+      the pythagorean theorem. If I let one of the three sides of the
+      triangle be the independent variable, I can get three different
+      expressions: <m>\sqrt{a^2 - x^2}</m>, <m>\sqrt{x^2 - a^2}</m>
+      and <m>\sqrt{x^2 + a^2}</m>. Functions that come from the use of
+      the pythagorean theorem in geometry invariable have one of these
+      three forms.
+    </p>
+  </subsection>
+  <subsection xml:id="subsection-trig-substitution">
+    <title>Trigonometric Substitution</title>
+    <p>
+      From the previous section, I argued that functions involving the
+      three terms <m>\sqrt{a^2 - x^2}</m>, <m>\sqrt{x^2 - a^2}</m> and
+      <m>\sqrt{x^2 + a^2}</m> are important and common. We often also
+      have to do integrals with these kinds of functions. The technique
+      we use to solve integrals that involve one of these three forms
+      is trigonometric substitution. I am going to replace the
+      variable <m>x</m> with a suitable trigonometric function.
+    </p>
+    <p>
+      So why trigonometry? The idea is to use the square identities
+      (<m>\cos^2 x + \sin^2 x = 1</m>, <m>1 + \tan^2 x = \sec^2 x</m> and
+      <m>\cot^2 x + 1 = \csc^2 x</m>) to get rid of the square root.
+      The square roots are the real barrier to these integrals; other
+      than a couple very specific forms that have a simple
+      antiderivatives, I don't know how to integrate these square
+      roots. The trig substitution, along with the use of these square
+      identities, is going to get rid of the square root. In doing so,
+      it will change the integral into a trig integral, so that the
+      techniques of <xref ref="section-trig-integrals" /> can
+      hopefully be applied.  I'll work through the three types in turn. 
+    </p>
+    <ul>
+      <li>
+        <me>
+          \sqrt{a^2 - x^2} 
+        </me>
+        <p>
+          For an integral involving this expression, the appropriate
+          substitution is <m>x = a \sin \theta</m>, with differential
+          <m>dx = a \cos \theta d \theta</m>. This substitution
+          removes the square root when I replace <m>1 - \sin^2
+          \theta</m> with <m>\cos^2 \theta</m> using the square
+          identity <m>\sin^2 \theta + \cos^2 \theta + 1</m>. 
+        </p>
+        <me>
+          \sqrt{a^2 - x^2} = \sqrt{a^2 - a^2 \sin^2 \theta} = a
+          \sqrt{1 - \sin^2 \theta} = a \sqrt{\cos^2 \theta} = a |\cos
+          \theta|
+        </me>
+        <p>
+          I'd like to avoid the absolute value, so I restrict the domain
+          of this substitution to <m>\theta \in \left[ \frac{-\pi}{2},
+          \frac{\pi}{2} \right]</m> where cosine is positive. This
+          restriction also means that the substitution is monontonic,
+          which is a necessary but rarely mentioned condition for
+          substitutions. 
+        </p>
+      </li>
+      <li>
+        <me>
+          \sqrt{a^2 + x^2} 
+        </me>
+        <p>
+          For an integral involving this expression, the appropriate
+          substitution is <m>x = a \tan \theta</m>, with differential
+          <m>dx = a \sec^2 \theta d \theta</m>. This substitution
+          removes the square root when I replace <m>\tan^2 
+          \theta + 1</m> with <m>\sec^2 \theta</m> using the square
+          identity <m>\tan^2 \theta + 1 = \sec^2 \theta</m>. 
+        </p>
+        <me>
+          \sqrt{a^2 + x^2} = \sqrt{a^2 + a^2 \tan^2 \theta} = a
+          \sqrt{1 + \tan^2 \theta} = a \sqrt{\sec^2 \theta} = a |\sec
+          \theta|
+        </me>
+        <p>
+          I'd like to avoid the absolute value, so I restrict the domain
+          of this substitution to <m>\theta \in \left( \frac{-\pi}{2},
+          \frac{\pi}{2} \right)</m> where secant is positive. This
+          restriction also means that the substitution is monontonic
+          and defined. I exclude the endpoints, since tangent is
+          undefined on these endpoints.
+        </p>
+      </li>
+      <li>
+        <me>
+          \sqrt{x^2 - a^2} 
+        </me>
+        <p>
+          For an integral involving this expression, the appropriate
+          substitution is <m>x = a \sec \theta</m>, with differential
+          <m>dx = a \tan \theta \sec \theta d \theta</m>. This substitution
+          removes the square root when I replace <m>\sec^2
+          \theta - 1</m> with <m>\tan^2 \theta</m> using the square
+          identity <m>\tan^2 \theta + 1  = \sec^2 \theta</m>. 
+        </p>
+        <me>
+          \sqrt{x^2 - a^2} = \sqrt{a^2 \sec^2 \theta- a^2 } = a
+          \sqrt{\sec^2 \theta - 1 } = a \sqrt{\tan^2 \theta} = a |\tan
+          \theta|
+        </me>
+        <p>
+          I'd like to avoid the absolute value, so I restrict the domain
+          of this substitution to <m>\theta \in \left[0, \frac{\pi}{2}
+          \right)</m> where secant is positive. This restriction also
+          means that the substitution is monontonic.  I exclude the
+          right endpoint, since secant is undefined at that endpoint.
+        </p>
+      </li>
+    </ul>
+    <p>
+      This information is summarized in the following table. 
+    </p>
     <md>
       <mrow>
-        \text{ Integrand }  \hspace{1cm} \amp \sqrt{a^2 - x^2}
+        \text{ Integrand }  \amp \sqrt{a^2 - x^2}
       </mrow>
       <mrow>
-        \text{ Substitution }  \hspace{1cm} \amp x = a \sin \theta
+        \text{ Substitution }  \amp x = a \sin \theta
       </mrow>
       <mrow>
-        \text{ Identity }  \hspace{1cm} \amp \sin^2 \theta + \cos^2
+        \text{ Identity }  \amp \sin^2 \theta + \cos^2
         \theta = 1
       </mrow>
       <mrow>
-        \text{ Calculation }  \hspace{1cm} \amp \sqrt{a^2 - x^2} =
+        \text{ Calculation }  \amp \sqrt{a^2 - x^2} =
         \sqrt{a^2(1-\sin^2 \theta)} = a \cos \theta
       </mrow>
       <mrow>
-        \text{ Domain }  \hspace{1cm} \amp \frac{-\pi}{2} \leq \theta
+        \text{ Domain }  \amp \frac{-\pi}{2} \leq \theta
         \leq \frac{\pi}{2}
       </mrow>
+    </md>
+    <md>
       <mrow>
-        \text{ Integrand }  \hspace{1cm} \amp \sqrt{a^2 + x^2}
+        \text{ Integrand }  \amp \sqrt{a^2 + x^2}
       </mrow>
       <mrow>
-        \text{ Substitution }  \hspace{1cm} \amp x = a \tan \theta
+        \text{ Substitution }  \amp x = a \tan \theta
       </mrow>
       <mrow>
-        \text{ Identity }  \hspace{1cm} \amp \tan^2 \theta + 1 =
+        \text{ Identity }  \amp \tan^2 \theta + 1 =
         \sec^2 \theta
       </mrow>
       <mrow>
-        \text{ Calculation }  \hspace{1cm} \amp \sqrt{a^2 + x^2} =
+        \text{ Calculation }  \amp \sqrt{a^2 + x^2} =
         \sqrt{a^2(1+\tan^2 \theta)} = a \sec \theta
       </mrow>
       <mrow>
-        \text{ Domain }  \hspace{1cm} \amp \frac{-\pi}{2} \leq \theta
+        \text{ Domain }  \amp \frac{-\pi}{2} \leq \theta
         \leq \frac{\pi}{2}
       </mrow>
+    </md>
+    <md>
       <mrow>
-        \text{ Integrand }  \hspace{1cm} \amp \sqrt{x^2 - a^2}
+        \text{ Integrand }  \amp \sqrt{x^2 - a^2}
       </mrow>
       <mrow>
-        \text{ Substitution }  \hspace{1cm} \amp x = a \sec \theta
+        \text{ Substitution }  \amp x = a \sec \theta
       </mrow>
       <mrow>
-        \text{ Identity }  \hspace{1cm} \amp \tan^2 \theta + 1 =
+        \text{ Identity }  \amp \tan^2 \theta + 1 =
         \sec^2 \theta
       </mrow>
       <mrow>
-        \text{ Calculation }  \hspace{1cm} \amp \sqrt{x^2 - a^2} =
+        \text{ Calculation }  \amp \sqrt{x^2 - a^2} =
         \sqrt{a^2(\sec^2 \theta - 1)} = a \tan \theta
       </mrow>
       <mrow>
-        \text{ Domain }  \hspace{1cm} \amp 0 \leq \theta \leq
+        \text{ Domain }  \amp 0 \leq \theta \leq
         \frac{\pi}{2}
       </mrow>
     </md>
-  </p>
-  <example>
-    <statement>
-      <p>
-        In the first example, we have to remove a constant from the
-        square root to recognize the <m>\sqrt{a^2 - x^2}</m> form.
+  </subsection>
+  <subsection xml:id="subsection-trig-subs-examples">
+    <title>Examples with Trig Substitutions</title>
+    <p>
+      I'll present four examples to try to illustrate the method. In
+      each example, I look for the appropriate trig substitution.
+      Sometimes I might need to do some algebra to get the square root
+      into one of the three forms introduced above.  
+    </p>
+    <example>
+      <statement>
+        <me>
+          \int \sqrt{1-4x^2} dx 
+        </me>
+        <p>
+          This example is close to <m>\sqrt{a^2 - x^2}</m>, but there
+          is a coefficient in from of the <m>x</m>. I need to remove
+          this to use the trig substitution. I do this by writing
+          <m>1</m> as <m>\frac{4}{4}</m> and factoring the <m>4</m>
+          out of the square root. 
+        </p>
+        <me>
+          \int \sqrt{1-4x^2} dx = \int \sqrt{\frac{4}{4} - 4x^2} dx =
+          \int \sqrt{4 \left( \frac{1}{4} - x^2 \right)} dx 
+          \int 2 \sqrt{\frac{1}{4} - x^2} dx
+        </me>
+        <p>
+          Then I can apply the trig substitution <m>x = a \sin
+          \theta</m> with <m>a = \frac{1}{2}</m>. 
+        </p>
         <md>
-          <mrow>
-            \int \sqrt{1-4x^2} dx \amp = 2 \int \sqrt{\frac{1}{4} -
-            x^2} dx
-          </mrow>
           <mrow>
             \text{ Substitution: }  \amp
           </mrow>
@@ -113,9 +296,19 @@
             \frac{\sin^2 \theta}{4}} = \frac{1}{2} \sqrt{1 - \sin^2
             \theta} = \frac{1}{2} \cos \theta
           </mrow>
-          <mrow>
-            \text{ New Integral: }  \amp
-          </mrow>
+        </md>
+        <p>
+          Putting these pieces in gives me a new integral. Notice that
+          with trig substitution, replacing the <m>dx</m> term is
+          always easy. I don't need to any extra algebra to construct
+          the right term; the <m>dx</m> is always replace by an
+          expression in <m>\theta</m> according to the table above.
+          After doing the the substitution, I get a trig integral with
+          <m>\cos^2 \theta</m>. I use a half-angle identity to do this
+          trig integral, splitting into two reasonable integrals by
+          linearity. 
+        </p>
+        <md>
           <mrow>
             \int \sqrt{1-4x^2} dx \amp = 2 \int \frac{1}{2} \cos
             \theta \frac{1}{2} \cos \theta d \theta
@@ -134,12 +327,23 @@
           <mrow>
             \amp = \frac{\theta}{4} + \frac{\sin 2\theta}{8} + c
           </mrow>
+        </md>
+        <p>
+          Now I need to reverse the substitution. This can be a tricky
+          part of trig substitutions. I have expressions from the table
+          for <m>\sin \theta</m> and <m>\cos \theta</m>, so I need to
+          change the result of my integral into those functions. My
+          antiderivative has a <m>\sin 2\theta</m> term, so I expand
+          that with a double angle identity. Then I can replace the
+          sine and cosine terms. For <m>\theta</m> by itself, I
+          can invert the substitution <m>x = \frac{1}{2} \sin
+          \theta</m> to get <m>\theta = \arcsin 2x</m> and use that to
+          replace <m>\theta</m>. 
+        </p>
+        <md>
           <mrow>
-            \text{ Reverse Substitution: }  \amp
-          </mrow>
-          <mrow>
-            \amp = \frac{\theta}{4} + \frac{2 \sin \theta \cos
-            \theta}{8} + c
+            \int \sqrt{1-4x^2} dx \amp = \frac{\theta}{4} + \frac{2
+            \sin \theta \cos \theta}{8} + c
           </mrow>
           <mrow>
             \amp = \frac{\arcsin 2x}{4} + \frac{2\cdot 2x
@@ -150,15 +354,20 @@
             c
           </mrow>
         </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+      <me>
+        \int \frac{\sqrt{x^2-9}}{x^3} dx 
+      </me>
+      <p>
+        No algebra is required here to setup the trig substitution.
+        This is in the form for a secant substitution. In the
+        substitution, I calculate expressions for sine and cosine as
+        well, since they will be useful for the reverse substitution. 
       </p>
-    </statement>
-  </example>
-  <example>
-    <statement>
       <md>
-        <mrow>
-          \int \frac{\sqrt{x^2-9}}{x^3} dx \amp
-        </mrow>
         <mrow>
           \text{ Substitution: }  \amp
         </mrow>
@@ -179,25 +388,32 @@
           \cos \theta \amp = \frac{3}{x}
         </mrow>
         <mrow>
-          \sin \theta \amp = \sqrt{1 - \frac{9}{x^2}}
+          \sin \theta \amp = \sqrt{1 - \cos^2 \theta} = \sqrt{1 -
+          \frac{9}{x^2}}
         </mrow>
-        <mrow>
-          \text{ New Integral: }  \amp
-        </mrow>
+      </md>
+      <p>
+        I can replace all the pieces using the substitution, the
+        differential, and the square root calculation. After
+        replacing, I simplify the trig integral by changing everything
+        into sine and cosine. All the cosines cancel off, leaving just
+        a sine term. I use a half angle identity to solve this trig
+        integral, splitting it into two reasonable pieces by linearity. 
+      </p>
+      <md>
         <mrow>
           \int \frac{\sqrt{x^2-9}}{x^3} dx \amp = \int \frac{\sqrt{9
           \sec^2 \theta - 9}}{27 \sec^3 \theta} 3 \sec \theta \tan
           \theta d \theta.
         </mrow>
         <mrow>
-          \amp = \frac{1}{3} \int \frac{\tan^2
-        \theta}{\sec^2 \theta} d \theta
+          amp = \frac{1}{27} \int \frac{3 \tan \theta}{\sec \theta}
+          \sec \theta \tan \theta d \theta = \frac{1}{3} \int
+          \frac{\tan^2 \theta}{\sec^2 \theta} d \theta
         </mrow>
         <mrow>
           \amp = \frac{1}{3} \int \sin^2 \theta d\theta
-        </mrow>
-        <mrow>
-          \amp = \frac{1}{3} \int
+          = \frac{1}{3} \int
         \frac{1-\cos 2\theta}{2} d \theta
         </mrow>
         <mrow>
@@ -207,12 +423,20 @@
         <mrow>
           \amp = \frac{\theta}{6} - \frac{\sin 2\theta}{12} + c
         </mrow>
+      </md>
+      <p>
+        Now I need to reverse the substitution. I use a double angle
+        identity to write <m>\sin 2\theta</m> in terms of <m>\sin
+        \theta</m> and <m>\cos \theta</m>, so that I can replace those
+        expressions using the original substitution. To replace
+        <m>\theta</m>, I take the original substitution and solve for
+        <m>\theta</m> to get <m>\theta = \arcsec \left( \frac{x}{3}
+        \right)</m>.
+      </p>
+      <md>
         <mrow>
-          \amp = \frac{\theta}{6} - \frac{2 \sin \theta \cos
-          \theta}{12} + c
-        </mrow>
-        <mrow>
-          \text{ Reverse Substitution: }  \amp
+          \int \frac{\sqrt{x^2-9}}{x^3} dx \amp = \frac{\theta}{6} -
+          \frac{2 \sin \theta \cos \theta}{12} + c
         </mrow>
         <mrow>
           \amp = \frac{\arcsec\left(\frac{x}{3} \right)}{6} -
@@ -223,21 +447,30 @@
           \frac{\sqrt{x^2-9}}{2x^2} + c
         </mrow>
       </md>
-    </statement>
-  </example>
-  <example>
-    <statement>
-      <p>
-        Here is an example with bounds. This particular example is
-        quite useful: it calculates the area of the ellipse
-        <m>\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1</m>. It restricts to
-        the quarter of the ellipse in the first quadrant, where the
-        area is the area under the curve <m>y = \frac{b}{a}
-        \sqrt{a^2-x^2}</m> for <m>x \in [0,a]</m>. Working with the
-        bounds is difficult: to get the new bounds in <m>\theta</m>,
-        we have to invert the trig functions. Remember the standard
-        choices for inverting trig functions, or simply work by
-        intuition. Using special triangles is often convenient.
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          A = 4 \int_0^a \frac{b}{a} \sqrt{a^2-x^2} dx
+        </me>
+        <p>
+          Here is an example with bounds. This particular example is
+          quite useful: it calculates the area of the ellipse
+          <m>\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1</m>. It does this
+          by restricting to the quarter of the ellipse in the first
+          quadrant, where the area is the area under the curve <m>y =
+          \frac{b}{a} \sqrt{a^2-x^2}</m> for <m>x \in [0,a]</m>, and
+          then multiplying by <m>4</m> to get the area of the whole
+          ellipse.
+        </p>
+        <p>
+          This is a sine substitution. Since this is a definite
+          integral, I also have to deal with the bounds.  Working with
+          the bounds is a little tricky: to get the new bounds in
+          <m>\theta</m>, I have to invert the sine function (in this
+          case, simply by refering to a unit circle diagram).
+        </p>
         <md>
           <mrow>
             A \amp = 4 \int_0^a \frac{b}{a} \sqrt{a^2-x^2} dx
@@ -252,17 +485,31 @@
             \amp dx = a \cos \theta d \theta
           </mrow>
           <mrow>
+            \text{ Calculation: } \amp
+          </mrow>
+          <mrow>
+            \amp \sqrt{a^2 - x^2} = \sqrt{a^2(1-\sin^2 \theta)} = a
+            \cos \theta
+          </mrow>
+          <mrow>
             \text{ Bounds: }  \amp
           </mrow>
           <mrow>
-            \amp x = 0 \implies \theta = 0
+            \amp x = 0 \implies \theta = \arcsin (0) = 0
           </mrow>
           <mrow>
-            \amp x = a \implies \theta = \frac{\pi}{2}
+            \amp x = a \implies \theta = \arcsin \left( \frac{a}{a}
+            \right) = \arcsin (1) = \frac{\pi}{2}
           </mrow>
-          <mrow>
-            \text{ New Integral: }  \amp
-          </mrow>
+        </md>
+        <p>
+          Now I have all the pieces, so I can do the substitution.
+          Again, the substitution results in a squared trig function
+          which I solve with a half-angle identity. Since this is a
+          definite integral, I don't need to reverse the substitution.
+          I can just finish the substitution with the new bounds. 
+        </p>
+        <md>
           <mrow>
             A \amp = 4 \int_0^{\frac{\pi}{2}} \frac{b}{a} \sqrt{a^2 -
             a^2 \sin^2 \theta} a \cos \theta d \theta
@@ -286,25 +533,44 @@
             \pi ab
           </mrow>
         </md>
-      </p>
-      <p>
-        Therefore, the area of an ellipse with major axis <m>a</m> and
-        minor axis <m>b</m> is <m>\pi ab</m>. This notion of area
-        reduces to the area of a circle, where <m>a=b</m> and we get
-        <m>\pi a^2</m> for <m>a</m> the radius.
-      </p>
-    </statement>
-  </example>
-  <example>
-    <statement>
-      <p>
-        Here is another long example with bounds.
+        <p>
+          Therefore, the area of an ellipse with major axis <m>a</m> and
+          minor axis <m>b</m> is <m>\pi ab</m>. This area
+          matches with the area of a circle; when <m>a=b</m>, this
+          expression gives an area of <m>\pi a^2</m> where <m>a</m> is
+          the radius of the circle. 
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <me>
+          \int_{\frac{\sqrt{2}}{3}}^{\frac{2}{3}}
+          \frac{dx}{x^5\sqrt{9x^2-1}} 
+        </me>
+        <p>
+          This is a long and complicated example. First, I need to do
+          some algebra to put this in the right form to use a trig
+          substitution. I write <m>1 = \frac{9}{9}</m> and factor a
+          <m>9</m> out of the square root. 
+        </p>
+        <me>
+          \int_{\frac{\sqrt{2}}{3}}^{\frac{2}{3}}
+          \frac{1}{x^5\sqrt{9x^2-1}} dx =
+          \int_{\frac{\sqrt{2}}{3}}^{\frac{2}{3}}
+          \frac{1}{3x^5\sqrt{x^2 - \frac{1}{9}}} dx 
+        </me>
+        <p>
+          Now I can use a secant substitution. I need to change the
+          bounds as well, which involes inverting the secant function.
+          By taking reciprocals, I can instead invert the cosine
+          function, which is more familiar. (I can use the unit circle
+          or special triangles to find these inverse values of
+          cosine.)
+        </p>
         <md>
           <mrow>
-            \int_{\frac{\sqrt{2}}{3}}^{\frac{2}{3}}
-            \frac{dx}{x^5\sqrt{9x^2-1}} \amp =
-            \int_{\frac{\sqrt{2}}{3}}^{\frac{2}{3}}
-            \frac{dx}{3x^5\sqrt{x^2 - \frac{1}{9}}}
+            \text{ Substitution: }  \amp
           </mrow>
           <mrow>
             \amp u = \frac{1}{3} \sec \theta
@@ -313,14 +579,37 @@
             \amp du = \frac{1}{3} \sec \theta \tan \theta d \theta
           </mrow>
           <mrow>
+            \text{ Calculation: } \amp
+          </mrow>
+          <mrow>
+            \amp \sqrt{x^2 - \frac{1}{9}} = \sqrt{\frac{1}{9}(\sec^2
+            \theta -1} = \sqrt{ \frac{1}{9} \tan^2 \theta} =
+            \frac{1}{3} \tan \theta 
+          </mrow>
+          <mrow>
+            \text{ Bounds: } \amp
+          </mrow>
+          <mrow>
             \amp u = \frac{\sqrt{2}}{3} \implies \sec \theta =
-            \sqrt{2} \implies \cos \theta = \frac{1}{\sqrt{2}}
+            \sqrt{2} 
+          </mrow>
+          <mrow>
+            \amp \implies \cos \theta = \frac{1}{\sqrt{2}}
             \implies \theta = \frac{\pi}{4}
           </mrow>
           <mrow>
-            \amp u = \frac{2}{3} \implies \sec \theta = 2 \implies
-            \cos \theta = \frac{1}{2} \implies \theta = \frac{\pi}{3}
+            \amp u = \frac{2}{3} \implies \sec \theta = 2 
           </mrow>
+          <mrow>
+            \amp \implies \cos \theta = \frac{1}{2} \implies \theta =
+            \frac{\pi}{3}
+          </mrow>
+        </md>
+        <p>
+          Now I have all the pieces to do the substitution. I replace
+          everything, leading to a pretty complicated expression.
+        </p>
+        <md>
           <mrow>
             \int_{\frac{\sqrt{2}}{3}}^{\frac{2}{3}} \frac{dx}{3x^5
             \sqrt{x^2 - \frac{1}{9}}} \amp =
@@ -329,15 +618,38 @@
             \theta}{3^5} \sqrt{\frac{\sec^2 \theta}{9} -
             \frac{1}{9}}}
           </mrow>
+        </md>
+        <p>
+          I need to simplify this to make sense of it. I can use the
+          calculation above to repalce the square root in the
+          denominator. Then I can cancel some powers of 3. I can also
+          cancel a secant which shows up in the numerator and
+          denominator. 
+        </p>
+        <md>
           <mrow>
             \amp = \int_{\frac{\pi}{4}}^{\frac{\pi}{3}}
             \frac{3^6}{3^2} \frac{\tan \theta}{\sec^4 \theta \tan
             \theta} d \theta
           </mrow>
+        </md>
+        <p>
+          Now I'll change the secant into cosine. The tangent
+          cancels, making this reasonable. 
+        </p>
+        <md>
           <mrow>
-            \amp = 81 \int_{\frac{\pi}{4}}^{\frac{\pi}{3}} \cos 4
+            \amp = 81 \int_{\frac{\pi}{4}}^{\frac{\pi}{3}} \cos^4
             \theta d \theta
           </mrow>
+        </md>
+        <p>
+          This is an even power, so I use the half-angle identity.
+          After using the identity, I need to expand the resulting
+          binomial into three terms and split the integral up by
+          linearity. 
+        </p>
+        <md>
           <mrow>
             \amp = 81 \int_{\frac{\pi}{4}}^{\frac{\pi}{3}} \left(
             \frac{1 + \cos 2\theta}{2} \right)^2 d \theta
@@ -349,6 +661,16 @@
             \int_{\frac{\pi}{4}}^{\frac{\pi}{3}} \frac{\cos^2 2
             \theta}{4} d\theta \right)
           </mrow>
+        </md>
+        <p>
+          The first two integrals are reasonable to do. The third
+          integral needs another half-angle identity. After that
+          identity, I split up the last integral into two reasonable
+          integrals. Finally, I can evaluate all these things on their
+          bounds and do a bunch of arithmetic to simplify the
+          resulting solution. 
+        </p>
+        <md>
           <mrow>
             \amp = 81 \left( \frac{\frac{\pi}{3} - \frac{\pi}{4}}{4}
             + \left. \frac{\sin 2\theta}{4}
@@ -375,16 +697,18 @@
           </mrow>
           <mrow>
             \amp = 81 \left( \frac{2\pi + \pi}{96} + \frac{8\sqrt{3}
-            - \sqrt{3}}{64} - \frac{1}{4} \right) = 81 \left(
-            \frac{3\pi}{96} + \frac{7\sqrt{3}}{64} - \frac{16}{64}
-            \right)
+            - \sqrt{3}}{64} - \frac{1}{4} \right) 
+          </mrow>
+          <mrow>
+            \amp = 81 \left( \frac{3\pi}{96} + \frac{7\sqrt{3}}{64} -
+            \frac{16}{64} \right)
           </mrow>
           <mrow>
             \amp = 81 \left( \frac{\pi}{32} + \frac{7\sqrt{3} -
             16}{64} \right) = \frac{81}{64} ( 2\pi + 7\sqrt{3} - 16)
           </mrow>
         </md>
-      </p>
-    </statement>
-  </example>
+      </statement>
+    </example>
+  </subsection>
 </section>

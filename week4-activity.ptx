@@ -338,7 +338,7 @@
           </mrow>
           <mrow>
             \amp = \frac{x^4 \ln x}{4} - \frac{1}{4} \int x^3 dx =
-            \frac{x^4 \ln x}{4} + \frac{x^4}{16} + C 
+            \frac{x^4 \ln x}{4} - \frac{x^4}{16} + C 
           </mrow>
         </md>
       </solution>
@@ -529,12 +529,12 @@
         <md>
           <mrow>
             \int_0^1 x^2 \sqrt[3]{x+2} dx \amp = \frac{3x^2}{4}
-            (x+2)^{\frac{4}{3}} \Bigg|_0^1 - \int 2x \frac{3}{4}
+            (x+2)^{\frac{4}{3}} \Bigg|_0^1 - \int_0^1 2x \frac{3}{4}
             (x+2)^{\frac{4}{3}} dx 
           </mrow>
           <mrow>
             \amp = \frac{3(1)^2}{4} 3^{\frac{4}{3}} - \frac{3(0)^2}{4}
-            2^{\frac{4}{3}} - \frac{3}{2}\int x (x+2)^{\frac{4}{3}} dx
+            2^{\frac{4}{3}} - \frac{3}{2}\int_0^1 x (x+2)^{\frac{4}{3}} dx
           </mrow>
         </md>
         <p>
@@ -556,19 +556,19 @@
           <mrow>
             \int_0^1 x^2 \sqrt[3]{x+2} dx \amp = \frac{3}{4} 3
             \sqrt[3]{3} - \frac{3}{2} \left[ \frac{3x}{7}
-            (x+2)^{\frac{7}{3}} \Bigg|_0^1 - \int \frac{3}{7}
+            (x+2)^{\frac{7}{3}} \Bigg|_0^1 - \int_0^1 \frac{3}{7}
             (x+2)^{\frac{7}{3}} dx \right]
           </mrow>
           <mrow>
             \amp = \frac{9\sqrt[3]{3}}{4} - \frac{3}{2} \left[
             \frac{3(1)}{7} 3^{\frac{7}{3}} - \frac{3(0)}{7}
             2^{\frac{7}{3}} - \frac{3}{7} \frac{3}{10}
-            (x+2)^{\frac{10}{7}} \Bigg|_0^1 \right] 
+            (x+2)^{\frac{10}{3}} \Bigg|_0^1 \right] 
           </mrow>
           <mrow>
             \amp = \frac{9\sqrt[3]{3}}{4} - \frac{3}{2} \left[
-            \frac{3}{7} 9 \sqrt[3]{3} - \frac{9}{70} 3^{\frac{10}{7}}
-            + \frac{9}{70} 2^{\frac{10}{7}} \right]
+            \frac{3}{7} 9 \sqrt[3]{3} - \frac{9}{70} 3^{\frac{10}{3}}
+            + \frac{9}{70} 2^{\frac{10}{3}} \right]
           </mrow>
           <mrow>
             \amp = \frac{9\sqrt[3]{3}}{4} - \frac{81\sqrt[3]{3}}{14} +
@@ -576,7 +576,7 @@
             \frac{27(8\sqrt[3]{2})}{140} 
           </mrow>
           <mrow>
-            \amp = \frac{(9(35) - 81(10) + 729\sqrt[3]{3} -
+            \amp = \frac{(9(35) - 81(10) + 729)\sqrt[3]{3} -
             216\sqrt[3]{2}}{140} = \frac{117\sqrt[3]{3} -
             108\sqrt[3]{2}}{70} 
           </mrow>
