@@ -50,17 +50,17 @@
       </p>
       <md>
         <mrow>
-          \gamma(t) = (e^t \sin t, e^{-t} \cos t \amp \amp t \in [0,
+          \gamma(t) = (e^t \sin t, e^{-t} \cos t) \amp \amp t \in [0,
           \infty) 
         </mrow>
       </md>
     </li>
     <li>
       <p>
-        An object is moving in a vortex which has the shape of an
-        archimedian spiral. If it starts at a radius of 10m and
-        complete exactly 4 full revolutions before it reaches the
-        centre of the spiral, how far has the object travelled? (6) 
+        An object is moving outward in a vortex which has the shape of an
+        archimedian spiral. If it starts at the origin and reaches a
+        radius of 10m after it completes exctly 4 full revolutions, 
+        how far has the object travelled? (6) 
       </p>
     </li>
     <li>
