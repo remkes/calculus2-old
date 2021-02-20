@@ -3,53 +3,109 @@
   <subsection xml:id="subsection-parametric-curves-definition">
     <title>Definition</title>
     <p>
-      We've done a fair bit of work with loci in this course and in
-      Calculus I. Earlier in this course we talked about algebraic
-      plane curves, which were the loci of polynomial equations in
-      <m>\RR^2</m>. This section introduces a new way to think about
-      curves: by thinking of movement along the shape. The movement
-      happens with respect to a parameter, which we think of as time:
-      as time passes, we move along the curve. For loci like
-      algebraic plane curves, the entire curve is presented at one, as
-      a complete object. For parametric curves, we start at a point
-      and move along the curve in time.
+      So far, in this course and in Calculus I, a curve was the locus
+      of an equation. In <xref ref="section-algebraic-plane-curves"
+      />, I defined a special set of loci called algebraic plane
+      curves and work with implicit derivatives to understand their
+      shapes, slopes and singularities. A curve, as a locus, is a
+      static object, presented all at once by an equation. Sometime,
+      however, this presentation isn't sufficient. A curve can
+      represent the motion of an object (think of an ellipse
+      representing the path of an orbit or a parabola representing the
+      path of a projective). In the context of motion, the curve isn't
+      presented all at one. I also care about movement along the
+      curve: how fast an object is moving, where it is at some point
+      in time. This calls for a new treatment of curve. This section
+      introduces the idea of a parametric curve, which will capture
+      motion along a curve as well as the global shape previously
+      described by a locus. 
+    </p>
+    <p>
+      Motion along a curve is capture by a parameter, hence the name:
+      parametric curves. This parameter is usually interpreted as
+      time, so the variable <m>t</m> is conventional. Here is the
+      formal definition. I'll state the definition in <m>\RR^2</m>,
+      since I will only be working with curves in the plane in this
+      course, but the definition could be stated in any <m>\RR^n</m>. 
     </p>
     <definition>
       <statement>
         <p>
-          Let <m>t</m> be an indepedent variable (the parameter),
-          which we think of as time. A parametric curve in
-          <m>\RR^2</m> is a set of two functions <m>x(t)</m> and
-          <m>y(t)</m>, which give the <m>x</m> and <m>y</m>
-          coordinates of the curve at any point <m>t</m> in time. We
-          assume that <m>x</m> and <m>y</m> are continuous, so that
-          the curve is a connected curve. Often we want to refer the
-          curve with one symbol, which is typically the greek letter
-          <m>\gamma</m>.
-          <me>
-            \gamma(t) = (x(t), y(t))
-          </me>
+          Let <m>t</m> be an indepedent variable (the parameter,
+          usually interpreted as time) and let <m>[a,b]</m> be an
+          interval in <m>\RR</m>.  A parametric curve in
+          <m>\RR^2</m> is a set of two continuous functions <m>x(t)</m> and
+          <m>y(t)</m> on the domain <m>[a,b]</m>. These functions
+          describe the <m>x</m> and <m>y</m>
+          coordinates of the curve at any point <m>t</m> in time.
+          Though there are two function, it is conventional to refer
+          to the curve with one symbol, typically the greek
+          letter <m>\gamma</m>.
         </p>
-        <p>
-          Since this is a function of <m>t</m>, we need a domain.
-          Typically we will have <m>t \in [a,b]</m> for an interval.
-        </p>
+        <me>
+          \gamma(t) = (x(t), y(t))
+        </me>
       </statement>
     </definition>
+    <p>
+      To visualize a curve, I can draw all the points <m>\gamma(t) \in
+      \RR^2</m> as time range through its domain <m>t \in [a,b]</m>.
+      This is notable different from the graph of a function <m>y =
+      f(x)</m>. In the graph of a function, both in input and the
+      output are shown; the <m>x</m> axis is the input and the
+      <m>y</m> axis is the output. For a parametric curve, only the
+      output it drawn. There is no <m>t</m> axis; time is an implicit
+      idea, thinking of movement along the shape. Since the time axis
+      is not show, a parametric curve doesn't need to satisfy any kind
+      of vertical line test. It can meander all over the plane, double
+      back on itself, or cross over previous section of itself. Any
+      direction of movement is possible at any point.
+    </p>
+    <p>
+      I did insist, in the definition, that the functions must be
+      continuous. This means that the movement along a parametric
+      curve is connected -- no teleportation from once point suddenly
+      to somewhere else. For paths and movement, this is a reasonable
+      restriction. 
+    </p>
   </subsection>
   <subsection xml:id="subsection-parametric-curves-examples">
     <title>Examples</title>
+    <p>
+      Like many mathematical objects, the best way to understand
+      curves is through examples. I'm going to give many examples in
+      this section. 
+    </p>
     <example>
       <statement>
+        <figure xml:id="figure-parametric-curve1">
+          <caption>Parametric Curve <m>\gamma_1(t) = (t,t)</m></caption>
+          <image xml:id="figure10" width="80%">
+            <asymptote>
+              size(12cm,6cm,IgnoreAspect);
+              import contour;
+              import graph;
+              xaxis();
+              yaxis();
+    
+              draw((0,0)--(5,5),Arrow);
+              dot("$\gamma(1) = (1,1)$",(1,1),SE);
+              dot("$\gamma(2) = (2,2)$",(2,2),SE);
+              dot("$\gamma(3) = (3,3)$",(3,3),SE);
+              dot("$\gamma(4) = (4,4)$",(4,4),SE);
+              dot("$\gamma(5) = (5,5)$",(5,5),SE);
+            </asymptote>
+          </image>
+        </figure>
         <p>
           Consider the curve <m>\gamma_1(t) = (t,t)</m> for <m>t \in
           [0,5]</m>. This curves gives the line <m>y=x</m>, starting
           at <m>(0,0)</m> and ending at <m>(5,5)</m>. At <m>t=0</m>,
           the curve is at <m>(0,0)</m>, at <m>t=1</m>, it is at
           <m>(1,1)</m>, and so on. All parametric curves are about
-          movement: this is not only the line <m>y=x</m>, but also the
-          starting point <m>(0,0)</m>, the ending point <m>(5,5)</m>
-          and the rate of movement along the line.
+          movement: this curve is not only the line <m>y=x</m>, but
+          also the starting point <m>(0,0)</m>, the ending point
+          <m>(5,5)</m> and the rate of movement along the line.
         </p>
       </statement>
     </example>
@@ -57,10 +113,12 @@
       <statement>
         <p>
           Consider the curve <m>\gamma_2(t) = (-t,-t)</m> for <m>t \in
-          [-5,0]</m>. This is exactly the same line, since it still
-          satisfies <m>y=x</m>. However, now we start at <m>(5,5)</m>
-          when <m>t=-5</m>, and we move towards <m>(0,0)</m> when
-          <m>t=0</m>.
+          [-5,0]</m>. This is exactly the same line as the previouus
+          example, since it still satisfies <m>y=x</m>. However, now
+          the curve starts at <m>(5,5)</m> when <m>t=-5</m> and moves
+          towards <m>(0,0)</m> when <m>t=0</m>. Different parametric
+          curve can describe the same shape with different notions of
+          movement along that shape. 
         </p>
       </statement>
     </example>
@@ -69,255 +127,249 @@
         <p>
           Now consider the curve <m>\gamma_3(t) = (t^2,t^2)</m> for
           <m>t \in [0,\sqrt{5}]</m>. Again, this is the same line
-          and, like <m>\gamma_1</m>, it starts at <m>(0,0)</m> and
-          ends at <m>(5,5)</m>. However, it travels the distance a
-          smaller parameter domain, meaning that it moves faster.
-        </p>
-      </statement>
-    </example>
-    <figure xml:id="figure-parametric-curve1">
-      <caption>Parametric Curve <m>\gamma_1(t) = (t,t)</m></caption>
-      <image xml:id="figure10" width="80%">
-        <asymptote>
-          size(12cm,6cm,IgnoreAspect);
-          import contour;
-          import graph;
-          xaxis();
-          yaxis();
-
-          draw((0,0)--(5,5),Arrow);
-          dot("$\gamma(1) = (1,1)$",(1,1),SE);
-          dot("$\gamma(2) = (2,2)$",(2,2),SE);
-          dot("$\gamma(3) = (3,3)$",(3,3),SE);
-          dot("$\gamma(4) = (4,4)$",(4,4),SE);
-          dot("$\gamma(5) = (5,5)$",(5,5),SE);
-        </asymptote>
-      </image>
-    </figure>
-    <example>
-      <statement>
-        <p>
-          A classic example is <m>\gamma(t) = (\cos t, \sin t)</m> for
-          <m>t \in [0,2\pi]</m>. This curve is just the unit circle,
-          traced counter clockwise, starting at <m>(1,0)</m>. We
-          could change the parameter domain. If we have <m>t \in
-          [0,8\pi]</m>, then we have four periods of <m>\sin t</m> and
-          <m>\cos t</m>, so this traces the same circle four times.
-          This is a good example of a parametric curve which traces
-          over itself some number of times.
+          as the previous two examples. Like <m>\gamma_1</m>, it
+          starts at <m>(0,0)</m> and ends at <m>(5,5)</m>. However, it
+          travels the distance a smaller parameter domain, meaning
+          that it moves faster.
         </p>
       </statement>
     </example>
     <example>
       <statement>
         <p>
-          Curves can quickly get complicated. Consider this curve:
-          <m>\gamma(t) = (\cos 3t, \sin 5t)</m>. This gives a lovely
-          pattern, perhaps reminiscent of spirographs (depending on
-          your childhood experience, of course). The curve is shown
-          in <xref ref="figure-parametric-curve2">Figure</xref>.
+          A very important example is <m>\gamma(t) = (\cos t, \sin
+          t)</m> for <m>t \in [0,2\pi]</m>. This curve is just the
+          unit circle, traced counter clockwise and starting at
+          <m>(1,0)</m>. I could change the parameter domain. If we
+          have <m>t \in [0,8\pi]</m>, then I have four periods of
+          <m>\sin t</m> and <m>\cos t</m>, so this curve traces the
+          same circle four times.  This is a good example of a
+          parametric curve which traces over itself some number of
+          times. Retracing the same shape is perfectly valid for a
+          parametric curve. 
         </p>
       </statement>
     </example>
-    <figure xml:id="figure-parametric-curve2">
-      <caption><m>\gamma(t) = (\cos 3t, \sin 5t)</m></caption>
-      <image xml:id="figure11" width="80%">
-        <asymptote>
-          size(12cm,8cm,IgnoreAspect);
-          import contour;
-          import graph;
-          xaxis();
-          yaxis();
-
-          real x(real t) {return cos(3*2pi*t);}
-          real y(real t) {return sin(5*2pi*t);}
-
-          draw(graph(x,y,0,1));
-        </asymptote>
-      </image>
-    </figure>
     <example>
       <statement>
+        <figure xml:id="figure-parametric-curve2">
+          <caption><m>\gamma(t) = (\cos 3t, \sin 5t)</m></caption>
+          <image xml:id="figure11" width="80%">
+            <asymptote>
+              size(12cm,8cm,IgnoreAspect);
+              import contour;
+              import graph;
+              xaxis();
+              yaxis();
+    
+              real x(real t) {return cos(3*2pi*t);}
+              real y(real t) {return sin(5*2pi*t);}
+    
+              draw(graph(x,y,0,1));
+            </asymptote>
+          </image>
+        </figure>
         <p>
-          The next example is called the cycloid. Many curves have
-          history going back hundreds or thousands of years in
-          geometry, as evidenced by their greek names. The cycloid is
-          the curve <m>\gamma(t) = (a(t-\sin t), a(1-\cos t))</m>. It
-          describes the movement of a point at the edge of a wheel as
-          the wheel rolls.
+          Consider the curve <m>\gamma(t) = (\cos 3t, \sin 5t)</m> for
+          <m>t \in [0, 2\pi]</m>.  This curve gives a lovely pattern,
+          perhaps reminiscent of spirographs (depending on your
+          childhood experience, of course). The curve is shown in
+          <xref ref="figure-parametric-curve2">Figure</xref>. It is a
+          good example of the fact that a parametric curve can have
+          many self-intersections.
         </p>
       </statement>
     </example>
-    <figure xml:id="figure-parametric-curve3">
-      <caption>The Cycloid</caption>
-      <image xml:id="figure12" width="80%">
-        <asymptote>
-          size(10cm);
-          import contour;
-          import graph;
-          xaxis();
-          yaxis();
+    <example>
+      <statement>
+        <figure xml:id="figure-parametric-curve3">
+          <caption>The Cycloid for <m>t \in [0,4\pi]</m></caption>
+          <image xml:id="figure12" width="80%">
+            <asymptote>
+              size(10cm);
+              import contour;
+              import graph;
+              xaxis();
+              yaxis();
 
-          real x(real t) {return t-sin(t);}
-          real y(real t) {return 1-cos(t);}
+              real x(real t) {return t-sin(t);}
+              real y(real t) {return 1-cos(t);}
 
-          draw(graph(x,y,0,4*pi));
-        </asymptote>
-      </image>
-    </figure>
+              draw(graph(x,y,0,4*pi));
+            </asymptote>
+          </image>
+        </figure>
+        <p>
+          The next example is called the cycloid (a greek name). Many
+          curves have history going back hundreds or thousands of
+          years in geometry and have these antiquated greek or latin
+          names. The cycloid is the curve <m>\gamma(t) = (a(t-\sin t),
+          a(1-\cos t))</m> for <m>t \in [0,\infty]</m>. It describes the
+          movement of a point at the edge of a wheel as the wheel
+          rolls.
+        </p>
+      </statement>
+    </example>
     <p>
       Many parametric curves are spirals. The general form for a
       spiral is <m>\gamma(t) = (f(t) \cos t, f(t) \sin t)</m> for
       <m>f(t)</m> a positive monotonic function. <m>f(t)</m>
-      represents the change in radius as we go around a circle.
+      represents the change in radius while the cosine and sine
+      function show (counterclockwise) rotation around the origin. 
     </p>
     <example>
       <statement>
+        <figure xml:id="figure-parametric-curve4">
+          <caption>The Archimedian Spiral</caption>
+          <image xml:id="figure13" width="80%">
+            <asymptote>
+              size(12cm,12cm);
+              import contour;
+              import graph;
+              xaxis();
+              yaxis();
+
+              real x(real t) {return t*cos(t);}
+              real y(real t) {return t*sin(t);}
+
+              draw(graph(x,y,0,6*pi));
+            </asymptote>
+          </image>
+        </figure>
         <p>
-          The archemidean spiral is this curve: <m>\gamma(t) = (t \cos
-          t, t \sin t)</m>. It has linear growth in its radius, so
-          there are equally spaced spiral arms.
+          The archemidean spiral is the curve <m>\gamma(t) = (t \cos
+          t, t \sin t)</m> with <m>t \in [0,\infty]</m>. It has linear
+          radius growth, so the arms of the spiral are equally spaced.
         </p>
       </statement>
     </example>
-    <figure xml:id="figure-parametric-curve4">
-      <caption>The Archimedian Spiral</caption>
-      <image xml:id="figure13" width="80%">
-        <asymptote>
-          size(12cm,12cm);
-          import contour;
-          import graph;
-          xaxis();
-          yaxis();
-
-          real x(real t) {return t*cos(t);}
-          real y(real t) {return t*sin(t);}
-
-          draw(graph(x,y,0,6*pi));
-        </asymptote>
-      </image>
-    </figure>
     <example>
       <statement>
+        <figure xml:id="figure-parametric-curve5">
+          <caption>The Hyperbolic Spiral</caption>
+          <image xml:id="figure14" width="80%">
+            <asymptote>
+            size(12cm,8cm,IgnoreAspect);
+            import contour;
+            import graph;
+            xaxis();
+            yaxis();
+
+            real x(real t) {return cos(t)/t;}
+            real y(real t) {return sin(t)/t;}
+
+            draw(graph(x,y,3,30));
+            </asymptote>
+          </image>
+        </figure>
         <p>
           The hyperbolic spiral is an inward spiral, (it has
           decreasing radius). Its expression is <m>\gamma(t) =
-          (\frac{\cos t}{t}, \frac{\sin t}{t})</m>.
+          (\frac{\cos t}{t}, \frac{\sin t}{t})</m> for <m>t in
+          (0,\infty)</m>.
         </p>
       </statement>
     </example>
-    <figure xml:id="figure-parametric-curve5">
-      <caption>The Hyperbolic Spiral</caption>
-      <image xml:id="figure14" width="80%">
-        <asymptote>
-        size(12cm,8cm,IgnoreAspect);
-        import contour;
-        import graph;
-        xaxis();
-        yaxis();
-
-        real x(real t) {return cos(t)/t;}
-        real y(real t) {return sin(t)/t;}
-
-        draw(graph(x,y,3,30));
-        </asymptote>
-      </image>
-    </figure>
     <example>
       <statement>
+        <figure xml:id="figure-parametric-curve6">
+          <caption>The Logarithmic Spiral</caption>
+          <image xml:id="figure15" width="80%">
+            <asymptote>
+              size(12cm,8cm,IgnoreAspect);
+              import contour;
+              import graph;
+              xaxis();
+              yaxis();
+
+              real x(real t) {return exp(t)*cos(3*t);}
+              real y(real t) {return exp(t)*sin(3*t);}
+
+              draw(graph(x,y,-3,2));
+            </asymptote>
+          </image>
+        </figure>
         <p>
-          The last spiral in our examples is the logarithmic spiral
+          The last spiral in these examples is the logarithmic spiral
           which has exponential growth in radius. Its form is
-          <m>\gamma(t) = (e^{t} \cos t, e^{t} \sin t)</m>.
+          <m>\gamma(t) = (e^{t} \cos t, e^{t} \sin t)</m> for <m>t \in
+          \RR</m>.
+        </p>
+        <p>
+          The logarithmic spiral shows up frequently, both in mathematics
+          and the natural world. Examples of natural (approximate)
+          logarithmic spirals include nautilus shells and spiral
+          galaxies (though the natural application of the logarithmic
+          spiral is not without some contraversy).
         </p>
       </statement>
     </example>
-    <figure xml:id="figure-parametric-curve6">
-      <caption>The Logarithmic Spiral</caption>
-      <image xml:id="figure15" width="80%">
-        <asymptote>
-          size(12cm,8cm,IgnoreAspect);
-          import contour;
-          import graph;
-          xaxis();
-          yaxis();
-
-          real x(real t) {return exp(t)*cos(3*t);}
-          real y(real t) {return exp(t)*sin(3*t);}
-
-          draw(graph(x,y,-3,2));
-        </asymptote>
-      </image>
-    </figure>
-    <p>
-      The logarithmic spiral shows up frequently, both in mathematics
-      and the natural world. Examples of natural logarithmic spirals
-      include nautilus shells and spiral galaxies (though the natural
-      application of the logarithmic spiral is not without some
-      contraversy).
-    </p>
     <example>
       <statement>
+        <figure xml:id="figure-parametric-curve7">
+          <caption>The Cardiod</caption>
+          <image xml:id="figure16" width="80%">
+            <asymptote>
+              size(12cm,8cm,IgnoreAspect);
+              import contour;
+              import graph;
+              xaxis();
+              yaxis();
+
+              real x(real t) {return (1-sin(t))*cos(t);}
+              real y(real t) {return (1-sin(t))*sin(t);}
+
+              draw(graph(x,y,0,2*pi));
+            </asymptote>
+          </image>
+        </figure>
         <p>
           A final example, which is not a spiral, is the cardiod. It
           has the form <m>\gamma(t) = ((1-\sin t) \cos t, (1-\sin t)
-          \sin t</m>. The name comes from its vaguely heart-shaped
-          path.
+          \sin t</m> for <m>t \in [0, 2\pi]</m>. The name comes from
+          its vaguely heart-shaped path.
         </p>
       </statement>
     </example>
-    <figure xml:id="figure-parametric-curve7">
-      <caption>The Cardiod</caption>
-      <image xml:id="figure16" width="80%">
-        <asymptote>
-          size(12cm,8cm,IgnoreAspect);
-          import contour;
-          import graph;
-          xaxis();
-          yaxis();
-
-          real x(real t) {return (1-sin(t))*cos(t);}
-          real y(real t) {return (1-sin(t))*sin(t);}
-
-          draw(graph(x,y,0,2*pi));
-        </asymptote>
-      </image>
-    </figure>
   </subsection>
   <subsection xml:id="subsection-reparametrization">
     <title>Reparametrization</title>
     <p>
       A parametric curve is more than just a shape in <m>\RR^2</m>.
-      The curve also records the start, end and direction, as well as
-      the rate of movement along the shape. All that information
+      The curve also records the start point, end point, direction,
+      and rate of movement along the shape. All that information
       depends on the <em>parametrization</em>: the way in which
       position depends on the parameter.
     </p>
     <p>
-      Sometimes we want to adjust the movement along the shape, while
-      preserving the shape. We can do that by changing the
-      parametrization: this is called <em>reparametrization</em>. The
-      idea is to replace the parameter <m>t</m> by a new parameter
-      <m>s</m>. Say we have a curve <m>\gamma(t) = (x(t),y(t))</m>,
-      but we can express <m>t</m> as a function of some other variable
-      <m>s</m>, <m>t = t(s)</m>. Then we can replace <m>t</m> with
-      <m>t(s)</m> in the definition of the curve (much like we replace
-      in a integration substitution). That gives a new
-      parametrization of the same curve: <m>\gamma(s) =
-      (x(t(s)),y(t(s)))</m>.
+      Sometimes I would like to change the direction or speed along a
+      curve while keeping the same shape. I can do that by changing
+      the parametrization.  Consider a curve <m>\gamma(t) = (x(t),
+      y(t))</m> and a function <m>t = g(u)</m> for some
+      <em>monotonic</em> function <m>g</m>. Then I can replace
+      <m>t</m> in the curve with <m>g(u)</m> to get <m>\gamma(s) =
+      (x(g(u)),y(g(u)))</m>. This is called
+      <em>reparametrization</em>. Often it is conventional (though
+      slighly confusing) to just write <m>t(u)</m> instead of <m>t =
+      g(u)</m>.
     </p>
     <p>
-      The circle <m>\gamma(t) = (\cos t, \sin t)</m> can be
-      reparametrized in a variety of ways. <m>t(s) = s^2</m> gives the
-      new circle <m>\gamma(s) = (\cos s^2, \sin s^2)</m>. Similarly,
-      <m>t(s) = \sqrt{s}</m> gives the new circle <m>\gamma(s) = (\cos
-      \sqrt{s}, \sin \sqrt{s})</m>. Each reparametrization doesn't
-      change the shape, but does change the rate at which we move
-      around the circle.
+      The circle <m>\gamma(t) = (\cos t, \sin t)</m> for <m>t \in
+      [0,2\pi]</m>  can be reparametrized in a variety of ways.
+      <m>t(u) = u^2</m> gives the new circle <m>\gamma(u) = (\cos u^2,
+      \sin u^2)</m> with <m>u \in [0, \sqrt{2\pi}]</m> . Similarly,
+      <m>t(u) = \sqrt{u}</m> gives the new circle <m>\gamma(u) = (\cos
+      \sqrt{u}, \sin \sqrt{u})</m> with <m>u \in [0, (2\pi)^2]</m>.
+      Each reparametrization doesn't change the shape, but does change
+      the rate at which we move around the circle.
     </p>
     <p>
       Each curve shape in <m>\RR^2</m> has many (infinitely many)
-      parametrizations.
+      parametrizations. Any monotonic function <m>t = g(u)</m> can
+      give a valid reparametrization, and there are infinitely many
+      monotonic functions. This is what makes parametric curves much
+      richer than curve as loci: each shape also has an infinite
+      variety of movement along the shape.
     </p>
   </subsection>
 </section>
