@@ -24,7 +24,7 @@
       </p>
       <md>
         <mrow>
-          \gamma(t) = \left( t \frac{1}{t^2+1} \right) \amp \amp t \in
+          \gamma(t) = \left( t, \frac{1}{t^2+1} \right) \amp \amp t \in
           [0, \infty) 
         </mrow>
       </md>

@@ -445,7 +445,7 @@
             \theta}{\sqrt{3} \sin \theta} + c 
           </mrow>
           <mrow>
-            \amp = \frac{-3\cos \theta}{\sqrt{3} 3\sin \theta} + c =
+            \amp = \frac{-\cos \theta}{\sqrt{3} \sin \theta} + c =
             \frac{-\sqrt{1-x^2}}{\sqrt{3} x} + c 
           </mrow>
         </md>

@@ -1,220 +1,321 @@
 <section xml:id="section-volumes">
   <title>Volumes</title>
+  <introduction>
+    <p>
+      An important application of integration is the calculation of
+      volumes of three-dimensional objects. Maybe you wondered,
+      sometime, where the various volume formulas come from: why does
+      a sphere have volume <m>\frac{4\pi r^3}{4}</m>, or a cube
+      <m>\frac{\pi r^2 h}{3}</m>? The oldest versions of these formlas
+      were almost certainly the product of approxiamation and
+      guessing, but now we claim to know them exactly. What is the
+      proof? How are they calculated? Moveover, if there are new
+      three-dimensional shapes described, techniques to calculate
+      their volume are valuable. This is useful in all sorts of
+      designs, where designers need to know how much material the
+      component will requre, or how heavy it will be (assuming density is
+      known). Integrals can answer these questions.
+    </p>
+    <p>
+      This week, I'll be introducing two methods for calculating
+      volume. Both methods are based on the definition of the
+      integral: as the limit of a sum of approximate pieces. For each
+      method, I'll develop a particular way fo cutting up the object
+      into 2-dimensional slices whose area is known. Then I'll
+      multiply by some width <m>\Delta w</m> to get a volume for the
+      slice. The sum of a number of such slices will approximate the
+      area. Then I take the limit. In the limit, the sum becomes an
+      integral and the width <m>\Delta w</m> becomes an infinitesimal
+      <m>dw</m>. 
+    </p>
+  </introduction>
   <subsection xml:id="subsection-cross-sectional-slices">
     <title>Volumes by Cross-Sectional Slices</title>
     <p>
-      For parametric curves, we approached the length of a curve by
-      defining an infinitesimal length <m>ds</m> and then using
-      integration to <sq>add up</sq> all the infinitesimals.
-      <me>
-        L = \int ds
-      </me>
+      The first of the two methods use cross-sectional slices. These
+      are slices made by some plane as the plane moves along the
+      shape. The idea is to choose an orientation for the slices such
+      that they are some familiar shape: rectangles, triangles,
+      circles. Then their area is know and I can setup the
+      approximation system and resulting integral I described above.
+      There are three pieces to the integral. Let me assume the slices
+      perpendicular to the <m>x</m> axis, so that each slice is
+      identified by its <m>x</m> coordinates (though, of course, this
+      will all work for any axis by simply changing the variable
+      name). First I have the range in <m>x</m>, <m>x \in [a,b]</m>,
+      that covers the object. This will become the bounds of
+      integration. Second, I have the area of the slice, <m>A(x)</m>,
+      as a function of the <m>x</m> position that identifies the
+      slice. This will form the integrand. Finally, I hvae the
+      width. In the limit that defined the integral, this becomes the
+      <m>dx</m> which completes the integral. Then I can write the
+      integral for volume by cross-sectional slices. 
     </p>
-    <p>
-      This technique of thinking in infinitesimals is useful for many
-      applications of integration. In this section, we're going to
-      use it to calculate volumes.
-    </p>
-    <figure xml:id="figure-slices-sphere">
-      <caption>Slices of the Sphere</caption>
-      <image xml:id="figure18" width="80%">
-        <asymptote>
-          unitsize(5cm);
-          import solids;
-
-          currentprojection=orthographic(3,-4,5);
-
-          pen bg=lightblue+opacity(0.3);
-
-          draw(unitsphere,lightblue+opacity(0.5));
-
-          draw(surface((0,-1,-1)--(0,-1,1)--(0,1,1)--(0,1,-1)
-            --cycle),bg,bg);
-          draw(surface((0.2,-1,-1)--(0.2,-1,1)--(0.2,1,1)--(0.2,1,-1)
-            --cycle),bg,bg);
-          draw(surface((0.4,-1,-1)--(0.4,-1,1)--(0.4,1,1)--(0.4,1,-1)
-            --cycle),bg,bg);
-          draw(surface((0.6,-1,-1)--(0.6,-1,1)--(0.6,1,1)--(0.6,1,-1)
-            --cycle),bg,bg);
-          draw(surface((0.8,-1,-1)--(0.8,-1,1)--(0.8,1,1)--(0.8,1,-1)
-            --cycle),bg,bg);
-
-          draw((0,0,1)..(0,1,0)..(0,0,-1)..(0,-1,0)..cycle);
-          draw((0.2,0,0.98)..(0.2,0.98,0)..(0.2,0,-0.98)..(0.2,-0.98,0)
-            ..cycle);
-          draw((0.4,0,0.91)..(0.4,0.91,0)..(0.4,0,-0.91)..(0.4,-0.91,0)
-            ..cycle);
-          draw((0.6,0,0.8)..(0.6,0.8,0)..(0.6,0,-0.8)..(0.6,-0.8,0)
-            ..cycle);
-          draw((0.8,0,0.6)..(0.8,0.6,0)..(0.8,0,-0.6)..(0.8,-0.6,0)
-            ..cycle);
-        </asymptote>
-      </image>
-    </figure>
+    <me>
+      V = \int_a^b A(x) dx 
+    </me>
     <example>
       <statement>
-        <p>
-          A basic example is the volume of a sphere. In these
-          infinitesimal arguments, we need to divide the object into
-          pieces, either slices or more complicated shapes, which have
-          an infinitesimal thickness. For the sphere, we divide it
-          into infinitesimally thin discs. Let's say the sphere of
-          radius <m>r</m> is centered at the origin in <m>\RR^3</m>.
-          We slice it into vertical slices with circular cross
-          sections.
-        </p>
-        <figure xml:id="figure-cross-secdtion-sphere">
-          <caption>Cross Section of a Sphere</caption>
-          <image xml:id="figure19" width="80%">
+        <figure xml:id="figure-slices-sphere">
+          <caption>Slices of the Sphere</caption>
+          <image xml:id="figure18" width="80%">
             <asymptote>
-              size(12cm,12cm);
-              import graph;
-              xaxis();
-              yaxis();
-
-              draw(unitcircle);
-
-              draw((0.5,1.1)--(0.5,-1.1));
-
-              draw((0,0)--(0.5,0.866));
-
-              dot("$y = \sqrt{r^2-x^2}$",(0.5,0.866),NE);
-              label("$x^2 + y^2 = r^2$",(-0.71,0.71),SE);
-              label("Slice at $x$, width $dx$",(0.5,-1),E);
+              unitsize(5cm);
+              import solids;
+    
+              currentprojection=orthographic(3,-4,5);
+    
+              pen bg=lightblue+opacity(0.3);
+    
+              draw(unitsphere,lightblue+opacity(0.5));
+    
+              draw(surface((0,-1,-1)--(0,-1,1)--(0,1,1)--(0,1,-1)
+                --cycle),bg,bg);
+              draw(surface((0.2,-1,-1)--(0.2,-1,1)--(0.2,1,1)--(0.2,1,-1)
+                --cycle),bg,bg);
+              draw(surface((0.4,-1,-1)--(0.4,-1,1)--(0.4,1,1)--(0.4,1,-1)
+                --cycle),bg,bg);
+              draw(surface((0.6,-1,-1)--(0.6,-1,1)--(0.6,1,1)--(0.6,1,-1)
+                --cycle),bg,bg);
+              draw(surface((0.8,-1,-1)--(0.8,-1,1)--(0.8,1,1)--(0.8,1,-1)
+                --cycle),bg,bg);
+    
+              draw((0,0,1)..(0,1,0)..(0,0,-1)..(0,-1,0)..cycle);
+              draw((0.2,0,0.98)..(0.2,0.98,0)..(0.2,0,-0.98)..(0.2,-0.98,0)
+                ..cycle);
+              draw((0.4,0,0.91)..(0.4,0.91,0)..(0.4,0,-0.91)..(0.4,-0.91,0)
+                ..cycle);
+              draw((0.6,0,0.8)..(0.6,0.8,0)..(0.6,0,-0.8)..(0.6,-0.8,0)
+                ..cycle);
+              draw((0.8,0,0.6)..(0.8,0.6,0)..(0.8,0,-0.6)..(0.8,-0.6,0)
+                ..cycle);
             </asymptote>
           </image>
         </figure>
         <p>
-          What is the radius of each disc? If we look at a
-          cross-section of the middle of the sphere, we get the circle
-          <m>x^2 + y^2 = r^2</m>. If our slices are vertical, then
-          their radius is simply the <m>y</m> value <m>y = \sqrt{r^2 -
-          x^2}</m>. Then, as we move from <m>x = -r</m> to <m>x =
-          r</m>, we get all the radii from <m>0</m> to <m>r</m> and
-          back to <m>0</m> again. All of these discs have thickness
-          <m>dx</m>, an infinitesimal, and area <m>\pi y^2 = \pi (r^2
-          - x^2)</m>. Then we just add up all the infinitesimal
-          pieces in an integral.
-          <md>
-            <mrow>
-              V \amp = \int_{-r}^r A dx = \int_{-r}^r \pi (r^2 - x^2)
-              dx
-            </mrow>
-            <mrow>
-              \amp = \pi \int_{-r}^r r^2 - x^2 dx = \left. \pi r^2 x
-              - \pi \frac{x^3}{3} \right|_{-r}^r
-            </mrow>
-            <mrow>
-              \amp = \pi r^3 - (-\pi r^3) - \left( \frac{\pi r^3}{3}
-              + \frac{\pi r^3}{3} \right) = 2\pi r^3 - \frac{2\pi
-              r^3}{3} = \frac{4\pi r^3}{3}
-            </mrow>
-          </md>
+          Consider a sphere of radius <m>R</m> is centered at the
+          origin in <m>\RR^3</m>. Such an object is given by the
+          equation <m>x^2 + y^2 + z^2 = R^2</m> as a locus in
+          <m>\RR^3</m>. I will slice the sphere with
+          vertical planes; the cross sections will be circles. At
+          the front of the sphere, the slice is just a point. As the
+          slices move down the sphere, they get larger. At the
+          middle, the slice is a circle of radius <m>R</m>. Then the
+          slices start shrinking down again until there is just a
+          point at the back of the sphere. <xref
+          ref="figure-slices-sphere" /> shows this process. I'll
+          assume the slices are perpendicular to the <m>x</m> axis and
+          are identified by their <m>x</m> position as <m>x \in
+          [-R,R]</m>. 
         </p>
         <p>
-          The result is the conventional old formula for the volume of
+          Then I need to know the radius of each disc, based on its
+          <m>x</m> position. I could treat the maximum <m>y</m> values
+          as the radius. If I set <m>z=0</m> in the locus, then <m>x^2
+          + y^2 = R^2</m>, so the maximum <m>y</m> value would be <m>y
+          = \sqrt{R^2 - x^2}</m>. This is the radius of the slice at
+          position <m>x</m> 
+        </p>
+        <p>
+          Then I need to set up the integral. Implicitly, of course,
+          the integral is a limit of approximations. However, it is
+          usually possible to go directly to setting up the integral
+          using <m>dx</m> (or whatever variable indicates the position
+          of the slide) as the width term. I have a range for the
+          <m>x</m> positions: <m>x \in [-R,R]</m>, which forms the
+          bounds for the integral. I have a circle of radius
+          <m>\sqrt{R^2 - x^2}</m> at each <m>x</m> position. The area
+          of this circle is <m>\pi (\sqrt(R^2 - x^2)^2 = \pi(R^2 -
+          x^2)</m>. That's the area of the cross section, which is the
+          function I will integrate. The width is <m>dx</m>. Those are
+          all the pieces of the integral. The resulting integral is a
+          reasonable polynomial integral.
+        </p>
+        <md>
+          <mrow>
+            V \amp = \int_{-R}^R \pi (R^2 - x^2) dx
+          </mrow>
+          <mrow>
+            \amp = \pi \int_{-R}^R R^2 - x^2 dx = \left. \pi R^2 x
+            - \pi \frac{x^3}{3} \right|_{-R}^R
+          </mrow>
+          <mrow>
+            \amp = \pi R^3 - (-\pi R^3) - \left( \frac{\pi R^3}{3}
+            + \frac{\pi R^3}{3} \right) = 2\pi R^3 - \frac{2\pi
+            R^3}{3} = \frac{4\pi R^3}{3}
+          </mrow>
+        </md>
+        <p>
+          The result is the well known formula for the volume of
           a sphere.
         </p>
       </statement>
     </example>
-    <figure xml:id="figure-slices-parabaloid">
-      <caption>Slices of a Parabaloid</caption>
-      <image xml:id="figure20" width="80%">
-        <asymptote>
-          unitsize(5cm);
-          import solids;
-          import three;
-
-          currentprojection=orthographic(-1,1,0.3);
-
-          revolution P=revolution(graph(new triple(real z) {return
-          (sqrt(z),0,z);},0,5,25,operator..) ,axis=Z);
-          draw(surface(P),lightblue+opacity(0.5),render(compression=Low));
-
-          pen bg=lightblue+opacity(0.4);
-
-          draw(surface((3,3,1)--(-3,3,1)--(-3,-3,1)--(3,-3,1)
-            --cycle),bg,bg);
-          draw(surface((3,3,2)--(-3,3,2)--(-3,-3,2)--(3,-3,2)
-            --cycle),bg,bg);
-          draw(surface((3,3,3)--(-3,3,3)--(-3,-3,3)--(3,-3,3)
-            --cycle),bg,bg);
-          draw(surface((3,3,4)--(-3,3,4)--(-3,-3,4)--(3,-3,4)
-            --cycle),bg,bg);
-
-          draw((1,0,1)..(0,1,1)..(-1,0,1)..(0,-1,1)..cycle);
-          draw((1.4,0,2)..(0,1.4,2)..(-1.4,0,2)..(0,-1.4,2)..cycle);
-          draw((1.73,0,3)..(0,1.73,3)..(-1.73,0,3)..(0,-1.73,3)..cycle);
-          draw((2,0,4)..(0,2,4)..(-2,0,4)..(0,-2,4)..cycle);
-        </asymptote>
-      </image>
-    </figure>
+    <p>
+      The next example will be an example of a surface of revolution.
+      This is a very common construction for anything that has a
+      circular cross section. The idea is to take the graph of a
+      function <m>y = f(x)</m> and think of the graph sitting inside
+      <m>\RR^3</m>. Then I split the graph around the <m>x</m> axis,
+      like an object on a lathe. The result is an object with circular
+      symmetry around the <m>x</m> axis. The radius of each slice is
+      simply the function <m>f(x)</m>. This means that the integral to
+      describe the volume of a surface of revoluation uses the
+      function <m>\pi (f(x))^2</m> for the area of each circular
+      slice. 
+    </p>
+    <me>
+      V = \int_a^b \pi (f(x))^2 dx 
+    </me>
+    <p>
+      This construction around any axis by simply changing the
+      variable names in the construction. 
+    </p>
     <example>
       <statement>
+        <figure xml:id="figure-slices-parabaloid">
+          <caption>Slices of a Parabaloid</caption>
+          <image xml:id="figure20" width="80%">
+            <asymptote>
+              unitsize(5cm);
+              import solids;
+              import three;
+    
+              currentprojection=orthographic(-1,1,0.3);
+    
+              revolution P=revolution(graph(new triple(real z) {return
+              (sqrt(z),0,z);},0,5,25,operator..) ,axis=Z);
+              draw(surface(P),lightblue+opacity(0.5),
+                render(compression=Low));
+    
+              pen bg=lightblue+opacity(0.4);
+    
+              draw(surface((3,3,1)--(-3,3,1)--(-3,-3,1)--(3,-3,1)
+                --cycle),bg,bg);
+              draw(surface((3,3,2)--(-3,3,2)--(-3,-3,2)--(3,-3,2)
+                --cycle),bg,bg);
+              draw(surface((3,3,3)--(-3,3,3)--(-3,-3,3)--(3,-3,3)
+                --cycle),bg,bg);
+              draw(surface((3,3,4)--(-3,3,4)--(-3,-3,4)--(3,-3,4)
+                --cycle),bg,bg);
+    
+              draw((1,0,1)..(0,1,1)..(-1,0,1)..(0,-1,1)..cycle);
+              draw((1.4,0,2)..(0,1.4,2)..(-1.4,0,2)..(0,-1.4,2)..cycle);
+              draw((1.73,0,3)..(0,1.73,3)..(-1.73,0,3)..(0,-1.73,3)..cycle);
+              draw((2,0,4)..(0,2,4)..(-2,0,4)..(0,-2,4)..cycle);
+            </asymptote>
+          </image>
+        </figure>
         <p>
-          A slightly more involved example is the volume of a
-          parabaloid of height <m>h</m> and radius <m>a</m>. The
-          parabaloid is described by the function <m>y = h
+          The parabaloid with radius <m>a</m> at height <m>h</m>  is
+          described by the function <m>y = h
           \left(\frac{x}{a}\right)^2</m> rotated around the <m>y</m>
-          axis. We have <m>x \in [0, a]</m> and <m>y \in [0, h]</m>.
-          (Many of these volume problems can be expressed as surfaces
-          of revolution: take a function and revolve it around a
-          axis.) To add up the slices, we move in the <m>y</m>
-          direction. At each <m>y</m> the radius is <m>x =
-          a\sqrt{\frac{y}{h}}</m>. The area is <m>\pi x^2 = \frac{\pi
-          a^2 y}{h}</m> and the thickness is <m>dy</m>.
-          <md>
-            <mrow>
-              V \amp = \int_0^h \pi a^2 \frac{y}{h} dy = \frac{\pi
-              a^2}{h} \int_0^n y dy
-            </mrow>
-            <mrow>
-              \amp = \frac{\pi a^2 h^2}{2h} = \frac{\pi a^2 h}{2}
-            </mrow>
-          </md>
+          axis. The slices here are along the <m>y</m> axis, not the
+          <m>x</m> axis; this time <m>x</m> is the radius. If I solve
+          for <m>x</m> in the function, I get <m>x = a
+          \sqrt{\frac{y}{h}}</m>. If this is the radius, the area is
+          <m>\pi \left( a \sqrt{\frac{y}{h}} \right)^2 = \frac{\pi a^2
+          y}{h}</m>. The range of <m>y</m> is <m>y \in [0,h]</m>. This
+          lets me setup the integral for a surface of revolution using
+          <m>y</m> as the variable. The integral is a straightforward
+          polynomial integral.
         </p>
+        <md>
+          <mrow>
+            V \amp = \int_0^h \pi a^2 \frac{y}{h} dy = \frac{\pi
+            a^2}{h} \int_0^h y dy
+          </mrow>
+          <mrow>
+            \amp = \frac{\pi a^2 h^2}{2h} = \frac{\pi a^2 h}{2}
+          </mrow>
+        </md>
         <p>
-          We get a volume equation which is similar to a cone
+          I get a volume equation which is similar to a cone
           <m>\left(\frac{1}{3} \pi r^2 h\right)</m> but divided by
           <m>2</m> instead of <m>3</m>.
         </p>
       </statement>
     </example>
-  </subsection>
-  <subsection xml:id="subsection-shells">
-    <title>Volumes by Spherical or Cylindrical Shells</title>
-    <p>
-      In the previous section, we used cross-sectional slices, slicing
-      with a plane to produce the circles. However, there are other
-      ways to slice up a volume. In this section, we look at the
-      general method of shells. Instead of slicing with a plane, we
-      think of a volume as a nested collection of similar shapes
-      called shells. You could think of the (rough) spheres that form
-      an onion, or stacking Matryoshka dolls.
-    </p>
-    <p>
-      If we think of the shells as infinitesimally thin, with
-      thickness <m>dr</m>, then we can add up all the infinitesimal
-      volumes of the shells just as with did with slices in the
-      previous section. We use <m>dr</m> as the infinitesimal
-      thickness, since we often arrange the shells in a radial
-      direction.
-    </p>
-    <p>
-      Our examples in this section will use cylindrical shells. If we
-      have a cylinder with radius <m>r</m> and height <m>h</m>, its
-      surface area is <m>A = 2\pi r h</m>. A cylindrial shell will
-      have thickness <m>dr</m>, so infinitesimal volumes is <m>dV =
-      2\pi r h dr</m>. To find a volume, we express <m>h</m> as a
-      function of <m>r</m>, and integrate.
-    </p>
     <example>
       <statement>
         <p>
-          For an example, consider a pottery bowl whose cross section
-          is roughly the area between <m>x^2</m> and <m>x^4</m> on the
-          interval <m>[-1,1]</m>.
+          The interesting named Horn of Gabriel is a surface of
+          revolution under the graph of <m>f(x) = \frac{1}{x}</m> for
+          <m>x \in [1,\infty)</m>. It looks like an infinitely long
+          trumpet. I can use an improper integral to calculate its
+          volume, setting up the integral with circular
+          cross-sectional slices oriented along the <m>x</m> axis. The
+          radius is <m>\frac{1}{x}</m>. 
         </p>
+        <me>
+          V = \int_1^\infty \pi \frac{1}{x^2} dx = \lim_{a \rightarrow
+          \infty} \int_1^a \frac{\pi}{x^2} = \lim_{a \rightarrow
+          \infty} \left. \frac{-\pi}{x} \right|_1^a = \lim_{a
+          \rightarrow \infty} \frac{-\pi}{a} + \pi = \pi
+        </me>
+        <p>
+          The volume is finite!  Even though the Horn of Gabriel
+          extends to infinity, it narrows quickly enough that it only
+          contains a finite volume. These kind of strange things can
+          happen with limits and infinite: an infinitely long object
+          with a finite volume.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="subsection-shells">
+    <title>Volumes by Shells</title>
+    <p>
+      In the previous section, I used cross-sectional slices, slicing
+      with a plane to produce the cross-section with reasonable shapes
+      and known ares. However, there are other
+      ways to slice up a volume. In this section, I look at the
+      general method of shells. Instead of thinking of the object as a
+      collection of slices, I'll think of it as a collection of 
+      nested shells. You could think of the (rough) spheres that form
+      an onion, or stacking Matryoshka dolls. Only now, at least in
+      the limit, there are infinitely many infinitely thin shells. 
+    </p>
+    <p>
+      The setup is the same as for slices: the shells are identified
+      by some variable <m>x</m> over some range <m>x \in [a,b]</m>.
+      Each shell, identified by its position <m>x</m>, has an area
+      <m>A(x)</m>. In the approximation, the shells also has a width
+      <m>\Delta x</m> and the approximate volume of the shell is <m>A(x)
+      \Delta x</m>. In the limit, the sum becomes and integral and the
+      width becomes the infinitesimal <m>dx</m>, leading to the same
+      kinf of integral as for cross-sectional slices. 
+    </p>
+    <me>
+      V = \int_a^b A(x) dx 
+    </me>
+    <p>
+      The slices were previously oriented along an axis. However,
+      shells can be describes in a variety of ways. If the shells are
+      radial, then perhaps <m>r</m> is the appropriate variable
+      instead of <m>x</m>. Regardless of the variable name, the setup
+      in the same. 
+    </p>
+    <p>
+      Thought there could be a huge variety of the types of shells
+      used, I'm going to restrict to cylindrical shells.
+      These are useful because the surface areas is reasonable. 
+      A thin cylinder of radius <m>r</m> and height <m>h</m> could be
+      cut and unrolled into a rectangle. The height of the rectangle
+      is still <m>h</m>, but the width is the circumference
+      <m>2\pi r</m>. Therefore, the area of the shell is <m>2\pi
+      Rh</m>. Assuming that the height depends on the radius, I can
+      write <m>h = h(r)</m>. Putting this into the integral gives the
+      general setup for cylindrical shells. 
+    </p>
+    <me>
+      V = \int_a^b 2 \pi r h(r) dr 
+    </me>
+    <p>
+      Let me move on to some examples using cylindrical shells. 
+    </p>
+    <example>
+      <statement>
         <figure xml:id="figure-cross-section-bowl">
           <caption>Cross Section of a Bowl</caption>
           <image xml:id="figure21" width="80%">
@@ -239,110 +340,95 @@
           </image>
         </figure>
         <p>
+          Consider a pottery bowl whose cross section
+          is roughly the area between <m>x^2</m> and <m>x^4</m> on the
+          interval <m>[-1,1]</m>. The cross section is show in <xref
+          ref="figure-cross-section-bowl" />. 
+        </p>
+        <p>
           Sliced into cylindrial shells, each shell has height <m>h =
           r^2 - r^4</m>, based on the radius <m>r</m> from the centre
-          of the bowl.
-          <md>
-            <mrow>
-              V \amp = \int_0^1 2\pi r (r^2 - r^4) dr
-            </mrow>
-            <mrow>
-              \amp = 2\pi \int_0^1 r^3 - r^5 dr
-            </mrow>
-            <mrow>
-              \amp = \left. 2\pi \left( \frac{r^4}{4} - \frac{r^6}{6}
-              \right) \right|_0^1
-            </mrow>
-            <mrow>
-              \amp = \left. 2\pi \left( \frac{3r^4 - 2r^6}{12}
-              \right) \right|_0^1 = \frac{2\pi}{12} = \frac{\pi}{6}
-            </mrow>
-          </md>
+          of the bowl. I set up the integral with for cylindrical
+          shells using the radius variable <m>r</m> and height <m>r^2
+          - r^4</m>. The integral is a straightforward polynomial
+          integral. 
         </p>
+        <md>
+          <mrow>
+            V \amp = \int_0^1 2\pi r (r^2 - r^4) dr
+          </mrow>
+          <mrow>
+            \amp = 2\pi \int_0^1 r^3 - r^5 dr
+          </mrow>
+          <mrow>
+            \amp = \left. 2\pi \left( \frac{r^4}{4} - \frac{r^6}{6}
+            \right) \right|_0^1
+          </mrow>
+          <mrow>
+            \amp = \left. 2\pi \left( \frac{3r^4 - 2r^6}{12}
+            \right) \right|_0^1 = \frac{2\pi}{12} = \frac{\pi}{6}
+          </mrow>
+        </md>
       </statement>
     </example>
     <example>
       <statement>
+        <figure xml:id="figure-cross-section-bell">
+          <caption>Cross Section of a Bell</caption>
+          <image xml:id="figure22" width="80%">
+            <asymptote>
+              size(10cm,7cm);
+              import graph;
+              xaxis();
+              yaxis();
+    
+              real f(real x) {return exp(-1*x^2);}
+    
+              draw(graph(f,-2,2));
+    
+              draw((0.3,0)--(0.3,0.914));
+    
+              label("$h = e^{-r^2}$", (0.3,0.914),NE);
+              label("$e^{-x^2}$",(-0.3,0.914),NW);
+            </asymptote>
+          </image>
+        </figure>
         <p>
-          A second example is a bell which is the surface of
+          Consider a bell which is the surface of
           revolution about the <m>y</m> axis of the function
-          <m>e^{-x^2}</m> between <m>[-2,2]</m>.
-          <md>
-            <mrow>
-              V \amp = \int_0^2 2\pi re^{-r^2} dr
-            </mrow>
-            <mrow>
-              u \amp = e^{-r^2}
-            </mrow>
-            <mrow>
-              du \amp = -2r e^{-r^2} dr
-            </mrow>
-            <mrow>
-              u(0) \amp = 1
-            </mrow>
-            <mrow>
-              u(2) \amp = \frac{1}{e^4}
-            </mrow>
-            <mrow>
-              V \amp = \int_1^{\frac{1}{e^4}} -\pi du = \left. -\pi u
-              \right|_1^{\frac{1}{e^4}} = \pi \left( 1 - \frac{1}{e^4}
-              \right) = \pi \frac{e^4-1}{e^4}
-            </mrow>
-          </md>
+          <m>e^{-x^2}</m> between <m>[-2,2]</m>. A cross section of
+          this bell is shown in <xref ref="figure-cross-section-bell"
+          />. I setup the cylindrical shells integral in the radius
+          variable with height <m>e^{-r^2}</m>. The integral needs a
+          substitution, which I've shown below; I change the bounds of
+          the substitution as well, so that I don't have to do the
+          reverse subsittution. 
         </p>
-      </statement>
-    </example>
-    <figure xml:id="figure-cross-section-bell">
-      <caption>Cross Section of a Bell</caption>
-      <image xml:id="figure22" width="80%">
-        <asymptote>
-          size(10cm,7cm);
-          import graph;
-          xaxis();
-          yaxis();
-
-          real f(real x) {return exp(-1*x^2);}
-
-          draw(graph(f,-2,2));
-
-          draw((0.3,0)--(0.3,0.914));
-
-          label("$h = e^{-r^2}$", (0.3,0.914),NE);
-          label("$e^{-x^2}$",(-0.3,0.914),NW);
-        </asymptote>
-      </image>
-    </figure>
-    <example>
-      <statement>
-        <p>
-          The Horn of Gabriel is a surface of revolution under the
-          graph of <m>f(x) = \frac{1}{x}</m> for <m>x \in
-          [1,\infty)</m>. We can use an improper integral to
-          calculate its volume.
-          <me>
-            V = \int_1^\infty \pi \frac{1}{x^2} = \lim_{a \rightarrow
-            \infty} \int_1^a \frac{\pi}{x^2} = \lim_{a \rightarrow
-            \infty} \left. \frac{-\pi}{x} \right|_1^a = \lim_{a
-            \rightarrow \infty} \frac{-\pi}{a} + \pi = \pi
-          </me>
-        </p>
-        <p>
-          The volume is finite!  Even though the Horn of Gabriel
-          extends to infinity, it narrows quickly enough that it only
-          contains a finite volume.
-        </p>
+        <md>
+          <mrow>
+            V \amp = \int_0^2 2\pi re^{-r^2} dr
+          </mrow>
+          <mrow>
+            u \amp = r^2
+          </mrow>
+          <mrow>
+            du \amp = 2r dr
+          </mrow>
+          <mrow>
+            u(0) \amp = 0
+          </mrow>
+          <mrow>
+            u(2) \amp = 4 
+          </mrow>
+          <mrow>
+            V \amp = \int_0^4 \pi e^{-u} du = -\pi e^{-u} \Bigg|_0^4 =
+            \pi \left( 1 - \frac{1}{e^4} = \frac{\pi(e^4-1)}{e^4} 
+          </mrow>
+        </md>
       </statement>
     </example>
     <example>
       <statement>
-        <p>
-          An interesting example is the calculation of the volume of a
-          torus. A torus is defined by a larger radius <m>a</m>,
-          which is the distance from the centre of the torus to the
-          centre of any cross-sectional circle, and a smaller radius
-          <m>b</m>, which is the radius of any cross-sectional
-          circle.
-        </p>
         <figure xml:id="figure-torus">
           <caption>A Torus</caption>
           <image xml:id="figure23" width="80%">
@@ -368,7 +454,13 @@
           </image>
         </figure>
         <p>
-          The cross section of a torus consists of two circles.
+          An interesting example is the calculation of the volume of a
+          torus (colloquially, a donut). A torus is defined by a
+          larger radius <m>a</m>, which is the distance from the
+          centre of the torus to the centre of any cross-sectional
+          circle, and a smaller radius <m>b</m>, which is the radius
+          of any cross-sectional circle. A torus is show in <xref
+          ref="figure-torus" />.
         </p>
         <figure xml:id="figure-cross-section-torus">
           <caption>A Cross-Section of a Torus</caption>
@@ -397,90 +489,146 @@
           </image>
         </figure>
         <p>
-          When we take a cross section, we get the circle <m>(x-a)^2 +
-          y^2 = b^2</m>. We can solve for <m>y = \sqrt{b^2 -
-          (x-a)^2}</m>. This is only half the height of a cylindrical
-          shell, so <m>h = 2y</m>. Then <m>x</m> is the radius, so we
-          can write <m>h = 2 \sqrt{b^2 - (r-a)^2}</m> We will
-          integrate from <m>a-b</m> to <m>a+b</m> in <m>r</m>, to
-          cover one of the cross-sectional circles.
-          <md>
-            <mrow>
-              V \amp = 2 \int_{a-b}^{a+b} 2\pi r \sqrt{b^2 - (r-a)^2}
-              dr
-            </mrow>
-            <mrow>
-              u \amp = r-a \implies r = u+a
-            </mrow>
-            <mrow>
-              du \amp = dr
-            </mrow>
-            <mrow>
-              u(a-b) \amp = -b
-            </mrow>
-            <mrow>
-              u(a+b) \amp = b
-            </mrow>
-            <mrow>
-              V \amp = 4\pi \int_{-b}^b (u+a) \sqrt{b^2 - u^2} du
-            </mrow>
-            <mrow>
-              \amp = 4\pi \left[ \int_{-b}^b u \sqrt{b^2-u^2} du +
-              \int_{-b}^b a \sqrt{b^2-u^2} du \right]
-            </mrow>
-            <mrow>
-              \int_{-b}^b u \sqrt{b^2-u^2}du \amp = \left.
-              \frac{1}{-2} \frac{2}{3} (b^2 -u^2)^{\frac{3}{2}}
-              \right|_{-b}^b = 0
-            </mrow>
-            <mrow>
-              \int_{-b}^b \sqrt{b^2 - u^2} \amp -
-              \int_{-\pi/2}^{\pi/2} |b\cos \theta| b \cos \theta
-              d\theta
-            </mrow>
-            <mrow>
-              u \amp = b \sin \theta
-            </mrow>
-            <mrow>
-              du \amp = b \cos \theta d \theta
-            </mrow>
-            <mrow>
-              u = b \amp \implies \theta = \frac{\pi}{2}
-            </mrow>
-            <mrow>
-              u = - b \amp \implies \theta = - \frac{\pi}{2}
-            </mrow>
-            <mrow>
-              \int_{-b}^b \sqrt{b^2 - u^2} \amp =
-              \int_{-\pi/2}^{\pi/2} |b\cos \theta| b \cos \theta
-              d\theta
-            </mrow>
-            <mrow>
-              \amp = b^2 \int_{-\pi/2}^{\pi/2} \frac{1 + \cos
-              2\theta}{2} d \theta
-            </mrow>
-            <mrow>
-              \amp = b^2 \int_{-\pi/2}^{\pi/2} \frac{1}{2} d\theta+
-              b^2 \int_{-\pi/2}^{\pi/2} \frac{\cos 2\theta}{2}
-              d\theta
-            </mrow>
-            <mrow>
-              \amp = \frac{b^2}{2} \left( \frac{\pi}{2} -
-              \frac{-\pi}{2} \right) + 0
-            </mrow>
-            <mrow>
-              \amp = \frac{b^2\pi}{2}
-            </mrow>
-            <mrow>
-              V \amp = 4\pi \left[ 0 + \frac{b^2 \pi}{2} \right] =
-              2\pi^2 a^2 b
-            </mrow>
-          </md>
+          I'm going to try to calculate the volume of the torus using
+          cylindrical shells and the radius variable <m>r</m>. To set
+          this up, I'll look at the cross-section of the torus, in
+          <xref ref="figure-cross-section-torus" />. 
         </p>
+        <p>
+          First, the bounds of the cylinrdical shell will be <m>r \in
+          [b-a, b+a]</m>, since <m>a</m> is the distance to the centre
+          of the small circle. 
+        </p>
+        <p>
+          Second, the circle on the right can be descirbe as the
+          convnetional locus of a circle but ofset by <m>a</m> in the
+          <m>r</m> axis (treating the horizontal axis here as the
+          <m>r</m> axis.) 
+          If I call the vertical axis <m>h</m>, If I call the vertical
+          axis <m>h</m>, this offset locus is <m>(r-a)^2 +
+          h^2 = b^2</m>. I can solve for <m>h = \sqrt{b^2 -
+          (r-a)^2}</m>. This is only half the height of a cylindrical
+          shell, since it goes both above and below, so I multiply by
+          2 to get the full height <m>2 \sqrt{b^2 - (r-a)^2}</m>. This
+          lets me write the cylindrical shell integral for calculating
+          the volume of the torus.
+        </p>
+        <md>
+          <mrow>
+            V \amp = 2 \int_{a-b}^{a+b} 2\pi r \sqrt{b^2 - (r-a)^2}
+            dr
+          </mrow>
+        </md>
+        <p>
+          A substitution helps here. I change the bounds as well, as
+          usual. After the substitution, the integral will split into
+          two by linearity. 
+        </p>
+        <md>
+          <mrow>
+            u \amp = r-a \implies r = u+a
+          </mrow>
+          <mrow>
+            du \amp = dr
+          </mrow>
+          <mrow>
+            u(a-b) \amp = -b
+          </mrow>
+          <mrow>
+            u(a+b) \amp = b
+          </mrow>
+          <mrow>
+            V \amp = 4\pi \int_{-b}^b (u+a) \sqrt{b^2 - u^2} du
+          </mrow>
+          <mrow>
+            \amp = 4\pi \left[ \int_{-b}^b u \sqrt{b^2-u^2} du +
+            \int_{-b}^b a \sqrt{b^2-u^2} du \right]
+          </mrow>
+        </md>
+        <p>
+          I'll deal with the two integral separately. The first
+          integral can also be solve with substitution, uving <m>v =
+          b^2 - u^2</m>. I've not shown the details of this
+          substitution; just the resulting antiderivative. 
+        </p>
+        <md>
+          <mrow>
+            \int_{-b}^b u \sqrt{b^2-u^2}du \amp = \left.
+            \frac{1}{-2} \frac{2}{3} (b^2 -u^2)^{\frac{3}{2}}
+            \right|_{-b}^b = 0
+          </mrow>
+        </md>
+        <p>
+          This integral evaluates to zero, so it will not contribute
+          to the volume at all. Now I move on to the second integral. 
+        </p>
+        <md>
+          <mrow>
+            \int_{-b}^b \sqrt{b^2 - u^2} \amp =
+          </mrow>
+        </md>
+        <p>
+          This needs a trig substitution, Since the variable <m>u</m>
+          is in the expression <m>b^2 - u^2</m> in the square root,
+          the sine substitution is appropriate. 
+        </p>
+        <md>
+          <mrow>
+            u \amp = b \sin \theta
+          </mrow>
+          <mrow>
+            du \amp = b \cos \theta d \theta
+          </mrow>
+          <mrow>
+            u = b \amp \implies \theta = \frac{\pi}{2}
+          </mrow>
+          <mrow>
+            u = - b \amp \implies \theta = - \frac{\pi}{2}
+          </mrow>
+          <mrow>
+            \int_{-b}^b \sqrt{b^2 - u^2} \amp =
+            \int_{-\pi/2}^{\pi/2} b\cos \theta b \cos \theta
+            d\theta
+            b^2 \int_{-\pi/2}^{\pi/2} \cos^2 \theta d\theta
+          </mrow>
+        </md>
+        <p>
+          After the trig substitution, I need a half-angle identity to
+          deal with the even power of cosine. After the half-angle
+          identity, I will get two reasonable integrals
+        </p>
+        <md>
+          <mrow>
+            \amp = b^2 \int_{-\pi/2}^{\pi/2} \frac{1 + \cos
+            2\theta}{2} d \theta
+          </mrow>
+          <mrow>
+            \amp = b^2 \int_{-\pi/2}^{\pi/2} \frac{1}{2} d\theta+
+            b^2 \int_{-\pi/2}^{\pi/2} \frac{\cos 2\theta}{2}
+            d\theta
+          </mrow>
+          <mrow>
+            \amp = \frac{b^2}{2} \left( \frac{\pi}{2} -
+            \frac{-\pi}{2} \right) + 0
+          </mrow>
+          <mrow>
+            \amp = \frac{b^2\pi}{2}
+          </mrow>
+        </md>
+        <p>
+          Then I put this (and the zero for the first integral) back
+          in the full expression to calculate the volume. 
+        </p>
+        <md>
+          <mrow>
+            V \amp = 4\pi \left[ 0 + \frac{b^2 \pi}{2} \right] =
+            2\pi^2 a^2 b
+          </mrow>
+        </md>
         <p>
           Therefore, the volume of a torus with major radius <m>a</m>
           and minor radius <m>b</m> is <m>2\pi^2 a^2 b</m>. As a
-          curious obvservation, we can write this as <m>(2\pi a)(\pi
+          curious obvservation, I can write this as <m>(2\pi a)(\pi
           b^2)</m>. The <m>2\pi a</m> factor is the circumference of
           the large circle with radius <m>a</m>, which lies at the
           center of each cross-sectional circle. The <m>\pi b^2</m>
