@@ -19,7 +19,7 @@
         the process. (6) 
       </p>
       <me>
-        \int \frac{2x + 1}{(x + 1)^2(x^2 + x + 1)} 
+        \int \frac{2x + 1}{(x + 1)^2(x^2 + x + 1)} dx
       </me>
     </li>
     <li>

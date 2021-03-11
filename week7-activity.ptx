@@ -846,9 +846,27 @@
             \frac{dy}{dt} \amp = \cos t \sin 2t + 2 \sin t \cos 2t 
           </mrow>
           <mrow>
-            \sqrt{ \left( \frac{dx}{dt} \right)^2 + \left(
-            \frac{dy}{dt} \right)^2 } \amp = \sqrt{ \sin^2 t \sin^2 2t
-            - 4 \sin t \cos t \sin2t \cos 2t + 4 \cos^2 t \cos^2 2t}
+            \left( \frac{dx}{dt} \right)^2 \amp = \sin^2 t \sin^2 2t -
+            4 \sin t \cos t \sin 2t \cos 2t + 4 \cos^2 t \cos^2 2t 
+          </mrow>
+          <mrow>
+            \left( \frac{dy}{dt} \right)^2 \amp = \cos^2 t \sin^2 2t +
+            + 4 \cos t \sin t \cos 2t \sin 2t + 4 \sin^2 t \cos^2 2t 
+          </mrow>
+        </md>
+          When I add the squares of the two derivative, the middle
+          terms cancel. Let me work with the remaining four terms to
+          simplify with trig identities. I notice that I can factor
+          out the terms with <m>(2t)</m> inside the trig functions and
+          use the square identity for sine a cosine.
+        <md>
+          <mrow>
+            \amp \sqrt{ \left( \frac{dx}{dt} \right)^2 + \left(
+            \frac{dy}{dt} \right)^2 }
+          </mrow>
+          <mrow>
+            \amp = \sqrt{ \sin^2 t \sin^2 2t + 4 \cos^2 t \cos^2 2t +
+            \cos t \sin 2t + 4 \sin^2t \cos^2 2t}
           </mrow>
           <mrow>
             \amp = \sqrt{\sin^2 2t(\sin^2 t + \cos^2 t) + 4 \cos^2 2t
