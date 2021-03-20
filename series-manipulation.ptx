@@ -1,64 +1,71 @@
 <section xml:id="section-series-manipulation">
   <title>Manipulation of Series</title>
   <p>
-    Once we have defined convergent series, we want to be able to work
-    with them algebraically.  There are several important
-    manipulations and techniques.
+    This short section covers a couple useful algebraic manipulations
+    of sigma notation and infinite series. These algebraic tools are
+    useful for understanding series, determining convergence, and
+    combining different series together. 
   </p>
   <p>
-    First, series are linear as long as the indices match up.  This
-    means we can bring out constants and split series over sums.
-    <md>
-      <mrow>
-        c \sum_{n=0}^\infty a_n \amp  = \sum_{n=0}^\infty ca_n
-      </mrow>
-      <mrow>
-        \sum_{n=0}^\infty (a_n \pm b_n) \amp  = \sum_{n=0}^\infty a_n
-        \pm \sum_{n=0}^\infty b_n
-      </mrow>
-    </md>
+    First, series are linear as long as the indices match up. Series
+    split up over sum and differences in the term. Constants present
+    in the term can be factored out of the sigma notation. 
   </p>
+  <md>
+    <mrow>
+      c \sum_{n=0}^\infty a_n \amp  = \sum_{n=0}^\infty ca_n
+    </mrow>
+    <mrow>
+      \sum_{n=0}^\infty (a_n \pm b_n) \amp  = \sum_{n=0}^\infty a_n
+      \pm \sum_{n=0}^\infty b_n
+    </mrow>
+  </md>
   <p>
-    Second, we can remove terms.  Since a series is just notation for
-    a sum, we can take out leading terms and write them in
-    conventional notation.
-    <me>
-      \sum_{n=0}^\infty a_n = a_0 + a_1 + a_2 + \sum_{n=3}^\infty a_n
-    </me>
+    Second, since sigma notation is just notation for a sum, pieces of
+    the sum can be written explicitly using the ordinary notation for
+    sums. This is called removing terms from the series. 
   </p>
+  <me>
+    \sum_{n=0}^\infty a_n = a_0 + a_1 + a_2 + \sum_{n=3}^\infty a_n
+  </me>
   <p>
-    Third, we can shift the indices.  The key idea here is balance:
-    whatever we do to the index in the bounds, we do the opposite to
+    Third, I can shift the indices.  The key idea here is balance:
+    whatever I do to the index in the bounds, I must do the opposite to
     the index in the terms to balance it out.
-    <me>
-      \sum_{n=0}^\infty a_n = \sum_{n=1}^\infty a_{n-1} =
-      \sum_{n=-1}^\infty a_{n+1}
-    </me>
   </p>
+  <me>
+    \sum_{n=0}^\infty a_n = \sum_{n=1}^\infty a_{n-1} =
+    \sum_{n=-1}^\infty a_{n+1}
+  </me>
   <p>
-    Both techniques are very useful, particularly for combining
-    series.
+    Note that the linearity properties required the bounds of the
+    series to match up. Shifting and/or removing terms is very useful
+    for adjusting series so that they have the same starting bounds,
+    and thus can be combined into a single series. 
   </p>
   <example>
     <statement>
       <p>
-        In this example, we want to add two series which don't have
-        matching indices.  We shift the first series to make the
+        In this example, I want to add two series which don't have
+        matching indices. I shift the first series to make the
         indices match and allow the addition.
-        <md>
-          <mrow>
-            \sum_{n=2}^\infty \frac{3^n}{n!} + \sum_{n=0}^\infty
-            \frac{1}{n(n+2)} \amp  = \sum_{n=0}^\infty
-            \frac{3^{n+2}}{(n+2)!} + \sum_{n=0}^\infty
-            \frac{1}{n(n+2)} = \sum_{n=0}^\infty \left(
-            \frac{3^{n+2}}{(n+2)!} + \frac{1}{n(n+2} \right)
-          </mrow>
-          <mrow>
-            \amp  = \sum_{n=0}^\infty \left( \frac{3^{n+2} +
-            (n-1)!(n+1)}{(n+2)!} \right)
-          </mrow>
-        </md>
       </p>
+      <md>
+        <mrow>
+          \sum_{n=2}^\infty \frac{3^n}{n!} + \sum_{n=0}^\infty
+          \frac{1}{n(n+2)} \amp  = \sum_{n=0}^\infty
+          \frac{3^{n+2}}{(n+2)!} + \sum_{n=0}^\infty
+          \frac{1}{n(n+2)}
+        </mrow>
+        <mrow>
+          \amp = \sum_{n=0}^\infty \left( \frac{3^{n+2}}{(n+2)!} +
+          \frac{1}{n(n+2} \right)
+        </mrow>
+        <mrow>
+          \amp  = \sum_{n=0}^\infty \left( \frac{3^{n+2} +
+          (n-1)!(n+1)}{(n+2)!} \right)
+        </mrow>
+      </md>
     </statement>
   </example>
 </section>

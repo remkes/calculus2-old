@@ -147,7 +147,7 @@
     <example xml:id="example-exponential-distribution">
       <statement>
         <figure xml:id="figure-probability-density">
-          <caption>The Probability Density <m>e^{-x}</m></caption>
+          <caption>The Exponential Distribution</caption>
           <image xml:id="figure27" width="80%">
             <asymptote>
               size(12cm,6cm,IgnoreAspect);
@@ -171,37 +171,29 @@
           </image>
         </figure>
         <p>
-          Let <m>\alpha > 0</m> and <m>f(x) = e^{-\alpha x}</m> on the
-          domain <m>[0, \infty)</m>. I will calculate the integral of
-          this function over this domain.
+          Let <m>\alpha > 0</m> and <m>f(x) = \alpha e^{-\alpha x}</m>
+          on the domain <m>[0, \infty)</m>. I will calculate the
+          integral of this function over this domain.
         </p>
         <md>
           <mrow>
-            \int_0^\infty e^{-\alpha x} dx \amp = \lim_{a
+            \int_0^\infty \alph e^{-\alpha x} dx \amp = \lim_{a
             \rightarrow \infty} \int_0^a e^{-\alpha x} dx
           </mrow>
           <mrow>
-            \amp = \lim_{a \rightarrow \infty} \left.
-            \frac{e^{-\alpha x}}{-\alpha} \right|_0^a
+            \amp = \alpha \lim_{a \rightarrow \infty} 
+            \frac{e^{-\alpha x}}{-\alpha} \Bigg|_0^a
           </mrow>
           <mrow>
-            \amp = \lim_{a \rightarrow \infty} \frac{-e^{-\alpha
-            a}}{\alpha} + \frac{1}{\alpha} = \frac{1}{\alpha}
+            \amp = \alpha \left( \lim_{a \rightarrow \infty}
+            \frac{-e^{-\alpha a}}{\alpha} + \frac{1}{\alpha} \right) =
+            \frac{\alpha}{\alpha} = 1 
           </mrow>
         </md>
         <p>
-          Now I will adjust the function to make sure the total area
-          is <m>1</m>. (This is a process called normalization). 
-        </p>
-        <md>
-          <mrow>
-            f(x) = \alpha e^{-\alpha x} \amp \amp x \in [0, \infty) 
-          </mrow>
-        </md>
-        <p>
-          This function is a probability density on on
-          <m>[0,\infty)</m>. It is called the <term>exponential
-          distribution</term>. The fact that 
+          I've verified that this is, indeed, a probability
+          distribution on <m>[0,\infty)</m>. It is called the
+          <term>exponential distribution</term>. The fact that
           <m>f</m> is a decay function means that measurements gets
           less and less likely as values get large. It is common to
           get measurements close to zero and uncommon to get large
@@ -214,7 +206,7 @@
           calculated by the integral of the density on that range.
         </p>
         <me>
-          \int_0^1 e^{-x} dx = \left. e^{-x} \right|_0^1 = -e^{-1} +
+          \int_0^1 e^{-x} dx = e^{-x} \Bigg|_0^1 = -e^{-1} +
           1 = 1 - \frac{1}{e} \doteq 0.632
         </me>.
         <p>
@@ -223,7 +215,7 @@
           that range. 
         </p>
         <me>
-          \int_1^2 e^{-x} dx = \left. e^{-x}\right|_1^2 = -e^{-2} +
+          \int_1^2 e^{-x} dx = e^{-x}\Bigg|_1^2 = -e^{-2} +
           \frac{1}{e} = \frac{1}{e} - \frac{1}{e^2} =
           \frac{e-1}{e^2} \doteq 0.233
         </me>.
@@ -232,10 +224,7 @@
     <example xml:id="example-gaussian-distribution">
       <statement>
         <figure xml:id="figure-gaussian-distribution">
-          <caption>
-            The Gaussian Distribution <m>\frac{1}{\sqrt{\pi}}
-            e^{-x^2}</m>
-          </caption>
+          <caption>The Gaussian Distribution</caption>
           <image xml:id="figure26" width="80%">
             <asymptote>
               size(12cm,6cm,IgnoreAspect);
@@ -267,9 +256,10 @@
           constant). <m>\mu</m> is the centre point of the bell curve,
           and <m>\sigma</m> measure the width of the bell curve (in a
           way that will be formalized below). For a specific example,
-          I can take <m>\mu = 0</m> and <m>\sigma = 1</m> to get a
-          bell curve centred at <m>0</m>. This specific bell curve is
-          shown in <xref ref="figure-gaussian-distribution" />. 
+          I can take <m>\mu = 0</m> and <m>\sigma =
+          \frac{1}{\sqrt{2}}</m> to get a bell curve centred at
+          <m>0</m>. This specific bell curve is shown in <xref
+          ref="figure-gaussian-distribution" />. 
         </p>
         <me>
           f(x) = \frac{1}{\sqrt{\pi}} e^{-x^2} 
@@ -327,7 +317,7 @@
     <p>
       Let me consider finite probability for a moment. Say that there
       are <m>n</m> events with probabilities <m>p_i</m> and
-      measurements <m>r_i</m>. In order to ensure this is a valid
+      measurements <m>m_i</m>. In order to ensure this is a valid
       probability situation, the sume of all the probabilities must be
       <m>1</m>. 
     </p>
@@ -339,7 +329,7 @@
       probabilities.
     </p>
     <me>
-      \sum_{i=1}^n r_i p_i
+      \sum_{i=1}^n m_i p_i
     </me>
     <p>
       These discrete calculations give inspiration for the continuous
@@ -372,7 +362,7 @@
       <statement>
         <p>
           I'll start with the exponential distribution with <m>\alpha
-          = a</m>: <m>f(x) =
+          = 1</m>, that is, <m>f(x) =
           e^{-x}</m> on <m>[0, \infty)</m>. I use integration by parts
           to calculate the mean.
         </p>
@@ -381,11 +371,11 @@
             \mu \amp = \int_0^\infty x e^{-x} dx
           </mrow>
           <mrow>
-            \amp = \left. - x e^{-x} \right|_0^\infty +
+            \amp = - x e^{-x} \Bigg|_0^\infty +
             \int_0^\infty e^{-x} dx
           </mrow>
           <mrow>
-            \amp = 0 + \left. e^{-x} \right|_0^\infty = 1
+            \amp = 0 + e^{-x} \Bigg|_0^\infty = 1
           </mrow>
         </md>
         <p>
@@ -407,7 +397,7 @@
             \mu \amp = \int_a^b \frac{1}{b-a} x dx
           </mrow>
           <mrow>
-            \amp = \left. \frac{1}{b-a} \frac{x^2}{2} \right|_a^b
+            \amp = \frac{1}{b-a} \frac{x^2}{2} \Bigg|_a^b
           </mrow>
           <mrow>
             \amp = \frac{b^2-a^2}{2(b-a)} = \frac{b+a}{2}
@@ -443,14 +433,14 @@
           <mrow>
             \mu \amp = \int_{-\infty}^\infty
             \frac{(v+\mu)e^{-\frac{v^2}{2\sigma^2}}}{\sigma
-            \sqrt{2\pi}} dx
+            \sqrt{2\pi}} dv
           </mrow>
           <mrow>
             \amp = \int_{-\infty}^\infty
             \frac{(v)e^{-\frac{v^2}{2\sigma^2}}}{\sigma \sqrt{2\pi}}
-            dx + \int_{-\infty}^\infty
+            dv + \int_{-\infty}^\infty
             \frac{(\mu)e^{-\frac{v^2}{2\sigma^2}}}{\sigma
-            \sqrt{2\pi}} dx
+            \sqrt{2\pi}} dv
           </mrow>
         </md>
         <p>
@@ -461,9 +451,9 @@
           <mrow>
             \mu \amp = \int_{-\infty}^\infty
             \frac{(v)e^{-\frac{v^2}{2\sigma^2}}}{\sigma \sqrt{2\pi}}
-            dx + \int_{-\infty}^\infty
+            dv + \int_{-\infty}^\infty
             \frac{(\mu)e^{-\frac{v^2}{2\sigma^2}}}{\sigma \sqrt{2\pi}}
-            dx
+            dv
           </mrow>
         </md>
         <p>
@@ -474,7 +464,7 @@
           antiderivative found by substitution. I could do that
           substitution and sovle this integral that way, but there is
           an easier method. The function
-          <m>ve^{-\frac{v^2}{2\sigma^2}</m> is an odd function: it's
+          <m>ve^{-\frac{v^2}{2\sigma^2}}</m> is an odd function: it's
           positive part if a mirror of its negative part, but changes
           from below the axis to above the axis. Therefore, there is
           an equal area under the curve for the positive and negative
@@ -485,7 +475,7 @@
         <md>
           <mrow>
             \amp = 0 + \frac{\mu}{\sigma \sqrt{2\pi}}
-            \int_{-\infty}^\infty e^{-\frac{v^2}{2\sigma^2}} dx
+            \int_{-\infty}^\infty e^{-\frac{v^2}{2\sigma^2}} dv
           </mrow>
         </md>
         <p>
@@ -497,7 +487,7 @@
             w \amp = \frac{v}{\sigma \sqrt{2}}
           </mrow>
           <mrow>
-            \amp = \frac{\mu}{\sigma \sqrt{2\pi}} \sigma \sqrt{2}
+            \mu \amp = \frac{\mu}{\sigma \sqrt{2\pi}} \sigma \sqrt{2}
             \int_{-\infty}^\infty e^{-w^2} dw 
             = \frac{\mu}{\sqrt{\pi}} \int_{-\infty}^\infty e^{-w^2} dw 
           </mrow>
@@ -595,8 +585,7 @@
         </p>
         <md>
           <mrow>
-            \int_c^\infty e^{-x} \amp = \left. e^{-\alpha
-            x}\right|_c^\infty
+            \int_c^\infty e^{-x} dx \amp = -e^{-x}\Bigg|_c^\infty
           </mrow>
           <mrow>
             \frac{1}{2} \amp = e^{-c}
@@ -745,10 +734,10 @@
           <mrow>
             \amp = \int_0^\infty \left( x^2 - 2x + 1 \right) e^{-x}
             dx = \int_0^\infty x^2 e^{-x} dx - 2 \int_0^\infty
-            xe^{-x} + \int_0^\infty e^{-x} dx
+            xe^{-x} dx + \int_0^\infty e^{-x} dx
           </mrow>
           <mrow>
-            \amp = \left. x^2 e^{-x} \right|_0^\infty +
+            \amp = x^2 e^{-x} \Bigg|_0^\infty +
             \int_0^\infty 2 x e^{-x} dx - \int_0^\infty 2 x e^{-x}
             dx + 1
           </mrow>
@@ -768,7 +757,7 @@
     <example>
       <statement>
         <p>
-          The standard deviation of the constant probability
+          The standard deviation of the uniform distribution
           <m>\frac{1}{b-a}</m> is a surprisingly difficult
           calculation. Recall the mean is <m>\frac{a+b}{2}</m>.
         </p>
@@ -782,13 +771,13 @@
             \frac{(a+b)^2}{4(b-a)} dx
           </mrow>
           <mrow>
-            \amp = \left. \frac{x^3}{3(b-a)} \right|_a^b - \left.
-            \frac{(a+b)x^2}{2(b-a)} \right|_a^b + \left.
-            \frac{(a+b)^2x}{4(b-a)} \right|_a^b
+            \amp = \frac{x^3}{3(b-a)} \Bigg|_a^b - 
+            \frac{(a+b)x^2}{2(b-a)} \Bigg|_a^b + 
+            \frac{(a+b)^2x}{4(b-a)} \Bigg|_a^b
           </mrow>
           <mrow>
             \amp = \frac{b^3-a^3}{3(b-a)} -
-            \frac{(a+b)(b^2-a^2}{2(b-a)} +
+            \frac{(a+b)(b^2-a^2)}{2(b-a)} +
             \frac{(a+b)^2(b-a)}{4(b-a)}
           </mrow>
           <mrow>
@@ -824,7 +813,8 @@
           undetermined. (As with the mean, the notation is giving away
           the end of the calculation: this <m>\sigma</m> parameter in
           the defintiion will turn out to be, exactly, the standard
-          deviation.)
+          deviation.) This is a long integral; I do two substitutions
+          to try to simplify, then I do a tricky integration by parts. 
         </p>
         <md>
           <mrow>
@@ -849,9 +839,21 @@
             e^{-w^2} dw
           </mrow>
           <mrow>
-            \amp = \frac{2\sigma^2}{\sqrt{\pi}} \left[ \left.
-            \frac{w(e^{-w^2})}{2} \right|_{-\infty}^\infty +
-            \int_{-\infty}^\infty e^{-w^2}{2} dw \right]
+            g(x) \amp = w 
+          </mrow>
+          <mrow>
+            \frac{df}{dx}  \amp = we^{-w^2}  
+          </mrow>
+          <mrow>
+            \frac{dg}{dx} \amp = 1
+          </mrow>
+          <mrow>
+            f \amp = \frac{-e^{-w^2}}{2}
+          </mrow>
+          <mrow>
+            \amp = \frac{2\sigma^2}{\sqrt{\pi}} \left[ 
+            -\frac{w(e^{-w^2})}{2} \Bigg|_{-\infty}^\infty +
+            \int_{-\infty}^\infty \frac{e^{-w^2}}{2} dw \right]
           </mrow>
           <mrow>
             \amp = \frac{\sigma^2}{\sqrt{\pi}}
