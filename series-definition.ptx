@@ -2,8 +2,8 @@
   <title>Definition and Convergence of Infinite Series</title>
   <subsection xml:id="subsection-series-definition-statment">
   <p>
-    Now that I have introduces sequences and their limits, I can now
-    properly define and understand series. 
+    Now that I have introduced sequences and their limits, I can 
+    define infinite series. 
   </p>
   <definition>
     <statement>
@@ -31,15 +31,14 @@
     <title>Partial-Sums and Convergence</title>
     <p>
       Unlike finite sums, there is no guarantee that an infinite
-      series
-      evaluates to anything. The problem of infinite series is
+      series evaluates to anything. The problem of infinite series is
       precisely this: how can I add up infinitely many things? This
       isn't a problem that algebra can solve, but calculus, with the
-      use of limits, can give a reasonable answer. I need to set up
-      an approximation process and take the limit, just as I did for
+      use of limits, can give a reasonable answer. I need to set up an
+      approximation process and take the limit, just as I did for
       derivatives and integrals. The approximation process is called
-      partial sums. Instead of taking the entire sum to infinity,
-      I just take a sum of finitely many pieces.
+      partial sums. Instead of taking the entire sum to infinity, I
+      just take a sum of finitely many pieces.
     </p>
     <definition>
       <statement>
@@ -56,7 +55,7 @@
       Since these are finite sums, I can actually calculate them.
       They serve as approximations to the total infinite sum.
       Moreover, these partial sums <m>\{s_n\}_{n=1}^\infty</m> define
-      a sequence. I can take the limit of the sequcne of partial
+      a sequence. I can take the limit of the sequence of partial
       sums. This is the limit of the approximation process, so it
       should calculate the value of the series.
     </p>
@@ -82,9 +81,9 @@
     <example>
       <statement>
         <p>
-          The first and most classical example is simply Zeno's
-          paradox. I can represent Zeno's paradox as the sum of a
-          geometric series with common ratio <m>\frac{1}{2}</m>. 
+          I'll start with Zeno's paradox.  paradox. I can this problem
+          as the sum of a geometric series with common ratio
+          <m>\frac{1}{2}</m>. 
         </p>
         <me>
           \sum_{n=1}^\infty \frac{1}{2^n}
@@ -121,9 +120,9 @@
           From these first few partial sum, I can claim that there is
           a pattern of partial sums. 
         </p>
-        <mrow>
-          s_n \amp = \frac{2^n-1}{2n}
-        </mrow>
+        <me>
+          s_n = \frac{2^n-1}{2n}
+        </me>
         <p>
           I haven't proved this pattern of partial sums, but there is
           still a strong informal argument for it. (Proving the
@@ -192,8 +191,8 @@
           </mrow>
         </md>
         <p>
-          Now I replace all the fraction without powers of 2 in the
-          demoninator with smaller terms to satify the inequality.
+          This time, I replace all the fractions without powers of 2
+          in the demoninator with smaller terms to satify the inequality.
         </p>
         <md>
           <mrow>
@@ -253,25 +252,25 @@
         </p>
         <md>
           <mrow>
-            \sum_{n=1}^\infty (-1)^n \amp
+            \sum_{n=0}^\infty (-1)^n \amp
           </mrow>
           <mrow>
-            s_1 \amp = 1
+            s_0 \amp = 1
           </mrow>
           <mrow>
-            s_2 \amp = 1-1 = 0
+            s_1 \amp = 1-1 = 0
           </mrow>
           <mrow>
-            s_3 \amp = 1-1+1 = 1
+            s_2 \amp = 1-1+1 = 1
           </mrow>
           <mrow>
-            s_4 \amp = 1-1+1-1 = 0
+            s_3 \amp = 1-1+1-1 = 0
           </mrow>
           <mrow>
-            s_5 \amp = 1+1-1-1+1 = 1
+            s_4 \amp = 1+1-1-1+1 = 1
           </mrow>
           <mrow>
-            s_6 \amp = 1+1-1-1+1-1 = 0
+            s_5 \amp = 1+1-1-1+1-1 = 0
           </mrow>
         </md>
         <p>
@@ -280,10 +279,10 @@
         </p>
         <md>
           <mrow>
-            s_{2n} \amp = 0 \ \ \forall n \in \NN
+            s_{2n+1} \amp = 0 \ \ \forall n \in \NN
           </mrow>
           <mrow>
-            s_{2n+1} \amp = 1 \ \ \forall n \in \NN
+            s_{2n} \amp = 1 \ \ \forall n \in \NN
           </mrow>
           <mrow>
             \lim_{n \rightarrow \infty} s_n \amp \hspace{1cm} DNE
@@ -342,6 +341,9 @@
         </md>
       </statement>
     </example>
+    <p>
+      I need a new definition to present the last two examples. 
+    </p>
     <definition>
       <statement>
         <p>
@@ -367,7 +369,8 @@
     </p>
     <p>
       Asymptotically, the factorial grows even faster than the
-      exponential.
+      exponential. In particular, I can use this fact in asymptotic
+      analysis of limits. 
     </p>
     <example>
       <statement>
@@ -465,13 +468,13 @@
     <title>The Test for Divergence</title>
     <p>
       As several examples have illustrated, it is possible for a
-      series to have terms which are getting very small but the series
-      still diverges. The comparsions between the geometric series
+      divergent series to have terms which decrease to zero. 
+      The comparsions between the geometric series
       with common ratio <m>\frac{1}{2}</m> and the harmonic series is
       an important comparison. The geometric series (which address
-      Zeno's paradox) has terms <m>\frac{1}{2^n}</m> which approach
-      zero and the whole series addsup to exactly <m>1</m>. The
-      harmonic series also has terms <m>\frac{1}{n</m> which approach
+      Zeno's paradox) has terms <m>\frac{1}{2^n}</m>; these terms approach
+      zero and the whole series adds up to exactly <m>1</m>. The
+      harmonic series also has terms <m>\frac{1}{n}</m> which approach
       zero, but the series diverges. This leads to a very important
       observation: <em>the fact that the terms of a series decay to
       zero is not sufficient to conclude that the series
@@ -504,7 +507,7 @@
       This is called the Test for Divergence because the logic here
       can only be used to prove divergence. If the limit of the terms
       is zero, I don't know if the series converges. If might be like
-      the geometric series with common ration <m>\frac{1}{2}</m> and
+      the geometric series with common ratio <m>\frac{1}{2}</m> and
       converge. It might be like the harmonic series and diverge. I
       just don't know. However, if the limit of the terms is not zero,
       I know for certain that the series will diverge. 
@@ -513,12 +516,12 @@
   <subsection xml:id="subsection-series-geometric-zeta">
     <title>Two Central Examples</title>
     <p>
-      There are two important classes of convergent series which I will
-      use throughout this chapter. These two examples will be
-      particularly important for the comparison results later in this
-      section. The first of the two examples has already been
-      mentioned in connection with Zeno's paradox: the geometric
-      series. I'll now give a full definition of is. 
+      There are two important classes of convergent series which I
+      will use frequently. These two examples will be particularly
+      important for future comparison results.  The first of the two
+      examples has already been mentioned in connection with Zeno's
+      paradox: the geometric series. I'll now give a full definition
+      of is. 
     </p>
     <definition>
       <statement>
@@ -571,9 +574,9 @@
     <p>
       The second important series is the <m>\zeta</m> (zeta)
       series. These are often called <m>p</m>-series in some texts.
-      I callthem <m>\zeta</m> series since this definition, in
-      a broader context, gives the famous Riemann <m>\zeta</m>
-      function.
+      I call this the <m>\zeta</m> series since this definition, in
+      a broader context, is the definition of the famous Riemann
+      <m>\zeta</m> function.
     </p>
     <definition>
       <statement>

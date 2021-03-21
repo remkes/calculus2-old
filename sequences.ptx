@@ -12,9 +12,10 @@
     </p>
     <p>
       In some ways, the problem of infinite series is older than the
-      problems motivating derivatives and integrals. Issues of
-      infinite series go back at least to early Greek mathematics,
-      where thinkers struggled with the puzzle known as Zeno's
+      problems motivating derivatives and integrals.
+      Infinite series go back at least to early Greek mathematics,
+      where thinkers struggled with the puzzles of infinitiy. The most
+      famous of those ancient puzzles is known as Zeno's
       Paradox.
     </p>
     <p>
@@ -57,7 +58,7 @@
         <md>
           <mrow>
             \amp \left\{ a_n \right\}_{n \in \NN} \amp \amp  \left\{
-            a_n \right\}_{n=0}^\infty \amp \amp  \left\{ a_n
+            a_n \right\}_{n=1}^\infty \amp \amp  \left\{ a_n
             \right\} \amp \amp  \left\{ a_1, a_2, a_3, a_4, \ldots
             \right\}
           </mrow>
@@ -76,126 +77,16 @@
         <p>
           A sequence <m>\{ a_n \}</m> is called a <term>recursive
           sequence</term> is each element is determined by the
-          previous element (or previous few elements). In the study of
-          sequences, there are methods that try to find a direct
-          description of recursive sequenes. Such a descriptions is
-          called a <term>closed form</term> for the recursive
-          sequence.
+          previous element (or previous few elements). The equation
+          that defined the recursive sequence is call a
+          <term>recurrence relation</term>. Often a recurrence
+          relation is difficult to calculate with and a direct
+          description is desired. Such a descriptions is
+          called the <term>closed form description</term> for the 
+          recursive sequence.
         </p>
       </statement>
     </definition>
-    <example>
-      <statement>
-        <p>
-          Sequences can be entirely random, or patterned by some
-          formula or recursion. Here are some familiar examples. I' ll 
-          show the first few terms as well as a method of generating
-          higher terms (either direct or recursive).
-        </p>
-        <ul>
-          <li>
-            <p>
-              The sequence of natural numbers.
-            </p>
-            <md>
-              <mrow>
-                \amp \NN = \left\{ 1,2,3,4,5, \ldots \right\} \amp
-                \amp a_n = n
-              </mrow>
-            </md>
-          </li>
-          <li>
-            <p>
-              The sequence of even numbers.
-            </p>
-            <md>
-              <mrow>
-                \amp \left\{ 2,4,6,8,10, \ldots \right\} \amp \amp
-                a_n = 2n
-              </mrow>
-            </md>
-          </li>
-          <li>
-            <p>
-              The harmonic sequence.
-            </p>
-            <md>
-              <mrow>
-                \amp \left\{
-                1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\frac{1}{5}
-                \ldots \right\} \amp \amp  a_n = \frac{1}{n}
-              </mrow>
-            </md>
-          </li>
-          <li>
-            <p>
-              The alternating harmonic sequence.
-            </p>
-            <md>
-              <mrow>
-                \amp \left\{
-                1,\frac{-1}{2},\frac{1}{3},\frac{-1}{4},\frac{1}{5}
-                \ldots \right\} \amp \amp  a_n = \frac{(-1)^n}{n}
-              </mrow>
-            </md>
-          </li>
-          <li>
-            <p>
-              The geometric sequence with common ratio
-              <m>\frac{-1}{2}</m>. (I've given both a direct and a
-              recursive definition of this sequence.) 
-            </p>
-            <md>
-              <mrow>
-                \amp \left\{
-                1,\frac{-1}{2},\frac{1}{4},\frac{-1}{8},\frac{1}{16}
-                \ldots \right\} \amp \amp  a_n =
-                \left(\frac{-1}{2}\right)^n \amp \amp a_n = \left(
-                \frac{-1}{2} \right) a_{n-1}
-              </mrow>
-            </md>
-          </li>
-          <li>
-            <p>
-              The arithmetic sequence with common difference 6.
-              (I've given both a direct and recursive definition of
-              this sequence.) 
-            </p>
-            <md>
-              <mrow>
-                \amp \left\{ 1,7,13,19,25, \ldots \right\} \amp \amp
-                a_n = 1 + 6n \amp \amp  a_n = a_{n-1} + 6
-              </mrow>
-            </md>
-          </li>
-          <li>
-            <p>
-              The Fibonacci sequence. (This is a very famous example
-              of a recursive sequence.) 
-            </p>
-            <md>
-              <mrow>
-                \amp \left\{1, 1, 2, 3, 5, 8, 13, \ldots \right\} \amp
-                \amp  a_1 = a_2 = 1 \amp \amp  a_n = a_{n-1} + a_{n-2}
-              </mrow>
-            </md>
-          </li>
-          <li>
-            <p>
-              The sequence of ratios of Fibonacci terms. 
-            </p>
-            <md>
-              <mrow>
-                \amp \left\{
-                1,\frac{2}{1},\frac{3}{2},\frac{5}{3},\frac{8}{5}
-                \ldots \right\} \amp \amp  a_1 = 1 \amp \amp  a_n = 1
-                + \frac{1}{a_{n-1}}
-              </mrow>
-            </md>
-          </li>
-        </ul>
-      </statement>
-    </example>
     <p>
       Let me introduce an important change in perspective for
       sequences. Instead of thinking of <m>\NN</m> as an index, I
@@ -212,7 +103,7 @@
       use all of the language of functions. In this way, sequences
       can be increasing, decreasing, monotonic, bounded above, bounded
       below and bounded. However, since the domain <m>\NN</m> is
-      seperated into discrete numbers, this function <m>f</m> has no
+      separated into discrete numbers, this function <m>f</m> has no
       continuity properties. 
     </p>
     <p>
@@ -220,10 +111,135 @@
       I can choose another starting point.
       <m>\{a_n\}_{n=3}^\infty</m> is a sequence which starts with
       <m>a_3</m>, and <m>\{a_n\}_{n=-2}^\infty</m> is a sequences
-      which starst with <m>a_{-2}</m>. Regardless of the starting
+      which starts with <m>a_{-2}</m>. Regardless of the starting
       point, sequencse  still always count up by 1 from the starting
       point. 
     </p>
+  </subsection>
+  <subsection xml:id="subsection-sequences-examples">
+    <title>Examples of Sequences</title>
+    <p>
+      Sequences can be entirely random, or patterned by some
+      formula or recursion. Here are some familiar examples. I' ll 
+      show the first few terms as well as a method of generating
+      higher terms (either direct or recursive).
+    </p>
+    <example>
+      <statement>
+        <p>
+          The sequence of natural numbers.
+        </p>
+        <md>
+          <mrow>
+            \amp \NN = \left\{ 1,2,3,4,5, \ldots \right\} \amp
+            \amp a_n = n
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The sequence of even numbers.
+        </p>
+        <md>
+          <mrow>
+            \amp \left\{ 2,4,6,8,10, \ldots \right\} \amp \amp
+            a_n = 2n
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The harmonic sequence.
+        </p>
+        <md>
+          <mrow>
+            \amp \left\{
+            1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\frac{1}{5}
+            \ldots \right\} \amp \amp  a_n = \frac{1}{n}
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The alternating harmonic sequence.
+        </p>
+        <md>
+          <mrow>
+            \amp \left\{
+            1,\frac{-1}{2},\frac{1}{3},\frac{-1}{4},\frac{1}{5}
+            \ldots \right\} \amp \amp  a_n = \frac{(-1)^{n+1}}{n}
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The geometric sequence with common ratio
+          <m>\frac{-1}{2}</m> and starting value <m>1</m>. (I've given
+          both a direct and a recursive definition of this sequence.)
+        </p>
+        <md>
+          <mrow>
+            \amp \left\{
+            1,\frac{-1}{2},\frac{1}{4},\frac{-1}{8},\frac{1}{16}
+            \ldots \right\} \amp \amp  a_n =
+            \left(\frac{-1}{2}\right)^n \amp \amp a_n = \left(
+            \frac{-1}{2} \right) a_{n-1}
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The arithmetic sequence with common difference 6 and
+          starting value 1.  (I've given both a direct and recursive
+          definition of this sequence.)
+        </p>
+        <md>
+          <mrow>
+            \amp \left\{ 1,7,13,19,25, \ldots \right\} \amp \amp
+            a_n = 1 + 6n \amp \amp  a_n = a_{n-1} + 6
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The Fibonacci sequence. (This is a very famous example
+          of a recursive sequence.) 
+        </p>
+        <md>
+          <mrow>
+            \amp \left\{1, 1, 2, 3, 5, 8, 13, \ldots \right\} \amp
+            \amp  a_1 = a_2 = 1 \amp \amp  a_n = a_{n-1} + a_{n-2}
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The sequence of ratios of Fibonacci terms. 
+        </p>
+        <md>
+          <mrow>
+            \amp \left\{
+            1,\frac{2}{1},\frac{3}{2},\frac{5}{3},\frac{8}{5}
+            \ldots \right\} \amp \amp  a_1 = 1 \amp \amp  a_n = 1
+            + \frac{1}{a_{n-1}}
+          </mrow>
+        </md>
+      </statement>
+    </example>
     <p>
       There are many, many sequences studied in mathematics. The
       Online Encyclopedia of Integer Sequences (OEIS) is a repository
@@ -296,10 +312,10 @@
       of sequences as functions. I know that limits of functions
       have many useful properties; all those properties transfer to
       sequences. Most importantly, for any sequences defined by a
-      familiar function, asymptotic analysis is still appropriate. The
-      limits of sequences are limits at infinity, to I will use
+      familiar functions, asymptotic analysis is still appropriate. The
+      limits of sequences are limits at infinity, so I will use
       asymptotic analysis whenever possible. In addition, many other
-      properties of sequencse of functions transfer over. 
+      properties of sequences of functions transfer over. 
     </p>
     <proposition>
       <statement>
@@ -339,7 +355,7 @@
           <mrow>
             \lim_{n \rightarrow \infty} \sqrt[n]{a_n} \amp =
             \sqrt[n]{\lim_{n \rightarrow \infty}} a_n \amp 
-            \text{if} \amp a_n \geq 0
+            \amp a_n \geq 0
           </mrow>
         </md>
       </statement>
@@ -348,7 +364,9 @@
       <statement>
         <p>
           Here are some limits where I can simply apply the method of
-          asymotptic analysis from limits of functions. 
+          asymotptic analysis from limits of functions. Here are three
+          limits which easy to argue by knowing the asymptotic order
+          and growth of conventional functions. 
         </p>
         <md>
           <mrow>
@@ -384,7 +402,7 @@
           larger than <m>1</m> should grow very large, so there is
           also an intuition that the limit should be infinite. It is
           not clear, by examining the limit, whether one of these two
-          intutition is correct of whether (as is the case) the limit
+          intutition is correct or whether (as is the case) the limit
           ends up between the two intuititon. This is another type of
           indeterminant form. 
         </p>
@@ -394,7 +412,7 @@
       <statement>
         <p>
           One of the example sequences was the ratio of the Fibonacci
-          terms. If <m>f_n</m> are the fibonacci terms, then the ratio
+          terms. If <m>f_n</m> are the Fibonacci terms, then the ratio
           is <m>a_n = \frac{f_{n+1}}{f_n}</m>.  I can use the
           recursive definition of the sequence of Fibonacci terms:
           <m>f_{n+1} = f_{n} + f_{n-1}</m>. In the ratio <m>a_n</m>, I
@@ -410,9 +428,9 @@
         </me>
         <p>
           Now I have a recursive definition for the sequences of
-          fibonacci ratios. Recursive definition are problematic for
+          Fibonacci ratios. Recursive definition are problematic for
           direct calculations of limits, but there is a useful trick
-          for calculating these limits. Let me write this recurvise
+          for calculating these limits. Let me restate this recurvise
           definition.
         </p>
         <me>
@@ -454,9 +472,9 @@
           </mrow>
         </md>
         <p>
-          Via the recursive definition, I've manade to calculat the
+          Via the recursive definition, I've managed to calculate the
           limit. This number <m>\phi</m> is the celebrated golden
-          ratio, and I've proved that the limit of the fibonacci terms
+          ratio, and I've proved that the limit of the Fibonacci terms
           is the golden ratio.
         </p>
       </statement>

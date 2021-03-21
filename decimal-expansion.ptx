@@ -10,11 +10,11 @@
     The starting question: what are decimal expansions and why do
     infinite strings of decimals actually represent numbers? A real
     number (in some setting, this is the definition) 
-     <m>\alpha</m> is an expression <m>a.d_1d_2d_3d_4 \ldots</m>
+    is an expression <m>a.d_1d_2d_3d_4 \ldots</m>
     where <m>a \in \NN</m> and the <m>d_i</m> are digits in <m>\{0, 1,
     \ldots, 9\}</m>. (The digits could be in any base, of course, but
     the base 10 is conventional.) What is the meaning of this decimal
-    notation? The meanint is actually an infinite series. Let me write
+    notation? This is actually an infinite series. Let me write
     what the decimal expansion stands for. 
   </p>
   <me>
@@ -28,8 +28,8 @@
     <m>\frac{1}{10^n}</m> are terms of a geometric series with common
     ratio <m>\frac{1}{10}</m>, which is convergent, so the decimal
     expansion is also convergent. Therefore, I can be confident that
-    all decimal expansions, though infinite, are converngent infinite
-    series and do actually represent numbers. The infinite in decimals
+    all decimal expansions, though infinite, are convergent infinite
+    series and do actually represent numbers. The infinity in decimals
     expansions is not a threat to their existence. 
   </p>
   <p>
@@ -38,16 +38,14 @@
     partial sums of a decimal expansion.
   </p>
   <me>
-    s_n = a + \sum_{k=1}^\infty \frac{d_k}{10^k}
+    s_n = a + \sum_{k=1}^n \frac{d_k}{10^k}
   </me>
   <p>
     These partial sums are all finite sums of fractions, hence they
-    are rational
-    numbers. Any real number <m>\alpha</m> is the limit of sums of
-    this type, since its decimal expansion is the limit of the partial
-    series sums. This establishes an important and useful fact about
-    real numbers (in some contexts, this is the definition of real
-    numbers).
+    are rational numbers. Any real number <m>\alpha</m> is the limit
+    of sums of this type, since its decimal expansion is the limit of
+    the partial series sums. In some context, the following result is
+    the definition of a real number.
   </p>
   <proposition>
     <statement>

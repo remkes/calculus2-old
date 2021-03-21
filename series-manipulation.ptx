@@ -48,21 +48,25 @@
       <p>
         In this example, I want to add two series which don't have
         matching indices. I shift the first series to make the
-        indices match and allow the addition.
+        indices match and allow the addition. In the last step below,
+        I also show an example of common denominator with factorials,
+        which is another frequently useful bit of algebra. In the
+        second term, I need to multiply by all the missing term to
+        make the factorial in the denominator. 
       </p>
       <md>
         <mrow>
-          \sum_{n=2}^\infty \frac{3^n}{n!} + \sum_{n=0}^\infty
-          \frac{1}{n(n+2)} \amp  = \sum_{n=0}^\infty
-          \frac{3^{n+2}}{(n+2)!} + \sum_{n=0}^\infty
+          \sum_{n=3}^\infty \frac{3^n}{n!} + \sum_{n=1}^\infty
+          \frac{1}{n(n+2)} \amp  = \sum_{n=1}^\infty
+          \frac{3^{n+2}}{(n+2)!} + \sum_{n=1}^\infty
           \frac{1}{n(n+2)}
         </mrow>
         <mrow>
-          \amp = \sum_{n=0}^\infty \left( \frac{3^{n+2}}{(n+2)!} +
-          \frac{1}{n(n+2} \right)
+          \amp = \sum_{n=1}^\infty \left( \frac{3^{n+2}}{(n+2)!} +
+          \frac{1}{n(n+2)} \right)
         </mrow>
         <mrow>
-          \amp  = \sum_{n=0}^\infty \left( \frac{3^{n+2} +
+          \amp  = \sum_{n=1}^\infty \left( \frac{3^{n+2} +
           (n-1)!(n+1)}{(n+2)!} \right)
         </mrow>
       </md>

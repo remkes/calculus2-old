@@ -26,7 +26,7 @@
           Find the limit of this sequence.
         </p>
         <me>
-          \lim t_{n \rightarrow \infty} \frac{2^n}{n!} 
+          \lim_{n \rightarrow \infty} \frac{2^n}{n!} 
         </me>
       </statement>
       <solution>
@@ -184,7 +184,7 @@
         <md>
           <mrow>
             \lim_{n \rightarrow \infty} a_n = \lim_{n \rightarrow
-            \inffty} 3 + \frac{2}{a_{n-1}} 
+            \infty} 3 + \frac{2}{a_{n-1}} 
           </mrow>
           <mrow>
             \lim_{n \rightarrow \infty} a_n = 3 + \frac{2}{\lim_{n
@@ -238,7 +238,7 @@
         <md>
           <mrow>
             \lim_{n \rightarrow \infty} a_n = \lim_{n \rightarrow
-            \inffty} 1 - \frac{1}{a_{n-1}} 
+            \infty} 1 - \frac{1}{a_{n-1}} 
           </mrow>
           <mrow>
             \lim_{n \rightarrow \infty} a_n = 1 - \frac{1}{\lim_{n
@@ -294,7 +294,7 @@
         <md>
           <mrow>
             \lim_{n \rightarrow \infty} a_n = \lim_{n \rightarrow
-            \inffty} \alpha + \frac{\beta}{a_{n-1}} 
+            \infty} \alpha + \frac{\beta}{a_{n-1}} 
           </mrow>
           <mrow>
             \lim_{n \rightarrow \infty} a_n = \alpha+ \frac{\beta}{\lim_{n
@@ -698,7 +698,7 @@
             \sum_{n=1}^{\infty} \frac{1}{3n} 
           </me>
           <p>
-            Why does this series diverge? (You can argue direct or
+            Why does this series diverge? (You can argue directly or
             look at the pattern of partial sums to make an argument
             that the limit of partial sums cannot converge.)  
           </p>
@@ -721,7 +721,7 @@
             \sum_{n=1}^{\infty} \frac{1}{\sqrt{n}} 
           </me>
           <p>
-            Why does this series diverge? (You can argue direct or
+            Why does this series diverge? (You can argue directly or
             look at the pattern of partial sums to make an argument
             that the limit of partial sums cannot converge.)  
           </p>
@@ -743,7 +743,7 @@
             \sum_{n=1}^{\infty} \frac{1}{n^2 - 9n + 20} 
           </me>
           <p>
-            Why does this series diverge? (You can argue direct or
+            Why does this series diverge? (You can argue directly or
             look at the pattern of partial sums to make an argument
             that the limit of partial sums cannot converge.)  
           </p>
@@ -784,7 +784,7 @@
             \sum_{n=1}^{\infty} (-1)^{\frac{n(n+1)}{2}} 
           </me>
           <p>
-            Why does this series diverge? (You can argue direct or
+            Why does this series diverge? (You can argue directly or
             look at the pattern of partial sums to make an argument
             that the limit of partial sums cannot converge.)  
           </p>
@@ -808,7 +808,7 @@
             \sum_{n=1}^{\infty} \sin \left( \frac{n\pi}{2} \right) 
           </me>
           <p>
-            Why does this series diverge? (You can argue direct or
+            Why does this series diverge? (You can argue directly or
             look at the pattern of partial sums to make an argument
             that the limit of partial sums cannot converge.)  
           </p>
@@ -855,7 +855,7 @@
             \sum_{n=1}^{\infty} 2^n 
           </me>
           <p>
-            Why does this series diverge? (You can argue direct or
+            Why does this series diverge? (You can argue directly or
             look at the pattern of partial sums to make an argument
             that the limit of partial sums cannot converge.)  
           </p>
@@ -885,7 +885,7 @@
             These partial sums are simply unbouded. The series grows
             to infinity. Equivalently, the test for divergence and the
             fact that the terms do not go to zero shows that
-            convergence is impossile.
+            convergence is impossible.
           </p>
         </solution>
       </activity>
@@ -898,7 +898,7 @@
             \sum_{n=1}^{\infty} \ln \left( \frac{1}{n} \right) 
           </me>
           <p>
-            Why does this series diverge? (You can argue direct or
+            Why does this series diverge? (You can argue directly or
             look at the pattern of partial sums to make an argument
             that the limit of partial sums cannot converge.)  
           </p>
