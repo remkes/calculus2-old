@@ -640,7 +640,7 @@
               \frac{1}{n+2} + \frac{-1}{n+3}
             </mrow>
             <mrow>
-              \sum_{n=1}^\infty \frac{1}{n^2 + 3n + 4} \amp =
+              \sum_{n=1}^\infty \frac{1}{n^2 + 5n + 6} \amp =
               \sum_{n=1}^\infty \frac{1}{n+2} - \frac{1}{n+3} 
             </mrow>
           </md>

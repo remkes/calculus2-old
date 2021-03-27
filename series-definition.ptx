@@ -483,7 +483,7 @@
     <p>
       The inverse logical statement, however, does hold. 
     </p>
-    <proposition>
+    <proposition xml:id="proposition-test-for-divergence">
       <statement>
         <p>
           (The Test for Divergence) Consider an infinite series.
@@ -523,7 +523,7 @@
       paradox: the geometric series. I'll now give a full definition
       of is. 
     </p>
-    <definition>
+    <definition xml:id="definition-geometric-series">
       <statement>
         <p>
           Let <m>r \in \RR</m>. The <term>geometric series</term>
@@ -578,7 +578,7 @@
       a broader context, is the definition of the famous Riemann
       <m>\zeta</m> function.
     </p>
-    <definition>
+    <definition xml:id="definition-zeta-series">
       <statement>
         <p>
           The <m>\zeta</m> series is the infinite series with terms

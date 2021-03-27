@@ -43,7 +43,7 @@
       <solution>
         <figure xml:id="figure-probability-1">
           <title>A Probability Distribution</title>
-          <image xml:id="figure52" width="80%">
+          <image xml:id="figure53" width="80%">
             <asymptote>
               size(12cm,4cm);
               import graph;
@@ -201,7 +201,7 @@
       <solution>
         <figure xml:id="figure-probability-2">
           <title>A Probability Distribution</title>
-          <image xml:id="figure53" width="80%">
+          <image xml:id="figure52" width="80%">
             <asymptote>
               size(12cm,4cm);
               import graph;
@@ -341,7 +341,7 @@
       <statement>
         <p>
           Give a reason why it is reasonable that the standard
-          devition of <xref ref="activity-probability-1"/> is larger
+          deviation of <xref ref="activity-probability-1"/> is larger
           than the standard deviation of <xref
           ref="activity-probability-2" />, even though they have the
           same domain and the same mean. 
