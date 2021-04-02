@@ -1,11 +1,11 @@
 <section xml:id="section-approximation">
   <title>Approximation and Taylor Polynomials</title>
   <p>
-    The previous section defined Taylor series for analytic functions.
-    Instead of taking the terms and coefficients all the way to
-    infinity, we could instead truncate the process at some degree.
-    The result is a polynomial which serves as a polynomial
-    approximation to the function.
+    In a Taylor series, instead of taking the terms and coefficients
+    all the way to infinity, I could instead truncate the process at
+    some degree.  The result is a polynomial. Moreover, since the
+    partial sums are the approximation process for infinite series,
+    this polynomial is an approximation to the Taylor series. 
   </p>
   <definition>
     <statement>
@@ -22,222 +22,239 @@
   </definition>
   <p>
     Taylor polynomials give the best possible polynomial
-    approximations to analytic functions.
+    approximations to analytic functions. I'll give a couple examples. 
   </p>
-  <figure xml:id="figure-exponential-approximations">
-    <caption>Polynomials Approximations to <m>e^x</m>.</caption>
-    <image xml:id="figure28" width="80%">
-      <asymptote>
-        size(12cm,8cm,IgnoreAspect);
-        import graph;
-        yaxis();
-        xaxis();
-
-        real f(real x) {return exp(x);}
-
-        draw(graph(f,-3,1));
-
-        real f1(real x) {return 1 + x;}
-        real f2(real x) {return 1 + x + (x^2)/2;}
-        real f3(real x) {return 1 + x + (x^2)/2 + (x^3)/6;}
-        real f4(real x) {return 1 + x + (x^2)/2 + (x^3)/6 + (x^4)/(24);}
-        real f5(real x) {return 1 + x + (x^2)/2 + (x^3)/6 + (x^4)/(24)
-        + (x^5)/(120);}
-
-        draw(graph(f1,-3,1));
-        draw(graph(f2,-3,1));
-        draw(graph(f3,-3,1));
-        draw(graph(f4,-3,1));
-        draw(graph(f5,-3,1));
-
-        label("$p_1$",(-2,-1),SE);
-        label("$p_2$",(-3,f2(-3)),W);
-        label("$p_3$",(-3,f3(-3)),W);
-        label("$p_4$",(-3,f4(-3)),W);
-        label("$p_5$",(-3,f5(-3)),W);
-        label("$e^x$",(-3,0),NW);
-      </asymptote>
-    </image>
-  </figure>
   <example>
+    <figure xml:id="figure-exponential-approximations">
+      <caption>Polynomials Approximations to <m>e^x</m>.</caption>
+      <image xml:id="figure28" width="80%">
+        <asymptote>
+          size(12cm,8cm,IgnoreAspect);
+          import graph;
+          yaxis();
+          xaxis();
+  
+          real f(real x) {return exp(x);}
+  
+          draw(graph(f,-3,1));
+  
+          real f1(real x) {return 1 + x;}
+          real f2(real x) {return 1 + x + (x^2)/2;}
+          real f3(real x) {return 1 + x + (x^2)/2 + (x^3)/6;}
+          real f4(real x) {return 1 + x + (x^2)/2 + (x^3)/6 + (x^4)/(24);}
+          real f5(real x) {return 1 + x + (x^2)/2 + (x^3)/6 + (x^4)/(24)
+          + (x^5)/(120);}
+
+          draw(graph(f1,-3,1));
+          draw(graph(f2,-3,1));
+          draw(graph(f3,-3,1));
+          draw(graph(f4,-3,1));
+          draw(graph(f5,-3,1));
+  
+          label("$p_1$",(-2,-1),SE);
+          label("$p_2$",(-3,f2(-3)),W);
+          label("$p_3$",(-3,f3(-3)),W);
+          label("$p_4$",(-3,f4(-3)),W);
+          label("$p_5$",(-3,f5(-3)),W);
+          label("$e^x$",(-3,0),NW);
+        </asymptote>
+      </image>
+    </figure>
     <statement>
       <p>
         Look at the exponential function <m>e^x</m> centered at
-        <m>\alpha = 0</m>.  We have its Taylor series from the
-        previous section.  These are its polynomial approximations.
-        Their graphs are shown in <xref
-        ref="figure-exponential-approximations">Figure</xref>.
-        <md>
-          <mrow>
-            e^x \amp  \cong \sum_{n=0}^1 \frac{1}{n!} x^n = 1 + x =
-            p_1
-          </mrow>
-          <mrow>
-            e^x \amp  \cong \sum_{n=0}^2 \frac{1}{n!} x^n = 1 + x +
-            \frac{x^2}{2} = p_2
-          </mrow>
-          <mrow>
-            e^x \amp  \cong \sum_{n=0}^3 \frac{1}{n!} x^n = 1 + x +
-            \frac{x^2}{2} + \frac{x^3}{6} = p_3
-          </mrow>
-          <mrow>
-            e^x \amp  \cong \sum_{n=0}^4 \frac{1}{n!} x^n = 1 + x +
-            \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} = p_4
-          </mrow>
-          <mrow>
-            e^x \amp  \cong \sum_{n=0}^5 \frac{1}{n!} x^n = 1 + x +
-            \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} +
-            \frac{x^5}{120} = p_5
-          </mrow>
-        </md>
+        <m>\alpha = 0</m>. Its Taylor series was calculated in <xref
+        ref="example-taylor-series1" />. Now I will calculate its
+        first few Taylor polynomials.  The graphs of these polynomials
+        are shown in <xref ref="figure-exponential-approximations" />. 
+      </p>
+      <md>
+        <mrow>
+          e^x \amp  \cong \sum_{n=0}^1 \frac{1}{n!} x^n = 1 + x =
+          p_1
+        </mrow>
+        <mrow>
+          e^x \amp  \cong \sum_{n=0}^2 \frac{1}{n!} x^n = 1 + x +
+          \frac{x^2}{2} = p_2
+        </mrow>
+        <mrow>
+          e^x \amp  \cong \sum_{n=0}^3 \frac{1}{n!} x^n = 1 + x +
+          \frac{x^2}{2} + \frac{x^3}{6} = p_3
+        </mrow>
+        <mrow>
+          e^x \amp  \cong \sum_{n=0}^4 \frac{1}{n!} x^n = 1 + x +
+          \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} = p_4
+        </mrow>
+        <mrow>
+          e^x \amp  \cong \sum_{n=0}^5 \frac{1}{n!} x^n = 1 + x +
+          \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} +
+          \frac{x^5}{120} = p_5
+        </mrow>
+      </md>
+      <p>
+        In <xref
+        ref="figure-exponential-approximations">Figure</xref>, as the
+        degree of the polynomial increases, the polynomial starts to
+        match up with the graph of the exponential function more and
+        more closely. Higher degree polynomials will give better and
+        better approximations for more and more of the domain of the
+        exponential function. 
       </p>
     </statement>
   </example>
-  <figure xml:id="figure-sine-approximations">
-    <caption>Polynomials Approximations to <m>\sin x</m>.</caption>
-    <image xml:id="figure29" width="80%">
-      <asymptote>
-        size(12cm,8cm,IgnoreAspect);
-        import graph;
-        yaxis();
-        xaxis();
-
-        real f(real x) {return sin(x);}
-
-        draw(graph(f,-2*pi,2*pi));
-
-        real f1(real x) {return x;}
-        real f2(real x) {return x - (x^3)/(6);}
-        real f3(real x) {return x - (x^3)/(6) + (x^5)/(120);}
-        real f4(real x) {return x - (x^3)/(6) + (x^5)/(120) -
-        (x^7)/(5040);}
-        real f5(real x) {return x - (x^3)/(6) + (x^5)/(120) -
-        (x^7)/(5040) + (x^9)/(362800);}
-
-        draw(graph(f1,-3,3));
-        draw(graph(f2,-3.3,3.3));
-        draw(graph(f3,-4.2,4.2));
-        draw(graph(f4,-4.44,4.44));
-        draw(graph(f5,-5.6,5.6));
-
-        label("$p_1$",(-3,-3),W);
-        label("$p_3$",(-3.2,2.5),W);
-        label("$p_5$",(-4.2,-2.6),W);
-        label("$p_7$",(-4.44,2.6),W);
-        label("$p_9$",(-5.6,-2.6),W);
-        label("$\sin x$",(-2*pi,0),NW);
-      </asymptote>
-    </image>
-  </figure>
   <example>
+    <figure xml:id="figure-sine-approximations">
+      <caption>Polynomials Approximations to <m>\sin x</m>.</caption>
+      <image xml:id="figure29" width="80%">
+        <asymptote>
+          size(12cm,8cm,IgnoreAspect);
+          import graph;
+          yaxis();
+          xaxis();
+  
+          real f(real x) {return sin(x);}
+  
+          draw(graph(f,-2*pi,2*pi));
+  
+          real f1(real x) {return x;}
+          real f2(real x) {return x - (x^3)/(6);}
+          real f3(real x) {return x - (x^3)/(6) + (x^5)/(120);}
+          real f4(real x) {return x - (x^3)/(6) + (x^5)/(120) -
+          (x^7)/(5040);}
+          real f5(real x) {return x - (x^3)/(6) + (x^5)/(120) -
+          (x^7)/(5040) + (x^9)/(362800);}
+  
+          draw(graph(f1,-3,3));
+          draw(graph(f2,-3.3,3.3));
+          draw(graph(f3,-4.2,4.2));
+          draw(graph(f4,-4.44,4.44));
+          draw(graph(f5,-5.6,5.6));
+  
+          label("$p_1$",(-3,-3),W);
+          label("$p_3$",(-3.2,2.5),W);
+          label("$p_5$",(-4.2,-2.6),W);
+          label("$p_7$",(-4.44,2.6),W);
+          label("$p_9$",(-5.6,-2.6),W);
+          label("$\sin x$",(-2*pi,0),NW);
+        </asymptote>
+      </image>
+    </figure>
     <statement>
       <p>
         The approximations for sine only have odd exponents, since
         there are only odd monomials in the Taylor series for sine.
-        These are the first few approximations.  Their graphs are
-        shown in <xref ref="figure-sine-approximations">Figure</xref>
-        <md>
-          <mrow>
-            \sin x \amp  \cong \sum_{k=0}^0 \frac{(-1)^k}{(2k+1)!}
-            x^{2k+1} = x = p_1
-          </mrow>
-          <mrow>
-            \sin x \amp  \cong \sum_{k=0}^1 \frac{(-1)^k}{(2k+1)!}
-            x^{2k+1} = x - \frac{x^3}{3!} = p_3
-          </mrow>
-          <mrow>
-            \sin x \amp  \cong \sum_{k=0}^2 \frac{(-1)^k}{(2k+1)!}
-            x^{2k+1} = x - \frac{x^3}{3!} + \frac{x^5}{5!} = p_5
-          </mrow>
-          <mrow>
-            \sin x \amp  \cong \sum_{k=0}^3 \frac{(-1)^k}{(2k+1)!}
-            x^{2k+1} = x - \frac{x^3}{3!} + \frac{x^5}{5!} -
-            \frac{x^7}{7!} = p_7
-          </mrow>
-          <mrow>
-            \sin x \amp  \cong \sum_{k=0}^4 \frac{(-1)^k}{(2k+1)!}
-            x^{2k+1} = x - \frac{x^3}{3!} + \frac{x^5}{5!} -
-            \frac{x^7}{7!} + \frac{x^9}{9!} = p_9
-          </mrow>
-        </md>
+        Therefore, I'll only calculate the odd Taylor polynomials here
+        (the even Taylor polynomials simply add zero to the previous
+        odd Taylor polynomial.  The graphs of the first few Taylor
+        polynomials are shown in <xref
+        ref="figure-sine-approximations" />. 
       </p>
+      <md>
+        <mrow>
+          \sin x \amp  \cong \sum_{k=0}^0 \frac{(-1)^k}{(2k+1)!}
+          x^{2k+1} = x = p_1
+        </mrow>
+        <mrow>
+          \sin x \amp  \cong \sum_{k=0}^1 \frac{(-1)^k}{(2k+1)!}
+          x^{2k+1} = x - \frac{x^3}{3!} = p_3
+        </mrow>
+        <mrow>
+          \sin x \amp  \cong \sum_{k=0}^2 \frac{(-1)^k}{(2k+1)!}
+          x^{2k+1} = x - \frac{x^3}{3!} + \frac{x^5}{5!} = p_5
+        </mrow>
+        <mrow>
+          \sin x \amp  \cong \sum_{k=0}^3 \frac{(-1)^k}{(2k+1)!}
+          x^{2k+1} = x - \frac{x^3}{3!} + \frac{x^5}{5!} -
+          \frac{x^7}{7!} = p_7
+        </mrow>
+        <mrow>
+          \sin x \amp  \cong \sum_{k=0}^4 \frac{(-1)^k}{(2k+1)!}
+          x^{2k+1} = x - \frac{x^3}{3!} + \frac{x^5}{5!} -
+          \frac{x^7}{7!} + \frac{x^9}{9!} = p_9
+        </mrow>
+      </md>
     </statement>
   </example>
   <p>
     The main application of approximation is calculating values of
-    transcendental functions.  We can't directly calculate their
-    values using basic arithmetic; we need a method.  Before the
-    convenience of calculator and computer reference, mathematicians,
-    scientists and engineers carried around large books of tables of
-    values of trig, exponential and logarithmic function.
+    transcendental functions. I can't directly calculate their
+    values using basic arithmetic; I need a method. 
   </p>
   <p>
     Polynomials are particularly useful as approximation tools since
-    they involve only the basic operations of arithmetic.  Computers
+    they involve only the basic operations of arithmetic. Computers
     can calculate with the basic operations of arithmetic, so
-    computers can understand polynomials.  If we want to program a
+    computers can understand polynomials. If I want to program a
     computer or calculator to calculate values of <m>e^x</m> or
     <m>\sin x</m> or <m>\ln x</m> or some other transcendental
-    function, Taylor series are one of the best techniques.
+    function, Taylor series are one of the best techniques. Here are a
+    couple examples of doing those approximations
   </p>
   <example>
     <statement>
       <p>
         The logarithm is a transcendental function which can't be
-        directly calculated.  We had a Taylor series for the logarithm
-        in the previous section.
-        <me>
-          -\ln (1-x) = \sum_{n=0}^\infty \frac{x^{n+1}}{n+1} dx
-        </me>
+        directly calculated. Here is a Taylor series for a particular
+        version of the logarithm, which has a radius of convergence of
+        <m>R = 1</m>. 
       </p>
+      <me>
+        -\ln (1-x) = \sum_{n=0}^\infty \frac{x^{n+1}}{n+1} dx
+      </me>
       <p>
-        Using some clever arithmetic, we can write <m>\ln 2 = - \ln
-        \frac{1}{2} = - \ln \left( 1 - \frac{1}{2} \right)</m>.  If we
-        truncate the series at degree <m>6</m>, we have this
-        approximation for <m>\ln 2</m>.
-        <md>
-          <mrow>
-            \ln 2 \amp  \cong 1 \cdot \frac{1}{2} + \frac{1}{2} \cdot
-            \left( \frac{1}{2} \right)^2 + \frac{1}{3} \left(
-            \frac{1}{2} \right)^3 + \frac{1}{4} \left( \frac{1}{2}
-            \right)^4 + \frac{1}{5} \left( \frac{1}{2} \right)^5 +
-            \frac{1}{6} \left( \frac{1}{2} \right)^6
-          </mrow>
-          <mrow>
-            \ln 2 \amp  \cong \frac{1}{2} + \frac{1}{8} + \frac{1}{24}
-            + \frac{1}{64} + \frac{1}{160} + \frac{1}{384}
-          </mrow>
-          <mrow>
-            \ln 2 \amp  \cong \frac{1327}{1920} = 0.6911458333333
-            \ldots = 0.6911458\bar{3}
-          </mrow>
-        </md>
+        Using some clever arithmetic, I can write <m>\ln 2 = - \ln
+        \frac{1}{2} = - \ln \left( 1 - \frac{1}{2} \right)</m>. This
+        lets me use this series to calculate <m>\ln 2</m> by
+        evaluating at <m>x = \frac{1}{2}</m>.  Now I'll take the
+        <m>6</m>th Taylor polynomial as an approximation 
+        for <m>\ln 2</m>.
       </p>
+      <md>
+        <mrow>
+          \ln 2 \amp -\ln \left( 1 - \frac{1}{2} \right) \cong
+          \sum_{n=0}^5 \frac{x^{n+1}}{n+1} dx \Bigg|_{x = \frac{1}{2}} 
+        </mrow>
+        <mrow>
+          \ln 2 \amp \cong 1 \cdot \frac{1}{2} + \frac{1}{2} \cdot
+          \left( \frac{1}{2} \right)^2 + \frac{1}{3} \left(
+          \frac{1}{2} \right)^3 + \frac{1}{4} \left( \frac{1}{2}
+          \right)^4 + \frac{1}{5} \left( \frac{1}{2} \right)^5 +
+          \frac{1}{6} \left( \frac{1}{2} \right)^6
+        </mrow>
+        <mrow>
+          \ln 2 \amp  \cong \frac{1}{2} + \frac{1}{8} + \frac{1}{24}
+          + \frac{1}{64} + \frac{1}{160} + \frac{1}{384}
+        </mrow>
+        <mrow>
+          \ln 2 \amp  \cong \frac{1327}{1920} = 0.6911458333333
+          \ldots = 0.6911458\bar{3}
+        </mrow>
+      </md>
       <p>
         This is not to far off from the value of <m>\ln 2 =
-        0.69314\ldots</m>, accurate to the thousandths place.
+        0.69314\ldots</m>, accurate to the thousandths place. Already
+        with a <m>6</m>th order approximation, this is already a
+        usable approximation for many applications. 
       </p>
     </statement>
   </example>
-  <example>
-    <statement>
-      <p>
-        There are many ways in mathematics to find approximations to
-        numbers.  Recall that the alternating harmonic series also
-        summed to <m>\ln 2</m>.  If we truncate that series after ten
-        steps, we get this approximation:
-        <me>
-          \ln 2 \cong 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} +
-          \frac{1}{5} - \frac{1}{6} + \frac{1}{7} - \frac{1}{8} +
-          \frac{1}{9} - \frac{1}{10} = \frac{1627}{2520} =
-          0.645\overline{634920}
-        </me>
-      </p>
-      <p>
-        This expression is a poorer approximation for <m>\ln 2</m>; we
-        would need to go much farther down the alternating harmonic
-        series to match the precision of the Taylor series.
-      </p>
-    </statement>
-  </example>
+  <p>
+    I knew the accuracy of the previous approximation by comparing to
+    a <sq>known value</sq>. That was a bit artificial, since the known
+    value is really just a more accurate approximation. If I was
+    calcualting something for the first time, how would I know how
+    accurate my result it?
+  </p>
+  <p>
+    This is the subject of error analysis of approximation methods.
+    This is a major piece of mathematics in itself. Though I am not
+    going to cover them here, there are theorems that give good
+    understanding of the error of a Taylor polynomial approximation.
+    Those theorems give confidence in approximations. I an
+    approxmiation is needed that has some fixed precision, such an
+    approximation can always be calculate with full confidence. This
+    kind of mathematics is behind all the computer/calculator
+    algorithms that calculate all values of logarithms,
+    exponentials, square roots, etc. 
+  </p>
 </section>

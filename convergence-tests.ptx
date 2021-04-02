@@ -117,7 +117,8 @@
         </p>
         <me>
           \frac{2^n}{n!} = \frac{2}{1} \frac{2}{2} \frac{2}{3}
-          \ldots \leq \frac{2}{3} \left( \frac{1}{2} \right)^{n-4}
+          \ldots \leq \frac{2}{3} \left( \frac{1}{2} \right)^{n-3} =
+          \frac{16}{3} \frac{1}{2^n} 
         </me>
         <p>
           Therefore, the terms of this series are smaller than the
@@ -178,7 +179,7 @@
           check their absolute convergence.
         </p>
         <me>
-          \sum_{n=1}^\infty \frac{(-1)^n}{n^6} 
+          \sum_{n=3}^\infty \frac{(-1)^n}{n^6 + n^4 - 3n - 1} 
         </me>
         <p>
           This series is absolutely convergent by asymptotic comparison to
@@ -265,8 +266,8 @@
         </p>
         <me>
           \int_1^\infty \frac{1}{x^p} dx = \lim_{a \rightarrow \infty}
-          \frac{1}{(1-p) x^{p-1}} \Bigg|_1^a = \lim_}a \rightarrow
-          \infty| \frac{1}{(1-p)a} + \frac{1}{p-1} = \frac{1}{p-1} 
+          \frac{1}{(1-p) x^{p-1}} \Bigg|_1^a = \lim_{a \rightarrow
+          \infty} \frac{1}{(1-p)a} + \frac{1}{p-1} = \frac{1}{p-1} 
         </me>
         <p>
           This integral converges, showing that the <m>\zeta</m> series

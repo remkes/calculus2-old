@@ -17,7 +17,7 @@
         Test this series for convergence (4). 
       </p>
       <me>
-        \sum_{n=1}^\infty \left( n + \frac{1}{n} \right)^{-n} 
+        \sum_{n=1}^\infty \frac{n^4 - 8n^2 + 3}{n^7 + n^2 - 3}
       </me>
     </li>
     <li>
@@ -31,12 +31,12 @@
     <li>
       <p>
         Test this series for convergence. (The integral test can be
-        use here, but the integral is a bit tricky. One way to solve
+        used here, but the integral is a bit tricky. One way to solve
         the integral involves the substitution <m>u = \ln x^3</m>
         followed by integration by parts) (6) 
       </p>
       <me>
-        \sum_{n=0}^\infty \frac{\ln (n^3)}{n^2} 
+        \sum_{n=1}^\infty \frac{\ln (n^3)}{n^2} 
       </me>
     </li>
     <li>
@@ -55,7 +55,7 @@
         Test this series for convergence (4). 
       </p>
       <me>
-        \sum_{n=0}^\infty \frac{1 - e^{-\frac{n^2 + 3n}{n}}}{n^2} 
+        \sum_{n=3}^\infty \frac{1 - e^{-\frac{n^2 + 3n}{n}}}{n^2} 
       </me>
     </li>
     <li>
@@ -69,8 +69,8 @@
       <p>
         Here are some series which are based on the series we already
         have. Determine if these alterations converge or diverge. Give
-        clear answers and reasons, either using convergence test or
-        other argument from the definition and properties of series. 
+        clear answers and reasons, either using convergence tests or
+        other arguments from the definition and properties of series. 
       </p>
       <md>
         <mrow>
