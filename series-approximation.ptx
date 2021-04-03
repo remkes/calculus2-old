@@ -211,7 +211,7 @@
       </p>
       <md>
         <mrow>
-          \ln 2 \amp -\ln \left( 1 - \frac{1}{2} \right) \cong
+          \ln 2 \amp =  -\ln \left( 1 - \frac{1}{2} \right) \cong
           \sum_{n=0}^5 \frac{x^{n+1}}{n+1} dx \Bigg|_{x = \frac{1}{2}} 
         </mrow>
         <mrow>

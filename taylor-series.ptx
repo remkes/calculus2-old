@@ -61,8 +61,10 @@
       <statement>
         <p>
           A function <m>f</m> is <m>C^\infty</m> at a point <m>\alpha
-          \in \RR</m> if and only if there exists <m>R>0</m> such that
-          <m>f</m> is analytic on <m>(\alpha-R,\alpha+R)</m>.
+          \in \RR</m> if and only if <m>f</m> is analytic at 
+          <m>\alpha</m>. (Recall that analytic includes the condition
+          that the radius of convergence of the resulting series must
+          be positive or infinity). 
         </p>
       </statement>
     </theorem>
@@ -138,7 +140,7 @@
       argue for the following general pattern.
     </p>
     <me>
-      c_n \amp = \frac{f^{(n)}(\alpha)}{n!}
+      c_n = \frac{f^{(n)}(\alpha)}{n!}
     </me>
     <p>
       Now I have a way to calculate the coefficient in terms of the
@@ -319,7 +321,7 @@
           Since this is a series, we can integrate it.
           <me>
             \int e^{x^2} dx = \sum_{n=0}^\infty
-            \frac{x^{2n+1}}{(2n+1)n!} + C
+            \frac{x^{2n+1}}{(2n+1)n!} + c
           </me>
         </p>
         <p>
@@ -341,7 +343,7 @@
           <m>0</m>, and <m>-1</m>. Therefore, I get the following
           expressions for the coefficient of the Taylor series.Note
           I need to group the coefficients into odds and evens,
-          writing <m>n= 2k</m> for evens and <m>n = 2k+1</m> for
+          writing <m>2n</m> for evens and <m>2n+1</m> for
           odds.
         </p>
         <md>
@@ -378,7 +380,7 @@
           even coefficients are all zero. 
         </p>
         <me>
-          \sin x = \sum_{k=0}^\infty \frac{(-1)^k}{(2k+1)!} x^{2k+1}
+          \sin x = \sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)!} x^{2n+1}
         </me>
         <p>
           The radius of convergence of this series is <m>R =
@@ -389,7 +391,7 @@
           terms, using <m>(2n)</m>. 
         </p>
         <me>
-          \cos x = \sum_{n=0}^\infty \frac{(-1)^k}{(2k)!} x^{2k}
+          \cos x = \sum_{n=0}^\infty \frac{(-1)^n}{(2n)!} x^{2n}
         </me>
         <p>
           The radius of convergence of this series is also <m>R =
@@ -517,7 +519,7 @@
     </p>
     <p>
       Lastly, a very observant reader may have noticed that for the
-      series for <m>\ln x</m> and <m>\frac{1}{x^2</m>, the radius of
+      series for <m>\ln x</m> and <m>\frac{1}{x^2}</m>, the radius of
       convergence was exactly the distance to the edge of the
       convential domain. There is a theorem, which I won't get into
       here, which states that this situation is what should be

@@ -64,7 +64,7 @@
       on <m>x</m>.
     </p>
     <me>
-      f(x) = \sum_{n=1}^\infty c_n(x)
+      f(x) = \sum_{n=1}^\infty a_n(x)
     </me>
     <p>
       Notice that the variable of the function, <m>x</m>, is not the
