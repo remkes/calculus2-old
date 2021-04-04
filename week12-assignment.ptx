@@ -6,7 +6,30 @@
   <p><ol>
     <li>
       <p>
-        Question. 
+        Calculate the Taylor series for <m>f(x) = \ln x</m> centred at
+        <m>\alpha = 3</m>. (8) 
+      </p>
+    </li>
+    <li>
+      <p>
+        Calculate the Taylor series for <m>f(x) = \frac{1}{x+1}</m>
+        centred at <m>\alpha = 4</m>. (8) 
+      </p>
+    </li>
+    <li>
+      <p>
+        Calculate the Taylor series for <m>f(x) = e^{4x+2}</m>
+        centred at <m>\alpha = 0</m>. (Don't do this question by using
+        the full algorithm; instead, use existing series to produce
+        the new series.) (4) 
+      </p>
+    </li>
+    <li>
+      <p>
+        Calculate the Taylor series for <m>f(x) = x^4 \sin (6x)</m>
+        centred at <m>\alpha = 0</m>. (Don't do this question by using
+        the full algorithm; instead, use existing series to produce
+        the new series.) (4) 
       </p>
     </li>
   </ol></p>
