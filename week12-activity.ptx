@@ -357,25 +357,25 @@
         </p>
         <md>
           <mrow>
-            f(0) \amp = 1
+            f(1) \amp = 1
           </mrow>
           <mrow>
-            \frac{d}{dx} f(x) \Bigg|_{x=0} \amp = -1
+            \frac{d}{dx} f(x) \Bigg|_{x=1} \amp = -1
           </mrow>
           <mrow>
-            \frac{d^2}{dx^2} f(x) \Bigg|_{x=0} \amp = 2
+            \frac{d^2}{dx^2} f(x) \Bigg|_{x=1} \amp = 2
           </mrow>
           <mrow>
-            \frac{d^3}{dx^3} f(x) \Bigg|_{x=0} \amp = -(2)(3)
+            \frac{d^3}{dx^3} f(x) \Bigg|_{x=1} \amp = -(2)(3)
           </mrow>
           <mrow>
-            \frac{d^4}{dx^4} f(x) \Bigg|_{x=0} \amp = (2)(3)(4)
+            \frac{d^4}{dx^4} f(x) \Bigg|_{x=1} \amp = (2)(3)(4)
           </mrow>
           <mrow>
-            \frac{d^5}{dx^5} f(x) \Bigg|_{x=0} \amp = -(2)(3)(4)(5)
+            \frac{d^5}{dx^5} f(x) \Bigg|_{x=1} \amp = -(2)(3)(4)(5)
           </mrow>
           <mrow>
-            \frac{d^6}{dx^6} f(x) \Bigg|_{x=0} \amp = (2)(3)(4)(5)(6)
+            \frac{d^6}{dx^6} f(x) \Bigg|_{x=1} \amp = (2)(3)(4)(5)(6)
           </mrow>
         </md>
         <p>
@@ -386,7 +386,7 @@
           matches the degree of the factorial. 
         </p>
         <me>
-          \frac{d^n}{dx^n} f(x) \Bigg|_{x=0} = (-1)^n n!
+          \frac{d^n}{dx^n} f(x) \Bigg|_{x=1} = (-1)^n n!
         </me>
         <p>
           After describing a pattern for the derivatives at the centre
@@ -459,16 +459,16 @@
             \frac{d^2}{dx^2} f(x) \amp = \frac{-1}{(x+3)^2}
           </mrow>
           <mrow>
-            \frac{d^3}{dx^3} f(x) \amp = \frac{-2}{(x+3)^3} 
+            \frac{d^3}{dx^3} f(x) \amp = \frac{2}{(x+3)^3} 
           </mrow>
           <mrow>
-            \frac{d^4}{dx^4} f(x) \amp = \frac{((2)(3)}{(x+3)^4}
+            \frac{d^4}{dx^4} f(x) \amp = \frac{-(2)(3)}{(x+3)^4}
           </mrow>
           <mrow>
-            \frac{d^5}{dx^5} f(x) \amp = \frac{-(2)(3)(4)}{(x+3)^5}
+            \frac{d^5}{dx^5} f(x) \amp = \frac{(2)(3)(4)}{(x+3)^5}
           </mrow>
           <mrow>
-            \frac{d^6}{dx^6} f(x) \amp = \frac{(2)(3)(4)(5)}{(x+3)^6}
+            \frac{d^6}{dx^6} f(x) \amp = \frac{-(2)(3)(4)(5)}{(x+3)^6}
           </mrow>
         </md>
         <p>

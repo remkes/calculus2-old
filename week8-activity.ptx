@@ -57,26 +57,27 @@
         </p>
         <me>
           V = \int_1^{e^2} A dh = \int_1^{e^2} \pi (ln x)^2 dx = \pi
-          \int_1^{e^2} (\ln x)^dx 
+          \int_1^{e^2} (\ln x)^2 dx 
         </me>
         <p>
           I will integrate by parts, with <m>f = \ln x</m> and
           <m>\frac{dg}{dx}  = \ln x</m>, so that <m>\frac{df}{dx} =
-          \frac{1}{x}</m> and <m>g = x \ln x + x</m>. (The
+          \frac{1}{x}</m> and <m>g = x \ln x - x</m>. (The
           antiderivative of the logarithm is from the tables.) Then I
           can proceed with the integral. 
         </p>
         <md>
           <mrow>
-            V \amp = (\ln x)(x \ln x) \Big|_1^{e^2} - \int_1^{e^2}
-            \frac{1}{x} (x \ln x + x) dx 
+            V \amp = (\ln x)(x \ln x - x) \Bigg|_1^{e^2} - \int_1^{e^2}
+            \frac{1}{x} (x \ln x - x) dx 
           </mrow>
           <mrow>
-            = (2)(2e^2) - (0)(0) - \int_1^{e^2} \ln x + 1 dx 
+            \amp = (2)(2e^2 - e^2) - (0)(0-1) - \int_1^{e^2} \ln x - 1 dx 
           </mrow>
           <mrow>
-            \amp = 4e^2 - (x \ln x + x + x) \Big|_1^{e^2} = 4e^2 -
-            (2e^2 + 2e^2 + 0 - 2) = 2
+            \amp = 2e^2 - (x \ln x - x - x) \Bigg|_1^{e^2} 
+            = 2e^2 - (x \ln x - 2x ) \Bigg|_1^{e^2} 
+            = 2e^2 - (2 e^2 - 2 e^2 - 0 + 2) \Bigg|_1^{e^2} = 2e^2 - 2
           </mrow>
         </md>
       </solution>
