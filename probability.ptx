@@ -3,215 +3,303 @@
   <subsection xml:id="subsection-density-functions">
     <title>Probability Density Functions</title>
     <p>
-      The final major application of integration in this chapter is
-      the use of integration to understand continuous probability.
-      When dealing with probability, there are two major kinds of
-      data: discrete and continuous. In discrete data, there are a
+      I've done two weeks so far with applications of integration:
+      parametric curves and volumes. The last week of these
+      applications is using integration for probability. 
+    </p>
+    <p>
+      The study of probablity can be roughly broken up into two kinds
+      of data: discrete and continuous.  In discrete data, there are a
       finite number of seperate possible measurements, each of which
       has a finite probability. The study of discrete probability can
       be entirely accomplished with finite sums (though even there,
-      caluculus can give surprising insights.)
+      caluculus can give surprising insights.) Exam marks are a
+      typical discrete measurement: there are only a finite number of
+      possibilities. 
     </p>
     <p>
       Continuous probability involves measurements which can vary
-      anywhere within a range. Test scores are a typical discrete
-      measurement: there are only a finite number of test results.
-      Heights in a population are a typical continuous measurement:
-      assuming sufficient precision, a height can be any real number
-      in a particular range. At least mathematically, there are
-      infinitely many possible measurements. As opposed to discrete
-      probability, we can't assign a specific likeliness to any
-      particular measurement in a continuous situation. Instead, we
-      can assign a probability to a range of measurements. For
-      example: there is a 20% change that an adult female caribou
-      stands more than 125 cm tall at the shoulder.
+      anywhere within a range.  Heights in a population are a typical
+      continuous measurement: assuming sufficient precision, a height
+      can be any real number in a particular range. At least
+      mathematically, there are infinitely many possible measurements.
+      As opposed to discrete probability, I can't assign a specific
+      likeliness to any particular measurement in a continuous
+      situation. Instead, I can assign a probability to a range of
+      measurements. For example: there is a 20% change that an adult
+      female caribou stands more than 125 cm tall at the shoulder. 
+    </p>
+    <p>
+      The main application of integration to probability is to
+      understand continuous data. To that end, let me make the key
+      definition. 
     </p>
     <definition>
       <statement>
         <p>
-          A <term>probability density</term> is defined to be an
+          A <term>probability density function</term> or
+          <term>probability distribution</term>  is an 
           integrable function <m>f(x) : [a,b] \rightarrow [0,
           \infty)</m> such that
-          <me>
-            \int_a^b f(x) dx = 1
-          </me>.
         </p>
+        <me>
+          \int_a^b f(x) dx = 1
+        </me>
       </statement>
     </definition>
     <p>
-      The interval <m>[a,b]</m> is the range of all possible
-      measurements. The integral condition is simply saying that all
-      measurements fall in this range (with probability 1). Then, if
-      we have <m>x_0</m> and <m>x_1</m> in the interval <m>[a,b]</m>,
-      the probability of a measurement between <m>x_0</m> and
-      <m>x_1</m> is given by the integral of the density.
-      <me>
-        \int_{x_0}^{x_1} f(x) dx
-      </me>
+      A probability distribution is a very new kind of thing, so let me
+      make some important notes about its properties and
+      interpretation. 
     </p>
-    <p>
-      We need the probability density function to be positive because
-      negative probability doesn't make any sense. Note that
-      measurements are <m>x</m> values <mdash/> inputs to the
-      function, not outputs. <m>f(x)</m> measures, in some sense, the
-      likeliness of <m>x</m> being a measurement. In the ensuing
-      study of probability, all information about the situation is
-      determined from the probability density function.
-    </p>
-    <p>
-      Since it is a common convention, we will also refer to the
-      probability density function as a <em>probability
-      distribution</em> or simply a distribution.
-    </p>
+    <ul>
+      <li>
+        <p>
+          First and most counter-intuitive: the quantity that is being
+          measure is the <em>input</em> of the probability. When
+          talking about, say, height, it is familiary for height to be
+          the dependent variable. Height depends on time, or position,
+          or something else. For probabilities of heights, height is
+          the independent variable. The function <m>f(x)</m> is asking
+          about the probability of the measurement <m>x</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The output <m>f(x)</m> is vague a measure of how likely the
+          measurement <m>x</m> is, but only vaguely. For continuous
+          probability, since infinitely many measurements are possible
+          in a range, each individual precise measurement actually has
+          zero probability. Instead, a probability is only given for a
+          range of measurement. For continuous probability, I can
+          never ask: how likely is a height of 6 meters? Instead, I
+          can only ask: how likely is a height between 5 and 6 meters. 
+        </p>
+      </li>
+      <li>
+        <p>
+          The probability distribution is positive. A negative probabity
+          has no meaning. 
+        </p>
+      </li>
+      <li>
+        <p>
+          The interval <m>[a,b]</m> is the range of all possible
+          measurements. The integral condition in the definition is
+          simply saying that all measurements fall in this range (with
+          probability 1). Then, if <m>x_0</m> and <m>x_1</m> are in
+          the interval <m>[a,b]</m> (and <m>x_0 \lt x_1</m>), the
+          probability of a measurement between <m>x_0</m> and
+          <m>x_1</m> is given by the integral of the probability
+          distribution.
+        </p>
+        <me>
+         P([x_0,x_1])  = \int_{x_0}^{x_1} f(x) dx
+        </me>
+        <p>
+          This notation, where <m>P([a,b]</m> is the probability of a
+          measurement in the range <m>[a,b]</m>, is conventional. I'll
+          use this notation throughout this section. 
+        </p>
+      </li>
+      <li>
+        <p>
+          This probability <m>P</m> of a measurement in some range
+          will have <m>0 \leq P \leq 1</m>, depending on the endpoint
+          and the particular nature of the distribution.
+          Continuous probabilities are not given in percentages;
+          instead, they are given in fractions. If the integral
+          produces the valyue <m>P = \frac{1}{2}</m>, that's
+          equivalent to the colloquial <m>50\%</m> probability.
+          Percentage language is quite common in discrete probability,
+          but much less common in continuous probability. I won't use
+          percentage langauge at all in this course. Instead, a
+          probability of <m>1</m> is an even that is sure to happen,
+          and all other probability will be decimals or fractions
+          between <m>0</m> and <m>1</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Even though the integral is bounded above by <m>1</m>,
+          the probability distribution itself is not bounded by <m>1</m>.
+          It can take arbitrarily large values, as long as the spike
+          is narrow enough such that the area under the curve remains
+          <m>1</m> over the whole interval. 
+        </p>
+      </li>
+      <li>
+        <p>
+          Both the terms, probability density funciton and probability
+          distribution, are conventional. I'll mostly use
+          distribution. Technically, a distribution is an extension of
+          the notion of a function; there are distributions which are
+          not actually functions. However, that subtlety isn't
+          important for the examples in this course, so I'll just keep
+          using distribution to refer to the functions that measure
+          probabilility. 
+        </p>
+      </li>
+    </ul>
   </subsection>
-  <subsection xml:id="subsection-normalization">
-    <title>Normalization</title>
-    <p>
-      Often we are given a positive function <m>f(x)</m> on an
-      interval, but not necessarily with the condition that its
-      integral over the interval is one. We can choose parameters or
-      multiply <m>f(x)</m> by some constant to ensure that the total
-      integral over the interval is one; such a process is called
-      normalization.
-    </p>
-    <example>
+  <subsection xml:id="subsection-examples">
+    <title>Examples</title>
+    <example xml:id="example-exponential-distribution">
       <statement>
+        <figure xml:id="figure-probability-density">
+          <caption>The Exponential Distribution</caption>
+          <image xml:id="figure27" width="80%">
+            <asymptote>
+              size(12cm,6cm,IgnoreAspect);
+              import graph;
+              xaxis(Ticks());
+              yaxis();
+    
+              real f(real x) {return exp(-1*x);}
+    
+              draw(graph(f,0,6));
+    
+              draw((1,0)--(1,0.368));
+              draw((2,0)--(2,0.135));
+              
+              label("Area $\doteq$ 0.632 = Probablity of a Measurement in
+              $[0,1]$",(0.5,0.607),NE);
+    
+              label("Area $\doteq$ 0.233 = Probablity of a Measurement in
+              $[1,2]$",(1.5,0.223),NE);
+            </asymptote>
+          </image>
+        </figure>
         <p>
-          Let <m>\alpha > 0</m> and <m>f(x) = e^{-\alpha x}</m>. We
-          consider <m>f(x)</m> a possible density function on <m>[0,
-          \infty)</m>. We try to calculate its integral over this
-          whole interval.
-          <md>
-            <mrow>
-              \int_0^\infty e^{-\alpha x} dx \amp = \lim_{a
-              \rightarrow \infty} \int_0^a e^{-\alpha x} dx
-            </mrow>
-            <mrow>
-              \amp = \lim_{a \rightarrow \infty} \left.
-              \frac{e^{-\alpha x}}{-\alpha} \right|_0^a
-            </mrow>
-            <mrow>
-              \amp = \lim_{a \rightarrow \infty} \frac{-e^{-\alpha
-              a}}{\alpha} + \frac{1}{\alpha} = \frac{1}{\alpha}
-            </mrow>
-          </md>
+          Let <m>\alpha > 0</m> and <m>f(x) = \alpha e^{-\alpha x}</m>
+          on the domain <m>[0, \infty)</m>. I will calculate the
+          integral of this function over this domain.
         </p>
+        <md>
+          <mrow>
+            \int_0^\infty \alph e^{-\alpha x} dx \amp = \lim_{a
+            \rightarrow \infty} \int_0^a e^{-\alpha x} dx
+          </mrow>
+          <mrow>
+            \amp = \alpha \lim_{a \rightarrow \infty} 
+            \frac{e^{-\alpha x}}{-\alpha} \Bigg|_0^a
+          </mrow>
+          <mrow>
+            \amp = \alpha \left( \lim_{a \rightarrow \infty}
+            \frac{-e^{-\alpha a}}{\alpha} + \frac{1}{\alpha} \right) =
+            \frac{\alpha}{\alpha} = 1 
+          </mrow>
+        </md>
         <p>
-          We must have a total integral of <m>1</m> for <m>f</m> to be
-          a probability density function, which means that <m>\alpha =
-          1</m>. <m>f(x) = e^{-x}</m> is a probability density
-          function on <m>[0,\infty)</m>. This interval means that all
-          possible postiive values are measurements. The fact that
+          I've verified that this is, indeed, a probability
+          distribution on <m>[0,\infty)</m>. It is called the
+          <term>exponential distribution</term>. The fact that
           <m>f</m> is a decay function means that measurements gets
-          less and less likely as values get large. The probability
-          of an event between <m>0</m> and <m>1</m> is
-          <me>
-            \int_0^1 e^{-x} dx = \left. e^{-x} \right|_0^1 = -e^{-1} +
-            1 = 1 - \frac{1}{e} \doteq 0.632
-          </me>.
+          less and less likely as values get large. It is common to
+          get measurements close to zero and uncommon to get large
+          measurements. The decay coefficient <m>\alpha</m> controls
+          this effect: for large <m>\alpha</m>, the decay is faster
+          and measurements near zero are even more common. 
         </p>
+        <p>
+          The probability of an event between <m>0</m> and <m>1</m> is
+          calculated by the integral of the density on that range.
+        </p>
+        <me>
+          \int_0^1 e^{-x} dx = e^{-x} \Bigg|_0^1 = -e^{-1} +
+          1 = 1 - \frac{1}{e} \doteq 0.632
+        </me>.
         <p>
           Likewise, the probability of a measurement bewteen <m>1</m>
-          and <m>2</m> is 
-          <me>
-            \int_1^2 e^{-x} dx = \left. e^{-x}\right|_1^2 = -e^{-2} +
-            \frac{1}{e} = \frac{1}{e} - \frac{1}{e^2} =
-            \frac{e-1}{e^2} \doteq 0.233
-          </me>.
+          and <m>2</m> is calculated by the integral of the density on
+          that range. 
         </p>
+        <me>
+          \int_1^2 e^{-x} dx = e^{-x}\Bigg|_1^2 = -e^{-2} +
+          \frac{1}{e} = \frac{1}{e} - \frac{1}{e^2} =
+          \frac{e-1}{e^2} \doteq 0.233
+        </me>.
       </statement>
     </example>
-    <figure xml:id="figure-probability-density">
-      <caption>The Probability Density <m>e^{-x}</m></caption>
-      <image xml:id="figure27" width="80%">
-        <asymptote>
-          size(12cm,6cm,IgnoreAspect);
-          import graph;
-          xaxis(Ticks());
-          yaxis();
-
-          real f(real x) {return exp(-1*x);}
-
-          draw(graph(f,0,6));
-
-          draw((1,0)--(1,0.368));
-          draw((2,0)--(2,0.135));
-          
-          label("Area $\doteq$ 0.632 = Probablity of a Measurement in
-          $[0,1]$",(0.5,0.607),NE);
-
-          label("Area $\doteq$ 0.233 = Probablity of a Measurement in
-          $[1,2]$",(1.5,0.223),NE);
-        </asymptote>
-      </image>
-    </figure>
-    <example>
+    <example xml:id="example-gaussian-distribution">
       <statement>
+        <figure xml:id="figure-gaussian-distribution">
+          <caption>The Gaussian Distribution</caption>
+          <image xml:id="figure26" width="80%">
+            <asymptote>
+              size(12cm,6cm,IgnoreAspect);
+              import graph;
+              xaxis();
+              yaxis();
+              
+              real f(real x) {return exp(-1*x^2);}
+    
+              draw(graph(f,-3,3));
+            </asymptote>
+          </image>
+        </figure>
         <p>
-          The most well-known probability density function is the bell
+          The most well-known probability distribution is the bell
           curve, which is also called the gaussian distribution or
           normal distribution. In full generality it depends on two
           parameters <m>\mu</m> and <m>\sigma</m> and has the
           following form.
-          <me>
-            f(x) = \frac{1}{\sigma \sqrt{2\pi}}
-            e^{-\frac{(x-\mu)^2}{2\sigma^2}}
-          </me>
         </p>
+        <me>
+          f(x) = \frac{1}{\sigma \sqrt{2\pi}}
+          e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+        </me>
         <p>
-          First, let's consider <m>f(x) = e^{-x^2}</m> and try to
-          normalize.
-          <me>
-            \int_{-\infty}^\infty e^{-x^2} dx
-          </me>
+          The constant <m>\frac{1}{\sigma \sqrt{2\pi}}</m> ensures that
+          the integra over all of <m>\RR</m> is <m>1</m>, as required
+          for the definition. (Again, this is called the normalization
+          constant). <m>\mu</m> is the centre point of the bell curve,
+          and <m>\sigma</m> measure the width of the bell curve (in a
+          way that will be formalized below). For a specific example,
+          I can take <m>\mu = 0</m> and <m>\sigma =
+          \frac{1}{\sqrt{2}}</m> to get a bell curve centred at
+          <m>0</m>. This specific bell curve is shown in <xref
+          ref="figure-gaussian-distribution" />. 
         </p>
+        <me>
+          f(x) = \frac{1}{\sqrt{\pi}} e^{-x^2} 
+        </me>
         <p>
-          This is a problematic integral: <m>e^{-x^2}</m> has no
-          elementary anti-derivative. The value of the integral is
-          calculuced by clever techniques in multi-variable calculus;
-          for us, we'll just state the value.
-          <me>
-            \int_{-\infty}^\infty e^{-x^2} dx = \sqrt{\pi}
-          </me>
+          The fact that this function has the correct integral value
+          for the definition is actually very difficult to establish.
+          Specifically, look at this integral.
         </p>
+        <me>
+           \int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi} 
+        </me>
         <p>
-          This allows normalization. <m>f(x) = \frac{1}{\sqrt{\pi}}
-          e^{-x^2}</m> is a probability distribution on all of
-          <m>\RR</m>.
+          The function <m>e^{-x^2}</m> has no elementary
+          antiderivative. Given the important of the gaussian
+          distribution, this may be the most notable function without
+          an elementary antiderivative. Actually proving this integral
+          requires techniques well beyond this course. 
         </p>
       </statement>
     </example>
-    <figure xml:id="figure-gaussian-distribution">
-      <caption>
-        The Gaussian Distribution <m>\frac{1}{\sqrt{\pi}}
-        e^{-x^2}</m>
-      </caption>
-      <image xml:id="figure26" width="80%">
-        <asymptote>
-          size(12cm,6cm,IgnoreAspect);
-          import graph;
-          xaxis();
-          yaxis();
-          
-          real f(real x) {return exp(-1*x^2);}
-
-          draw(graph(f,-3,3));
-        </asymptote>
-      </image>
-    </figure>
-    <example>
+    <example xml:id="example-uniform-distribution">
       <statement>
         <p>
-          Here is another common and important example.
-          <me>
-            f(x) = \left\{ \begin{matrix} A \amp x \in [a,b] \\ 0
-            \amp x \notin [a,b] \end{matrix} \right.
-          </me>
+          The following distribution describes a situation where there
+          is an equal probability of any measurement in a fixed range.
+          This is called the <term>(continuous) uniform
+          distribution</term>. 
         </p>
+        <me>
+          f(x) = \left\{ \begin{matrix} \frac{1}{b-a} \amp x \in [a,b] \\ 0
+          \amp x \notin [a,b] \end{matrix} \right.
+        </me>
         <p>
-          This measure an equal probablity of all measurements in the
-          range <m>[a,b]</m>. It is normalized by setting <m>A =
-          \frac{1}{b-a}</m>.
+          In probability theory, it is often important to have these
+          bases cases to compare again. Understanding the behaviour
+          and properties of the uinform distribution, where
+          all measurements (in a range) are equally likely, leads to a
+          better understanding of more complicated distributions by
+          comparison to this base case. 
         </p>
       </statement>
     </example>
@@ -220,63 +308,76 @@
     <title>Means</title>
     <p>
       For discrete probability, a mean or average of the expected
-      measurements is relatively intuitive: we just add up the
+      measurements is relatively intuitive: I just add up the
       measurements multiplied by their probabilities. What a mean
       should be for a continuous probability isn't as immediately
       obvious, since we can't add up the infinitely-many measurements.
-      However, we can still take inspiration from the discrete case.
+      However, I can still take inspiration from the discrete case.
     </p>
     <p>
-      Let's consider finite probability for a moment. Say that there
+      Let me consider finite probability for a moment. Say that there
       are <m>n</m> events with probabilities <m>p_i</m> and
-      measurements <m>r_i</m>. Then the normalization is
-      <me>
-        \sum_{i=1}^n p_i = 1
-      </me>.
+      measurements <m>m_i</m>. In order to ensure this is a valid
+      probability situation, the sume of all the probabilities must be
+      <m>1</m>. 
     </p>
+    <me>
+      \sum_{i=1}^n p_i = 1
+    </me>.
     <p>
       The mean is the sum of the measurements multiplied by their
       probabilities.
-      <me>
-        \sum_{i=1}^n r_i p_i
-      </me>
     </p>
+    <me>
+      \sum_{i=1}^n m_i p_i
+    </me>
     <p>
       These discrete calculations give inspiration for the continuous
       case. The major difference, for continuous probability, is that
-      our sums are now integrals. Apart from the difference, we still
-      basically take the same steps: multiply by the measurement to
-      get the mean.
+      the sums are now integrals. Changing the sums to integrals, the
+      steps are essentially the sum: the sum of the probabilities
+      because the integral of the probabilitiy density function.
+      Multipyling by the actually measurement in the sum is equivalent
+      to multiplying by the independent variable, since the
+      independent variable is the measurement. This leads to a
+      definition. 
     </p>
     <definition>
       <statement>
         <p>
-          The average or mean of a probability density <m>f(x)</m> on
-          <m>[a,b]</m> is defined to be the following integral.
-          <me>
-            \mu = \int_a^b x f(x) dx
-          </me>
+          Let <m>f(x)</m> be a probability distribution on the domain
+          <m>[a,b]</m>. The average or mean of <m>f(x)</m> is defined
+          to be the result of the following integral.
         </p>
+        <me>
+          \mu = \int_a^b x f(x) dx
+        </me>
       </statement>
     </definition>
+    <p>
+      Let me calculate the means of the three exmaples that I used in
+      the previous section.
+    </p>
     <example>
       <statement>
         <p>
-          For <m>f(x) = e^{- x}</m> on <m>[0, \infty)</m>, this is the
-          mean calculation (using integration by parts).
-          <md>
-            <mrow>
-              \mu \amp = \int_0^\infty x e^{-x} dx
-            </mrow>
-            <mrow>
-              \amp = \left. - x e^{-x} \right|_0^\infty +
-              \int_0^\infty e^{-x} dx
-            </mrow>
-            <mrow>
-              \amp = 0 + \left. e^{-x} \right|_0^\infty = 1
-            </mrow>
-          </md>
+          I'll start with the exponential distribution with <m>\alpha
+          = 1</m>, that is, <m>f(x) =
+          e^{-x}</m> on <m>[0, \infty)</m>. I use integration by parts
+          to calculate the mean.
         </p>
+        <md>
+          <mrow>
+            \mu \amp = \int_0^\infty x e^{-x} dx
+          </mrow>
+          <mrow>
+            \amp = - x e^{-x} \Bigg|_0^\infty +
+            \int_0^\infty e^{-x} dx
+          </mrow>
+          <mrow>
+            \amp = 0 + e^{-x} \Bigg|_0^\infty = 1
+          </mrow>
+        </md>
         <p>
           This mean makes some sense for a decay function. Even
           though very large measurements are possible, they become
@@ -288,20 +389,20 @@
     <example>
       <statement>
         <p>
-          Let's also calculate the mean for <m>\frac{1}{b-a}</m>
-          (constant probability on the interval <m>[a,b]</m>).
-          <md>
-            <mrow>
-              \mu \amp = \int_a^b \frac{1}{b-a} x dx
-            </mrow>
-            <mrow>
-              \amp = \left. \frac{1}{b-a} \frac{x^2}{2} \right|_a^b
-            </mrow>
-            <mrow>
-              \amp = \frac{b^2-a^2}{2(b-a)} = \frac{b+a}{2}
-            </mrow>
-          </md>
+          Next I'll calculate the mean of the uniform distribution:
+          <m>\frac{1}{b-a}</m> on the interval <m>[a,b]</m>.
         </p>
+        <md>
+          <mrow>
+            \mu \amp = \int_a^b \frac{1}{b-a} x dx
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{b-a} \frac{x^2}{2} \Bigg|_a^b
+          </mrow>
+          <mrow>
+            \amp = \frac{b^2-a^2}{2(b-a)} = \frac{b+a}{2}
+          </mrow>
+        </md>
         <p>
           The mean is exactly halfway between the endpoints. Since
           the probability is constant, this makes perfect sense.
@@ -311,50 +412,104 @@
     <example>
       <statement>
         <p>
-          Let's calculate the mean for the normal distribution in full
-          detail, using the parameters <m>\mu</m> and <m>\sigma</m>.
-          <md>
-            <mrow>
-              f(x) \amp = \frac{1}{\sigma
-              \sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}
-            </mrow>
-            <mrow>
-              \mu \amp = \int_{-\infty}^\infty
-              \frac{xe^{-\frac{(x-\mu)^2}{2\sigma^2}}}{\sigma
-              \sqrt{2\pi}} dx
-            </mrow>
-            <mrow>
-              \amp v = x-\mu
-            </mrow>
-            <mrow>
-              \amp = \int_{-\infty}^\infty
-              \frac{(v+\mu)e^{-\frac{v^2}{2\sigma^2}}}{\sigma
-              \sqrt{2\pi}} dx
-            </mrow>
-            <mrow>
-              \amp = \int_{-\infty}^\infty
-              \frac{(v)e^{-\frac{v^2}{2\sigma^2}}}{\sigma \sqrt{2\pi}}
-              dx + \int_{-\infty}^\infty
-              \frac{(\mu)e^{-\frac{v^2}{2\sigma^2}}}{\sigma
-              \sqrt{2\pi}} dx
-            </mrow>
-            <mrow>
-              \amp = 0 + \frac{\mu}{\sigma \sqrt{2\pi}}
-              \int_{-\infty}^\infty e^{-\frac{v^2}{2\sigma^2}} dx
-            </mrow>
-            <mrow>
-              w \amp = \frac{v}{\sigma \sqrt{2}}
-            </mrow>
-            <mrow>
-              \amp = \frac{\mu}{\sigma \sqrt{2\pi}} \sigma \sqrt{2}
-              \int_{-\infty}^\infty e^{-w^2} dw =
-              \frac{\mu}{\sqrt{\pi}} \sqrt{\pi} = \mu
-            </mrow>
-          </md>
+          Now I'll calculate the mean for the gaussian distribution
+          in full detail, leaving the parameters <m>\mu</m> and
+          <m>\sigma</m> as unknown. First, I do a small substitution
+          to shift to the distribution to centred at zero. 
         </p>
+        <md>
+          <mrow>
+            f(x) \amp = \frac{1}{\sigma
+            \sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+          </mrow>
+          <mrow>
+            \mu \amp = \int_{-\infty}^\infty
+            \frac{xe^{-\frac{(x-\mu)^2}{2\sigma^2}}}{\sigma
+            \sqrt{2\pi}} dx
+          </mrow>
+          <mrow>
+            \amp v = x-\mu
+          </mrow>
+          <mrow>
+            \mu \amp = \int_{-\infty}^\infty
+            \frac{(v+\mu)e^{-\frac{v^2}{2\sigma^2}}}{\sigma
+            \sqrt{2\pi}} dv
+          </mrow>
+          <mrow>
+            \amp = \int_{-\infty}^\infty
+            \frac{(v)e^{-\frac{v^2}{2\sigma^2}}}{\sigma \sqrt{2\pi}}
+            dv + \int_{-\infty}^\infty
+            \frac{(\mu)e^{-\frac{v^2}{2\sigma^2}}}{\sigma
+            \sqrt{2\pi}} dv
+          </mrow>
+        </md>
         <p>
-          The mean is precisely the parameter <m>\mu</m>. It is the
-          <m>x</m>-value at the centre or peak of the bell curve.
+          After this substitution, I split up the sum in the numerator
+          to give two interals.
+        </p>
+        <md>
+          <mrow>
+            \mu \amp = \int_{-\infty}^\infty
+            \frac{(v)e^{-\frac{v^2}{2\sigma^2}}}{\sigma \sqrt{2\pi}}
+            dv + \int_{-\infty}^\infty
+            \frac{(\mu)e^{-\frac{v^2}{2\sigma^2}}}{\sigma \sqrt{2\pi}}
+            dv
+          </mrow>
+        </md>
+        <p>
+          There are two integral to do here. Let me deal with the
+          first integral first.  Even though <m>e^{-x^2}</m> has no
+          antiderivative, now I have something similar to
+          <m>xe^{-x^2}</m> which does have an elementary
+          antiderivative found by substitution. I could do that
+          substitution and sovle this integral that way, but there is
+          an easier method. The function
+          <m>ve^{-\frac{v^2}{2\sigma^2}}</m> is an odd function: it's
+          positive part if a mirror of its negative part, but changes
+          from below the axis to above the axis. Therefore, there is
+          an equal area under the curve for the positive and negative
+          pieces, but with different signs. In the limit for the
+          improper integrals, these two areas will perfectly cancel
+          each other out. This first integral must be zero.
+        </p>
+        <md>
+          <mrow>
+            \amp = 0 + \frac{\mu}{\sigma \sqrt{2\pi}}
+            \int_{-\infty}^\infty e^{-\frac{v^2}{2\sigma^2}} dv
+          </mrow>
+        </md>
+        <p>
+          Now I have the second integral left. I've already pulled out
+          all the constants. Now let me make another substitution. 
+        </p>
+        <md>
+          <mrow>
+            w \amp = \frac{v}{\sigma \sqrt{2}}
+          </mrow>
+          <mrow>
+            \mu \amp = \frac{\mu}{\sigma \sqrt{2\pi}} \sigma \sqrt{2}
+            \int_{-\infty}^\infty e^{-w^2} dw 
+            = \frac{\mu}{\sqrt{\pi}} \int_{-\infty}^\infty e^{-w^2} dw 
+          </mrow>
+        </md>
+        <p>
+          The resulting integral is exactly the integral I discussed
+          original in <xref ref="example-gaussian-distribution" />.
+          The integral evaluates to <m>\sqrt{pi}</m>/. This lets me
+          finish the integarl. 
+        </p>
+        <me>
+          \mu =  \frac{\mu}{\sqrt{\pi}} \sqrt{\pi} = \mu
+        </me>
+        <p>
+          Unsurprisingly, given the choice of notation, the parameter
+          <m>\mu</m> (which is the centre point of the bell curve) is
+          the mean of the distribution. The guassian distribution is
+          the first and most important symmetry distribution: there is
+          a mean at the centre of the distribution and the probability
+          decays away from the mean equally on both sides. This means
+          that measurements in symmetric ranges above and below the
+          mean are equally likely. 
         </p>
       </statement>
     </example>
@@ -372,26 +527,49 @@
       (average), median and mode.
     </p>
     <p>
-      We could compare median versus mean for income in Canada, and we
-      would find that the mean is significantly higher (about $10,000)
-      than the median. Which is the more appropriate? It is
-      difficult to say, since it is a judgement call external to the
-      mathematics. The mathematics doesn't give moral guidance for
-      which type of central tendency is the best. (You could notice,
-      however, that Statistics Canada reports mostly median results
-      for income and similar financial statistics, since medians are
-      less sensitive to very large outlying values).
+      An important examples of the use of these central tendencies is
+      in statistical data like income and wealth. The distributions
+      for income and wealth are similar to the exponential
+      distribution: most measurements are near the minimum, but there
+      are a small num er of measurements that are very, very high. In
+      these distributions, different central tendencies gives
+      significantly different result. 
+    </p>
+    <p>
+      Specifically, look at the income data for Canada. (Rough figure
+      here are taken from the Stats Canada website in March, 2021).
+      The mean/average income in 2018 for Canadian 16 and over was
+      <m>\$48,000</m>. However, the mediam income was <m>\$36,400</m>.
+      That's a pretty substantial difference. Which of these measure
+      the <sq>typical</sq> Canadian?
+    </p>
+    <p>
+      It is difficult to say which central tendency is more
+      appropriate. In particular, the judgement of which central
+      tendency to use is external to 
+      mathematics. Mathematics doesn't give moral guidance for
+      which type of central tendency is the best <emdash/> it just
+      tells you how to calculate each type. For data like income,
+      which has a very long tail on the positive side of its
+      distribution, typical practice is to record median instead of
+      average. The community has judged it to be a more reasonable
+      measure. But, again, the point here is that such a judgement
+      happens outside of the mathematics. 
+    </p>
+    <p> 
+      Let me actually now define median for continuous probability. 
     </p>
     <definition>
       <statement>
         <p>
           For continuous probability and probability density
           <m>f(x)</m> on <m>[a,b]</m>, the median is defined to be the
-          unique number <m>c</m> such that
-          <me>
-            \int_a^c f(x) dx = \int_c^b f(x) dx = \frac{1}{2}
-          </me>.
+          unique number <m>c</m> such that the following equation
+          holds. 
         </p>
+        <me>
+          \int_a^c f(x) dx = \int_c^b f(x) dx = \frac{1}{2}
+        </me>
         <p>
           Since integrals are areas under the curve, and the total
           area on <m>[a,b]</m> is <m>1</m>, the median is the place
@@ -402,31 +580,29 @@
     <example>
       <statement>
         <p>
-          Let's calculate the median for<m>f(x) = e^{-x}</m>.
-          <md>
-            <mrow>
-              \int_c^\infty e^{-x} \amp = \left. e^{-\alpha
-              x}\right|_c^\infty
-            </mrow>
-            <mrow>
-              \frac{1}{2} \amp = e^{-c}
-            </mrow>
-            <mrow>
-              -c \amp = \ln \frac{1}{2} = - \ln 2
-            </mrow>
-            <mrow>
-              c \amp = \ln 2 \lt  1
-            </mrow>
-          </md>
+          I'll calculate the median for the exponential distribution
+          <m>f(x) = e^{-x}</m>.
         </p>
+        <md>
+          <mrow>
+            \int_c^\infty e^{-x} dx \amp = -e^{-x}\Bigg|_c^\infty
+          </mrow>
+          <mrow>
+            \frac{1}{2} \amp = e^{-c}
+          </mrow>
+          <mrow>
+            -c \amp = \ln \frac{1}{2} = - \ln 2
+          </mrow>
+          <mrow>
+            c \amp = \ln 2 \lt  1
+          </mrow>
+        </md>
         <p>
           The median of this distribution is <m>\ln 2</m>, which is
-          smaller than the mean of <m>1</m>. This is typical for
-          distributions with a long tail on one side. The very high
-          values pull up the mean, but not the median. This is the
-          same reason that mean incomes are higher than median
-          incomes: very high incomes pull up the mean, but not the
-          median.
+          smaller than the mean of <m>1</m>. As mentioned above for
+          income data, this difference between mean and median is
+          typical for distributions with a long tail on one side. The
+          very high values pull up the mean, but not the median. 
         </p>
       </statement>
     </example>
@@ -440,109 +616,138 @@
   <subsection xml:id="subsection-expectation-values">
     <title>Expectation Values</title>
     <p>
-      If <m>f(x)</m> on <m>[a,b]</m> is a probability density, a
-      common notation for the mean is <m>\left\lt x\right></m>.
-      Particularly when using this notation, the mean is often called
-      the expectation value of the measurement.
+      The mean measure, in some sense, the most likely measurement.
+      (This is never precisely true for continuous probability, since
+      there are infinitely many possible measurements). It answer the
+      question: what do we expect the measurement to be? We expect the
+      measurement to be the mean or at least something close to it.
     </p>
     <p>
-      If we have some other function which depends on the measurement,
-      <m>g(x)</m>, we can ask: what is the likely outcome of this
-      function?
+      This leads to new terminology. The mean is often called the
+      <term>expectation value</term> of the measurement. This also has
+      some new notation.  If <m>f(x)</m> on <m>[a,b]</m> is a
+      probability distribution, the mean or expectation value is
+      written <m>\left\langle x\right\rangle</m>.
+    </p>
+    <p>
+      It is also possible to have some other quantity which depends on
+      the measurement. I can think of some function <m>g(x)</m> which
+      has the same independent variable as the probability
+      distribution (because, again, the independent variable is the
+      measurement). These related functions of the measurements also
+      have expectation values and these expectations values are also
+      calculated by integrals of the probability distribution. 
     </p>
     <definition>
       <statement>
         <p>
-          The likely outcome is called the expectation value of
-          <m>g(x)</m> and is calculated by the following integral.
+          Let <m>f(x)</m> be a probability distribution on the
+          interval <m>[a,b]</m>. Let <m>g(x)</m> be some other
+          integrable function on the same independent variable. The
+          likely outcome of <m>g(x)</m> is called the expectation
+          value of <m>g(x)</m> and is calculated by the following integral.
           <me>
-            \left\lt g(x)\right> = \int_a^b g(x) f(x) dx
+            \left\langle g(x) \right \rangle = \int_a^b g(x) f(x) dx
           </me>
         </p>
       </statement>
     </definition>
     <p>
-      Modern quantum mechanics is all probability. Measurables such
-      as position, velocity, momentum and energy are all functions on
-      the probability space. The actual values referened to are not
-      strict values, but expectation values. The previous expectation
-      value definition calculates all these measurables. Once this
-      interpretation is in place, the physics of the situation is
-      understood by knowing the time development of the probability
-      density (called the the wave function in quantum mechanics).
-      Schrodinger's equation, the heart of quantum mechanics, is
-      precisely the differential equation that describes the time
-      development of the probability density.
+      Modern quantum mechanics is all based on probability.
+      Measurables such as position, velocity, momentum and energy are
+      all functions on the probability space. The actual values
+      referened to are not strict values, but expectation values. The
+      previous definitin of expectation value calculates all these
+      measurables. Once this interpretation is in place, the physics
+      of the situation is understood by knowing the time development
+      of the probability distribution (strictly speaking, of the
+      a closely related function called the wave function in
+      quantum mechanics).  Schrodinger's equation, the heart of
+      quantum mechanics, is precisely the differential equation that
+      describes the time development of the probability distribution.
+      The only sense of measurement is expectation value. 
     </p>
   </subsection>
   <subsection xml:id="subsection-standard-deviation">
     <title>Standard Deviation</title>
     <p>
-      One we've chosen a central tendency, such as the mean, a
-      reasonable question asks how spread-out the measurements are.
-      Are we likely to get measurements very near the mean, or very
-      far away? The <em>standard deviation</em> of a probability
-      density function measures this: a low standard deviation means
-      that most measurements are close to the mean, and a high
-      standard deviation means that measurements can be very
-      spread-out.
+      One I've chosen a central tendency, such as the mean, I can ask
+      about the variance of the distribution. The variance is the
+      spread of the distribution: how far away measurements are from
+      the mean.  Am I likely to get measurements very near the mean,
+      or very far away? The <em>standard deviation</em> of a
+      probability distribution is the first tool to measure variance.
+      A low standard deviation means that most measurements are close
+      to the mean, and a high standard deviation means that
+      measurements can be very spread-out.
     </p>
     <p>
-      Following the bell curve, let's write <m>\mu</m> for the mean of
-      a probability density function <m>f(x)</m> on <m>[a,b]</m>. The
+      Following the bell curve, I will write <m>\mu</m> for the mean of
+      a probability distribution <m>f(x)</m> on <m>[a,b]</m>. The
       distance of a measurement from the mean is given by
-      <m>|x-\mu|</m>. However, statisticians have chosen instead to
-      measure the square of this distance, so let's define <m>g(x) =
-      (x-\mu)^2</m>. (This conveniently gets rid of the annoying
-      absolute value.)
+      <m>|x-\mu|</m>. I could ask for the expectation value of this
+      distance, which would be a measure of variance. However, the
+      convention is to isntead ask for the expectation value of the
+      square of this distance. 
     </p>
     <definition>
       <statement>
         <p>
-          We define the standard deviation squared of <m>f(x)</m> to
-          be the expectation value of this <m>g(x)</m>. We typically
-          use <m>\sigma</m> for the standard deviation. (The
-          relationships of squares between sigma squared and the
-          integral of squares should be reminiscent of the pythagorean
-          identity. This is another reasons to use
-          <m>(x-\mu)^2</m>.)
-          <me>
-            \sigma^2 = \left\lt  (x-\mu)^2 \right> = \int_a^b
-            (x-\mu)^2 f(x) dx
-          </me>
+          Let <m>f(x)</m> be a probability distribution on
+          <m>[a,b]</m> with mean <m>\mu</m>.
+          The <term>standard deviation</term> of the distribution is
+          written <m>\sigma</m> and calculated by this integral. 
         </p>
+        <me>
+          \sigma^2 = \left\lt  (x-\mu)^2 \right> = \int_a^b
+          (x-\mu)^2 f(x) dx
+        </me>
       </statement>
     </definition>
+    <p>
+      This integral calculate <m>\sigma^2</m>. The squares of
+      <m>(x-\mu)</m> inside the integral can be though of as a
+      pythagorena sum. In discrete probability, this would exactly be
+      the case: the square of the standard deviation is the sum of the
+      squares or the variance of each measurement. In continuous
+      probability, this sum becomes an integral. This pythagorean
+      combination is a reasonable way of adding up the individual
+      variances to produce the standard deviation if I think of each
+      measurement as being something independent, like independent
+      directions. Let me proceed to calculate some examples.
+    </p>
     <example>
       <statement>
         <p>
-          The standard deviation of <m>f(x) = e^{-x}</m> on <m>[0 ,
-          \infty)</m> is calculated as follows: (We will use the
-          integrals we've already calculated for this function to
-          simplify the calculation a bit).
-          <md>
-            <mrow>
-              \sigma^2 \amp = \int_0^\infty \left( x - 1 \right)^2
-              e^{-x} dx
-            </mrow>
-            <mrow>
-              \amp = \int_0^\infty \left( x^2 - 2x + 1 \right) e^{-x}
-              dx = \int_0^\infty x^2 e^{-x} dx - 2 \int_0^\infty
-              xe^{-x} + \int_0^\infty e^{-x} dx
-            </mrow>
-            <mrow>
-              \amp = \left. x^2 e^{-x} \right|_0^\infty +
-              \int_0^\infty 2 x e^{-x} dx - \int_0^\infty 2 x e^{-x}
-              dx + 1
-            </mrow>
-            <mrow>
-              \amp = 0 + 1
-            </mrow>
-            <mrow>
-              \sigma \amp = 1
-            </mrow>
-          </md>
+          The standard deviation of the exponential distribution
+          <m>f(x) = e^{-x}</m> on <m>[0 , \infty)</m> is calculated as
+          follows. (Some of the integrals in this calculation have
+          already been calculated when I did the mean of the
+          exponential distribution. I won't repeat all the integration
+          steps.) 
         </p>
+        <md>
+          <mrow>
+            \sigma^2 \amp = \int_0^\infty \left( x - 1 \right)^2
+            e^{-x} dx
+          </mrow>
+          <mrow>
+            \amp = \int_0^\infty \left( x^2 - 2x + 1 \right) e^{-x}
+            dx = \int_0^\infty x^2 e^{-x} dx - 2 \int_0^\infty
+            xe^{-x} dx + \int_0^\infty e^{-x} dx
+          </mrow>
+          <mrow>
+            \amp = x^2 e^{-x} \Bigg|_0^\infty +
+            \int_0^\infty 2 x e^{-x} dx - \int_0^\infty 2 x e^{-x}
+            dx + 1
+          </mrow>
+          <mrow>
+            \amp = 0 + 1
+          </mrow>
+          <mrow>
+            \sigma \amp = 1
+          </mrow>
+        </md>
         <p>
           Even with the long tail of high measurements, the typical
           distance to the mean is still <m>1</m>.
@@ -552,48 +757,48 @@
     <example>
       <statement>
         <p>
-          The standard deviation of the constant probability
+          The standard deviation of the uniform distribution
           <m>\frac{1}{b-a}</m> is a surprisingly difficult
-          calculation. (Recall the mean is <m>\frac{a+b}{2}</m>).
-          <md>
-            <mrow>
-              \sigma^2 \amp = \int_a^b \left( x - \frac{a+b}{2}
-              \right)^2 \frac{1}{b-a} dx
-            </mrow>
-            <mrow>
-              \amp = \int_a^b \frac{x^2}{b-a} - \frac{(a+b)x}{b-a} +
-              \frac{(a+b)^2}{4(b-a)} dx
-            </mrow>
-            <mrow>
-              \amp = \left. \frac{x^3}{3(b-a)} \right|_a^b - \left.
-              \frac{(a+b)x^2}{2(b-a)} \right|_a^b + \left.
-              \frac{(a+b)^2x}{4(b-a)} \right|_a^b
-            </mrow>
-            <mrow>
-              \amp = \frac{b^3-a^3}{3(b-a)} -
-              \frac{(a+b)(b^2-a^2}{2(b-a)} +
-              \frac{(a+b)^2(b-a)}{4(b-a)}
-            </mrow>
-            <mrow>
-              \amp = \frac{b^2 + ab + a^2}{3} - \frac{a^2 + 2ab+
-              b^2}{2} + \frac{a^2 + 2ab + b^2}{4}
-            </mrow>
-            <mrow>
-              \amp = b^2 \left( \frac{1}{3} - \frac{1}{2} +
-              \frac{1}{4} \right) + ab \left( \frac{1}{3} - 1 +
-              \frac{1}{2} \right) + a^2 \left( \frac{1}{3} -
-              \frac{1}{2} + \frac{1}{4} \right)
-            </mrow>
-            <mrow>
-              \amp = \frac{b^2}{12} - \frac{ab}{6} + \frac{a^2}{12} =
-              \frac{b^2-2ab+a^2}{12} = \frac{(b-a)^2}{12}
-            </mrow>
-            <mrow>
-              \sigma \amp = \sqrt{ \frac{(b-a)^2}{12}} =
-              \frac{b-a}{2\sqrt{3}}
-            </mrow>
-          </md>
+          calculation. Recall the mean is <m>\frac{a+b}{2}</m>.
         </p>
+        <md>
+          <mrow>
+            \sigma^2 \amp = \int_a^b \left( x - \frac{a+b}{2}
+            \right)^2 \frac{1}{b-a} dx
+          </mrow>
+          <mrow>
+            \amp = \int_a^b \frac{x^2}{b-a} - \frac{(a+b)x}{b-a} +
+            \frac{(a+b)^2}{4(b-a)} dx
+          </mrow>
+          <mrow>
+            \amp = \frac{x^3}{3(b-a)} \Bigg|_a^b - 
+            \frac{(a+b)x^2}{2(b-a)} \Bigg|_a^b + 
+            \frac{(a+b)^2x}{4(b-a)} \Bigg|_a^b
+          </mrow>
+          <mrow>
+            \amp = \frac{b^3-a^3}{3(b-a)} -
+            \frac{(a+b)(b^2-a^2)}{2(b-a)} +
+            \frac{(a+b)^2(b-a)}{4(b-a)}
+          </mrow>
+          <mrow>
+            \amp = \frac{b^2 + ab + a^2}{3} - \frac{a^2 + 2ab+
+            b^2}{2} + \frac{a^2 + 2ab + b^2}{4}
+          </mrow>
+          <mrow>
+            \amp = b^2 \left( \frac{1}{3} - \frac{1}{2} +
+            \frac{1}{4} \right) + ab \left( \frac{1}{3} - 1 +
+            \frac{1}{2} \right) + a^2 \left( \frac{1}{3} -
+            \frac{1}{2} + \frac{1}{4} \right)
+          </mrow>
+          <mrow>
+            \amp = \frac{b^2}{12} - \frac{ab}{6} + \frac{a^2}{12} =
+            \frac{b^2-2ab+a^2}{12} = \frac{(b-a)^2}{12}
+          </mrow>
+          <mrow>
+            \sigma \amp = \sqrt{ \frac{(b-a)^2}{12}} =
+            \frac{b-a}{2\sqrt{3}}
+          </mrow>
+        </md>
         <p>
           This is a believable result, since it shows some distance
           from the mean but is still within the interval.
@@ -603,52 +808,67 @@
     <example>
       <statement>
         <p>
-          Lastly, let's calculate the standard deviation of the normal
-          distribution.
-          <md>
-            <mrow>
-              \sigma^2 \amp = \int_{-\infty}^\infty (x-\mu)^2
-              \frac{1}{\sigma \sqrt{2\pi}}
-              e^{-\frac{(x-\mu)^2}{2\sigma^2}} dx
-            </mrow>
-            <mrow>
-              v \amp = x - \mu
-            </mrow>
-            <mrow>
-              \amp = \frac{1}{\sigma \sqrt{2\pi}}
-              \int_{-\infty}^\infty v^2 e^{\frac{-v^2}{2\sigma^2}} dv
-            </mrow>
-            <mrow>
-              w \amp = \frac{v}{\sigma \sqrt{2}}
-            </mrow>
-            <mrow>
-              \amp = \frac{1}{\sigma \sqrt{2\pi}}
-              \int_{-\infty}^\infty \sigma^2 2 w^2 e^{-w^2} dw =
-              \frac{2\sigma^2}{\sqrt{\pi}} \int_{-\infty}^\infty w^2
-              e^{-w^2} dw
-            </mrow>
-            <mrow>
-              \amp = \frac{2\sigma^2}{\sqrt{\pi}} \left[ \left.
-              \frac{w(e^{-w^2})}{2} \right|_{-\infty}^\infty +
-              \int_{-\infty}^\infty e^{-w^2}{2} dw \right]
-            </mrow>
-            <mrow>
-              \amp = \frac{\sigma^2}{\sqrt{\pi}}
-              \int_{-\infty}^\infty e^{-w^2}dw =
-              \frac{\sigma^2}{\sqrt{\pi}} \sqrt{\pi} = \sigma^2
-            </mrow>
-            <mrow>
-              \sigma \amp = \sigma
-            </mrow>
-          </md>
+          Lastly, I will calculate the standard deviation of the
+          gaussian distribution, with <m>\mu</m> and <m>\sigma</m>
+          undetermined. (As with the mean, the notation is giving away
+          the end of the calculation: this <m>\sigma</m> parameter in
+          the defintiion will turn out to be, exactly, the standard
+          deviation.) This is a long integral; I do two substitutions
+          to try to simplify, then I do a tricky integration by parts. 
         </p>
+        <md>
+          <mrow>
+            \sigma^2 \amp = \int_{-\infty}^\infty (x-\mu)^2
+            \frac{1}{\sigma \sqrt{2\pi}}
+            e^{-\frac{(x-\mu)^2}{2\sigma^2}} dx
+          </mrow>
+          <mrow>
+            v \amp = x - \mu
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{\sigma \sqrt{2\pi}}
+            \int_{-\infty}^\infty v^2 e^{\frac{-v^2}{2\sigma^2}} dv
+          </mrow>
+          <mrow>
+            w \amp = \frac{v}{\sigma \sqrt{2}}
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{\sigma \sqrt{2\pi}}
+            \int_{-\infty}^\infty \sigma^2 2 w^2 e^{-w^2} dw =
+            \frac{2\sigma^2}{\sqrt{\pi}} \int_{-\infty}^\infty w^2
+            e^{-w^2} dw
+          </mrow>
+          <mrow>
+            g(x) \amp = w 
+          </mrow>
+          <mrow>
+            \frac{df}{dx}  \amp = we^{-w^2}  
+          </mrow>
+          <mrow>
+            \frac{dg}{dx} \amp = 1
+          </mrow>
+          <mrow>
+            f \amp = \frac{-e^{-w^2}}{2}
+          </mrow>
+          <mrow>
+            \amp = \frac{2\sigma^2}{\sqrt{\pi}} \left[ 
+            -\frac{w(e^{-w^2})}{2} \Bigg|_{-\infty}^\infty +
+            \int_{-\infty}^\infty \frac{e^{-w^2}}{2} dw \right]
+          </mrow>
+          <mrow>
+            \amp = \frac{\sigma^2}{\sqrt{\pi}}
+            \int_{-\infty}^\infty e^{-w^2}dw =
+            \frac{\sigma^2}{\sqrt{\pi}} \sqrt{\pi} = \sigma^2
+          </mrow>
+          <mrow>
+            \sigma \amp = \sigma
+          </mrow>
+        </md>
         <p>
-          We were being a bit lazy with notation here, since we
-          already used sigma in the definition of the normal
-          distribution. We see here that the notation was justified:
-          the parameters <m>\mu</m> and <m>\sigma</m> in the general
-          form of the normal distribution were precisely the mean and
-          the standard deviation
+          The guassian distribution, with its two parameters, is very
+          nicely defined. If I need a distribution with a given
+          average and given standard deviation, I can very directly
+          write down the matching guassian distribution. 
         </p>
       </statement>
     </example>

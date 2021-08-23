@@ -1,38 +1,88 @@
 <section xml:id="section-values-of-series">
-  <title>Values of Infinite Series</title>
+  <title>Convergence and Values of Infinite Series</title>
   <p>
-    In all the examples of the previous section, we have been testing
-    series convergence. One might complain that we are ignoring the
-    more practical question of actually calculating the values.
-    However, the problem of finding closed form expressions for the
-    values of series is difficult. Consider the following series.
-    <me>
-      \sum_{n=1}^\infty \frac{n^2+4n}{(n!)2^n}
-    </me>
+    After defining series, in <xref ref="subsection-series-examples"
+    />, I use partial sums to calculate the actual value of series.
+    For geometric and telescoping series, I could produce actual
+    values, usual rational numbers, for the sum of the series. Those
+    were useful initial examples, but it turns out they were a bit
+    misleading. For the vast majority of series, when the series does
+    actual converge to a value, the value of the series is not going
+    to be a familiar rational number (or even a familiar irrational
+    numbers). Most series that do converge will converge to some new,
+    unfamiliar number. 
   </p>
   <p>
-    This is easy to check for convergence: therefore, this does
-    converge to a number. Can we say what number?  Most likely the
-    number is some number we simply don't recognize, some irrational
-    number which has no name. This is an inherent issue with series:
-    often the series itself is the best representation of the new
-    number, whatever it is.
+    This reality changes the nature of the discussion of series. The
+    naïve approach to series is to ask: <dq>What number does this
+    series add up to?</dq>. That question assumes that the result will
+    be familiar <emdash /> that series produce recognizable answers.
+    If this is not the case, then I need to change the question to
+    this: <dq>Is this series a number?</dq> That is, does the series
+    actually converge.
   </p>
   <p>
-    However, we would often like to know the rough value of the
-    number. We can use the series to approximate the number. In the
-    previous example, we can approximate the sum by its fourth partial
-    sum.
-    <me>
-      \frac{5}{2} + \frac{12}{8} + \frac{21}{48} + \frac{32}{384} =
-      \frac{217}{48}
-    </me>
+    In this spirit, what I care about is convergence, not calculation.
+    If a series arises in some mathematical problem, what I most need
+    to know is if it actually represents a number. I usually don't
+    need to know, at least at the start, roughly what the number is. I
+    just need the confidence that there is a number, which I can then
+    use for other purposes and calculation.
   </p>
   <p>
-    If we add more terms, we get a closer approximation. Other than
-    this series of improving approximations, we really don't know what
-    it is. The accuracy and precision of our approximation is an
-    important question in the study of infinite series; we will return
-    to it at the end of the next chapter.
+    For this entire week, I'll be introducing tests for convergence.
+    These are various ways that I can determine whether a series
+    converges: whether the I can treat it as a reasonable,
+    well-defined number or not. I'm not going to actually try to
+    calculate the values. The important matheamtics here is
+    convergence, not calculation of values. 
+  </p>
+  <p>
+    To try to make this point, conisder the following series. 
+  </p>
+  <me>
+    \sum_{n=1}^\infty \frac{n^2+4n}{(n!)2^n}
+  </me>
+  <p>
+    Using methods from later in this week, this series converges. This
+    sum represents a number. Let me label that number.
+  </p>
+  <me>
+    \alpha = \sum_{n=1}^\infty \frac{n^2+4n}{(n!)2^n}
+  </me>
+  <p>
+    Now I can do arithemtic with <m>\alpha</m>. I can use it in other
+    equations, in other functions, in other series even. It is
+    probably not a familiar number. I probably don't have any other
+    way to succinct write <m>\alpha</m> other than as this series.
+    The series is the best way to refer to the number. The key is that
+    I am assured that the series converges, that <m>\alpha</m> is some
+    number.
+  </p>
+  <p>
+    Though the focus of this week is on convergence, eventually, I
+    might like to know the rough value of the number. Though I can't
+    likely <sq>calculate</sq> the series by writing <m>\alpha</m> as
+    some familiar number, I can use the series to approximate the
+    number. For example, here is the fourth partial sum of the series. 
+  </p>
+  <me>
+    \frac{5}{2} + \frac{12}{8} + \frac{21}{48} + \frac{32}{384} =
+    \frac{217}{48}
+  </me>
+  <p>
+    This is an approximation for <m>\alpha</m>.  If I add more terms,
+    I will get a closer approximation. This is the best way to get a
+    representation of <m>\alpha</m> in familiar terms. I could wonder
+    how accurate this approximation is.  The accuracy and precision of
+    series  approximation is an important question in the study of
+    infinite series and itself is a bit part of mathematics. In this
+    course, I'll not cover much about accuracy of approximation with
+    series. However, this will be covered in other courses and is
+    particular important for numerical analysis and algorithm analysis
+    in computing science. Indeed, all the works that our computers and
+    calculators do to calculate values of functions is approximation
+    work, which requires careful control of the error to ensure that
+    answers are given to the expected precision. 
   </p>
 </section>

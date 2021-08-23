@@ -9,7 +9,7 @@
       differentiable functions. 
     </p>
     <me>
-      \frac{d}{dx} f(x) g(x) = \frac{df}{dx} g + f
+      \frac{d}{dx} f(x) g(x) = \frac{df}{dx} g(x) + f(x)
       \frac{dg}{dx}
     </me>
     <p>
@@ -78,7 +78,7 @@
       terms and being particularly careful with <m>\pm</m> signs. In
       other literature, there are some concise version of integration
       by parts with slightly different notations (using <m>df</m> and
-      <m>dg</m> for the integrals. I'm not going to use that notation,
+      <m>dg</m> for the integrals). I'm not going to use that notation,
       but for reference, here is what the rule looks like. 
     </p>
     <me>
@@ -135,8 +135,8 @@
               g(x) \amp = x \implies \frac{dg}{dx} = 1
             </mrow>
             <mrow>
-              \int x e^x dx \amp = xe^x - \int e^x dx = xe^x - e^x =
-              (x-1)e^x + C
+              \int x e^x dx \amp = xe^x - \int e^x dx = xe^x - e^x + C
+              = (x-1)e^x + C
             </mrow>
           </md>
         </p>
@@ -162,7 +162,7 @@
         </p>
         <md>
           <mrow>
-            \int x \cos dx \amp
+            \int x \cos x dx \amp
           </mrow>
           <mrow>
             \frac{df}{dx} \amp = \cos x \implies f(x) = \sin x
@@ -171,7 +171,7 @@
             g(x) \amp = x \implies \frac{dg}{dx} = 1
           </mrow>
           <mrow>
-            \int x \cos dx \amp = x \sin x - \int \sin x dx = (x \sin x +
+            \int x \cos x dx \amp = x \sin x - \int \sin x dx = (x \sin x +
           \cos x) + C
         </mrow>
         </md>
@@ -199,7 +199,7 @@
             g(x) \amp = x^2 \implies \frac{dg}{dx} = 2x 
           </mrow>
           <mrow>
-            \int x^2 e^x dx \amp = x^2 e^x - \int 2x e^x dr
+            \int x^2 e^x dx \amp = x^2 e^x - \int 2x e^x dx
           </mrow>
         </md>
         <p>
@@ -214,7 +214,7 @@
             dx \right)
           </mrow>
           <mrow>
-            \amp = x^3 e^x - 2xe^x + 2e^x + C
+            \amp = x^2 e^x - 2xe^x + 2e^x + C
           </mrow>
         </md>
       </statement>
@@ -292,7 +292,7 @@
             \frac{df}{dx} \amp = e^{ax} \implies f = \frac{e^{ax}}{a}
           </mrow>
           <mrow>
-            g(g) \amp = \sin bx \implies \frac{dg}{dx} = b \cos bx
+            g(x) \amp = \sin bx \implies \frac{dg}{dx} = b \cos bx
           </mrow>
           <mrow>
             \int e^{ax} \sin bx dx \amp = \frac{e^{ax} \sin bx}{a}
@@ -325,7 +325,7 @@
           left.
         </p>
         <me>
-          \int e^{ax} \sin bx dx + - \frac{b^2}{a^2} \int e^{ax} \sin
+          \int e^{ax} \sin bx dx - \frac{b^2}{a^2} \int e^{ax} \sin
           bx dx = \frac{e^{ax}\sin bx}{a} - \frac{be^{ax} \cos
           bx}{a^2} 
         </me>

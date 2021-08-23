@@ -13,7 +13,6 @@
     <xi:include href="./week2.ptx" />
     <xi:include href="./week3.ptx" />
     <xi:include href="./week4.ptx" />
-    <!--
     <xi:include href="./week5.ptx" />
     <xi:include href="./week6.ptx" />
     <xi:include href="./week7.ptx" />
@@ -22,7 +21,6 @@
     <xi:include href="./week10.ptx" />
     <xi:include href="./week11.ptx" />
     <xi:include href="./week12.ptx" />
-    -->
     <xi:include href="./assignments.ptx" />
     <backmatter>
     </backmatter>

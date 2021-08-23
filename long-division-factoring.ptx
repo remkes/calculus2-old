@@ -1,0 +1,295 @@
+<section xml:id="section-long-division">
+  <title>Long Division and Factoring</title>
+  <introduction>
+    <p>
+      Now I want to start the steps of turning an arbitrary rational
+      function <m>f(x) = \frac{p(x)}{q(x)}</m> into a sum of integral
+      of the three types introduced in <xref
+      ref="section-rational-functions-basic" />. There are three
+      steps; two of this are covered in this section before I move on
+      to the major new step in <xref ref="section-pf" />. In this
+      section, I want to talk about polynomial division and polynomial
+      factoring. 
+    </p>
+  </introduction>
+  <subsection xml:id="subsection-long-division">
+    <title>Long Division</title>
+    <p>
+      I need to start with a definition. 
+    </p>
+    <definition>
+      <statement>
+        <p>
+          A <term>proper</term> rational function is one where the
+          degree of the numerator is less than the degree of the
+          denmoninator.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      I want to change an arbitrary rational function into a proper
+      rational function. To do this with fractions, say turning
+      <m>\frac{17}{5}</m> into <m> 5 + \frac{2}{5}</m>, the old
+      technique was long division with remainder. The same is true for
+      polynomials.  To reduce a rational function to a proper ration
+      function, I'm going to do long division with remainder. (I'll
+      present the long division algorithm, but the synthetic division
+      algorithm also nicely extends to polynomial.) The goal is the
+      same, to change an improper fraction like <m>\frac{x^3}{x^2 +
+      1}</m> into something equivalent but proper <m>x - \frac{x}{x^2
+      +1}</m>. 
+    </p>
+    <p>
+      In long division of numbers, each step focused on a place value
+      (thousands, hundreas, tens, etc.). For polynomials, the steps
+      will proceed by the degree of the polynomial (<m>x^4</m> then
+      <m>x^3</m> then <m>x^2</m>, etc). The technique is best shown by
+      example.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Consider this rational fucntion.
+        </p>
+        <me>
+          \frac{x^4+3x^2+2x+4}{x^2+4} 
+        </me>
+        <p>
+          This rational function is not proper. The degree of the
+          numerator is <m>4</m> and the degree of the denomintor is
+          <m>2</m>. I am going to do long division to make this a proper
+          function. I divide <m> x^4+3x^2+2x+4</m> by <m>x^2+4</m>,
+          working degree by degree and using the conventional algorithm.
+          Looking at the first degrees, I ask how can <m>x^2</m> divide
+          <m>x^4</m>? I need to multiply by <m>x^2</m>, so that is the
+          first term of the quotient. Then I multiply <m>x^2</m> by
+          <m>x^2 + 4</m>, subtract from <m>x^4 + 3x^2 + 2x + 4</m>, and
+          continue the algorithm. I stop when the remaining term has
+          degree less than two, since the denominator has degree two. 
+        </p>
+        <figure>
+          <tabular halign="right">
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell bottom="medium"></cell>
+              <cell bottom="medium"></cell>
+              <cell bottom="medium"></cell>
+              <cell bottom="medium"></cell>
+              <cell bottom="medium"><m>x^2</m></cell>
+              <cell bottom="medium"><m>+</m></cell>
+              <cell bottom="medium"><m>0</m></cell>
+              <cell bottom="medium"><m>-</m></cell>
+              <cell bottom="medium"><m>1</m></cell>
+            </row>
+            <row>
+              <cell><m>x^2</m></cell>
+              <cell><m>+</m></cell>
+              <cell><m>0</m></cell>
+              <cell><m>+</m></cell>
+              <cell right="medium"><m>4</m></cell>
+              <cell><m>x^4</m></cell>
+              <cell><m>+</m></cell>
+              <cell><m>0</m></cell>
+              <cell><m>+</m></cell>
+              <cell><m>3x^2</m></cell>
+              <cell><m>+</m></cell>
+              <cell><m>2x</m></cell>
+              <cell><m>+</m></cell>
+              <cell><m>4</m></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell bottom="minor"><m>x^4</m></cell>
+              <cell bottom="minor"><m>+</m></cell>
+              <cell bottom="minor"><m>0</m></cell>
+              <cell bottom="minor"><m>+</m></cell>
+              <cell bottom="minor"><m>4x^2</m></cell>
+              <cell bottom="minor"></cell>
+              <cell bottom="minor"></cell>
+              <cell bottom="minor"></cell>
+              <cell bottom="minor"></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell><m>0</m></cell>
+              <cell><m>+</m></cell>
+              <cell><m>-x^2</m></cell>
+              <cell><m>+</m></cell>
+              <cell><m>2x</m></cell>
+              <cell><m>+</m></cell>
+              <cell><m>4</m></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell bottom="minor"><m>-x^2</m></cell>
+              <cell bottom="minor"><m>+</m></cell>
+              <cell bottom="minor"><m>0</m></cell>
+              <cell bottom="minor"><m>-</m></cell>
+              <cell bottom="minor"><m>4</m></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell><m>2x</m></cell>
+              <cell><m>+</m></cell>
+              <cell><m>8</m></cell>
+            </row>
+          </tabular>
+        </figure> 
+        <p>
+          The quotient, <m>x^2 - 1</m> stands along. The remainder
+          becomes the new numerator. The result of the long division
+          is this equation. 
+        </p>
+        <me>
+          \frac{x^4+3x^2+2x+4}{x^2+4} = x^2 - 1 +
+          \frac{2x+8}{x^2+4}
+        </me>
+        <p>
+          This is now the sum of a polynomial (which is easy to deal
+          with) and a proper rational function. 
+        </p>
+      </statement>
+    </example>
+  </subsection>
+  <subsection xml:id="subsection-factoring">
+    <title>Factoring Polynomials</title>
+    <p>
+      Long division was the first step. Now I will assume that all the
+      rational function I am dealing with will be proper. The next
+      steps is factoring. More specifically, for the technique I am
+      going to introduce in <xref ref="section-pf" />, I will need the
+      denominators to be factored as much as possible. Factoring
+      polynomials is somewhat familiar, particularly for quadratics,
+      but I wanted to review the general theory before moving on. Let
+      me start with some definition. 
+    </p>
+    <definition>
+      <statement>
+        <p>
+          A polynomial factor of the form <m>(x-\alpha)</m> is called a
+          <term>linear factor</term>. Having a linear factor
+          <m>(x-\alpha)</m> is equivalent to saying that <m>\alpha</m>
+          is a root of the polynomial. 
+        </p>
+        <p>
+          The <term>discriminant</term> of a quadratic <m>ax^2 + bx +
+          c</m> is the expression <m>b^2 - 4ac</m>. This is the term
+          under the square root in the quadratic formula; it
+          determines whether or not the polynomial has real roots. A
+          quadratic with negative discriminant has no real roots; such
+          a polynomial is called <term>irreducible</term>. Since it has no
+          real roots, it has no linear factor and cannot be further
+          factors; hence irreducible.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      There is a nice theorem which tells us how polynomial over
+      <m>\RR^2</m> factor. I present it here without proof. (It is a
+      corollary of the Fundamental Theorem of Algebra; a theory which
+      tells how polynomials factor over <m>\CC</m>.) 
+    </p>
+    <theorem>
+      <statement>
+        Let <m>p(x)</m> be a polynomial with real coefficients. Then
+        <m>p(x)</m> completes factors into linear and irreducible
+        quadratic term. Equivalently, there are not
+        <sq>irreducible</sq> factors of degree three or higher; all
+        such factors will always further break down into linear and
+        quadratic terms. 
+      </statement>
+    </theorem>
+    <p>
+      This simplifies the theorem substantially. Assuming I can deal
+      with factored polynomials, I only have to deal with linear and
+      irreducible quadratic terms. This fact is central to the theorem
+      I am developing. Notice that the three types of integral I did
+      in <hrex ref="section-rational-basic" /> only had linear or
+      quadratic denominators. I'm going to eventually reduce the
+      integral of any rational function into one with only a linear or
+      (irreducible) quadratic denominator. The fact that I can do so
+      is a direct consequence of this theorem about factoring. I need
+      one more definition.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          The number of times that a factor (linear or irreducible
+          quadratic) shows up in a polynomial is called the
+          <term>multiplicity</term> of the factor. For example, consider
+          this factored polynomial.
+        </p>
+        <me>
+          p(x) = (x-3)^4(x-5)^2(x^2 + 4x + 1)^7
+        </me>
+        <p>
+          In this polynomial, the linear factor <m>(x-3)</m> has
+          multiplicity <m>4</m>; the linear factor <m>(x-5)</m> has
+          multiplicity <m>2</m>; and the irreducible quadratic factor
+          <m>(x^2 + 4x + 1)^7</m> has multiplicity <m>7</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      This is the theory. In practice, the problem of actually finding
+      the factors of a polynomial is a very difficult one. The
+      quadratic formula nicely solves this problem for quadratic: we
+      can determine whether a quadratic factors into two linear terms
+      or remain irreducible based on the discriminant. For cubics and
+      quartics, there are similar formulae. However, they get unwieldy
+      very quickly. The cubic formula is already several lines of
+      ordinary text and the quartic formula is several <em>pages</em>
+      of ordinary text. 
+    </p>
+    <p>
+      The situation of finding roots (and hence linear factors) of
+      polynomials gets even worse past this point. For polynomials of
+      degree five and higher, there is no formula for roots. Moreover,
+      it's not that we just don't know the formula: in a major result
+      in 19th mathematics (the Able-Ruffini Theorem) that such a
+      formula is, in fact, entirely impossible. This theorem is part
+      of a beautiful branch of mathemaatics called Galois theory,
+      based on the work of Evariste Galois in the early 19th century. 
+    </p>
+    <p>
+      For the purpose of this course, you need to know the terminology
+      I defined above and the factorization theorem. However, this is
+      not a course in factoring polynomials. I'm going to avoid all
+      the technical challenges of actually finding (or approximating)
+      polynomial factors but giving you factored denominators for all
+      the integration problems involving rational functions. 
+    </p>
+  </subsection>
+</section>

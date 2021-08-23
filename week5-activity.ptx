@@ -1,17 +1,1446 @@
 <section xml:id="section-week5-activity">
   <title>Week 5 Activity</title>
-  <subsection xml:id="subsection-activity-">
-    <title>Title</title>
+  <subsection xml:id="subsection-activity-pf">
+    <title>Partial Fractions</title>
     <activity>
       <statement>
         <p>
-          Question
+          Solve this integral using partial fractions.
         </p>
+        <me>
+          \int \frac{4}{(x-5)(x+3)} dx 
+        </me>
       </statement>
       <solution>
         <p>
-          Solution
+          First, I check if the rational function is propoer. If it
+          isn't, I need to do polynomial long division. This is
+          already proper, so no long division is necessary.
         </p>
+        <p>
+          Next, I write the partial fraction decomposition with
+          unknowns. I take the right side to common denominator and
+          group the coefficients of the numerator.
+        </p>
+        <md>
+          <mrow>
+            \frac{4}{(x-5)(x+3)} \amp = \frac{a}{x-5} + \frac{b}{(x+3)} 
+          </mrow>
+          <mrow>
+            \amp = \frac{a(x+3) + b(x-5)}{(x-5)(x+3)} = \frac{(a+b)x +
+            (3a-5b)}{(x-5)(x+3)} 
+          </mrow>
+        </md>
+        <p>
+          I compare the numerator coefficients to get the system of
+          equations. I proceed to solve the system. (I haven't
+          anotated all the steps of isolating and replacing variables.) 
+        </p>
+        <md>
+          <mrow>
+            a+b \amp = 0 
+          </mrow>
+          <mrow>
+            3a-5b \amp = 4 
+          </mrow>
+          <mrow>
+            a+b \amp = 0 \implies a = -b 
+          </mrow>
+          <mrow>
+            3a - 5b \amp = (3(-b) - 5b) = -8b = 4 \implies b =
+            \frac{-1}{2}
+          </mrow>
+          <mrow>
+              a \amp = -b \implies a = \frac{1}{2} 
+          </mrow>
+        </md>
+        <p>
+          The numerator coefficients give me the partial fraction
+          decomposision. Now that I have completed partial fractions,
+          I integrate the pieces using the four basic rational
+          function integrals. 
+        </p>
+        <md>
+          <mrow>
+            \frac{4}{(x-5)(x+3)} \amp = \frac{\frac{1}{2}}{x-5} +
+            \frac{\frac{-1}{2}}{(x+3)} 
+          </mrow>
+          <mrow>
+            \int \frac{4}{(x-5)(x+3)} dx \amp = \int
+            \frac{\frac{1}{2}}{x-5} dx + \int \frac{\frac{-1}{2}}{(x+3)}
+            dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{2} \int \frac{1}{x-5} dx - \frac{1}{2} \int
+            \frac{1}{x+3} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{2} \ln |x-5| - \frac{1}{2} \ln |x+3| + c 
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this integral using partial fractions.
+        </p>
+        <me>
+          \int \frac{3x^3 + x -7}{(x-1)(x+3)} dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          First, I check if the rational function is propoer. If it
+          isn't, I need to do polynomial long division. This is
+          not a proper fraction to polynomial long division is
+          necessary. 
+        </p>
+        <tabular halign="right">
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell bottom="medium"></cell>
+            <cell bottom="medium"></cell>
+            <cell bottom="medium"><m></m></cell>
+            <cell bottom="medium"><m></m></cell>
+            <cell bottom="medium"><m>3x</m></cell>
+            <cell bottom="medium"><m>-</m></cell>
+            <cell bottom="medium"><m>6</m></cell>
+          </row>
+          <row>
+            <cell><m>x^2</m></cell>
+            <cell><m>+</m></cell>
+            <cell><m>2x</m></cell>
+            <cell><m>-</m></cell>
+            <cell right="medium"><m>3</m></cell>
+            <cell><m>3x^3</m></cell>
+            <cell><m>+</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>+</m></cell>
+            <cell><m>x</m></cell>
+            <cell><m>-</m></cell>
+            <cell><m>7</m></cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell bottom="minor"><m>x^3</m></cell>
+            <cell bottom="minor"><m>+</m></cell>
+            <cell bottom="minor"><m>6x^2</m></cell>
+            <cell bottom="minor"><m>-</m></cell>
+            <cell bottom="minor"><m>9x</m></cell>
+            <cell></cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell><m>-6x^2</m></cell>
+            <cell><m>+</m></cell>
+            <cell><m>10x</m></cell>
+            <cell><m>-</m></cell>
+            <cell><m>7</m></cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell bottom="minor"><m>-6x^2</m></cell>
+            <cell bottom="minor"><m>-</m></cell>
+            <cell bottom="minor"><m>12x</m></cell>
+            <cell bottom="minor"><m>+</m></cell>
+            <cell bottom="minor"><m>18</m></cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell><m>22x</m></cell>
+            <cell><m>-</m></cell>
+            <cell><m>25</m></cell>
+          </row>
+        </tabular>
+        <p>
+          The output of the long division process is the sum of a
+          polynomial and a proper rational function.
+        </p>
+        <md>
+          <mrow>
+            \frac{3x^3+x-7}{(x-1)(x+3)} \amp = 3x - 6 +
+            \frac{22x-25}{(x-1)(x+3)} 
+          </mrow>
+        </md>
+        <p>
+          Next, I write the partial fraction decomposition with
+          unknowns. I take the right side to common denominator and
+          group the coefficients of the numerator.
+        </p>
+        <md>
+          <mrow>
+            \frac{22x-25}{(x-1)(x+3)} \amp = \frac{a}{x-1} +
+            \frac{b}{x+3} = \frac{a(x+3) + b(x-1)}{(x-1)(x+3)}
+          </mrow>
+          <mrow>
+            \amp = \frac{ax + 3a + bx - b}{(x-1)(x+3)} = \frac{(a+b)x +
+            (3a-b)}{(x-1)(x+3)} 
+          </mrow>
+        </md>
+        <p>
+          I compare the numerator coefficients to get the system of
+          equations. I proceed to solve the system. (I haven't
+          anotated all the steps of isolating and replacing variables.) 
+        </p>
+        <md>
+          <mrow>
+            22 \amp = a+b \implies a = 22-b 
+          </mrow>
+          <mrow>
+            -25 \amp = 3a-b = 3(22-b) - b = -3b + 66 + b = 66 - 4b 
+          </mrow>
+          <mrow>
+            -91 \amp = -4b \implies b = \frac{91}{4} 
+          </mrow>
+          <mrow>
+            a \amp = 22-b = 22-\frac{91}{4} = \frac{88-91}{4} =
+            \frac{-3}{4} 
+          </mrow>
+        </md>
+        <p>
+          The numerator coefficients give me the partial fraction
+          decomposision. Now that I have completed partial fractions,
+          I integrate the pieces using the four basic rational
+          function integrals. 
+        </p>
+        <md>
+          <mrow>
+            \frac{22x-25}{(x-1)(x+3)} \amp = \frac{\frac{-3}{4}}{x-1} +
+            \frac{\frac{91}{4}}{x+3} 
+          </mrow>
+          <mrow>
+            \int \frac{3x^3 + x -7}{(x-1)(x+3)} dx \amp = \int 3x dx +
+            \int 6 dx + \frac{-3}{4} \int \frac{1}{x-1} dx +
+            \frac{91}{4} \int \frac{1}{x+3} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{3x^2}{2} + 6x - \frac{3}{4} \ln |x-1| +
+            \frac{91}{4} \ln |x+3| + c
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this integral using partial fractions.
+        </p>
+        <me>
+          \int \frac{x^5 + 8x^3 - 2x - 1}{(x-4)(x+2)} dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          First, I check if the rational function is propoer. If it
+          isn't, I need to do polynomial long division. This is
+          not a proper fraction, so I need to use long division.
+        </p>
+          <tabular halign="right">
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell bottom="medium"></cell>
+              <cell bottom="medium"></cell>
+              <cell bottom="medium"></cell>
+              <cell bottom="medium"></cell>
+              <cell bottom="medium"><m>x^3</m></cell>
+              <cell bottom="medium"><m>+</m></cell>
+              <cell bottom="medium"><m>2x^2</m></cell>
+              <cell bottom="medium"><m>+</m></cell>
+              <cell bottom="medium"><m>20x</m></cell>
+              <cell bottom="medium"><m>+</m></cell>
+              <cell bottom="medium"><m>56</m></cell>
+            </row>
+            <row>
+              <cell><m>x^2</m></cell>
+              <cell><m>-</m></cell>
+              <cell><m>2x</m></cell>
+              <cell><m>-</m></cell>
+              <cell right="medium"><m>8</m></cell>
+              <cell><m>x^5</m></cell>
+              <cell><m>+</m></cell>
+              <cell><m>0</m></cell>
+              <cell><m>+</m></cell>
+              <cell><m>8x^3</m></cell>
+              <cell><m>+</m></cell>
+              <cell><m>0</m></cell>
+              <cell><m>-</m></cell>
+              <cell><m>2x</m></cell>
+              <cell><m>-</m></cell>
+              <cell><m>1</m></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell bottom="minor"><m>x^5</m></cell>
+              <cell bottom="minor"><m>-</m></cell>
+              <cell bottom="minor"><m>2x^4</m></cell>
+              <cell bottom="minor"><m>-</m></cell>
+              <cell bottom="minor"><m>8x^3</m></cell>
+              <cell><m></m></cell>
+              <cell><m></m></cell>
+              <cell><m></m></cell>
+              <cell><m></m></cell>
+              <cell><m></m></cell>
+              <cell><m></m></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell><m>2x^4</m></cell>
+              <cell><m>+</m></cell>
+              <cell><m>16x^3</m></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell bottom="minor"><m>2x^4</m></cell>
+              <cell bottom="minor"><m>-</m></cell>
+              <cell bottom="minor"><m>4x^3</m></cell>
+              <cell bottom="minor"><m>-</m></cell>
+              <cell bottom="minor"><m>16x^2</m></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell><m>20x^3</m></cell>
+              <cell><m>+</m></cell>
+              <cell><m>16x^2</m></cell>
+              <cell><m>-</m></cell>
+              <cell><m>2x</m></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell bottom="minor"><m>20x^3</m></cell>
+              <cell bottom="minor"><m>-</m></cell>
+              <cell bottom="minor"><m>40x^2</m></cell>
+              <cell bottom="minor"><m>-</m></cell>
+              <cell bottom="minor"><m>160x</m></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell><m>56x^2</m></cell>
+              <cell><m>+</m></cell>
+              <cell><m>158x</m></cell>
+              <cell><m>-</m></cell>
+              <cell><m>1</m></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell bottom="minor"><m>56x^2</m></cell>
+              <cell bottom="minor"><m>-</m></cell>
+              <cell bottom="minor"><m>112x</m></cell>
+              <cell bottom="minor"><m>-</m></cell>
+              <cell bottom="minor"><m>448</m></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell><m>270x</m></cell>
+              <cell><m>+</m></cell>
+              <cell><m>447</m></cell>
+            </row>
+          </tabular>
+        <p>
+          The output of the long division process is the sum of a
+          polynomial and a proper rational function.
+        </p>
+        <md>
+          <mrow>
+            \frac{x^5 + 8x^3 - 2x - 1}{(x-4)(x+2)} dx \amp = x^3 + 2x^2
+            + 20 x + 56 + \frac{270x + 447}{(x-4)(x+2)} 
+          </mrow>
+        </md>
+        <p>
+          Next, I write the partial fraction decomposition with
+          unknowns. I take the right side to common denominator and
+          group the coefficients of the numerator.
+        </p>
+        <md>
+          <mrow>
+            \frac{270x + 447}{(x-4)(x+2)} \amp = \frac{a}{x-4} +
+            \frac{b}{x+2} = \frac{a(x+2) + b(x-4)}{(x+2)(x-4)} 
+          </mrow>
+          <mrow>
+            \amp = \frac{ax + 2a + bx - 4b}{(x+2)(x-4)} = \frac{(a+b)x +
+            (2a-4b)}{(x+2)(x-4)} 
+          </mrow>
+        </md>
+        <p>
+          I compare the numerator coefficients to get the system of
+          equations. I proceed to solve the system. (I haven't
+          anotated all the steps of isolating and replacing variables.) 
+        </p>
+        <md>
+          <mrow>
+            270 \amp = a+b \implies a = 270-b 
+          </mrow>
+          <mrow>
+            447 \amp = 2a - 4b = 2(270-b) - 4b = 540 -2b - 4b = 540 - 6b 
+          </mrow>
+          <mrow>
+            -93 \amp = -6b \implies b = \frac{93}{6} = \frac{31}{2} 
+          </mrow>
+          <mrow>
+            a \amp = 270-b = 270 - \frac{31}{2} = \frac{540 - 31}{2} =
+            \frac{509}{2} 
+          </mrow>
+        </md>
+        <p>
+          The numerator coefficients give me the partial fraction
+          decomposision. Now that I have completed partial fractions,
+          I integrate the pieces using the four basic rational
+          function integrals. 
+        </p>
+        <md>
+          <mrow>
+            \amp \frac{270x + 447}{(x-4)(x+2)} =
+            \frac{\frac{509}{2}}{x-4} + \frac{\frac{31}{2}}{x+2} 
+          </mrow>
+          <mrow>
+            \amp \int \frac{x^5 + 8x^3 - 2x - 1}{(x-4)(x+2)} dx 
+          </mrow>
+          <mrow>
+            \amp = \int x^3 dx + \int 2x^2 dx + \int 20x dx + \int 56
+            dx + \frac{509}{2} \int \frac{1}{x-4} dx + \frac{31}{2}
+            \int \frac{1}{x+2} dx
+          </mrow>
+          <mrow>
+            \amp = \frac{x^4}{4} + \frac{2x^3}{3} + 10x^2 + 56 x +
+            \frac{509}{2} \ln |x-4| + \frac{31}{2} \ln |x+2| + c 
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this integral using partial fractions.
+        </p>
+        <me>
+          \int \frac{x^2}{(x-2)^3} dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          First, I check if the rational function is propoer. If it
+          isn't, I need to do polynomial long division. This is
+          already proper, so no long division is necessary.
+        </p>
+        <p>
+          Next, I write the partial fraction decomposition with
+          unknowns. I take the right side to common denominator and
+          group the coefficients of the numerator.
+        </p>
+        <md>
+          <mrow>
+            \frac{x^2}{(x-3)^3} \amp = \frac{a}{x-2} + \frac{b}{(x-2)^2}
+            + \frac{c}{(x-2)^3} 
+          </mrow>
+          <mrow>
+            \amp = \frac{a (x^2 -4x + 4) + b(x-2) + c}{(x-2)^3} 
+          </mrow>
+          <mrow>
+            \amp = \frac{(a)x^2 + (-4a + b)x + (4a -2b + c)}{(x-2)^3} 
+          </mrow>
+        </md>
+        <p>
+          I compare the numerator coefficients to get the system of
+          equations. I proceed to solve the system. (I haven't
+          anotated all the steps of isolating and replacing variables.) 
+        </p>
+        <md>
+          <mrow>
+            1 \amp = a 
+          </mrow>
+          <mrow>
+            (-4a + b) \amp = 0 \implies b = 4a = 4(1) = 4 
+          </mrow>
+          <mrow>
+            (4a - 2b + c) \amp = 0 \implies c = 2b-4a = 8 - 4 = 4 
+          </mrow>
+        </md>
+        <p>
+          The numerator coefficients give me the partial fraction
+          decomposision. Now that I have completed partial fractions,
+          I integrate the pieces using the four basic rational
+          function integrals.
+        </p>
+        <md>
+          <mrow>
+            \frac{x^2}{(x-3)^3} \amp = \frac{1}{x-2} + \frac{4}{(x-2)^2}
+            + \frac{4}{(x-2)^3} 
+          </mrow>
+          <mrow>
+            \int \frac{x^2}{(x-2)^3} dx \amp = \int \frac{1}{x-2} dx + 4
+            \int \frac{1}{(x-2)^2} dx + 4 \int \frac{1}{(x-2)^3} dx 
+          </mrow>
+          <mrow>
+            \amp = \ln |x-2| - 4 \frac{1}{x-2} - 2 \frac{1}{(x-2)^2} + c 
+          </mrow>
+          <mrow>
+            \amp = \ln |x-2| - \frac{4}{x-2} - \frac{2}{(x-2)^2} + c 
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this integral using partial fractions.
+        </p>
+        <me>
+          \int \frac{2x^2 + 3x + 4}{(x-1)(x-2)(x-3)} dx 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          First, I check if the rational function is propoer. If it
+          isn't, I need to do polynomial long division. This is
+          already proper, so no long division is necessary.
+        </p>
+        <p>
+          Next, I write the partial fraction decomposition with
+          unknowns. I take the right side to common denominator and
+          group the coefficients of the numerator.
+        </p>
+        <md>
+          <mrow>
+            \frac{2x^2+3x+4}{(x-1)(x-2)(x-3)} \amp = \frac{a}{x-1} +
+            \frac{b}{x-2} + \frac{c}{x-3} 
+          </mrow>
+          <mrow>
+            \amp = \frac{a(x-2)(x-3) + b(x-1)(x-3) +
+            c(x-1)(x-2)}{(x-1)(x-2)(x-3)} 
+          </mrow>
+          <mrow>
+            \amp = \frac{ax^2 - 5ax + 6a + bx^2 - 4bx + 3b + cx^2 - 3cx
+            + 2c}{(x-1)(x-2)(x-3)} 
+          </mrow>
+          <mrow>
+            \amp = \frac{(a+b+c)x^2 + (-5-4b-3c) x + (6a + 3b +
+            2c)}{(x-1)(x-2)(x-3)}
+          </mrow>
+        </md>
+        <p>
+          I compare the numerator coefficients to get the system of
+          equations. I proceed to solve the system. (I haven't
+          anotated all the steps of isolating and replacing variables.) 
+        </p>
+        <md>
+          <mrow>
+            2 \amp = a + b + c \implies a = 2 - b - c 
+          </mrow>
+          <mrow>
+            3 \amp = (-5a-4b-3c) = -5(2-b-c) - 4b - 3c 
+          </mrow>
+          <mrow>
+            \amp = -10 + 5b + 5c -4b - 3c = -10 + b + 2c 
+          </mrow>
+          <mrow>
+            b \amp = 13 - 2c 
+          </mrow>
+          <mrow>
+            a \amp - 2 - b - c = 2 - 13 + 2c - c = -11 + c 
+          </mrow>
+          <mrow>
+            4 \amp = 6a+3b+2c = 6(-11+c) + 3(13-2c) + 2c 
+          </mrow>
+          <mrow>
+            \amp = -66 + 6c + 39 - 6c + 2c = -27 + 2c 
+          </mrow>
+          <mrow>
+            2c \amp = 31 \implies c = \frac{31}{2} 
+          </mrow>
+          <mrow>
+            b \amp = 13 - 2c = 13 - 31 = -18 
+          </mrow>
+          <mrow>
+            a \amp = -11 + c = -11 + \frac{31}{2} = \frac{-22 + 31}{2} =
+            \frac{9}{2} 
+          </mrow>
+        </md>
+        <p>
+          The numerator coefficients give me the partial fraction
+          decomposision. Now that I have completed partial fractions,
+          I integrate the pieces using the four basic rational
+          function integrals.
+        </p>
+        <md>
+          <mrow>
+            \amp \frac{2x^2+3x+4}{(x-1)(x-2)(x-3)} =
+            \frac{\frac{9}{2}}{x-1} + -18 \frac{1}{x-2} dx +
+            \frac{\frac{31}{2}}{x-3} 
+          </mrow>
+          <mrow>
+            \amp \int \frac{2x^2 + 3x + 4}{(x-1)(x-2)(x-3)} dx =
+            \frac{9}{2} \int \frac{1}{x-1} dx - 18 \int \frac{1}{x-2} dx
+            + \frac{32}{2} \int \frac{1}{x-3} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{9}{2} \ln |x-1| - 18 \ln |x-2| + \frac{31}{2}
+            \ln |x-3| + c
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this integral using partial fractions.
+        </p>
+        <me>
+          \int \frac{1}{(x-2)^2(x-3)^2} 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          First, I check if the rational function is propoer. If it
+          isn't, I need to do polynomial long division. This is
+          already proper, so no long division is necessary.
+        </p>
+        <p>
+          Next, I write the partial fraction decomposition with
+          unknowns. I take the right side to common denominator and
+          group the coefficients of the numerator.
+        </p>
+        <md> 
+          <mrow>
+            \amp \int \frac{1}{(x-2)^2(x-3)^2} = \frac{a}{x-2} +
+            \frac{b}{(x-2)^2} + \frac{c}{(x-3)} + \frac{d}{(x-3)^2} 
+          </mrow>
+          <mrow>
+            \amp = \frac{a(x-2)(x^2-6x+9) + b(x^2-6x+9) +
+            c(x-3)(x^2-4x+4) + d(x^2-4x+4)}{(x-2)^2(x-3)^2} 
+          </mrow>
+          <mrow>
+            \amp = \frac{a(x^3-8x^2+21x-18) + b(x^2-6x+9) +
+            c(x^3-7x^2+16x-12) + d(x^2-4x+4)}{(x-2)^2(x-3)^2} 
+          </mrow>
+          <mrow>
+            \amp = \frac{(a+c)x^3 + (-8a+b-7c+d)x^2 + (21a-6b+16c-4d)x +
+            (-18a + 9b - 12c + 4d)}{(x-2)^2(x-3)^2} 
+          </mrow>
+        </md>
+        <p>
+          I compare the numerator coefficients to get the system of
+          equations. I proceed to solve the system. (I haven't
+          anotated all the steps of isolating and replacing variables.) 
+        </p>
+        <md>
+          <mrow>
+            a + c \amp = 0 \implies a = -c 
+          </mrow>
+          <mrow>
+            -8a+ b-7c+d \amp = 0 
+          </mrow>
+          <mrow>
+            c + b + d \amp = 0 \implies b = -d - c 
+          </mrow>
+          <mrow>
+            21a - 6b + 16c - 4d \amp = 0 
+          </mrow>
+          <mrow>
+            -5c - 6(-d-c) - 4d \amp = 0 
+          </mrow>
+          <mrow>
+            c + 2d \amp = 0 \implies c = -2d 
+          </mrow>
+          <mrow>
+            -18a + 9b - 12c + 4d \amp = 1 
+          </mrow>
+          <mrow>
+           6c + 9(-d-c) + 4d \amp = 1 
+          </mrow>
+          <mrow>
+            -3c - 5d \amp = 1
+          </mrow>
+          <mrow>
+            6d - 5d \amp = 1 \implies d=1 
+          </mrow>
+          <mrow>
+            c \amp = -2d = -2 
+          </mrow>
+          <mrow>
+            b \amp = -d-c = 1 
+          </mrow>
+          <mrow>
+            a \amp = -c-= 2
+          </mrow>
+        </md>
+        <p>
+          The numerator coefficients give me the partial fraction
+          decomposision. Now that I have completed partial fractions,
+          I integrate the pieces using the four basic rational
+          function integrals.
+        </p>
+        <md>
+          <mrow>
+            \amp \frac{1}{(x-2)^2(x-3)^2} = \frac{2}{x-2} -
+            \frac{1}{(x-2)^2} - \frac{2}{(x-3)} + \frac{d}{(x-3)^2} 
+          </mrow>
+          <mrow>
+            \amp \int \frac{1}{(x-2)^2(x-3)^2} 
+          </mrow>
+          <mrow>
+            \amp = 2 \int \frac{1}{x-2} dx
+            + \int \frac{1}{(x-2)^2} dx - 2 \int \frac{1}{x-3} dx + \int
+            \frac{1}{(x-3)^2}dx 
+          </mrow>
+          <mrow>
+            \amp = 2 \ln |x-2| - \frac{1}{x-2} - 2 \ln |x-3| -
+            \frac{1}{x-3} + c
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this integral using partial fractions.
+        </p>
+        <me>
+          \int \frac{2x^2+1}{(x-3)(x^2+x+1)}
+        </me>
+      </statement>
+      <solution>
+        <p>
+          First, I check if the rational function is propoer. If it
+          isn't, I need to do polynomial long division. This is
+          already proper, so no long division is necessary.
+        </p>
+        <p>
+          Next, I write the partial fraction decomposition with
+          unknowns. I take the right side to common denominator and
+          group the coefficients of the numerator.
+        </p>
+        <md>
+          <mrow>
+            \amp \frac{2x^2+1}{(x-3)(x^2+x+1)} 
+          </mrow>
+          <mrow>
+            \amp = \frac{a}{x-3} +
+            \frac{bx+c}{x^2+x+1} = \frac{a(x^2+x+1) +
+            (bx+c)(x-3)}{(x-3)(x^2+x+1)} 
+          </mrow>
+          <mrow>
+            \amp = \frac{ax^2 + ax + a + bx^2 + cx - 3bx -
+            3c}{(x-3)(x^2+2+1)}
+          </mrow>
+          <mrow>
+            \amp = \frac{(a+b)x^2 + (a-3b+c)x + (a - 3c)}{(x-3)(x^2+x+1)} 
+          </mrow>
+        </md>
+        <p>
+          I compare the numerator coefficients to get the system of
+          equations. I proceed to solve the system. (I haven't
+          anotated all the steps of isolating and replacing variables.) 
+        </p>
+        <md>
+          <mrow>
+            2 \amp = a+b \implies a = 2-b 
+          </mrow>
+          <mrow>
+            0 \amp = a-3b+c 
+          </mrow>
+          <mrow>
+            0 \amp = (2-b) - 3b + c 
+          </mrow>
+          <mrow>
+            0 \amp = 2 -4b + c \implies c = 4b-2 
+          </mrow>
+          <mrow>
+            1 \amp = a-3c 
+          </mrow>
+          <mrow>
+            1 \amp = (2-b) - 3(4b-2) 
+          </mrow>
+          <mrow>
+            1 \amp = 2 - b - 12 b + 6 
+          </mrow>
+          <mrow>
+            -7 \amp = -13 b \implies b= \frac{7}{13} 
+          </mrow>
+          <mrow>
+            a \amp = 2-b = 2 - \frac{7}{13} = \frac{19}{13} 
+          </mrow>
+          <mrow>
+            c \amp 4b-2 = 4 \frac{7}{13} - 2 = \frac{28-26}{13} =
+            \frac{2}{13}
+          </mrow>
+        </md>
+        <p>
+          The numerator coefficients give me the partial fraction
+          decomposision. Now that I have completed partial fractions,
+          I integrate the pieces using the four basic rational
+          function integrals. 
+        </p>
+        <md>
+          <mrow>
+            \frac{2x^2+1}{(x-3)(x^2+x+1)} \amp = \frac{1}{13} \left[
+            \frac{19}{x-3} + \frac{7x+2}{x^2+x+1} \right] 
+          </mrow>
+          <mrow>
+            \int \frac{2x^2+1}{(x-3)(x^2+x+1)} dx \amp = \frac{1}{13}
+            \left[ \int \frac{19}{x-3} dx + \int \frac{7x+2}{x^2+x+1} dx
+            \right] 
+          </mrow>
+        </md>
+        <p>
+          The linear pieces logarithm integrals. The quadratic piece
+          is more work. I have to manipulate the numerator to get the
+          derivative of the denominator and seperate that piece for a
+          substitution integral. The remainder is an arctangent
+          integral. After adjusting the constants, I use the standard
+          form to complete the arctangent integral.
+        </p>
+        <md>
+          <mrow>
+            \amp = \frac{19}{13} \ln |x-3| + \frac{7}{26} \int \frac{2x
+            + 7}{x^2+ x+1} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{19}{13} \ln |x-3| + \frac{7}{26} \int \frac{2x
+            + 1}{x^2+ x+1} dx + \frac{7}{26} \int \frac{6}{x^2+x+1} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{19}{13} \ln |x-3| + \frac{7}{26} \ln |x^2+x+1|
+            + + \frac{42}{26} \int \frac{1}{ \left(x + \frac{1}{2}
+            \right)^2 + \frac{3}{4}} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{19}{13} \ln |x-3| + \frac{7}{26} \ln |x^2+x+1|
+            + + \frac{21}{13} \left( \frac{2}{\sqrt{3}} \arctan \left(
+            \frac{2 \left( x + \frac{1}{2} \right)}{\sqrt{3}} \right)
+            \right)  + c 
+          </mrow>
+          <mrow>
+            \amp = \frac{19}{13} \ln |x-3| + \frac{7}{26} \ln |x^2+x+1|
+            + + \frac{21}{13} \left( \frac{2}{\sqrt{3}} \arctan \left(
+            \frac{2x+1}{\sqrt{3}} \right) \right) + c
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this integral using partial fractions.
+        </p>
+        <me>
+          \int \frac{x^4-x^2-1}{x(x^2+4x+5)}
+        </me>
+      </statement>
+      <solution>
+        <p>
+          First, I check if the rational function is propoer. If it
+          isn't, I need to do polynomial long division. This is
+          not a proper fraction, so I need to do polynomial long
+          division.
+        </p>
+        <tabular halign="right">
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell bottom="medium"></cell>
+            <cell bottom="medium"></cell>
+            <cell bottom="medium"></cell>
+            <cell bottom="medium"></cell>
+            <cell bottom="medium"></cell>
+            <cell bottom="medium"></cell>
+            <cell bottom="medium"><m>x</m></cell>
+            <cell bottom="medium"><m>-</m></cell>
+            <cell bottom="medium"><m>4</m></cell>
+          </row>
+          <row>
+            <cell><m>x^3</m></cell>
+            <cell><m>+</m></cell>
+            <cell><m>4x^2</m></cell>
+            <cell><m>+</m></cell>
+            <cell><m>5x</m></cell>
+            <cell><m>+</m></cell>
+            <cell right="medium"><m>0</m></cell>
+            <cell><m>x^4</m></cell>
+            <cell><m>+</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>-</m></cell>
+            <cell><m>x^2</m></cell>
+            <cell><m>+</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>-</m></cell>
+            <cell><m>1</m></cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell bottom="minor"><m>x^4</m></cell>
+            <cell bottom="minor"><m>+</m></cell>
+            <cell bottom="minor"><m>4x^3</m></cell>
+            <cell bottom="minor"><m>+</m></cell>
+            <cell bottom="minor"><m>5x^2</m></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell><m>-4x^3</m></cell>
+            <cell><m>-</m></cell>
+            <cell><m>6x^2</m></cell>
+            <cell><m>+</m></cell>
+            <cell><m>0</m></cell>
+            <cell></cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell bottom="minor"><m>-4x^3</m></cell>
+            <cell bottom="minor"><m>-</m></cell>
+            <cell bottom="minor"><m>16x^2</m></cell>
+            <cell bottom="minor"><m>-</m></cell>
+            <cell bottom="minor"><m>20x</m></cell>
+            <cell></cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell><m>10x^2</m></cell>
+            <cell><m>+</m></cell>
+            <cell><m>20x</m></cell>
+            <cell><m>-</m></cell>
+            <cell><m>1</m></cell>
+          </row>
+        </tabular>
+        <p>
+          The output of the long division process is the sum of a
+          polynomial and a proper rational function.
+        </p>
+        <md>
+          <mrow>
+            \int \frac{x^4-x^2-1}{x(x^2+4x+5)}
+            \frac{x^4-x^2-1}{x(x^2+4x+5)} \amp = x - 4 + \frac{10x^2 +
+            20x - 1}{x(x^2+4x+5)} 
+          </mrow>
+        </md>
+        <p>
+          Next, I write the partial fraction decomposition with
+          unknowns. I take the right side to common denominator and
+          group the coefficients of the numerator.
+        </p>
+        <md>
+          <mrow>
+            \frac{10x^2 + 20x - 1}{x(x^2+4x+5)} \amp = \frac{a}{x} +
+            \frac{bx+c}{x^2+4x+5} = \frac{a(x^2+4x+5) +
+            (bx+c)(x)}{x(x^2+4x+5)} 
+          </mrow>
+          <mrow>
+            \amp = \frac{ax^2 + 4ax + 5a + bx^2 + cx}{x(x^2+4x+5)} =
+            \frac{(a+b)x^2 + (4a+c)x + 5a}{x(x^2+4x+5)} 
+          </mrow>
+        </md>
+        <p>
+          I compare the numerator coefficients to get the system of
+          equations. I proceed to solve the system. (I haven't
+          anotated all the steps of isolating and replacing variables.) 
+        </p>
+        <md>
+          <mrow>
+            5a \amp = -1 \implies a = \frac{-1}{5} 
+          </mrow>
+          <mrow>
+            4a + c \amp = 20 \implies c = 20 - 4a = 20 + \frac{4}{5} =
+            \frac{104}{5}
+          </mrow>
+          <mrow>
+            a+b \amp = 10 \implies b = 10 - a = 10 - \frac{-1}{5} =
+            \frac{51}{5} 
+          </mrow>
+        </md>
+        <p>
+          The numerator coefficients give me the partial fraction
+          decomposision. Now that I have completed partial fractions,
+          I integrate the pieces using the four basic rational
+          function integrals. 
+        </p>
+        <md>
+          <mrow>
+            \frac{10x^2 + 20x}{x(x^2+4x+5)} \amp = \frac{1}{5} \left[
+            \frac{-1}{x} + \frac{51x+104}{x^2+4x+5} \right] 
+          </mrow>
+          <mrow>
+            \int \frac{x^4-x^2-1}{x(x^2+4x+5)} \amp = \frac{-1}{5} \int
+            \frac{1}{x} dx + \frac{1}{5} \int \frac{51x + 104}{x^2+4x+5}
+            dx 
+          </mrow>
+        </md>
+        <p>
+          The linear pieces logarithm integrals. The quadratic piece
+          is more work. I have to manipulate the numerator to get the
+          derivative of the denominator and seperate that piece for a
+          substitution integral. The remainder is an arctangent
+          integral. After adjusting the constants, I use the standard
+          form to complete the arctangent integral.
+        </p>
+        <md>
+          <mrow>
+            \amp = \frac{-1}{5} \ln |x| + \frac{1}{5}\frac{51}{2} \int
+            \frac{2x + \frac{208}{51}}{x^2+4x+5} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{-1}{5} \ln |x| + \frac{51}{10} \int \frac{2x +
+            4 + \frac{4}{51}}{x^2 + 4x + 5} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{-1}{5} \ln |x| + \frac{51}{10} \int \frac{2x +
+            4}{x^2 + 4x + 5}dx + \frac{51}{10} \frac{4}{51} \int
+            \frac{1}{x^2 + 4x +5} dx 
+          </mrow>
+          <mrow>
+           \amp = \frac{-1}{5} \ln |x| + \frac{51}{10} \ln |x^2 + 4x +
+           5| + \frac{2}{5} \int \frac{1}{x^2 + 4x + 4 + 1} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{-1}{5} \ln |x| + \frac{51}{10} \ln |x^2 + 4x +
+            5| + \frac{2}{5} \int \frac{1}{(x+2)^2 + 1} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{-1}{5} \ln |x| + \frac{51}{10} \ln |x^2 + 4x +
+            5| + \frac{2}{5} \arctan (x+2) + c 
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this integral using partial fractions.
+        </p>
+        <me>
+          \int \frac{3}{(x-2)^2(x^2-x+3)} 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          First, I check if the rational function is propoer. If it
+          isn't, I need to do polynomial long division. This is
+          already proper, so no long division is necessary.
+        </p>
+        <p>
+          Next, I write the partial fraction decomposition with
+          unknowns. I take the right side to common denominator and
+          group the coefficients of the numerator.
+        </p>
+        <md>
+          <mrow>
+            \amp \frac{3}{(x-2)^2(x^2-x+3)} = \frac{a}{x-2} +
+            \frac{b}{(x-2)^2} + \frac{cx+d}{x^2-x+3} 
+          </mrow>
+          <mrow>
+            \amp = \frac{a(x-2)(x^2-x+3) + b(x^2-x+3) +
+            (cx+d)(x-2)^2}{(x-2)^2(x^2-x+3)} 
+          </mrow>
+          <mrow>
+            \amp = \frac{ax^3 - 3ax^2+5ax - 6a + bx^2 -bx + 3b + cx^3 +
+            dx^2 - 4cx^2 - 4dx + 4cx + 4d}{(x-2)^2(x^2-x-3)}
+          </mrow>
+          <mrow>
+            \amp = \frac{(a + c)x^3 + (-3a + b - 4c + d) x^2 + (5a - b +
+            4c - 4d) x + (-6a + 3b + 4d)}{(x-2)^2 + (x^2 - x- 3)}
+          </mrow>
+        </md>
+        <p>
+          I compare the numerator coefficients to get the system of
+          equations. I proceed to solve the system. (I haven't
+          anotated all the steps of isolating and replacing variables.) 
+        </p>
+        <md>
+          <mrow>
+            a+c \amp = 0 
+          </mrow>
+          <mrow>
+            -3a + b - 4c + d \amp = 0 
+          </mrow>
+          <mrow>
+            5a - b + 4c - 4d \amp = 0 
+          </mrow>
+          <mrow>
+            -6a + 3b + 4d \amp = 3 
+          </mrow>
+        </md>
+        <p>
+          For these late questions, I'm leaving out the details of
+          solving the system. Here is the solution.
+        </p>
+        <md>
+          <mrow>
+            a \amp = \frac{-9}{25} 
+            \amp \amp b = \frac{3}{5} 
+            \amp \amp c = \frac{9}{25} 
+            \amp \amp d = \frac{-6}{25} 
+          </mrow>
+        </md>
+        <p>
+          The numerator coefficients give me the partial fraction
+          decomposision. Now that I have completed partial fractions,
+          I integrate the pieces using the four basic rational
+          function integrals.
+        </p>
+        <md>
+          <mrow>
+            \amp \frac{3}{(x-2)^2(x^2-x+3)} = \frac{-9}{25}
+            \frac{1}{x-2} + \frac{3}{5} \frac{1}{(x-2)^2} + \frac{1}{25}
+            \frac{9x-6}{x^2-x+3} 
+          </mrow>
+          <mrow>
+            \amp \int \frac{3}{(x-2)^2(x^2-x+3)} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{-9}{25} \int
+            \frac{1}{x-2} dx + \frac{3}{5} \int \frac{1}{(x-2)^2} dx +
+            \frac{1}{25} \int \frac{9x-6}{x^2-x+3} dx 
+          </mrow>
+        </md>
+        <p>
+          The linear pieces logarithm integrals. The quadratic piece
+          is more work. I have to manipulate the numerator to get the
+          derivative of the denominator and seperate that piece for a
+          substitution integral. The remainder is an arctangent
+          integral. After adjusting the constants, I use the standard
+          form to complete the arctangent integral.
+        </p>
+        <md>
+          <mrow>
+            \amp = \frac{-9}{25} \ln |x-2| - \frac{3}{5} \frac{1}{x-2} +
+            \frac{9}{50} \int \frac{2x -\frac{12}{9}}{x^2-x+3} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{-9}{25} \ln |x-2| - \frac{3}{5} \frac{1}{x-2} +
+            \frac{9}{50} \int \frac{2x - 1}{x^2-x+3} dx - \frac{9}{50}
+            \frac{1}{3}\int \frac{1}{x^2-x+3} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{-9}{25} \ln |x-2| - \frac{3}{5} \frac{1}{x-2} +
+            \frac{9}{50} \ln |x^2-x+3| - \frac{3}{50} \int
+            \frac{1}{\left( x-\frac{1}{2} \right)^2 + \frac{11}{4}} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{-9}{25} \ln |x-2| - \frac{3}{5} \frac{1}{x-2} +
+            \frac{9}{50} \ln |x^2-x+3| - \frac{3}{50}
+            \frac{2}{\sqrt{11}} \arctan \left( \frac{ x -
+            \frac{1}{2}}{\frac{\sqrt{11}}{2}} \right) + c 
+          </mrow>
+          <mrow>
+            \amp = \frac{-9}{25} \ln |x-2| - \frac{3}{5} \frac{1}{x-2} +
+            \frac{9}{50} \ln |x^2-x+3| - \frac{3}{25\sqrt{11}} \arctan
+            \left( \frac{ 2x - 1}{\sqrt{11}} \right) + c 
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Solve this integral using partial fractions.
+        </p>
+        <me>
+          \int \frac{x^2+4x-1}{(x^2+3x+4)(x^2+6)}
+        </me>
+      </statement>
+      <solution>
+        <p>
+          First, I check if the rational function is propoer. If it
+          isn't, I need to do polynomial long division. This is
+          already proper, so no long division is necessary.
+        </p>
+        <p>
+          Next, I write the partial fraction decomposition with
+          unknowns. I take the right side to common denominator and
+          group the coefficients of the numerator.
+        </p>
+        <md>
+          <mrow>
+            \amp \frac{x^2+4x-1}{(x^2+3x+4)(x^2+6)} = \frac{ax +
+            b}{x^2+3x+4} + \frac{cx+d}{x^2+6} 
+          </mrow>
+          <mrow>
+            \amp = \frac{(ax+b)(x^2+6) +
+            (cx+d)(x^2+3x+4)}{(x^2+3x+4)(x^2+6)}
+          </mrow>
+          <mrow>
+            \amp = \frac{ax^3 + bx^2 + 6ax + 6b + cx^3 + dx^2 + 3cx^2 +
+            3dx + 4cx + 4d}{(x^2+3x+4)(x^2+6)} 
+          </mrow>
+          <mrow>
+            \amp = \frac{(a+c)x^3 + (b + d + 3c)x^2 + (6a + 4c + 3d) x +
+            (6b + 4d)}{(x^2+3x+4)(x^2+6)} 
+          </mrow>
+        </md>
+        <p>
+          I compare the numerator coefficients to get the system of
+          equations. I proceed to solve the system. (I haven't
+          anotated all the steps of isolating and replacing variables.) 
+        </p>
+        <md>
+          <mrow>
+            a+c \amp = 0 
+          </mrow>
+          <mrow>
+            b +d + 3c \amp = 2 
+          </mrow>
+          <mrow>
+            6a + 4c + 3d \amp = 4 
+          </mrow>
+          <mrow>
+            6b + 4d \amp = -1 
+          </mrow>
+        </md>
+        <p>
+          For these late questions, I'm leaving out the details of
+          solving the system. Here is the solution.
+        </p>
+        <md>
+          <mrow>
+            a \amp = \frac{-31}{58} 
+            \amp \amp b = \frac{-75}{58} 
+            \amp \amp c = \frac{31}{58} 
+            \amp \amp d = \frac{98}{58} 
+          </mrow>
+        </md>
+        <p>
+          The numerator coefficients give me the partial fraction
+          decomposision. Now that I have completed partial fractions,
+          I integrate the pieces using the four basic rational
+          function integrals.  I'll do the two pieces of the integral
+          separately and then combine them. Here is the first piece.
+        </p>
+        <md>
+          <mrow>
+            \amp \frac{x^2+4x-1}{(x^2+3x+4)(x^2+6)} \frac{1}{58}
+            \left[ \frac{-31x - 75}{x^2+3x+4} + \frac{31x+98}{x^2+6}
+            \right] 
+          </mrow>
+          <mrow>
+            \int \frac{-31x - 75}{x^2+3x+4} dx \amp = \frac{-31}{2} \int
+            \frac{ 2x + \frac{150}{31}}{x^2+3x+4} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{-31}{2} \int \frac{2x + 3 + \frac{57}{31}}{x^2
+            +3 x + 4} dx
+          </mrow>
+          <mrow>
+            \amp = \frac{-31}{2} \int \frac{2x+ 3}{x^2 +3 x +4} dx +
+            \frac{-31}{2} \frac{57}{31} \int \frac{1}{x^2+3x+4}dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{-31}{2} \ln |x^2+3x+4| - \frac{57}{2} \int
+            \frac{1}{x^2 + 3x + \frac{9}{4} + \frac{7}{4}} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{-31}{2} \ln |x^2+3x+4| - \frac{57}{2} \int
+            \frac{1}{ \left(x+\frac{3}{2} \right)^2 + \frac{7}{4}} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{-31}{2} \ln |x^2+3x+4| - \frac{57}{2}
+            \frac{2}{\sqrt{7}} \arctan \left( \frac{x +
+            \frac{3}{2}}{\frac{\sqrt{7}}{2}} \right) + c 
+          </mrow>
+          <mrow>
+            \amp = \frac{-31}{2} \ln |x^2+3x+4| - \frac{57}{\sqrt{7}}
+            \arctan \left( \frac{2x + 3}{\sqrt{7}} \right) + c 
+          </mrow>
+        </md>
+        <p>
+          Here is the second piece.
+        </p>
+        <md>
+          <mrow>
+             \int \frac{31x+98}{x^2+6} dx \amp = \frac{31}{2} \int
+             \frac{2x + \frac{196}{31}}{x^2+6} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{31}{2} \int \frac{2x}{x^2+6} dx + \frac{31}{2}
+            \frac{196}{31} \int \frac{1}{x^2 + 6} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{31}{2} \ln |x^2+6| + 98 \frac{1}{\sqrt{6}}
+            \arctan \left( \frac{x}{\sqrt{6}} \right) + c 
+          </mrow>
+          <mrow>
+            \amp = \frac{31}{2} \ln |x^2+6| + \frac{98}{\sqrt{6}}
+            \arctan \left( \frac{x}{\sqrt{6}} \right) + c 
+          </mrow>
+        </md>
+        <p>
+          Here is the complete integral.
+        </p>
+        <md>
+          <mrow>
+            \int \frac{x^2+4x-1}{(x^2+3x+4)(x^2+6)} \amp = \frac{1}{58}
+            \left[ \int \frac{-31x - 75}{x^2+3x+4} dx + \int
+            \frac{31x+98}{x^2+6} dx \right] 
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{58} \left[ \frac{-31}{2} \ln |x^2+3x+4| -
+            \frac{57}{\sqrt{7}} \arctan \left( \frac{2x + 3}{\sqrt{7}}
+            \right) \right.
+          </mrow>
+          <mrow>
+            \amp \left. + \frac{31}{2} \ln |x^2+6| + \frac{98}{\sqrt{6}}
+            \arctan \left( \frac{x}{\sqrt{6}} \right) \right] + c 
+          </mrow>
+          <mrow>
+            \amp = \frac{-31}{116} \ln |x^2+3x+4| -
+            \frac{57}{58\sqrt{7}} \arctan \left( \frac{2x + 3}{\sqrt{7}}
+            \right) 
+          </mrow>
+          <mrow>
+            \amp + \frac{31}{116} \ln |x^2+6| + \frac{49}{29\sqrt{6}}
+            \arctan \left( \frac{x}{\sqrt{6}} \right) + c 
+          </mrow>
+        </md>
       </solution>
     </activity>
   </subsection>
@@ -20,24 +1449,24 @@
     <p>
       <ul>
         <li>
-          Question
+          What is polynomial long division? Why does it work?
+        </li>
+        <li>
+          How is partial fractions the same as doing common
+          denominator in reverse?
+        </li>
+        <li>
+          Why do we need the technique of partial fractions to do
+          integrals of rational functions?
         </li>
       </ul>
     </p>
   </subsection>
-  <subsection xml:id="subsection-week5-extra-practice">
-    <title>Extra Practice Activities</title>
-    <activity>
-      <statement>
-        <p>
-          Question
-        </p>
-      </statement>
-      <solution>
-        <p>
-          Solution
-        </p>
-      </solution>
-    </activity>
-  </subsection>
 </section>
+
+
+
+
+
+
+

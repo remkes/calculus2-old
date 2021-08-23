@@ -1,17 +1,243 @@
 <section xml:id="section-week8-activity">
   <title>Week 8 Activity</title>
-  <subsection xml:id="subsection-activity-">
-    <title>Title</title>
+  <subsection xml:id="subsection-activity-volumes-slices">
+    <title>Volumes by Slices</title>
     <activity>
       <statement>
         <p>
-          Question
+          Calculate the volume of a cone of height <m>h</m> and base
+          radius <m>R</m>. 
         </p>
       </statement>
       <solution>
         <p>
-          Solution
+          I will assume the cone is pointing along the <m>y</m> axis
+          with its base at <m>y=h</m> and its tip at <m>y=0</m>. (This
+          standing the cone on its end is a bit odd, but it makes the
+          integral easier.) 
+          Horizontal slices (at various <m>y</m> values) have circular
+          cross sections. The radius of each horizontal slice grows
+          linearly from <m>0</m> are the origin to <m>R</m> at height
+          <m>y = h</m>. This slope is <m>r = \frac{Ry}{h}</m>, so I
+          can use this the radius term. The area is <m>\pi r^2</m> and
+          the range is <m>y \in [0,h]</m>. Now I can setup the
+          integral. 
         </p>
+        <me>
+          V = \int_0^h \frac{\pi y^2 r^2}{h^2} dy 
+        </me>
+        <p>
+          This is a reasonable polynomial integral. 
+        </p>
+        <me>
+          V = \frac{\pi r^2}{h^2} \int_0^h y^2 dy = \frac{\pi
+          r^2}{h^3} \frac{y^3}{3} \Bigg|_0^h = \frac{\pi
+          r^2}{h^2} \frac{h^3}{3} = \frac{\pi r^2 h}{3}
+        </me>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the volume of a surface of revolution formed by
+          rotating the function <m>f(x) = \ln x</m> about the <m>x</m>
+          axis in the range <m>x \in [1, e^2]</m> 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The setup for a surface of revolution is this integral.
+        </p>
+        <me>
+          V = \int_a^b \pi (f(x))^2 dx 
+        </me>
+        <p>
+          The function and the range are given, so I can just proceed
+          with the integral.
+        </p>
+        <me>
+          V = \int_1^{e^2} A dh = \int_1^{e^2} \pi (ln x)^2 dx = \pi
+          \int_1^{e^2} (\ln x)^2 dx 
+        </me>
+        <p>
+          I will integrate by parts, with <m>f = \ln x</m> and
+          <m>\frac{dg}{dx}  = \ln x</m>, so that <m>\frac{df}{dx} =
+          \frac{1}{x}</m> and <m>g = x \ln x - x</m>. (The
+          antiderivative of the logarithm is from the tables.) Then I
+          can proceed with the integral. 
+        </p>
+        <md>
+          <mrow>
+            V \amp = (\ln x)(x \ln x - x) \Bigg|_1^{e^2} - \int_1^{e^2}
+            \frac{1}{x} (x \ln x - x) dx 
+          </mrow>
+          <mrow>
+            \amp = (2)(2e^2 - e^2) - (0)(0-1) - \int_1^{e^2} \ln x - 1 dx 
+          </mrow>
+          <mrow>
+            \amp = 2e^2 - (x \ln x - x - x) \Bigg|_1^{e^2} 
+            = 2e^2 - (x \ln x - 2x ) \Bigg|_1^{e^2} 
+            = 2e^2 - (2 e^2 - 2 e^2 - 0 + 2) \Bigg|_1^{e^2} = 2e^2 - 2
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the volume of a tetrahedron of side length
+          <m>a</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The geometry is difficult to set up, and there are many
+          approaches.  I set one of the faces to be the base. On
+          that face, I'll let <m>b</m> be the distance from a vertex of
+          that face to the centre of the same face. I can split this
+          face into three isoceles trianges, each of which has side
+          lengths <m>b</m>, <m>b</m> and <m>a</m>, with angles
+          <m>\pi/6</m>, <m>\pi/6</m> and <m>2\pi/3</m>. I apply the
+          sine law to this triangle.
+        </p>
+        <me>
+          \frac{a}{\sin \frac{2\pi}{3}} = \frac{b}{\sin \frac{\pi}{6}}
+          \implies \frac{a}{\frac{\sqrt{3}}{2}} = \frac{1}{2} 
+        </me>
+        <p>
+          This implies <m>b = \frac{a}{\sqrt{3}}</m>. Then there is a
+          right triangle whose vertical are one vertex of the base,
+          the centre of the base, and the top vertex. This triangle
+          has hypotenuese <m>a</m>, base <m>b</m> and height <m>c</m>
+          where <m>c</m> is the height of tetrahedron, from the center
+          of the base to the top vertex. Pythagorus allows me to
+          calculate c: <m>c = \sqrt{a^2 - b^2} = \sqrt{\frac{2}{3}}
+          a</m>.
+        </p>
+        <p>
+          I'm going to slice the tetrahedron with horizontal plane
+          slices, stacked vertical. The previous calculation for
+          <m>c</m> gives us a bound for integration, so the integral
+          goves from <m>0</m> to <m>\sqrt{\frac{2}{3}}a</m>.  I'll
+          work with the variable <m>h</m> for height. Because it is
+          convenient, I'll say that <m>h</m> starts at zero at the top
+          vertex, and goes to <m>\sqrt{\frac{2}{3}}a</m> at the base.
+        </p>
+        <p>
+          I have to do some geometry to find the area of each slice.
+          slice. Each slice is an equilateral triangle, but what is
+          the side length (depending on <m>h</m>)? Recall the base
+          triangle: it has side length <m>a</m> when <m>h =
+          \sqrt{\frac{2}{3}}a</m>. This side length increases linearly
+          from <m>0</m> when <m>h=0</m> to <m>a</m> when <m>h =
+          \sqrt{\frac{2}{3}}a</m>. The final result gives the solve of
+          the linear relationship.  Therefore, for <m>h \in [0,
+          \sqrt{\frac{2}{3}}a ]</m>, the side length of the triangle
+          at height <m>h</m> is <m>\sqrt{\frac{3}{2}}h</m>.
+        </p>
+        <p>
+          An equilateral triangle with side length <m>s</m> is
+          <m>\frac{\sqrt{3}a^2}{4}</m>. This gives the area of each
+          slice. 
+        </p>
+        <me>
+          A = \frac{\sqrt{3}}{4} \left( \sqrt{ \frac{3}{2}} h
+          \right)^2 = \frac{\sqrt{3}}{4} \frac{3}{2} h^2 =
+          \frac{3\sqrt{3}h^2}{8}
+        </me>
+        <p>
+          Then I can setup the integral of the slices. 
+        </p>
+        <me>
+          V = \int_0^{\sqrt{\frac{3}{2}}a} A(h) dh =
+          \int_0^{\sqrt{\frac{3}{2}}a}  \frac{3\sqrt{3}h^2}{8} dh
+        </me>
+        <p>
+          This is a reasonable polynomial integral.
+        </p>
+        <me>
+          V = \frac{3\sqrt{3}}{8} \int_0^{\sqrt{\frac{3}{2}}a} h^2 dh
+          = \frac{3\sqrt{3}}{8} \frac{h^3}{3}
+          \Bigg|_0^{\sqrt{\frac{3}{2}}a}  
+          = \frac{\sqrt{3}}{8} \left( \sqrt{\frac{2}{3}} a \right)^3
+          = \frac{\sqrt{3}}{8} \frac{2\sqrt{2}}{3\sqrt{3}} a^3 =
+          \frac{a^3}{6\sqrt{2}}
+        </me>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="subsection-activity-volumes-shells">
+    <title>Volume by Shells</title>
+    <activity>
+      <statement>
+        <p>
+          Calculate the volume of the object formed by taking the
+          triangle with vertices <m>(3,0)</m>, <m>(5,0</m> and
+          <m>(3,4)</m> and rotating it about the <m>y</m> axis. 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          I need to determine the function to use for cylindrical
+          shells. The height of the triangle over the <m>x</m> axis is
+          given by the diagonal line from <m>(3,4)</m> to <m>(5,0)</m>. 
+          That line has equation <m>y = -2x + 10</m>.
+          Therefore, I can take <m>f(x) = -2x + 10</m> as the function.
+          The function is the height of the cylinder, and its
+          circumference is <m>2\pi x</m>. Its area is <m>2\pi x
+          f(x)</m>. Then I set up the integral. The resulting integral
+          is a reasonable polynomial integral. 
+        </p>
+        <md>
+          <mrow>
+            V \amp = \int_a^b 2\pi x f(x) dx = \int_3^5 2\pi x (-2x +
+            10) dx
+          </mrow>
+          <mrow>
+            \amp = -4\pi \int_3^5 x^2 dx + 20 \pi \int_3^5 x dx =
+            \frac{-4\pi x^3}{3} \Bigg|_3^5 + \frac{20\pi x^2}{2}
+            \Bigg|_3^5 
+          </mrow>
+          <mrow>
+            \amp = \frac{-4\pi}{3} (125 - 27) + 10 \pi (25 - 9) =
+            \frac{-4\pi (98)}{3} + 10 \pi (16) 
+          </mrow>
+          <mrow>
+            \amp = \frac{(-392 + 480)\pi}{3} = \frac{88\pi}{3}
+          </mrow>
+        </md>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the volume of the object formed by taking the 
+          graph of <m>\sin x</m> with <m>x \in [0,\pi]</m> and
+          rotating it about the <m>y</m> axis. 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The function <m>f(x) = \sin (x)</m> gives the height of the
+          cylindrical shells. The radius is <m>x</m>, so the
+          circumference of the shell is <m>2\pi x</m> and the area is
+          <m>2\pi x \sin x</m>.  Then I integrate in <m>x</m> over the
+          range <m>[0, \pi]</m>. In the integral, I use integrate by
+          parts with <m>g(x) = x</m> and <m>\frac{df}{dx} = \sin
+          x</m>, so that <m>\frac{dg}{dx} = 1</m> and <m>f = -\cos
+          x</m>.
+        </p>
+        <md>
+          <mrow>
+            V \amp = \int_a^b 2\pi x f(x) dx = \int_0^{\pi} 2\pi x
+            \sin x dx 
+          </mrow>
+          <mrow>
+            \amp = 2\pi \left[ -x \cos x \Bigg|_0^{\pi} +
+            \int_0^{\pi} \cos x dx \right] = 2 \pi \left[ -\pi (-1) +
+            0 \cdot 1 - \sin x \Bigg|_0^{\pi} \right] = 2\pi^2
+          </mrow>
+        </md>
       </solution>
     </activity>
   </subsection>
@@ -20,24 +246,16 @@
     <p>
       <ul>
         <li>
-          Question
+          What is a surface of revolution?
+        </li>
+        <li>
+          Why are integrals used to calculate volumes? 
+        </li>
+        <li>
+          What is different about shells and slices as ways of
+          calculating volumes? 
         </li>
       </ul>
     </p>
-  </subsection>
-  <subsection xml:id="subsection-week8-extra-practice">
-    <title>Extra Practice Activities</title>
-    <activity>
-      <statement>
-        <p>
-          Question
-        </p>
-      </statement>
-      <solution>
-        <p>
-          Solution
-        </p>
-      </solution>
-    </activity>
   </subsection>
 </section>

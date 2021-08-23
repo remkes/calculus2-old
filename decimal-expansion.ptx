@@ -8,44 +8,50 @@
   </p>
   <p>
     The starting question: what are decimal expansions and why do
-    infinite strings of decimals actually represent numbers? Let's
-    write a real number <m>\alpha</m> as <m>a.d_1d_2d_3d_4 \ldots</m>
+    infinite strings of decimals actually represent numbers? A real
+    number (in some setting, this is the definition) 
+    is an expression <m>a.d_1d_2d_3d_4 \ldots</m>
     where <m>a \in \NN</m> and the <m>d_i</m> are digits in <m>\{0, 1,
-    \ldots, 9\}</m>. The meaning of this decimal expansion is an
-    infinite series.
-    <me>
-      a + \frac{d_1}{10} + \frac{d_2}{100} + \frac{d_3}{1000} +
-      \frac{d_4}{10000} + \frac{d_5}{100000} + \ldots \implies \alpha
-      = a + \sum_{n=1}^\infty \frac{d_n}{10^n}
-    </me>
+    \ldots, 9\}</m>. (The digits could be in any base, of course, but
+    the base 10 is conventional.) What is the meaning of this decimal
+    notation? This is actually an infinite series. Let me write
+    what the decimal expansion stands for. 
   </p>
+  <me>
+    a + \frac{d_1}{10} + \frac{d_2}{100} + \frac{d_3}{1000} +
+    \frac{d_4}{10000} + \frac{d_5}{100000} + \ldots 
+    = a + \sum_{n=1}^\infty \frac{d_n}{10^n}
+  </me>
   <p>
     Asymptotically, since the numerators are bounded by <m>9</m>, this
     series behaves like <m>\frac{1}{10^n}</m>. The terms
     <m>\frac{1}{10^n}</m> are terms of a geometric series with common
     ratio <m>\frac{1}{10}</m>, which is convergent, so the decimal
-    expansion is also convergent. Therefore, we can be confident that
-    decimal expansions, though infinite, are a reasonable
-    representation of real numbers.
+    expansion is also convergent. Therefore, I can be confident that
+    all decimal expansions, though infinite, are convergent infinite
+    series and do actually represent numbers. The infinity in decimals
+    expansions is not a threat to their existence. 
   </p>
   <p>
-    Now think about the partial sums of a decimal expansion.
-    <me>
-      s_n = a + \sum_{k=1}^\infty \frac{d_k}{10^k}
-    </me>
+    I'm going to finish this section by proving a notable and useful
+    fact about real numbers. I'm going to start by thinking about the
+    partial sums of a decimal expansion.
   </p>
+  <me>
+    s_n = a + \sum_{k=1}^n \frac{d_k}{10^k}
+  </me>
   <p>
-    These are all finite sums of fractions, hence they are rational
-    numbers. Any real number <m>\alpha</m> is the limit of sums of
-    this type, since its decimal expansion is the limit of the partial
-    series sums. This establishes an important and useful fact about
-    real numbers (sometimes even taken as the definition of real
-    numbers)
+    These partial sums are all finite sums of fractions, hence they
+    are rational numbers. Any real number <m>\alpha</m> is the limit
+    of sums of this type, since its decimal expansion is the limit of
+    the partial series sums. In some context, the following result is
+    the definition of a real number.
   </p>
   <proposition>
     <statement>
       <p>
-        All real numbers are limits of sequences of rational numbers.
+        All real numbers are limits of convergent sequences of
+        rational numbers.
       </p>
     </statement>
   </proposition>

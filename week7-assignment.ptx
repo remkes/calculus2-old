@@ -6,8 +6,73 @@
   <p><ol>
     <li>
       <p>
-        Question. 
+        Calcluate the slope of this parametric curve. Identity any
+        vertical tangents by finding places where the slope approaches
+        infinity. (4)
       </p>
+      <md>
+        <mrow>
+          \gamma(t) = (\sin (2t), \cos (3t)) \amp \amp t \in [0, 2\pi] 
+        </mrow>
+      </md>
+    </li>
+    <li>
+      <p>
+        Calcluate the slope of this parametric curve. Identity any
+        vertical tangents by finding places where the slope approaches
+        infinity. (4)
+      </p>
+      <md>
+        <mrow>
+          \gamma(t) = \left( t, \frac{1}{t^2+1} \right) \amp \amp t \in
+          [0, \infty) 
+        </mrow>
+      </md>
+    </li>
+    <li>
+      <p>
+        Calcluate the slope of this parametric curve. Identity any
+        vertical tangents by finding places where the slope approaches
+        infinity. (4)
+      </p>
+      <md>
+        <mrow>
+          \gamma(t) = \left( e^{t^2-1}, e^{t^2+1} \right) \amp \amp t
+          \in [0, \infty)
+        </mrow>
+      </md>
+    </li>
+    <li>
+      <p>
+        Calcluate the slope of this parametric curve. Identity any
+        vertical tangents by finding places where the slope approaches
+        infinity. (4)
+      </p>
+      <md>
+        <mrow>
+          \gamma(t) = (e^t \sin t, e^{-t} \cos t) \amp \amp t \in [0,
+          \infty) 
+        </mrow>
+      </md>
+    </li>
+    <li>
+      <p>
+        An object is moving outward in a vortex which has the shape of an
+        archimedian spiral. If it starts at the origin and reaches a
+        radius of 10m after it completes exctly 4 full revolutions, 
+        how far has the object travelled? (6) 
+      </p>
+    </li>
+    <li>
+      <p>
+        Parametrize this curve by arclength. (8)
+      </p>
+      <md>
+        <mrow>
+          \gamma(t) = \left( \frac{t^2}{2}, \frac{t^3}{3} \right) t
+          \in [0, \infty) 
+        </mrow>
+      </md>
     </li>
   </ol></p>
 </section>

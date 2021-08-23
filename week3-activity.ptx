@@ -243,10 +243,10 @@
             \frac{d}{dx} y^2 \amp = \frac{d}{dx} (x-3)^2 (x-4)^2 
           </mrow>
           <mrow>
-            2y \frac{dy}{dx} \amp = (x-3)(x-4)^2 + (x-3)^2(x-4)
+            2y \frac{dy}{dx} \amp = 2(x-3)(x-4)^2 + 2(x-3)^2(x-4)
           </mrow>
           <mrow>
-            \frac{dy}{dx} \amp = \frac{(x-3)(x-4)^2 + (x-3)^2(x-4)}{2y} 
+            \frac{dy}{dx} \amp = \frac{2(x-3)(x-4)^2 + 2(x-3)^2(x-4)}{2y} 
           </mrow>
         </md>
         <p>
@@ -355,7 +355,7 @@
           </mrow>
           <mrow>
             \frac{dy}{dx} \amp = \pm \frac{(x-1)(x-2) + x(x-2) +
-            x(x-1)}{\sqrt{x(x-1)(x-2)}}
+            x(x-1)}{2\sqrt{x(x-1)(x-2)}}
           </mrow>
         </md>
         <p>
@@ -372,23 +372,23 @@
         <md>
           <mrow>
             \amp \lim_{x \rightarrow 0} \frac{dy}{dx} = 
-            \lim_{x \rightarrow 0} \pm \frac{(x-1)(x-2) + x(x-2) +
-            x(x-1)}{\sqrt{x(x-1)(x-2)}}
+            \frac{1}{2} \lim_{x \rightarrow 0} \pm \frac{(x-1)(x-2) +
+            x(x-2) + x(x-1)}{\sqrt{x(x-1)(x-2)}}
           </mrow>
           <mrow>
-            \amp = \lim_{x \rightarrow 0} \pm \left[
+            \amp = \frac{1}{2} \lim_{x \rightarrow 0} \pm \left[
             \frac{(x-1)(x-2)}{\sqrt{x(x-1)(x-2)}}  +
             \frac{x(x-2)}{\sqrt{x(x-1)(x-2)}}  +
             \frac{x(x-1)}{\sqrt{x(x-1)(x-2)}} \right] 
           </mrow>
           <mrow>
-            \amp = \lim_{x \rightarrow 0} \pm \left[
+            \amp = \frac{1}{2} \lim_{x \rightarrow 0} \pm \left[
             \frac{\sqrt{(x-1)(x-2)}}{\sqrt{x}}  +
             \frac{\sqrt{x(x-2)}}{\sqrt{x-1}}  +
             \frac{\sqrt{x(x-1)}}{\sqrt{x-2}} \right]
           </mrow>
           <mrow>
-            \amp = \pm \left[ \lim_{x \rightarrow 0} 
+            \amp = \pm \frac{1}{2} \left[ \lim_{x \rightarrow 0} 
             \frac{\sqrt{(x-1)(x-2)}}{\sqrt{x}}  +
             \lim_{x \rightarrow 0} \frac{\sqrt{x(x-2)}}{\sqrt{x-1}}  +
             \lim_{x \rightarrow 0} \frac{\sqrt{x(x-1)}}{\sqrt{x-2}}
@@ -405,11 +405,11 @@
         <md>
           <mrow>
             \lim_{x \rightarrow 1} \frac{dy}{dx} \amp = 
-            \lim_{x \rightarrow 1} \pm \frac{(x-1)(x-2) + x(x-2) +
-            x(x-1)}{\sqrt{x(x-1)(x-2)}}
+            \frac{1}{2} \lim_{x \rightarrow 1} \pm \frac{(x-1)(x-2) +
+            x(x-2) + x(x-1)}{\sqrt{x(x-1)(x-2)}}
           </mrow>
           <mrow>
-            \amp = \pm \left[ \lim_{x \rightarrow 1}
+            \amp = \pm \frac{1}{2} \left[ \lim_{x \rightarrow 1}
             \frac{\sqrt{(x-1)(x-2)}}{\sqrt{x}} + \lim_{x \rightarrow
             1} \frac{\sqrt{x(x-2)}}{\sqrt{x-1}} + \lim_{x \rightarrow
             1} \frac{\sqrt{x(x-1)}}{\sqrt{x-2}} \right] 
@@ -425,11 +425,11 @@
         <md>
           <mrow>
             \lim_{x \rightarrow 2} \frac{dy}{dx} \amp = 
-            \lim_{x \rightarrow 2} \pm \frac{(x-1)(x-2) + x(x-2) +
-            x(x-1)}{\sqrt{x(x-1)(x-2)}}
+            \frac{1}{2} \lim_{x \rightarrow 2} \pm \frac{(x-1)(x-2) +
+            x(x-2) + x(x-1)}{\sqrt{x(x-1)(x-2)}}
           </mrow>
           <mrow>
-            \amp = \pm \left[ \lim_{x \rightarrow 2}
+            \amp = \pm \frac{1}{2} \left[ \lim_{x \rightarrow 2}
             \frac{\sqrt{(x-1)(x-2)}}{\sqrt{x}} + \lim_{x \rightarrow
             2} \frac{\sqrt{x(x-2)}}{\sqrt{x-1}} + \lim_{x \rightarrow
             2} \frac{\sqrt{x(x-1)}}{\sqrt{x-2}}

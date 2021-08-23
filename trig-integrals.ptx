@@ -1,37 +1,153 @@
 <section xml:id="section-trig-integrals">
   <title>Trigonometric Integrals</title>
-  <subsection xml:id="subsecdtion-trig-integrals-strategies">
-    <title>Strategies</title>
+  <introduction>
     <p>
-      The trigonometric integrals we've seen so far have been simple
-      anti-derivatives or integrals found on standard tables. In this
-      section, we want to expand our repertoire for trigonometric
-      integrals. We will mostly be considering integrands which are
-      products of trigonometric functions, such as <m>\sin^2 x \cos^3
-      x</m> or <m>\tan^4 x \sec^2 x</m>.
+      This weeks sections will complete the study of the techniques
+      of integration. I'll start with integrals involving
+      trigonometric functions.  The trigonometric integrals in the
+      tables are limited to a small number of basic antiderivatives. In
+      this section, I want to expand the repertoire for trigonometric
+      integrals. (Though you don't need to memorize, it is valuable to
+      be familiar with which trig functions are already in the tables
+      for antiderivatives. This can save you a bunch of work if you
+      find a trig function which is on the table and you can simply
+      look up the antiderivative.) 
+    </p>
+  </introduction>
+  <subsection xml:id="subsecdtion-trig-integrals-strategies">
+    <title>Strategies for Products and Quotients</title>
+    <p>
+      I will first consider integrands which are products of
+      trigonometric functions, such as <m>\sin^2 x \cos^3 x</m> or
+      <m>\tan^4 x \sec^2 x</m>. In particular, these types of integral
+      are useful for the technique in <xref
+      ref="section-trig-substitutions" />. 
     </p>
     <p>
-      There are several strategies, depending on the form of the
-      integrand. We have a lot of flexibility with trigonometric
-      functions, due to the many identities we can apply. There are
-      two general strategies. First, it is often helpful to translate
-      everything into sine and cosine. Second, working in the
-      opposite direction, it is often helpful to use trig definition
-      to remove fractions, so that we only have numerators.
+      When I have a product or quotient of trig functions, there are
+      two main strategies I want to apply.
+    </p>
+    <ol>
+      <li><p>
+        Change everthing into sine and cosines, to hopefully use a
+        substitution <m>u = \sin x</m> or <m>u = \cos x</m>. 
+      </p></li>
+      <li><p>
+        Use tangent, secant, cosecant and cotangent to write
+        everything in the the numerator and see if a substitution
+        involving trig functions other than sine or cosine is
+        reasonable.
+      </p></li>
+    </ol>
+    <p>
+      There is no guarantee (as always, with integrals) that either of
+      these strategies will work. However, they are successful in many
+      examples. Instead of further discussion the strategy in the
+      abstract, I'll move on to examples of both of these techniques.
+      However, before the examples, I want to introduce another idea
+      that can save a lot of calcultion.
+    </p>
+  </subsection>
+  <subsection xml:id="subsecdtion-trig-integrals-symmetry">
+  <title>Symmetry and Definite Integrals</title>
+    <p>
+      The basic trig functions oscillate up and down. When I integrate
+      a trig function, I often will have area above and below the axis
+      form this oscillation. Sometimes, if the trig functions have a
+      particular form, the areas above and below will cancel off and
+      the integral will be zero. If I am observant, I might be able to
+      notice this fact before even starting a calculation. If I can
+      notice this, I'll say the integral is zero by symmetry. Consider
+      this first example:
+    </p>
+    <me>
+      \int_0^{2\pi} \sin x dx 
+    </me>
+    <p>
+      This is an integral over a full period of the sine function. In
+      a full period, there are equal pieces above and below the axis,
+      therefore this integral is zero by symmetry. I don't need to
+      calculate it <emdash /> I just need to observe that it must be
+      zero. 
+    </p>
+    <p>
+      Integrals over one period are the most obvious case of this
+      symmetry argument, but it applies more broadly. Consider this
+      inetgral.
+    </p>
+    <me>
+      \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \cos x dx 
+    </me>
+    <p>
+      This is an integral over half a period, so the full period
+      argument doesn't apply. However, on this half-period, cosine
+      still is symmetric above and below the axis. On <m>\left[
+      \frac{-\pi}{2}, 0 \right]</m>, cosine is negative. On <m>
+      \left[0, \frac{\pi}{2} \right]</m>, cosine is positive. These
+      two shapes and areas are identical, so these two areas cancel
+      out and the integral is zero. 
+    </p>
+    <p>
+      If I take an odd power of a trig function, this argument still
+      works. 
+    </p>
+    <me>
+      \int_0^{2\pi} \sin^7 x dx 
+    </me>
+    <p>
+      This is an integral over a whole period. The positive and
+      negative parts are still perfect mirrors of each other, so this
+      integral is zero. Note, however, that this doesn't work for even
+      powers. If I integrate <m>\sin^2 x</m> over a whole period, I do
+      not get zero. When I take an even power, the result is always
+      positive; there are no pieces at all below thte axis to cancel
+      off. 
+    </p>
+    <p>
+      Finally, adjustments of period can come into play. Consider this
+      integral. 
+    </p>
+    <me>
+      \int_0^{\frac{2\pi}{3}} \sin (3x) dx 
+    </me>
+    <p>
+      In <m>\sin (3x)</m>, the period is one third of the original
+      period. The bounds of this integral are likewise also one third of
+      the conventional period. Therefore, this is also an integral
+      over a whole period, so the positive and negative pieces of the
+      integral cancel off and the integral must be zero.
     </p>
   </subsection>
   <subsection xml:id="subsecdtion-trig-integrals-examples">
   <title>Examples</title>
     <p>
-      We first look at integrands which involve sine and cosine. Here
-      there are also several strategies. The first strategy is
-      substitution, if it works. The most obvious case is when we have
-      an expression entirely involving sine which is multiplied by
-      cosine, or vice-versa. These integrals allow for an easy
-      substitution.
+      The goal of the first technique to change everything to sine or
+      cosine is to use a substitution with either of those functions.
+      If <m>u = \sin x</m> then <m>du = -\cos x dx</m>; the sine
+      substitution needs a cosine with the <m>dx</m> term. The same is
+      true for the cosine substitution: it needs a sine with the
+      <m>dx</m> term. Therefore, changing everything to sine or cosine
+      is going to be successful if I can make everything into sine,
+      leaving only <m>\cos x dx</m> or vice verse, make everything
+      into cosine leaving only <m>\sin x dx</m>. The definitions of
+      the other four trig functions 
+      can be used to write everything in terms of sine
+      and cosine. Then the square identity (<m>\sin^2 x + \cos^2 x =
+      1</m>) can be used to change any instance of <m>\sin^2 x</m>
+      into <m>1 - \cos^2 x</m>, or vice versa. If these manipulations
+      can be done to leave only one sine or only one cosine, then this
+      strategy will be effective.
     </p>
     <example>
       <statement>
+        <p>
+          Here is an integral that is already setup for the
+          sine/cosine strategy. Since there is only one sine function,
+          it can act as the derivative of the <m>u = \cos x</m>
+          substitution. I proceed with the substitution, after which I
+          split this up into two integrals in <m>u</m>, integrate, and
+          reverse the substitution. 
+        </p>
         <md>
           <mrow>
             \int \frac{(1-\cos^4 x)}{\cos^2 x} \sin x dx \amp
@@ -44,281 +160,252 @@
           </mrow>
           <mrow>
             \int \frac{(1-\cos^4 x)}{\cos^2 x} \sin x dx \amp = -
-            \int \frac{1-u^4}{u^2} = -\int \frac{1}{u^2} du + \int u^2
-            du = \frac{1}{u} + \frac{u^3}{3} + C
+            \int \frac{1-u^4}{u^2} du = -\int \frac{1}{u^2} du + \int
+            u^2 du 
           </mrow>
           <mrow>
-            \amp = \sec x + \frac{\cos^3 x}{3} + c
+            \amp = \frac{1}{u} + \frac{u^3}{3} + c = \sec x +
+            \frac{\cos^3 x}{3} + c
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          Here cosine shows up with an odd exponent. I want to use the
+          square identity to change all but one power into sine. I
+          can write <m>\cos^5 x</m> as <m>(\cos^4 x)(\cos x)</m>. Then
+          I can write <m>\cos^4 x</m> as <m>(\cos^2 x)^2</m>. Finally,
+          I can replace <m>\cos^2 x</m> with <m>(1-\sin^2 x)</m>.
+          After those replacements, I use do the substitution <m>u =
+          \sin x</m>, do the polynomial integral, and then reverse the
+          substitution at the end. 
+        </p>
+        <md>
+          <mrow>
+            \int \sin^2 x \cos^5 x dx \amp = \int \sin^2 x \cos^4 x
+            \cos x dx
+          </mrow>
+          <mrow>
+            \amp = \sin^2 x (1-\sin^2 x)^2 \cos x dx
+          </mrow>
+          <mrow>
+            u \amp = \sin x
+          </mrow>
+          <mrow>
+            du \amp = \cos x dx
+          </mrow>
+          <mrow>
+            \amp = \int u^2 (1-u^2)^2 du = \int u^2 - 2u^4 + u^6 du
+          </mrow>
+          <mrow>
+            \amp = \frac{u^3}{3} - \frac{2u^5}{5} + \frac{u^7}{7} +
+            c
+          </mrow>
+          <mrow>
+            \amp = \frac{\sin^3 x}{3} - \frac{2\sin^5 x}{5} +
+            \frac{\sin^7 x}{7} + c
           </mrow>
         </md>
       </statement>
     </example>
     <p>
-      If a sine or cosine terms shows up with an odd exponent, such as
-      <m>\sin^7 x</m> or <m>\cos^3 x</m>, we can make use of the
-      standard identity <m>\sin^2 + \cos^2 =1</m> to remove all but one
-      of the sine or cosine terms. This can be a way to make more
-      complicated examples into easy substitutions.
-    </p>
-    <example>
-      <statement>
-        <p>
-          Here cosine shows up with an odd exponent. We change all but
-          one power of cosine into sine and then use the obvious
-          substitution.
-          <md>
-            <mrow>
-              \int \sin^2 x \cos^5 x dx \amp = \int \sin^2 x \cos^4 x
-              \cos x dx
-            </mrow>
-            <mrow>
-              \amp = \sin^2 x (1-\sin^2 x)^2 \cos x dx
-            </mrow>
-            <mrow>
-              \amp = \int u^2 (1-u^2)^2 du = \int u^2 - 2u^4 + u^6 du
-            </mrow>
-            <mrow>
-              \amp = \frac{u^3}{3} - \frac{2u^5}{5} + \frac{u^7}{7} +
-              c
-            </mrow>
-            <mrow>
-              \amp = \frac{\sin^3 x}{3} - \frac{2\sin^5 x}{5} +
-              \frac{\sin^7 x}{7} + c
-            </mrow>
-          </md>
-        </p>
-      </statement>
-    </example>
-    <p>
-      If we have an expression in sine and cosine where both have even
-      powers, the previous trick doesn't help. However, we can use
-      half-angle identities to reduce the exponents. The next example
+      So far, I have been looking for situations where I
+      could isolate sine or cosine and change everything into the
+      other function. If sine and cosine show up both with even
+      powers, then this is impossible to do with the square identity.
+      However, if both show up with an even exponent, I can use the
+      half-angle identities instead. The next example
       shows the use of these half-angle identities and the resulting
       (admittedly complicated) algebra to finish the integral.
     </p>
     <example>
       <statement>
         <p>
-          In this example, note that the half-angle identities are used
-          again in the fourth line, and that the subsitution <m>u = \sin
-          t</m> is is also seen in the fourth line.
-          <md>
-            <mrow>
-              \int_0^\pi \sin^2 t \cos^4 t dt \amp = \int_0^\pi \left(
-              \frac{1-\cos2t}{2} \right) \left( \frac{1 + \cos2t}{2}
-              \right)^2 dt
-            </mrow>
-            <mrow>
-              \amp = \frac{1}{8} \int_0^\pi (1-\cos 2t) (1+ 2 \cos 2t +
-              \cos^2 2t) dt
-            </mrow>
-            <mrow>
-              \amp = \frac{1}{8} \left( \int_0^\pi dt + \int_0^\pi \cos
-              2t dt - \int_0^\pi \cos^2 t dt - \int_0^\pi \cos^3 2t dt
-              \right)
-            </mrow>
-            <mrow>
-              \amp = \frac{1}{8} \left( \pi + \left. \frac{\sin 2t}{2}
-              \right|_0^\pi - \int_0^\pi \frac{1 + \cos 4t}{2} dt -
-              \int_0^1 (1-\sin^2 2t) \cos 2t dt \right)
-            </mrow>
-            <mrow>
-              \amp = \frac{1}{8} \left( \pi + 0 - \int_0^\pi
-              \frac{1}{2} dt - \int_0^\pi \frac{\cos 4t}{2}dt -
-              \frac{1}{2} \int_{x=0}^{x=\pi} (1-u^2) du \right)
-            </mrow>
-            <mrow>
-              \amp = \frac{1}{8} \left( \pi - \frac{\pi}{2} - \left.
-              \frac{\sin 4t}{8} \right|_0^\pi - \left. \frac{1}{2}
-              \left( u - \frac{u^3}{3} \right) \right|_{x=0}^{x=\pi}
-              \right)
-            </mrow>
-            <mrow>
-              \amp = \frac{1}{8} \left( \pi - \frac{\pi}{2} - 0 -
-              \frac{1}{2} \left. \left( \sin 2u - \frac{\sin^3 2u}{3}
-              \right) \right|_0^\pi \right)
-            </mrow>
-            <mrow>
-              \amp = \frac{1}{8} \frac{\pi}{2} = \frac{\pi}{16}
-            </mrow>
-          </md>
+          Here, I have even powers of both sine and cosine. By writing
+          <m>\cos^4 t</m> as <m>(\cos^2 t)^2</m>, I can replace both
+          <m>\sin^2 t</m> and <m>\cos^2 y</m> by their half-angle
+          identities. After this substitution, I expand the various
+          binomials and split up the resulting integral by linearity. 
         </p>
-      </statement>
-    </example>
-    <p>
-      Sometime when we try to work without denominators, we can't
-      express everything in terms of sine and cosine. However, there
-      are integrals than can be entirely expressed in terms of tangents
-      and secant (or cotangent and cosecent). Like sine and cosine
-      above, there are some nice strategies for integrals involving
-      tangent and secant. We can change squares of tangents into
-      squares of secant using <m>1 + \tan^2 x = \sec^2 x</m>. We also
-      know that <m>\frac{d}{dx} \tan x = \sec^2 x</m>, so if we can
-      isolate a <m>\sec^2 x</m> term in an integrand and express
-      everything else in terms of tangent, a substitution of <m>u = \tan
-      x</m> should work nicely.
-    </p>
-    <example>
-      <statement>
-        <p>
-          Here is an example of a tangent/secant integrand, which we can
-          solve two ways. In the first method, we convert everything to
-          cosine and sine and use the techniques mentioned previously.
-          We work towards a substitution <m>u = \cos x</m> with <m>du =
-          -\sin x dx</m> and <m>u(0) = 1</m>, <m>u(\frac{\pi}{3}) =
-          \frac{1}{2}</m>.
-          <md>
-            <mrow>
-              \int_0^{\frac{\pi}{3}} \tan^5 x \sec^4 x dx \amp =
-              \int_0^{\frac{\pi}{3}} \frac{\sin^5 x}{\cos^{9} x} dx
-            </mrow>
-            <mrow>
-              \amp = \int_0^{\frac{\pi}{3}} \frac{(1-\cos^2
-              x)^2}{\cos^{9} x} \sin x dx
-            </mrow>
-            <mrow>
-              \amp = -\int_1^{\frac{1}{2}} \frac{(1-u^2)^2}{u^{9}} du =
-              \int_{\frac{1}{2}}^1 \frac{1 - 2u^2 + u^4}{u^{9}} du
-            </mrow>
-            <mrow>
-              \amp = \int_{\frac{1}{2}}^1 \frac{1}{u^{9}} -
-              \frac{2}{u^7} + \frac{1}{u^5} du = \left. \left(
-              \frac{-1}{8u^{8}} + \frac{2}{6u^6} - \frac{1}{4u^4}
-              \right) \right|_{\frac{1}{2}}^1
-            </mrow>
-            <mrow>
-              \amp = \left( \frac{-1}{8} + \frac{1}{3} - \frac{1}{4} +
-              \frac{2^{8}}{8} - \frac{2^6}{3} + \frac{2^4}{4} \right)
-            </mrow>
-            <mrow>
-              \amp = \frac{-3+8-6+2^{8}\cdot 3 - 2^6 \cdot 8 + 2^4
-              \cdot 6}{24}
-            </mrow>
-            <mrow>\amp = \frac{-3+8-6+768-512+96}{24} = \frac{351}{24}
-            = \frac{117}{8}
+        <md>
+          <mrow>
+            \amp \int_0^\pi \sin^2 t \cos^4 t dt 
           </mrow>
-          </md>
-        </p>
+          <mrow>
+            \amp = \int_0^\pi \left(
+            \frac{1-\cos (2t)}{2} \right) \left( \frac{1 + \cos
+            (2t)}{2} \right)^2 dt
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{8} \int_0^\pi (1-\cos (2t)) (1+ 2 \cos
+            (2t) + \cos^2 (2t)) dt
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{8} \left( \int_0^\pi dt + \int_0^\pi \cos
+            (2t) dt - \int_0^\pi \cos^2 (2t) dt - \int_0^\pi \cos^3
+            (2t) dt \right)
+          </mrow>
+        </md>
         <p>
-          Instead of changing the previous example to sine and cosine,
-          we can isolate an <m>\sec^2 x</m> and use the substitution
-          <m>u = \tan x</m> with <m>du = \sec^2 x dx</m> and <m>u(0) =
-          0</m>, <m>u\left(\frac{\pi}{3} \right) = \sqrt{3}</m>.
-          <md>
-            <mrow>
-              \int_0^{\frac{\pi}{3}} \tan^5 x \sec^4 x dx \amp =
-              \int_0^{\frac{\pi}{3}} \tan^5 x (1 + \tan^2 x) \sec^2 x
-              dx
-            </mrow>
-            <mrow>
-              \amp = \int_0^{\sqrt{3}} u^5 (1+u^2) du =
-              \int_0^{\sqrt{3}} u^5 + u^7 du = \left. \frac{u^6}{6} +
-              \frac{u^8}{8} \right|_0^{\sqrt{3}} 
-           </mrow>
-            <mrow>
-              \amp = \frac{3^3}{6} + \frac{3^4}{8} = \frac{4\cdot 3^3
-              + 3\cdot 3^4}{24} = \frac{108 + 243}{24} =
-              \frac{351}{24} = \frac{117}{8}
-           </mrow>
-          </md>
+          The first and second of these integrals can be done
+          directly. For the third, since it is an isolated even power,
+          I can repeat the half-angle identity replacement. (Note that
+          since this is already <m>\cos (2t)</m>, the half-angle will
+          give <m>\cos (4t)</m>. The fourth integral is zero by
+          symmetry. The period of <m>\cos (2t)</m> is <m>\pi</m> and
+          the integral is over this whole period.  Since this is an
+          odd power of cosine, the positive and negative pieces still
+          cancel out. 
         </p>
+        <md>
+          <mrow>
+            \amp = \frac{1}{8} \left(\pi + \frac{\sin (2t)}{2}
+            \Bigg|_0^\pi - \int_0^\pi \frac{1 + \cos (4t)}{2} dt -
+            0 \right)
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{8} \left( \pi + 0 - \int_0^\pi
+            \frac{1}{2} dt - \int_0^\pi \frac{\cos (4t)}{2}dt
+            \right)
+          </mrow>
+        </md>
+        <p>
+          I've split the last integral up into two pieces by
+          linearity. Both of these pieces are now reasonable
+          integrals, so I can directly find antiderivatives, evaluate
+          on the bounds, and finish the example. 
+        </p>
+        <md>
+          <mrow>
+            \amp = \frac{1}{8} \left( \pi - \frac{\pi}{2} - 
+            \frac{\sin 4t}{8} \Bigg|_0^\pi \right)
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{8} \left( \pi - \frac{\pi}{2} - 0 -
+            \right) = \frac{1}{8} \frac{\pi}{2} = \frac{\pi}{16}
+          </mrow>
+        </md>
       </statement>
     </example>
     <p>
-      Other forms of trigonometric integrals call for the use of other
-      identities. Since there are so many types of trigonometric
-      function and trigonometric identity, often these integrals require
-      creativity and persistance. Also, because of all the identities
-      involved, there are often numerous successful approaches. This
-      should be celebrated, but it does require caution: often two
-      answers from two different process can look very dissimilar. Both
-      may be correct anti-derivatives, but a long and complicated series
-      of identities would be required to relate them. It's very useful
-      to remember that correct answers can have very different forms
-      while still being equal.
+      The second strategy for trig integrals is to write everything as
+      numerators and possibly use another substitution of a trig
+      function. The next example makes use of the 
+      derivative patterns of tangent and secant and the identity 
+      <m>1 + \tan^2 x = \sec^2 x</m>. Specifically, 
+      with the derivative  <m>\frac{d}{dx} \tan x = \sec^2 x</m>, if
+      everything is expressed as tangent except a lone <m>\sec^2
+      x</m> term, then ths substitution <m>u = \tan x</m> should work
+      nicely.
     </p>
     <example>
       <statement>
         <p>
-          We will finish this section with some other uses of
-          trigonometric identities to simplify integrand. Here's an
-          integrand with mismatched frequency terms.
-          <me>
-            \int \sin 2x \cos 5x dx
-          </me>
+          This example is already given entirely as tangents and
+          secants, with everything in the numerator. The power of
+          secant is even, so I can solve <m>\sec^2 x</m>. I can write
+          the remaining <m>\sec^2 x</m> as <m>(1 + \tan^2 x)</m>.
+          Therefore, I'll use the substitution
+          <m>u = \tan x</m> with <m>du = \sec^2 x dx</m>. Since this
+          is a definite integral, I can also change the bounds with
+          the substitution:  <m>u(0) = 0</m>, <m>u\left(\frac{\pi}{3}
+          \right) = \sqrt{3}</m>. After the substitution, this is an
+          integral of polynomial terms, which I can split up with
+          linearity, use the power rule to find antiderivaitves, and
+          evaluate on the bounds. 
         </p>
+        <md>
+          <mrow>
+            \int_0^{\frac{\pi}{3}} \tan^5 x \sec^4 x dx \amp =
+            \int_0^{\frac{\pi}{3}} \tan^5 x (1 + \tan^2 x) \sec^2 x
+            dx
+          </mrow>
+          <mrow>
+            \amp = \int_0^{\sqrt{3}} u^5 (1+u^2) du =
+            \int_0^{\sqrt{3}} u^5 + u^7 du = \frac{u^6}{6} +
+            \frac{u^8}{8} \Bigg|_0^{\sqrt{3}} 
+         </mrow>
+          <mrow>
+            \amp = \frac{3^3}{6} + \frac{3^4}{8} = \frac{4\cdot 3^3
+            + 3\cdot 3^4}{24} = \frac{108 + 243}{24} =
+            \frac{351}{24} = \frac{117}{8}
+         </mrow>
+        </md>
         <p>
-          As useful identity here is the product-to-sum identity.
-          <me>
-            \sin Ax \cos Bx = \frac{1}{2} \left( \sin (A-B)x + \sin
-            (A+B)x \right)
-          </me>
+          I could have solved this integral using my first method as
+          well: converting everything into sines and cosines. Let me
+          do that as well in this example, to show that the result is
+          the same. (This also demonstrate the important point that
+          for some integrals, multiple different techniques can all be
+          successful.) Let me start by converting everything into
+          sine and cosine. 
         </p>
+        <me>
+          \int_0^{\frac{\pi}{3}} \tan^5 x \sec^4 x dx =
+          \int_0^{\frac{\pi}{3}} \frac{\sin^5 x}{\cos^9 x} dx
+        </me>
         <p>
-          Then we can relatively easily solve the integral.
-          <md>
-            <mrow>
-              \int \sin 2x \cos 5x dx \amp = \frac{1}{2} \int \sin
-              (-3x) + \sin (7x) dx
-            </mrow>
-            <mrow>
-              \amp = \frac{-1}{6} \cos 3x + \frac{1}{14} \cos 7x + c
-            </mrow>
-          </md>
+          There is an odd power of sine in the numerator, so I'd like
+          to isolate one sine term and change all the rest to cosine.
+          I can do this with the squared identity. After doing so, I
+          can use the substitution <m>u = \cos x</m> with <m>du =
+          -\sin x dx</m>. Again, since this is a definite integral, I
+          change the bounds as well with the substitution <m>u(0) =
+          1</m>, <m>u(\frac{\pi}{3}) = \frac{1}{2}</m>.
         </p>
-      </statement>
-    </example>
-    <example>
-      <statement>
+        <md>
+          <mrow>
+            \amp = \int_0^{\frac{\pi}{3}} \frac{\sin^5 x}{\cos^{9} x}
+            dx
+          </mrow>
+          <mrow>
+            \amp = \int_0^{\frac{\pi}{3}} \frac{(1-\cos^2
+            x)^2}{\cos^{9} x} \sin x dx
+          </mrow>
+          <mrow>
+            \amp = -\int_1^{\frac{1}{2}} \frac{(1-u^2)^2}{u^{9}} du =
+            \int_{\frac{1}{2}}^1 \frac{1 - 2u^2 + u^4}{u^{9}} du
+          </mrow>
+          <mrow>
+            \amp = \int_{\frac{1}{2}}^1 \left( \frac{1}{u^{9}} -
+            \frac{2}{u^7} + \frac{1}{u^5} \right) du 
+            = \int_{\frac{1}{2}}^1 \frac{1}{u^{9}} -
+            \int_{\frac{1}{2}}^1 \frac{2}{u^7} du 
+            + \int_{\frac{1}{2}}^1 \frac{1}{u^5} du 
+          </mrow>
+        </md>
         <p>
-          Here is another tricky example with an unintuitive approach.
-          <me>
-            \int \frac{dx}{\cos x - 1} dx
-          </me>
+          After the substitution, I expanded the numerator and split
+          up the fraction into three pieces. Using linearity, the
+          integral splits into three integrals. Now I have three power
+          rule integrals, which I can find antiderivatives for,
+          evalutate on bounds, and do some arithmetic to finish the
+          integral. Notice that the arithmetic is quite different from
+          the first solution (and a little more complicated), but it
+          does end up in with the same final answer. 
         </p>
-        <p>
-          We make clever use of the following identity.
-          <md>
-            <mrow>
-              \sin^2 \left(\frac{x}{2} \right) \amp = \frac{1-\cos
-              x}{2}
-            </mrow>
-            <mrow>
-              \int \frac{dx}{\cos x - 1} dx \amp = \int \frac{dx}{
-              -2\sin^2 \left( \frac{x}{2} \right) } dx = \frac{-1}{2}
-              \int \csc^2 \left( \frac{x}{2} \right) dx = \cos \left(
-              \frac{x}{2} \right) + c
-            </mrow>
-          </md>
-        </p>
-      </statement>
-    </example>
-    <p>
-      Lastly, there are nice symmetry argument for definite integrals
-      that can help with certain trigonometric integrands.
-    </p>
-    <example>
-      <statement>
-        <p>
-          The following three integrals are all zero, for reasons of
-          symmetry. In the first two, we integrate over a whole period
-          which includes positive and negative pieces. Over a whole
-          period, those pieces cancel out. In the last integral, we
-          integrate an odd function over a symmetric domain, so the
-          positive and negative pieces again cancel out.
-          <md>
-            <mrow>
-              \int_0^{2\pi} \cos^3 x dx \amp = 0
-            </mrow>
-            <mrow>
-              \int_0^{\frac{\pi}{2}} \sin^5 4x dx \amp = 0
-            </mrow>
-            <mrow>
-              \int_{\frac{-\pi}{4}}^{\frac{\pi}{4}} \tan^3 x \cos^2 x
-              \amp = 0
-            </mrow>
-          </md>
-        </p>
+        <md>
+          <mrow>
+            \amp = \int_{\frac{1}{2}}^1 \frac{1}{u^{9}} -
+            \frac{2}{u^7} + \frac{1}{u^5} du = \left(
+            \frac{-1}{8u^{8}} + \frac{2}{6u^6} - \frac{1}{4u^4}
+            \right) \Bigg|_{\frac{1}{2}}^1
+          </mrow>
+          <mrow>
+            \amp = \left( \frac{-1}{8} + \frac{1}{3} - \frac{1}{4} +
+            \frac{2^{8}}{8} - \frac{2^6}{3} + \frac{2^4}{4} \right)
+          </mrow>
+          <mrow>
+            \amp = \frac{-3+8-6+2^{8}\cdot 3 - 2^6 \cdot 8 + 2^4
+            \cdot 6}{24}
+          </mrow>
+          <mrow>
+            \amp = \frac{-3+8-6+768-512+96}{24} = \frac{351}{24} =
+            \frac{117}{8}
+          </mrow>
+        </md>
       </statement>
     </example>
   </subsection>

@@ -1,7 +1,7 @@
 <section xml:id="section-sequences">
   <title>Sequences</title>
   <subsection xml:id="subsection-sequences-history">
-    <title>History of Sequences</title>
+    <title>Zeno's Paradox</title>
     <p>
       There are three classical branches of calculus. The first two,
       derivatives and integrals, command the vast majority of the time
@@ -12,9 +12,10 @@
     </p>
     <p>
       In some ways, the problem of infinite series is older than the
-      problems motivating derivatives and integrals. Issues of
-      infinite series go back at least to early Greek mathematics,
-      where thinkers struggled with the puzzle known as Zeno's
+      problems motivating derivatives and integrals.
+      Infinite series go back at least to early Greek mathematics,
+      where thinkers struggled with the puzzles of infinitiy. The most
+      famous of those ancient puzzles is known as Zeno's
       Paradox.
     </p>
     <p>
@@ -32,8 +33,8 @@
       any two points <m>a</m> and <m>b</m>, movement is impossible.
     </p>
     <p>
-      Obviously, Zeno's paradox doesn't hold, since we are able to
-      move from one place to another. But Zeno's paradox has
+      Obviously, Zeno's paradox doesn't hold, since movement is,
+      indeed, possible. But Zeno's paradox has
       commanded the attention and imagination of philosophers and
       mathematicians for over 2000 years, as they struggled to deal
       with the infinity implicit in even the smallest movement.
@@ -41,7 +42,7 @@
       incomplete way) of dealing with Zeno's paradox.
     </p>
     <p>
-      Before we jump into series themselves, we need to start with
+      Before defining series themselves, I need to start with
       infinite sequences.
     </p>
   </subsection>
@@ -51,181 +52,226 @@
       <statement>
         <p>
           An <term>infinite sequence</term> of real numbers is a set
-          of real numbers indexed by <m>\NN</m>. These are the common
-          notations for an infinite sequence:
-          <me>
-            \left\{ a_n \right\}_{n \in \NN} \hspace{1cm} \left\{ a_n
-            \right\}_{n=0}^\infty \hspace{1cm} \left\{ a_n \right\}
-            \hspace{1cm} \left\{ a_1, a_2, a_3, a_4, \ldots \right\}
-          </me>
+          of real numbers indexed by <m>\NN</m>. The following are
+          some common notations for an infinite sequence.
         </p>
+        <md>
+          <mrow>
+            \amp \left\{ a_n \right\}_{n \in \NN} \amp \amp  \left\{
+            a_n \right\}_{n=1}^\infty \amp \amp  \left\{ a_n
+            \right\} \amp \amp  \left\{ a_1, a_2, a_3, a_4, \ldots
+            \right\}
+          </mrow>
+        </md>
       </statement>
     </definition>
-    <example>
-      <statement>
-        <p>
-          Sequences can be entirely random, or patterned by some
-          formula or recursion. Here are some familiar examples. I
-          show the first few terms as well as a method of generating
-          higher terms (either direct or recursive).
-        </p>
-        <p>
-        <tabular>
-          <row>
-            <cell>
-              The sequence of natural numbers:
-            </cell>
-          </row>
-          <row>
-            <cell>
-              <m>\NN = \{ 1,2,3,4,5, \ldots \} \hspace{1cm} a_n =
-              n</m>
-            </cell>
-          </row>
-          <row>
-            <cell>
-              The sequence of even numbers:
-            </cell>
-          </row>
-          <row>
-            <cell>
-              <m>\{ 2,4,6,8,10, \ldots \} \hspace{1cm} a_n = 2n</m>
-            </cell>
-          </row>
-          <row>
-            <cell>
-              The harmonic sequence:
-            </cell>
-          </row>
-          <row>
-            <cell>
-              <m>\{ 1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\frac{1}{5}
-              \ldots \} \hspace{1cm} a_n = \frac{1}{n}</m>
-            </cell>
-          </row>
-          <row>
-            <cell>
-              The alternating harmonic sequence:
-            </cell>
-          </row>
-          <row>
-            <cell>
-              <m>\{
-              1,\frac{-1}{2},\frac{1}{3},\frac{-1}{4},\frac{1}{5}
-              \ldots \} \hspace{1cm} a_n = \frac{(-1)^n}{n}</m>
-            </cell>
-          </row>
-          <row>
-            <cell>
-              The geometric sequence with common ratio
-              <m>\frac{-1}{2}:</m>
-            </cell>
-          </row>
-          <row>
-            <cell>
-              <m>\{
-              1,\frac{-1}{2},\frac{1}{4},\frac{-1}{8},\frac{1}{16}
-              \ldots \} \hspace{1cm} a_n = \left(\frac{-1}{2}\right)^n
-              \hspace{1cm} a_n = \left( \frac{-1}{2} \right)
-              a_{n-1}</m>
-            </cell>
-          </row>
-          <row>
-            <cell>
-              The arithmetic sequence with common
-              difference 6:
-            </cell>
-          </row>
-          <row>
-            <cell>
-              <m>\{ 1,7,13,19,25, \ldots \} \hspace{1cm} a_n = 1 + 6n
-              \hspace{1cm} a_n = a_{n-1} + 6</m>
-            </cell>
-          </row>
-          <row>
-            <cell>
-              The Fibonacci sequence:
-            </cell>
-          </row>
-          <row>
-            <cell>
-              <m>\{1,1,2,3,5,8,13,21, \ldots \} \hspace{1cm} a_1 = a_2
-              = 1 \hspace{1cm} a_n = a_{n-1} + a_{n-2}</m>
-            </cell>
-          </row>
-          <row>
-            <cell>
-              The sequence of ratios of Fibonacci terms:
-            </cell>
-          </row>
-          <row>
-            <cell>
-              <m>\{ 1,\frac{2}{1},\frac{3}{2},\frac{5}{3},\frac{8}{5}
-              \ldots \} \hspace{1cm} a_1 = 1 \hspace{1cm} a_n = 1 +
-              \frac{1}{a_{n-1}}</m>
-            </cell>
-          </row>
-        </tabular>
-        </p>
-      </statement>
-    </example>
+    <p>
+      Before moving on to examples, I want to make one more
+      definition. The most obvious way to define a sequence is by a
+      direct formula, such as <m>a_n = n^2</m>, the sequence of square
+      numbers. The most important non-direct method is covered by the
+      next definition.
+    </p>
     <definition>
       <statement>
         <p>
-          There is another definition of sequences which is quite
-          useful. Instead of thinking of <m>\NN</m> as an index, we
-          can think of a sequence <m>\{a_n\}_{n=1}^\infty</m> as a
-          function:
-          <me>
-            f: \NN \rightarrow \RR \hspace{2cm} f(n) = a_n
-          </me>
+          A sequence <m>\{ a_n \}</m> is called a <term>recursive
+          sequence</term> is each element is determined by the
+          previous element (or previous few elements). The equation
+          that defined the recursive sequence is call a
+          <term>recurrence relation</term>. Often a recurrence
+          relation is difficult to calculate with and a direct
+          description is desired. Such a descriptions is
+          called the <term>closed form description</term> for the 
+          recursive sequence.
         </p>
       </statement>
     </definition>
     <p>
-      If we think of sequences as functions on <m>\NN</m>, then we can
+      Let me introduce an important change in perspective for
+      sequences. Instead of thinking of <m>\NN</m> as an index, I
+      can think of a sequence <m>\{a_n\}_{n=1}^\infty</m> as a
+      function.
+    </p>
+      <md>
+        <mrow>
+          \amp f: \NN \rightarrow \RR \amp \amp f(n) = a_n
+        </mrow>
+      </md>
+    <p>
+      If I think of sequences as functions on <m>\NN</m>, then I can
       use all of the language of functions. In this way, sequences
       can be increasing, decreasing, monotonic, bounded above, bounded
       below and bounded. However, since the domain <m>\NN</m> is
-      seperated into discrete numbers, this function <m>f</m> has no
-      continuity properties.
+      separated into discrete numbers, this function <m>f</m> has no
+      continuity properties. 
     </p>
     <p>
-      Even though we stated the definition for indices in <m>\NN</m>,
-      we can choose another starting point:
+      Even though I stated the definition for indices in <m>\NN</m>,
+      I can choose another starting point.
       <m>\{a_n\}_{n=3}^\infty</m> is a sequence which starts with
       <m>a_3</m>, and <m>\{a_n\}_{n=-2}^\infty</m> is a sequences
-      which starst with <m>a_{-2}</m>. We still always count up from
-      the starting point.
+      which starts with <m>a_{-2}</m>. Regardless of the starting
+      point, sequencse  still always count up by 1 from the starting
+      point. 
     </p>
+  </subsection>
+  <subsection xml:id="subsection-sequences-examples">
+    <title>Examples of Sequences</title>
+    <p>
+      Sequences can be entirely random, or patterned by some
+      formula or recursion. Here are some familiar examples. I' ll 
+      show the first few terms as well as a method of generating
+      higher terms (either direct or recursive).
+    </p>
+    <example>
+      <statement>
+        <p>
+          The sequence of natural numbers.
+        </p>
+        <md>
+          <mrow>
+            \amp \NN = \left\{ 1,2,3,4,5, \ldots \right\} \amp
+            \amp a_n = n
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The sequence of even numbers.
+        </p>
+        <md>
+          <mrow>
+            \amp \left\{ 2,4,6,8,10, \ldots \right\} \amp \amp
+            a_n = 2n
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The harmonic sequence.
+        </p>
+        <md>
+          <mrow>
+            \amp \left\{
+            1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\frac{1}{5}
+            \ldots \right\} \amp \amp  a_n = \frac{1}{n}
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The alternating harmonic sequence.
+        </p>
+        <md>
+          <mrow>
+            \amp \left\{
+            1,\frac{-1}{2},\frac{1}{3},\frac{-1}{4},\frac{1}{5}
+            \ldots \right\} \amp \amp  a_n = \frac{(-1)^{n+1}}{n}
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The geometric sequence with common ratio
+          <m>\frac{-1}{2}</m> and starting value <m>1</m>. (I've given
+          both a direct and a recursive definition of this sequence.)
+        </p>
+        <md>
+          <mrow>
+            \amp \left\{
+            1,\frac{-1}{2},\frac{1}{4},\frac{-1}{8},\frac{1}{16}
+            \ldots \right\} \amp \amp  a_n =
+            \left(\frac{-1}{2}\right)^n \amp \amp a_n = \left(
+            \frac{-1}{2} \right) a_{n-1}
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The arithmetic sequence with common difference 6 and
+          starting value 1.  (I've given both a direct and recursive
+          definition of this sequence.)
+        </p>
+        <md>
+          <mrow>
+            \amp \left\{ 1,7,13,19,25, \ldots \right\} \amp \amp
+            a_n = 1 + 6n \amp \amp  a_n = a_{n-1} + 6
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The Fibonacci sequence. (This is a very famous example
+          of a recursive sequence.) 
+        </p>
+        <md>
+          <mrow>
+            \amp \left\{1, 1, 2, 3, 5, 8, 13, \ldots \right\} \amp
+            \amp  a_1 = a_2 = 1 \amp \amp  a_n = a_{n-1} + a_{n-2}
+          </mrow>
+        </md>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The sequence of ratios of Fibonacci terms. 
+        </p>
+        <md>
+          <mrow>
+            \amp \left\{
+            1,\frac{2}{1},\frac{3}{2},\frac{5}{3},\frac{8}{5}
+            \ldots \right\} \amp \amp  a_1 = 1 \amp \amp  a_n = 1
+            + \frac{1}{a_{n-1}}
+          </mrow>
+        </md>
+      </statement>
+    </example>
     <p>
       There are many, many sequences studied in mathematics. The
       Online Encyclopedia of Integer Sequences (OEIS) is a repository
-      for interesting sequences with integer values. As of August 20,
-      2018, there were 313927 sequences in the OEIS.
+      for interesting sequences with integer values. As of March 19,
+      2021, there were 342283 sequences in the OEIS.
     </p>
   </subsection>
   <subsection xml:id="subsection-sequences-limits">
     <title>Limits of Sequences</title>
     <p>
       As functions <m>\NN \rightarrow \RR</m>, sequences are not
-      continuous, so we can't ask for limits at finite values.
-      However, since the index <m>n \rightarrow \infty</m>, we can ask
+      continuous, so I can't ask for limits at finite values.
+      However, since the index <m>n \rightarrow \infty</m>, I can ask
       for the long term behaviour of the sequence.
     </p>
     <definition>
       <statement>
         <p>
           The statement
-          <me>
-            \lim_{n \rightarrow \infty} a_n = L
-          </me>
+        </p>
+        <me>
+          \lim_{n \rightarrow \infty} a_n = L
+        </me>
+        <p>
           means that as <m>n</m> gets larger and larger without bound,
           <m>a_n</m> gets closer and closer to <m>n</m>. Similarly,
           the statement
-          <me>
-            \lim_{n \rightarrow \infty} a_n = \infty
-          </me>
+        </p>
+        <me>
+          \lim_{n \rightarrow \infty} a_n = \infty
+        </me>
+        <p>
           means that as <m>n</m> gets larger and larger without bound
           <m>a_n</m> also gets larger and larger without bound.
           Sequences with finite limits are <term>convergent</term>
@@ -235,8 +281,9 @@
         </p>
       </statement>
     </definition>
+    <!--
     <p>
-      As we did for limits of real valued functions, we could restate
+      As I did for limits of real valued functions, I could restate
       these limits with <m>\epsilon</m> and <m>\delta</m>
       definitions.
     </p>
@@ -259,73 +306,79 @@
         </p>
       </statement>
     </definition>
+    -->
     <p>
-      To understand limits, we can make great use of the perspective
-      of sequences as functions. We know that limits of functions
+      To understand limits, I can make great use of the perspective
+      of sequences as functions. I know that limits of functions
       have many useful properties; all those properties transfer to
-      sequences.
+      sequences. Most importantly, for any sequences defined by a
+      familiar functions, asymptotic analysis is still appropriate. The
+      limits of sequences are limits at infinity, so I will use
+      asymptotic analysis whenever possible. In addition, many other
+      properties of sequences of functions transfer over. 
     </p>
     <proposition>
       <statement>
         <p>
           If <m>\{a_n\}</m> and <m>\{b_n\}</m> are convergent sequences,
           then the following properties hold.
-          <md>
-            <mrow>
-              \lim_{n \rightarrow \infty} (a_n + b_n) \amp = \lim_{n
-              \rightarrow \infty} a_n + \lim_{n \rightarrow \infty}
-              b_n
-            </mrow>
-            <mrow>
-              \lim_{n \rightarrow \infty} (a_n-b_n) \amp = \lim_{n
-              \rightarrow \infty} a_n - \lim_{n \rightarrow \infty}
-              b_n
-            </mrow>
-            <mrow>
-              \lim_{n \rightarrow \infty} ca_n(x) \amp = c \lim_{n
-              \rightarrow \infty} a_n(x)
-            </mrow>
-            <mrow>
-              \lim_{n \rightarrow \infty} a_n =\amp \lim_{n
-              \rightarrow \infty} a_n \lim_{n \rightarrow \infty} b_n
-            </mrow>
-            <mrow>
-              \lim_{n \rightarrow \infty} \frac{a_n}{b_n} \amp =
-              \frac{\lim_{n \rightarrow \infty} a_n}{\lim_{n
-              \rightarrow \infty} b_n}
-            </mrow>
-            <mrow>
-              \lim_{n \rightarrow \infty} (a_n(x))^n \amp = (\lim_{n
-              \rightarrow \infty} a_n(x))^n
-            </mrow>
-            <mrow>
-              \lim_{n \rightarrow \infty} \sqrt[n]{a_n} \amp =
-              \sqrt[n]{\lim_{n \rightarrow \infty} a_n} \hspace{1cm}
-              \text{ if }  \hspace{1cm} a_n \geq 0
-            </mrow>
-          </md>
         </p>
+        <md>
+          <mrow>
+            \lim_{n \rightarrow \infty} (a_n + b_n) \amp = \lim_{n
+            \rightarrow \infty} a_n + \lim_{n \rightarrow \infty}
+            b_n \amp \amp 
+          </mrow>
+          <mrow>
+            \lim_{n \rightarrow \infty} (a_n-b_n) \amp = \lim_{n
+            \rightarrow \infty} a_n - \lim_{n \rightarrow \infty}
+            b_n \amp \amp 
+          </mrow>
+          <mrow>
+            \lim_{n \rightarrow \infty} ca_n(x) \amp = c \lim_{n
+            \rightarrow \infty} a_n(x) \amp \amp 
+          </mrow>
+          <mrow>
+            \lim_{n \rightarrow \infty} a_n =\amp \lim_{n
+            \rightarrow \infty} a_n \lim_{n \rightarrow \infty} b_n
+            \amp \amp 
+          </mrow>
+          <mrow>
+            \lim_{n \rightarrow \infty} \frac{a_n}{b_n} \amp =
+            \frac{\lim_{n \rightarrow \infty} a_n}{\lim_{n
+            \rightarrow \infty} b_n} \amp \amp 
+          </mrow>
+          <mrow>
+            \lim_{n \rightarrow \infty} (a_n(x))^n \amp = (\lim_{n
+            \rightarrow \infty} a_n(x))^n \amp \amp 
+          </mrow>
+          <mrow>
+            \lim_{n \rightarrow \infty} \sqrt[n]{a_n} \amp =
+            \sqrt[n]{\lim_{n \rightarrow \infty}} a_n \amp 
+            \amp a_n \geq 0
+          </mrow>
+        </md>
       </statement>
     </proposition>
     <example>
       <statement>
         <p>
-          Limits of sequences are limits of functions as the input
-          goes to <m>\infty</m>, so asymptotic analysis applies. We
-          can use asymptotic analysis to easily calculate these
-          examples.
-          <md>
-            <mrow>
-              \lim_{n \rightarrow \infty} n^2 \amp = \infty
-            </mrow>
-            <mrow>
-              \lim_{n \rightarrow \infty} \frac{1}{n} \amp = 0
-            </mrow>
-            <mrow>
-              \lim_{n \rightarrow \infty} \frac{n+1}{n^2} \amp = 0
-            </mrow>
-          </md>
+          Here are some limits where I can simply apply the method of
+          asymotptic analysis from limits of functions. Here are three
+          limits which easy to argue by knowing the asymptotic order
+          and growth of conventional functions. 
         </p>
+        <md>
+          <mrow>
+            \lim_{n \rightarrow \infty} n^2 \amp = \infty
+          </mrow>
+          <mrow>
+            \lim_{n \rightarrow \infty} \frac{1}{n} \amp = 0
+          </mrow>
+          <mrow>
+            \lim_{n \rightarrow \infty} \frac{n+1}{n^2} \amp = 0
+          </mrow>
+        </md>
       </statement>
     </example>
     <example>
@@ -334,65 +387,97 @@
           Asymptotic anlysis doesn't solve everything; some limits are
           still difficult to determine. One such limit is the limit
           definition of the number <m>e</m>.
-          <me>
-            \lim_{n \rightarrow \infty} \left( 1 + \frac{1}{n}
-            \right)^n = e
-          </me>
+        </p>
+        <me>
+          \lim_{n \rightarrow \infty} \left( 1 + \frac{1}{n}
+          \right)^n = e
+        </me>
+        <p>
+          Asymptotic analysis has trouble with this limit because the
+          term inside the brackets approaches <m>1</m>. <m>1</m> to
+          any power is just one, so there is an intuition that limit
+          should be <m>1</m>. However, the exponent approches
+          <m>\infty</m> and the term in the brackets is (at least
+          slightly) larger then one. A very high power of a number
+          larger than <m>1</m> should grow very large, so there is
+          also an intuition that the limit should be infinite. It is
+          not clear, by examining the limit, whether one of these two
+          intutition is correct or whether (as is the case) the limit
+          ends up between the two intuititon. This is another type of
+          indeterminant form. 
         </p>
       </statement>
     </example>
     <example>
       <statement>
         <p>
-          One of our example sequences was the ratio of the Fibonacci
-          terms. How do we calculate this limit of Fibonacci terms?
-          <me>
-            \lim_{n \rightarrow \infty} \frac{f_{n+1}}{f_n} = \ \ ?
-          </me>
-        </p>
-        <p>
-          Let <m>a_n = \frac{f_n+1}{f_n}</m>. We can look at the
+          One of the example sequences was the ratio of the Fibonacci
+          terms. If <m>f_n</m> are the Fibonacci terms, then the ratio
+          is <m>a_n = \frac{f_{n+1}}{f_n}</m>.  I can use the
           recursive definition of the sequence of Fibonacci terms:
-          <m>f_{n+1} = f_{n} + f_{n-1}</m>. We divide this equation
-          by <m>f_n</m> and manipulate to identify terms of the
-          sequence <m>a_n</m>.
-          <me>
-            \frac{f_{n+1}}{f_n} = \frac{f_n}{f_n} +
-            \frac{f_{n-1}}{f_n} \implies a_n = 1 +
-            \frac{1}{\frac{f_n}{f_{n-1}}} \implies a_n = 1 +
-            \frac{1}{a_{n-1}}
-          </me>
+          <m>f_{n+1} = f_{n} + f_{n-1}</m>. In the ratio <m>a_n</m>, I
+          can replace the numerator with this recursive definition.
+          Then some algebra lets me determine a recurivse definition
+          for the <m>a_n</m>. 
         </p>
+        <me>
+          \frac{f_{n+1}}{f_n} = \frac{f_n}{f_n} +
+          \frac{f_{n-1}}{f_n} \implies a_n = 1 +
+          \frac{1}{\frac{f_n}{f_{n-1}}} \implies a_n = 1 +
+          \frac{1}{a_{n-1}}
+        </me>
         <p>
-          We are going to use this expression to find the limit of the
-          sequence. Write <m>\phi</m> for the value of the limit we
-          wish to calculate (this is a traditional notational choice
-          for this limit). Then we can apply the limit to the above
-          formula and solve for <m>\phi</m>. (Since all our terms are
-          positive, we only take the positive root in the final
-          step).
-          <md>
-            <mrow>
-              a_n \amp = 1 + \frac{1}{a_{n-1}}
-            </mrow>
-            <mrow>
-              \lim_{n \rightarrow \infty} a_n \amp = 1 +
-              \frac{1}{\lim_{n \rightarrow \infty} a_{n-1}}
-            </mrow>
-            <mrow>
-              \phi \amp = 1 + \frac{1}{\phi} \implies \phi^2 = \phi +
-              1 \implies \phi^2 - \phi - 1 = 0
-            </mrow>
-            <mrow>
-              \phi \amp = \frac{1 \pm \sqrt{1+4}}{2} = \frac{1 \pm
-              \sqrt{5}}{2} = \frac{1 + \sqrt{5}}{2}
-            </mrow>
-          </md>
+          Now I have a recursive definition for the sequences of
+          Fibonacci ratios. Recursive definition are problematic for
+          direct calculations of limits, but there is a useful trick
+          for calculating these limits. Let me restate this recurvise
+          definition.
+        </p>
+        <me>
+          a_n = 1 + \frac{1}{a_{n-1}}
+        </me>
+        <p>
+          The trick is to take the limit of both sides of the
+          equation. On the left, I have the limit that I want to
+          calculate. On the right, I can use the limit laws to take
+          the limit inside the various operations. Then, the limit of
+          <m>a_{n-1}</m> is also the limit I want to calculate. Let me
+          lable the result of this limit as <m>\phi</m>. 
+        </p>
+        <md>
+          <mrow>
+            a_n \amp = 1 + \frac{1}{a_{n-1}}
+          </mrow>
+          <mrow>
+            \lim_{n \rightarrow \infty} a_n \amp = 1 +
+            \frac{1}{\lim_{n \rightarrow \infty} a_{n-1}}
+          </mrow>
+          <mrow>
+            \phi \amp = 1 + \frac{1}{\phi} \implies \phi^2 = \phi +
+            1 \implies \phi^2 - \phi - 1 = 0
+          </mrow>
+        </md>
+        <p>
+          Now I have an equation for the value of the limit. I proceed
+          to solve the equation.
+        </p>
+        <md>
+          <mrow>
+            \phi \amp = 1 + \frac{1}{\phi} \implies \phi^2 = \phi +
+            1 \implies \phi^2 - \phi - 1 = 0
+          </mrow>
+          <mrow>
+            \phi \amp = \frac{1 \pm \sqrt{1+4}}{2} = \frac{1 \pm
+            \sqrt{5}}{2} = \frac{1 + \sqrt{5}}{2}
+          </mrow>
+        </md>
+        <p>
+          Via the recursive definition, I've managed to calculate the
+          limit. This number <m>\phi</m> is the celebrated golden
+          ratio, and I've proved that the limit of the Fibonacci terms
+          is the golden ratio.
         </p>
       </statement>
     </example>
-    <p>
-      This <m>\phi</m> is the celebrated Golden Ratio.
-    </p>
   </subsection>
 </section>

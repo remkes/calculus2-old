@@ -1,0 +1,154 @@
+<section xml:id="section-rational-functions-basic">
+  <title>Rational Functions and Basic Types</title>
+  <introduction>
+    <p>
+      This entire week of the course is devoted to understanding the
+      integrals of rational functions. Recall that a rational function
+      is a function <m>f(x) = \frac{p(x)}{q(x)}</m> wher <m>p(x)</m>
+      and <m>q(x)</m> are polynomial. The general approach to
+      integrals of rations functions is two fold. First, I am going to
+      describe the integral of some very specific rational functions.
+      Second, I am going to introduce techniques that can break apart
+      any rational function to the sum of many easier rational
+      functions. The pieces of the sum will all be rational functions
+      from the fisrt part. To integrate a rational function, we will
+      break it up in these pieces and then apply the known results to
+      the individual pieces. 
+    </p>
+  </introduction>
+  <subsection xml:id="subsection-known-forms">
+    <title>Basic Types</title>
+    <p>
+      The first step is the integrals of certain simply rational
+      functions. I am going to start with three integrals that have
+      already been introducted in Math 200, in the rules or the table
+      of integrals. 
+    </p>
+    <md>
+      <mrow>
+        \int \frac{1}{x^r} dx \amp = \frac{-1}{(r-1)x^{r-1}}
+        \amp \amp r \neq 1
+      </mrow>
+      <mrow>
+        \int \frac{1}{x} dx \amp = \ln |x| + c \amp \amp 
+      </mrow>
+      <mrow>
+        \int \frac{1}{1+x^2} dx \amp = \arctan x + c \amp \amp 
+      </mrow>
+    </md>
+    <p>
+      This is the starting point: all of the integrals of rational
+      functions will eventually boil down to something based on these
+      three integral. The first step is extending these into slightly
+      more general forms. There are four integrals I want to do here. 
+    </p>
+    <ul>
+      <li>
+        <me>
+          \int \frac{1}{x+a} dx 
+        </me>
+        <p>
+          This can be sovled by substitution, using <m>u = x + a</m>
+          with <m>du = dx</m>. 
+        </p>
+        <me>
+          \int \frac{1}{x+a} dx = \int \frac{1}{u} du = \ln |u| = \ln
+          |x + a| + c
+        </me>
+      </li>
+      <li>
+        <md>
+          <mrow>
+            \amp \int \frac{1}{(x+a)^n} dx \amp \amp n \geq 2 
+          </mrow>
+        </md>
+        <p>
+          The same substitution as the previous integral solves this
+          one; I've not shown the work. 
+        </p>
+        <me>
+          \int \frac{1}{(x+a)^n} = \frac{-1}{(n-1)(x-a)^{n-1}} + c 
+        </me>
+      </li>
+      <li>
+        <me>
+          \int \frac{2x + a}{x^2+ac+b} dx
+        </me>
+        <p>
+          This can also be solve by a substitution, using <m>u = x^2 + ax
+          +b</m> with <m>du = (2x+a)dx</m>. 
+        </p>
+        <me>
+          \int \frac{2x + a}{x^2+ax+b} dx = \int \frac{1}{u} du = \ln |u|
+          = \ln |x^2 + ax + b| + c
+        </me>
+      </li>
+      <li>
+        <me>
+          \int \frac{1}{(x-\alpha)^2 + \beta^2} dx 
+        </me>
+        <p>
+          This integral is a bit trickier. It also uses a substitution,
+          <m>u = \frac{x-\alpha}{\beta}</m>, with <m>du = \frac{1}{\beta}
+          dx</m> and <m>\beta du = dx</m>. Before doing the substitution,
+          I need one manipulation to but the integral into a suitable
+          form. I divide numerator and denominator by <m>\beta^2</m>. Then
+          I proceed to use the substitution.
+        </p>
+        <md>
+          <mrow>
+            \int \frac{1}{(x-\alpha)^2 + \beta^2} dx \amp = 
+            \int \frac{\frac{1}{\beta^2}}{\frac{(x-\alpha)^2}{\beta^2} +
+            \frac{\beta^2}{\beta^2}} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{\beta^2} \int
+            \frac{1}{ \left(\frac{x-\alpha}{\beta} \right)^2  + 1} dx 
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{\beta^2} \int \frac{1}{u^2 + 1} \beta du 
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{\beta} \int \frac{1}{u^2 + 1} du 
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{\beta} \arctan u + c 
+          </mrow>
+          <mrow>
+            \amp = \frac{1}{\beta} \arctan \left( \frac{x - \alpha}{\beta}
+            \right) + c 
+          </mrow>
+        </md>
+      </li>
+    </ul>
+    <p>
+      Now I've solve the four basic types of rational function
+      integral that I am going to need. For easy reference, here are
+      the four integrals I will return to in future sections.
+    </p>
+    <ol>
+      <li>
+        <me>
+          \int \frac{1}{x + a} dx = \ln |x + a| + c 
+        </me>
+      </li>
+      <li>
+        <me>
+          \int \frac{1}{(x + a)^n} dx = \frac{-1}{n-1}
+          \frac{1}{(x-a)^{n-1}} + c
+        </me>
+      </li>
+      <li>
+        <me>
+          \int \frac{2x + a}{x^2 + ax + b} dx = \ln |x^2 + ax +b| + c 
+        </me>
+      </li>
+      <li>
+        <me>
+          \int \frac{1}{(x-\alpha)^2 + \beta^2} dx = \frac{1}{\beta}
+          \arctan \left( \frac{x - \alpha}{\beta} \right) + c 
+        </me>
+      </li>
+    </ol>
+  </subsection>
+</section>

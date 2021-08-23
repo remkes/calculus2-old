@@ -1,16 +1,545 @@
 <section xml:id="section-week12-activity">
   <title>Week 12 Activity</title>
-  <subsection xml:id="subsection-activity-">
-    <title>Title</title>
+  <subsection xml:id="subsection-activity-radius-convergence">
+    <title>Power Series</title>
     <activity>
       <statement>
         <p>
-          Question
+          Determine the radius of convergence and domain of definition
+          for this power series.
+        </p>
+        <me>
+          \sum_{n=0}^\infty \frac{n}{n^3 + 1} x^n 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I'll use the limit test for this radius of convergence,
+          since none of the coefficients are zero. I need to simplify
+          the nested fraction, expand the cubed binomial, and evaluate
+          the limit asymptotically.
+        </p>
+        <md>
+          <mrow>
+            R \amp = \lim_{n \rightarrow \infty} \left|
+            \frac{c_n}{c_{n+1}} \right| 
+          </mrow>
+          <mrow>
+            \amp = \lim_{n \rightarrow \infty} \left|
+            \frac{\frac{n}{n^3+1}}{\frac{(n+1)}{(n+1)^3+1}} \right| 
+          </mrow>
+          <mrow>
+            \amp = \lim_{n \rightarrow \infty} 
+            \frac{n((n+1)^3+1}{(n+1)(n^3+1)} = \lim_{n \rightarrow
+            \infty} \frac{n^4 + 3n^3 + 2n + 2}{n^4 + n^3 + n + 1} = 1 
+          </mrow>
+        </md>
+        <p>
+          The radius of convergence is <m>R = 1</m>. Since the centre
+          point is <m>\alpha = -</m>, the domain of definition is
+          <m>(-1,0)</m>.     
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the radius of convergence and domain of definition
+          for this power series.
+        </p>
+        <me>
+          \sum_{n=0}^\infty \frac{1}{n!} (x-4)^n 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I'll use the limit test for this radius of convergence,
+          since none of the coefficients are zero.
+        </p>
+        <me>
+          R = \lim_{n \rightarrow \infty} \left| \frac{c_n}{c_{n+1}}
+          \right| = \lim_{n \rightarrow \infty} \left|
+          \frac{\frac{1}{n!}}{\frac{1}{(n+1)!}} \right| = \lim_{n
+          \rightarrow \infty} \frac{(n+1)!}{n!} = \lim_{n \rightarrow
+          \infty} n = \infty
+        </me>
+        <p>
+          The radius of convergence is <m>R = \infty</m>. The domain
+          of definition is all real numbers. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the radius of convergence and domain of definition
+          for this power series.
+        </p>
+        <me>
+          \sum_{n=0}^\infty \frac{(-1)^n}{n} (x-3)^n 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I'll use the limit test for this radius of convergence,
+          since none of the coefficients are zero.
+        </p>
+        <me>
+          R = \lim_{n \rightarrow \infty} \left| \frac{c_n}{c_{n+1}}
+          \right| = \lim_{n \rightarrow \infty} \left|
+          \frac{\frac{(-1)^n}{n}}{\frac{(-1)^{n+1}}{n+1}} \right| =
+          \lim_{n \rightarrow \infty} \frac{n+1}{n} = 1
+        </me>
+        <p>
+          The radius of convergence is <m>R = 1</m>. Since the centre
+          point is <m>\alpha = 3</m>, the domain of definition is
+          <m>(2,4)</m>.     
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the radius of convergence and domain of definition
+          for this power series.
+        </p>
+        <me>
+          \sum_{n=0}^\infty (\ln n) x^n 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I'll use the limit test for this radius of convergence,
+          since none of the coefficients are zero. I'll use
+          L'Hôpital's rule for this limit, which conveniently gets
+          rid of the logarithms. (The limit has type
+          <m>\frac{\infty}{\infty}</m>, so L'Hôpital's rule is
+          justified.
+        </p>
+        <me>
+          R = \lim_{n \rightarrow \infty} \left| \frac{c_n}{c_{n+1}}
+          \right| = \lim_{n \rightarrow \infty} \left| \frac{\ln
+          n}{\ln (n+1)} \right| = \lim_{n \rightarrow \infty}
+          \frac{\frac{1}{n}}{\frac{1}{n+1}} = \lim_{n \rightarrow
+          \infty} \frac{n+1}{n} = 1
+        </me>
+        <p>
+          The radius of convergence is <m>R = 1</m>. Since the centre
+          point is <m>\alpha = 0</m>, the domain of definition is
+          <m>(-1,1)</m>.     
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the radius of convergence and domain of definition
+          for this power series.
+        </p>
+        <me>
+          \sum_{n=0}^\infty \frac{1}{n!} x^{2n} 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          This series has only even terms; all the odd terms are zero.
+          Since there are even terms, a direct use of either the limit
+          calculation for the radius of convergence or the ratio test
+          leads to division by zero problems. However, I can adjust a
+          bit. I can think of this as a power series in <m>x^2</m>. If
+          I do that, then all the terms are non-zero and I can use the
+          limit. The result will give a radius that applies to
+          <m>x^2</m>. Here is the limit.
+        </p>
+        <me>
+          R = \lim_{n \rightarrow \infty} \left| \frac{c_n}{c_{n+1}}
+          \right| = \lim_{n \rightarrow \infty} \left|
+          \frac{\frac{1}{n!}}{\frac{1}{(n_1)!}} \right| = \lim_{n
+          \rightarrow \infty} \frac{(n+1)!}{n!} = \lim_{n \rightarrow
+          \infty} n+1 = \infty
+        </me>
+        <p>
+          The radius of convergence is <m>R = \infty</m>. Therefore,
+          the series is defined everywhere. Technically, since I made
+          this a series in <m>x^2</m>, the limit shows that <m>x^2</m>
+          can be any real number. That immediatly implies that the
+          original input <m>x</m> can be any real number as well. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Determine the radius of convergence and domain of definition
+          for this power series.
+        </p>
+        <me>
+          \sum_{n=0}^\infty \frac{n!(n+2)!}{(2n+3)!} (x+2)^n 
+        </me>
+      </statement>
+      <solution>
+        <p>
+          I'll use the limit test for this radius of convergence,
+          since none of the coefficients are zero. This limit is all
+          about factorial algebra. I'll simplify the nested fraction
+          and then group similar factorial terms together. Then I'll
+          cancel the factorials and look at the remaining polynomial
+          terms. 
+        </p>
+        <md>
+          <mrow>
+            R \amp = \lim_{n \rightarrow \infty} \left|
+            \frac{c_n}{c_{n+1}} \right| = \lim_{n \rightarrow \infty}
+            \frac{\frac{n!(n+2)!}{(2n+3)!}}{\frac{(n+1)!(n+3)!}{(2n+5)!}}
+          </mrow>
+          <mrow>
+            \amp = \lim_{n \rightarrow \infty} \frac{n!}{(n+1)!}
+            \frac{(n+2)!}{(n+3)!} \frac{(2n+5)!}{(2n+3)!} 
+          </mrow>
+          <mrow>
+            \amp = \lim_{n \rightarrow \infty}
+            \frac{(2n+4)(2n+5)}{(n+1)(n+3)} 
+            = \lim{n \rightarrow \infty}
+            \frac{4n^2 + 18n + 20}{n^2 + 4n + 3} = 4 
+          </mrow>
+        </md>
+        <p>
+          After simplifying the factorial, the limit is a quadratic in
+          both the denominator and numerator. Since these have the
+          same asymptotic order, the limit is the ratio of the leading
+          coefficients.  The radius of convergence is <m>R = 4</m>.
+          Since the centre point is <m>\alpha = 0</m>, the domain of
+          definition is <m>(-4,4)</m>.     
+        </p>
+      </solution>
+    </activity>
+  </subsection>
+  <subsection xml:id="subsection-activity-taylor-series">
+    <activity>
+      <statement>
+        <p>
+          Calculate the Taylor series for <m>f(x) = \cosh x</m> with
+          centre point <m>x = 0</m>. Determine its radius of
+          convergence. 
         </p>
       </statement>
       <solution>
         <p>
-          Solution
+          First I need the derivatives of the function. I'll take the
+          first few derivatives.
+        </p>
+        <md>
+          <mrow>
+            f(x) \amp = \cosh x 
+          </mrow>
+          <mrow>
+            \frac{d}{dx} f(x) \amp = \sinh x 
+          </mrow>
+          <mrow>
+            \frac{d^2}{dx^2} f(x) \amp = \cosh x
+          </mrow>
+          <mrow>
+            \frac{d^3}{dx^3} f(x) \amp = \sinh x 
+          </mrow>
+          <mrow>
+            \frac{d^4}{dx^4} f(x) \amp = \cosh x
+          </mrow>
+          <mrow>
+            \frac{d^5}{dx^5} f(x) \amp = \sinh x 
+          </mrow>
+          <mrow>
+            \frac{d^6}{dx^6} f(x) \amp = \cosh x
+          </mrow>
+        </md>
+        <p>
+          Then I'll evaluate at the centre point. 
+        </p>
+        <md>
+          <mrow>
+            f(0) \amp = 1
+          </mrow>
+          <mrow>
+            \frac{d}{dx} f(x) \Bigg|_{x=0} \amp = 0
+          </mrow>
+          <mrow>
+            \frac{d^2}{dx^2} f(x) \Bigg|_{x=0} \amp = 1
+          </mrow>
+          <mrow>
+            \frac{d^3}{dx^3} f(x) \Bigg|_{x=0} \amp = 0
+          </mrow>
+          <mrow>
+            \frac{d^4}{dx^4} f(x) \Bigg|_{x=0} \amp = 1
+          </mrow>
+          <mrow>
+            \frac{d^5}{dx^5} f(x) \Bigg|_{x=0} \amp = 0
+          </mrow>
+          <mrow>
+            \frac{d^6}{dx^6} f(x) \Bigg|_{x=0} \amp = 1
+          </mrow>
+        </md>
+        <p>
+          Then I need to find a pattern. Here, the pattern is
+          relatively obvious: a sequences of alternating zeros and
+          ones. Only the even terms are non-zero, so I'll only write
+          the even terms in the final Taylor series. To write the even
+          terms, I use <m>(2n)</m> as <m>n \in \NN</m>.
+        </p>
+        <me>
+          \frac{d^{2n}}{dx^{2n}} f(x) \Bigg|_{x=0} = 1 
+        </me>
+        <p>
+          After describing a pattern for the derivatives at the centre
+          point, I put that pattern into the standard form of the
+          Taylor series. 
+        </p>
+        <me>
+          f(x) = \sum_{n=0}^\infty \frac{1}{(2n)!} x^{2n} 
+        </me>
+        <p>
+          I take the limit of the ration of the coefficients to
+          determine the radius of convergence. (In this case, since
+          there are only even terms, the resulting radius will be a
+          bound on <m>x^2</m> instead of <m>x</m>.)
+        </p>
+        <me>
+          R = \lim_{n \rightarrow \infty} \left| \frac{c_n}{c_{n+1}}
+          \right| = \lim_{n \rightarrow \infty} \left|
+          \frac{\frac{1}{n!}}{\frac{1}{(n+1)!}} \right| = \lim_{n
+          \rightarrow \infty} \frac{(n+1)!}{n!} = \lim_{n \rightarrow
+          \infty} n+1 = \infty
+        </me>
+        <p>
+          The radius of convergence for <m>x^2</m> is <m>R =
+          \infty</m>. Since <m>x^2</m> can be any real number,
+          <m>x</m> can also be any real number, to the radius of
+          convergence for the series is, indeed, infinity. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the Taylor series for <m>f(x) = \frac{1}{x}</m>
+          with centre point <m>x = 1</m>. Determine its radius of
+          convergence. 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First I need the derivatives of the function. I'll take the
+          first few derivatives.
+        </p>
+        <md>
+          <mrow>
+            f(x) \amp = \frac{1}{2} 
+          </mrow>
+          <mrow>
+            \frac{d}{dx} f(x) \amp = \frac{-1}{x^2} 
+          </mrow>
+          <mrow>
+            \frac{d^2}{dx^2} f(x) \amp = \frac{2}{x^3} 
+          </mrow>
+          <mrow>
+            \frac{d^3}{dx^3} f(x) \amp = \frac{-(2)(3)}{x^4}
+          </mrow>
+          <mrow>
+            \frac{d^4}{dx^4} f(x) \amp = \frac{(2)(3)(4)}{x^5} 
+          </mrow>
+          <mrow>
+            \frac{d^5}{dx^5} f(x) \amp = \frac{-(2)(3)(4)(5)}{x^6}
+          </mrow>
+          <mrow>
+            \frac{d^6}{dx^6} f(x) \amp = \frac{(2)(3)(4)(5)(6)}{x^7}
+          </mrow>
+        </md>
+        <p>
+          Then I'll evaluate at the centre point. 
+        </p>
+        <md>
+          <mrow>
+            f(1) \amp = 1
+          </mrow>
+          <mrow>
+            \frac{d}{dx} f(x) \Bigg|_{x=1} \amp = -1
+          </mrow>
+          <mrow>
+            \frac{d^2}{dx^2} f(x) \Bigg|_{x=1} \amp = 2
+          </mrow>
+          <mrow>
+            \frac{d^3}{dx^3} f(x) \Bigg|_{x=1} \amp = -(2)(3)
+          </mrow>
+          <mrow>
+            \frac{d^4}{dx^4} f(x) \Bigg|_{x=1} \amp = (2)(3)(4)
+          </mrow>
+          <mrow>
+            \frac{d^5}{dx^5} f(x) \Bigg|_{x=1} \amp = -(2)(3)(4)(5)
+          </mrow>
+          <mrow>
+            \frac{d^6}{dx^6} f(x) \Bigg|_{x=1} \amp = (2)(3)(4)(5)(6)
+          </mrow>
+        </md>
+        <p>
+          Then I need to find a pattern. The sign is alternating, so I
+          need a power of <m>(-1)</m>. Since the even terms are
+          positive, <m>(-1)^n</m> will work. After the sign, it looks
+          like I'm building a factorial. The degree of the derivative
+          matches the degree of the factorial. 
+        </p>
+        <me>
+          \frac{d^n}{dx^n} f(x) \Bigg|_{x=1} = (-1)^n n!
+        </me>
+        <p>
+          After describing a pattern for the derivatives at the centre
+          point, I put that pattern into the standard form of the
+          Taylor series. 
+        </p>
+        <me>
+          f(x) = \sum_{n=0}^\infty \frac{(-1)^n n!}{n!} (x-1)^n =
+          \sum_{n=0}^\infty (-1)^n (x-1)^n 
+        </me>
+        <p>
+          I take the limit of the ration of the coefficients to
+          determine the radius of convergence.  
+        </p>
+        <me>
+          R = \lim_{n \rightarrow \infty} \left| \frac{c_n}{c_{n+1}}
+          \right| = \lim_{n \rightarrow \infty} \left|
+          \frac{(-1)^n}{(-1)^{n+1}} \right| = \lim_{n \rightarrow
+          \infty} 1 = 1 
+        </me>
+        <p>
+          The radius of convergence is <m>R = 1</m>. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the Taylor series for <m>f(x) = x^7 + 8x^6 - 19x^5
+          + 12x^4 + 3x^3 - 19x^2 + 4x + 41 </m> with
+          centre point <m>x = 0</m>. Determine its radius of
+          convergence. 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This is a bit of a trick question. A polynomial is already
+          in the form of a Taylor series centred at <m>\alpha =
+          0</m>. Since series representations are unique, there is no
+          other way to write this polynomial as a series. There is
+          nothing to do here. If you did do the steps, you would
+          recover exactly the same expression and you would find that
+          all coefficients for <m>x^8</m> and above would be zero. The
+          radius of convergence is <m>\infty</m>, since a polynomial
+          is defined everywhere. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Calculate the Taylor series for <m>f(x) = \ln (x+3)</m> with
+          centre point <m>x = 0</m>. Determine its radius of
+          convergence. 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          First I need the derivatives of the function. I'll take the
+          first few derivatives.
+        </p>
+        <md>
+          <mrow>
+            f(x) \amp = \ln (x+3)
+          </mrow>
+          <mrow>
+            \frac{d}{dx} f(x) \amp = \frac{1}{x+3}
+          </mrow>
+          <mrow>
+            \frac{d^2}{dx^2} f(x) \amp = \frac{-1}{(x+3)^2}
+          </mrow>
+          <mrow>
+            \frac{d^3}{dx^3} f(x) \amp = \frac{2}{(x+3)^3} 
+          </mrow>
+          <mrow>
+            \frac{d^4}{dx^4} f(x) \amp = \frac{-(2)(3)}{(x+3)^4}
+          </mrow>
+          <mrow>
+            \frac{d^5}{dx^5} f(x) \amp = \frac{(2)(3)(4)}{(x+3)^5}
+          </mrow>
+          <mrow>
+            \frac{d^6}{dx^6} f(x) \amp = \frac{-(2)(3)(4)(5)}{(x+3)^6}
+          </mrow>
+        </md>
+        <p>
+          Then I'll evaluate at the centre point. 
+        </p>
+        <md>
+          <mrow>
+            f(0) \amp = \ln 3 
+          </mrow>
+          <mrow>
+            \frac{d}{dx} f(x) \Bigg|_{x=0} \amp = \frac{1}{3} 
+          </mrow>
+          <mrow>
+            \frac{d^2}{dx^2} f(x) \Bigg|_{x=0} \amp = \frac{-1}{3^2} 
+          </mrow>
+          <mrow>
+            \frac{d^3}{dx^3} f(x) \Bigg|_{x=0} \amp = \frac{2}{3^3} 
+          </mrow>
+          <mrow>
+            \frac{d^4}{dx^4} f(x) \Bigg|_{x=0} \amp =
+            \frac{-(2)(3)}{3^4} 
+          </mrow>
+          <mrow>
+            \frac{d^5}{dx^5} f(x) \Bigg|_{x=0} \amp =
+            \frac{(2)(3)(4)}{3^5} 
+          </mrow>
+          <mrow>
+            \frac{d^6}{dx^6} f(x) \Bigg|_{x=0} \amp =
+            \frac{-(2)(3)(4)(5)}{3^6} 
+          </mrow>
+        </md>
+        <p>
+          Then I need to find a pattern. The signs are alternating and
+          the odd terms are positive, so I need <m>(-1)^{n+1}</m>. I
+          am buliding a factorial in the numerator, but the degree of
+          the factorial is one less than the degree of the
+          derivatives, so I'll need <m>(n-1)!</m>. Finally, there is a
+          power of <m>3</m> in the numerator and the exponent is the
+          same as the degree of the derivative. Also, the first
+          term doesn't fit the pattern, so I'll have to remember to
+          keep that term seperate. 
+        </p>
+        <me>
+          \frac{d^n}{dx^n} f(x) \Bigg|_{x=0} =
+          \frac{(-1)^{n+1}(n-1)!}{3^n} 
+        </me>
+        <p>
+          After describing a pattern for the derivatives at the centre
+          point, I put that pattern into the standard form of the
+          Taylor series. I need to remember that the first term
+          doesn't fit the pattern and must be written apart from the
+          sigma notation.
+        </p>
+        <me>
+          f(x) = \ln 3 + \sum_{n=1}^\infty \frac{(-1)^{n+1}(n-1)!}{3^n
+          n!} x^n = \ln 3 + \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n3^n} x^n 
+        </me>
+        <p>
+          I take the limit of the ration of the coefficients to
+          determine the radius of convergence.  
+        </p>
+        <me>
+          R = \lim_{n \rightarrow \infty} \left| \frac{c_n}{c_{n+1}}
+          \right| = \lim_{n \rightarrow \infty} \left|
+          \frac{\frac{(-1)^{n+1}}{n3^n}}{\frac{(-1)^{n+2}}{(n+1)3^{n+1}}}
+          \right| = \lim_{n \rightarrow \infty}
+          \frac{(n+1)3^{n+1}}{n3^n} = \lim_{n \rightarrow \infty}
+          3 \frac{n+1}{n} = 3 
+        </me>
+        <p>
+          The radius of convergence is <m>R = 3</m>. 
         </p>
       </solution>
     </activity>
@@ -20,24 +549,20 @@
     <p>
       <ul>
         <li>
-          Question
+          What is a radius of convergence?
+        </li>
+      </ul>
+      <ul>
+        <li>
+          How do series represent functions?
+        </li>
+      </ul>
+      <ul>
+        <li>
+          Why can series define all sorts of new non-elementary
+          functions?
         </li>
       </ul>
     </p>
-  </subsection>
-  <subsection xml:id="subsection-week12-extra-practice">
-    <title>Extra Practice Activities</title>
-    <activity>
-      <statement>
-        <p>
-          Question
-        </p>
-      </statement>
-      <solution>
-        <p>
-          Solution
-        </p>
-      </solution>
-    </activity>
   </subsection>
 </section>

@@ -206,7 +206,7 @@
     </example>
   </subsection>
   <subsection xml:id="subsection-substitution-examples-def">
-    <title>Substitution Examples 0 Definite Integrals</title>
+    <title>Substitution Examples - Definite Integrals</title>
     <p>
       When I do substitution with definite integrals, I also need to
       change the bounds. If <m>a</m> and <m>b</m> are the bounds in
