@@ -1,0 +1,26 @@
+<!--
+  This assignment was used for the Winter 2022 term.
+-->
+<section xml:id="section-assignment-week10">
+  <title>Week 10 Assignment</title>
+  <!--
+  <ol>
+    <li>
+      <p>
+        Calculate the value of this series. (6)
+      </p>
+      <me>
+        \sum_{n=0}^\infty \frac{2^n + 4^n}{16^n} 
+      </me>
+    </li>
+    <li>
+      <p>
+        Calculate the value of this series. (8) 
+      </p>
+      <me>
+        \sum_{n=0}^\infty \frac{1}{(n+1)(n+4)}
+      </me>
+    </li>
+  </ol>
+  -->
+</section>

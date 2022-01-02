@@ -1,5 +1,5 @@
 <!--
-  This assignment was used for the Winter 2020 term.
+  This assignment was used for the Winter 2022 term.
 -->
 <section xml:id="section-assignment-week2">
   <title>Week 2 Assignment</title>
@@ -7,18 +7,22 @@
     <li>
       <p>
         Use the exponential definitions of the hyperbolic functions to
-        prove the following identity. (6) 
+        prove the following identity. (Should should start with one
+        side and manipulate the expressions to produce the other side.
+        You should not start with the equation and reduce to an known
+        equality; this is not a valid method of proving identities.) (4) 
       </p>
       <me>
-        \sinh (2x) = 2 \sinh x \cosh x 
+        \cosh (2x) = \cosh^2 x + \sinh^2 x
       </me>
     </li>
     <li>
       <p>
-        Calculate this limit. (3) 
+        Calculate this limit. (4) 
       </p>
       <me>
-        \lim_{x \rightarrow \infty} \frac{\sinh^2 x }{1 + 4\cosh x} 
+        \lim_{x \rightarrow \infty} \frac{e^{2x} + 4 \sinh^2
+        x}{\cosh^2 x} 
       </me>
     </li>
     <li>
@@ -26,7 +30,7 @@
         Calculate this derivative. (4) 
       </p>
       <me>
-        \frac{d}{dt} \ln (\tanh t) 
+        \frac{d}{dx} \frac{1}{1 + \cosh^2 x} 
       </me>
     </li>
     <li>
@@ -34,16 +38,16 @@
         Calculate this integral (4) 
       </p>
       <me>
-        \int \tanh^2 x \frac{1}{\cosh^2 x} dx 
+        \int \sinh x \sqrt{\cosh x} dx 
       </me>
     </li>
     <li>
       <p>
         Find the slope of the tangent line to the following locus at
-        the points <m>(2,2)</m> and <m>(1,-1)</m>. (6) 
+        the points <m>(1,2)</m> and <m>(0,-1)</m>. (6) 
       </p>
       <me>
-        x^4 - 2x^2 - y^3 = 0 
+        xy^3 - x^2y^2 + xy - 2y - 2 = 0
       </me>
     </li>
   </ol></p>
