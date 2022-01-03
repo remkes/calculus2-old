@@ -255,7 +255,8 @@
         </md>
         <p>
           The limit here is <m>0</m> regardless of the value of
-          <m>x</m>, so we have convergence for all real numbers.
+          <m>x</m>, so I have established convergence for all real
+          numbers.
         </p>
       </statement>
     </example>
@@ -305,9 +306,9 @@
         <p>
           The positive real number <m>R</m> in the third case is
           called the <term>radius of convergence</term> of a power
-          series. We can use this terminology to cover the other two
-          cases as well: in the first case, we say <m>R=0</m> and in
-          the second case, we say <m>R = \infty</m>.
+          series. I can use this terminology to cover the other two
+          cases as well: in the first case, I can say <m>R=0</m> and in
+          the second case, I can say <m>R = \infty</m>.
         </p>
       </statement>
     </definition>

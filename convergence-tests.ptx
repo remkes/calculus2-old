@@ -413,7 +413,7 @@
   <subsection xml:id="subsection-testing-examples">
     <title>Testing Examples</title>
     <p>
-      Now that I have all the tools at our disposal, here are a bunch
+      Now that I have all the tools at my disposal, here are a bunch
       of examples.
     </p>
     <example>
@@ -649,7 +649,7 @@
           \sum_{n=1}^\infty \frac{n!}{e^{n^2}}
         </me>
         <p>
-          We have factorials again, so ratio test is likely the best
+          There are factorials again, so ratio test is likely the best
           choice.
         </p>
         <md>
@@ -841,8 +841,8 @@
           That is, the slope of tangent is always larger than 1. Since
           <m>\tan 0 = 0</m>, that means that near the origin, <m>\tan
           x > x</m>.  Equivalently, for large <m>n</m>, <m>\tan
-          \frac{1}{n} > \frac{1}{n}</m>. This allows us to compare our
-          series to the harmonic series: our terms are larger than the
+          \frac{1}{n} > \frac{1}{n}</m>. This allows me to compare the
+          series to the harmonic series: the terms are larger than the
           harmonic series and the harmonic series diverges, so this
           series also diverges.
         </p>

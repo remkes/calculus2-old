@@ -14,7 +14,7 @@
       function, is the same as the function <m>\frac{1}{1-x}</m> on
       the domain <m>(-1,1)</m>.(The function <m>\frac{1}{1-x}</m> is
       certainly defined on a larger domain, but the series is not).
-      I can say that the geometric series lets us write
+      I can say that the geometric series lets me write
       <m>\frac{1}{1-x}</m> as an infinite series; it is the infinite
       series <em>representation</em> of the function on the domain
       <m>(-1,1)</m>.
@@ -238,7 +238,7 @@
       <m>a^r</m> actually was nor how to calculate it. I worked on
       an unjustified assumption that the exponential function
       <m>e^x</m> was well defined for irrational numbers. Now,
-      however, we can use this series. The value of <m>e^{\pi}</m>,
+      however, I can use this series. The value of <m>e^{\pi}</m>,
       which was completely opaque and mysterious before, is now given
       by a series.
     </p>
@@ -309,16 +309,16 @@
           Now I want a series for <m>e^{x^2}</m>. 
           Here is a 
           easy for series. Let's look at the function <m>e^{x^2}</m>.
-          It has no elementary anti-derivative, so we unable to
-          integrate it with conventional methods. However, if we put
-          <m>x^2</m> into the series for the exponential function, we
+          It has no elementary anti-derivative, so I am unable to
+          integrate it with conventional methods. However, if I put
+          <m>x^2</m> into the series for the exponential function, I
           get a series for <m>e^{x^2}</m>.
           <me>
             e^{x^2} = \sum_{n=0}^\infty \frac{x^{2n}}{n!}
           </me>
         </p>
         <p>
-          Since this is a series, we can integrate it.
+          Since this is a series, I can integrate it.
           <me>
             \int e^{x^2} dx = \sum_{n=0}^\infty
             \frac{x^{2n+1}}{(2n+1)n!} + c
@@ -326,7 +326,7 @@
         </p>
         <p>
           This new series is the anti-derivative of <m>e^{x^2}</m>.
-          We knew such a function should exist, and now we have a
+          I knew such a function should exist, and now I have a
           representation of it as a Taylor series. (The series has
           infinite radius of convergence).
         </p>
@@ -536,7 +536,7 @@
       In addition to finding connections between known functions,
       Taylor series can construct entirely new functions.
       These are often called non-elementary functions (the elementary
-      functions are those which we already have worked with:
+      functions are those which I already have worked with:
       polynomials, roots, exponentials, logarithms, trig, and
       hyperbolics). I'll give a few notable examples. 
     </p>

@@ -141,7 +141,7 @@
         <p>
           Unsurprisingly, I conclude that the total distance travelled
           from <m>0</m> to <m>1</m> is simply <m>1</m> unit. This
-          gives a justification for saying that we <em>can</em> travel
+          gives a justification for saying that I <em>can</em> travel
           an infinite number of smaller and smaller intervals, since
           all those infinitely many intervals add up to a finite
           distance. (Whether this actually soves Zeno's paradox is a
@@ -218,7 +218,7 @@
           </mrow>
         </md>
         <p>
-          Taking every second power of two gives us partial sums
+          Taking every second power of two gives partial sums
           larger than the sequence of positive numbers.
         </p>
         <me>
@@ -293,7 +293,7 @@
           to infinity. There is simply no way to settle on a value
           when the partial sums keep switching back and forth from
           <m>0</m> to <m>1</m>. Unlike the geometric series behind
-          Zeno's paradox, this is a series where we simply can't
+          Zeno's paradox, this is a series where I simply can't
           reckon with the infinite numbers of steps. Since there is no
           last step in an finite process, I can never decide if the
           last addition is <m>(-1)</m>, giving a value of <m>0</m>, of
@@ -415,8 +415,8 @@
         </me>
         <p>
           This is another definition for the number <m>e</m>. I'll
-          prove that this definition is equivalent our existing
-          definitions in <xref
+          prove that this definition is equivalent to the previous
+          definitions is <xref
           ref="subsection-taylor-series-examples"/>.
         </p>
       </statement>

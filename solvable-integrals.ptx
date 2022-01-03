@@ -50,7 +50,7 @@
     An integral <m>f(x) dx</m> might not have a elementary
     antiderivaitve, but it still might have some other kind of
     elementary derivative. In fact, here is a nice proposition that tells
-    us when antiderivative exist.
+    me when antiderivative exist.
   </p>
   <proposition>
     <statement>
@@ -78,7 +78,8 @@
     elemetary function, then the answer is no. If, for a solution, you
     mean any function (possibly an entirely new and unknown function),
     then the answer is yes. Whether a mathematical problem has an
-    answer can very much depend on the subtleties of how we ask. 
+    answer can very much depend on the subtleties of how the question
+    is asked.
   </p>
   <p>
     All that said, in this course I will keep to integrals which have
