@@ -177,7 +177,7 @@
         </p>
         <md>
           <mrow>
-            \int_0^\infty \alph e^{-\alpha x} dx \amp = \lim_{a
+            \int_0^\infty \alpha e^{-\alpha x} dx \amp = \lim_{a
             \rightarrow \infty} \int_0^a e^{-\alpha x} dx
           </mrow>
           <mrow>
@@ -187,7 +187,7 @@
           <mrow>
             \amp = \alpha \left( \lim_{a \rightarrow \infty}
             \frac{-e^{-\alpha a}}{\alpha} + \frac{1}{\alpha} \right) =
-            \frac{\alpha}{\alpha} = 1 
+            \frac{\alpha}{\alpha} = 1
           </mrow>
         </md>
         <p>

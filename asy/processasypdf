@@ -18,8 +18,6 @@ asy -f pdf figure14.asy
 asy -f pdf figure15.asy
 asy -f pdf figure16.asy
 asy -f pdf figure17.asy
-asy -f pdf figure18.asy
-asy -f pdf figure19.asy
 asy -f pdf figure20.asy
 asy -f pdf figure21.asy
 asy -f pdf figure22.asy

@@ -346,7 +346,7 @@
             \sin \theta \cos \theta}{8} + c
           </mrow>
           <mrow>
-            \amp = \frac{\arcsin 2x}{4} + \frac{2 \cdot 2x \codt
+            \amp = \frac{\arcsin 2x}{4} + \frac{2 \cdot 2x \cdot
             2\sqrt{\frac{1}{4}-x^2}}{8} + c
           </mrow>
           <mrow>
