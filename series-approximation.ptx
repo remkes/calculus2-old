@@ -25,42 +25,42 @@
     approximations to analytic functions. I'll give a couple examples. 
   </p>
   <example>
-    <figure xml:id="figure-exponential-approximations">
-      <caption>Polynomials Approximations to <m>e^x</m>.</caption>
-      <image xml:id="figure28" width="80%">
-        <asymptote>
-          size(12cm,8cm,IgnoreAspect);
-          import graph;
-          yaxis();
-          xaxis();
-  
-          real f(real x) {return exp(x);}
-  
-          draw(graph(f,-3,1));
-  
-          real f1(real x) {return 1 + x;}
-          real f2(real x) {return 1 + x + (x^2)/2;}
-          real f3(real x) {return 1 + x + (x^2)/2 + (x^3)/6;}
-          real f4(real x) {return 1 + x + (x^2)/2 + (x^3)/6 + (x^4)/(24);}
-          real f5(real x) {return 1 + x + (x^2)/2 + (x^3)/6 + (x^4)/(24)
-          + (x^5)/(120);}
-
-          draw(graph(f1,-3,1));
-          draw(graph(f2,-3,1));
-          draw(graph(f3,-3,1));
-          draw(graph(f4,-3,1));
-          draw(graph(f5,-3,1));
-  
-          label("$p_1$",(-2,-1),SE);
-          label("$p_2$",(-3,f2(-3)),W);
-          label("$p_3$",(-3,f3(-3)),W);
-          label("$p_4$",(-3,f4(-3)),W);
-          label("$p_5$",(-3,f5(-3)),W);
-          label("$e^x$",(-3,0),NW);
-        </asymptote>
-      </image>
-    </figure>
     <statement>
+      <figure xml:id="figure-exponential-approximations">
+        <caption>Polynomials Approximations to <m>e^x</m>.</caption>
+        <image xml:id="figure28" width="80%">
+          <asymptote>
+            size(12cm,8cm,IgnoreAspect);
+            import graph;
+            yaxis();
+            xaxis();
+    
+            real f(real x) {return exp(x);}
+    
+            draw(graph(f,-3,1));
+    
+            real f1(real x) {return 1 + x;}
+            real f2(real x) {return 1 + x + (x^2)/2;}
+            real f3(real x) {return 1 + x + (x^2)/2 + (x^3)/6;}
+            real f4(real x) {return 1 + x + (x^2)/2 + (x^3)/6 + (x^4)/(24);}
+            real f5(real x) {return 1 + x + (x^2)/2 + (x^3)/6 + (x^4)/(24)
+            + (x^5)/(120);}
+  
+            draw(graph(f1,-3,1));
+            draw(graph(f2,-3,1));
+            draw(graph(f3,-3,1));
+            draw(graph(f4,-3,1));
+            draw(graph(f5,-3,1));
+    
+            label("$p_1$",(-2,-1),SE);
+            label("$p_2$",(-3,f2(-3)),W);
+            label("$p_3$",(-3,f3(-3)),W);
+            label("$p_4$",(-3,f4(-3)),W);
+            label("$p_5$",(-3,f5(-3)),W);
+            label("$e^x$",(-3,0),NW);
+          </asymptote>
+        </image>
+      </figure>
       <p>
         Look at the exponential function <m>e^x</m> centered at
         <m>\alpha = 0</m>. Its Taylor series was calculated in <xref
@@ -92,8 +92,7 @@
         </mrow>
       </md>
       <p>
-        In <xref
-        ref="figure-exponential-approximations">Figure</xref>, as the
+        In <xref ref="figure-exponential-approximations" />, as the
         degree of the polynomial increases, the polynomial starts to
         match up with the graph of the exponential function more and
         more closely. Higher degree polynomials will give better and
@@ -103,51 +102,50 @@
     </statement>
   </example>
   <example>
-    <figure xml:id="figure-sine-approximations">
-      <caption>Polynomials Approximations to <m>\sin x</m>.</caption>
-      <image xml:id="figure29" width="80%">
-        <asymptote>
-          size(12cm,8cm,IgnoreAspect);
-          import graph;
-          yaxis();
-          xaxis();
-  
-          real f(real x) {return sin(x);}
-  
-          draw(graph(f,-2*pi,2*pi));
-  
-          real f1(real x) {return x;}
-          real f2(real x) {return x - (x^3)/(6);}
-          real f3(real x) {return x - (x^3)/(6) + (x^5)/(120);}
-          real f4(real x) {return x - (x^3)/(6) + (x^5)/(120) -
-          (x^7)/(5040);}
-          real f5(real x) {return x - (x^3)/(6) + (x^5)/(120) -
-          (x^7)/(5040) + (x^9)/(362800);}
-  
-          draw(graph(f1,-3,3));
-          draw(graph(f2,-3.3,3.3));
-          draw(graph(f3,-4.2,4.2));
-          draw(graph(f4,-4.44,4.44));
-          draw(graph(f5,-5.6,5.6));
-  
-          label("$p_1$",(-3,-3),W);
-          label("$p_3$",(-3.2,2.5),W);
-          label("$p_5$",(-4.2,-2.6),W);
-          label("$p_7$",(-4.44,2.6),W);
-          label("$p_9$",(-5.6,-2.6),W);
-          label("$\sin x$",(-2*pi,0),NW);
-        </asymptote>
-      </image>
-    </figure>
     <statement>
+      <figure xml:id="figure-sine-approximations">
+        <caption>Polynomials Approximations to <m>\sin x</m>.</caption>
+        <image xml:id="figure29" width="80%">
+          <asymptote>
+            size(12cm,8cm,IgnoreAspect);
+            import graph;
+            yaxis();
+            xaxis();
+    
+            real f(real x) {return sin(x);}
+    
+            draw(graph(f,-2*pi,2*pi));
+    
+            real f1(real x) {return x;}
+            real f2(real x) {return x - (x^3)/(6);}
+            real f3(real x) {return x - (x^3)/(6) + (x^5)/(120);}
+            real f4(real x) {return x - (x^3)/(6) + (x^5)/(120) -
+            (x^7)/(5040);}
+            real f5(real x) {return x - (x^3)/(6) + (x^5)/(120) -
+            (x^7)/(5040) + (x^9)/(362800);}
+    
+            draw(graph(f1,-3,3));
+            draw(graph(f2,-3.3,3.3));
+            draw(graph(f3,-4.2,4.2));
+            draw(graph(f4,-4.44,4.44));
+            draw(graph(f5,-5.6,5.6));
+    
+            label("$p_1$",(-3,-3),W);
+            label("$p_3$",(-3.2,2.5),W);
+            label("$p_5$",(-4.2,-2.6),W);
+            label("$p_7$",(-4.44,2.6),W);
+            label("$p_9$",(-5.6,-2.6),W);
+            label("$\sin x$",(-2*pi,0),NW);
+          </asymptote>
+        </image>
+      </figure>
       <p>
         The approximations for sine only have odd exponents, since
         there are only odd monomials in the Taylor series for sine.
         Therefore, I'll only calculate the odd Taylor polynomials here
         (the even Taylor polynomials simply add zero to the previous
         odd Taylor polynomial.  The graphs of the first few Taylor
-        polynomials are shown in <xref
-        ref="figure-sine-approximations" />. 
+        polynomials are shown in <xref ref="figure-sine-approximations" />. 
       </p>
       <md>
         <mrow>

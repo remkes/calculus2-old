@@ -80,7 +80,7 @@
     course, I'll not cover much about accuracy of approximation with
     series. However, this will be covered in other courses and is
     particular important for numerical analysis and algorithm analysis
-    in computing science. Indeed, all the works that our computers and
+    in computing science. Indeed, all the work that computers and
     calculators do to calculate values of functions is approximation
     work, which requires careful control of the error to ensure that
     answers are given to the expected precision. 

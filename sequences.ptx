@@ -281,32 +281,6 @@
         </p>
       </statement>
     </definition>
-    <!--
-    <p>
-      As I did for limits of real valued functions, I could restate
-      these limits with <m>\epsilon</m> and <m>\delta</m>
-      definitions.
-    </p>
-    <definition>
-      <statement>
-        <p>
-          Let <m>\{a_n\}_{n=1}^\infty</m> be a sequence. <m>L \in
-          \RR</m> is the <term>limit of the sequence</term> if
-          <me>
-            \forall \epsilon > 0 \ \ \exists N \in \NN \text{ such
-            that } \forall n > N \ \ |a_n - L| \lt  \epsilon
-          </me>
-        </p>
-        <p>
-          We say that the sequence has an infinite limit if
-          <me>
-            \forall M \in \NN \ \ \exists N \in \NN \text{ such that }
-            \forall n > N \ \ a_n > M
-          </me>
-        </p>
-      </statement>
-    </definition>
-    -->
     <p>
       To understand limits, I can make great use of the perspective
       of sequences as functions. I know that limits of functions

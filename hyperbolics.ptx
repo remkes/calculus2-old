@@ -257,7 +257,7 @@
       Limits are almost entirely the same. The hyperbolics are
       continuous on their domains, so where there isn't ivision by
       zero, I can just evaulate limits. Where there is division by
-      zero, I can use the techniques we already have from limits:
+      zero, I can use the techniques I already know from limits:
       algebraic manipulation to adjust the limit or L'Höpital's Rule.
       Much like trig, there is one special limit which is very useful.
       <me>

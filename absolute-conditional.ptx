@@ -111,7 +111,7 @@
     <p>
       The first series is the harmonic series. If I factor
       <m>\frac{1}{2}</m> out of the second series, it is also the
-      harmonic series. We use the known value of <m>\ln 2</m> for
+      harmonic series. I use the known value of <m>\ln 2</m> for
       the harmonic series to calculate the value of this
       series.
     </p>
@@ -168,8 +168,8 @@
         below <m>\alpha</m> again.
         (Again, this can always be done, since the negative terms sum
         to <m>-\infty</m>). Then I simply repeat this process, adding
-        positives until we get above <m>\alpha</m> and negatives until
-        we get back below <m>\alpha</m>. This process can be
+        positives until I get above <m>\alpha</m> and negatives until
+        I get back below <m>\alpha</m>. This process can be
         continued indefinitely. Since both the positive and negative
         terms get arbitrarily small, this process will invariably
         converge on <m>\alpha</m> in the limit.

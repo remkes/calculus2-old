@@ -5,7 +5,7 @@
     <p>
       In Calculus I, I mostly calculated slopes of tangent lines to
       graphs of functions. Graphs are loci of the form <m>y =
-      f(x)</m>, and <m>f^\prime(x)</m> gave us the slope of the
+      f(x)</m>, and <m>f^\prime(x)</m> gave me the slope of the
       tangent line. For arbitrary loci in <m>\RR^2</m>, such as the
       conics, tangent lines can also be defined. I need to define a
       refinement of the derivative techniques to find their slopes,
@@ -32,7 +32,7 @@
       multiply by <m>\frac{dy}{dx}</m>, the derivative of the inside.
       I don't know what this is, so I just leave it as
       <m>\frac{dy}{dx}</m>. I'll eventually solve for this, since
-      <m>\frac{dy}{dx}</m> is, in fact, precisely what we want: the
+      <m>\frac{dy}{dx}</m> is, in fact, precisely what I want: the
       slope of the tangent line to the locus. 
     </p>
     <figure xml:id="figure-implicit-example">
@@ -48,8 +48,8 @@
           Take the locus of <m>x^4 + y^4 = 16</m>, as in <xref
           ref="figure-implicit-example" />. I will pretend
           that <m>y</m> is locally a function of <m>x</m>. Any
-          expressions in <m>x</m> we differentiate normally. For
-          expressions in <m>y</m>, we use the <em>chain rule</em>, due
+          expressions in <m>x</m> I differentiate normally. For
+          expressions in <m>y</m>, I use the <em>chain rule</em>, due
           to the pretense that <m>y</m> is a function of <m>x</m>.
           Therefore, <m>y^4</m> has a derivative of the outside
           (<m>4y^3</m>) and a derivative of the inside

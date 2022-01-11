@@ -649,17 +649,16 @@
         <p>
           The <term>parametrization by arclength</term> is the
           parametrization in the special variable <m>s</m> where
-          <m>\frac{ds}{dt} = 1</m>, i.e., the
-          unique parametrization where we always move along the curve
-          with speed of one unit of distance per unit of time. The
-          starting point of the curve is at <m>s = 0</m> and the range
-          of <m>s</m> is <m> s \in [0, L]</m> where <m>L</m> is the
-          length of the curve. The use of the variable <m>s</m> for
-          parametrization by arclength is conventional; I will only
-          use <m>s</m> as a parameter when I want to indicate the
-          parametrization by arclength (as oppsed to the use of
-          <m>t</m> and <m>u</m> as paramaters in various calculations
-          so far). 
+          <m>\frac{ds}{dt} = 1</m>, i.e., the unique parametrization
+          where movement along the curve is always with speed of one
+          unit of distance per unit of time. The starting point of the
+          curve is at <m>s = 0</m> and the range of <m>s</m> is <m> s
+          \in [0, L]</m> where <m>L</m> is the length of the curve.
+          The use of the variable <m>s</m> for parametrization by
+          arclength is conventional; I will only use <m>s</m> as a
+          parameter when I want to indicate the parametrization by
+          arclength (as oppsed to the use of <m>t</m> and <m>u</m> as
+          paramaters in various calculations so far).
         </p>
       </statement>
     </definition>
@@ -699,7 +698,7 @@
       <m>u</m> to do the integration. (The same variable should never
       show up as a variable of integration and a variable existing
       outside the intergral.) The arclength function measure how much
-      length we've covered as the parameter goes from the start
+      length the curve has covered as the parameter goes from the start
       <m>a</m> to <m>t</m>.
     </p>
     <p>

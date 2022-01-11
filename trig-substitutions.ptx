@@ -89,7 +89,7 @@
       three terms <m>\sqrt{a^2 - x^2}</m>, <m>\sqrt{x^2 - a^2}</m> and
       <m>\sqrt{x^2 + a^2}</m> are important and common. We often also
       have to do integrals with these kinds of functions. The technique
-      we use to solve integrals that involve one of these three forms
+      I use to solve integrals that involve one of these three forms
       is trigonometric substitution. I am going to replace the
       variable <m>x</m> with a suitable trigonometric function.
     </p>

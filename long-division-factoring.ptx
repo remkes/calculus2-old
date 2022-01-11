@@ -216,7 +216,7 @@
       </statement>
     </definition>
     <p>
-      There is a nice theorem which tells us how polynomial over
+      There is a nice theorem which tells me how polynomial over
       <m>\RR^2</m> factor. I present it here without proof. (It is a
       corollary of the Fundamental Theorem of Algebra; a theory which
       tells how polynomials factor over <m>\CC</m>.) 
@@ -277,7 +277,7 @@
       The situation of finding roots (and hence linear factors) of
       polynomials gets even worse past this point. For polynomials of
       degree five and higher, there is no formula for roots. Moreover,
-      it's not that we just don't know the formula: in a major result
+      it's not that I just don't know the formula: in a major result
       in 19th mathematics (the Able-Ruffini Theorem) that such a
       formula is, in fact, entirely impossible. This theorem is part
       of a beautiful branch of mathemaatics called Galois theory,

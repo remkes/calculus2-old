@@ -187,7 +187,7 @@
           <mrow>
             \amp = \alpha \left( \lim_{a \rightarrow \infty}
             \frac{-e^{-\alpha a}}{\alpha} + \frac{1}{\alpha} \right) =
-            \frac{\alpha}{\alpha} = 1 
+            \frac{\alpha}{\alpha} = 1
           </mrow>
         </md>
         <p>
@@ -311,7 +311,7 @@
       measurements is relatively intuitive: I just add up the
       measurements multiplied by their probabilities. What a mean
       should be for a continuous probability isn't as immediately
-      obvious, since we can't add up the infinitely-many measurements.
+      obvious, since I can't add up the infinitely-many measurements.
       However, I can still take inspiration from the discrete case.
     </p>
     <p>
@@ -521,7 +521,7 @@
       what is the most likely outcome of a measurement. In general, a
       <em>central tendency</em> is any mathematical calculation of a
       <sq>typical</sq> value; for most distributions, there are
-      several different central tendencies which we can consider. It
+      several different central tendencies which I can consider. It
       isn't always obvious which is the most appropriate. The three
       most common and most well-known central tendencies are mean
       (average), median and mode.
@@ -619,7 +619,7 @@
       The mean measure, in some sense, the most likely measurement.
       (This is never precisely true for continuous probability, since
       there are infinitely many possible measurements). It answer the
-      question: what do we expect the measurement to be? We expect the
+      question: what do I expect the measurement to be? I expect the
       measurement to be the mean or at least something close to it.
     </p>
     <p>

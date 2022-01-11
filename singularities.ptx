@@ -31,11 +31,11 @@
       whole branches of 19th and 20th century mathematics. 
     </p>
     <p>
-      Before we get to cubics, let me cover the only possible singulary
+      Before I get to cubics, let me cover the only possible singulary
       in degree two. In degree one, there are no problems: the tangent
-      line to a line is jus the original line, so this is always
+      line to a line is just the original line, so this is always
       defined, even for a vertical line. Likewise, almost all degree two
-      curves have no singularities: the shapes that we have called
+      curves have no singularities: 
       circles, ellipses, parabolae and hyperbolae have no places where a
       tangent line cannot be undefined. There is only one kind of degree
       two curve which has a singularity: an intersection of two lines.
@@ -59,7 +59,7 @@
       </image>
     </figure>
     <p>
-      This strange degree two curve is just two lines. We can see this
+      This strange degree two curve is just two lines. I can see this
       by factoring the equation: <m>x^2 - y^2 = 0</m> becomes
       <m>(x-y)(x+y) = 0</m>. This is just the produce of two linear
       equations: <m>x-y=0</m> and <m>x+y=</m>. Those two lines are
@@ -182,7 +182,7 @@
       I would like to use the implicit derivative defined in <xref
       ref="section-implicit-derivatives" /> to undertand singularities
       of algebraic plane curves. In general, as I said before, this is
-      a deep and complicated theory. Since we don't have time to delve
+      a deep and complicated theory. Since I don't have time to delve
       deeply into all of the various ways to use derivatives to
       understand singularities, I am going to specialize to a very
       particular class of curves. In this section, I'm only going to
@@ -196,7 +196,7 @@
       Even though this is specializing a great deal, it still allows
       for many interest and important examples. The degree of the
       algebraic plane curve is still unbounded, since <m>p(x)</m> can
-      have as high a degree as we want. If the degree of <m>p(x)</m>
+      have as high a degree as I want. If the degree of <m>p(x)</m>
       is three or four, the resulting curve is an elliptic curve (or,
       at least, one presentation of an elliptic curves). Elliptic
       curves are, themselves, an important branch of mathematics with
@@ -267,7 +267,7 @@
     </ul>
     <p>
       Now I'll work through a number of examples to show this
-      algorithm in practice. In this examples, note that if we can
+      algorithm in practice. In this examples, note that if I can
       factor <m>p(x)</m> (or if it comes already factor), the
       calculations and the limits can become a lot easier due to
       cancelation of some of the factors. 
@@ -297,7 +297,7 @@
           </me>
         </p>
         <p>
-          Then I look at the limits as we approach the undefined
+          Then I look at the limits as I approach the undefined
           points. When <m>x=1</m>, only the denominator goes to
           <m>0</m>, the numerator is finite. Therefore, the 
           slope diverges to infinity and the curve will have a

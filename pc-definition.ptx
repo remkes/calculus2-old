@@ -142,8 +142,8 @@
           described as <m>\gamma(t) = (\cos t, \sin t)</m> for <m>t
           \in [0,2\pi]</m>.  This curve traces the circle counter
           clockwise and starts at <m>(1,0)</m>. I could change the
-          parameter domain. If we have <m>t \in [0,8\pi]</m>, then I
-          have four periods of <m>\sin t</m> and <m>\cos t</m>, so
+          parameter domain. If <m>t \in [0,8\pi]</m>, then there
+          are four periods of <m>\sin t</m> and <m>\cos t</m>, so
           this curve traces the same circle four times.  A parametric
           curve can trace over itself any number of times.
         </p>
@@ -360,7 +360,7 @@
       <m>t(u) = \sqrt{u}</m> gives the new circle <m>\gamma(u) = (\cos
       \sqrt{u}, \sin \sqrt{u})</m> with <m>u \in [0, (2\pi)^2]</m>.
       Each reparametrization doesn't change the shape, but does change
-      the rate at which we move around the circle. Notice that I need
+      the rate of movement around the circle. Notice that I need
       to adjust the bounds of the new parametrizations if I want to
       cover the same distance. 
     </p>

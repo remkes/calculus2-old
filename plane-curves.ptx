@@ -57,7 +57,7 @@
     <li>
       <p>
         An algebraic plane curve of degree one is a <term>line</term>.
-        We have several versions of equations of lines, but the most
+        There are several ways to write equations of lines, but the most
         general form is the following, where <m>a</m>, <m>b</m> and
         <m>c</m> are real constants. 
       </p>
@@ -103,7 +103,7 @@
     have vertical tangents, as I showed in previous examples. With one
     important exception (which I'll talk about in the next section),
     vertical tangents are the only problems with tangent slopes to
-    conics. However, when we go to higher degree algebraic plane
+    conics. However, when I consider higher degree algebraic plane
     curves, all sorts of things can happen.
   </p>
   <p>
