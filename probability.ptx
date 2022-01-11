@@ -142,7 +142,7 @@
       </li>
     </ul>
   </subsection>
-  <subsection xml:id="subsection-examples">
+  <subsection xml:id="subsection-examples-probability">
     <title>Examples</title>
     <example xml:id="example-exponential-distribution">
       <statement>
@@ -162,22 +162,22 @@
               draw((1,0)--(1,0.368));
               draw((2,0)--(2,0.135));
               
-              label("Area $\doteq$ 0.632 = Probablity of a Measurement in
+              label("Area $\doteq 0.632 =$ Probablity of a Measurement in
               $[0,1]$",(0.5,0.607),NE);
     
-              label("Area $\doteq$ 0.233 = Probablity of a Measurement in
+              label("Area $\doteq 0.233 =$Probablity of a Measurement in
               $[1,2]$",(1.5,0.223),NE);
             </asymptote>
           </image>
         </figure>
         <p>
-          Let <m>\alpha > 0</m> and <m>f(x) = \alpha e^{-\alpha x}</m>
+          Let <m>\alpha \gt 0</m> and <m>f(x) = \alpha e^{-\alpha x}</m>
           on the domain <m>[0, \infty)</m>. I will calculate the
           integral of this function over this domain.
         </p>
         <md>
           <mrow>
-            \int_0^\infty \alph e^{-\alpha x} dx \amp = \lim_{a
+            \int_0^\infty \alpha e^{-\alpha x} dx \amp = \lim_{a
             \rightarrow \infty} \int_0^a e^{-\alpha x} dx
           </mrow>
           <mrow>

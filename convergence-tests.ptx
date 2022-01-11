@@ -293,8 +293,8 @@
           \right|
         </me>
         <p>
-          If this limit is greater than  <m>1</m> (including
-          infinite), then the series diverges. If this limit is less
+          If this limit is greater than <m>1</m> (including
+          infinity), then the series diverges. If this limit is less
           than <m>1</m>, then the series converges. If the limit is
           <m>1</m>, the test is inconclusive.
         </p>
@@ -311,7 +311,7 @@
         </me>
         <p>
           If this limit is greater than <m>1</m> (or infinity), then
-          the series diverges. If this limit is less than <m>\1</m>,
+          the series diverges. If this limit is less than <m>1</m>,
           then the series converges. If the limit is <m>1</m>, the
           test is inconclusive.
         </p>
