@@ -22,4 +22,4 @@ dot((3,0.33));
 label("$\left( 3, \frac{1}{3} \right)$",(3,0.33),NE);
 
 dot((-0.33,-3));
-label("$\left( \frac{-1}{3}, 3 \right)$",(-0.33,-3),SW);
+label("$\left( \frac{-1}{3}, -3 \right)$",(-0.33,-3),SW);

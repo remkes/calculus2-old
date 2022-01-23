@@ -3,15 +3,14 @@
 -->
 <section xml:id="section-assignment-week4">
   <title>Week 4 Assignment</title>
-  <!--
   <p><ol>
     <li>
       <p>
         Calculate this integral. Show all your steps and reasoning,
-        including the details of any integral rules used. (4) 
+        including the details of any integral rules used. (6) 
       </p>
       <me>
-        \int x^3 \ln x dx 
+        \int (x^2 + x + 1) e^x dx
       </me>
     </li>
     <li>
@@ -20,7 +19,7 @@
         including the details of any integral rules used. (8) 
       </p>
       <me>
-        \int (x^3 + 3x^2 + 2x + 1) \sin x dx 
+        \int x \ln x + x (\ln x)^2 dx 
       </me>
     </li>
     <li>
@@ -29,7 +28,7 @@
         <m>p(x)</m> is an arbitrary polynomial. (4) 
       </p>
       <me>
-        \int p(x) e^x dx 
+        \int p(x) \sinh x dx 
       </me>
       <p>
         Why does integration by parts help with this type of integral?
@@ -38,5 +37,4 @@
       </p>
     </li>
   </ol></p>
-  -->
 </section>

@@ -85,7 +85,7 @@
           A singularity which is an intersection point of two or more
           pieces of an algebraic curve is called a <term>node</term>.
           The number of pieces at the intersection gives more precisde
-          names: two pieces  is called a <term>double point</term>,
+          names: two pieces is called a <term>double point</term>,
           three a <term>triple point</term>, and so on. 
         </p>
       </statement>
@@ -93,9 +93,9 @@
     <p>
       The curve <m>x^2 - y^2=0</m> has a double point node at the
       origin. In <xref ref="example-apc1" />, the picture in <xref
-      ref="figure-apc3" /> looks like it shopw five different double
+      ref="figure-apc3" /> looks like it has five different double
       point nodes. For an example of more than two intersecting pieces,
-      consider the curve give by the following equation (show in <xref
+      consider the curve give by the following equation (shown in <xref
       ref="figure-apc4" />. 
     </p>
     <md>
@@ -131,7 +131,7 @@
     </figure>
     <p>
       This curve has a quadruple point node at <m>(1,1)</m>, since four
-      different path in the curve intersect at that point. 
+      different paths in the curve intersect at that point. 
     </p>
     <p>
       The theory of singularities of algebraic plane curves is a deep
@@ -152,11 +152,11 @@
       </statement>
     </definition>
     <p>
-      A node can be seen in <xref ref="figure-apc5" /> at the origin on
+      A cusp can be seen in <xref ref="figure-apc5" /> at the origin on
       the curve <m>x^2 - y^3 = 0</m>. 
     </p>
     <figure xml:id="figure-apc5">
-      <caption>A Node</caption>
+      <caption>A Cusp</caption>
       <image xml:id="figure04" width="90%">
         <asymptote>
           size(12cm);
@@ -231,7 +231,7 @@
     </ul>
     <p>
       With these facts, I can build an algorithm to analyze the
-      singularities of these special algebraic plane curve. 
+      singularities of these special algebraic plane curves. 
     </p>
     <ul>
       <li><p>
@@ -259,10 +259,10 @@
       <li><p>
         If this limit has two values (because the <m>\pm</m> is still
         present in the final answer), then there are two possible
-        tangent lines and I conclude this is a double point.
+        tangent lines and I conclude this is a double point note.
       </p></li>
       <li><p>
-        If this limit is zero, then I conclude there is a node. 
+        If this limit is zero, then I conclude there is a cusp. 
       </p></li>
     </ul>
     <p>
