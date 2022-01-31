@@ -307,10 +307,10 @@
         </p>
         <md>
           <mrow>
-            \int x \sin x dx \amp = -u \cos x + \int \cos x dx 
+            \int x \sin x dx \amp = -x \cos x + \int \cos x dx 
           </mrow>
           <mrow>
-            \amp = - u \cos x + \sin x + c 
+            \amp = - x \cos x + \sin x + c 
           </mrow>
         </md>
       </solution>
