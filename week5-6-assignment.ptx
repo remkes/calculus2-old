@@ -3,7 +3,6 @@
 -->
 <section xml:id="section-assignment-week5-6">
   <title>Week 5-6 Assignment</title>
-  <!--
   <ol>
     <li>
       <p>
@@ -11,7 +10,7 @@
         the process. (6) 
       </p>
       <me>
-        \int \frac{x^3 + 7x^2 + 4}{(x - 4)(x + 1)} dx 
+        \int \frac{x^2 + 6x + 4}{(x - 9)(x + 4)} dx 
       </me>
     </li>
     <li>
@@ -20,7 +19,7 @@
         the process. (6) 
       </p>
       <me>
-        \int \frac{2x + 1}{(x + 1)^2(x^2 + x + 1)} dx
+        \int \frac{6x - 1}{(x^2 + x + 2)(x^2 + x + 3)} dx
       </me>
     </li>
     <li>
@@ -29,7 +28,7 @@
         the process. (6) 
       </p>
       <me>
-        \int \cot^5 x \csc^3 x dx 
+        \int \sin^5 x \cos^5 x x dx 
       </me>
     </li>
     <li>
@@ -38,7 +37,7 @@
         the process. (8) 
       </p>
       <me>
-        \int \frac{1}{\sqrt{(16 - 9x^2)^3}} dx 
+        \int x^3 \sqrt{x^2 - 16} dx 
       </me>
     </li>
     <li>
@@ -47,9 +46,8 @@
         the process. (6) 
       </p>
       <me>
-        \int \frac{1}{x^2 \sqrt{a^2 + x^2}} dx 
+        \int \frac{1}{x^2 \sqrt{16 + x^2}} dx 
       </me>
     </li>
   </ol>
-  -->
 </section>
