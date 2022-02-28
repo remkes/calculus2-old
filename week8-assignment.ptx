@@ -3,49 +3,31 @@
 -->
 <section xml:id="section-assignment-week8">
   <title>Week 8 Assignment</title>
-  <!--
   <ol>
     <li>
       <p>
-        The horn of Gabriel is the surface of revolution formed by
-        rotating the graph of <m>f(x) = \frac{1}{x}</m> about the
-        <m>x</m> axis on the domain <m>[1,\infty)</m>. In the videos
-        and notes, I showed that this horn has finite volume, even
-        though it is infinitely long. Now, instead of <m>f(x) =
-        \frac{1}{x}</m>, repeat the construction for <m>f(x) =
-        \frac{1}{x^2}</m> (domain  <m>[1,\infty)</m>) and <m>f(x) =
-        \frac{1}{x \ln x}</m> (domain <m>[e, \infty)</m>) and show
-        that the volume is again finite in both these cases. (8) 
+        Assyme that <m>g(x) \neq 0</m> on <m>[a, \infty)</m>. What
+        does asymptotic analysis have to say about the following
+        integral. (4) 
       </p>
     </li>
     <li>
       <p>
-        Consider the surface of revolution formed by rotating <m>f(x)
-        = \frac{x^3}{7}</m> about the <m>y</m> axis, for 
-        <m>x \in [0,3]</m>. Calculate the volume that sits below
-        surface and above the horizontal plane, using cylindrical
-        shells. (6)
+        Imagine a pyramid-like structure where each horizontal cross
+        section is a square and the side length of the square is
+        <m>f(x) = \sqrt{100 - x^2}</m> where <m>x 
+        \in [0,10]</m> is the height, in metres. Find the volume of
+        such an object. (8) 
       </p>
     </li>
     <li>
       <p>
-        Consider the surface of revoluation formed by rotating <m>f(x)
-        = 2 + \frac{1}{4} \sin x</m> about the <m>y</m> axis, for <m>x
-        \in [0, 6\pi]</m>. Calculate the volume that sites between
-        below surface and above the horizontal plane, using cylindrical
-        shells. (6)
-      </p>
-    </li>
-    <li>
-      <p>
-        In trying to find the volume of a cylinder, many approaches
-        are possible. Describe three different ways to slice up the
-        cylinder (using either straight slices or shells). You don't
-        need to do any calculations or integrals here; just describe,
-        in words and/or drawings, the three ways of breaking up the shape
-        and the resulting shape of the slices. (4) 
+        Find the volume of a cone with flare angle
+        <m>\frac{\pi}{4}</m> and height <m>4m</m> after a vertical
+        cyinder of radius <m>1.5</m>m has been removed from the middle
+        of the cone. (The axis of the cylinder is the same as the axis
+        of the cone.) (8) 
       </p>
     </li>
   </ol>
-  -->
 </section>

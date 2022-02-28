@@ -38,13 +38,13 @@
               \int 3x^2 (x^3 - 4)^5 dx \amp = \int (x^3-4)^4 (3x^2 dx) 
             </mrow>
             <mrow>
-              \amp = \int u^5 du = \frac{u^6}{6} + C
+              \amp = \int u^5 du = \frac{u^6}{6} + c
             </mrow>
           </md>
           At the end, I undo the substitution to return to the
           original variable. 
           <me>
-            \frac{u^6}{6} + C = \frac{(x^3-4)^6}{6} + C 
+            \frac{u^6}{6} + c = \frac{(x^3-4)^6}{6} + c 
           </me>
         </p>
       </solution>
@@ -84,11 +84,11 @@
           Then I can use linearity and known antideriatives to do the
           integral. 
           <me>
-            = \frac{1}{17} \sin (u) + C 
+            = \frac{1}{17} \sin (u) + c 
           </me>
           Finally, I reverse the substitution.
           <me>
-            = \frac{1}{17} \sin (17 x) + C 
+            = \frac{1}{17} \sin (17 x) + c 
           </me>
         </p>
       </solution>
@@ -132,23 +132,23 @@
           </me>
           Then I use known antiderivatives. 
           <me>
-            = u + \ln |u| + C 
+            = u + \ln |u| + c 
           </me>
           Finally, I reverse the substitution.
           <me>
-            = (x-5) + \ln |x-5| + C 
+            = (x-5) + \ln |x-5| + c 
           </me>
           As a final note, I could group the <m>(-5)</m> with the
           constant, like this:
           <me>
-            = x + \ln |x-5| + (C - 5)
+            = x + \ln |x-5| + (c - 5)
           </me>
           If I did that, since the constant can be set to any real
           number, subtracting 5 doesn't make a difference. Therefore,
           an alternative form of the answer gets ride of this
           <m>(-5)</m>.
           <me>
-            = x + \ln |x-5| + C 
+            = x + \ln |x-5| + c 
           </me>
           This certinaly isn't necessary, but I mention it here since
           these kinds of steps with constants of integration are
@@ -338,7 +338,7 @@
           </mrow>
           <mrow>
             \amp = \frac{x^4 \ln x}{4} - \frac{1}{4} \int x^3 dx =
-            \frac{x^4 \ln x}{4} - \frac{x^4}{16} + C 
+            \frac{x^4 \ln x}{4} - \frac{x^4}{16} + c 
           </mrow>
         </md>
       </solution>
@@ -376,7 +376,7 @@
             \sin x dx 
           </mrow>
           <mrow>
-            \amp = -x^2 \cos x + 2x \sin x + 2 \cos x + C 
+            \amp = -x^2 \cos x + 2x \sin x + 2 \cos x + c 
           </mrow>
         </md>
       </solution>
@@ -494,12 +494,12 @@
             (x+6)^{\frac{3}{2}} dx 
           </mrow>
           <mrow>
-            \amp = \frac{2x}{3} (x+6)^{\frac{3}{2}} + \frac{2}{3}
-            \frac{2}{5} (x+6)^{\frac{5}{2}} + C 
+            \amp = \frac{2x}{3} (x+6)^{\frac{3}{2}} - \frac{2}{3}
+            \frac{2}{5} (x+6)^{\frac{5}{2}} + c 
           </mrow>
           <mrow>
-            \amp = \frac{2x}{3} (x+6)^{\frac{3}{2}} + \frac{4}{15}
-            (x+6)^{\frac{5}{2}} + C 
+            \amp = \frac{2x}{3} (x+6)^{\frac{3}{2}} - \frac{4}{15}
+            (x+6)^{\frac{5}{2}} + c 
           </mrow>
         </md>
       </solution>
@@ -607,8 +607,8 @@
             x}{x} x dx = x (\ln x)^2 - \int 2 \ln x dx 
           </mrow>
           <mrow>
-            \amp = x (\ln x)^2 - 2 ( x \ln x - x) + C= x (\ln x)^2 -
-            2x \ln x + 2x + C 
+            \amp = x (\ln x)^2 - 2 ( x \ln x - x) + c = x (\ln x)^2 -
+            2x \ln x + 2x + c 
           </mrow>
         </md>
       </solution>
@@ -639,7 +639,7 @@
           </mrow>
           <mrow>
             \amp = \frac{x^3 \ln (x^2)}{3} - \frac{2}{3} \frac{x^3}{3}
-            + C = \frac{2x^3 \ln x}{3} - 2 x^3 + C 
+            + c = \frac{2x^3 \ln x}{3} - \frac{2x^3}{9} + c 
           </mrow>
         </md>
       </solution>
