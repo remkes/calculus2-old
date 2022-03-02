@@ -3,7 +3,6 @@
 -->
 <section xml:id="section-assignment-week7">
   <title>Week 7 Assignment</title>
-  <!--
   <p><ol>
     <li>
       <p>
@@ -13,7 +12,7 @@
       </p>
       <md>
         <mrow>
-          \gamma(t) = (\sin (2t), \cos (3t)) \amp \amp t \in [0, 2\pi] 
+          \gamma(t) = (\sin t, \cos 5t) 
         </mrow>
       </md>
     </li>
@@ -25,8 +24,7 @@
       </p>
       <md>
         <mrow>
-          \gamma(t) = \left( t, \frac{1}{t^2+1} \right) \amp \amp t \in
-          [0, \infty) 
+          \gamma(t) = \left( \frac{1}{t}, \frac{t^2 + 1}{t} \right) 
         </mrow>
       </md>
     </li>
@@ -38,8 +36,7 @@
       </p>
       <md>
         <mrow>
-          \gamma(t) = \left( e^{t^2-1}, e^{t^2+1} \right) \amp \amp t
-          \in [0, \infty)
+          \gamma(t) = \left( t^2 + 1, t^2 - 1 \right) 
         </mrow>
       </md>
     </li>
@@ -51,17 +48,15 @@
       </p>
       <md>
         <mrow>
-          \gamma(t) = (e^t \sin t, e^{-t} \cos t) \amp \amp t \in [0,
-          \infty) 
+          \gamma(t) = (t^2 \sin t, t^2 \cos t) 
         </mrow>
       </md>
     </li>
     <li>
       <p>
-        An object is moving outward in a vortex which has the shape of an
-        archimedian spiral. If it starts at the origin and reaches a
-        radius of 10m after it completes exctly 4 full revolutions, 
-        how far has the object travelled? (6) 
+        Why is it true that any parametric curve can always be
+        parametrized by arclength? What does it mean that we have to
+        `invent new functions' to make this work? (4) 
       </p>
     </li>
     <li>
@@ -70,11 +65,10 @@
       </p>
       <md>
         <mrow>
-          \gamma(t) = \left( \frac{t^2}{2}, \frac{t^3}{3} \right) t
-          \in [0, \infty) 
+          \amp \gamma(t) = \left( t^6 + t^4, t^6 - t^4 \right) \amp
+          \amp t \in [0, \infty) 
         </mrow>
       </md>
     </li>
   </ol></p>
-  -->
 </section>
