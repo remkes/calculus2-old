@@ -9,6 +9,9 @@
         Assyme that <m>g(x) \neq 0</m> on <m>[a, \infty)</m>. What
         does asymptotic analysis have to say about the following
         integral. (4) 
+        <me>
+          \int_a^\infty \frac{f(x)}{g(x)} dx 
+        </me>
       </p>
     </li>
     <li>
