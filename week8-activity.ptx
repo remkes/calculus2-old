@@ -77,7 +77,9 @@
           <mrow>
             \amp = 2e^2 - (x \ln x - x - x) \Bigg|_1^{e^2} 
             = 2e^2 - (x \ln x - 2x ) \Bigg|_1^{e^2} 
-            = 2e^2 - (2 e^2 - 2 e^2 - 0 + 2) \Bigg|_1^{e^2} = 2e^2 - 2
+          </mrow>
+          <mrow>
+            \amp = 2e^2 - (2 e^2 - 2 e^2 - 0 + 2) \Bigg|_1^{e^2} = 2e^2 - 2
           </mrow>
         </md>
       </solution>

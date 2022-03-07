@@ -176,8 +176,8 @@
             \amp = \int_0^{4\pi} \sqrt{t^2 + 1} 
           </mrow>
           <mrow>
-            \amp = \left. \frac{1}{2} x \sqrt{b^2 + x^2} +
-            \frac{b^2}{2} \ln \left( \sqrt{b^2 + x^2} + x \right)
+            \amp = \left. \frac{1}{2} x \sqrt{1 + x^2} +
+            \frac{1}{2} \ln \left( \sqrt{1 + x^2} + x \right)
             \right|_0^{4\pi} 
           </mrow>
           <mrow>
@@ -429,7 +429,18 @@
         <p>
           There are vertical tangents whenever the denominator of
           <m>\frac{dy}{dx}</m> approaches zero but the numerator does
-          not. This happens when <m>t = \pi</m>. 
+          not. I can use a double angle identity to change the
+          denominator to <m>(-\sin t + 2 \sin t \cos t)</m> and then
+          factor out of sine to get <m>\sin t(-1 + 2\cos t)</m>. The
+          zeros of the demonimator are the zeros of the sine function
+          (all multiples of <m>\pi</m>) and <m>\cos t =
+          \frac{1}{2}</m> ( in this range <m>\frac{\pi}{3}</m> and
+          <m>\frac{5\pi}{3}</m>). I have to reject <m>t = 0</m>, since
+          that is also a zero of the numerator and the limit of the
+          slope is not infinity, but there is a vertical tangent at
+          <m>t = \pi</m>. Similarly, since they are not zero of the
+          numerator, there are vertical tangents at
+          <m>\frac{\pi}{3}</m> and <m>\frac{5\pi}{3}</m> as well. 
         </p>
         <p>
           I put the derviatives of the components into the length
