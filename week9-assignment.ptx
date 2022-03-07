@@ -3,26 +3,24 @@
 -->
 <section xml:id="section-assignment-week9">
   <title>Week 9 Assignment</title>
-  <!--
   <ol>
     <li>
       <p>
         Calculate the mean and the standard deviation for this
-        probability distribution on the domain <m>[1, \infty)</m>. (6)
+        probability distribution on the domain <m>[0,2]</m>. (6)
       </p>
       <me>
-        f(x) = \frac{3}{x^4} 
+        f(x) = \frac{-3x^2 + 6x + 6}{16} 
       </me>
     </li>
     <li>
       <p>
         Calculate the mean and the standard deviation for this
-        probability distribution on the domain <m>[1,5]</m>. (6)
+        probability distribution on the domain <m>[1,\infty)</m>. (6)
       </p>
       <me>
-        f(x) = \frac{3(-x^2 + 6x -5)}{32} 
+        f(x) = \frac{4}{x^5}
       </me>
     </li>
   </ol>
-  -->
 </section>
