@@ -3,23 +3,30 @@
 -->
 <section xml:id="section-assignment-week12">
   <title>Week 12 Assignment</title>
-  <!--
   <p><ol>
     <li>
       <p>
-        Calculate the Taylor series for <m>f(x) = \ln x</m> centred at
-        <m>\alpha = 3</m>. (8) 
+        Calculate the Taylor series for <m>f(x) = \frac{1}{x+3}</m>
+        centred at <m>\alpha = 2</m>. (8) 
       </p>
     </li>
     <li>
       <p>
-        Calculate the Taylor series for <m>f(x) = \frac{1}{x+1}</m>
-        centred at <m>\alpha = 4</m>. (8) 
+        Calculate the Taylor series for <m>f(x) = \sin (x^2 + \pi)</m>
+        centred at <m>\alpha = 0</m>.  (Don't do this question by using
+        the full algorithm; instead, use existing series to produce
+        the new series.) (4) 
       </p>
     </li>
     <li>
       <p>
-        Calculate the Taylor series for <m>f(x) = e^{4x+2}</m>
+        Calculate the Taylor series for <m>f(x) = \ln x^2</m>
+        centred at <m>\alpha = 3</m>. (4)
+      </p>
+    </li>
+    <li>
+      <p>
+        Calculate the Taylor series for <m>f(x) = x^4 e^{x^3}</m>
         centred at <m>\alpha = 0</m>. (Don't do this question by using
         the full algorithm; instead, use existing series to produce
         the new series.) (4) 
@@ -27,12 +34,12 @@
     </li>
     <li>
       <p>
-        Calculate the Taylor series for <m>f(x) = x^4 \sin (6x)</m>
-        centred at <m>\alpha = 0</m>. (Don't do this question by using
-        the full algorithm; instead, use existing series to produce
-        the new series.) (4) 
+        Consider the function <m>f(x) \frac{1}{1-x}</m>. Find two
+        Taylor series for <m>f</m> one centred at <m>
+        \alpha = 0 </m> and one centred at <m>
+        \alpha = 2</m>. What are the similarities and differences
+        between the two series? What patterns do they share? (6) 
       </p>
     </li>
   </ol></p>
-  -->
 </section>

@@ -3,14 +3,13 @@
 -->
 <section xml:id="section-assignment-week10">
   <title>Week 10 Assignment</title>
-  <!--
   <ol>
     <li>
       <p>
         Calculate the value of this series. (6)
       </p>
       <me>
-        \sum_{n=0}^\infty \frac{2^n + 4^n}{16^n} 
+        \sum_{n=0}^\infty \frac{3^n - 9^n}{27^n} 
       </me>
     </li>
     <li>
@@ -18,9 +17,8 @@
         Calculate the value of this series. (8) 
       </p>
       <me>
-        \sum_{n=0}^\infty \frac{1}{(n+1)(n+4)}
+        \sum_{n=0}^\infty \frac{1}{(n+2)(n+5)}
       </me>
     </li>
   </ol>
-  -->
 </section>
