@@ -44,7 +44,7 @@
           calculate the limit of the terms.
         </p>
         <me>
-          \lim_{n \rightarrow \infty} \frac{n^3 + 3n + 4}{4n^2 + 2n +
+          \lim_{n \rightarrow \infty} \frac{n^2 + 3n + 4}{4n^2 + 2n +
           4} = \frac{1}{4}
         </me>
         <p>
@@ -233,7 +233,7 @@
           Test this series for convergence.
         </p>
         <me>
-          \sum_{n=1}^{\infty} \frac{\sqrt{n^4 + 7n^3 +
+          \sum_{n=1}^{\infty} \frac{\sqrt{n^6 + 7n^3 +
           1}}{\sqrt[3]{n^9 + 3n}} 
         </me>
       </statement>
@@ -242,7 +242,7 @@
           I consider the limit of the terms. 
         </p>
         <me>
-          \lim_{n \rightarrow \infty} \frac{\sqrt{n^4 + 7n^3 +
+          \lim_{n \rightarrow \infty} \frac{\sqrt{n^6 + 7n^3 +
           1}}{\sqrt[3]{n^9 + 3n}} 
         </me>
         <p>
@@ -336,7 +336,7 @@
       <solution>
         <p>
           Since the logarithm is a growing function, these terms are
-          eventuall larger than <m>\frac{1}{n-3}</m>. Those terms are
+          eventually larger than <m>\frac{1}{n-3}</m>. Those terms are
           (with a shift) the terms of the divergence harmonic series.
           Therefore, since these terms are larger than the terms of a
           divergent series, this diverges by direct comparison.

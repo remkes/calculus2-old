@@ -34,7 +34,7 @@
     </li>
     <li>
       <p>
-        Consider the function <m>f(x) \frac{1}{1-x}</m>. Find two
+        Consider the function <m>f(x) = \frac{1}{1-x}</m>. Find two
         Taylor series for <m>f</m> one centred at <m>
         \alpha = 0 </m> and one centred at <m>
         \alpha = 2</m>. What are the similarities and differences
