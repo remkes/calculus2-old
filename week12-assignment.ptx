@@ -7,7 +7,7 @@
     <li>
       <p>
         Calculate the Taylor series for <m>f(x) = \frac{1}{x+3}</m>
-        centred at <m>\alpha = 2</m>. (8) 
+        centred at <m>\alpha = 2</m>. (6) 
       </p>
     </li>
     <li>
@@ -29,7 +29,7 @@
         Calculate the Taylor series for <m>f(x) = x^4 e^{x^3}</m>
         centred at <m>\alpha = 0</m>. (Don't do this question by using
         the full algorithm; instead, use existing series to produce
-        the new series.) (4) 
+        the new series.) (6) 
       </p>
     </li>
     <li>

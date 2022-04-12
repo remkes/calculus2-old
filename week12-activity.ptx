@@ -208,8 +208,8 @@
           both the denominator and numerator. Since these have the
           same asymptotic order, the limit is the ratio of the leading
           coefficients.  The radius of convergence is <m>R = 4</m>.
-          Since the centre point is <m>\alpha = 0</m>, the domain of
-          definition is <m>(-4,4)</m>.     
+          Since the centre point is <m>\alpha = -2</m>, the domain of
+          definition is <m>(-6,2)</m>.     
         </p>
       </solution>
     </activity>
@@ -219,7 +219,7 @@
       <statement>
         <p>
           Calculate the Taylor series for <m>f(x) = \cosh x</m> with
-          centre point <m>x = 0</m>. Determine its radius of
+          centre point <m>\alpha = 0</m>. Determine its radius of
           convergence. 
         </p>
       </statement>
@@ -320,7 +320,7 @@
       <statement>
         <p>
           Calculate the Taylor series for <m>f(x) = \frac{1}{x}</m>
-          with centre point <m>x = 1</m>. Determine its radius of
+          with centre point <m>\alpha = 1</m>. Determine its radius of
           convergence. 
         </p>
       </statement>
@@ -331,7 +331,7 @@
         </p>
         <md>
           <mrow>
-            f(x) \amp = \frac{1}{2} 
+            f(x) \amp = \frac{1}{x} 
           </mrow>
           <mrow>
             \frac{d}{dx} f(x) \amp = \frac{-1}{x^2} 
@@ -417,7 +417,7 @@
         <p>
           Calculate the Taylor series for <m>f(x) = x^7 + 8x^6 - 19x^5
           + 12x^4 + 3x^3 - 19x^2 + 4x + 41 </m> with
-          centre point <m>x = 0</m>. Determine its radius of
+          centre point <m>\alpha = 0</m>. Determine its radius of
           convergence. 
         </p>
       </statement>
@@ -439,7 +439,7 @@
       <statement>
         <p>
           Calculate the Taylor series for <m>f(x) = \ln (x+3)</m> with
-          centre point <m>x = 0</m>. Determine its radius of
+          centre point <m>\alpha = 0</m>. Determine its radius of
           convergence. 
         </p>
       </statement>
