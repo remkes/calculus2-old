@@ -75,6 +75,36 @@
         </p>
       </statement>
     </definition>
+    <p>
+      With limits, writing
+      <me>
+        \lim_{n \rightarrow a} a_n = \infty
+      </me>
+      was a short hand. The symbol ``<m>infinity</m>'' was a way to
+      write ``getting larger and larger without bound.'' Something
+      similar happens for infinite series. Some divergent series
+      diverge because the sum grows larger and larger without bound
+      (as in <xref ref="example-harmonic-series" /> below). For these
+      series, it is common to use a very similar shorthand notation.
+    </p>
+    <me>
+      \sum_{n=1}^\infty a_n = \infty
+    </me>
+    <p>
+      Sometime, mathematicians also use the infinity symbol for
+      convergence. This is somewhat taking liberties with our
+      notation, somewhat stretching the intention of the symbols, but
+      it nonetheless is practice. For a convergent series, I would
+      indicate this convergence by the following notation.
+    </p>
+    <me>
+      \sum_{n=1}^\infty a_n \lt \infty
+    </me>
+    <p>
+      I would probably use this notation only for sums with all
+      positive terms, where being ``less than infinity'' would clearly
+      indicate that it sums to a finite number. 
+    </p>
   </subsection>
   <subsection xml:id="subsection-series-examples">
     <title>First Convergence Examples</title>
@@ -149,7 +179,7 @@
         </p>
       </statement>
     </example>
-    <example>
+    <example xml:id="example-harmonic-series">
       <statement>
         <p>
           Now consider the sum of the harmonic series. I am going

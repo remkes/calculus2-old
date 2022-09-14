@@ -550,4 +550,155 @@
       power series a very useful and convenient class of functions.
     </p>
   </subsection>
+  <subsection xml:id="subsection-series-patterns-exponents">
+    <title>Series with Patterns of Exponents</title>
+    <p>
+      If it often the case that a power series may contain non-zero
+      terms only for certain exponents following some pattern. In this
+      section, I'm going to briefly introduce some common notation for
+      particular cases of this phenomenon. Consider a series where all
+      the odd terms are zero (centered at <m>0</m> for convenience). 
+      <me>
+        f(x) = c_0 + 0x + c_2x^2 + 0x^3 + c_4x^4 + 0x^5 + \ldots 
+      </me>
+      I could similarly consider a series where all the even terms
+      are zero. 
+      <me>
+        f(x) = 0 + c_1x + 0 + c_3x^3 + 0x^4 + c_45^5 + 0x^6 + \ldots 
+      </me>
+      If I want to index all the even numbers, I can write <m>k =
+      2n</m> for <m> n \in \NN</m>. Similarly, I can index all the
+      odd numbers by writing <m>k = (2n+1)</m> for <m>n \in \NN</m>.
+      Using these tools, I could write a series with only odd or even
+      non-zero terms. The series
+      <me>
+        f(x) = \sum_{n=0}^\infty c_{2n} (x-\alpha)^{2n}
+      </me>
+      is a series with only even terms. The series.
+      <me>
+        g(x) = \sum_{n=0}^\infty c_{2n-1} (x-\alpha)^{2n+1}
+      </me>
+      is a series with only odd terms. 
+    </p>
+    <p>
+      Some extra care must be taken with calculating radii of
+      convergence for these series. The formula
+      <me>
+        R = \lim_{n \rightarrow \infty} \left| \frac{c_n}{c_{n+1}}
+        \right| 
+      </me>
+      relies on the assumption that all <m>c_n \neq 0</m>. This is not
+      true for these series with only odd term or even terms. For
+      series with such patterns, I need a slightly different approach.
+      Take the example series
+      <me>
+        f(x) = \sum_{n=0}^\infty c_{2n} (x-\alpha)^{2n}
+      </me>
+      that only has even terms. Implicitly, even though I can assume
+      <m>c_{2n} \neq 0</m>, all of the missing coefficient
+      <m>c_{2n+1}</m> are zero.  To use the calculation for radius of
+      convergence, a series needs all non-zero coefficients. I can
+      force this series into such a form by some clever manipulation
+      of exponents. Using the laws of exponents, I adjust the power of
+      <m>(x-\alpha)</m>.
+      <me>
+        f(x) = \sum_{n=0}^\infty c_{2n} ((x-\alpha)^2)^{n}
+      </me>
+      Then I also re-index the coefficients: what I called
+      <m>c_{2n}</m> before, I'll just call <m>c_n</m>.
+      <me>
+        f(x) = \sum_{n=0}^\infty c_{n} ((x-\alpha)^2)^{n}
+      </me>
+      Then this is a series with all non-zero coefficients (with the
+      assumption that the original <m>c_{2n}</m> were non-zero).
+      However, it is now a power series in <m>x^2</m>, not <m>x</m>.
+      Therefore, if I calculate a radius of convergence <m>R</m>, the
+      resulting inequality is
+      <me>
+        (x-\alpha)^2 \in \left( - R, R \right)
+      </me>
+      To get the actual bound on <m>x</m> itself requires manipulating
+      the inequalities that bound <m>x^2</m>. The result is this.
+      <me>
+        (x-\alpha) \in \left( - \sqrt{R}, \sqrt{R} \right) \implies 
+        x \in \left( \alpha - \sqrt{R}, \alpha + \sqrt{R} \right) 
+      </me>
+      In summary, there is often a way to get to a domain of convergence
+      for this type of series, but it can be difficult and unwieldy. 
+    </p>
+    <p>
+      The approach above doesn't just work for even and odd terms.
+      Using similar ideas, I could encode all sorts of patterns in the
+      exponents of our power series. If a power series had non-zero
+      terms only when the exponent was a power of <m>3</m>, I could
+      write it as
+      <me>
+        f(x) = \sum_{n=0}^\infty (x-\alpha)^{3n}
+      </me>.
+      If the power series had non-zero exponents only for every fifth
+      number starting at <m>7</m>, I could write it as
+      <me>
+        f(x) = \sum_{n=0}^\infty (x-\alpha)^{5n + 7}
+      </me>.
+      In either case, I'd have to use similar kinds of tricks to
+      reduce it to a series in <m>x^3</m> or <m>x^5</m>, then
+      calculate the radius, then manipulate the inequalities to figure
+      out the actual bounds on <m>x</m>. 
+    </p>
+  </subsection>
+  <subsection xml:id="subsection-non-elementary-functions">
+    <title>Non-Elementary Functions</title>
+    <p>
+      One of the uses of power series is to construct entirely new
+      functions. These are often called non-elementary functions (the
+      elementary functions are those which we already have worked
+      with: polynomials, roots, exponentials, logarithms, trig, and
+      hyperbolics). Here are some examples.
+    </p>
+    <example>
+      <statement>
+        <p>
+          The Bessel functions of order <m>k \in \NN</m> are given by
+          this series.
+          <me>
+            J_k(x) = \sum_{n=0}^\infty \frac{(-1)^n x^{2n}}{2^{2n+k}
+            ((n+k)!)^2}
+          </me>
+        </p>
+        <p>
+          The Bessel functions are like the trigonometric functions,
+          but the terms in the denominators are larger. They oscilate
+          like trig functions, but with decaying amplitude. They are
+          important for spherical and circular waves, such as sound
+          waves or ripples on a pond.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The Bessel-Clifford functions are givesn by this series.
+          <me>
+            C_k(x) = \sum_{n=0}^\infty \frac{\pi (k+n) x^n}{n!}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The Polylogarithm functions are given by this series. (Note
+          that for <m>s=1</m> the polylogarithm is <m>Li_1(x) = -\ln
+          (1-x)</m>, the conventional logarithm).
+          <me>
+            Li_s(x) = \sum_{n=0}^\infty \frac{x^{n}}{n^s}
+          </me>
+        </p>
+      </statement>
+    </example>
+    <p>
+      These three examples are just the very start of a huge world of
+      non-elementary functions.
+    </p>
+  </subsection>
 </section>

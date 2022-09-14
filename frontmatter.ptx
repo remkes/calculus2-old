@@ -10,5 +10,8 @@
     </author>
   </titlepage>
   <xi:include href="colophon.ptx" />
-  <xi:include href="preface.ptx" />
+  <!--
+  <xi:include href="preface.ptx" /> 
+    (Something strange here about sections)
+  -->
 </frontmatter>

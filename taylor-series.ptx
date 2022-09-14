@@ -475,7 +475,7 @@
            f^{(n)}(3) = \frac{(-1)^{n}(n+1)!}{3^{n+2}}
         </me>
         <p>
-          Then I put these derivatives evaluted at the centre point
+j          Then I put these derivatives evaluted at the centre point
           into the standard Taylor series form.
         </p>
         <me>
@@ -489,33 +489,26 @@
       </statement>
     </example>
     <p>
-      I want to point out two particular useful techniques from these
-      examples, since these techniques may be important for the
-      activities and the assignments. First, for the series for
+      I want to point out one particularly useful technique from these
+      examples, since this technique may be important for the
+      activities and the assignments. For the series for
       <m>e^{x^2}</m>, I used an existing series and composition,
       putting <m>x^2</m> inside the series for <m>e^x</m>. This
       doesn't produce taylor series for all compositions, but it can
-      be particularly. For example, I could calculate a series for
-      <m>sin(x^3)</m> by inputing <m>x^3+1</m> for the variable in
-      the series for sine.
+      be particularly helpful in certain places. For example, I could
+      calculate a series for <m>sin(x^3)</m> by inputing <m>x^3+1</m>
+      for the variable in the series for sine.
     </p>
     <me>
       \sin(x^3) = \sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)!}
       (x^3)^{2n+1} = \sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)!} x^{6n+3}
-      
     </me>
     <p>
       When I use this technique, be aware that the radius of
       convergence can change via the composition. It may be necessary
-      to recalculate the radius of convergence. 
-    </p>
-    <p>
-      The second things I wanted to point out was the use of <m>n =
-      2k</m> for even terms and <m>n = 2k+1</m> for odd terms in the
-      production of the series for sine and cosine. It's relatively
-      common that patterns of coefficients have different behaviour
-      for the odd and even terms. This technique is useful to be able
-      to describe the two patterns. 
+      to recalculate the radius of convergence, and make use of
+      techniques I discussed in <xref
+      ref="subsection-series-patterns-exponents" />. 
     </p>
     <p>
       Lastly, a very observant reader may have noticed that for the
@@ -527,63 +520,7 @@
       you to calculate radii of convergence, but you should expect,
       for most series, that the radius of convergence should be the
       distance to the nearest undefined point (or infinite if there
-      are no undefined point). 
-    </p>
-  </subsection>
-  <subsection xml:id="subsection-non-elementary-functions">
-    <title>Non-Elementary Functions</title>
-    <p>
-      In addition to finding connections between known functions,
-      Taylor series can construct entirely new functions.
-      These are often called non-elementary functions (the elementary
-      functions are those which I already have worked with:
-      polynomials, roots, exponentials, logarithms, trig, and
-      hyperbolics). I'll give a few notable examples. 
-    </p>
-    <example>
-      <statement>
-        <p>
-          The Bessel functions of order <m>k \in \NN</m> are given by
-          this series.
-        </p>
-        <me>
-          J_k(x) = \sum_{n=0}^\infty \frac{(-1)^n x^{2n}}{2^{2n+k}
-          ((n+k)!)^2}
-        </me>
-        <p>
-          The Bessel functions are like the trigonometric functions,
-          but the terms in the denominators are larger. They oscilate
-          like trig functions, but with decaying amplitude. They are
-          important for spherical and circular waves, such as sound
-          waves or ripples on a pond.
-        </p>
-      </statement>
-    </example>
-    <example>
-      <statement>
-        <p>
-          The Bessel-Clifford functions are givesn by this series.
-        </p>
-        <me>
-          C_k(x) = \sum_{n=0}^\infty \frac{\pi (k+n) x^n}{n!}
-        </me>
-      </statement>
-    </example>
-    <example>
-      <statement>
-        <p>
-          The Polylogarithm functions are given by this series. (Note
-          that for <m>s=1</m> the polylogarithm is <m>Li_1(x) = -\ln
-          (1-x)</m>, the conventional natural logarithm).
-        </p>
-        <me>
-          Li_s(x) = \sum_{n=0}^\infty \frac{x^{n}}{n^s}
-        </me>
-      </statement>
-    </example>
-    <p>
-      These three examples are just the very start of a huge world of
-      non-elementary functions. 
+      are no undefined points). 
     </p>
   </subsection>
 </section>

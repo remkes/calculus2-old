@@ -5,7 +5,7 @@
       As I discussed in <xref ref="section-values-of-series" />, when
       working with  series, the most pressing problem is convergence.
       I need to know if a series converges before I can do anything
-      else with is.  Therefore, mathematicians have devised many ways
+      else with is. Therefore, mathematicians have devised many ways
       to test a series for convergence. I have already presented the
       test for divergence in <xref
       ref="proposition-test-for-divergence" />.  That test was the

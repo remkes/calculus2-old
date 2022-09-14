@@ -553,22 +553,6 @@
           Test this series for convergence.
         </p>
         <me>
-          \sum_{n=1}^{\infty} \frac{(-1)^n}{n!} 
-        </me>
-      </statement>
-      <solution>
-        <p>
-          This is an alternating series where the terms approach zero,
-          so it converges. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-        </p>
-        <me>
           \sum_{n=1}^{\infty} \frac{n^6 + 5n + 4}{7n^8 + 4n^3} 
         </me>
       </statement>
@@ -577,22 +561,6 @@
           The asymptotic order of the terms is <m>\frac{n^6}{n^8} =
           \frac{1}{n^2}</m>. Those are the terms of a convergent
           <m>\zeta</m> series, so this series converges. 
-        </p>
-      </solution>
-    </activity>
-    <activity>
-      <statement>
-        <p>
-          Test this series for convergence.
-        </p>
-        <me>
-          \sum_{n=1}^{\infty} (-1) 5^{-n}
-        </me>
-      </statement>
-      <solution>
-        <p>
-          This is an alternating seris with terms that go to zero, so
-          it converges. 
         </p>
       </solution>
     </activity>
@@ -635,6 +603,119 @@
         </me>
         <p>
           The limit is less than one, so the series converges. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+          <me>
+            \sum_{n=1}^\infty \left( \frac{1}{n} + \frac{1}{n^2} +
+            \frac{1}{n^3} \right) 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Since this series is formed byadding positive elements to
+          <m>\frac{1}{n}</m>, the terms here satisfy this inequatily. 
+          <me>
+            \left( \frac{1}{n} + \frac{1}{n^2} +
+            \frac{1}{n^3} \right) > \frac{1}{n} 
+          </me>
+          The terms are positive and greater than the terms of the
+          harmonic series, which is a divergent series with positive
+          terms. By direct comparison, this series diverges. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+          <me>
+            \sum_{n=1}^\infty \frac{\sqrt{n^6 + 1}}{n^3} 
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          I can use the test for divergence here and look at the
+          limit of the terms.
+          <me>
+            \lim_{n \rightarrow \infty} \frac{\sqrt{n^6 + 1}}{n^3} 
+          </me>
+          In this limit, the asymptotic order of the numerator and
+          denominator are both <m>n^3</m> and the leading coefficients
+          are both 1. 
+          <me>
+            \lim_{n \rightarrow \infty} \frac{\sqrt{n^6 + 1}}{n^3} =
+            \frac{1}{1} = 1 
+          </me>
+          Since the limit of the terms is not zero, this is a
+          divergent series.
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+          <me>
+            \sum_{n=5}^\infty \frac{1}{\sqrt{3n^3-4}}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The terms of this series are asymptotically equivalent to
+          <m>\frac{1}{n^{\frac{3}{2}}}</m>. Those are the terms of a
+          <m>\zeta</m> series with <m>p=\frac{3}{2}</m>. <m>\zeta</m>
+          series converge when <m>p > 1</m>, so the series has terms
+          which are asymptotically equivalent to a convergent
+          <m>\zeta</m> series; therefore the series converges. 
+        </p>
+      </solution>
+    </activity>
+    <activity>
+      <statement>
+        <p>
+          Test this series for convergence.
+          <me>
+            \sum_{n=3}^\infty \frac{1}{(\ln n)^n}
+          </me>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This is a very strange series and it isn't obvious what test
+          might help. I found a comparison that works. For large
+          enough <m>n</m>, <m>\ln n \gt 2</m>. If I invert this, I see
+          that <m>\frac{1}{\ln n} \lt \frac{1}{2}</m>. Then if I
+          apply the exponent <m>n</m>, I get 
+          <me>
+            \frac{1}{(\ln n)^n} \lt \left( \frac{1}{2} \right)^n 
+          </me>
+          This shows that the terms of this series are smaller than
+          the terms <m>\left( \frac{1}{2} \right)^n</m>, which are the
+          terms of a convergent geometric series (since the common
+          ratio, <m>\frac{1}{2}</m>, is less than 1). Since all the
+          terms of our series and the comparison series are positive,
+          since there are terms which are smaller than the terms of a
+          convergent series, this series will also converge. 
+        </p>
+        <p>
+          Alternatively, the root test is quite effective here (though
+          I completely forgot about it while looking for the
+          comparison above). 
+          <me>
+            \lim_{n \rightarrow \infty} \sqrt[n]{ \left| \frac{1}{(\ln
+            n)^n} \right| } = \lim_{n \rightarrow \infty} \frac{1}{\ln
+            n} = 0 
+          </me>
+          Since this limits exists and is less than <m>1</m>, the root
+          test tells me that the series converges.
         </p>
       </solution>
     </activity>
