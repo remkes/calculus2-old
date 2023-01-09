@@ -3,7 +3,6 @@
 -->
 <section xml:id="section-assignment-week2">
   <title>Week 2 Assignment</title>
-  <!--
   <p><ol>
     <li>
       <p>
@@ -11,10 +10,10 @@
         prove the following identity. (Should should start with one
         side and manipulate the expressions to produce the other side.
         You should not start with the equation and reduce to an known
-        equality; this is not a valid method of proving identities.) (4) 
+        equality; this is not a valid method of proving identities.) (6) 
       </p>
       <me>
-        \cosh (2x) = \cosh^2 x + \sinh^2 x
+        \sinh^2 x = \frac{\cosh 2x - 1}{2} 
       </me>
     </li>
     <li>
@@ -22,8 +21,7 @@
         Calculate this limit. (4) 
       </p>
       <me>
-        \lim_{x \rightarrow \infty} \frac{e^{2x} + 4 \sinh^2
-        x}{\cosh^2 x} 
+        \lim_{x \rightarrow \infty} \frac{e^{3x} + \sinh x}{\cosh^2 x} 
       </me>
     </li>
     <li>
@@ -31,7 +29,7 @@
         Calculate this derivative. (4) 
       </p>
       <me>
-        \frac{d}{dx} \frac{1}{1 + \cosh^2 x} 
+        \frac{d}{dx} \left( \sinh^2 x + \frac{1}{1 + \tanh x} \right)
       </me>
     </li>
     <li>
@@ -39,18 +37,17 @@
         Calculate this integral (4) 
       </p>
       <me>
-        \int \sinh x \sqrt{\cosh x} dx 
+        \int \frac{4 \cosh x}{5 + 5\sinh^2 x} dx
       </me>
     </li>
     <li>
       <p>
         Find the slope of the tangent line to the following locus at
-        the points <m>(1,2)</m> and <m>(0,-1)</m>. (6) 
+        the points <m>(1,1)</m> and <m>(1,0)</m>. (6) 
       </p>
       <me>
-        xy^3 - x^2y^2 + xy - 2y - 2 = 0
+        x^3 + y^3 - xy = 1         
       </me>
     </li>
   </ol></p>
-  -->
 </section>
