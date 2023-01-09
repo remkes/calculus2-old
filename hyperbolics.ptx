@@ -1,7 +1,7 @@
 <section xml:id="section-hyperbolics">
   <title>Hyperbolics</title>
   <subsection xml:id="subsection-hyperbolics-definition">
-    <title>definition</title>
+    <title>Definition</title>
     <p>
       This section introduces a new class of functions: the hyperbolic
       functions. 
@@ -32,7 +32,7 @@
       radius one, angle (in radians) can be <em>defined</em> to be the
       arc length of the inscribed arc or, equivalently, twice the
       shadded area. Then the <m>x</m> and <m>y</m> coordinates of a
-      point on the edge of the unit circle, dependant on the angle,
+      point on the edge of the unit circle, dependent on the angle,
       are given by the cosine and sine functions, respectively. The
       important observation is that there is an <em>natural,
       intrinsic</em> definition of angle, and that the trigonometric
@@ -76,9 +76,10 @@
           As seen in the shaded region in <xref
           ref="figure-hyperbolic-definition">Figure</xref>,
           <term>hyperbolic angle</term> is defined to be the area
-          inscribed by the hyperbolic angle. Hyperbolic cosine and
-          sine are the <m>x</m> and <m>y</m> coordinates of a point on
-          the hyperbola as functions of hyperbolic angle.
+          bounded by the <m>x</m> axis, the hyperbola, and a line from
+          the origin to the point on the hyperbola. Hyperbolic cosine
+          and sine are the <m>x</m> and <m>y</m> coordinates of a
+          point on the hyperbola as functions of hyperbolic angle.
         </p>
       </statement>
     </definition>
@@ -89,10 +90,10 @@
       infinity. 
     </p>
     <p>
-      Now that I have defined  a notion of hyperbolic angle, I can
-      define the hyperbolic function in parallel with the trig
+      Now that I have defined a notion of hyperbolic angle, I can
+      define the hyperbolic functions in parallel with the trig
       functions. They will both take hyperbolic angle as input; one
-      will give the <m>x</m> coordinates and the other th <m>y</m>
+      will give the <m>x</m> coordinate and the other the <m>y</m>
       coordinate of a point on the hyperbola. 
     </p>
     <definition>
@@ -110,8 +111,8 @@
     <p>
       Since hyperbolic angle is unbounded, the hyperbolics are not
       periodic. You can also see this in the unbounded nature of the
-      hyperbola. The <m>x</m> and <m>y</m> coordinates of points on
-      the hyperbola are also unbounded and the hyperbolics have to
+      hyperbola: the <m>x</m> and <m>y</m> coordinates of points on
+      the hyperbola are unbounded and the hyperbolics have to
       capture all of these possible values. Therefore, as the angle
       grows, I expect both <m>\cosh \theta</m> and <m>\sinh
       \theta</m> to grow to infinity instead of oscillating like the
@@ -121,10 +122,10 @@
   <subsection xml:id="subsection-hyperbolic-identities">
     <title>Hyperbolic Identities</title>
     <p>
-      The fundamental trigonometric idetity is <m>\sin^2 \theta +
+      The fundamental trigonometric identity is <m>\sin^2 \theta +
       \cos^2 \theta =1</m>, which comes from the fact that these are
-      <m>x</m> and <m>y</m> coordinates and the circle is the locus
-      <m>x^2 + y^2 = 1</m>. For the hyperbolics, the locus is now
+      <m>x</m> and <m>y</m> coordinates and the circle is the locus of
+      <m>x^2 + y^2 = 1</m>. For the hyperbolics, the equation is now
       <m>x^2 - y^2 = 1</m>, so the fundamental hyperbolic identity is
       <me>
         \cosh^2 \theta - \sinh^2 \theta = 1
@@ -162,7 +163,7 @@
     </p>
     <p>
       With this definition, the remaining four hyperbolics are defined
-      in terms of exponentials as are follows.
+      in terms of exponentials as follows.
       <md>
         <mrow>  
           \tanh x = \frac{e^x - e^{-x}}{e^x + e^{-x}} \amp
@@ -184,7 +185,7 @@
       asymptotes at <m>y = \pm 1</m>.
     </p>
     <p>
-      I can also reverse the exponential identities to gives a 
+      I can also reverse the exponential identities to give a 
       pleasant description of the exponential function.
       <me>
         e^x = \cosh x + \sinh x
@@ -254,8 +255,9 @@
       their limit, derivative and integral behaviour. 
     </p>
     <p>
-      Limits are almost entirely the same. The hyperbolics are
-      continuous on their domains, so where there isn't ivision by
+      Limits are almost entirely the same as for other elementary
+      function. The hyperbolics are
+      continuous on their domains, so where there isn't division by
       zero, I can just evaulate limits. Where there is division by
       zero, I can use the techniques I already know from limits:
       algebraic manipulation to adjust the limit or L'Höpital's Rule.
@@ -303,9 +305,9 @@
     <p>
       Again, there is a similarity in form to the trigonometric
       derivatives but with difference in sign. In particular, for
-      sine and cosine, four derivatives returned us to the original
+      sine and cosine, taking four derivatives returns to the original
       function. For hyperbolic sine and cosine, since the derivatives
-      don't introduce a negative sign, only two derivatives return us
+      don't introduce a negative sign, only two derivatives return
       to the original.
     </p>
     <p>

@@ -3,11 +3,11 @@
   <subsection xml:id="subsection-derivatives-loci">
     <title>Derivatives of Loci</title>
     <p>
-      In Calculus I, I mostly calculated slopes of tangent lines to
+      In Calculus I, I calculated slopes of tangent lines to
       graphs of functions. Graphs are loci of the form <m>y =
-      f(x)</m>, and <m>f^\prime(x)</m> gave me the slope of the
+      f(x)</m>, and <m>f^\prime(x)</m> gave the slope of the
       tangent line. For arbitrary loci in <m>\RR^2</m>, such as the
-      conics, tangent lines can also be defined. I need to define a
+      conics, tangent lines can also be defined. I need a
       refinement of the derivative techniques to find their slopes,
       since most loci are not graphs of functions. The new technique
       is implicit differentiation.
@@ -47,8 +47,8 @@
         <p>
           Take the locus of <m>x^4 + y^4 = 16</m>, as in <xref
           ref="figure-implicit-example" />. I will pretend
-          that <m>y</m> is locally a function of <m>x</m>. Any
-          expressions in <m>x</m> I differentiate normally. For
+          that <m>y</m> is locally a function of <m>x</m>: for any
+          expressions in <m>x</m>, I differentiate normally. For
           expressions in <m>y</m>, I use the <em>chain rule</em>, due
           to the pretense that <m>y</m> is a function of <m>x</m>.
           Therefore, <m>y^4</m> has a derivative of the outside
@@ -104,7 +104,7 @@
       down. Implicit derivatives can also fail to find slopes at
       places where a loci self-intersects or has a sharp corner. I
       will show examples of these in the <xref
-      ref="section-algebraic-plane-curves" />. The key idea is that
+      ref="section-algebraic-plane-curves" />. The key idea is this:
       anywhere the assumption that <m>y</m> is a function of <m>x</m>
       fails, the process of implicit differentiation also fails.
     </p>

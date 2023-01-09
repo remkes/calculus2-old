@@ -36,14 +36,17 @@
           </li>
           <li>
             <me>
-              \lim_{x \rightarrow 0} x^3 \coth x = \lim_{x
-              \rightarrow 0} \frac{x}{\sinh x} x^2 \cosh x = 1 \cdot
-              0 \cdot 1 = 0
+              \lim_{x \rightarrow 0} x^3 \coth x = \lim_{x \rightarrow
+              0} \frac{x}{\sinh x} x^2 \cosh x = = \left( \lim_{x
+              \rightarrow 0} \frac{x}{\sinh x} \right) \left( \lim_{x
+              \rightarrow 0} x^2 \right) \left( \lim_{x \rightarrow 0}
+              \cosh x \right)= 1 \cdot 0 \cdot 1 = 0
             </me>
             <p>
               By writing hyperbolic cotangent in terms of hyperbolic
               sine and cosine, this limit can also be split up. Then
-              it uses the known limit for <m>\frac{\sinh x}{x}</m>.
+              it uses the known limit for <m>\frac{\sinh x}{x}</m> and
+              simply evaluate the other two pieces. 
             </p>
           </li>
           <li>
@@ -57,7 +60,9 @@
               their exponential defintions and then use asymptotic
               analysis. I see that the numerator and denominator have
               the same order and both have leading coefficients
-              <m>1</m>.
+              <m>1</m>. (For limits at infinity, I will almost always
+              rely on exponential definitions of the hyperbolics,
+              either directly on indirectly.) 
             </p>
           </li>
         </ol>
@@ -137,7 +142,7 @@
             <p>
               In the first step, I used substitution with <m>u =
               x^6</m> and <m>du = 6x^5dx </m>, so <m>\frac{1}{6} du =
-              x^5 dx</m>. After the replacement are done, the
+              x^5 dx</m>. After the replacements are done, the
               antiderivative of <m>\sinh u</m> is <m>\cosh u</m>. Then
               I reverse the substitution and add a constant of
               integration. 
@@ -149,7 +154,7 @@
               \sinh x \cosh x dx 
             </me>
             <p>
-              The <m>\sinh 2x</m> term make the integral difficult to
+              The <m>\sinh 2x</m> term makes the integral difficult to
               approach. Happily, there is a double-angle identity for
               this. I replaced <m>\sinh 2x</m> with <m>2 \sinh x \cosh
               x</m> from the table of identities. Then I group the
@@ -230,7 +235,7 @@
         <p>
           Also, the derivative at <m>(-10,0)</m> is undefined due to
           division by zero. Possibly there is a vertical tangent line
-          at this point, with an undefined slope. 
+          at this point.
         </p>
         <figure xml:id="figure-implicit1">
           <caption>Implicit Derivatives to <m>x^2 + y^2 = 100</m></caption>
@@ -634,7 +639,7 @@
             <p>
               This is a neat trick. By multiplying by
               <m>\frac{x}{x}</m>, which doesn't change the fraction,
-              I can split this us and use the known limits for
+              I can split this up and use the known limits for
               <m>\frac{\sin x}{x}</m> and <m>\frac{\sinh x}{x}</m>.
             </p>
           </li>
@@ -687,7 +692,9 @@
             <p>
               I change the hyperbolic into an exponential, since
               there was an exponential in the denominator. That
-              changed this into three straightforward derivatives.
+              changed this into three straightforward derivatives. In
+              any exponential with more than just <m>x</m> in the
+              exponent, I use the chain rule for the derivative.
             </p>
           </li>
         </ol>
@@ -722,8 +729,9 @@
               </mrow>
             </md>
             <p>
-              This is a direct antiderivative, using the exponential
-              form to evaluate on the bounds.
+              This is a direct antiderivative. After the
+              antiderivative, I use the exponential form to evaluate
+              on the bounds.
             </p>
           </li>
           <li>
@@ -743,8 +751,9 @@
             </md>
             <p>
               I use a identity to turn this into a fairly direct
-              integral. I use the exponential form to evaluate on
-              the bounds.
+              integral. (To deal with the <m>(2x)</m> inside the
+              hyperbolic cosine, I use a substitution <m>u = 2x</m>.)
+              I use the exponential form to evaluate on the bounds.
             </p>
           </li>
         </ol>
