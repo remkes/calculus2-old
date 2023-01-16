@@ -3,44 +3,24 @@
 -->
 <section xml:id="section-assignment-week3">
   <title>Week 3 Assignment</title>
-  <!--
   <p><ol>
     <li>
       <p>
-        Consider the following two conics. (6) 
-      </p>
-      <md>
-        <mrow>
-          (x-2)^2 + (y-2)^2 \amp = 4
-        </mrow>
-        <mrow>
-          (x-1)^2 - (y-2)^2 \amp = 1 
-        </mrow>
-      </md>
-      <p>
-        Calculate the intersection of the two conics (there are three
-        intersection points). Use implicit derivatives to find the
-        slopes of the tangent lines to each curve at the intersection
-        point. Identify the one intersection point where the slopes
-        are the same.  (This shows that the two conics meet
-        tangentially: they touch briefly as they pass by each other
-        but don't cross over each other). 
+        Classify the singularities of this algebraic plane curve.
+        (6) 
+        <me>
+          y^2 = x^3(x-1)^2(x-2)^2
+        </me>
       </p>
     </li>
     <li>
       <p>
-        Classify the singularities of these algebraic plane curves.
-        (10) 
+        Classify the singularities of this algebraic plane curve.
+        (6) 
+        <me>
+          y^2 = (x-2)^2(x-4)^2(x-6)^2
+        </me>
       </p>
-      <ol>
-        <li><me>
-          y^2 = (x-5)(x-2)^3 
-        </me></li>
-        <li><me>
-          y^4 = x^3 - x
-        </me></li>
-      </ol>
     </li>
   </ol></p>
-  -->
 </section>

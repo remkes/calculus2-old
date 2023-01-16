@@ -15,7 +15,8 @@
       <solution>
         <p>
           I can factor the right side of the curve as
-          <m>x^2(1+x^2)</m>. I'll use this form, since it will help to
+          <m>x^2(1+x^2)</m>. There are no domain restrictions for this
+          curve. I'll use this factored form, since it will help to
           clearly understand the limits of the implicit derivative. 
         </p>
         <p>
@@ -48,7 +49,7 @@
           </mrow>
         </md>
         <p>
-          The singularities happen at the undefined point of the
+          The singularities happen at the undefined points of the
           implicit derivative. These are the points where the
           denominator is zero. For this curve, the only potential
           singularity is at <m>x=0</m>, since <m>1+x^2</m> can never
@@ -106,8 +107,9 @@
       <solution>
         <p>
           For this curve, I can factor the right side to get
-          <m>x^3(x+1)</m>. Then I calculate the implicit derivative
-          of the curve.
+          <m>x^3(x+1)</m>. This curve is not defined when <m>-1 \lt x
+          \lt 0</m>, since the right side is negative in that range.
+          Then I calculate the implicit derivative of the curve.
         </p>
         <md>
           <mrow>
@@ -134,7 +136,7 @@
           </mrow>
         </md>
         <p>
-          The singularities happen at the undefined point of the
+          The singularities happen at the undefined points of the
           implicit derivative. These are the points where the
           denominator is zero. For this curve, there are potential
           singularities at <m>x=0</m> and <m>x=-1</m>. 
@@ -142,21 +144,22 @@
         <p>
           For each of the undefined points, I calculate the limit of
           the implicit derivative approaching the undefined points.
-          I'll start with <m>x=0</m>
+          I'll start with <m>x=0</m>. I only approach from the right,
+          due to the domain restrictions.
         </p>
         <md>
           <mrow>
-            \lim_{x \rightarrow 0} \frac{dy}{dx} \amp = 
-            \lim_{x \rightarrow 0} \pm \frac{3x^2 (x+1) +
+            \lim_{x \rightarrow 0^+} \frac{dy}{dx} \amp = 
+            \lim_{x \rightarrow 0^+} \pm \frac{3x^2 (x+1) +
             x^3}{2x\sqrt{x(x+1)}} 
           </mrow>
           <mrow>
-            \amp = \lim_{x \rightarrow 0} \pm \left[ \frac{3x^2
+            \amp = \lim_{x \rightarrow 0^+} \pm \left[ \frac{3x^2
             (x+1)}{2x\sqrt{x(x+1)}} + \frac{x^3}{2x\sqrt{x(x+1)}}
             \right] 
           </mrow>
           <mrow>
-            \amp = \lim_{x \rightarrow 0} \pm \left[
+            \amp = \lim_{x \rightarrow 0^+} \pm \left[
             \frac{3\sqrt{x(x+1)}}{2} + \frac{x\sqrt{x}}{2\sqrt{(x+1)}}
             \right] 
           </mrow>
@@ -166,31 +169,27 @@
         </md>
         <p>
           The limit is zero. I conclude that there is a cusp at
-          <m>x=0</m>. Then I move on to <m>x=-1</m>. (There is a
-          subtlety here: this limit only works when we approach
-          <m>x=-1</m> on the left. The curve have no points for
-          <m>x</m> between <m>-1</m> and <m>0</m>, since the right
-          side is negative and the left side must be positive. This
-          matter at one point in the limit.)
+          <m>x=0</m>. Then I move on to <m>x=-1</m>. I only approach
+          from the left, due to the domain restrictions.
         </p>
         <md>
           <mrow>
-            \lim_{x \rightarrow -1} \frac{dy}{dx} \amp = 
-            \lim_{x \rightarrow -1} \pm \frac{3x^2 (x+1) +
+            \lim_{x \rightarrow -1^-} \frac{dy}{dx} \amp = 
+            \lim_{x \rightarrow -1^-} \pm \frac{3x^2 (x+1) +
             x^3}{2x\sqrt{x(x+1)}} 
           </mrow>
           <mrow>
-            \amp = \lim_{x \rightarrow -1} \pm \frac{3x^2 (x+1)}{2x
+            \amp = \lim_{x \rightarrow -1^-} \pm \frac{3x^2 (x+1)}{2x
             \sqrt{x(x+1)}}  + \frac{x^3}{2x\sqrt{x(x+1)}} 
           </mrow>
           <mrow>
-            \amp = \lim_{x \rightarrow -1} \pm \frac{3x^2 (x+1)}{2x
+            \amp = \lim_{x \rightarrow -1^-} \pm \frac{3x^2 (x+1)}{2x
             \sqrt{x(x+1)}} + \lim_{x \rightarrow -1}
             \frac{x^3}{2x\sqrt{x(x+1)}} 
           </mrow>
           <mrow>
-            \amp = \lim_{x \rightarrow -1} \pm \frac{3\sqrt{x(x+1)}}{2}
-            + \lim_{x \rightarrow -1} \frac{x^3}{2x\sqrt{x(x+1)}} 
+            \amp = \lim_{x \rightarrow -1^-} \pm \frac{3\sqrt{x(x+1)}}{2}
+            + \lim_{x \rightarrow -1^-} \frac{x^3}{2x\sqrt{x(x+1)}} 
           </mrow>
         </md>
         <p>
@@ -203,7 +202,7 @@
           limit must approach <m>\pm \infty</m>. I conclude that there
           is a vertical tangent at <m>x=-1</m>.
           <xref ref="figure-activity-apc2" /> shows the curve with
-          boths its cusp and its vertical tangent. It also shows the
+          both its cusp and its vertical tangent. It also shows the
           lack of points between <m>x=-1</m> and <m>x=0</m>.
         </p>
         <figure xml:id="figure-activity-apc2">
@@ -235,7 +234,9 @@
       </statement>
       <solution>
         <p>
-          The curve is already presented in factored form. I calculate
+          The curve is already presented in factored form. There are
+          no domain restrictions, since the right side is always
+          possitive for any <m>x</m> value. I calculate
           the implicit derivative of the curve. 
         </p>
         <md>
@@ -263,7 +264,7 @@
           </mrow>
         </md>
         <p>
-          The singularities happen at the undefined point of the
+          The singularities happen at the undefined points of the
           implicit derivative. These are the points where the
           denominator is zero. For this curve, the possible
           singularities are at <m>x=3</m> and <m>x=4</m>. 
@@ -331,7 +332,12 @@
       </statement>
       <solution>
         <p>
-          First I calculate the implicit derivative of the curve. 
+          The curve is already factored. There are domain
+          restrictions, since the right side cannot be negative. The
+          right side is positive when <m>0 \leq x \leq 1</m> and <m>x
+          \geq 2</m>, so those are the valid <m>x</m> coordinates for
+          points on the curve. I calculate the implicit derivative of
+          the curve.
         </p>
         <md>
           <mrow>
@@ -359,7 +365,7 @@
           </mrow>
         </md>
         <p>
-          The singularities happen at the undefined point of the
+          The singularities happen at the undefined points of the
           implicit derivative. These are the points where the
           denominator is zero. For this curve, there are potential
           singularities at <m>x=0,1,2</m>. 
@@ -367,31 +373,32 @@
         <p>
           For each of the undefined points, I calculate the limit of
           the implicit derivative approaching the undefined points. 
-          I'll start with <m>x=0</m>. 
+          I'll start with <m>x=0</m>. Due to the domain restrictions,
+          I only approach from the right.
         </p>
         <md>
           <mrow>
-            \amp \lim_{x \rightarrow 0} \frac{dy}{dx} = 
-            \frac{1}{2} \lim_{x \rightarrow 0} \pm \frac{(x-1)(x-2) +
+            \amp \lim_{x \rightarrow 0^+} \frac{dy}{dx} = 
+            \frac{1}{2} \lim_{x \rightarrow 0^+} \pm \frac{(x-1)(x-2) +
             x(x-2) + x(x-1)}{\sqrt{x(x-1)(x-2)}}
           </mrow>
           <mrow>
-            \amp = \frac{1}{2} \lim_{x \rightarrow 0} \pm \left[
+            \amp = \frac{1}{2} \lim_{x \rightarrow 0^+} \pm \left[
             \frac{(x-1)(x-2)}{\sqrt{x(x-1)(x-2)}}  +
             \frac{x(x-2)}{\sqrt{x(x-1)(x-2)}}  +
             \frac{x(x-1)}{\sqrt{x(x-1)(x-2)}} \right] 
           </mrow>
           <mrow>
-            \amp = \frac{1}{2} \lim_{x \rightarrow 0} \pm \left[
+            \amp = \frac{1}{2} \lim_{x \rightarrow 0^+} \pm \left[
             \frac{\sqrt{(x-1)(x-2)}}{\sqrt{x}}  +
             \frac{\sqrt{x(x-2)}}{\sqrt{x-1}}  +
             \frac{\sqrt{x(x-1)}}{\sqrt{x-2}} \right]
           </mrow>
           <mrow>
-            \amp = \pm \frac{1}{2} \left[ \lim_{x \rightarrow 0} 
+            \amp = \pm \frac{1}{2} \left[ \lim_{x \rightarrow 0^+} 
             \frac{\sqrt{(x-1)(x-2)}}{\sqrt{x}}  +
-            \lim_{x \rightarrow 0} \frac{\sqrt{x(x-2)}}{\sqrt{x-1}}  +
-            \lim_{x \rightarrow 0} \frac{\sqrt{x(x-1)}}{\sqrt{x-2}}
+            \lim_{x \rightarrow 0^+} \frac{\sqrt{x(x-2)}}{\sqrt{x-1}}  +
+            \lim_{x \rightarrow 0^+} \frac{\sqrt{x(x-1)}}{\sqrt{x-2}}
             \right] 
           </mrow>
         </md>
@@ -400,19 +407,20 @@
           the numerator approaches <m>2</m> and the denominator
           approaches <m>0</m>, so I conclude the limit is <m>\pm
           \infty</m> and that there is a vertical tangent at
-          <m>x=0</m>.  I'll next look at <m>x=1</m>. 
+          <m>x=0</m>.  I'll next look at <m>x=1</m>. Due to the domain
+          restrictions, I only approach from the left. 
         </p>
         <md>
           <mrow>
-            \lim_{x \rightarrow 1} \frac{dy}{dx} \amp = 
-            \frac{1}{2} \lim_{x \rightarrow 1} \pm \frac{(x-1)(x-2) +
+            \lim_{x \rightarrow 1^-} \frac{dy}{dx} \amp = 
+            \frac{1}{2} \lim_{x \rightarrow 1^-} \pm \frac{(x-1)(x-2) +
             x(x-2) + x(x-1)}{\sqrt{x(x-1)(x-2)}}
           </mrow>
           <mrow>
-            \amp = \pm \frac{1}{2} \left[ \lim_{x \rightarrow 1}
+            \amp = \pm \frac{1}{2} \left[ \lim_{x \rightarrow 1^-}
             \frac{\sqrt{(x-1)(x-2)}}{\sqrt{x}} + \lim_{x \rightarrow
-            1} \frac{\sqrt{x(x-2)}}{\sqrt{x-1}} + \lim_{x \rightarrow
-            1} \frac{\sqrt{x(x-1)}}{\sqrt{x-2}} \right] 
+            1^-} \frac{\sqrt{x(x-2)}}{\sqrt{x-1}} + \lim_{x \rightarrow
+            1^-} \frac{\sqrt{x(x-1)}}{\sqrt{x-2}} \right] 
           </mrow>
         </md>
         <p>
@@ -420,19 +428,20 @@
           the numerator approaches <m>-1</m> and the denominator
           approaches <m>0</m>, so I conclude the limit is <m>\pm
           \infty</m> and that there is a vertical tangent at
-          <m>x=0</m>.  The last point to consider is <m>x=2</m>. 
+          <m>x=0</m>.  The last point to consider is <m>x=2</m>. Due
+          to the domain restrictions, I only approach from the right. 
         </p>
         <md>
           <mrow>
-            \lim_{x \rightarrow 2} \frac{dy}{dx} \amp = 
-            \frac{1}{2} \lim_{x \rightarrow 2} \pm \frac{(x-1)(x-2) +
+            \lim_{x \rightarrow 2^+} \frac{dy}{dx} \amp = 
+            \frac{1}{2} \lim_{x \rightarrow 2^+} \pm \frac{(x-1)(x-2) +
             x(x-2) + x(x-1)}{\sqrt{x(x-1)(x-2)}}
           </mrow>
           <mrow>
-            \amp = \pm \frac{1}{2} \left[ \lim_{x \rightarrow 2}
+            \amp = \pm \frac{1}{2} \left[ \lim_{x \rightarrow 2^+}
             \frac{\sqrt{(x-1)(x-2)}}{\sqrt{x}} + \lim_{x \rightarrow
-            2} \frac{\sqrt{x(x-2)}}{\sqrt{x-1}} + \lim_{x \rightarrow
-            2} \frac{\sqrt{x(x-1)}}{\sqrt{x-2}}
+            2^+} \frac{\sqrt{x(x-2)}}{\sqrt{x-1}} + \lim_{x \rightarrow
+            2^+} \frac{\sqrt{x(x-1)}}{\sqrt{x-2}}
             \right] 
           </mrow>
         </md>

@@ -27,7 +27,7 @@
       whole notion of a tangent line breaks down. The classification of
       singularities of algebraic plane curve is a old and historically
       important mathematical problem. This is particular true for cubics
-      (algebraic plane curves of degree 3); the study of cubics lead to
+      (algebraic plane curves of degree 3); the study of cubics led to
       whole branches of 19th and 20th century mathematics. 
     </p>
     <p>
@@ -61,8 +61,8 @@
     <p>
       This strange degree two curve is just two lines. I can see this
       by factoring the equation: <m>x^2 - y^2 = 0</m> becomes
-      <m>(x-y)(x+y) = 0</m>. This is just the produce of two linear
-      equations: <m>x-y=0</m> and <m>x+y=</m>. Those two lines are
+      <m>(x-y)(x+y) = 0</m>. This is just the product of two linear
+      equations: <m>x-y=0</m> and <m>x+y=0</m>. Those two lines are
       the lines through the origin with slopes <m>1</m> and <m>-1</m>,
       respectively. These are clearly the lines in <xref
       ref="figure-two-lines" /> as well. This degree two curve is just
@@ -84,7 +84,7 @@
         <p>
           A singularity which is an intersection point of two or more
           pieces of an algebraic curve is called a <term>node</term>.
-          The number of pieces at the intersection gives more precisde
+          The number of pieces at the intersection gives more precise
           names: two pieces is called a <term>double point</term>,
           three a <term>triple point</term>, and so on. 
         </p>
@@ -178,15 +178,16 @@
     </p>
   </subsection>
   <subsection xml:id="subsection-singularities-implicit">
+    <title>Investigating Singularities</title>
     <p>
-      I would like to use the implicit derivative defined in <xref
+      I would like to use the implicit derivatives defined in <xref
       ref="section-implicit-derivatives" /> to undertand singularities
       of algebraic plane curves. In general, as I said before, this is
       a deep and complicated theory. Since I don't have time to delve
       deeply into all of the various ways to use derivatives to
       understand singularities, I am going to specialize to a very
       particular class of curves. In this section, I'm only going to
-      consider curve that has the following form, where <m>p(x)</m> is
+      consider curves that have the following form, where <m>p(x)</m> is
       a polynomial of degree three or more.
     </p>
     <me>
@@ -194,18 +195,18 @@
     </me>
     <p>
       Even though this is specializing a great deal, it still allows
-      for many interest and important examples. The degree of the
+      for many interesting and important examples. The degree of the
       algebraic plane curve is still unbounded, since <m>p(x)</m> can
       have as high a degree as I want. If the degree of <m>p(x)</m>
       is three or four, the resulting curve is an elliptic curve (or,
-      at least, one presentation of an elliptic curves). Elliptic
+      at least, one presentation of an elliptic curve). Elliptic
       curves are, themselves, an important branch of mathematics with
       many applications and connections. If the degree of <m>p(x)</m>
       is five or higher, the resulting curve is a hyperelliptic curve,
-      another interesting and important object. 
+      another interesting and important type of object. 
     </p>
     <p>
-      For the purposes of this course, curve of this form are
+      For the purposes of this course, curves of this form are
       accesible for several reasons. (I present the following
       statements without proof.) 
     </p>
@@ -216,7 +217,7 @@
       </p></li>
       <li><p>
         Vertical tangents and singularities are identified by places
-        where the impliict derivative is not defined. 
+        where the implicit derivative is not defined. 
       </p></li>
       <li><p>
         At a point <m>(a,0)</m> where the implicit derivative is not
@@ -225,8 +226,8 @@
         of the point.
       </p></li>
       <li><p>
-        The only possibilites for the behaviour in this case is a
-        vertical tangent, a double point node, or a cusp. 
+        The only possibilites for the behaviour in this case are
+        vertical tangents, double point nodes, or cusps. 
       </p></li>
     </ul>
     <p>
@@ -234,6 +235,11 @@
       singularities of these special algebraic plane curves. 
     </p>
     <ul>
+      <li><p>
+        I check the domain of possible <m>x</m> values that are
+        allowed in the curve. This will have an impact on the
+        directions of limits later in the process. 
+      </p></li>
       <li><p>
         I will take the implicit derivative.
       </p></li>
@@ -257,9 +263,10 @@
         vertical tangent.
       </p></li>
       <li><p>
-        If this limit has two values (because the <m>\pm</m> is still
-        present in the final answer), then there are two possible
-        tangent lines and I conclude this is a double point note.
+        If this limit has two or more values (for example, because the
+        <m>\pm</m> is still present in the final answer), then there
+        are two or more possible tangent lines and I conclude this is
+        a double point note.
       </p></li>
       <li><p>
         If this limit is zero, then I conclude there is a cusp. 
@@ -268,7 +275,7 @@
     <p>
       Now I'll work through a number of examples to show this
       algorithm in practice. In this examples, note that if I can
-      factor <m>p(x)</m> (or if it comes already factor), the
+      factor <m>p(x)</m> (or if it comes already factored), the
       calculations and the limits can become a lot easier due to
       cancelation of some of the factors. 
     </p>
@@ -277,8 +284,10 @@
         <p>
           Consider the plane curve given by the equation <m>y^2 = 4 - 
           3x^2 - x^3</m>. This is a degree three curve, which factors as
-          <m>y^2 = (1-x)(2+x)^2</m>. I calculate the implicit
-          derivative.
+          <m>y^2 = (1-x)(2+x)^2</m>. The domain is <m>x \leq 1</m>,
+          since <m>x \geq 1</m> gives a negative on the right side,
+          which is impossible with <m>y^2</m> on the left. I calculate
+          the implicit derivative.
           <me>
             2 y \frac{dy}{dx} = -6x - 3x^2 \implies \frac{dy}{dx} =
             \frac{-6x-3x^2}{2y} = \frac{-3x(2+x)}{2y} 
@@ -301,7 +310,9 @@
           points. When <m>x=1</m>, only the denominator goes to
           <m>0</m>, the numerator is finite. Therefore, the 
           slope diverges to infinity and the curve will have a
-          vertical tangent. 
+          vertical tangent. Note that I can only take the limit
+          approaching <m>x=1</m> from the left, due to the domain
+          constraints, but the conclusion still holds.
         </p>
         <p>
           However, at <m>x=-2</m>, both numerator and denominator have a
@@ -339,12 +350,17 @@
     <example>
       <statement>
         <p>
-          Consider the curve <m>y^2 = \frac{x^3}{4}</m>. The implicit
+          Consider the curve <m>y^2 = \frac{x^3}{4}</m>. This curve is
+          only defined when <m>x /geq 0</m>, since negative <m>x</m>
+          lead to a negative on the right side, which cannot happen
+          with the square on the left. The implicit
           derivative is <m>\frac{dy}{dx} = \frac{3x^2}{8y} =
           \pm \frac{3x^2}{4\sqrt{x^3}}</m>. This is undefined at the
           point <m>(0,0)</m> on the curve.and the limit approaching
           the undefined point is <m>0</m>. Since I get a limit of
-          <m>0</m>, I conclude that this should be a cusp. 
+          <m>0</m>, I conclude that this should be a cusp. I can only
+          approach <m>0</m> from the right due to the domain
+          restrictions, but that doesn't affect the conclusion. 
           <xref ref="figure-elliptic-curve2">Figure</xref> indeed
           shows this cusp.
         </p>

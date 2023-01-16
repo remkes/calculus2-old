@@ -10,21 +10,21 @@
     This made some sense, since a vertical line doesn't have a
     well-defined slope. However, there are a variety of ways, in
     addition to vertical tangents, that implicit derivative can fail.
-    This this week, I'm going to investigate the places where these
+    This week, I'm going to investigate the places where these
     loci don't have well defined derivatives. 
   </p>
   <p>
     First, however, I want to define a new class of loci. Doing the
     theory for this week in full generality for any loci in
     <m>\RR^2</m> isn't really feasible. I'm going to restrict loci
-    with the following definitions. 
+    with the following definition. 
   </p>
   <definition>
     <statement>
       <p>
         Another name for loci in <m>\RR^2</m> is <term>plane
         curves</term>. An <term>algebraic plane curve</term> is a
-        locus where the expressions are polynomials. The
+        locus where the expression is a polynomial. The
         <term>degree</term> of an algebraic plane curve is the highest
         polynomial degree involved in the equation of the curve.
       </p>
@@ -50,7 +50,7 @@
     </image>
   </figure>
   <p>
-    There are two classes of algebriac loci which you should be pretty
+    There are two classes of algebraic loci which you should be pretty
     familiar with by now.
   </p>
   <ul>
@@ -68,7 +68,7 @@
     <li>
       <p>
         An algebraic plane curve of degree two is a
-        <term>conic</term>. I've already show in Calculus 1 that all
+        <term>conic</term>. I've already shown in Calculus 1 that all
         conics have equations of degree two (they only involve squares
         of the variable). What is new, here, is the fact that all
         algebriac plane curves of degree two are, in fact, conics.
@@ -85,13 +85,13 @@
         a_1 x^2 + a_2 xy + a_3 y^2 + a_4 x + a_5 y + a_6 = 0
       </me>
       <p>
-        This does include some equation which are not familiar, such
-        as <m>-4x^2 + 4xy - 2y^2 + 4x - 3y + 2 = 0</m>. This
+        This form does include some equations which are not familiar,
+        such as <m>-4x^2 + 4xy - 2y^2 + 4x - 3y + 2 = 0</m>. This
         particular equation produces an ellipse at an angle: the major
         and minor axes are no longer oriented along the <m>x</m> or
         <m>y</m> axes. The ellipse is also not centred at the origin.
         <xref ref="figure-ellipse1" /> shows a graph of this ellipse.
-        The general form, as indicate in this example, can produce
+        The general form, as indicated in this example, can produce
         conics with any angle of rotation or shift of position
         compared with the familiar forms centred at the origin.
       </p>
@@ -100,7 +100,7 @@
   <p>
     Non-vertical lines have no undefined tangents, since the slope of
     the line is the slope of the tangent at all points. Conics can
-    have vertical tangents, as I showed in previous examples. With one
+    have vertical tangents, as shown in previous examples. With one
     important exception (which I'll talk about in the next section),
     vertical tangents are the only problems with tangent slopes to
     conics. However, when I consider higher degree algebraic plane
@@ -134,7 +134,7 @@
       </figure>
       <p>
         This is an algebriac plane curve of degree five. Note that it
-        has two unconnected pieces, one of which is bounded and one of
+        has two separate pieces, one of which is bounded and one of
         which is unbounded. Its graph is shown in <xref
         ref="figure-apc1" />. 
       </p>
@@ -167,7 +167,7 @@
       </figure>
       <p>
         This is an algebriac plane curve of degree six. Now there are
-        three unconnected pieces, two of which are unbounded and one of
+        three separate pieces, two of which are unbounded and one of
         which is bounded. Its graph is shown in <xref
         ref="figure-apc2" />. 
       </p>
