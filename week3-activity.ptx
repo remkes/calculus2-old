@@ -160,8 +160,8 @@
           </mrow>
           <mrow>
             \amp = \lim_{x \rightarrow 0^+} \pm \left[
-            \frac{3\sqrt{x(x+1)}}{2} + \frac{x\sqrt{x}}{2\sqrt{(x+1)}}
-            \right] 
+            \frac{3\sqrt{x(x+1)}}{2} + \frac{x}{2} \sqrt{
+            \frac{x}{x+1}} \right] 
           </mrow>
           <mrow>
             \amp = \pm \left[ 0 + 0 \right] = 0 
@@ -169,7 +169,19 @@
         </md>
         <p>
           The limit is zero. I conclude that there is a cusp at
-          <m>x=0</m>. Then I move on to <m>x=-1</m>. I only approach
+          <m>x=0</m>. (There are some tricky subtleties with the
+          square root calculations in this question. In the second
+          piece of the second last step of the previous calculations,
+          I wrote <m>\sqrt{\frac{x}{x+1}}</m>. Fitting with how I've
+          written other square root, I might have written
+          <m>\frac{\sqrt{x}}{\sqrt{x+1}}</m>. However, for <m>x \lt
+          -1</m>, both of these square roots are undefined. As
+          written, the square root of the fraction is defined, since
+          the ratio is a negative divided by a negative, which is
+          positive.)
+        </p>
+        <p>
+          Now I move on to <m>x=-1</m>. I only approach
           from the left, due to the domain restrictions.
         </p>
         <md>
@@ -391,14 +403,14 @@
           <mrow>
             \amp = \frac{1}{2} \lim_{x \rightarrow 0^+} \pm \left[
             \frac{\sqrt{(x-1)(x-2)}}{\sqrt{x}}  +
-            \frac{\sqrt{x(x-2)}}{\sqrt{x-1}}  +
-            \frac{\sqrt{x(x-1)}}{\sqrt{x-2}} \right]
+            \sqrt{\frac{x(x-2)}{x-1}}  +
+            \sqrt{\frac{x(x-1)}{x-2}} \right]
           </mrow>
           <mrow>
             \amp = \pm \frac{1}{2} \left[ \lim_{x \rightarrow 0^+} 
             \frac{\sqrt{(x-1)(x-2)}}{\sqrt{x}}  +
-            \lim_{x \rightarrow 0^+} \frac{\sqrt{x(x-2)}}{\sqrt{x-1}}  +
-            \lim_{x \rightarrow 0^+} \frac{\sqrt{x(x-1)}}{\sqrt{x-2}}
+            \lim_{x \rightarrow 0^+} \sqrt{\frac{x(x-2)}{x-1}}  +
+            \lim_{x \rightarrow 0^+} \sqrt{\frac{x(x-1)}{x-2}}
             \right] 
           </mrow>
         </md>
@@ -419,8 +431,8 @@
           <mrow>
             \amp = \pm \frac{1}{2} \left[ \lim_{x \rightarrow 1^-}
             \frac{\sqrt{(x-1)(x-2)}}{\sqrt{x}} + \lim_{x \rightarrow
-            1^-} \frac{\sqrt{x(x-2)}}{\sqrt{x-1}} + \lim_{x \rightarrow
-            1^-} \frac{\sqrt{x(x-1)}}{\sqrt{x-2}} \right] 
+            1^-} \sqrt{\frac{x(x-2)}{x-1}} + \lim_{x \rightarrow
+            1^-} \sqrt{\frac{x(x-1)}{x-2}} \right] 
           </mrow>
         </md>
         <p>
@@ -453,6 +465,14 @@
           <m>x=2</m>. 
           <xref ref="figure-activity-apc4" /> shows the curve and all
           three the vertical tangents. The curve has no singularities. 
+          (This question also has subtleties in how the square roots
+          are written. You might notice in the first two calculation,
+          the square root need to capture the whole fraction as one,
+          while in the last calculation, the squares can be separated
+          in the numerator and denominator. This is all done to make
+          the square root well-defined, so that there is no risk of
+          taking the square root of a negative number in any of these
+          limits.) 
         </p>
         <figure xml:id="figure-activity-apc4">
           <image xml:id="figure43" widht="80%">
