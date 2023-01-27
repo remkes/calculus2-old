@@ -5,8 +5,8 @@
       This entire week of the course is devoted to understanding the
       integrals of rational functions. Recall that a rational function
       is a function <m>f(x) = \frac{p(x)}{q(x)}</m> wher <m>p(x)</m>
-      and <m>q(x)</m> are polynomial. The general approach to
-      integrals of rations functions is two fold. First, I am going to
+      and <m>q(x)</m> are polynomials. The general approach to
+      integrals of rational functions is twofold. First, I am going to
       describe the integral of some very specific rational functions.
       Second, I am going to introduce techniques that can break apart
       any rational function to the sum of many easier rational
@@ -19,7 +19,7 @@
   <subsection xml:id="subsection-known-forms">
     <title>Basic Types</title>
     <p>
-      The first step is the integrals of certain simply rational
+      The first step is the integrals of certain simple rational
       functions. I am going to start with three integrals that have
       already been introducted in Math 200, in the rules or the table
       of integrals. 
@@ -39,7 +39,7 @@
     <p>
       This is the starting point: all of the integrals of rational
       functions will eventually boil down to something based on these
-      three integral. The first step is extending these into slightly
+      three integrals. The first step is extending these into slightly
       more general forms. There are four integrals I want to do here. 
     </p>
     <ul>
@@ -75,7 +75,7 @@
           \int \frac{2x + a}{x^2+ac+b} dx
         </me>
         <p>
-          This can also be solve by a substitution, using <m>u = x^2 + ax
+          This can also be solved by a substitution, using <m>u = x^2 + ax
           +b</m> with <m>du = (2x+a)dx</m>. 
         </p>
         <me>
@@ -91,7 +91,7 @@
           This integral is a bit trickier. It also uses a substitution,
           <m>u = \frac{x-\alpha}{\beta}</m>, with <m>du = \frac{1}{\beta}
           dx</m> and <m>\beta du = dx</m>. Before doing the substitution,
-          I need one manipulation to but the integral into a suitable
+          I need one manipulation to put the integral into a suitable
           form. I divide numerator and denominator by <m>\beta^2</m>. Then
           I proceed to use the substitution.
         </p>
@@ -122,8 +122,8 @@
       </li>
     </ul>
     <p>
-      Now I've solve the four basic types of rational function
-      integral that I am going to need. For easy reference, here are
+      Now I've solved the four basic types of rational function
+      integrals that I am going to need. For easy reference, here are
       the four integrals I will return to in future sections.
     </p>
     <ol>

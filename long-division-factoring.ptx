@@ -2,14 +2,13 @@
   <title>Long Division and Factoring</title>
   <introduction>
     <p>
-      Now I want to start the steps of turning an arbitrary rational
-      function <m>f(x) = \frac{p(x)}{q(x)}</m> into a sum of integral
-      of the three types introduced in <xref
+      Now I want to start the steps of turning the integral of an
+      arbitrary rational function <m>f(x) = \frac{p(x)}{q(x)}</m> into
+      a sum of integrals of the three types introduced in <xref
       ref="section-rational-functions-basic" />. There are three
-      steps; two of this are covered in this section before I move on
-      to the major new step in <xref ref="section-pf" />. In this
-      section, I want to talk about polynomial division and polynomial
-      factoring. 
+      steps; two of these are covered in this section before I move on
+      to the major new step in <xref ref="section-pf" />. First, I
+      want to talk about polynomial division and polynomial factoring.
     </p>
   </introduction>
   <subsection xml:id="subsection-long-division">
@@ -34,9 +33,9 @@
       polynomials.  To reduce a rational function to a proper ration
       function, I'm going to do long division with remainder. (I'll
       present the long division algorithm, but the synthetic division
-      algorithm also nicely extends to polynomial.) The goal is the
+      algorithm also nicely extends to polynomials.) The goal is the
       same, to change an improper fraction like <m>\frac{x^3}{x^2 +
-      1}</m> into something equivalent but proper <m>x - \frac{x}{x^2
+      1}</m> into something equivalent but proper: <m>x - \frac{x}{x^2
       +1}</m>. 
     </p>
     <p>
@@ -168,7 +167,7 @@
           </tabular>
         </figure> 
         <p>
-          The quotient, <m>x^2 - 1</m> stands along. The remainder
+          The quotient, <m>x^2 - 1</m> stands alone. The remainder
           becomes the new numerator. The result of the long division
           is this equation. 
         </p>
@@ -188,12 +187,12 @@
     <p>
       Long division was the first step. Now I will assume that all the
       rational function I am dealing with will be proper. The next
-      steps is factoring. More specifically, for the technique I am
+      step is factoring. More specifically, for the technique I am
       going to introduce in <xref ref="section-pf" />, I will need the
       denominators to be factored as much as possible. Factoring
       polynomials is somewhat familiar, particularly for quadratics,
       but I wanted to review the general theory before moving on. Let
-      me start with some definition. 
+      me start with some definitions. 
     </p>
     <definition>
       <statement>
@@ -209,9 +208,11 @@
           under the square root in the quadratic formula; it
           determines whether or not the polynomial has real roots. A
           quadratic with negative discriminant has no real roots; such
-          a polynomial is called <term>irreducible</term>. Since it has no
+          a quadratic is called <term>irreducible</term>. Since it has no
           real roots, it has no linear factor and cannot be further
-          factors; hence irreducible.
+          factors; hence irreducible. If an irreducible quadratic is a
+          factor of a larger polynomials, it is very reasonably called
+          an <term>irreducible quadratic factor</term>. 
         </p>
       </statement>
     </definition>
@@ -225,16 +226,15 @@
       <statement>
         Let <m>p(x)</m> be a polynomial with real coefficients. Then
         <m>p(x)</m> completes factors into linear and irreducible
-        quadratic term. Equivalently, there are not
-        <sq>irreducible</sq> factors of degree three or higher; all
-        such factors will always further break down into linear and
-        quadratic terms. 
+        quadratic factors. Equivalently, there are no irreducible
+        factors of degree three or higher; all such factors will
+        always further break down into linear and quadratic terms.
       </statement>
     </theorem>
     <p>
-      This simplifies the theorem substantially. Assuming I can deal
+      This simplifies the theory substantially. Assuming I can deal
       with factored polynomials, I only have to deal with linear and
-      irreducible quadratic terms. This fact is central to the theorem
+      irreducible quadratic terms. This fact is central to the theory
       I am developing. Notice that the three types of integral I did
       in <hrex ref="section-rational-basic" /> only had linear or
       quadratic denominators. I'm going to eventually reduce the
@@ -265,9 +265,9 @@
     <p>
       This is the theory. In practice, the problem of actually finding
       the factors of a polynomial is a very difficult one. The
-      quadratic formula nicely solves this problem for quadratic: we
+      quadratic formula nicely solves this problem for quadratics: I
       can determine whether a quadratic factors into two linear terms
-      or remain irreducible based on the discriminant. For cubics and
+      or remains irreducible based on the discriminant. For cubics and
       quartics, there are similar formulae. However, they get unwieldy
       very quickly. The cubic formula is already several lines of
       ordinary text and the quartic formula is several <em>pages</em>
@@ -288,7 +288,7 @@
       I defined above and the factorization theorem. However, this is
       not a course in factoring polynomials. I'm going to avoid all
       the technical challenges of actually finding (or approximating)
-      polynomial factors but giving you factored denominators for all
+      polynomial factors by giving you factored denominators for all
       the integration problems involving rational functions. 
     </p>
   </subsection>

@@ -18,7 +18,7 @@
       done by simply multiplying the denominators together to form the
       common denominator, then multiplying the numerators by the
       appropriate factors to preserve the fractions. (A fraction is
-      preserve when the numerator and denominator are multiplied by
+      preserved when the numerator and denominator are multiplied by
       the same term.) Here is a simple example that just multiplies
       the two denominators together. 
     </p>
@@ -34,12 +34,12 @@
       \times 16 = 48</m> and <m>2 \times 24 = 48</m>. (For those of
       you who remember your algebra, this <m>48</m> is the least
       common multiple or LCM of <m>16</m> and <m>24</m>.) Certainly,
-      it is nice to use <m>48</m> than the product of the two terms
-      <m>384</m>. The same thing works for rational functions.
+      it is nice to use <m>48</m> rather than the product of the two
+      terms <m>384</m>. The same thing works for rational functions.
       Consider this example, where the two polynomials share a factor.
       I only need to multiply the first polynomial by <m>(x-1)</m> and
-      the second polynomial ny <m>x^2</m> to form the common
-      denominator of <m>x^2(x-1)(x-3)</m>. 
+      the second polynomial by <m>x^2</m> to form the common
+      denominator of <m>x^2(x-1)(x-3)</m>.
     </p>
     <md>
       <mrow>
@@ -60,7 +60,7 @@
     <p>
       Common denominator takes the sum or difference of two or more
       rational functions and puts them together into one fraction.
-      What is I want to do the opposiste? Given a rational function,
+      What is I want to do the opposite? Given a rational function,
       can I pull it apart into its various pieces? Can I do common
       denominator in reverse? 
     </p>
@@ -82,9 +82,9 @@
       \frac{p_r(x)}{q_r(x)}
     </me>
     <p>
-      Partial fractions tried to calculate these numerators. It is
-      often a long an complicated process. Instead of trying to
-      explaing in abstractly, it's much more reasonable to explain it
+      Partial fractions tries to calculate these numerators. It is
+      often a long and complicated process. Instead of trying to
+      explain it abstractly, it's much more reasonable to explain it
       through examples. 
     </p>
     <example xml:id="example-pf1">>
@@ -151,7 +151,7 @@
           second equation to get <m>2 = (1-b) -6b</m> which is <m>1 =
           -7b</m> or <m>b = \frac{-1}{7}</m>. The I substitute back
           to get <m>a = 1-b = 1 - \frac{-1}{7} = \frac{8}{7}</m>.
-          Now I've sovle the systems and I know the unknowns from the
+          Now I've sovled the systems and I know the unknowns from the
           numerators. I can now write the original partial fraction
           decomposition with these values in the numerators.
         </p>
@@ -168,9 +168,9 @@
       </statement>
     </example>
     <p>
-      After one example, I can summarze the steps of the algorithm. I
+      After one example, I can summarize the steps of the algorithm. I
       assume that I am starting with a proper rational function with a
-      factor denominator.
+      factored denominator.
     </p>
     <ol>
       <li><p>
@@ -191,8 +191,8 @@
         equation. The produces a system of equations.
       </p></li>
       <li><p>
-        Solve the system of equations to calculate the unknown from
-        the numerators.  
+        Solve the linear system of equations to calculate the unknown
+        from the numerators.
       </p></li>
       <li><p>
         Use the solution of the system to write the partial fraction
@@ -217,7 +217,7 @@
         <p>
           Now I need to determine the unknowns <m>a</m>, <m>b</m>
           and <m>c</m>. I do this by taking the partial fractions
-          decomposition with the unknownws and creating a common
+          decomposition with the unknowns and creating a common
           denominator. For each term with one linear factor in the
           denominator, I have to multiply by the other two linear
           factors to produce the common denominator. Then I simplify
@@ -321,7 +321,7 @@
         </md>
         <p>
           Having solved for <m>c</m>, I substitute back in to the
-          previous equations to determine <m>b</m> and <m>c</m>. 
+          previous equations to determine <m>a</m> and <m>b</m>. 
         </p>
         <md>
           <mrow>
@@ -336,7 +336,7 @@
         <p>
           The values <m>a = \frac{1}{6}</m>, <m>b = \frac{-5}{3}</m>
           and <m>c = \frac{5}{2}</m> are the appropriate
-          denominators. This lets me finish the partial fraction
+          numerators. This lets me finish the partial fraction
           decomposition.
         </p>
         <me>
@@ -351,7 +351,7 @@
           Here is an example with an irreducible factor.
         </p>
         <me>
-          \frac{x^2-x-1}{(x-1)(x^2-2x+3} 
+          \frac{x^2-x-1}{(x-1)(x^2-2x+3)} 
         </me>
         <p>
           The discriminant of the quadratic <m>x^2 - 2x + 3</m>
@@ -422,13 +422,13 @@
   <subsection xml:id="subsection-pf-multiplicity">
     <title>Multiple Factors</title>
     <p>
-      So far, I've one examples with linear factors an irreducible
-      quadratic factors. The only think I haven't done is examples
+      So far, I've done examples with linear factors an irreducible
+      quadratic factors. The only thing I haven't done is examples
       that have factors with multiplicity. For the needs of this
       course, I'm only going to worry about linear factor with
       multiplicity. (There is an equivalent process for irreducible
-      quadratic factors with multiplicity, but seeing integral with
-      multiple quadratic factors in the denominator is rare enought
+      quadratic factors with multiplicity, but seeing integrals with
+      multiple quadratic factors in the denominator is rare enougth
       that I feel it's reasonable to skip this piece.)
     </p>
     <p>

@@ -18,7 +18,7 @@
       <solution>
         <p>
           The second part of this integrand looks like a composition:
-          I have <m>(x^3 - 4)^5</m> is an inside function, with an
+          <m>(x^3 - 4)^5</m> is an inside function, with an
           outside function <m>u^5</m>. Moreover, the remaining piece
           of the integral looks like it might be the derivative of the
           inside, which is idea for the substitution rule. Here is the
@@ -61,7 +61,7 @@
       <solution>
         <p>
           The integrand is a composition with inside <m>(17x)</m> and
-          outside <m>\cos (u)</m>. I'll try a substitution with these
+          outside <m>\cos (u)</m>. We'll try a substitution with these
           pieces. 
           <md>
             <mrow>
@@ -170,7 +170,7 @@
           This looks like a composition with inside function
           <m>(x^2+4)</m> and outside function <m>u^3</m>. The rest of
           the integrand looks like it might be close to the derivative
-          of the inside function, which is promising. I proceed with
+          of the inside function, which is promising. We proceed with
           the substitution rule. Now I will also change the bounds. 
           <md>
             <mrow>
@@ -197,7 +197,7 @@
             = \int_4^5 u^3 du 
           </me>
           Then I can proceed to finish the integral. Since this is a
-          definite integral and I have changed the bounds as well, we
+          definite integral and I have changed the bounds as well, I
           do not need to reverse the substitution. 
           <me>
             = \frac{u^4}{4} \Big|_4^5 = \frac{5^4}{4} - \frac{4^4}{4}
@@ -300,8 +300,8 @@
       </statement>
       <solution>
         <p>
-          I choose <m>\frac{df}{dx} = \sin x </m> and <m>g(x) = x
-          </m>.  The new functions are <m>f(x) = -\cos x </m> and
+          I choose <m>\frac{df}{dx} = \sin x </m> and <m>g = x
+          </m>.  The new functions are <m>f = -\cos x </m> and
           <m>\frac{dg}{dx} = 1 </m>. Then I apply integration by
           parts.
         </p>
@@ -326,8 +326,8 @@
       </statement>
       <solution>
         <p>
-          I choose <m>\frac{df}{dx} = x^3</m> and <m>g(x) = \ln x
-          </m>.  The new functions are <m>f(x) = \frac{x^4}{4}</m> and
+          I choose <m>\frac{df}{dx} = x^3</m> and <m>g = \ln x
+          </m>.  The new functions are <m>f = \frac{x^4}{4}</m> and
           <m>\frac{dg}{dx} = \frac{1}{x}</m>. Then I apply integration
           by parts. 
         </p>
@@ -354,8 +354,8 @@
       </statement>
       <solution>
         <p>
-          I choose <m>\frac{df}{dx} = \sin x</m> and <m>g(x) = x^2
-          </m>. The new functions are <m>f(x) = -\cos x</m> and
+          I choose <m>\frac{df}{dx} = \sin x</m> and <m>g = x^2
+          </m>. The new functions are <m>f = -\cos x</m> and
           <m>\frac{dg}{dx} = 2x</m>. Then I apply integration by parts.
         </p>
         <md>
@@ -366,7 +366,7 @@
         <p>
           Now I have to do integration by parts a second time on the
           remianing integral.  I choose <m>\frac{df}{dx} = \cos x</m>
-          and <m>g(x) = 2x </m>. The new functions are <m>f(x) = \sin
+          and <m>g = 2x </m>. The new functions are <m>f = \sin
           x</m> and <m>\frac{dg}{dx} = 2</m>. Then I apply integration
           by parts.
         </p>
@@ -392,8 +392,8 @@
       </statement>
       <solution>
         <p>
-          I choose <m>\frac{df}{dx} = x</m> and <m>g(x) = \ln x</m>.
-          The new functions are <m>f(x) = \frac{x^2}{2}</m> and
+          I choose <m>\frac{df}{dx} = x</m> and <m>g = \ln x</m>.
+          The new functions are <m>f = \frac{x^2}{2}</m> and
           <m>\frac{dg}{dx} = \frac{1}{x}</m>. Then I apply integration
           by parts. Since this is a definite integral, I evalute the
           middle non-integral term on the bounds. 
@@ -419,7 +419,7 @@
       <statement>
         <p>
           Solve this integral using integation by parts. (This doesn't
-          look like integrationb y parts will really solve much.
+          look like integration by parts will really solve much.
           However, after you apply integration by parts, you will
           recover an integration that is the same as the
           original. Then use algebra to rearrange the equation and end
@@ -431,13 +431,13 @@
       </statement>
       <solution>
         <p>
-          I choose <m>\frac{df}{dx} = \cos x</m> and <m>g(x) = \sin
-          x</m>.  The new functions are <m>f(x) = \sin x </m> and
+          I choose <m>\frac{df}{dx} = \cos x</m> and <m>g = \sin
+          x</m>.  The new functions are <m>f = \sin x </m> and
           <m>\frac{dg}{dx} = \cos x</m>. Then I apply integration by
           parts.
         </p>
         <me>
-          \int \sin x \cos x dx = - \sin^2 x + \int \sin x \cos x dx
+          \int \sin x \cos x dx = \sin^2 x - \int \sin x \cos x dx
         </me>
         <p>
           Now I can move the second term on the right to the left.
@@ -447,10 +447,10 @@
         </p>
         <md>
           <mrow>
-            2 \int \sin x \cos x dx \amp = -\sin^2 x 
+            2 \int \sin x \cos x dx \amp = \sin^2 x 
           </mrow>
           <mrow>
-            \int \sin x \cos x dx \amp = \frac{-\sin^2 x}{2} + c 
+            \int \sin x \cos x dx \amp = \frac{\sin^2 x}{2} + c 
           </mrow>
         </md>
       </solution>
@@ -467,7 +467,7 @@
       <solution>
         <p>
           I choose <m>\frac{df}{dx} = \sqrt{x+6}</m>
-          and <m>g(x) = x</m>. Seeing the derivative of <m>g</m> is
+          and <m>g = x</m>. Seeing the derivative of <m>g</m> is
           relativel easy: <m>\frac{dg}{dx} = 1</m>. However, the
           antiderivative of <m>\frac{df}{dx}</m> requires more work.
           Let me actually do this integral.
@@ -484,7 +484,7 @@
         </me>
         <p>
           After undoing the substitution, I see the antiderivative is 
-          <m>f(x) = \frac{2}{3} (x+6)^{\frac{3}{2}}</m>. Now I can
+          <m>f = \frac{2}{3} (x+6)^{\frac{3}{2}}</m>. Now I can
           apply integration by parts. 
         </p>
         <md>
@@ -509,7 +509,7 @@
         <p>
           Solve this integral using integation by parts. (This is a
           particularly long and challenging example which needs
-          integration by parts twice and have a lot of difficult
+          integration by parts twice and has a lot of difficult
           arithmetic.) 
         </p>
         <me>
@@ -519,7 +519,7 @@
       <solution>
         <p>
           I choose <m>\frac{df}{dx} = \sqrt[3]{x+2}</m>
-          and <m>g(x) = x^2 </m>.  The antiderivative is <m>f(x) =
+          and <m>g = x^2 </m>.  The antiderivative is <m>f =
           \frac{3}{4} (x+2)^{\frac{4}{3}}</m>, which is found by a
           substitution in a similar method to the previous question. 
           The derivative is<m>\frac{dg}{dx} = 2x</m>. Then I apply
@@ -540,7 +540,7 @@
         <p>
           I need to do integration by parts again. 
           I choose <m>\frac{df}{dx} = (x+2)^{\frac{4}{3}}</m>
-          and <m>g(x) = x</m>.  The antiderivative is <m>f(x) =
+          and <m>g = x</m>.  The antiderivative is <m>f =
           \frac{3}{7} (x+2)^{\frac{7}{3}}</m>, again found by
           substitution and the inverse power rule. 
           The derivative is<m>\frac{dg}{dx} = 1</m>. Then I apply
@@ -587,7 +587,7 @@
       <statement>
         <p>
           Solve this integral using integation by parts. (This is
-          tricky, but you can use <m>\frac{df}{dx} 1</m> in the
+          tricky, but you can use <m>\frac{df}{dx} = 1</m> in the
           integration by parts setup to actually make this work.) 
         </p>
         <me>
@@ -596,8 +596,8 @@
       </statement>
       <solution>
         <p>
-          I choose <m>\frac{df}{dx} = 1</m> and <m>g(x) = (\ln x)^2
-          </m>.  The new functions are <m>f(x) = \frac{2 \ln x}{x}
+          I choose <m>\frac{df}{dx} = 1</m> and <m>g = (\ln x)^2
+          </m>.  The new functions are <m>f = \frac{2 \ln x}{x}
           </m> and <m>\frac{dg}{dx} = x</m>. Then I apply integration
           by parts.
         </p>
@@ -624,8 +624,8 @@
       </statement>
       <solution>
         <p>
-          I choose <m>\frac{df}{dx} = x^2</m> and <m>g(x) = \ln (x^2)
-          </m>.  The new functions are <m>f(x) = \frac{x^3}{3} </m>
+          I choose <m>\frac{df}{dx} = x^2</m> and <m>g = \ln (x^2)
+          </m>.  The new functions are <m>f = \frac{x^3}{3} </m>
           and <m>\frac{dg}{dx} = \frac{2}{x} </m>. Then I apply
           integration by parts. 
         </p>

@@ -4,7 +4,7 @@
     <title>Definition</title>
     <p>
       In this section, I am going to try to invert the product rule
-      for derivative to build a new rule for integration. First,
+      for derivatives to build a new rule for integration. First,
       recall the product rule, for <m>f(x)</m> and <m>g(x)</m>
       differentiable functions. 
     </p>
@@ -14,8 +14,8 @@
     </me>
     <p>
       I'm simply going to integrate both sides of this equation. On
-      the left, the integral of a derivative give the original
-      function back. (I'll simplify the notation from <m>f(x)</m> to
+      the left, the integral of a derivative returns the  original
+      function. (I'll simplify the notation from <m>f(x)</m> to
       just <m>f</m>; this is a very common notation shift that makes
       some of these more compicated integration rules a bit more
       succinct. It's just up to you to remember that <m>f</m> and
@@ -32,7 +32,7 @@
       </mrow>
     </md>
     <p>
-      This is a rule about integrals, but it's not clear how to us
+      This is a rule about integrals, but it's not clear how to use
       it. I'm going to isolate one of the two integral pieces. 
     </p>
     <me>
@@ -67,7 +67,7 @@
       made, then I can transfer to the right side of integration by
       parts. The first part, <m>fg</m> is just a function, but the
       second part is a new integral, with integrand <m>f
-      \frac{dg}{dx}</m>. Maybe this is an easier integral Like the
+      \frac{dg}{dx}</m>. Maybe this is an easier integral. Like the
       substitution rule, integration by parts doesn't solve the
       integral by itself; instead, it changes the form of the integral
       into something which is (hopefully) more approachable.
@@ -86,7 +86,7 @@
     </me>
     <p>
       If I have a definite integral, I can still use integration by
-      parts. On the middle term (the term which is not an integral)
+      parts. On the middle term (the term which is not an integral), I
       have to evalute on the bounds. 
     </p>
     <me>
@@ -103,7 +103,7 @@
           piece is <m>f</m> and which is <m>g</m>.
           In this integral, one choice makes the following integral
           easier and one makes it more difficult. The first choice I
-          might make is <m>\frac{df}{dx} = x</m> and <m>g(x) = e^x</m>.
+          might make is <m>\frac{df}{dx} = x</m> and <m>g = e^x</m>.
           <md>
             <mrow>
               \int x e^x dx \amp
@@ -112,7 +112,7 @@
               \frac{df}{dx} \amp = x \implies f = \frac{x^2}{2}
             </mrow>
             <mrow>
-              g(x) \amp = e^x \implies \frac{dg}{dx} = e^x
+              g \amp = e^x \implies \frac{dg}{dx} = e^x
             </mrow>
             <mrow>
               \int x e^x dx \amp = \frac{x^2}{2} e^x - \int
@@ -123,20 +123,20 @@
         <p>
           This gives a new integral which isn't any easier than the
           previous. This use of integration by parts hasn't helped.
-          Instead, I'll try <m>\frac{df}{dx} = e^x</m> and <m>g(x) = x</m>.
+          Instead, I'll try <m>\frac{df}{dx} = e^x</m> and <m>g = x</m>.
           <md>
             <mrow>
               \int x e^x dx \amp
             </mrow>
             <mrow>
-              \frac{df}{dx} \amp = e^x \implies f(x) = e^x
+              \frac{df}{dx} \amp = e^x \implies f = e^x
             </mrow>
             <mrow>
-              g(x) \amp = x \implies \frac{dg}{dx} = 1
+              g \amp = x \implies \frac{dg}{dx} = 1
             </mrow>
             <mrow>
-              \int x e^x dx \amp = xe^x - \int e^x dx = xe^x - e^x + C
-              = (x-1)e^x + C
+              \int x e^x dx \amp = xe^x - \int e^x dx = xe^x - e^x + c
+              = (x-1)e^x + c
             </mrow>
           </md>
         </p>
@@ -145,7 +145,7 @@
           complete solution. As with all integration problems, I can
           check my answer by differentiation.
           <me>
-            \frac{d}{dx} (x-1)e^x + C = e^x \frac{d}{dx} (x-1) + (x-1)
+            \frac{d}{dx} (x-1)e^x + c = e^x \frac{d}{dx} (x-1) + (x-1)
             \frac{d}{dx} e^x = e^x + xe^x - e^x = xe^x
           </me>
         </p>
@@ -157,22 +157,22 @@
           For integration by parts, I choose <m>g = x</m> and
           <m>\frac{df}{dx} = \cos x</m>, since finding the
           antiderivative of the cosine is easy and the derivate of
-          <m>x</m> is just a constant.  This choice should simplify th
-          integral.
+          <m>x</m> is just a constant.  This choice should simplify
+          the integral.
         </p>
         <md>
           <mrow>
             \int x \cos x dx \amp
           </mrow>
           <mrow>
-            \frac{df}{dx} \amp = \cos x \implies f(x) = \sin x
+            \frac{df}{dx} \amp = \cos x \implies f = \sin x
           </mrow>
           <mrow>
-            g(x) \amp = x \implies \frac{dg}{dx} = 1
+            g \amp = x \implies \frac{dg}{dx} = 1
           </mrow>
           <mrow>
             \int x \cos x dx \amp = x \sin x - \int \sin x dx = (x \sin x +
-          \cos x) + C
+          \cos x) + c
         </mrow>
         </md>
         <p>
@@ -185,7 +185,7 @@
       <statement>
         <p>
           This example uses integration by parts twice. Pay attention
-          to the <m>\pm</m> signs. In the first step, I choose <m>g(x)
+          to the <m>\pm</m> signs. In the first step, I choose <m>g
           = x^2</m> and <m>\frac{df}{dx} = e^x</m>. 
         </p>
         <md>
@@ -196,7 +196,7 @@
             \frac{df}{dx} \amp = e^x \implies f = e^x
           </mrow>
           <mrow>
-            g(x) \amp = x^2 \implies \frac{dg}{dx} = 2x 
+            g \amp = x^2 \implies \frac{dg}{dx} = 2x 
           </mrow>
           <mrow>
             \int x^2 e^x dx \amp = x^2 e^x - \int 2x e^x dx
@@ -204,7 +204,7 @@
         </md>
         <p>
           Now I do integration by parts again on the remaining
-          integral. I choose <m>g(x) = 2x</m> and <m>\frac{df}{dx} =
+          integral. I choose <m>g = 2x</m> and <m>\frac{df}{dx} =
           e^x</m>, so that <m>\frac{dg}{dx} = 2</m> and <m>f =
           e^x</m>.
         </p>
@@ -214,7 +214,7 @@
             dx \right)
           </mrow>
           <mrow>
-            \amp = x^2 e^x - 2xe^x + 2e^x + C
+            \amp = x^2 e^x - 2xe^x + 2e^x + c
           </mrow>
         </md>
       </statement>
@@ -222,7 +222,7 @@
     <example>
       <statement>
         <p>
-          In this example, I choose <m>g(x) = x</m> and
+          In this example, I choose <m>g = x</m> and
           <m>\frac{df}{dx} = e^x</m>, which leads to <m>\frac{dg}{dx}
           = 1</m> and <m>f = e^x</m>. Since this is a definite
           integral, I need to evalute the bounds on the resulting
@@ -239,7 +239,7 @@
       <statement>
         <p>
           In this example, I choose <m>\frac{df}{dx} = x^2</m> and
-          <m>g(x) = \ln x</m>. Since this is a definite integral, I
+          <m>g = \ln x</m>. Since this is a definite integral, I
           evaluate the middle term on the bounds of the integral. 
           <md>
             <mrow>
@@ -265,20 +265,20 @@
         <p>
           The next integrand doesn't look anything like a product, but
           I can still use integration by parts by making a very clever
-          choice of the functions. I choose <m>g(x) = \ln x</m> and
-          <m>\frac{df}{dx}= 1</m> which leads to <m>f(x) = x</m> and
+          choice of the functions. I choose <m>g = \ln x</m> and
+          <m>\frac{df}{dx}= 1</m> which leads to <m>f = x</m> and
           <m>\frac{dg}{dx} = \frac{1}{x}</m>.
         </p>
         <me>
           \int \ln x dx = x \ln x - \int \frac{x}{x} dx = x \ln x -
-          \int 1 dx = x \ln x - x + C
+          \int 1 dx = x \ln x - x + c
         </me>
       </statement>
     </example>
     <example>
       <statement>
         <p>
-          This examples is a clever and tricky use of integration by
+          This example is a clever and tricky use of integration by
           parts to deal with an important but difficult types of
           integral. Let <m>a,b \in \RR</m> with <m>a,b \neq 0</m>. In
           the following integral, I am going to use integration by
@@ -292,7 +292,7 @@
             \frac{df}{dx} \amp = e^{ax} \implies f = \frac{e^{ax}}{a}
           </mrow>
           <mrow>
-            g(x) \amp = \sin bx \implies \frac{dg}{dx} = b \cos bx
+            g \amp = \sin bx \implies \frac{dg}{dx} = b \cos bx
           </mrow>
           <mrow>
             \int e^{ax} \sin bx dx \amp = \frac{e^{ax} \sin bx}{a}
@@ -302,7 +302,7 @@
             \frac{df}{dx} \amp = e^{ax} \implies f = \frac{e^{ax}}{a}
           </mrow>
           <mrow>
-            g(x) \amp = \cos bx \implies \frac{dg}{dx} = -b \sin bx
+            g \amp = \cos bx \implies \frac{dg}{dx} = -b \sin bx
           </mrow>
           <mrow>
             \amp = \frac{e^{ax}\sin bx}{a} - \frac{b}{a} \left(
@@ -375,8 +375,8 @@
         <p>
           then I'm going to use integration by parts to solve the
           integral that results from the substitution. I will choose
-          <m>\frac{df}{du} = \sin u</m> and <m>g(u) = 2u </m>, which
-          leads to <m>f(u) = -\cos u</m> and <m>\frac{dg}{du} = 2</m>.
+          <m>\frac{df}{du} = \sin u</m> and <m>g = 2u </m>, which
+          leads to <m>f = -\cos u</m> and <m>\frac{dg}{du} = 2</m>.
           Since this is a definite integral, I'll evaluate the middle
           non-integral term on the bounds. 
         </p>

@@ -4,7 +4,7 @@
     In Calculus I, I went through many techniques and rules for
     differentiation (chain rule, product rule, quotient rule, etc),
     but only one major technique for integration (the substitution
-    rule). In this course, I aim to cover in the remaining major
+    rule). In this course, I aim to cover the remaining major
     techniques of integration.
   </p>
   <p>
@@ -15,22 +15,16 @@
     the known rules. For integrals, the situations is entirely
     different. The rules are much less algorithmic; there is much more
     guess work involved. More importantly, sometimes none of the rules
-    work at all. This is important enough a statement that I'll put it
-    in a quote block.
+    work at all.  There are elementary functions <m>f(x)</m> such that
+    the integral <m>\int f(x) dx</m> has no solution which is an
+    elementary function.
   </p>
-  <quote>
-    There are elementary functions <m>f(x)</m> such that the integral
-    <m>\int f(x) dx</m> has not solution which is an elementary
-    function. 
-  </quote>
   <example>
     <statement>
       <p>
-        Unfortunately, some of the most useful and important functions
-        in mathematics are functions that have no elementary
-        antiderivatives. The Guassian distribution (often called the
-        bell curve) is central to statistics. This is the function 
-        <m>f(x) = e^{-x^2}</m>. Consider its integral.
+        The Guassian distribution (often called the bell curve) is
+        central to statistics. This is the function <m>f(x) =
+        e^{-x^2}</m>. Consider its integral.
         <me>
           \int e^{-x^2} dx
         </me>
@@ -46,11 +40,11 @@
   <p>
     I've been talking about integral that are solvable by elementary
     functions. However, the class of solvable integrals is much larger
-    than this is I allow myself to consider non-elementary functions.
+    than this if I allow myself to consider non-elementary functions.
     An integral <m>f(x) dx</m> might not have a elementary
     antiderivaitve, but it still might have some other kind of
-    elementary derivative. In fact, here is a nice proposition that tells
-    me when antiderivative exist.
+    antiderivative. In fact, here is a nice proposition that tells
+    me when antiderivatives exist.
   </p>
   <proposition>
     <statement>
@@ -69,7 +63,7 @@
     integrals without elementary antiderivatives are one of the most
     significant source of new functions. There is a whole enormous
     branch of mathematics that studies all these other functions:
-    names them, calculate their values, determines their properties. 
+    names them, calculates their values, determines their properties. 
   </p>
   <p>
     This brings up an important and subtle theme in mathematics: what,
@@ -79,7 +73,7 @@
     mean any function (possibly an entirely new and unknown function),
     then the answer is yes. Whether a mathematical problem has an
     answer can very much depend on the subtleties of how the question
-    is asked.
+    is asked and the assumptions about what possibilities exist. 
   </p>
   <p>
     All that said, in this course I will keep to integrals which have

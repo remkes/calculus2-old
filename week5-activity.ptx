@@ -13,7 +13,7 @@
       </statement>
       <solution>
         <p>
-          First, I check if the rational function is propoer. If it
+          First, I check if the rational function is proper. If it
           isn't, I need to do polynomial long division. This is
           already proper, so no long division is necessary.
         </p>
@@ -56,7 +56,7 @@
         </md>
         <p>
           The numerator coefficients give me the partial fraction
-          decomposision. Now that I have completed partial fractions,
+          decomposition. Now that I have completed partial fractions,
           I integrate the pieces using the four basic rational
           function integrals. 
         </p>
@@ -91,7 +91,7 @@
       </statement>
       <solution>
         <p>
-          First, I check if the rational function is propoer. If it
+          First, I check if the rational function is proper. If it
           isn't, I need to do polynomial long division. This is
           not a proper fraction to polynomial long division is
           necessary. 
@@ -229,7 +229,7 @@
         </md>
         <p>
           The numerator coefficients give me the partial fraction
-          decomposision. Now that I have completed partial fractions,
+          decomposition. Now that I have completed partial fractions,
           I integrate the pieces using the four basic rational
           function integrals. 
         </p>
@@ -261,7 +261,7 @@
       </statement>
       <solution>
         <p>
-          First, I check if the rational function is propoer. If it
+          First, I check if the rational function is proper. If it
           isn't, I need to do polynomial long division. This is
           not a proper fraction, so I need to use long division.
         </p>
@@ -494,7 +494,7 @@
         </md>
         <p>
           The numerator coefficients give me the partial fraction
-          decomposision. Now that I have completed partial fractions,
+          decomposition. Now that I have completed partial fractions,
           I integrate the pieces using the four basic rational
           function integrals. 
         </p>
@@ -529,7 +529,7 @@
       </statement>
       <solution>
         <p>
-          First, I check if the rational function is propoer. If it
+          First, I check if the rational function is proper. If it
           isn't, I need to do polynomial long division. This is
           already proper, so no long division is necessary.
         </p>
@@ -568,7 +568,7 @@
         </md>
         <p>
           The numerator coefficients give me the partial fraction
-          decomposision. Now that I have completed partial fractions,
+          decomposition. Now that I have completed partial fractions,
           I integrate the pieces using the four basic rational
           function integrals.
         </p>
@@ -601,7 +601,7 @@
       </statement>
       <solution>
         <p>
-          First, I check if the rational function is propoer. If it
+          First, I check if the rational function is proper. If it
           isn't, I need to do polynomial long division. This is
           already proper, so no long division is necessary.
         </p>
@@ -668,7 +668,7 @@
         </md>
         <p>
           The numerator coefficients give me the partial fraction
-          decomposision. Now that I have completed partial fractions,
+          decomposition. Now that I have completed partial fractions,
           I integrate the pieces using the four basic rational
           function integrals.
         </p>
@@ -701,7 +701,7 @@
       </statement>
       <solution>
         <p>
-          First, I check if the rational function is propoer. If it
+          First, I check if the rational function is proper. If it
           isn't, I need to do polynomial long division. This is
           already proper, so no long division is necessary.
         </p>
@@ -776,7 +776,7 @@
         </md>
         <p>
           The numerator coefficients give me the partial fraction
-          decomposision. Now that I have completed partial fractions,
+          decomposition. Now that I have completed partial fractions,
           I integrate the pieces using the four basic rational
           function integrals.
         </p>
@@ -811,7 +811,7 @@
       </statement>
       <solution>
         <p>
-          First, I check if the rational function is propoer. If it
+          First, I check if the rational function is proper. If it
           isn't, I need to do polynomial long division. This is
           already proper, so no long division is necessary.
         </p>
@@ -877,7 +877,7 @@
         </md>
         <p>
           The numerator coefficients give me the partial fraction
-          decomposision. Now that I have completed partial fractions,
+          decomposition. Now that I have completed partial fractions,
           I integrate the pieces using the four basic rational
           function integrals. 
         </p>
@@ -893,7 +893,7 @@
           </mrow>
         </md>
         <p>
-          The linear pieces logarithm integrals. The quadratic piece
+          The linear pieces are logarithm integrals. The quadratic piece
           is more work. I have to manipulate the numerator to get the
           derivative of the denominator and seperate that piece for a
           substitution integral. The remainder is an arctangent
@@ -939,7 +939,7 @@
       </statement>
       <solution>
         <p>
-          First, I check if the rational function is propoer. If it
+          First, I check if the rational function is proper. If it
           isn't, I need to do polynomial long division. This is
           not a proper fraction, so I need to do polynomial long
           division.
@@ -1101,7 +1101,7 @@
         </md>
         <p>
           The numerator coefficients give me the partial fraction
-          decomposision. Now that I have completed partial fractions,
+          decomposition. Now that I have completed partial fractions,
           I integrate the pieces using the four basic rational
           function integrals. 
         </p>
@@ -1117,7 +1117,7 @@
           </mrow>
         </md>
         <p>
-          The linear pieces logarithm integrals. The quadratic piece
+          The linear pieces are logarithm integrals. The quadratic piece
           is more work. I have to manipulate the numerator to get the
           derivative of the denominator and seperate that piece for a
           substitution integral. The remainder is an arctangent
@@ -1164,7 +1164,7 @@
       </statement>
       <solution>
         <p>
-          First, I check if the rational function is propoer. If it
+          First, I check if the rational function is proper. If it
           isn't, I need to do polynomial long division. This is
           already proper, so no long division is necessary.
         </p>
@@ -1224,7 +1224,7 @@
         </md>
         <p>
           The numerator coefficients give me the partial fraction
-          decomposision. Now that I have completed partial fractions,
+          decomposition. Now that I have completed partial fractions,
           I integrate the pieces using the four basic rational
           function integrals.
         </p>
@@ -1244,7 +1244,7 @@
           </mrow>
         </md>
         <p>
-          The linear pieces logarithm integrals. The quadratic piece
+          The linear pieces are logarithm integrals. The quadratic piece
           is more work. I have to manipulate the numerator to get the
           derivative of the denominator and seperate that piece for a
           substitution integral. The remainder is an arctangent
@@ -1291,7 +1291,7 @@
       </statement>
       <solution>
         <p>
-          First, I check if the rational function is propoer. If it
+          First, I check if the rational function is proper. If it
           isn't, I need to do polynomial long division. This is
           already proper, so no long division is necessary.
         </p>
@@ -1351,7 +1351,7 @@
         </md>
         <p>
           The numerator coefficients give me the partial fraction
-          decomposision. Now that I have completed partial fractions,
+          decomposition. Now that I have completed partial fractions,
           I integrate the pieces using the four basic rational
           function integrals.  I'll do the two pieces of the integral
           separately and then combine them. Here is the first piece.

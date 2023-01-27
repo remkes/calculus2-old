@@ -13,16 +13,13 @@
     <title>Differentiating Composition</title>
     <p>
       Since doing integrals is doing derivatives backwards, it might
-      be reasonable to try to reverse all the differentiation rules.
+      be reasonable to try to reversing all the differentiation rules.
       Linearity works exactly the same in reverse. The inverted power
-      rule works very similarly to the original power rule. After
-      this, though, the rules become more difficult to reverse. I'll
-      show the process of reversing the product rule in <xref
-      ref="section-parts" />, and reverseing the quotient rule
-      basically ins't of much help at all.  Arguably the most
-      important differentiation rule is the chain rule, so of the
-      difficult rules, it is the natural starting point. I will try to
-      reverse it here.
+      rule works very similarly to the original power rule. After the
+      power rule, thouhg, the remaining rules don't easily reverse.
+      For most of these rules, I'll leave the strategies 
+      for Calculus II. But I do want to cover how to do the chain rule
+      backwards, which is the subject of this entire week. 
     </p>
     <p>
       For a composition of functions <m>f(g(x))</m>, the derivative is
