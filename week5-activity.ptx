@@ -868,10 +868,10 @@
             -7 \amp = -13 b \implies b= \frac{7}{13} 
           </mrow>
           <mrow>
-            a \amp = 2-b = 2 - \frac{7}{13} = \frac{19}{13} 
+            a \amp = 2 - b = 2 - \frac{7}{13} = \frac{19}{13} 
           </mrow>
           <mrow>
-            c \amp 4b-2 = 4 \frac{7}{13} - 2 = \frac{28-26}{13} =
+            c \amp = 4b - 2 = 4 \frac{7}{13} - 2 = \frac{28-26}{13} =
             \frac{2}{13}
           </mrow>
         </md>
@@ -902,8 +902,12 @@
         </p>
         <md>
           <mrow>
+            \amp = \frac{19}{13} \ln |x-3| + \frac{1}{13} \int
+            \frac{\frac{7}{2} (2x + 7)}{x^2+ x+1} dx 
+          </mrow>
+          <mrow>
             \amp = \frac{19}{13} \ln |x-3| + \frac{7}{26} \int \frac{2x
-            + 7}{x^2+ x+1} dx 
+            + }{x^2+ x+1} dx 
           </mrow>
           <mrow>
             \amp = \frac{19}{13} \ln |x-3| + \frac{7}{26} \int \frac{2x
