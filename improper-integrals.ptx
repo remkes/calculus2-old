@@ -5,7 +5,7 @@
     <p>
       It is sometimes useful to consider definite integrals where the
       function has an asymptote at one (or both!) of the bounds of
-      integral. A function which is undefined in the middle of the
+      integration. A function which is undefined in the middle of the
       interval cannot be integrated, but a function which has an
       asymptote at the edge might still have a reasonable area under
       its curve. Similarly, it is also useful to consider integration
@@ -20,7 +20,7 @@
         <p>
           These two types of integral (where there is a vertical
           asymptote at one of the endpoint, or where the interval of
-          integral is infinite) are called <term>improper
+          integration is infinite) are called <term>improper
           integrals</term>.
         </p>
       </statement>
@@ -187,8 +187,9 @@
           which is somewhat surprising if you just look at the graph.
           These two graphs are shown in <xref
           ref="figure-improper-integral3" />. In the graph, it is clear
-          to see that <m>\frac{1}{x}</m> has greater area, but not that
-          the difference is enough to actually produce infinite area.
+          to see that <m>\frac{1}{x}</m> has greater area, but it is
+          hard to see from the image that the difference is enough to
+          actually produce infinite area.
         </p>
         <figure xml:id="figure-improper-integral3">
           <caption>Two Decaying Functions</caption>

@@ -123,20 +123,19 @@
     <p>
       The goal of the first technique to change everything to sine or
       cosine is to use a substitution with either of those functions.
-      If <m>u = \sin x</m> then <m>du = -\cos x dx</m>; the sine
+      If <m>u = \sin x</m> then <m>du = \cos x dx</m>; the sine
       substitution needs a cosine with the <m>dx</m> term. The same is
       true for the cosine substitution: it needs a sine with the
       <m>dx</m> term. Therefore, changing everything to sine or cosine
       is going to be successful if I can make everything into sine,
-      leaving only <m>\cos x dx</m> or vice verse, make everything
+      leaving only <m>\cos x dx</m>, or vice versa, make everything
       into cosine leaving only <m>\sin x dx</m>. The definitions of
-      the other four trig functions 
-      can be used to write everything in terms of sine
-      and cosine. Then the square identity (<m>\sin^2 x + \cos^2 x =
-      1</m>) can be used to change any instance of <m>\sin^2 x</m>
-      into <m>1 - \cos^2 x</m>, or vice versa. If these manipulations
-      can be done to leave only one sine or only one cosine, then this
-      strategy will be effective.
+      the other four trig functions can be used to write everything in
+      terms of sine and cosine. Then the square identity (<m>\sin^2 x
+      + \cos^2 x = 1</m>) can be used to change any instance of
+      <m>\sin^2 x</m> into <m>1 - \cos^2 x</m>, or vice versa. If
+      these manipulations can be done to leave only one sine or only
+      one cosine, then this strategy will be effective.
     </p>
     <example>
       <statement>
@@ -225,7 +224,7 @@
         <p>
           Here, I have even powers of both sine and cosine. By writing
           <m>\cos^4 t</m> as <m>(\cos^2 t)^2</m>, I can replace both
-          <m>\sin^2 t</m> and <m>\cos^2 y</m> by their half-angle
+          <m>\sin^2 t</m> and <m>\cos^2 t</m> by their half-angle
           identities. After this substitution, I expand the various
           binomials and split up the resulting integral by linearity. 
         </p>

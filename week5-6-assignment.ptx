@@ -3,7 +3,6 @@
 -->
 <section xml:id="section-assignment-week5-6">
   <title>Week 5-6 Assignment</title>
-  <!--
   <ol>
     <li>
       <p>
@@ -11,25 +10,7 @@
         the process. (6) 
       </p>
       <me>
-        \int \frac{x^2 + 6x + 4}{(x - 9)(x + 4)} dx 
-      </me>
-    </li>
-    <li>
-      <p>
-        Calculate this integral. Show and annotate the various steps in
-        the process. (6) 
-      </p>
-      <me>
-        \int \frac{6x - 1}{(x^2 + x + 2)(x^2 + x + 3)} dx
-      </me>
-    </li>
-    <li>
-      <p>
-        Calculate this integral. Show and annotate the various steps in
-        the process. (6) 
-      </p>
-      <me>
-        \int \sin^5 x \cos^5 x dx 
+        \int \frac{x^2 + 3}{x^2 - 49} dx
       </me>
     </li>
     <li>
@@ -38,7 +19,7 @@
         the process. (8) 
       </p>
       <me>
-        \int x^3 \sqrt{x^2 - 16} dx 
+        \int \frac{x-7}{(x^2 + 3x + 7)(x-1)} dx
       </me>
     </li>
     <li>
@@ -47,9 +28,35 @@
         the process. (6) 
       </p>
       <me>
-        \int \frac{1}{x^2 \sqrt{16 + x^2}} dx 
+        \int \sin^3 x \cos^6 x dx 
+      </me>
+    </li>
+    <li>
+      <p>
+        Calculate this integral. Show and annotate the various steps in
+        the process. (6) 
+      </p>
+      <me>
+        \int_0^{\frac{\pi}{4}}  \tan^2 x \sin^3 x dx 
+      </me>
+    </li>
+    <li>
+      <p>
+        Calculate this integral. Show and annotate the various steps in
+        the process. (6) 
+      </p>
+      <me>
+        \int \frac{x^3}{\sqrt{4 + x^2}} dx 
+      </me>
+    </li>
+    <li>
+      <p>
+        Calculate this integral. Show and annotate the various steps in
+        the process. (6) 
+      </p>
+      <me>
+        \int_0^3 x \sqrt{(9 - x^2)^3} dx  
       </me>
     </li>
   </ol>
-  -->
 </section>

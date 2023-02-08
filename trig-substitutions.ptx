@@ -6,13 +6,13 @@
       trigonometric substitutions. While these are  just a
       new type of substitution, they are a very counter-intuitive
       class of substitutions which deserve their own section. Other
-      subsittution were set up by looking for compositions (inside
+      substitutions were set up by looking for compositions (inside
       function where the derivative of the inside was also present),
       or sometimes trying to simplify denominator. Here, the
       substitution strategy is entirely new.
     </p>
     <p>
-      The integral in this section will rely heavily on the techniques
+      The integrals in this section will rely heavily on the techniques
       of <xref ref="section-trig-integrals" />: the general technique
       will be to reduce a certain class of integrals to a
       trigonometric integral and then proceed to use the previous
@@ -29,7 +29,7 @@
       between the side lengths of a right triangle: <m>a^2 + b^2 =
       c^2</m>, where <m>c</m> is the length of the longest side, the
       hypotenuse. The importance of this theorem comes from its
-      ubiquity in solving geometric problem. Many geometric problems
+      ubiquity in solving geometric problems. Many geometric problems
       can be restated in terms of right triangles.
     </p>
     <p>
@@ -78,7 +78,7 @@
       triangle be the independent variable, I can get three different
       expressions: <m>\sqrt{a^2 - x^2}</m>, <m>\sqrt{x^2 - a^2}</m>
       and <m>\sqrt{x^2 + a^2}</m>. Functions that come from the use of
-      the pythagorean theorem in geometry invariable have one of these
+      the pythagorean theorem in geometry invariably have one of these
       three forms.
     </p>
   </subsection>
@@ -264,7 +264,7 @@
         </me>
         <p>
           This example is close to <m>\sqrt{a^2 - x^2}</m>, but there
-          is a coefficient in from of the <m>x</m>. I need to remove
+          is a coefficient in front of the <m>x</m>. I need to remove
           this to use the trig substitution. I do this by writing
           <m>1</m> as <m>\frac{4}{4}</m> and factoring the <m>4</m>
           out of the square root. 
@@ -407,7 +407,7 @@
           \theta d \theta
         </mrow>
         <mrow>
-          amp = \frac{1}{27} \int \frac{3 \tan \theta}{\sec^3 \theta}
+          \amp = \frac{1}{27} \int \frac{3 \tan \theta}{\sec^3 \theta}
           3\sec \theta \tan \theta d \theta = \frac{1}{3} \int
           \frac{\tan^2 \theta}{\sec^2 \theta} d \theta
         </mrow>
