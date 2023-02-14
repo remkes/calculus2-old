@@ -1287,10 +1287,13 @@
     <activity>
       <statement>
         <p>
-          Solve this integral using partial fractions.
+          Solve this integral using partial fractions. (This one is
+          particular long and complicated, but I wanted to include one
+          like this to show how these questions can easily become a
+          great deal of work.) 
         </p>
         <me>
-          \int \frac{x^2+4x-1}{(x^2+3x+4)(x^2+6)}
+          \int \frac{2x^2+4x-1}{(x^2+3x+4)(x^2+6)}
         </me>
       </statement>
       <solution>
@@ -1306,7 +1309,7 @@
         </p>
         <md>
           <mrow>
-            \amp \frac{x^2+4x-1}{(x^2+3x+4)(x^2+6)} = \frac{ax +
+            \amp \frac{2x^2+4x-1}{(x^2+3x+4)(x^2+6)} = \frac{ax +
             b}{x^2+3x+4} + \frac{cx+d}{x^2+6} 
           </mrow>
           <mrow>
@@ -1343,7 +1346,8 @@
         </md>
         <p>
           For these late questions, I'm leaving out the details of
-          solving the system. Here is the solution.
+          solving the system. For this one, I asked a computer to
+          solve the system for me. Here is the solution.
         </p>
         <md>
           <mrow>
@@ -1422,7 +1426,7 @@
         </p>
         <md>
           <mrow>
-            \int \frac{x^2+4x-1}{(x^2+3x+4)(x^2+6)} \amp = \frac{1}{58}
+            \int \frac{2x^2+4x-1}{(x^2+3x+4)(x^2+6)} \amp = \frac{1}{58}
             \left[ \int \frac{-31x - 75}{x^2+3x+4} dx + \int
             \frac{31x+98}{x^2+6} dx \right] 
           </mrow>
