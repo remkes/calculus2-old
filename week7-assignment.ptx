@@ -3,17 +3,15 @@
 -->
 <section xml:id="section-assignment-week7">
   <title>Week 7 Assignment</title>
-  <!--
   <p><ol>
     <li>
       <p>
-        Calcluate the slope of this parametric curve. Identity any
-        vertical tangents by finding places where the slope approaches
-        infinity. (4)
+        Calculate the following integral. Shows your steps and
+        reasoning. (4) 
       </p>
       <md>
         <mrow>
-          \gamma(t) = (\sin t, \cos 5t) 
+          \int_1^{\infty} \frac{\ln x}{x^2} dx 
         </mrow>
       </md>
     </li>
@@ -25,7 +23,7 @@
       </p>
       <md>
         <mrow>
-          \gamma(t) = \left( \frac{1}{t}, \frac{t^2 + 1}{t} \right) 
+          \gamma(t) = (3t^2 - t - 1, t^2 + 2t + 4)
         </mrow>
       </md>
     </li>
@@ -37,40 +35,78 @@
       </p>
       <md>
         <mrow>
-          \gamma(t) = \left( t^2 + 1, t^2 - 1 \right) 
+          \gamma(t) = \left( \frac{1}{1-t^2}, \frac{t}{1-t^2} \right)
         </mrow>
       </md>
     </li>
     <li>
       <p>
-        Calcluate the slope of this parametric curve. Identity any
-        vertical tangents by finding places where the slope approaches
-        infinity. (4)
+        Calculate the length of this parametric curve. (4) 
       </p>
       <md>
         <mrow>
-          \gamma(t) = (t^2 \sin t, t^2 \cos t) 
+          \amp \gamma(t) = (5t - 1, 3t-2) \amp \amp t \in [0,10]
         </mrow>
       </md>
     </li>
     <li>
       <p>
-        Why is it true that any parametric curve can always be
-        parametrized by arclength? What does it mean that we have to
-        `invent new functions' to make this work? (4) 
-      </p>
-    </li>
-    <li>
-      <p>
-        Parametrize this curve by arclength. (8)
+        Calculate the length of this parametric curve. (4) 
       </p>
       <md>
         <mrow>
-          \amp \gamma(t) = \left( t^6 + t^4, t^6 - t^4 \right) \amp
-          \amp t \in [0, \infty) 
+          \amp \gamma(t) = (9t,t^2) \amp \amp t \in [0,2]
         </mrow>
       </md>
+      <p>
+        For the resulting integral, you can use this antiderivative
+        instead of doing all of the work of a trig substitution. 
+      </p>
+      <me>
+        \int \sqrt{a^2 + b^2t^2} dt = \frac{t}{2} \sqrt{a^2 + b^2t^2}
+        + \frac{a^2}{b^2} \ln \left| \frac{bt}{a} +
+        \sqrt{\frac{b^2t^2}{a^2} + 1} \right| + c
+      </me>
+      <p>
+        The result you will get from this integral will be a
+        complicated expression with square roots and logarithms. Leave
+        your answer in this form; do not change it into decimals. 
+      </p>
+    </li>
+    <li>
+      <p>
+        Consider these two parametric curves. (8) 
+      </p>
+      <md>
+        <mrow>
+          \amp \gamma(t) = \left( \frac{\cos t}{t}, \frac{\sin t}{t}
+          \right) \amp \amp t \in [0,\infty)
+        </mrow>
+        <mrow>
+          \amp \gamma(t) = \left( \frac{\cos t}{t}, \frac{\sin t}{t}
+          \right) \amp \amp t \in [0,\infty)
+        </mrow>
+      </md>
+      <p>
+        Both of these are inward spirals, but they spiral inwards at
+        different rates. Prove that <m>\gamma_1</m> has infinite
+        length but <m>\gamma_2</m> has finite length. 
+      </p>
+      <p>A couple hints for this questions: First, recall from the
+        section on improper integrals that convergence of integrals is
+        detemined by the asymptotic order of the integrand. For these,
+        you need to setup the length integral for each curve, but you
+        don't actually need to do that calculation. Instead, find the
+        asymptotic order of each integrand and use the examples
+        from the section on improper integrals to determine whether or
+        not they converge: if the integral converges, the length is
+        finite and if it diverges, the length is infinite. Second,
+        when you are calculating <m>\sqrt{x^\prime(t)^2 +
+        y^\prime(t)^2}</m> for each of these, expect long expressions
+        with lots of trig terms. However, using trig identities, these
+        expression will collapse down into much more concise
+        expressions without any trig functions left.
+      </p>
     </li>
   </ol></p>
-  -->
 </section>
