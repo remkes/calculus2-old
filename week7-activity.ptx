@@ -108,8 +108,8 @@
           substitution, you can use this antiderivative.
         </p>
         <me>
-          \int \sqrt{a^2 + x^2} dx = \frac{1}{2} x \sqrt{a^2 + x^2} +
-          \frac{a^2}{2} \ln (\sqrt{a^2 + a^2 + x} + c
+          \int \sqrt{a^2 + x^2} dx = \frac{x}{2} \sqrt{a^2 + x^2} +
+          \frac{a^2}{2} \ln \left| x + \sqrt{a^2 + x^2} \right| + c
         </me>
       </statement>
       <solution>
@@ -176,13 +176,13 @@
             \amp = \int_0^{4\pi} \sqrt{t^2 + 1} 
           </mrow>
           <mrow>
-            \amp = \left. \frac{1}{2} x \sqrt{1 + x^2} +
-            \frac{1}{2} \ln \left( \sqrt{1 + x^2} + x \right)
-            \right|_0^{4\pi} 
+            \amp = \frac{x}{2} \sqrt{1 + x^2} +
+            \frac{1}{2} \ln \left| x + \sqrt{1 + x^2} \right|
+            \Bigg|_0^{4\pi} 
           </mrow>
           <mrow>
             \amp = 2\pi \sqrt{1 + 16\pi^2} + \frac{1}{2} \ln \left(
-            \sqrt{1 + 16\pi^2} + 4\pi \right) 
+            4\pi + \sqrt{1 + 16\pi^2} \right) 
           </mrow>
         </md>
       </solution>

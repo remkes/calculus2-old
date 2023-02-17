@@ -39,7 +39,7 @@
           <m>y(t)</m> on the domain <m>[a,b]</m>. These functions
           describe the <m>x</m> and <m>y</m> coordinates of the curve
           at any point <m>t</m> in time.  Though there are two
-          function, it is conventional to refer to the curve with one
+          functions, it is conventional to refer to the curve with one
           symbol, typically the greek letter <m>\gamma</m>.
         </p>
         <me>
@@ -64,7 +64,7 @@
     <p>
       I did insist, in the definition, that the functions must be
       continuous. This means that the movement along a parametric
-      curve is connected -- no teleportation from once point to
+      curve is connected <mdash /> no teleportation from once point to
       somewhere else. For paths and movement, this is a reasonable
       restriction. 
     </p>
@@ -131,7 +131,7 @@
           starts at <m>(0,0)</m> and ends at <m>(5,5)</m>. However,
           the previous two examples described movement at a fixed
           speed and this example, due to the quadratic terms,
-          describes accelerating movements along the shape. 
+          describes accelerating movement along the shape. 
         </p>
       </statement>
     </example>
