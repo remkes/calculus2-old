@@ -3,36 +3,31 @@
 -->
 <section xml:id="section-assignment-week8">
   <title>Week 8 Assignment</title>
-  <!--
   <ol>
     <li>
       <p>
-        Assyme that <m>g(x) \neq 0</m> on <m>[a, \infty)</m>. What
-        does asymptotic analysis have to say about the following
-        integral. (4) 
-        <me>
-          \int_a^\infty \frac{f(x)}{g(x)} dx 
-        </me>
+        Consider a tilted pyramid with a base consisting of a <m>3
+        \times 3</m> square, height <m>5</m>, and apex located directly
+        above one of the corners of the base, instead of centred above
+        the base (hence <sq>tilted</sq>). Calculate the volume of this
+        pyramid using integration and horizontal slices. (6)
       </p>
     </li>
     <li>
       <p>
-        Imagine a pyramid-like structure where each horizontal cross
-        section is a square and the side length of the square is
-        <m>f(x) = \sqrt{100 - x^2}</m> where <m>x 
-        \in [0,10]</m> is the height, in metres. Find the volume of
-        such an object. (8) 
+        Calculate the volume of the surface of revolution formed by
+        rotating <m>f(x) = x^{\frac{-14}{3}}</m>, <m>x \in [1, 27]</m>
+        around the <m>x</m> axis. (4) 
       </p>
     </li>
     <li>
       <p>
-        Find the volume of a cone with flare angle
-        <m>\frac{\pi}{4}</m> and height <m>4m</m> after a vertical
-        cyinder of radius <m>1.5</m>m has been removed from the middle
-        of the cone. (The axis of the cylinder is the same as the axis
-        of the cone.) (8) 
+        Describe three ways of using slices or shells to setup a
+        volume integral to calculate the volume of a sphere. (You do
+        not need to actually calculate anything here, just describe
+        the setup. You do not need to write down, let alone calculate,
+        any integrals.) (4)
       </p>
     </li>
   </ol>
-  -->
 </section>
