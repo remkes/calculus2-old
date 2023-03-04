@@ -199,13 +199,13 @@
           </image>
         </figure>
         <p>
-          The next example is called the cycloid (a greek name). Many
-          curves have history going back hundreds or thousands of
-          years in geometry and have greek or latin names reflecting
-          that history. The cycloid is the curve <m>\gamma(t) =
-          (a(t-\sin t), a(1-\cos t))</m> for <m>t \in [0,\infty]</m>.
-          It describes the movement of a point at the edge of a wheel
-          as the wheel rolls.
+          The next example is called the cycloid. <sq>cycliod</sq> is
+          a greek word; many curves have history going back hundreds
+          or thousands of years in geometry and have greek or latin
+          names reflecting that history. The cycloid is the curve
+          <m>\gamma(t) = (a(t-\sin t), a(1-\cos t))</m> for <m>t \in
+          [0,\infty]</m>.  It describes the movement of a point at the
+          edge of a wheel as the wheel rolls.
         </p>
       </statement>
     </example>
@@ -289,7 +289,7 @@
           </image>
         </figure>
         <p>
-          The last spiral in these examples is the logarithmic spiral
+          The last spiral in these examples is the logarithmic spiral, 
           which has exponential growth in radius. Its form is
           <m>\gamma(t) = (e^{t} \cos t, e^{t} \sin t)</m> for <m>t \in
           \RR</m>.
@@ -298,8 +298,9 @@
           The logarithmic spiral shows up frequently, both in mathematics
           and (approximately) in the natural world. Examples of
           approximate logarithmic spirals include nautilus
-          shells and spiral galaxies (though the natural applications
-          of the logarithmic spiral are not without some contraversy).
+          shells and spiral galaxies (though the degree to which these
+          natural spirals really fit the logarithmic shape is the
+          subject of some debate.) 
         </p>
       </statement>
     </example>

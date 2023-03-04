@@ -4,12 +4,12 @@
     <title>Slopes</title>
     <p>
       In the study of algebraic plane curves in <xref
-      ref="section-algebraic-plane-curves" />, implicit derivative
+      ref="section-algebraic-plane-curves" />, implicit derivatives
       were used to calculate the slope of loci and classify
       singularities where the slope was undefined. The calculus of
       loci was restricted to properties of the shape, such a slopes
       and singularities. In contrast, there is a rich calculus for
-      parametric curve which calculates slopes as well as local
+      parametric curves which calculates slopes as well as local
       directions of movement, speed of movement along the curve, and
       total distance travelled. Since there is a time variable, time
       derivatives will measure the movement of a point along the
@@ -86,7 +86,7 @@
           The domain for this curve comes in two disconnected parts,
           so I could think of this as two individual curves. When <m>t
           \in (-\infty, -1)</m>, I get the part of the curve below the
-          <m>x</m> axis and then <m>t \in (-1, \infty</m>, I get the
+          <m>x</m> axis, and when <m>t \in (-1, \infty)</m>, I get the
           part of the curve above the <m>x</m> axis. Though it looks
           like the two parts connect in <xref ref="figure-folium" />,
           the lower part of the curve only approaches <m>(0,0)</m>
@@ -160,9 +160,12 @@
   <subsection xml:id="subsection-velocity-distance">
     <title>Velocity and Distance on a Parametric Curve</title>
     <p>
-      The variable <m>s</m> is conventionally used to represent
-      distance along a curve. Velocity is the rate of change of
-      distance, so it should be <m>\frac{ds}{dt}</m>. The following
+      Slopes are common to both parametric curves and loci. Movement,
+      however, is unique to parametric curve. I know what to describe
+      the calculus of this movement, starting with velocity and
+      distance.  The variable <m>s</m> is conventionally used to
+      represent distance along a curve. Velocity is the rate of change
+      of distance, so it should be <m>\frac{ds}{dt}</m>. The following
       argument tries to construct a way to calculate this velocity.
     </p>
     <p>
@@ -207,10 +210,10 @@
       derivative: <m>\frac{ds}{dt} = |\gamma^\prime(t)|</m>. This is a
       very natural language for describing derivatives of parametric
       curve, but it realies on a bit more vector algebra than I've
-      established in this course. In Calculus III, the calculus of
-      parametric curves (particular in three dimensions) is
-      redeveloped using this kind of vector algebra. For now, let me
-      just calculate some examples of velocity of cuves using the
+      established in this course. In Multivariable Calculus, the
+      calculus of parametric curves (particular in three dimensions)
+      is extended using this kind of vector algebra. For now, let
+      me just calculate some examples of velocity of cuves using the
       expression in the definition above.
     </p>
     <example>
@@ -222,10 +225,10 @@
           curve has a constant speeed of <m>\sqrt{2}</m> units of
           distance per unit of time. In each unit of time, the curve
           increases from <m>(0,0)</m> to <m>(1,1)</m>, then to
-          <m>(2,2)</m>, then to <m>(3,3></m> and so ong. The distance
+          <m>(2,2)</m>, then to <m>(3,3)</m> and so ong. The distance
           between any two consecutive points is <m>\sqrt{2}</m>, so
           the curve does cover <m>\sqrt{2}</m> units of distance per
-          unit of time. I makes sense that the speed is constant.
+          unit of time. It makes sense that the speed is constant.
         </p>
       </statement>
     </example>
@@ -284,15 +287,15 @@
           velocity is momentarily zero.
         </p>
         <p>
-          I said in the previous section that the cycloid is the path of
-          a point on the edge of a wheel. When <m>t</m> is a multiple
-          of <m>2\pi</m>, the point on the wheel is momentarily in
-          contact with the ground and its speed is momentarily zero.
-          That means that on a rolling wheel, the point touching the
-          ground at any instant is momentarily stationary. This is
-          something to ponder the next time you watch a train or other
-          fast moving wheeled vehicle: at every instant in time, there
-          is at least one point on each wheel which isn't moving at all.
+          The cycloid is the path of a point on the edge of a wheel as
+          the wheel rolls. When <m>t</m> is a multiple of <m>2\pi</m>,
+          the point on the wheel is momentarily in contact with the
+          ground and its speed is momentarily zero.  That means that
+          on a rolling wheel, the point touching the ground at any
+          instant is momentarily stationary. This is something to
+          ponder the next time you watch a train or other fast moving
+          wheeled vehicle: at every instant in time, there is at least
+          one point on each wheel which isn't moving at all.
         </p>
       </statement>
     </example>
@@ -434,7 +437,12 @@
           less circular and more elongated. With the eccentricity
           defined, I'll try to calculate the arclength of the
           parametric curve <emdash /> the circumference of the
-          ellipse. 
+          ellipse. (This <m>e</m> is not to be confused with the
+          notation for the exponential function. Sorry to re-use a
+          letter that already has an important purpose, but the use of
+          <m>e</m> for eccentricity here is conventional and, in this
+          integral at least, I can avoid any exponential functions
+          that would confuse the issue.) 
         </p>
         <md>
           <mrow>
@@ -446,16 +454,16 @@
             t} dt
           </mrow>
           <mrow>
-            \amp = \int_0^{2\pi} \sqrt{ a^2 \sin^2 t + (b^2 - a^2)
-            \cos^2 t + a^2 \cos^2 t }
+            \amp = \int_0^{2\pi} \sqrt{a^2 \sin^2 t + (b^2 - a^2)
+            \cos^2 t + a^2 \cos^2 t} dt
           </mrow>
           <mrow>
-            \amp = \int_0^{2\pi} a\sqrt{ 1 + \frac{b^2-a^2}{a^2}
-            \cos^2 t}
+            \amp = \int_0^{2\pi} a\sqrt{1 + \frac{b^2-a^2}{a^2}
+            \cos^2 t} dt
           </mrow>
           <mrow>
-            \amp = a \int_0^{2\pi} \sqrt{ 1 - \frac{a^2 - b^2}{a^2}
-            \cos^2 t}
+            \amp = a \int_0^{2\pi} \sqrt{1 - \frac{a^2 - b^2}{a^2}
+            \cos^2 t} dt
           </mrow>
         </md>
         <p>
@@ -484,7 +492,7 @@
   <subsection xml:id="subsection-substitution-lemma">
     <title>A Substitution Rule Lemma</title>
     <p>
-      Before moving on with the discussion of parametric curve, I'm
+      Before moving on with the discussion of parametric curves, I'm
       going to interupt for a short section to prove a lemma about the
       substitution rule for integration. (A <sq>lemma</sq> in
       mathematic is a short statement, usually used a part of a larger
@@ -531,7 +539,7 @@
     <title>Independence of Parametrization</title>
     <p>
       In <xref ref="example-pc1" />, I looked at a couple
-      different parametrization of the circle and checked the
+      different parametrizations of the circle and checked the
       calculation to make sure that both parametrizations produced the
       correct circumference. This is a special case of a much more
       general issue. Parametric curves come with parametrizations and
@@ -570,7 +578,7 @@
         <p> 
           Now I will apply the substitution <m>t = g(u)</m>. The
           differential changes as <m>dt = g^\prime(u) du </m>. For the
-          two derivative inside the square root, I can apply <xref
+          two derivatives inside the square root, I can apply <xref
           ref="lemma-substitution-derivative" /> to both. This lets me
           do the entire substitution.
         </p>
@@ -619,21 +627,20 @@
     <p>
       I have proved that arclength is independent of parametrization.
       There are other properties of the shape of a parametric curve
-      (such as curvature) that will be introduced in Calculus III; all
-      of these geometric properties will also be independent of
-      paramtrization.
+      (such as curvature) that will be introduced in Multivariable
+      Calculus; all of these geometric properties will also be
+      independent of paramtrization.
     </p>
     <p>
-      It's interesting that even though these properties are
-      independent of parametrization, there is no way to calculate
-      them without using a parametrization. This is a surprisingly
-      common situation in mathematics. Many objects are defined in a
-      way that seems to involve an arbitrary choice, such as a
-      parametrization. (As I said earlier, each shape has infinitely
-      many parametrization.) To work with the object, a
-      choice must be made. But mathematicians want the properties to
-      be independent of the choice, which requires careful and often
-      difficult proofs. 
+      Even though these properties are independent of parametrization,
+      there is no way to calculate them without using a
+      parametrization. This is a surprisingly common situation in
+      mathematics. Many objects are defined in a way that seems to
+      involve an arbitrary choice, such as a parametrization. (As I
+      said earlier, each shape has infinitely many parametrization.)
+      To work with the object, a choice must be made. But
+      mathematicians want the properties to be independent of the
+      choice, which requires careful and often difficult proofs.
     </p>
     <p>
       Ideally, there would be a special or privileged choice, to make
@@ -650,7 +657,7 @@
           The <term>parametrization by arclength</term> is the
           parametrization in the special variable <m>s</m> where
           <m>\frac{ds}{dt} = 1</m>, i.e., the unique parametrization
-          where movement along the curve is always with speed of one
+          where movement along the curve always has a speed of one
           unit of distance per unit of time. The starting point of the
           curve is at <m>s = 0</m> and the range of <m>s</m> is <m> s
           \in [0, L]</m> where <m>L</m> is the length of the curve.
@@ -697,8 +704,8 @@
       outside the integral, I needed to defined the temporary variable
       <m>u</m> to do the integration. (The same variable should never
       show up as a variable of integration and a variable existing
-      outside the intergral.) The arclength function measure how much
-      length the curve has covered as the parameter goes from the start
+      outside the intergral.) The arclength function measures how much
+      distance the curve has covered as the parameter goes from the start
       <m>a</m> to <m>t</m>.
     </p>
     <p>

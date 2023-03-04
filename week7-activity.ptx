@@ -39,7 +39,7 @@
         <p>
           First I calcualte the derivatives of the two components.
           Then I divide by <m>y</m> derivative by the <m>x</m>
-          derivative to get an expression for the slope
+          derivative to get an expression for the slope.
         </p>
         <md>
           <mrow>
@@ -103,13 +103,14 @@
           curve. 
         </p>
         <p>
-          In the arclength calculation, you will get to an integral
+          In the arclength calculation, I will get to an integral
           which needs a trig substitution. Instead of doing that trig
-          substitution, you can use this antiderivative.
+          substitution, I can use the form found on the table of
+          integrals.
         </p>
         <me>
           \int \sqrt{a^2 + x^2} dx = \frac{x}{2} \sqrt{a^2 + x^2} +
-          \frac{a^2}{2} \ln \left| x + \sqrt{a^2 + x^2} \right| + c
+          \frac{a^2}{2} \ln \left( x + \sqrt{a^2 + x^2} \right) + c
         </me>
       </statement>
       <solution>
@@ -132,7 +133,7 @@
         <p>
           First I calcualte the derivatives of the two components.
           Then I divide by <m>y</m> derivative by the <m>x</m>
-          derivative to get an expression for the slope
+          derivative to get an expression for the slope.
         </p>
         <md>
           <mrow>
@@ -176,8 +177,8 @@
             \amp = \int_0^{4\pi} \sqrt{t^2 + 1} 
           </mrow>
           <mrow>
-            \amp = \frac{x}{2} \sqrt{1 + x^2} +
-            \frac{1}{2} \ln \left| x + \sqrt{1 + x^2} \right|
+            \amp = \frac{t}{2} \sqrt{1 + t^2} +
+            \frac{1}{2} \ln \left| t + \sqrt{1 + t^2} \right|
             \Bigg|_0^{4\pi} 
           </mrow>
           <mrow>
@@ -224,7 +225,7 @@
         <p>
           First I calcualte the derivatives of the two components.
           Then I divide by <m>y</m> derivative by the <m>x</m>
-          derivative to get an expression for the slope
+          derivative to get an expression for the slope.
         </p>
         <md>
           <mrow>
@@ -246,11 +247,11 @@
         <p>
           I put the derviatives of the components into the length
           formula and then calculate the resulting integral. Again, I
-          use the given antiderivative for the square root integral
-          instead of doing the whole trig integral. I need to do a
-          little bit of algebra, factoring <m>4a^2</m> out of the
-          square root, to make the square root integral fit the given
-          antiderivative. 
+          use the a known antiderivative from the tables for the
+          square root integral instead of doing the whole trig
+          substitution. I need to do a little bit of algebra,
+          factoring <m>4a^2</m> out of the square root, to make the
+          square root integral fit the expression on the table.
         </p>
         <md>
           <mrow>
@@ -313,7 +314,7 @@
         <p>
           First I calcualte the derivatives of the two components.
           Then I divide by <m>y</m> derivative by the <m>x</m>
-          derivative to get an expression for the slope
+          derivative to get an expression for the slope.
         </p>
         <md>
           <mrow>
@@ -331,8 +332,8 @@
           <m>\frac{dy}{dx}</m> approaches zero but the numerator does
           not. This happens when cosine vanishes, which is the two
           parameter value <m>\frac{\pi}{2}</m> and
-          <m>\frac{3\pi}{2}</m>. These are the known asymptote values
-          for tangent. 
+          <m>\frac{3\pi}{2}</m>. (These are the known asymptote values
+          for tangent.)
         </p>
         <p>
           I put the derviatives of the components into the length
@@ -413,7 +414,7 @@
         <p>
           First I calcualte the derivatives of the two components.
           Then I divide by <m>y</m> derivative by the <m>x</m>
-          derivative to get an expression for the slope
+          derivative to get an expression for the slope.
         </p>
         <md>
           <mrow>
@@ -538,7 +539,7 @@
           </mrow>
         </md>
         <p>
-          I'll calculate the such of the square of the derivative by
+          I'll calculate the sum of the square of the derivative by
           itself and then insert it into the arclength integral. After
           expanding the squares, several terms cancel. Then, after
           factoring and grouping, trig identities help me make more
@@ -640,7 +641,7 @@
         <p>
           I follow the three part algorithm presented in the notes and
           the videos. First I setup the integral to calculate the
-          arclength suntion. I start with the derivative and them put
+          arclength suntion. I start with the derivatives and then put
           them into the square root term in the arclength integral.
         </p>
         <md>
@@ -674,7 +675,7 @@
         </p>
         <md>
           <mrow>
-            s(t) \amp = = \int_{\frac{-\pi}{4}}^t du = u 
+            s(t) \amp = \int_{\frac{-\pi}{4}}^t du = u 
             \Bigg|_{\frac{-\pi}{4}}^t = t + \frac{\pi}{4} 
           </mrow>
           <mrow>
@@ -692,8 +693,8 @@
         <p>
           Finally, I replace the original parameter <m>t</m> with
           <m>t(s)</m> from the inversion calculation. I could directly
-          replace <m>t</m>, but if I make use of the identities
-          suggested in the question, I get a more succinet form of the
+          replace <m>t</m>, but if I make use of the some identities
+          for sums and differences, I get a more succinet form of the
           reparametrized curve. 
         </p>
         <md>
@@ -727,7 +728,7 @@
           At the end of all this work, I have just recovered the most
           basic parametrization of the circle. However, this makes
           sense, since each curve has only one parametrization by
-          arclenght. Starting with any parametrization of the circle,
+          arclength. Starting with any parametrization of the circle,
           the algorithm should produce this same answer as the
           parametrization by arclength. 
         </p>
@@ -753,7 +754,7 @@
         <p>
           I follow the three part algorithm presented in the notes and
           the videos. First I setup the integral to calculate the
-          arclength suntion. I calculate the two derivative and them
+          arclength suntion. I calculate the two derivatives and them
           put them into the square root term in the arclength
           integral. 
         </p>
@@ -865,7 +866,7 @@
             + 4 \cos t \sin t \cos 2t \sin 2t + 4 \sin^2 t \cos^2 2t 
           </mrow>
         </md>
-          When I add the squares of the two derivative, the middle
+          When I add the squares of the two derivatives, the middle
           terms cancel. Let me work with the remaining four terms to
           simplify with trig identities. I notice that I can factor
           out the terms with <m>(2t)</m> inside the trig functions and
@@ -898,7 +899,7 @@
           elliptic integral that results from the calculation of the
           perimeter of an ellipse. Such integrals do not have
           elementary anti-derivatives, so short of inventing a new
-          function, so I am not able to proceed. Theoretically, the
+          function, I am not able to proceed. Theoretically, the
           inverse of the function does exist and I could invent a name
           for it to finish the process. But that name doesn't do much
           without an investigation of the properties of the unknown

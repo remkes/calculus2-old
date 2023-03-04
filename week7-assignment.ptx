@@ -83,7 +83,8 @@
           \right) \amp \amp t \in [0,\infty)
         </mrow>
         <mrow>
-          \amp \gamma(t) = \left( \frac{\cos t}{t}, \frac{\sin t}{t}
+          \amp \gamma(t) = \left( \frac{\cos t}{t^2}, \frac{\sin
+          t}{t^2}
           \right) \amp \amp t \in [0,\infty)
         </mrow>
       </md>

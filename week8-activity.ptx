@@ -68,18 +68,20 @@
         </p>
         <md>
           <mrow>
-            V \amp = (\ln x)(x \ln x - x) \Bigg|_1^{e^2} - \int_1^{e^2}
-            \frac{1}{x} (x \ln x - x) dx 
+            V \amp = \pi \left( (\ln x)(x \ln x - x) \Bigg|_1^{e^2} -
+            \int_1^{e^2} \frac{1}{x} (x \ln x - x) dx \right) 
           </mrow>
           <mrow>
-            \amp = (2)(2e^2 - e^2) - (0)(0-1) - \int_1^{e^2} \ln x - 1 dx 
+            \amp = \pi \left( (2)(2e^2 - e^2) - (0)(0-1) -
+            \int_1^{e^2} \ln x - 1 dx \right) 
           </mrow>
           <mrow>
-            \amp = 2e^2 - (x \ln x - x - x) \Bigg|_1^{e^2} 
-            = 2e^2 - (x \ln x - 2x ) \Bigg|_1^{e^2} 
+            \amp = \pi \left( 2e^2 - (x \ln x - x - x) \Bigg|_1^{e^2}
+            = 2e^2 - (x \ln x - 2x ) \Bigg|_1^{e^2} \right)
           </mrow>
           <mrow>
-            \amp = 2e^2 - (2 e^2 - 2 e^2 - 0 + 2) \Bigg|_1^{e^2} = 2e^2 - 2
+            \amp = \pi \left( 2e^2 - (2 e^2 - 2 e^2 - 0 + 2)
+            \Bigg|_1^{e^2} \right) = (2e^2 - 2)\pi 
           </mrow>
         </md>
       </solution>
@@ -88,7 +90,9 @@
       <statement>
         <p>
           Calculate the volume of a tetrahedron of side length
-          <m>a</m>.
+          <m>a</m>. (This is a particularly difficult activity; feel
+          free to attempt it, but don't be discouraged if you don't
+          make easy progress.) 
         </p>
       </statement>
       <solution>
@@ -174,7 +178,7 @@
       <statement>
         <p>
           Calculate the volume of the object formed by taking the
-          triangle with vertices <m>(3,0)</m>, <m>(5,0</m> and
+          triangle with vertices <m>(3,0)</m>, <m>(5,0)</m> and
           <m>(3,4)</m> and rotating it about the <m>y</m> axis. 
         </p>
       </statement>
@@ -224,7 +228,7 @@
           cylindrical shells. The radius is <m>x</m>, so the
           circumference of the shell is <m>2\pi x</m> and the area is
           <m>2\pi x \sin x</m>.  Then I integrate in <m>x</m> over the
-          range <m>[0, \pi]</m>. In the integral, I use integrate by
+          range <m>[0, \pi]</m>. In the integral, I use integration by
           parts with <m>g(x) = x</m> and <m>\frac{df}{dx} = \sin
           x</m>, so that <m>\frac{dg}{dx} = 1</m> and <m>f = -\cos
           x</m>.

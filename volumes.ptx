@@ -5,13 +5,13 @@
       An important application of integration is the calculation of
       volumes of three-dimensional objects. Maybe you wondered,
       sometime, where the various volume formulas come from: why does
-      a sphere have volume <m>\frac{4\pi r^3}{4}</m>, or a cube
+      a sphere have volume <m>\frac{4\pi r^3}{4}</m>, or a cone
       <m>\frac{\pi r^2 h}{3}</m>? The oldest versions of these formlas
-      were almost certainly the product of approxiamation and
+      were almost certainly the product of approximation and
       guessing, but now I claim to know them exactly. What is the
       proof? How are they calculated? Moveover, if there are new
       three-dimensional shapes described, techniques to calculate
-      their volume are valuable. This is useful in all sorts of
+      their volume are needed. This is useful in all sorts of
       designs, where designers need to know how much material the
       component will requre, or how heavy it will be (assuming density is
       known). Integrals can answer these questions.
@@ -20,7 +20,7 @@
       This week, I'll be introducing two methods for calculating
       volume. Both methods are based on the definition of the
       integral: as the limit of a sum of approximate pieces. For each
-      method, I'll develop a particular way fo cutting up the object
+      method, I'll develop a particular way of cutting up the object
       into 2-dimensional slices whose area is known. Then I'll
       multiply by some width <m>\Delta w</m> to get a volume for the
       slice. The sum of a number of such slices will approximate the
@@ -36,7 +36,7 @@
       are slices made by some plane as the plane moves along the
       shape. The idea is to choose an orientation for the slices such
       that they are some familiar shape: rectangles, triangles,
-      circles. Then their area is know and I can setup the
+      circles. Then their area is known and I can setup the
       approximation system and resulting integral I described above.
       There are three pieces to the integral. Let me assume the slices
       perpendicular to the <m>x</m> axis, so that each slice is
@@ -46,7 +46,7 @@
       that covers the object. This will become the bounds of
       integration. Second, I have the area of the slice, <m>A(x)</m>,
       as a function of the <m>x</m> position that identifies the
-      slice. This will form the integrand. Finally, I hvae the
+      slice. This will form the integrand. Finally, I have the
       width. In the limit that defined the integral, this becomes the
       <m>dx</m> which completes the integral. Then I can write the
       integral for volume by cross-sectional slices. 
@@ -139,8 +139,8 @@
       V = \int_a^b \pi (f(x))^2 dx 
     </me>
     <p>
-      This construction around any axis by simply changing the
-      variable names in the construction. 
+      This construction can be done around any axis by simply changing
+      the variable names in the construction.
     </p>
     <example>
       <statement>
@@ -214,7 +214,7 @@
     <p>
       In the previous section, I used cross-sectional slices, slicing
       with a plane to produce the cross-section with reasonable shapes
-      and known ares. However, there are other
+      and known areas. However, there are other
       ways to slice up a volume. In this section, I look at the
       general method of shells. Instead of thinking of the object as a
       collection of slices, I'll think of it as a collection of 
@@ -230,7 +230,7 @@
       <m>\Delta x</m> and the approximate volume of the shell is <m>A(x)
       \Delta x</m>. In the limit, the sum becomes and integral and the
       width becomes the infinitesimal <m>dx</m>, leading to the same
-      kinf of integral as for cross-sectional slices. 
+      kind of integral as for cross-sectional slices. 
     </p>
     <me>
       V = \int_a^b A(x) dx 
@@ -348,7 +348,7 @@
           variable with height <m>e^{-r^2}</m>. The integral needs a
           substitution, which I've shown below; I change the bounds of
           the substitution as well, so that I don't have to do the
-          reverse subsittution. 
+          reverse substitution. 
         </p>
         <md>
           <mrow>
@@ -387,7 +387,7 @@
         -->
         <p>
           An interesting example is the calculation of the volume of a
-          torus (colloquially, a donut). A torus is defined by a
+          torus (colloquially, a doughnut). A torus is defined by a
           larger radius <m>a</m>, which is the distance from the
           centre of the torus to the centre of any cross-sectional
           circle, and a smaller radius <m>b</m>, which is the radius
@@ -432,17 +432,16 @@
         </p>
         <p>
           Second, the circle on the right can be descirbe as the
-          convnetional locus of a circle but ofset by <m>a</m> in the
+          conventional locus of a circle but offset by <m>a</m> in the
           <m>r</m> axis (treating the horizontal axis here as the
-          <m>r</m> axis.) 
-          If I call the vertical axis <m>h</m>, If I call the vertical
-          axis <m>h</m>, this offset locus is <m>(r-a)^2 +
-          h^2 = b^2</m>. I can solve for <m>h = \sqrt{b^2 -
-          (r-a)^2}</m>. This is only half the height of a cylindrical
-          shell, since it goes both above and below, so I multiply by
-          2 to get the full height <m>2 \sqrt{b^2 - (r-a)^2}</m>. This
-          lets me write the cylindrical shell integral for calculating
-          the volume of the torus.
+          <m>r</m> axis.) If I call the vertical axis <m>h</m>, If I
+          call the vertical axis <m>h</m>, this offset locus is
+          <m>(r-a)^2 + h^2 = b^2</m>. I can solve for <m>h = \sqrt{b^2
+          - (r-a)^2}</m>. This is only half the height of a
+          cylindrical shell, since it goes both above and below, so I
+          multiply by 2 to get the full height <m>2 \sqrt{b^2 -
+          (r-a)^2}</m>. This lets me write the cylindrical shell
+          integral for calculating the volume of the torus.
         </p>
         <md>
           <mrow>
@@ -477,8 +476,8 @@
           </mrow>
         </md>
         <p>
-          I'll deal with the two integral separately. The first
-          integral can also be solve with substitution, uving <m>v =
+          I'll deal with the two integrals separately. The first
+          integral can also be solved with substitution, uving <m>v =
           b^2 - u^2</m>. I've not shown the details of this
           substitution; just the resulting antiderivative. 
         </p>
@@ -495,7 +494,7 @@
         </p>
         <md>
           <mrow>
-            \int_{-b}^b \sqrt{b^2 - u^2} \amp =
+            \int_{-b}^b \sqrt{b^2 - u^2} \amp
           </mrow>
         </md>
         <p>
