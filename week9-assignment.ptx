@@ -3,26 +3,40 @@
 -->
 <section xml:id="section-assignment-week9">
   <title>Week 9 Assignment</title>
-  <!--
   <ol>
     <li>
       <p>
-        Calculate the mean and the standard deviation for this
+        Check that this is a probability density function. Then
+        calculate the mean and the standard deviation. (8) 
         probability distribution on the domain <m>[0,2]</m>. (6)
       </p>
-      <me>
-        f(x) = \frac{-3x^2 + 6x + 6}{16} 
-      </me>
+      <md>
+        <mrow>
+          \amp p(x) = \frac{3}{14} (x^2 + x) \amp \amp x \in [0,2] 
+        </mrow>
+      </md>
     </li>
     <li>
       <p>
-        Calculate the mean and the standard deviation for this
-        probability distribution on the domain <m>[1,\infty)</m>. (6)
+        Check that this is a probability density function. Then
+        calculate the mean and the standard deviation. (8) 
+        probability distribution on the domain <m>[0,2]</m>. (6)
       </p>
-      <me>
-        f(x) = \frac{4}{x^5}
-      </me>
+      <md>
+        <mrow>
+          \amp p(x) = \frac{3}{x^4} \amp \amp x \in [1,\infty) 
+        </mrow>
+      </md>
     </li>
+    <li>
+      <p>
+        Probability density functions describe the probability of
+        certain measurements. The maximum probability is 1; an event
+        or measurement with probability 1 is certain to happen.
+        Explain how the probability density function itself can have
+        values larger than 1 and still work to calculate probability.
+        (3) 
+      </p>
+  </li>
   </ol>
-  -->
 </section>
