@@ -3,24 +3,31 @@
 -->
 <section xml:id="section-assignment-week10">
   <title>Week 10 Assignment</title>
-  <!--
   <ol>
     <li>
       <p>
-        Calculate the value of this series. (6)
+        Calculate the value of this series. (4)
       </p>
       <me>
-        \sum_{n=0}^\infty \frac{3^n - 9^n}{27^n} 
+        \sum_{n=0}^\infty 2^n - \left( \frac{1}{2} \right)^n 
       </me>
     </li>
     <li>
       <p>
-        Calculate the value of this series. (8) 
+        Calculate the value of this series. (4) 
       </p>
       <me>
-        \sum_{n=0}^\infty \frac{1}{(n+2)(n+5)}
+        \sum_{n=0}^\infty \frac{1}{(n+3)(n+7)}
       </me>
     </li>
+    <li>
+      <p>
+        Consider the function <m>f(x) = \tan ((2x+1) \pi))</m> and the
+        sequence <m>a_n = \tan ((2n + 1) \pi))</m>. Explain why the
+        limit of the sequence makes sense and converges, but the limit
+        of the function does not. Why does asymptotic analysis not
+        help determine the limit of this function? (4) 
+      </p>
+    </li>
   </ol>
-  -->
 </section>

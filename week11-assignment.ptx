@@ -3,14 +3,13 @@
 -->
 <section xml:id="section-assignment-week11">
   <title>Week 11 Assignment</title>
-  <!--
   <ol>
     <li>
       <p>
         Test this series for convergence (4). 
       </p>
       <me>
-        \sum_{n=0}^\infty \frac{3n!}{(n!)^3}
+        \sum_{n=0}^\infty \frac{n!(n+1)!}{(n+3)!}
       </me>
     </li>
     <li>
@@ -18,7 +17,7 @@
         Test this series for convergence (4). 
       </p>
       <me>
-        \sum_{n=1}^\infty \frac{(-1)^n (n^3 + 2n +1)}{(n^2+1)}
+        \sum_{n=1}^\infty \frac{(-1)^n n \ln }{\sqrt[3]{n}} 
       </me>
     </li>
     <li>
@@ -26,19 +25,7 @@
         Test this series for convergence (4). 
       </p>
       <me>
-        \sum_{n=2}^\infty \frac{\sin^2 \left( \frac{n\pi}{2} \right)
-        \cos^2 \left( \frac{n\pi}{2} \right)}{n}
-      </me>
-    </li>
-    <li>
-      <p>
-        Test this series for convergence. (Use the ratio test. The
-        challenge here is all about factorial algebra. Match up the
-        various factorials and see how you can cancel terms to get a
-        reasonable limit.) (6) 
-      </p>
-      <me>
-        \sum_{n=1}^\infty \frac{n!(2n+1)!}{(2n)!(n+4)!}
+        \sum_{n=2}^\infty \frac{4^n + 5^n}{6^n}
       </me>
     </li>
     <li>
@@ -46,7 +33,15 @@
         Test this series for convergence. (4)
       </p>
       <me>
-        \sum_{n=0}^\infty \frac{n^2}{\ln (n^2)} 
+        \sum_{n=1}^\infty \frac{5^n + (2n)!}{8^n}
+      </me>
+    </li>
+    <li>
+      <p>
+        Test this series for convergence. (4)
+      </p>
+      <me>
+        \sum_{n=0}^\infty \frac{n^5 + 3n - 7}{n^7 + 8n^4 + 1}
       </me>
     </li>
     <li>
@@ -54,28 +49,18 @@
         Test this series for convergence (4). 
       </p>
       <me>
-        \sum_{n=3}^\infty \frac{\ln n}{n^2} 
+        \sum_{n=3}^\infty \frac{(8x+5) \ln (4x^2 + 5x + 3) }{4x^2 + 5x
+        + 3} 
       </me>
     </li>
     <li>
       <p>
-        Assume that <m>a_n</m> and <m>b_n</m> are two sequences.
-        Consider that the following series. (4)
+        When re-arranging the alternating harmonic series, in the
+        notes and videos I said that I could take any pattern of
+        positive and negative terms. What happens if you try to sum all
+        the positive terms before all the negative terms? Why doesn't
+        this result in a reasonable value for the series? (4) 
       </p>
-      <me>
-        \sum_{n=1}^\infty a_n - b_n 
-      </me>
-      <p>
-        How does the convergence of this series depend (if at all) on
-        the convergence of these two series:
-      </p>
-      <md>
-        <mrow>
-          \amp \sum_{n=1}^\infty a_n \amp 
-          \amp \sum_{n=1}^\infty b_n 
-        </mrow>
-      </md>
     </li>
   </ol>
-  -->
 </section>
