@@ -6,41 +6,60 @@
   <p><ol>
     <li>
       <p>
-        Calculate the Taylor series for <m>f(x) = \frac{1}{x+3}</m>
-        centred at <m>\alpha = 2</m>. (6) 
+        Calculate the Taylor series for <m>f(x) = \frac{1}{x-4}</m>
+        centred at <m>\alpha = -1</m>. Calculate its radius of
+        convergence. (6) 
       </p>
     </li>
     <li>
       <p>
-        Calculate the Taylor series for <m>f(x) = \sin (x^2 + \pi)</m>
-        centred at <m>\alpha = 0</m>.  (Don't do this question by using
-        the full algorithm; instead, use existing series to produce
-        the new series.) (4) 
+        Calculate the Taylor series for <m>f(x) = \cos (3x^2)</m>
+        centred at <m>\alpha = 0</m>. Calculate its radius of
+        convergence. (6) 
       </p>
     </li>
     <li>
       <p>
-        Calculate the Taylor series for <m>f(x) = \ln x^2</m>
-        centred at <m>\alpha = 3</m>. (6)
+        Calculate the Taylor series for <m>f(x) = e^{x^2 + 4}</m>
+        centred at <m>\alpha = 0</m>. Calculate its radius of
+        convergence. (6)
       </p>
     </li>
     <li>
       <p>
-        Calculate the Taylor series for <m>f(x) = x^4 e^{x^3}</m>
-        centred at <m>\alpha = 0</m>. (Don't do this question by using
-        the full algorithm; instead, use existing series to produce
-        the new series.) (4) 
+        Calculate the Taylor series for <m>f(x) = \ln x </m>
+        centred at <m>\alpha = 6</m>. Calculate its radius of
+        convergence. (6) 
       </p>
     </li>
     <li>
       <p>
-        Consider the function <m>f(x) = \frac{1}{1-x}</m>. Find two
-        Taylor series for <m>f</m> one centred at <m>
-        \alpha = 0 </m> and one centred at <m>
-        \alpha = 2</m>. What are the similarities and differences
-        between the two series? What patterns do they share? (6) 
+        Assume <m>f(x)</m> is a function with Taylor series centred
+        around <m>\alpha = 0</m> with radius of convergence <m>R =
+        10</m>. Do the following functions also have Taylor series?
+        If so, what are their centre points and radii of convergence?
+        (8) 
+        <md>
+          <mrow>
+            \amp a) \ \ \amp \amp f(x-3) 
+          </mrow>
+          <mrow>
+            \amp b) \ \ \amp \amp (f(x))^2 
+          </mrow>
+          <mrow>
+            \amp c) \ \ \amp \amp f(x) + \sin x 
+          </mrow>
+          <mrow>
+            \amp d) \ \ \amp \amp f(x) + \frac{1}{x} 
+          </mrow>
+        </md>
+      </p>
+    </li>
+    <li>
+      <p>
+        Explain why <m>f(x) = \ln |x|</m> cannot have a Taylor series
+        centred at <m>\alpha = 0</m>. (3) 
       </p>
     </li>
   </ol></p>
-  -->
 </section>
