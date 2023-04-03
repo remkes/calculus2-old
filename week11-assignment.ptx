@@ -17,7 +17,7 @@
         Test this series for convergence (4). 
       </p>
       <me>
-        \sum_{n=1}^\infty \frac{(-1)^n n \ln }{\sqrt[3]{n}} 
+        \sum_{n=1}^\infty \frac{(-1)^n n \ln n}{\sqrt[3]{n}} 
       </me>
     </li>
     <li>
