@@ -6,14 +6,14 @@
       The two main examples for comparison in <xref
       ref="subsection-comparison" />
       were the geometric series and the <m>\zeta</m> series. Both
-      converged for certain values of a parameter; <m>|r|\lt 1</m>
-      for the geometric series and <m>p ></m> for the <m>\zeta</m>
+      converged for certain values of a parameter; <m>|r| \lt 1</m>
+      for the geometric series and <m>p \gt 1</m> for the <m>\zeta</m>
       series. To start this section, I'd like to re-interpret these
       two series. Instead of thinking of a whole family of different
       series which depend on a parameter (<m>r</m> or <m>p</m>), I
       can think of each family of series as a <em>function</em> of the
       parameter. In this view, there is only one series, but the
-      series converges tofunction instead of just a number.
+      series converges to a function instead of just a number.
     </p>
     <p>
       For the geometric series, this new perspective defines a
@@ -113,7 +113,7 @@
     </definition>
     <p>
       The full definition is slightly more general. The previous
-      series was a power series <em>centered at 0</em>. I can centre
+      series was a power series <em>centred at 0</em>. I can centre
       a power series at any <m>\alpha \in \RR</m>. This could also be
       done for polynomials, but it much more useful to do for power
       series. 
@@ -127,7 +127,7 @@
           f(x) = \sum_{n=0}^\infty c_n (x-\alpha)^n
         </me>
         <p>
-          is called a <term>power series centered at
+          is called a <term>power series centred at
           <m>\alpha</m></term>. The numbers <m>c_n</m> are still
           called the <term>coefficients</term> and the number
           <m>\alpha</m> is called the <term>centre point</term>. The
@@ -174,7 +174,7 @@
           </mrow>
         </md>
         <p>
-          This series is centered at <m>\alpha=-2</m>, and the ratio
+          This series is centred at <m>\alpha=-2</m>, and the ratio
           test tells me that there is convergence on <m>|x+2|\lt 1</m>,
           which is the interval <m>(-3,-1)</m>. Outside the interval,
           the series diverges and doesn't represent a function. The
@@ -268,7 +268,7 @@
     <proposition>
       <statement>
         <p>
-          Consider a power series centered at <m>x = \alpha</m>.
+          Consider a power series centred at <m>x = \alpha</m>.
           <me>
             f(x) = \sum_{n=0}^\infty c_n (x-\alpha)^n
           </me>
@@ -338,7 +338,7 @@
           </mrow>
         </md>
         <p>
-          This series converbes on <m>(-1,1)</m>, so the radius of
+          This series converges on <m>(-1,1)</m>, so the radius of
           convergence is <m>R=1</m>.
         </p>
       </statement>
@@ -363,7 +363,7 @@
         </md>
         <p>
           This series converges on <m>(-10, 22)</m>, so the radius of
-          convergence is <m>R=16</m>, centered around <m>x=6</m>. 
+          convergence is <m>R=16</m>, centred around <m>x=6</m>. 
         </p>
       </statement>
     </example>
@@ -476,7 +476,7 @@
     <proposition>
       <statement>
         <p>
-         Consider power series centered at <m>\alpha</m>.
+         Consider power series centred at <m>\alpha</m>.
         </p>
         <me>
           f(x) = \sum_{n=0}^\infty c_n (x-\alpha)^n
@@ -532,13 +532,13 @@
     <proposition>
       <statement>
         <p>
-          If <m>f</m> is a power series centered at <m>\alpha</m>,
+          If <m>f</m> is a power series centred at <m>\alpha</m>,
           then <m>f</m> is integrable and its indefinite integral is
           calculated termwise. 
         </p>
         <me>
           \int f(x) dx= \sum_{n=0}^\infty c_n
-          \frac{(x-\alpha)^{n+1}}{n+1} + C
+          \frac{(x-\alpha)^{n+1}}{n+1} + c
         </me>
       </statement>
     </proposition>
@@ -557,7 +557,7 @@
       terms only for certain exponents following some pattern. In this
       section, I'm going to briefly introduce some common notation for
       particular cases of this phenomenon. Consider a series where all
-      the odd terms are zero (centered at <m>0</m> for convenience). 
+      the odd terms are zero (centred at <m>0</m> for convenience). 
       <me>
         f(x) = c_0 + 0x + c_2x^2 + 0x^3 + c_4x^4 + 0x^5 + \ldots 
       </me>

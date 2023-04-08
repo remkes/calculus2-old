@@ -33,7 +33,7 @@
     </me>
     <p>
       These two pieces of information, the centre point and the
-      coefficients, they are everything. Often I can choose the centre
+      coefficients, are everything. Often I can choose the centre
       point, so I am really trying to calculate the coefficient to
       represent a function as a series. When is such a project
       possible? I need a definition before stating the relevant
@@ -43,7 +43,7 @@
       <statement>
         <p>
           A function is called <term>analytic</term> at <m>\alpha \in
-          \RR</m> if it can be expressed as a power series centered at
+          \RR</m> if it can be expressed as a power series centred at
           <m>\alpha</m> with a non-zero radius of convergence. Such a
           power series is called a <term>Taylor series</term>
           representation of the function. In the case that <m>\alpha
@@ -84,10 +84,10 @@
       I need to know how to calculate the coefficients <m>c_n</m>.
     </p>
     <p>
-      My approach is a typical on in mathematics: I'm going to assume
-      there is a solution and see what the pieces need to be to make
-      it work. Therefore, assume there is a 
-      series expression of <m>f(x)</m>. 
+      The approach is a typical trick in mathematics: I'm going to
+      assume there is a solution and see what the pieces need to be to
+      make it work. Therefore, assume there is a series expression of
+      <m>f(x)</m>. 
     </p>
     <me>
       f(x) = \sum_{n=0}^\infty c_n (x - \alpha)^n
@@ -99,7 +99,7 @@
       time I differentiate, I move the starting point of the index up
       by one; I do this because the starting value of a power series
       is the constant piece and this will disappear when I
-      differentiable. Here are the first few result. 
+      differentiate. Here are the first few results. 
     </p>
     <md>
       <mrow>
@@ -135,7 +135,7 @@
     </md>
     <p>
       There is a pattern here relating to the coefficients of the
-      series. I've solved for those coefficient in the calculations to
+      series. I've solved for those coefficients in the calculations to
       try to show the pattern. Based on what I've done so far, I can
       argue for the following general pattern.
     </p>
@@ -143,10 +143,10 @@
       c_n = \frac{f^{(n)}(\alpha)}{n!}
     </me>
     <p>
-      Now I have a way to calculate the coefficient in terms of the
+      Now I have a way to calculate the coefficients in terms of the
       derivatives of <m>f(x)</m> at the chosen centre point.
       Therefore, to find a series representation of <m>f(x)</m>
-      centered at <m>\alpha</m> (assuming <m>f(x)</m> is analytic at
+      centred at <m>\alpha</m> (assuming <m>f(x)</m> is analytic at
       <m>\alpha</m>), I use this expression o calculate the
       coefficients. I summarize this in a proposition.
     </p>
@@ -169,7 +169,7 @@
     <proposition>
       <statement>
         <p>
-          (Uniqueness of Coefficients) Two power series centered at
+          (Uniqueness of Coefficients) Two power series centred at
           the same point are equal if an only if every coefficient is
           equal.
         </p>
@@ -206,8 +206,8 @@
   <subsection xml:id="subsection-taylor-series-examples">
     <title>Examples</title>
     <p>
-      I will calculate the Taylor series for a number of common
-      functions. 
+      For this section of examples, I will calculate the Taylor series
+      for a number of common functions. 
     </p>
     <example xml:id="example-taylor-series1">
       <statement>
@@ -287,7 +287,7 @@
           </mrow>
         </md>
         <p>
-          This gives a Tayor series for <m>- \ln (1-x)</m> centered at
+          This gives a Tayor series for <m>- \ln (1-x)</m> centred at
           <m>\alpha = 0</m>, at least for the domain <m>(-1,1)</m>.
           (The domain was the reason I dropped the absolute value
           bars, since <m>(1-x)</m> is always positive on this domain.)
@@ -375,7 +375,7 @@
         </md>
         <p>
           Using these coefficients, the Taylor series for sine
-          centered at <m>\alpha = 0</m> is the following series. I
+          centred at <m>\alpha = 0</m> is the following series. I
           only write the odd terms, using <m>(2n+1)</m>, since the
           even coefficients are all zero. 
         </p>
@@ -402,7 +402,7 @@
     <example xml:id="example-taylor-series5">
       <statement>
         <p>
-          Consider <m>f(x) = \ln x</m> centered at <m>\alpha = 1</m>.
+          Consider <m>f(x) = \ln x</m> centred at <m>\alpha = 1</m>.
           I'll calculate the first few coefficients to look for a
           pattern.
         </p>
@@ -449,7 +449,7 @@
     <example xml:id="example-taylor-series6">
       <statement>
         <p>
-          Consider <m>f(x) = \frac{1}{x^2}</m> centered at <m>\alpha =
+          Consider <m>f(x) = \frac{1}{x^2}</m> centred at <m>\alpha =
           3</m>.
         </p>
         <md>
@@ -475,7 +475,7 @@
            f^{(n)}(3) = \frac{(-1)^{n}(n+1)!}{3^{n+2}}
         </me>
         <p>
-j          Then I put these derivatives evaluted at the centre point
+          Then I put these derivatives evaluted at the centre point
           into the standard Taylor series form.
         </p>
         <me>
@@ -489,14 +489,14 @@ j          Then I put these derivatives evaluted at the centre point
       </statement>
     </example>
     <p>
-      I want to point out one particularly useful technique from these
-      examples, since this technique may be important for the
-      activities and the assignments. For the series for
-      <m>e^{x^2}</m>, I used an existing series and composition,
+      The technique used in <xref ref="example-taylor-series3" /> is
+      worth giving special attention, since this technique may be
+      important for the activities and the assignments. For the series
+      for <m>e^{x^2}</m>, I used an existing series and composition,
       putting <m>x^2</m> inside the series for <m>e^x</m>. This
       doesn't produce taylor series for all compositions, but it can
       be particularly helpful in certain places. For example, I could
-      calculate a series for <m>sin(x^3)</m> by inputing <m>x^3+1</m>
+      calculate a series for <m>\sin(x^3)</m> by inputing <m>x^3</m>
       for the variable in the series for sine.
     </p>
     <me>

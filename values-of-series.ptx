@@ -2,9 +2,9 @@
   <title>Convergence and Values of Infinite Series</title>
   <p>
     After defining series, in <xref ref="subsection-series-examples"
-    />, I use partial sums to calculate the actual value of series.
+    />, I used partial sums to calculate the actual value of series.
     For geometric and telescoping series, I could produce actual
-    values, usual rational numbers, for the sum of the series. Those
+    values, usually rational numbers, for the sum of the series. Those
     were useful initial examples, but it turns out they were a bit
     misleading. For the vast majority of series, when the series does
     actual converge to a value, the value of the series is not going
@@ -76,7 +76,7 @@
     representation of <m>\alpha</m> in familiar terms. I could wonder
     how accurate this approximation is.  The accuracy and precision of
     series  approximation is an important question in the study of
-    infinite series and itself is a bit part of mathematics. In this
+    infinite series and itself is a big part of mathematics. In this
     course, I'll not cover much about accuracy of approximation with
     series. However, this will be covered in other courses and is
     particular important for numerical analysis and algorithm analysis

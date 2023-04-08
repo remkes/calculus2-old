@@ -10,9 +10,10 @@
   <definition>
     <statement>
       <p>
-        If <m>f(x)</m> is analytic, its <m>d</m>th <term>Taylor
-        polynomials</term> centered at <m>\alpha</m> is the truncation
-        of its Taylor series, stopping at <m>(x-\alpha)^d</m>.
+        If <m>f(x)</m> is analytic, a <term>Taylor polynomials</term>
+        for <m>f</m> centred at <m>\alpha</m> is the truncation of its
+        Taylor series, stopping at some degree <m>d</m>, i.e, at the
+        exponent<m>(x-\alpha)^d</m>.
         <me>
           f(x) \cong \sum_{n=0}^d \frac{f^{(n)}(\alpha)}{n!}
           (x-\alpha)^n
@@ -62,7 +63,7 @@
         </image>
       </figure>
       <p>
-        Look at the exponential function <m>e^x</m> centered at
+        Look at the exponential function <m>e^x</m> centred at
         <m>\alpha = 0</m>. Its Taylor series was calculated in <xref
         ref="example-taylor-series1" />. Now I will calculate its
         first few Taylor polynomials.  The graphs of these polynomials
@@ -144,8 +145,9 @@
         there are only odd monomials in the Taylor series for sine.
         Therefore, I'll only calculate the odd Taylor polynomials here
         (the even Taylor polynomials simply add zero to the previous
-        odd Taylor polynomial.  The graphs of the first few Taylor
-        polynomials are shown in <xref ref="figure-sine-approximations" />. 
+        odd Taylor polynomial).  The graphs of the first few Taylor
+        polynomials are shown in <xref
+        ref="figure-sine-approximations" />.
       </p>
       <md>
         <mrow>

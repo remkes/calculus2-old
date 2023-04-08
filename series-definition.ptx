@@ -80,7 +80,7 @@
       <me>
         \lim_{n \rightarrow a} a_n = \infty
       </me>
-      was a short hand. The symbol ``<m>infinity</m>'' was a way to
+      was a short hand. The symbol ``<m>\infinity</m>'' was a way to
       write ``getting larger and larger without bound.'' Something
       similar happens for infinite series. Some divergent series
       diverge because the sum grows larger and larger without bound
@@ -446,7 +446,7 @@
         <p>
           This is another definition for the number <m>e</m>. I'll
           prove that this definition is equivalent to the previous
-          definitions is <xref
+          definitions in <xref
           ref="subsection-taylor-series-examples"/>.
         </p>
       </statement>
@@ -506,7 +506,7 @@
       zero and the whole series adds up to exactly <m>1</m>. The
       harmonic series also has terms <m>\frac{1}{n}</m> which approach
       zero, but the series diverges. This leads to a very important
-      observation: <em>the fact that the terms of a series decay to
+      observation: <em>the fact that the terms of a series decays to
       zero is not sufficient to conclude that the series
       converges</em>.
     </p>

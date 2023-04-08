@@ -16,7 +16,7 @@
   <subsection xml:id="subsection-comparison">
     <title>Comparison on Series</title>
     <p>
-      The first couple of tests are comparison tests. For these test,
+      The first couple of tests are comparison tests. For these tests,
       I can determine the convergence of a series by comparing it to a
       series that is known to converge or diverge. The most important
       series for comparison are the geometric series (defined in <xref
@@ -29,7 +29,7 @@
       comple of conventions for using infinity in comparison. In these
       conventions, please remember that infinity is not a number and I
       don't do arithmetic with it. These conventions are,
-      non-the-less, useful for stating the comparison theorems. The
+      none-the-less, useful for stating the comparison theorems. The
       conventions simply say that for any real number, it is
       permissible to write <m>-\infty \lt \alpha \lt \infty</m>. 
     </p>
@@ -46,7 +46,7 @@
         </me>
         <p>
           In addition, let <m>a_n</m> and <m>b_n</m> be positive for
-          all <m>n \in \NN</m> (and still assume <m>a_n \leq b_n</m>).
+          all <m>n \in \NN</m>.
         </p>
         <ul>
           <li>
@@ -148,7 +148,7 @@
         <p>
           (Asymptotic Comparison) Let <m>a_n,b_n \geq 0</m> be the
           terms of two series. Assume that <m>a_n \geq 0</m> and
-          <m>b)n \geq 0</m>. If <m>a_n</m> and <m>b_n</m> have the
+          <m>b_n \geq 0</m>. If <m>a_n</m> and <m>b_n</m> have the
           same asymptotic order (in the variable <m>n</m>), then the
           two series
         </p>
@@ -246,7 +246,7 @@
       <statement>
         <p>
           As promised in <xref ref="definition-zeta-series" />, the
-          integral tests allows m to prove the that
+          integral tests allows me to prove the that
           <m>\zeta</m> series converges if and only if <m>p>1</m>. Let
           me write the corresponding improper integral in three cases.
           First, when <m>p=1</m>. In this 
@@ -279,7 +279,7 @@
   <subsection xml:id="subsection-ratio-root">
     <title>The Ratio and Root Tests</title>
     <p>
-      There are two final test I want to introduce. These two test
+      There are two final tests I want to introduce. These two test
       have very similar structure, so I'll group them togehter. 
     </p>
     <proposition>
@@ -343,7 +343,7 @@
       <li>
         <p>
           Using the test for divergence is also often an easy first
-          step. If the terms do not tend to <m>0</m>, the series
+          step. If the terms do not tend to zero, the series
           cannot converge. Remember that this can only prove
           divergence, not convergence. 
         </p>
@@ -360,8 +360,7 @@
           The integral test is often the best approach if the series
           involves transcendental functions, such as exponentials,
           logarithms or trigonometric functions. These functions can
-          be difficult to handle with the other methods for series,
-          which often are focused on discrete methods. 
+          be difficult to handle with the other methods for series.
         </p>
       </li>
       <li>
@@ -387,7 +386,7 @@
       many of the tests: comparisons only need to work eventually,
       integrals can be taken on <m>[a,\infty)</m> for some <m>a>0</m>,
       and a series which eventually becomes an alternating series can
-      use the alternating series test.
+      use the alternating series test, and so on. 
     </p>
     <example>
       <statement>
@@ -435,8 +434,8 @@
         </me>
         <p>
           The terms are <m>\left( \frac{2}{e} \right)^k</m>, so this
-          is a geometric series. <m>\frac{2}{e} \lt 1</m> so the
-          series converges.
+          is a geometric series. The common ratio<m>\frac{2}{e} \lt
+          1</m> so the series converges.
         </p>
       </statement>
     </example>
@@ -497,7 +496,7 @@
           The terms are asymptotically equivalent to
           <m>\frac{1}{e^n}</m>. There are the terms of a 
           geometric series with common ratio <m>\frac{1}{e}</m>, which
-          is a convergence geometric series. Therefore, the series
+          is a convergent geometric series. Therefore, the series
           converges by asymptotic comparison. 
         </p>
       </statement>
@@ -529,7 +528,7 @@
           which is asymptotically equivalent to <m>\frac{1}{n^2}</m>.
           These are the terms of a <m>\zeta</m> series with
           <m>p=2</m>, which is a convergent <m>\zeta</m> series.
-          Therefore, the series is also absolutely convergnet by
+          Therefore, the series is also absolutely convergent by
           asymptotic analysis. 
         </p>
       </statement>
@@ -542,7 +541,12 @@
         <p>
           The factorial suggests that the ratio test is the best
           approach. I'll calculate the limit of the ratio of the
-          terms. 
+          terms. I need to do a factorial cancelations in
+          the simplification of the limit: the term
+          $\frac{(k+1)!}{k!}$ cancel almost all of its terms, leaving
+          just $(k+1)$ in the numerator. The rest of the
+          simplification is grouping and cancelling terms with
+          exponents. 
         </p>
         <md>
           <mrow>
@@ -570,7 +574,7 @@
         </me>
         <p>
           The index is in the exponent, so I'll try the ratio test. I
-          calcualte the limit of the ratio of the terms.
+          calculate the limit of the ratio of the terms.
         </p>
         <me>
           \lim_{k \rightarrow \infty} \left| \frac{a_{k+1}}{a_k}
@@ -650,7 +654,8 @@
         </me>
         <p>
           There are factorials again, so ratio test is likely the best
-          choice.
+          choice. I need to simplifiy the nested fraction and again
+          use factorial cancellation to simplify the limit. 
         </p>
         <md>
           <mrow>
@@ -688,10 +693,10 @@
             \int_1^\infty \ln x x^{\frac{-1}{3}} dx
           </mrow>
           <mrow>
-            f \amp = \ln x \implies f^\prime = \frac{1}{x}
+            f \amp = \ln x \implies \frac{df}{dx}= \frac{1}{x}
           </mrow>
           <mrow>
-            g^\prime \amp = x^\frac{-1}{3} \implies g =
+            \frac{dg}{dx} \amp = x^\frac{-1}{3} \implies g =
             \frac{3x^{\frac{2}{3}}}{2}
           </mrow>
           <mrow>

@@ -19,7 +19,7 @@
           \sum_{n=1}^\infty (-1)^{n+1} a_n
         </me>
         <p>
-          Since the <m>a_n</m> are positive, the <m>(-1)^n</m> ensure
+          Since the <m>a_n</m> are positive, the <m>(-1)^n</m> ensures
           that each consecutive term in the series changes sign, from
           positive to negative back to positive. This is the
           <sq>alternating</sq> that gives the series its name.
@@ -46,7 +46,7 @@
     <p> 
       I won't give a formal proof, the I'll describe the informal
       idea. In an alternating series, in each step of the sum I
-      alternatively add and subtract term. The sum is always
+      alternatively add and subtract terms. The sum is always
       increasing when I add and then decreasing when I subtract. It's
       always jumping forward and then jumping back down. 
     </p>
@@ -95,7 +95,7 @@
       term-wise, adding each term in the second row to the term above
       it. Hopefully, you can see that doing so will cancel half the
       terms and add up to exactly the terms of the previous series in
-      the othter terms.
+      the other terms.
     </p>
     <md>
       <mrow>
@@ -138,7 +138,7 @@
       sum to a different number.  This is exceedingly odd: for finite
       sums, any re-arrangement was irrelevant to the value of the sum.
       It seems, for infinite sums, re-arrangement can actually change
-      the value.  There is an important result which is even
+      the value.  This is strange, but the general result here is even
       stranger.
     </p>
     <proposition>

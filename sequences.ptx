@@ -76,22 +76,26 @@
       <statement>
         <p>
           A sequence <m>\{ a_n \}</m> is called a <term>recursive
-          sequence</term> is each element is determined by the
+          sequence</term> if each element is determined by the
           previous element (or previous few elements). The equation
-          that defined the recursive sequence is call a
-          <term>recurrence relation</term>. Often a recurrence
-          relation is difficult to calculate with and a direct
-          description is desired. Such a descriptions is
-          called the <term>closed form description</term> for the 
-          recursive sequence.
+          that defines a recursive sequence is call a
+          <term>recurrence relation</term>. Often, the terms of a
+          recursive sequence are difficult to calculate and a more
+          direct description of the term is desired. Such a
+          descriptions is called the <term>closed form
+          description</term> for the recursive sequence.
         </p>
       </statement>
     </definition>
     <p>
-      Let me introduce an important change in perspective for
-      sequences. Instead of thinking of <m>\NN</m> as an index, I
-      can think of a sequence <m>\{a_n\}_{n=1}^\infty</m> as a
-      function.
+      Sequences can stand on their own in the definitions I've just
+      defined. However, I can change perspective and also thing of
+      sequences as functions. This will be useful, since I'll be able
+      to use terminology and tecniques (particularly limits) from
+      functions. So, how is a sequence a function?  Instead of
+      thinking of <m>\NN</m> as an index, I can think of a <m>\NN</m>
+      as the domain and a sequence <m>\{a_n\}_{n=1}^\infty</m> as a
+      function on that domain.
     </p>
       <md>
         <mrow>
@@ -120,7 +124,7 @@
     <title>Examples of Sequences</title>
     <p>
       Sequences can be entirely random, or patterned by some
-      formula or recursion. Here are some familiar examples. I' ll 
+      formula or recursion. Here are some familiar examples. I'll 
       show the first few terms as well as a method of generating
       higher terms (either direct or recursive).
     </p>
@@ -377,7 +381,7 @@
           also an intuition that the limit should be infinite. It is
           not clear, by examining the limit, whether one of these two
           intutition is correct or whether (as is the case) the limit
-          ends up between the two intuititon. This is another type of
+          ends up between the two intuititons. This is another type of
           indeterminant form. 
         </p>
       </statement>
@@ -404,7 +408,7 @@
           Now I have a recursive definition for the sequences of
           Fibonacci ratios. Recursive definition are problematic for
           direct calculations of limits, but there is a useful trick
-          for calculating these limits. Let me restate this recurvise
+          for calculating these limits. Let me restate this recursive
           definition.
         </p>
         <me>
